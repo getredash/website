@@ -1,0 +1,5 @@
+#!/bin/bash
+
+jekyll build -s website/ 
+gitbook build user-guide _site/help
+
