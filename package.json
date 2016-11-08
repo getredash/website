@@ -1,0 +1,24 @@
+{
+  "name": "knowledge-base",
+  "version": "1.0.0",
+  "description": "Welcome to the official Redash knowledge base! Here you'll find answers and guides to make the best out of you Redash.",
+  "main": "index.js",
+  "dependencies": {
+    "gitbook-plugin-theme-faq": "^1.1.0",
+    "gitbook-cli": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/getredash/docs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/getredash/docs/issues"
+  },
+  "homepage": "https://github.com/getredash/docs#readme"
+}
