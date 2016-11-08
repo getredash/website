@@ -23,4 +23,4 @@ Redash plays nice with all data sources!
 - Graphite
 - Stitch
 
-Also, we added an option to query other query results - this way you can enjoy a dataset from multiple data sources (originally). Read more about [using datasets as data sources](queries/using-datasets-as-data-sources.md)
+Also, we added an option to query other query results - this way you can enjoy a dataset from multiple data sources (originally). Read more about [using datasets as data sources](../queries/using-datasets-as-data-sources.md)

@@ -8,6 +8,6 @@ For schemas with more than 5000 tables+columns start typing and then hit ctrl/cm
 
 For NoSQL languages Redash has a few nuances:
 
-* [Querying ElasticSearch](queries/querying_elasticsearch.md)
-* [Querying JIRA (JQL)](queries/querying_jira_jql.md)
-* [Querying MongoDB](queries/querying_mongodb.md)
+* [Querying ElasticSearch](querying_elasticsearch.md)
+* [Querying JIRA (JQL)](querying_jira_jql.md)
+* [Querying MongoDB](querying_mongodb.md)

@@ -8,11 +8,11 @@ If you want to focus only on a specific value, you will need to alias your colum
 from events
 group by action`
 
-You can see this query and the rendered UI here: [http://demo.redash.io/queries/143/source#table](http://demo.redash.io/queries/143/source#table)
+You can see this query and the rendered UI here: http://demo.redash.io/queries/143/source#table
 
-![](/user-guide/assets/filter_example_action_create.png)
+![](../assets/filter_example_action_create.png)
 
-![](/user-guide/assets/filter_example_action_fork.png)
+![](../assets/filter_example_action_fork.png)
 
 If you are interested in multi filters (meaning that you can select multiple values), you will need to alias your column to `<columnName>::multi-filter`. Here is an example:
 
@@ -22,6 +22,6 @@ group by action`
 
 You can see this query and the rendered UI here: [http://demo.redash.io/queries/144/source#table](http://demo.redash.io/queries/143/source#table)
 
-![](/user-guide/assets/multifilter_example.png)
+![](../assets/multifilter_example.png)
 
 Note that you can use `__filter` or `__multiFilter`, (double underscore instead of double quotes) if your database doesn’t support :: in column names (such as BigQuery).

@@ -13,3 +13,5 @@ The {{date}} part is the parameter. It can be called whatever you want.
 After you add it, you will see an input field show up. Next to it there is a gear icon - when clicked it opens an options screen where you can set the parameter type and friendly name.
 
 Make sure to execute the query again after entering your parameter.
+
+Example for parameters can be found here (notice the description as well): http://demo.redash.io/queries/146?p_action=create

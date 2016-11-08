@@ -1,11 +1,11 @@
 # Summary
-* [Introduction](README.md)
 
 ## About Redash
 * [What's Redash?](aboutrd/whats_redash.md)
-* [What browsers Redash works best on?](aboutrd/what_browsers_redash_works_best_on.md)
-* [Main Features](aboutrd/main_features.md)
+* [Main Features](aboutrd/main-features.md)
 * [Supported Data Sources](aboutrd/supported_data_sources.md)
+* [What Browsers Redash Works Best on?](aboutrd/what_browsers_redash_works_best_on.md)
+* [Privacy and Security](aboutrd/privacy-security)
 
 ## Getting Started
 * [How to add data sources to Redash?](getting_started/how_to_add_data_sources_to_redash.md)
@@ -37,17 +37,17 @@
 * [How to setup an alert](alerts/how-to-setup-an-alert.md)
 
 ## Visualization
-* [How to create a visualization from my dataset?](create_new_viz)
-* [What types of visualization can I use for my results?](viz_types)
-* [How to embed visualizations?](embed_viz)
-* [How to edit a visualization?](edit_viz)
-* [Can I download a visualization as an image file?](download_viz)
+* [How to create a visualization from my dataset?](visualization/create_new_viz)
+* [What types of visualization can I use for my results?](visualization/viz_types)
+* [How to embed visualizations?](visualization/embed_viz)
+* [How to edit a visualization?](visualization/edit_viz)
+* [Can I download a visualization as an image file?](visualization/download_viz)
 
 ## Dashboards
-* [How to create a dashboard?](create_new_dash)
-* [Grouping Dashboards](grouping_dashs)
-* [How to share dashboard (view only)?](sharing_dashs)
-* [Dashboard filters (flags)](dash_filters_flags)
+* [How to create a dashboard?](dashboards/create_new_dash)
+* [Grouping Dashboards](dashboards/grouping_dashs)
+* [How to share dashboard (view only)?](dashboards/sharing_dashs)
+* [Dashboard filters (flags)](dashboards/dash_filters_flags)
 
 ## Troubleshooting
-* [Error: Worker exited prematurely: signal 9 (SIGKILL)](error-worker-exited-prematurely-signal-9-sigkill.md)
+* [Error: Worker exited prematurely: signal 9 (SIGKILL)](troubleshooting/error-worker-exited-prematurely-signal-9-sigkill.md)

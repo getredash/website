@@ -4,7 +4,7 @@ Query snippets are small (or not so small) pieces of queries you want to share w
 
 You create them at `https://app.redash.io/<your company>/query_snippets` (currently only admins can create them, but anyone can use).
 
-![](/user-guide/assets/Snippet.png)
+![](../assets/Snippet.png)
 
 A snippet can be something like: (the ${1:table} part is a placeholder)
 
