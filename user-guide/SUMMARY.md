@@ -38,17 +38,17 @@
 * [Adding Alert Destination - Slack](alerts/slack-alert-destination.md)
 
 ## Visualization
-* [How to create a visualization from my dataset?](visualization.md#create_new_viz)
-* [What types of visualization can I use for my results?](visualization.md#viz_types)
-* [How to embed visualizations?](visualization.md#embed_viz)
-* [How to edit a visualization?](visualization.md#edit_viz)
-* [Can I download a visualization as an image file?](visualization.md#download_viz)
+* [How to create a visualization from my dataset?](visualization/visualization.md#create_new_viz)
+* [What types of visualization can I use for my results?](visualization/visualization.md#viz_types)
+* [How to embed visualizations?](visualization/visualization.md#embed_viz)
+* [How to edit a visualization?](visualization/visualization.md#edit_viz)
+* [Can I download a visualization as an image file?](visualization/visualization.md#download_viz)
 
 ## Dashboards
-* [How to create a dashboard?](dashboards/create_new_dash)
-* [Grouping Dashboards](dashboards/grouping_dashs)
-* [How to share dashboard (view only)?](dashboards/sharing_dashs)
-* [Dashboard filters (flags)](dashboards/dash_filters_flags)
+* [How to create a dashboard?](dashboards/dashboards.md#create_new_dash)
+* [Grouping Dashboards](dashboards/dashboards.md#grouping_dashs)
+* [How to share dashboard (view only)?](dashboards/dashboards.md#sharing_dashs)
+* [Dashboard filters (flags)](dashboards/dashboards.md#dash_filters_flags)
 
 ## Troubleshooting
 * [Error: Worker exited prematurely: signal 9 (SIGKILL)](troubleshooting/error-worker-exited-prematurely-signal-9-sigkill.md)
