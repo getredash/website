@@ -37,7 +37,7 @@
 * [How to setup an alert](alerts/how-to-setup-an-alert.md)
 * [Adding Alert Destination - Slack](alerts/slack-alert-destination.md)
 
-## Visualization
+## Visualizations
 * [How to create a visualization from my dataset?](visualization/visualization.md#create_new_viz)
 * [What types of visualization can I use for my results?](visualization/visualization.md#viz_types)
 * [How to embed visualizations?](visualization/visualization.md#embed_viz)
