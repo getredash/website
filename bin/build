@@ -2,4 +2,5 @@
 
 jekyll build -s website/ 
 gitbook build user-guide _site/help
+gitbook build onpremise _site/help-onpremise
 
