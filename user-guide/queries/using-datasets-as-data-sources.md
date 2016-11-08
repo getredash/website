@@ -14,13 +14,12 @@ JOIN query_456 b on a.id = b.id```
 
 You reference queries as "query_<id>" in either the FROM or the JOIN clause.
 
+This is an alpha release and all feedback is welcome :)
 
 Few notes:
 
-When you run a query, we execute the underlying queries as well. This to make sure you have recent results in case you schedule this query. We might fine tune this in the future to reduce the number of time we run the same query.
+1. When you run a query, we execute the underlying queries as well to make sure you have recent results in case you schedule this query. We might fine tune this in the future to reduce the number of times we run the same query.
 
-The processing of the data is being done by SQLite in memory. So in case of large results sets it might fail due to memory running out.
+2. The processing of the data is being done by SQLite in memory - in case of large results sets it might fail due to memory running out.
 
-Access to the data source is governed by the groups it associated with, like any other data source. But when a user runs a query we also check if he has permission to execute queries on the data sources the original queries use. So while a user who has access to this data source will be able to see any query that uses it, he won't be able to execute queries on data sources he doesn't have access to.
-
-This is an alpha release and all feedback is welcome :)
+3. Access to the data source is governed by the groups it's associated with, like any other data source. When a user runs a query we also check if he has permission to execute queries on the data sources the original queries use. So while a user who has access to this data source will be able to see any query that uses it, he won't be able to execute queries on data sources he doesn't have access to.

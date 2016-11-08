@@ -5,7 +5,7 @@
 * [Main Features](aboutrd/main-features.md)
 * [Supported Data Sources](aboutrd/supported_data_sources.md)
 * [What Browsers Redash Works Best on?](aboutrd/what_browsers_redash_works_best_on.md)
-* [Privacy and Security](aboutrd/privacy-security)
+* [Privacy and Security](aboutrd/privacy-security.md)
 
 ## Getting Started
 * [How to add data sources to Redash?](getting_started/how_to_add_data_sources_to_redash.md)
@@ -35,13 +35,14 @@
 
 ## Alerts
 * [How to setup an alert](alerts/how-to-setup-an-alert.md)
+* [Adding Alert Destination - Slack](alerts/slack-alert-destination.md)
 
 ## Visualization
-* [How to create a visualization from my dataset?](visualization/create_new_viz)
-* [What types of visualization can I use for my results?](visualization/viz_types)
-* [How to embed visualizations?](visualization/embed_viz)
-* [How to edit a visualization?](visualization/edit_viz)
-* [Can I download a visualization as an image file?](visualization/download_viz)
+* [How to create a visualization from my dataset?](visualization.md#create_new_viz)
+* [What types of visualization can I use for my results?](visualization.md#viz_types)
+* [How to embed visualizations?](visualization.md#embed_viz)
+* [How to edit a visualization?](visualization.md#edit_viz)
+* [Can I download a visualization as an image file?](visualization.md#download_viz)
 
 ## Dashboards
 * [How to create a dashboard?](dashboards/create_new_dash)
