@@ -22,7 +22,7 @@
 * [Querying ElasticSearch](queries/querying_elasticsearch.md)
 * [Querying JIRA (JQL)](queries/querying_jira_jql.md)
 * [Querying MongoDB](queries/querying_mongodb.md)
-* [Shortcuts](queries/shortcuts.md)
+* [Keyboard Shortcuts](queries/shortcuts.md)
 * [Exploring Schemas](queries/exploring-schemas.md)
 * [How to download the results of my query?](queries/how_to_download_the_results_of_my_query.md)
 * [How to export query results to CSV or JSON?](queries/how_to_export_query_results_to_csv_or_json.md)
