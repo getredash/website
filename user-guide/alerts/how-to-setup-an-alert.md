@@ -15,6 +15,7 @@ To setup a new alert:
 4. Select your magic number
 
 ![](../assets/alerts_settings.png)
+* Leave Rearm Seconds empty to get 1 alert when the status changes from Triggered to OK, enter a number to get an alert every time the query runs (by schedule) + the Rearm seconds value.
 
 5. SAVE
 
