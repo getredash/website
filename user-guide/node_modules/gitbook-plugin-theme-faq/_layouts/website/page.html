@@ -22,7 +22,7 @@
                 <div class="list-group">
                 {% for article in part.articles %}
                     {% if article.path != readme.file.path %}
-                    <a href="{{ article.path|resolveFile }}" class="list-group-item">
+                    <a href="{{ article.path|resolveFile }}{{ article.anchor }}" class="list-group-item">
                         <i class="fa fa-file-o" aria-hidden="true"></i> {{ article.title }}
                     </a>
                     {% endif %}
