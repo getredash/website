@@ -1,12 +1,6 @@
----
-title: Visualizations
----
-
 # Visualizations
 
-Intro.
-
-## sjnfsdHow to create a visualization from my dataset? {#create_new_viz}
+## How to create a visualization from my dataset? {#create_new_viz}
 
 Once your query finished running for the first time, you can add a visualization for your results by clicking the "New visualization" button above the results (currently shown only when the source code is shown).
 
