@@ -2,7 +2,7 @@
 
 ## About Redash
 * [What's Redash?](aboutrd/aboutrd.md#whats_redash)
-* [Main Features](aboutrd/aboutrd.md#main_features.md)
+* [Main Features](aboutrd/aboutrd.md#main_features)
 * [Supported Data Sources](aboutrd/aboutrd.md#supported_data_sources)
 * [What Browsers Redash Works Best on?](aboutrd/aboutrd.md#supported_browsers)
 * [Privacy and Security](aboutrd/aboutrd.md#privacy-security)
