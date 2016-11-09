@@ -1,12 +1,12 @@
 # Visualizations
 
-## <a name="create_new_viz"></a>How to create a visualization from my dataset?
+## <a name="create_new_viz"></a>How to Create a Visualization from My Dataset?
 
 Once your query finished running for the first time, you can add a visualization for your results by clicking the "New visualization" button above the results (currently shown only when the source code is shown).
 
 ![](../assets/add_new_vis.png)
 
-## <a name="viz_types"></a> What types of visualization can I use for my results?
+## <a name="viz_types"></a> What Types of Visualization Can I Use for My Results?
 
 Redash supports many type of visualization - table is just the default view.
 
@@ -45,7 +45,7 @@ Visualization types:
 
 **Word cloud**- make sure to use this visualization on raw results and not counted ones
 
-# <a name="embed_viz"></a> How to embed visualizations?
+# <a name="embed_viz"></a> How to Embed Visualizations?
 
 Redash allows your to embed visualization that will update every time the query they belong to will run (amazing!).
 
@@ -53,7 +53,7 @@ Redash allows your to embed visualization that will update every time the query 
 
 Click the "Embed" button to view the iFrame code you need to copy or a link to the image you can place anywhere.
 
-# <a name="edit_viz"></a>How to edit a visualization?
+# <a name="edit_viz"></a>How to Edit a Visualization?
 
 To change an existing widget's parameters, enter the query of that widget (just click it's title). Then, show the source code and you'll see an "Edit" option under each visualization, clicking it will open the current settings for that visualization (type, x, y, group...).
 
@@ -62,7 +62,7 @@ To change an existing widget's parameters, enter the query of that widget (just 
 Hit "Save" to apply your changes or "Cancel" to leave no trace.
 
 
-# <a name="download_viz"></a> Can I download a visualization as an image file?
+# <a name="download_viz"></a> Can I Download a Visualization as an Image File?
 
 Yes, you can!
 

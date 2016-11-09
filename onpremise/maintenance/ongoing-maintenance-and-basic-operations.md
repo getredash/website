@@ -1,6 +1,6 @@
 # Ongoing Maintenance and Basic Operations
 
-## Configuration and logs
+## Configuration and Logs
 
 The supervisor config can be found in `/opt/redash/supervisord/supervisord.conf`.
 

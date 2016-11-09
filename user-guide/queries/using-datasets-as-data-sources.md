@@ -1,4 +1,4 @@
-### Using datasets as data sources
+### Using Datasets as Data Sources
 
 We added a new type of data source - the query results data source. It allows you to run queries on top of existing query results, so you can easily use it to merge results or perform any other kind of "post processing".
 

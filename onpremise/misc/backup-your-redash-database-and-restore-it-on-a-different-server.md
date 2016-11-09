@@ -1,4 +1,4 @@
-# Backup your Redash database and restore it on a different server
+# Backup Your Redash Database and Restore It on a Different Server
 
 Note: This guide assumes that the default database name (redash) has not been changed.
 

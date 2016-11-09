@@ -2,7 +2,7 @@
 
 It’s recommended to upgrade your Redash instance once there are new releases, to benefit from new features and bug fixes. The upgrade process is relatively simple, and assuming you used one of the base images we provide, you can just use the [Fabric](http://www.fabfile.org/) script provided here: [https://gist.github.com/arikfr/440d1403b4aeb76ebaf8](https://gist.github.com/arikfr/440d1403b4aeb76ebaf8).
 
-## **How to run the Fabric script**
+## **How to Run the Fabric Script**
 
 1. Install Fabric: `pip install fabric requests` (needed only once)
 
@@ -13,7 +13,7 @@ It’s recommended to upgrade your Redash instance once there are new releases, 
   `-i` is optional and it is only needed in case you’re using private-key based authentication (and didn’t add the key file to your authentication agent or set its path in your SSH config).
 
 
-## **What the Fabric script does**
+## **What the Fabric Script Does**
 
 Even if you didn’t use the image, it’s very likely you can reuse most of this script with small modifications. What this script does is:
 

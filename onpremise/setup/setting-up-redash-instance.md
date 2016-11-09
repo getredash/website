@@ -1,10 +1,10 @@
-# Setting up a Redash instance
+# Setting up a Redash Instance
 
 The [provisioning script](https://raw.githubusercontent.com/getredash/redash/master/setup/ubuntu/bootstrap.sh) works on Ubuntu 12.04, Ubuntu 14.04 and Debian Wheezy. This script installs all needed dependencies and creates basic setup.
 
 To ease the process, there are also images for AWS, Google Compute Cloud and Docker. These images created with the same provision script using Packer.
 
-## Create an instance
+## Create an Instance
 
 ### AWS
 
@@ -149,7 +149,7 @@ Once you created the instance with either the image or the script, you should ha
 
 First ssh to your instance and change directory to `/opt/redash`. If you’re using the GCE image, switch to root (`sudo su`).
 
-### Users & Google Authentication setup
+### Users & Google Authentication Setup
 
 Most of the settings you need to edit are in the `/opt/redash/.env` file.
 

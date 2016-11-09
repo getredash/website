@@ -6,7 +6,7 @@ The first datasource which was used with Redash was Redshift. Because we had bil
 
 This was to relieve stress from the Redshift cluster and also to improve user experience.
 
-## How queries get executed and cached in Redash?
+## How Queries Get Executed and Cached in Redash?
 
 ### Server
 
@@ -39,9 +39,9 @@ When loading a non cached result, `ttl` will be 0 which will “force” the ser
 
 As a response to `/api/query_results` the server will send either the query results (in case of a cached query) or job id of the currently executing query. When job id received the client will start polling on this id, until a query result received (this is encapsulated in `Query` and `QueryResult` services).
 
-## Ideas on how to implement query parameters
+## Ideas on How to Implement Query Parameters
 
-### Client side only implementation
+### Client Side Only Implementation
 
 (This was actually implemented in. See pull request [#363](https://github.com/getredash/redash/pull/363) for details.)
 

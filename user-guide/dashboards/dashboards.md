@@ -1,6 +1,6 @@
 # Dashboards
 
-## <a name="create_new_dash"></a> How to create a dashboard?
+## <a name="create_new_dash"></a> How to Create a Dashboard?
 
 A dashboard is a combination of visualizations and text boxes.
 
@@ -34,7 +34,7 @@ To share a dashboard, toggle the share URL and send the secret link that gets ge
 
 ![](../assets/share_dash_link.png)
 
-# <a name="dash_filters_flags"></a> Dashboard filters (flags)
+# <a name="dash_filters_flags"></a> Dashboard Filters (flags)
 
 If you’ve got queries that have some filters and you want to apply filters at the dashboard level (that apply to all queries), you need to set a flag.
 

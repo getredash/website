@@ -1,4 +1,4 @@
-# How to Encrypt your Redash installation with a free SSL certificate from Let’s Encrypt
+# How to Encrypt Your Redash Installation with a Free Ssl Certificate from Let’s Encrypt
 
 **Note:** This below steps were tested on Ubuntu 14.04, but _should_ work with any Debian-based distro.
 
@@ -138,4 +138,3 @@ sudo service nginx start
 sudo supervisorctl start redash_server
 
 ```
-
