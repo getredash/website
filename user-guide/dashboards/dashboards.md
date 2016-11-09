@@ -16,6 +16,12 @@ Select an existing query or add a text, you can select between 2 sizes - regular
 
 ![](../assets/select_widget_size.png)
 
+## Adding Visualizations to Dashboards {#add_viz_to_dash}
+
+A dashboards is a tool to aggregate multiple query datasets, visualizations and texts into one nifty view. To add widgets to your dashboard, select a query you want to feature and the visualization you want for it. By default, queries results are shown in a table.
+
+At the moment it's not possible to create a new visualization from the "Add Widget" menu, so you'll need to open the query and add the visualization there beforehand ([instructions]((visualization/visualization.md#create_new_viz)))
+
 ## Grouping Dashboards {#grouping_dashs}
 
 It is possible to group multiple dashboards in the dashboards menu. To do this, you need to follow a naming convention by using a column (:) to separate the dashboard group and the actual dashboard name.

@@ -46,6 +46,7 @@
 
 ## Dashboards
 * [How to Create a Dashboard?](dashboards/dashboards.md#create_new_dash)
+* [Adding Visualizations to Dashboards](dashboards/dashboards.md#add_viz_to_dash)
 * [Grouping Dashboards](dashboards/dashboards.md#grouping_dashs)
 * [How to Share Dashboard (view only)?](dashboards/dashboards.md#sharing_dashs)
 * [Embedding Dashboards](dashboards/dashboards.md#embed_dash)
