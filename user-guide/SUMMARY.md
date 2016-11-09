@@ -48,6 +48,7 @@
 * [How to Create a Dashboard?](dashboards/dashboards.md#create_new_dash)
 * [Grouping Dashboards](dashboards/dashboards.md#grouping_dashs)
 * [How to Share Dashboard (view only)?](dashboards/dashboards.md#sharing_dashs)
+* [Embedding Dashboards](dashboards/dashboards.md#embed_dash)
 * [Dashboard Filters (flags)](dashboards/dashboards.md#dash_filters_flags)
 
 ## Alerts

@@ -34,6 +34,9 @@ To share a dashboard, toggle the share URL and send the secret link that gets ge
 
 ![](../assets/share_dash_link.png)
 
+## Embedding Dashboards {#embed_dash}
+To embed a dashboard, add `?fullscreen` to the sharing URL.
+
 ## Dashboard Filters (flags) {#dash_filters_flags}
 
 If you’ve got queries that have some filters and you want to apply filters at the dashboard level (that apply to all queries), you need to set a flag.
