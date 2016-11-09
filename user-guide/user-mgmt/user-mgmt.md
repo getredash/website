@@ -1,6 +1,6 @@
 # User and Group Management
 
-## <a name="inviting_users"></a> Inviting Users to Redash
+## Inviting Users to Redash {#inviting_users}
 
 Users can be invited only by admins - to invite a new user go to Settings>Users and hit New User:
 
@@ -11,7 +11,7 @@ Then fill in their name and email. They'll get an invite via email and be requir
 Users can be added to existing groups - add users to it by typing their name:
 ![](../assets/view_only_group.png)
 
-## <a name="create-edit-groups"></a> Creating and Editing Groups
+## Creating and Editing Groups {#create-edit-groups}
 
 Only admins can create groups and edit them - to create a new group to to Settings>Groups and hit New Group:
 ![](../assets/group_settings.png)
@@ -23,7 +23,7 @@ Once you created a group, you can start adding users to it by typing their name:
 
 Each group can be connected to specific data sources, read more about group permissions [here](permissions_and_groups.md)
 
-## <a name="permissions_and_groups"></a> Permissions and Groups
+## Permissions and Groups {#permissions_and_groups}
 
 In version 0.9.0 we introduced a new permissions model based on groups. Each user by default joins the Default group, but can be a member of any number of groups.
 
