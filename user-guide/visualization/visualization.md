@@ -45,7 +45,7 @@ Visualization types:
 
 **Word cloud**- make sure to use this visualization on raw results and not counted ones
 
-# How to Embed Visualizations? {#embed_viz}
+## How to Embed Visualizations? {#embed_viz}
 
 Redash allows your to embed visualization that will update every time the query they belong to will run (amazing!).
 
@@ -53,7 +53,7 @@ Redash allows your to embed visualization that will update every time the query 
 
 Click the "Embed" button to view the iFrame code you need to copy or a link to the image you can place anywhere.
 
-# How to Edit a Visualization? {#edit_viz}
+## How to Edit a Visualization? {#edit_viz}
 
 To change an existing widget's parameters, enter the query of that widget (just click it's title). Then, show the source code and you'll see an "Edit" option under each visualization, clicking it will open the current settings for that visualization (type, x, y, group...).
 
@@ -61,7 +61,7 @@ To change an existing widget's parameters, enter the query of that widget (just 
 
 Hit "Save" to apply your changes or "Cancel" to leave no trace.
 
-# Can I Download a Visualization as an Image File? {#download_viz}
+## Can I Download a Visualization as an Image File? {#download_viz}
 
 Yes, you can!
 

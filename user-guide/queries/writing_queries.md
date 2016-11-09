@@ -1,6 +1,6 @@
 # Writing Queries
 
-## <a name="how_to_write_a_query"></a> How to Write a Query?
+## How to Write a Query? {#how_to_write_a_query}
 
 For SQL databases just use the native syntax for that database.
 
@@ -13,7 +13,7 @@ For NoSQL languages Redash has a few nuances:
 Redash supports **live auto-complete** - just start typing and you'll get the relevant suggestions.
 For schemas with more than 5000 tables+columns start typing and then hit ctrl/cmd+spacebar to see suggestions.
 
-## <a name="exploring-schemas"></a>Exploring Schemas
+## Exploring Schemas {#exploring-schemas}
 
 Once you select the data source you want to query, its schema will appear to the left. Clicking each table will show its columns.
 
@@ -22,7 +22,7 @@ Most databases should properly show the schema, please contact us if you encoute
 
 Please note that schemas update periodically - to update it immediately use the API or contact us.
 
-## <a name="query_snippets"></a>Query Snippets
+## Query Snippets {#query_snippets}
 
 Query snippets are small (or not so small) pieces of queries you want to share with your team to reduce the need to type them over and over again or looking for a reference.
 
@@ -36,7 +36,7 @@ A snippet can be something like: (the ${1:table} part is a placeholder)
 
 Then you can trigger them while writing a query with the trigger word you define - it'll be suggested (auto-completed) like all other fields.
 
-## <a name="query_params"></a>How to Use Parameters?
+## How to Use Parameters? {#query_params}
 
 You can add parameters to your query to make it easier to edit outside the source code.
 
@@ -57,7 +57,7 @@ This is how an "action" parameter looks:
 
 **Please note that you'll need to re-execute the query with the newly set parameter to get the desires results.**
 
-## <a name="query_filters"></a>How to Add a Filter to a Query?
+## How to Add a Filter to a Query? {#query_filters}
 
 It is possible to have filters for query results and visualizations. Thanks to filters, you can restrain the result to a certain or multiple values. Filters are enabled by following a naming convention for columns.
 
@@ -85,7 +85,7 @@ You can see this query and the rendered UI here: [http://demo.redash.io/queries/
 
 Note that you can use `__filter` or `__multiFilter`, (double underscore instead of double quotes) if your database doesn’t support :: in column names (such as BigQuery).
 
-## <a name="shortcuts"></a>Shortcuts
+## Shortcuts {#shortcuts}
 
 Execute = ctrl+E or cmd+E
 

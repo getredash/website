@@ -1,12 +1,12 @@
 # Query Actions
 
-## <a name="how_to_create_a_query"></a> How to create a new query?
+## How to create a new query? {#how_to_create_a_query}
 
 To start working on a new query, click "New Query" on the home page or under the Queries menu in the navigation bar.
 
 ![](../assets/new_query.png)
 
-## <a name="how_to_duplicate_a_query"></a>How to duplicate queries?
+## How to duplicate queries? {#how_to_duplicate_a_query}
 
 When viewing a query's source code, click the "Fork" button to duplicate the query to your account and edit it once it's yours.
 For now only admins can edit all queries.
@@ -15,7 +15,7 @@ For now only admins can edit all queries.
 
 Soon we'll add an option to share edit permissions and view changes history for each query.
 
-## <a name="how_to_schedule_a_query"></a> How to schedule a query?
+## How to schedule a query? {#how_to_schedule_a_query}
 
 The default for a newly created query is no scheduling, but it's easy to adjust!
 
@@ -29,7 +29,7 @@ Clicking the Never will open a picker for "every x" or at a specific time of day
 
 Once a schedule is set, your query will run automatically when it was instructed to run.
 
-## <a name="how_to_download_a_dataset"></a> How to download the results of my query?
+## How to download the results of my query? {#how_to_download_a_dataset}
 
 To manually download a dataset, click the "Download Dataset" button above the results and select the type of file:
 
@@ -37,7 +37,7 @@ To manually download a dataset, click the "Download Dataset" button above the re
 
 You can also automatically [export your results to CSV or JSON](how_to_export_query_results_to_csv_or_json.md)
 
-## <a name="how_to_export_query_csv_json"></a> How to export query results to CSV or JSON?
+## How to export query results to CSV or JSON? {#how_to_export_query_csv_json}
 
 Query results can be automatically exported to CSV or JSON by using your API key. Your API key can be found when viewing your profile, from the top right menu in the navigation bar.
 

@@ -9,7 +9,7 @@
 
 ## Getting Started
 * [How to Add Data Sources to Redash?](getting_started/how_to_add_data_sources_to_redash.md)
-* [Exploring Schemas](queries/exploring-schemas.md)
+* [Exploring Schemas](queries/writing_queries.md#exploring_schemas)
 
 ## User Management
 * [Inviting Users to Use Redash](user-mgmt/user-mgmt.md#inviting_users)
@@ -49,6 +49,10 @@
 * [Grouping Dashboards](dashboards/dashboards.md#grouping_dashs)
 * [How to Share Dashboard (view only)?](dashboards/dashboards.md#sharing_dashs)
 * [Dashboard Filters (flags)](dashboards/dashboards.md#dash_filters_flags)
+
+## Alerts
+* [How to setup an alert](alerts/how-to-setup-an-alert.md)
+* [Adding Alert Destination - Slack](alerts/slack-alert-destination.md)
 
 ## Troubleshooting
 * [Error: Worker Exited Prematurely: Signal 9 (sigkill)](troubleshooting/error-worker-exited-prematurely-signal-9-sigkill.md)

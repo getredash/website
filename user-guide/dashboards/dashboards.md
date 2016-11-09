@@ -1,6 +1,6 @@
 # Dashboards
 
-## <a name="create_new_dash"></a> How to Create a Dashboard?
+## How to Create a Dashboard? {#create_new_dash}
 
 A dashboard is a combination of visualizations and text boxes.
 
@@ -16,7 +16,7 @@ Select an existing query or add a text, you can select between 2 sizes - regular
 
 ![](../assets/select_widget_size.png)
 
-## <a name="grouping_dashs"></a> Grouping Dashboards
+## Grouping Dashboards {#grouping_dashs}
 
 It is possible to group multiple dashboards in the dashboards menu. To do this, you need to follow a naming convention by using a column (:) to separate the dashboard group and the actual dashboard name.
 
@@ -24,7 +24,7 @@ For example, if you name 2 dashboards "Foo: Bar" and "Foo: Baz", they will be gr
 
 ![](../assets/group_dashboards.png)
 
-# <a name="sharing_dashs"></a> Sharing Dashboard (view only)
+## Sharing Dashboard (view only) {#sharing_dashs}
 
 You can share existing dashboards with external users (they'll see only the widgets, without the navigation and other buttons from the Redash app).
 
@@ -34,7 +34,7 @@ To share a dashboard, toggle the share URL and send the secret link that gets ge
 
 ![](../assets/share_dash_link.png)
 
-# <a name="dash_filters_flags"></a> Dashboard Filters (flags)
+## Dashboard Filters (flags) {#dash_filters_flags}
 
 If you’ve got queries that have some filters and you want to apply filters at the dashboard level (that apply to all queries), you need to set a flag.
 
