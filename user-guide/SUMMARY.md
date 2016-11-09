@@ -9,7 +9,7 @@
 
 ## Getting Started
 * [How to Add Data Sources to Redash?](getting_started/how_to_add_data_sources_to_redash.md)
-* [Exploring Schemas](queries/writing_queries.md#exploring_schemas)
+* [Exploring Schemas](queries/writing_queries.md#exploring-schemas)
 
 ## User Management
 * [Inviting Users to Use Redash](user-mgmt/user-mgmt.md#inviting_users)
@@ -23,7 +23,7 @@
 * [Querying JIRA (JQL)](queries/querying_jira_jql.md)
 * [Querying MongoDB](queries/querying_mongodb.md)
 * [Shortcuts](queries/writing_queries.md#shortcuts)
-* [Exploring Schemas](queries/writing_queries.md#exploring_schemas)
+* [Exploring Schemas](queries/writing_queries.md#exploring-schemas)
 * [How to Download the Results of My Query?](queries/query_actions.md#how_to_download_a_dataset)
 * [How to Export Query Results to Csv or Json?](queries/query_actions.md#how_to_export_query_csv_json)
 * [How to Use Parameters?](queries/writing_queries.md#query_params)
