@@ -4,14 +4,14 @@
 
 To start working on a new query, click "New Query" on the home page or under the Queries menu in the navigation bar.
 
-![](../assets/new_query.png)
+![](../assets/gifs/queries/add_new_query.gif)
 
 ## How to duplicate queries? {#how_to_duplicate_a_query}
 
 When viewing a query's source code, click the "Fork" button to duplicate the query to your account and edit it once it's yours.
 For now only admins can edit all queries.
 
-![](../assets/fork.png)
+![](../assets/gifs/queries/fork_query.gif)
 
 Soon we'll add an option to share edit permissions and view changes history for each query.
 

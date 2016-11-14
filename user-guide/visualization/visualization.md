@@ -4,7 +4,7 @@
 
 Once your query finished running for the first time, you can add a visualization for your results by clicking the "New visualization" button above the results (currently shown only when the source code is shown).
 
-![](../assets/add_new_vis.png)
+![](../assets/gifs/visualization/new_viz.gif)
 
 ## What Types of Visualization Can I Use for My Results? {#viz_types}
 

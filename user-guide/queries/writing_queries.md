@@ -1,5 +1,7 @@
 # Writing Queries
 
+![](../assets/gifs/queries/add_new_query.gif)
+
 ## How to Write a Query? {#how_to_write_a_query}
 
 For SQL databases just use the native syntax for that database.
