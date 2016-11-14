@@ -16,6 +16,7 @@ Redash was built to allow fast and easy access to billions of records, that we p
 2. Visualization - once you have your dataset, select one of our /9 types of visualizations/ for your query. You can also export or embed it anywhere.
 3. Dashboard - combine several visualizations into a topic targeted dashboard.
 4. Alerts - get notified via email, Slack, Hipchat or a webhook when your query's results need attention.
+5. API - anything you can do with the UI, you can do with the API. Easily connect results to other systems or automate your workflows.
 
 ## Supported Data Sources {#supported_data_sources}
 
