@@ -63,7 +63,7 @@ Hit "Save" to apply your changes or "Cancel" to leave no trace.
 
 ## Can I Download a Visualization as an Image File? {#download_viz}
 
-Yes, you can!
+Certainly!
 
 Hover the top right area of a visualization you wish to download and click the camera icon to simply download it to your device or the floppy icon to open and edit it in plot.ly.
 
