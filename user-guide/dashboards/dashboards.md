@@ -5,7 +5,7 @@
 A dashboard is a combination of visualizations and text boxes.
 For detailed instructions, scroll some more.
 
-![](../assets/gifs/Dashboards.gif)
+![](../assets/gifs/dashboards/Dashboards.gif)
 
 
 You can add a new dashboard via the Dashboard menu (bottom item will be New Dashabord) or via the home screen:
