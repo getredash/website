@@ -3,7 +3,7 @@
 ## On-Premise Setup
 * [Setting up a Redash instance](setup/setting-up-redash-instance.md)
 * [Settings - Environment Variables](setup/settings-environment-variables.md)
-* [Data Sources Options and Requirements](setup/supported-data-sources.md)
+* [Data Sources Options and Requirements](setup/supported-data-sources-options-reqs.md)
 * [Permissions and Groups](setup/getting_started/permissions_and_groups.md)
 * [Setting up development environment (using Vagrant)](setup/setting-up-development-environment-using-vagrant.md)
 * [SAML Authentication and Authorization](setup/saml-authentication-and-authorization.md)
