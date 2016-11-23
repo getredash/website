@@ -1,9 +1,9 @@
-**_re:dash_** is our take on freeing the data within our company in a way that will better fit our culture and usage patterns.
+**_Redash_** is our take on freeing the data within our company in a way that will better fit our culture and usage patterns.
 
-Prior to **_re:dash_**, we tried to use traditional BI suites and discovered a set of bloated, technically challenged and slow tools/flows. What we were looking for was a more hacker'ish way to look at data, so we built one.
+Prior to **_Redash_**, we tried to use traditional BI suites and discovered a set of bloated, technically challenged and slow tools/flows. What we were looking for was a more hacker'ish way to look at data, so we built one.
 
-**_re:dash_** was built to allow fast and easy access to billions of records, that we process and collect using Amazon Redshift ("petabyte scale data warehouse" that "speaks" PostgreSQL).
-Today **_re:dash_** has support for querying multiple databases, including: Redshift, Google BigQuery,Google Spreadsheets, PostgreSQL, MySQL, Graphite and custom scripts.
+**_Redash_** was built to allow fast and easy access to billions of records, that we process and collect using Amazon Redshift ("petabyte scale data warehouse" that "speaks" PostgreSQL).
+Today **_Redash_** has support for querying multiple databases, including: Redshift, Google BigQuery,Google Spreadsheets, PostgreSQL, MySQL, Graphite and custom scripts.
 
 ### Features
 
@@ -23,7 +23,7 @@ You can try out the demo instance: <a href="http://demo.redash.io" onclick="trac
 
 ### Getting Started
 
-[Setting up re:dash instance]({% post_url 2015-02-18-setup %}) (includes links to ready made AWS/GCE images).
+[Setting up Redash instance]({% post_url 2015-02-18-setup %}) (includes links to ready made AWS/GCE images).
 
 ### Getting Help
 
@@ -34,4 +34,4 @@ You can try out the demo instance: <a href="http://demo.redash.io" onclick="trac
 * Contact Arik, the maintainer directly: arik@redash.io.
 
 ### Contributing
-**_re:dash_** has a growing community and contributions are always welcome (particularly documentation). To contribute, fork the project on GitHub and send a pull request.
+**_Redash_** has a growing community and contributions are always welcome (particularly documentation). To contribute, fork the project on GitHub and send a pull request.
