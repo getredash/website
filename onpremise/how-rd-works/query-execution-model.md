@@ -41,6 +41,9 @@ As a response to `/api/query_results` the server will send either the query resu
 
 ## Ideas on How to Implement Query Parameters
 
+Please note that parameters work well in dashboards but they won't work when embedding visualizations outside of Redash.
+
+
 ### Client Side Only Implementation
 
 (This was actually implemented in. See pull request [#363](https://github.com/getredash/redash/pull/363) for details.)

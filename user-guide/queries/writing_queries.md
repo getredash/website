@@ -59,6 +59,8 @@ This is how an "action" parameter looks:
 
 **Please note that you'll need to re-execute the query with the newly set parameter to get the desires results.**
 
+While parameters work in dashboards, they won't work when embedding visualizations outside of Redash.
+
 ## How to Add a Filter to a Query? {#query_filters}
 
 It is possible to have filters for query results and visualizations. Thanks to filters, you can restrain the result to a certain or multiple values. Filters are enabled by following a naming convention for columns.
