@@ -91,7 +91,7 @@ Note that you can use `__filter` or `__multiFilter`, (double underscore instead 
 
 ## Shortcuts {#shortcuts}
 
-Execute = ctrl+E or cmd+E
+Execute = ctrl+ enter or cmd+ enter
 
 Save = ctrl+S or cmd+S
 
