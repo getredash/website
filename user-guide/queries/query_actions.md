@@ -39,10 +39,32 @@ You can also automatically [export your results to CSV or JSON](how_to_export_qu
 
 ## How to export query results to CSV or JSON? {#how_to_export_query_csv_json}
 
-Query results can be automatically exported to CSV or JSON by using your API key. Your API key can be found when viewing your profile, from the top right menu in the navigation bar.
+Query results can be automatically exported to CSV or JSON by using your query's API key. Your query's API key can be found in the top right menu in the query editor.
 
-The format of the URL is the following: ```https://<redash_domain>/api/queries/<query_id>/results.(csv|json)?api_key=<your_api_key>. ```
+![](../assets/query_api_key.png)
+
+The format of the URL is the following: ```https://<redash_url>/api/queries/<query_id>/results.(csv|json)?api_key=<your_api_key>. ```
+
+`redash_url` might be something like `redash.acme.com` in case of a self hosted Redash or `app.redash.io/acme` in case of a hosted account.
 
 Here is a working example: http://demo.redash.io/api/queries/63/results.json?api_key=874fcd93ce4b6ef87a9aad41c712bcd5d17cdc8f.
 
-Using this URL you can easily import query results directly into Google Spreadsheets, using the importdata function. For example: `=importdata("http://demo.redash.io/api/queries/63/results.csv?api_key=874fcd93ce4b6ef87a9aad41c712bcd5d17cdc8f")`
+## How to use Google Spreadsheets' IMPORTDATA function? {#google-spreadsheets-importdata}
+
+Using this URL you can easily import query results directly into Google Spreadsheets, using the importdata function and your query's API key you can get  from the menu at the top right corner of the query editor.
+
+![](../assets/query_api_key.png)
+
+You can use this template in your sheet:
+
+Hosted account -
+`=importdata("http://app.redash.io/{account name}/api/queries/{query id}/results.csv?api_key={query api key}")`
+
+Self hosted account - `=importdata("http://{account name}.redash.io/api/queries/{query id}/results.csv?api_key={query api key}")`
+
+
+For example:
+
+Hosted account - `=importdata("http://app.redash.io/demo/api/queries/63/results.csv?api_key=874fcd93ce4b6ef87a9aad41c712bcd5d17cdc8f")`
+
+Self hosted account - `=importdata("http://demo.redash.io/api/queries/63/results.csv?api_key=874fcd93ce4b6ef87a9aad41c712bcd5d17cdc8f")`
