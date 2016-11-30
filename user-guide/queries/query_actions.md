@@ -42,7 +42,7 @@ To manually download a dataset, click the "Download Dataset" button above the re
 
 ![](../assets/download_dataset.png)
 
-You can also automatically [export your results to CSV or JSON](how_to_export_query_results_to_csv_or_json.md)
+You can also automatically [export your results to CSV or JSON](#how_to_export_query_csv_json)
 
 ## How to export query results to CSV or JSON? {#how_to_export_query_csv_json}
 
