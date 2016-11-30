@@ -39,7 +39,7 @@ You can also automatically [export your results to CSV or JSON](how_to_export_qu
 
 ## How to export query results to CSV or JSON? {#how_to_export_query_csv_json}
 
-Query results can be automatically exported to CSV or JSON by using your query's API key. Your query's API key can be found in the top right menu in the query editor.
+Query results can be automatically exported to CSV or JSON by using your query's API key. Your query API key can be found in the top right menu in the query editor.
 
 ![](../assets/query_api_key.png)
 
@@ -51,7 +51,7 @@ Here is a working example: http://demo.redash.io/api/queries/63/results.json?api
 
 ## How to use Google Spreadsheets' IMPORTDATA function? {#google-spreadsheets-importdata}
 
-Using this URL you can easily import query results directly into Google Spreadsheets, using the importdata function and your query's API key you can get  from the menu at the top right corner of the query editor.
+Using this URL you can easily import query results directly into Google Spreadsheets, using the IMPORTDATA function and your query API key you can get  from the menu at the top right corner of the query editor.
 
 ![](../assets/query_api_key.png)
 
