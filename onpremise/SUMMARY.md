@@ -4,7 +4,7 @@
 * [Setting up a Redash instance](setup/setting-up-redash-instance.md)
 * [Settings - Environment Variables](setup/settings-environment-variables.md)
 * [Data Sources Options and Requirements](setup/supported-data-sources-options-reqs.md)
-* [Permissions and Groups](https://redash.io/help/user-mgmt/user-mgmt.html#permissions_and_groups)
+* [Permissions and Groups](setup/permissions_and_groups.md)
 * [Setting up development environment (using Vagrant)](setup/setting-up-development-environment-using-vagrant.md)
 * [SAML Authentication and Authorization](setup/saml-authentication-and-authorization.md)
 * [SSL (HTTPS) Setup](setup/ssl-https-setup.md)
