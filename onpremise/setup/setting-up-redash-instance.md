@@ -54,7 +54,7 @@ $ gcloud compute instances create <your_instance_name> --image redash-091-b1377-
 
 (the same can be done from the web interface, just make sure to enable BigQuery access)
 
-Please note that currently the Google Compute Engine images are for version 0.9.1. After creating the instance, please run the [_upgrade process_](maintenance/how-to-upgrade-redash.md) and then proceed to [“](#setup-redash-instance-setup) [Setup](#setup-redash-instance-setup)[”](#setup-redash-instance-setup).
+Please note that currently the Google Compute Engine images are for version 0.9.1. After creating the instance, please run the [_upgrade process_](../maintenance/how-to-upgrade-redash.md) and then proceed to [“](#setup-redash-instance-setup) [Setup](#setup-redash-instance-setup)[”](#setup-redash-instance-setup).
 
 ### Docker Compose
 
@@ -88,7 +88,7 @@ Most of the settings you need to edit are in the `/opt/redash/.env` file.
 
 1. Update the cookie secret (important! otherwise anyone can sign new cookies and impersonate users): change “veryverysecret” in the line: `export REDASH_COOKIE_SECRET=veryverysecret` to something else (you can run the command `pwgen 32 -1` to generate a random string).
 2. By default we create an admin user with the password “admin”. You can change this password opening the: `/users/me#password` page after logging in as admin.
-3. If you want to use Google OAuth to authenticate users, you need to create a Google Developers project (see _[instructions](setup/how-to-create-a-google-developers-project.md)_) and then add the needed configuration in the `.env` file:
+3. If you want to use Google OAuth to authenticate users, you need to create a Google Developers project (see [instructions](../setup/how-to-create-a-google-developers-project.md) and then add the needed configuration in the `.env` file:
 
 ```
 export REDASH_GOOGLE_CLIENT_ID=""
@@ -114,7 +114,7 @@ If you’re passing multiple domains, separate them with commas.
 
 To make Redash truly useful, you need to setup your data sources in it. Browse to `/data_sources` on your instance, to create new data source connection.
 
-See [_documentation_](setup/supported-data-sources.md) for the different options. Your instance comes ready with dependencies needed to setup supported sources.
+See [_documentation_](../setup/supported-data-sources.md) for the different options. Your instance comes ready with dependencies needed to setup supported sources.
 
 ### Mail Configuration
 
@@ -148,8 +148,8 @@ It’s recommended to upgrade once in a while your Redash instance to benefit fr
 
 ### Configuration
 
-For a full list of environment variables, see the [settings article](setup/settings-environment-variables.md)
+For a full list of environment variables, see the [settings article](../setup/settings-environment-variables.md)
 
 ## Notes
 
-* If this is a production setup, you should enforce HTTPS and make sure you set the cookie secret (see _[instructions](ssl-https-setup.md)_).
+* If this is a production setup, you should enforce HTTPS and make sure you set the cookie secret (see [instructions](../setup/ssl-https-setup.md).

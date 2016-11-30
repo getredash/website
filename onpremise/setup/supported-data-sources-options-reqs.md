@@ -70,11 +70,11 @@ If one of the listed data source types isn’t available when trying to create a
   * `pymongo` python package.
 
 
-For information on how to write MongoDB queries, see [_documentation_](user-guide/queries/querying_mongodb.md).
+For information on how to write MongoDB queries, see [_documentation_](../user-guide/queries/querying_mongodb.md).
 
 ## ElasticSearch
 
-For information on how to write ElasticSearch queries, see [_documentation_](user-guide/queries/querying_elasticsearch.md).
+For information on how to write ElasticSearch queries, see [_documentation_](../user-guide/queries/querying_elasticsearch.md).
 
 ## InfluxDB
 
@@ -122,7 +122,7 @@ For information on how to write ElasticSearch queries, see [_documentation_](use
 
 ## URL
 
-A URL based data source which requests URLs that return the [_results JSON format_](how-rd-works/data-source-results-format.md)
+A URL based data source which requests URLs that return the [_results JSON format_](../how-rd-works/data-source-results-format.md)
 
 Very useful in situations where you want to expose the data without connecting directly to the database.
 
@@ -246,4 +246,4 @@ Documentation: [https://docs.treasuredata.com/articles/redash](https://docs.trea
   > * Password
 
 
-For information on how to write JIRA/JQL queries, click [here](user-guide/queries/querying_jira_jql.md).
+For information on how to write JIRA/JQL queries, click [here](../user-guide/queries/querying_jira_jql.md).
