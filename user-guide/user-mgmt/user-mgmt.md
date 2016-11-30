@@ -1,4 +1,4 @@
-# User and Group Management
+# User, Group and Query Management
 
 ## Inviting Users to Redash {#inviting_users}
 
@@ -21,7 +21,7 @@ To edit an existing group's settings, click on its name in the Groups list.
 Once you created a group, you can start adding users to it by typing their name:
 ![](../assets/view_only_group.png)
 
-Each group can be connected to specific data sources, read more about group permissions [here](permissions_and_groups.md)
+Each group can be connected to specific data sources, read more about group permissions [here](#permissions_and_groups.md)
 
 ## Permissions and Groups {#permissions_and_groups}
 
@@ -42,3 +42,7 @@ If a user has access to at least one widget on a dashboard, they can see this da
 ### What if I want to limit the user to only some tables?
 
 The idea is to leverage your database’s security model, and hence create a user with access to the tables/columns you want to give access to. Create a data source that is using this user and then associate it with a group of users who need this level of access.
+
+### How Can I View or Edit the Queries in Queue? {#query_queue}
+
+Admins can view the currently running and scheudled queries in the admin menu: `https://app.redash.io/<your org>/admin/queries/tasks`
