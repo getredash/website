@@ -26,6 +26,7 @@
 * [Exploring Schemas](queries/writing_queries.md#exploring-schemas)
 * [How to Download the Results of My Query?](queries/query_actions.md#how_to_download_a_dataset)
 * [How to Export Query Results to Csv or Json?](queries/query_actions.md#how_to_export_query_csv_json)
+* [How to use Google Spreadsheets' IMPORTDATA function?](queries/query_actions.md#google-spreadsheets-importdata)
 * [How to Use Parameters?](queries/writing_queries.md#query_params)
 * [How to Add a Filter to a Query?](queries/writing_queries.md#query_filters)
 * [How to Schedule a Query?](queries/writing_queries.md#query_actions.md#how_to_schedule_a_query)
