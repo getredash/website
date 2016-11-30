@@ -246,4 +246,4 @@ Documentation: [https://docs.treasuredata.com/articles/redash](https://docs.trea
   > * Password
 
 
-For information on how to write JIRA/JQL queries, click [here](../user-guide/queries/querying_jira_jql.md).
+For information on how to write JIRA/JQL queries, click [here](https://redash.io/help/queries/querying_jira_jql.html).
