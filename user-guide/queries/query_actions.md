@@ -1,5 +1,12 @@
 # Query Actions
 
+* [How to create a new query?](#how_to_create_a_query)
+* [How to Duplicate Queries?](#how_to_duplicate_a_query)
+* [How to Schedule a Query?](#how_to_schedule_a_query)
+* [How to Download the Results of My Query?](#how_to_download_a_dataset)
+* [How to Export Query Results to CSV or Json?](#how_to_export_query_csv_json)
+* [How to use Google Spreadsheets' IMPORTDATA function?](#google-spreadsheets-importdata)
+
 ## How to create a new query? {#how_to_create_a_query}
 
 To start working on a new query, click "New Query" on the home page or under the Queries menu in the navigation bar.

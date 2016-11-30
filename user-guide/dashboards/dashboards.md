@@ -1,5 +1,12 @@
 # Dashboards
 
+* [How to Create a Dashboard?](#create_new_dash)
+* [Adding Visualizations to Dashboards](#add_viz_to_dash)
+* [Grouping Dashboards](#grouping_dashs)
+* [How to Share Dashboard (view only)?](#sharing_dashs)
+* [Embedding Dashboards](#embed_dash)
+* [Dashboard Filters (flags)](#dash_filters_flags)
+
 ## How to Create a Dashboard? {#create_new_dash}
 
 A dashboard is a combination of visualizations and text boxes.

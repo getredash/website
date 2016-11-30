@@ -1,5 +1,12 @@
 # Writing Queries
 
+* [How to Write a Query?](#how_to_write_a_query)
+* [Exploring Schemas](#exploring-schemas)
+* [Query Snippets and Shortcuts](#query_snippets)
+* [How to Use Parameters?](#query_params)
+* [How to Add a Filter to a Query?](#query_filters)
+* [Query Snippets and Shortcuts](#query_snippets)
+
 ![](../assets/gifs/queries/add_new_query.gif)
 
 ## How to Write a Query? {#how_to_write_a_query}
@@ -11,6 +18,7 @@ For NoSQL languages Redash has a few nuances:
 * [Querying ElasticSearch](querying_elasticsearch.md)
 * [Querying JIRA (JQL)](querying_jira_jql.md)
 * [Querying MongoDB](querying_mongodb.md)
+
 
 Redash supports **live auto-complete** - just start typing and you'll get the relevant suggestions.
 For schemas with more than 5000 tables+columns start typing and then hit ctrl/cmd+spacebar to see suggestions.
