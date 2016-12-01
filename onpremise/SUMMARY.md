@@ -19,7 +19,6 @@
 * [Data Source Results Format](how-rd-works/data-source-results-format.md)
 
 ## Troubleshooting
-* [Status Page](troubleshooting/status-page.md)
 * [Error: Worker Exited Prematurely: Signal 9 (sigkill)](troubleshooting/error-worker-exited-prematurely-signal-9-sigkill.md)
 * [Error Running Query : Query completed but it returned no data](troubleshooting/query_complete_no_data.md)
 * [Queries with Large Data Sets Take a Long Time to Run](troubleshooting/large-queries-run-forever.md)
