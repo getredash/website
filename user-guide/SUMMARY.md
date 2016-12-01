@@ -8,8 +8,12 @@
 * [Privacy and Security](aboutrd/aboutrd.md#privacy-security)
 
 ## Getting Started
-* [How to Add Data Sources to Redash?](getting_started/how_to_add_data_sources_to_redash.md)
+* [Adding Datasources](getting_started/getting_started.md#add-datasource)
 * [Exploring Schemas](queries/writing_queries.md#exploring-schemas)
+* [Writing Queries](getting_started/getting_started.md#write_queries)
+* [Adding Visualizations](getting_started/getting_started.md#add-viz)
+* [Creating Dashboards](getting_started/getting_started.md#create-dash)
+* [Invite Colleagues](getting_started/getting_started.md#invite-users)
 
 ## User Management
 * [Inviting Users to Use Redash](user-mgmt/user-mgmt.md#inviting_users)
