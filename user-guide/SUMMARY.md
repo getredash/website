@@ -41,6 +41,7 @@
 ## Alerts
 * [How to Setup an Alert](alerts/how-to-setup-an-alert.md)
 * [Adding Alert Destination - Slack](alerts/slack-alert-destination.md)
+* [Alert Status and Frequency](alerts/alert-status-freq.md)
 
 ## Visualization
 * [How to Create a Visualization from My Dataset?](visualization/visualization.md#create_new_viz)
