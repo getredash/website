@@ -29,7 +29,7 @@ We recommend using a user with read only permissions for the database.
 
 Once you have at least one data source connected, give it a go and write a query in our comfy query editor.
 
-Click "New Query" on the home page or under the Queries menu in the navigation bar. For detailed instructions about writing queries [click here]((../queries/writing_queries.md), for query actions and options [click here](../queries/query_actions.md).
+Click "New Query" on the home page or under the Queries menu in the navigation bar. For detailed instructions about writing queries [click here](../queries/writing_queries.md), for query actions and options [click here](../queries/query_actions.md).
 
 If it's your first time using a query editor or if you're unsure about the structure of your schema, you can always [explore the schema](../queries/writing_queries.md#exploring-schemas).
 
