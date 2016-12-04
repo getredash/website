@@ -114,7 +114,7 @@ If you’re passing multiple domains, separate them with commas.
 
 To make Redash truly useful, you need to setup your data sources in it. Browse to `/data_sources` on your instance, to create new data source connection.
 
-See [_documentation_](https://redash.io/help/about/supported_data_sources.html) for the different options. Your instance comes ready with dependencies needed to setup supported sources.
+See [_documentation_](https://redash.io/help-onpremise/setup/supported-data-sources-options-reqs.html) for the different options. Your instance comes ready with dependencies needed to setup supported sources.
 
 ### Mail Configuration
 
