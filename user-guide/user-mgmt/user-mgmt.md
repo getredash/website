@@ -42,11 +42,3 @@ If a user has access to at least one widget on a dashboard, they can see this da
 ### What if I want to limit the user to only some tables?
 
 The idea is to leverage your database’s security model, and hence create a user with access to the tables/columns you want to give access to. Create a data source that is using this user and then associate it with a group of users who need this level of access.
-
-<<<<<<< HEAD
-### How Can I View or Edit the Queries in Queue?
-=======
-### How Can I View or Edit the Queries in Queue? {#query_queue}
->>>>>>> refs/remotes/origin/master
-
-Admins can view the currently running and scheudled queries in the admin menu: `https://app.redash.io/<your org>/admin/queries/tasks`
