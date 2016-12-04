@@ -1,5 +1,11 @@
 # About Redash
 
+* [What's Redash?](#whats_redash)
+* [Main Features](#main_features)
+* [Supported Data Sources](#supported_data_sources)
+* [What Browsers Redash Works Best on?](#supported_browsers)
+* [Privacy and Security](#privacy-security)
+
 ## What's Redash? {#whats_redash}
 
 Redash is an open source tool for teams to query, visualize and collaborate. Redash is quick to setup and works with any data source you might need so you can query from anywhere in no time.

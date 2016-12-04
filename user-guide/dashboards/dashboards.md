@@ -1,5 +1,12 @@
 # Dashboards
 
+* [How to Create a Dashboard?](#create_new_dash)
+* [Adding Visualizations to Dashboards](#add_viz_to_dash)
+* [Grouping Dashboards](#grouping_dashs)
+* [How to Share Dashboard (view only)?](#sharing_dashs)
+* [Embedding Dashboards](#embed_dash)
+* [Dashboard Filters (flags)](#dash_filters_flags)
+
 ## How to Create a Dashboard? {#create_new_dash}
 
 A dashboard is a combination of visualizations and text boxes.
@@ -24,7 +31,7 @@ Select an existing query or add a text, you can select between 2 sizes - regular
 
 A dashboards is a tool to aggregate multiple query datasets, visualizations and texts into one nifty view. To add widgets to your dashboard, select a query you want to feature and the visualization you want for it. By default, queries results are shown in a table.
 
-At the moment it's not possible to create a new visualization from the "Add Widget" menu, so you'll need to open the query and add the visualization there beforehand ([instructions]((visualization/visualization.md#create_new_viz)))
+At the moment it's not possible to create a new visualization from the "Add Widget" menu, so you'll need to open the query and add the visualization there beforehand ([instructions](../visualization/visualization.md#create_new_viz))
 
 ## Grouping Dashboards {#grouping_dashs}
 
@@ -53,4 +60,4 @@ If you’ve got queries that have some filters and you want to apply filters at 
 
 You can do it through the admin interface at /admin/dashboard or manually by setting the column dashboard_filters_enabled of the table dashboards to TRUE in the Redash database.
 
-If you are using the hosted service and wish to enable it for your dashboard/s - please contact us.
+If you are using the hosted service and wish to enable it for your dashboard/s - please contact us and send the URL of the dashboard you want to apply the filter/s for. Make sure to add filters to each query you want to filter in tat dashboard.

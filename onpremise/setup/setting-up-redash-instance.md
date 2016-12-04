@@ -54,7 +54,7 @@ $ gcloud compute instances create <your_instance_name> --image redash-091-b1377-
 
 (the same can be done from the web interface, just make sure to enable BigQuery access)
 
-Please note that currently the Google Compute Engine images are for version 0.9.1. After creating the instance, please run the [_upgrade process_](maintenance/how-to-upgrade-redash.md) and then proceed to [“](#setup-redash-instance-setup) [Setup](#setup-redash-instance-setup)[”](#setup-redash-instance-setup).
+Please note that currently the Google Compute Engine images are for version 0.9.1. After creating the instance, please run the [_upgrade process_](../maintenance/how-to-upgrade-redash.md) and then proceed to [“](#setup-redash-instance-setup) [Setup](#setup-redash-instance-setup)[”](#setup-redash-instance-setup).
 
 ### Docker Compose
 
@@ -67,73 +67,6 @@ Please note that currently the Google Compute Engine images are for version 0.9.
 7. Visit that Docker machine IP at port 80, and you should see a Redash login screen.
 
 Now proceed to “[Setup](#setup-redash-instance-setup)”.
-
-### Heroku
-
-Due to the nature of Heroku deployments, upgrading to a newer version of Redash requires performing the steps outlined on the [“How to Upgrade”](maintenance/how-to-upgrade-redash.md) page.
-
-1. Install [Heroku CLI](https://toolbelt.heroku.com/).
-
-2. Create Heroku App:
-
-  ```
-  $ heroku apps:create <app name>
-
-  ```
-
-
-1. Set application buildpacks:
-
-  ```
-  $ heroku buildpacks:set heroku/python
-  $ heroku buildpacks:add --index 1 heroku/nodejs
-
-  ```
-
-2. Add Postgres and Redis addons:
-
-  ```
-  $ heroku addons:create heroku-postgresql:hobby-dev
-  $ heroku addons:create heroku-redis:hobby-dev
-
-  ```
-
-3. Update the cookie secret (Important otherwise anyone can sign new cookies and impersonate users. You may be able to run the command `pwgen 32 -1` to generate a random string):
-
-  ```
-  $ heroku config:set REDASH_COOKIE_SECRET='<create a secret token and put here>'
-
-  ```
-
-4. Push the repository to Heroku:
-
-  ```
-  $ git push heroku master
-
-  ```
-
-5. Create database tables:
-
-  ```
-  $ heroku run ./manage.py database create_tables
-
-  ```
-
-6. Create admin user:
-
-  ```
-  $ heroku run ./manage.py users create --admin "Admin" admin
-
-  ```
-
-
-1. Start worker process:
-
-  ```
-  $ heroku ps:scale worker=1
-
-  ```
-
 
 ### Other
 
@@ -155,7 +88,7 @@ Most of the settings you need to edit are in the `/opt/redash/.env` file.
 
 1. Update the cookie secret (important! otherwise anyone can sign new cookies and impersonate users): change “veryverysecret” in the line: `export REDASH_COOKIE_SECRET=veryverysecret` to something else (you can run the command `pwgen 32 -1` to generate a random string).
 2. By default we create an admin user with the password “admin”. You can change this password opening the: `/users/me#password` page after logging in as admin.
-3. If you want to use Google OAuth to authenticate users, you need to create a Google Developers project (see _[instructions](setup/how-to-create-a-google-developers-project.md)_) and then add the needed configuration in the `.env` file:
+3. If you want to use Google OAuth to authenticate users, you need to create a Google Developers project (see [instructions](../setup/how-to-create-a-google-developers-project.md) and then add the needed configuration in the `.env` file:
 
 ```
 export REDASH_GOOGLE_CLIENT_ID=""
@@ -181,7 +114,7 @@ If you’re passing multiple domains, separate them with commas.
 
 To make Redash truly useful, you need to setup your data sources in it. Browse to `/data_sources` on your instance, to create new data source connection.
 
-See [_documentation_](setup/supported-data-sources.md) for the different options. Your instance comes ready with dependencies needed to setup supported sources.
+See [_documentation_](https://redash.io/help/setup/supported-data-sources.html) for the different options. Your instance comes ready with dependencies needed to setup supported sources.
 
 ### Mail Configuration
 
@@ -211,12 +144,12 @@ To test email configuration, you can run bin/run ./manage.py send_test_mail (fro
 
 ### How to upgrade?
 
-It’s recommended to upgrade once in a while your Redash instance to benefit from bug fixes and new features. See [_here_](maintenance/how-to-upgrade-redash.md) for full upgrade instructions (including Fabric script).
+It’s recommended to upgrade once in a while your Redash instance to benefit from bug fixes and new features. See [_here_](../maintenance/how-to-upgrade-redash.md) for full upgrade instructions (including Fabric script).
 
 ### Configuration
 
-For a full list of environment variables, see the [settings article](setup/settings-environment-variables.md)
+For a full list of environment variables, see the [settings article](../setup/settings-environment-variables.md)
 
 ## Notes
 
-* If this is a production setup, you should enforce HTTPS and make sure you set the cookie secret (see _[instructions](setup/ssl-https-setup.md)_).
+* If this is a production setup, you should enforce HTTPS and make sure you set the cookie secret (see [instructions](../setup/ssl-https-setup.md).

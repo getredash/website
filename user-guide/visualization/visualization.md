@@ -1,5 +1,11 @@
 # Visualizations
 
+* [How to Create a Visualization from My Dataset?](#create_new_viz)
+* [What Types of Visualization Can I Use for My Results?](#viz_types)
+* [How to Embed Visualizations?](#embed_viz)
+* [How to Edit a Visualization?](#edit_viz)
+* [Can I Download a Visualization as an Image File?](#download_viz)
+
 ## How to Create a Visualization from My Dataset? {#create_new_viz}
 
 Once your query finished running for the first time, you can add a visualization for your results by clicking the "New visualization" button above the results (currently shown only when the source code is shown).

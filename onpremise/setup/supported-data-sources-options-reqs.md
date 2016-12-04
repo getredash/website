@@ -70,11 +70,11 @@ If one of the listed data source types isn’t available when trying to create a
   * `pymongo` python package.
 
 
-For information on how to write MongoDB queries, see [_documentation_](user-guide/queries/querying_mongodb.md).
+For information on how to write MongoDB queries, see [_documentation_](https://redash.io/help/queries/querying_mongodb.html).
 
 ## ElasticSearch
 
-For information on how to write ElasticSearch queries, see [_documentation_](user-guide/queries/querying_elasticsearch.md).
+For information on how to write ElasticSearch queries, see [_documentation_](https://redash.io/help/queries/querying_elasticsearch.html).
 
 ## InfluxDB
 
@@ -122,7 +122,7 @@ For information on how to write ElasticSearch queries, see [_documentation_](use
 
 ## URL
 
-A URL based data source which requests URLs that return the [_results JSON format_](how-rd-works/data-source-results-format.md)
+A URL based data source which requests URLs that return the [_results JSON format_](../how-rd-works/data-source-results-format.md)
 
 Very useful in situations where you want to expose the data without connecting directly to the database.
 
@@ -146,6 +146,8 @@ Notes:
 1. To be able to load the spreadsheet in Redash - share your it with your ServiceAccount’s email (it can be found in the credentials json file, for example 43242343247-fjdfakljr3r2@developer.gserviceaccount.com).
 2. The query format is “DOC_UUID|SHEET_NUM” (for example “kjsdfhkjh4rsEFSDFEWR232jkddsfh|0”)
 3. Alternatively, one can create a new Google BigQuery table using the Google Spreadsheet in question as a source, and then use Redash’s BigQuery connector to query the spreadsheet indirectly. This way, the SQL used to query the spreadsheet (via BigQuery table) is far more flexible than the direct query of the type (“kjsdfhkjh4rsEFSDFEWR232jkddsfh|0”) mentioned above. ([BigQuery integrates with Google Drive](https://cloud.google.com/blog/big-data/2016/05/bigquery-integrates-with-google-drive)).
+
+**Please Note**: we recommend using each query's API key and not the user API key. The query API key can be obtained via the menu at the top right corner of the query editor.
 
 ## Python
 
@@ -244,4 +246,4 @@ Documentation: [https://docs.treasuredata.com/articles/redash](https://docs.trea
   > * Password
 
 
-For information on how to write JIRA/JQL queries, click [here](user-guide/queries/querying_jira_jql.md).
+For information on how to write JIRA/JQL queries, click [here](https://redash.io/help/queries/querying_jira_jql.html).
