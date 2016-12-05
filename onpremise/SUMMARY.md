@@ -26,3 +26,4 @@
 ## Misc
 * [Backup Your Redash Database and Restore It on a Different Server](misc/backup-your-redash-database-and-restore-it-on-a-different-server.md)
 * [How to Encrypt Your Redash installation With a Free SSL Certificate From Let’s Encrypt](misc/how-to-encrypt-your-redash-installation-with-a-free-ssl-certificate-from-lets-encrypt.md)
+* [Dashboard Filters (flags)](misc/dash-filters-flags.md)
