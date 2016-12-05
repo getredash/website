@@ -35,6 +35,7 @@ Clicking the Never will open a picker for "every x" or at a specific time of day
 ![](../assets/refresh_schedule.png)
 
 Once a schedule is set, your query will run automatically when it was instructed to run.
+**Please note that scheduling queries that contain parameters will not work - queries with parameters need to get a parameter in order to run every time, the scheduler will try to run them with the missing value and result in an error**
 
 ## How to download the results of my query? {#how_to_download_a_dataset}
 
