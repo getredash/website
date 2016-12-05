@@ -6,7 +6,7 @@ In the Alerts view you'll see all existing alerts and an option to create a new 
 
 To setup a new alert:
 
-1. Select the query you want to trigger an alert for (just start typing)
+1. Select the query you want to trigger an alert for (just start typing) - **queries with parameters won't work**
 
 2. Select the column you want to watch
 
