@@ -19,7 +19,6 @@
 * [Inviting Users to Use Redash](user-mgmt/user-mgmt.md#inviting_users)
 * [Creating and Editing Groups](user-mgmt/user-mgmt.md#create-edit-groups)
 * [Permissions and Groups](user-mgmt/user-mgmt.md#permissions_and_groups)
-* [How Can I View or Edit the Queries in Queue?](#user-mgmt/user-mgmt.md#query_queue)
 
 ## Querying
 * [How to Create a New Query?](queries/query_actions.md#how_to_create_a_query)
