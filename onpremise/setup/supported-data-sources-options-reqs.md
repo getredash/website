@@ -140,14 +140,8 @@ The query itself inside Redash will simply contain the URL to be executed (i.e. 
 * Additional requirements:
   * `gspread` and `oauth2client` python packages.
 
+Read about querying Google Spreadsheets [here](https://redash.io/help/queries/query-google-spreadsheets.html).
 
-Notes:
-
-1. To be able to load the spreadsheet in Redash - share your it with your ServiceAccount’s email (it can be found in the credentials json file, for example 43242343247-fjdfakljr3r2@developer.gserviceaccount.com).
-2. The query format is “DOC_UUID|SHEET_NUM” (for example “kjsdfhkjh4rsEFSDFEWR232jkddsfh|0”)
-3. Alternatively, one can create a new Google BigQuery table using the Google Spreadsheet in question as a source, and then use Redash’s BigQuery connector to query the spreadsheet indirectly. This way, the SQL used to query the spreadsheet (via BigQuery table) is far more flexible than the direct query of the type (“kjsdfhkjh4rsEFSDFEWR232jkddsfh|0”) mentioned above. ([BigQuery integrates with Google Drive](https://cloud.google.com/blog/big-data/2016/05/bigquery-integrates-with-google-drive)).
-
-**Please Note**: we recommend using each query's API key and not the user API key. The query API key can be obtained via the menu at the top right corner of the query editor.
 
 ## Python
 
