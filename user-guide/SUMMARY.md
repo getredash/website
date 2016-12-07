@@ -39,6 +39,7 @@
 * [Using Datasets as Data Sources](queries/using-datasets-as-data-sources.md)
 * [How to Duplicate Queries?](queries/query_actions.md#how_to_duplicate_a_query)
 * [Querying a Google Spreadsheets Data Source](queries/query-google-spreadsheets.md)
+* [Querying URLs](queries/query-url.md)
 
 ## Alerts
 * [How to Setup an Alert](alerts/how-to-setup-an-alert.md)
