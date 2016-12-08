@@ -12,6 +12,7 @@ Redash plays nice with many data sources!
 - ElasticSearch
 - Hive
 - Google Spreadsheets
+- URL
 - Impala
 - InfluxDB
 - Presto

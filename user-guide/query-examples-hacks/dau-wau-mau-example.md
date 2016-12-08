@@ -1,0 +1,41 @@
+# Daily, Weekly or Monthly Active Users
+
+DAU, WAU and MAU are pretty easy to calculate once you define your user groups (daily, weekly...) and calculate the dates for each group. Visualizations are always recommended for this type of data.
+
+Here is a step by step example for this type of query in PostgreSQL - you can [view it in our demo account](http://demo.redash.io/queries/3231/source#4315) as well.
+
+1. Define each group or users (daily, weekly and monthly - or any combination that suits you).
+
+  Define the smallest time range first as you'll use it in the other time ranges - in this case it's the daily users (dau) and you'll group them by the creation date ("age").
+
+  Also define what an active user is - in this case we count an active user by the first time we saw its id in the events table.
+
+      ```
+      with dau as (
+            select created_at::date as "date", count(distinct user_id) as dau
+            from events
+            where created_at > '2016-10-01'
+            group by 1
+           )
+      ```
+
+2. Calculate the dates of each group - use relative dates and exact ones to keep your dataset tidy and your query speedy.
+
+      ```
+      select "date", dau,
+             (select count(distinct user_id)
+              from events
+              where events.created_at::date between dau.date - 29 and dau.date
+              and created_at > '2016-10-01'
+             ) as mau,
+             (select count(distinct user_id)
+              from events
+              where events.created_at::date between dau.date - 7 and dau.date
+              and created_at > '2016-10-01'
+             ) as wau
+      from dau
+      ```
+
+3. Select a nifty visualization
+
+![](../assets/visualization_examples/dau_wau_mau.png)
