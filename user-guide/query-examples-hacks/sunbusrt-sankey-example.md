@@ -6,6 +6,7 @@ To create such a chain of events you'll need to define the actions/event you wan
 
 Here is a step by step example using the `WITH` clause in PostgreSQL, you can view live renders of the visualizations [in our demo account](http://demo.redash.io/queries/2280#3113).
 
+  * We used the `WITH` clause in this example - `WITH` clauses allow you to name a sub-query block, this way your query is modular (and also runs faster), it can later be referred to inside the main query instead of making a large main query with many aliases, `JOIN`s  or other complexities. You can have multiple sub-queries, just be sure to have a coma between them.
 
 1. Define the actions or events you want to examine - in this case we took all events and concated them into a readable string, each database has it's way of saving event types etc. We also removed 'view' and 'execute' events as we want to investigate interactions and not just passive presence of users.
 

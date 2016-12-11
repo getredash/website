@@ -132,12 +132,12 @@ The query itself inside Redash will simply contain the URL to be executed (i.e. 
   * Url - set this if you want to limit queries to certain base path.
 
 Valid types of columns returned in results:
-TYPE_INTEGER = 'integer'
-TYPE_FLOAT = 'float'
-TYPE_BOOLEAN = 'boolean'
-TYPE_STRING = 'string'
-TYPE_DATETIME = 'datetime'
-TYPE_DATE = 'date'
+* integer
+* float
+* boolean
+* string
+* datetime
+* date
 
 To manipulate the data you get from the URL you can save the query that resulted with all the data and then query that data set. Read more about querying query results [here](https://redash.io/help/queries/using-datasets-as-data-sources.html).
 

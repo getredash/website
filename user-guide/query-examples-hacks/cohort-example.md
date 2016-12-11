@@ -6,6 +6,8 @@ To create your own cohort report, you'll need to define your cohort time frame, 
 
 Here is an example for a cohort query in PostgreSQL, step by step:
 
+  * We used the `WITH` clause in this example - `WITH` clauses allow you to name a sub-query block, this way your query is modular (and also runs faster), it can later be referred to inside the main query instead of making a large main query with many aliases, `JOIN`s  or other complexities. You can have multiple sub-queries, just be sure to have a coma between them.
+
 1. Select the time frame you want to investigate (usually a between a week and a month)
 
       ```
