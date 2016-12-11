@@ -80,4 +80,4 @@ CASE
         ELSE date = '{{date}}'
   END
   ```
-Kelly (thanks Kelly!) from Hudl shared this in our [Slack community](slack.redash.io).
+Kelly (thanks Kelly!) from Hudl shared this in our [Slack community](https://slack.redash.io).
