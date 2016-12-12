@@ -12,30 +12,31 @@ Here is a step by step example for this type of query in PostgreSQL - you can [v
 
   Also define what an active user is - in this case we count an active user by the first time we saw its id in the events table.
 
-      ```
-      with dau as (
-            select created_at::date as "date", count(distinct user_id) as dau
-            from events
-            where created_at > '2016-10-01'
-            group by 1
+      ```SQL
+      WITH
+      dau AS (
+            SELECT created_at::DATE AS "date", count(distinct user_id) AS dau
+            FROM events
+            WHERE created_at > '2016-10-01'
+            GROUP BY 1
            )
       ```
 
 2. Calculate the dates of each group - use relative dates and exact ones to keep your dataset tidy and your query speedy.
 
-      ```
-      select "date", dau,
-             (select count(distinct user_id)
-              from events
-              where events.created_at::date between dau.date - 29 and dau.date
-              and created_at > '2016-10-01'
-             ) as mau,
-             (select count(distinct user_id)
-              from events
-              where events.created_at::date between dau.date - 7 and dau.date
-              and created_at > '2016-10-01'
-             ) as wau
-      from dau
+      ```SQL
+      SELECT "date", dau,
+             (SELECT count(distinct user_id)
+              FROM events
+              WHERE events.created_at::DATE BETWEEN dau.date - 29 AND dau.date
+              AND created_at > '2016-10-01'
+             ) AS mau,
+             (SELECT count(distinct user_id)
+              FROM events
+              WHERE events.created_at::DATE BETWEEN dau.date - 7 AND dau.date
+              AND created_at > '2016-10-01'
+             ) AS wau
+      FROM dau
       ```
 
 3. Select a nifty visualization

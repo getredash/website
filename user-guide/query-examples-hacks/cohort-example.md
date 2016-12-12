@@ -10,54 +10,54 @@ Here is an example for a cohort query in PostgreSQL, step by step:
 
 1. Select the time frame you want to investigate (usually a between a week and a month)
 
-      ```
-      with
-      time_frame as (
-      select current_date - 14
+      ```SQL
+      WITH
+      time_frame AS (
+      SELECT CURRENT_DATE - 14
       ),
       ```
 
 2. Define your population relatively to the cohort date, for each following day
 
-      ```
-      population as (
-        select created_at::date as cohort_date, id as unique_id
-        from users
-        where created_at > (select * from time_frame)
+      ```SQL
+      population AS (
+        select created_at::DATE AS cohort_date, id AS unique_id
+        FROM users
+        WHERE created_at > (SELECT * FROM time_frame)
       ),
       ```
 
 3. Define what's an active user to you - what event interest you to examine
 
-      ```
-      activity as (
-        select created_at::date as activity_date, org_id as unique_id, cohort_date
-        from events
-        join population on population.unique_id = org_id
-        where created_at > (select * from time_frame)
+      ```SQL
+      activity AS (
+        SELECT created_at::DATE AS activity_date, org_id AS unique_id, cohort_date
+        FROM events
+        JOIN population ON population.unique_id = org_id
+        WHERE created_at > (SELECT * FROM time_frame)
       ),
       ```
 
 4. Aggregate your population by cohort date (day 1, day 2...)
 
-      ```
-      population_agg as (
-        select cohort_date, count(distinct unique_id) as total
-        from population
-        group by 1
+      ```SQL
+      population_agg AS (
+        SELECT cohort_date, COUNT(distinct unique_id) AS total
+        FROM population
+        GROUP BY 1
       )
       ```
 
 5. Write your query to show your population % by cohort dates
 
-      ```
-      select activity.cohort_date as date,
-          date_part('day',age(activity_date, activity.cohort_date)) as day,
-          count(distinct unique_id) as value,
+      ```SQL
+      SELECT activity.cohort_date AS DATE,
+          date_part('day',age(activity_date, activity.cohort_date)) AS day,
+          COUNT(distinct unique_id) AS value,
           total
-      from activity
-      join population_agg on activity.cohort_date = population_agg.cohort_date
-      group by 1 , 2, 4
+      FROM activity
+      JOIN population_agg ON activity.cohort_date = population_agg.cohort_date
+      GROUP BY 1 , 2, 4
       ```
 
 6. Add a cohort visualization to your query and you're done!
