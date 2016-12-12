@@ -30,7 +30,9 @@ In this example we covered different formatting types you can apply in a div:
 
 Other styling formats you can use:
 1. Font Size (font-size) - can be pixels (10ox, 20px, 34px and so on), relative (50%, 150%...), textual (large, medium, xx-small..) or HTML tags for headings (h1, h2...).
-2. Font Style -
+2. Headings ``<h1>`` and Displays (class = display1) - h1-h6 are heading sizes when h1 is the largest, display is a class you can combine with a heading to get a more stylized look.
+3. Font type (font-family) - change the font, not all fonts are supported in each browser so it's tricky.
+4. Misc- <mark>mark (mark)</mark>, <u>underline (u)</u>, <strong>bold (strong)</strong>, <em>italic (em)</em>
 
 You are welcome to try other Bootstrap CSS tricks and share with us.
 
@@ -59,10 +61,10 @@ You can also use the anchor tag to show a name instead of the URL:
 To add images to tables you can use the `img` tag.
 
 For example:
-```SQL
-SELECT cat, '<img src="https://demo.redash.io/images/'|| cat ||'.png" alt="cat" width="'||20||'" height="20";>' AS image
-FROM cats
-```
+      ```SQL
+      SELECT cat, '<img src="https://demo.redash.io/images/'|| cat ||'.png" alt="cat" width="'||20||'" height="20";>' AS image
+      FROM cats
+      ```
 
 Please note that || is a PostgreSQL operator/function - for other databases you'll need to use the suitable concat operator.
 
@@ -74,10 +76,10 @@ Schedules and alerts don't handle parameters well so it's needed to create a spe
 
 This way you can have an "all" parameter that shows all values, allowing the query to be scheduled and get alerts for.
 
-```SQL
-CASE
-        WHEN '{{date}}' = 'All' THEN date IS NOT NULL
-        ELSE date = '{{date}}'
-  END
-  ```
+      ```SQL
+      CASE
+              WHEN '{{date}}' = 'All' THEN date IS NOT NULL
+              ELSE date = '{{date}}'
+        END
+        ```
 Kelly (thanks Kelly!) from Hudl shared this in our [Slack community](https://slack.redash.io).
