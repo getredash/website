@@ -13,15 +13,15 @@ Documented hacks up-to-date are:
 
 While Redash doesn't naturally support conditional formatting, this can be bypassed quite easily with some html tags.
 
-      ```sql
-      CASE
-          WHEN cat.color IN ('short_hair',
-                                'semi_short_hair')
-               AND cat_count > 1000 THEN '<div class="bg-success p-10 text-center">count(cat)</div>'
-               OR cat_count > 200 THEN '<div class="bg-warning p-10 text-center">count(cat)</div>'
-          ELSE '<div class="bg-danger p-10 text-center">count(cat)</div>'
-      END AS cat_count
-      ```
+```sql
+CASE
+    WHEN cat.color IN ('short_hair',
+                          'semi_short_hair')
+         AND cat_count > 1000 THEN '<div class="bg-success p-10 text-center">count(cat)</div>'
+         OR cat_count > 200 THEN '<div class="bg-warning p-10 text-center">count(cat)</div>'
+    ELSE '<div class="bg-danger p-10 text-center">count(cat)</div>'
+END AS cat_count
+```
 
 In this example we covered different formatting types you can apply in a div:
 1. Colors - green (bg-success), yellow (bg-warning) and red (bg-danger). You can also use bg-info for blue but who wants blue in their tables?
@@ -39,32 +39,32 @@ You are welcome to try other Bootstrap CSS tricks and share with us.
 ## Clickable URLs in tables {#clickable-urls-in-table}
 
 To create clickable links in your table, use this template:
-      ```sql
-      SELECT 'http://demo.redash.io/queries/' || id  || '/source' AS url, name, created_at
-      FROM queries
-      WHERE is_archived = false
-      AND name != 'New Query'
-      ```
+```sql
+SELECT 'http://demo.redash.io/queries/' || id  || '/source' AS url, name, created_at
+FROM queries
+WHERE is_archived = false
+AND name != 'New Query'
+```
 Please note that || is a PostgreSQL operator/function - for other databases you'll need to use the suitable concat operator.
 
 The results will be clickable links, like in this query in our demo account: http://demo.redash.io/queries/3420/source
 ![](../assets/url_results.png)
 
 You can also use the anchor tag to show a name instead of the URL:
-      ```sql
-      SELECT <a href="https://demo.redash.io/queries/' || id || '">' || name || '</a>' as name
-      ...
-      '''
+```sql
+SELECT <a href="https://demo.redash.io/queries/' || id || '">' || name || '</a>' as name
+...
+'''
 
 ## Images Inside tables {#images-inside-table}
 
 To add images to tables you can use the `img` tag.
 
 For example:
-      ```sql
-      SELECT cat, '<img src="https://demo.redash.io/images/'|| cat ||'.png" alt="cat" width="'||20||'" height="20";>' AS image
-      FROM cats
-      ```
+```sql
+SELECT cat, '<img src="https://demo.redash.io/images/'|| cat ||'.png" alt="cat" width="'||20||'" height="20";>' AS image
+FROM cats
+```
 
 Please note that || is a PostgreSQL operator/function - for other databases you'll need to use the suitable concat operator.
 
@@ -76,10 +76,10 @@ Schedules and alerts don't handle parameters well so it's needed to create a spe
 
 This way you can have an "all" parameter that shows all values, allowing the query to be scheduled and get alerts for.
 
-      ```sql
-      CASE
-              WHEN '{{date}}' = 'All' THEN date IS NOT NULL
-              ELSE date = '{{date}}'
-        END
-        ```
+```sql
+CASE
+        WHEN '{{date}}' = 'All' THEN date IS NOT NULL
+        ELSE date = '{{date}}'
+  END
+  ```
 Kelly (thanks Kelly!) from Hudl shared this in our [Slack community](https://slack.redash.io).

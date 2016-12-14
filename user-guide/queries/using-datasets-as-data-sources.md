@@ -8,7 +8,7 @@ To use it, you need to create a new data source of type "Query Results (Alpha)".
 
 Then you can use it to write queries like:
 
-```SQL
+```sql
 SELECT A.NAME, B.COUNT
 FROM QUERY_123 A
 JOIN QUERY_456 B ON A.ID = B.ID

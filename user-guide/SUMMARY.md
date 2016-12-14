@@ -41,10 +41,12 @@
 * [Querying a Google Spreadsheets Data Source](queries/query-google-spreadsheets.md)
 * [Querying URLs](queries/query-url.md)
 
-## Query Examples and Hacks
+## Query Examples
 * [Cohort Query Example](query-examples-hacks/cohort-example.md)
 * [DAU, WAU, MAU example](query-examples-hacks/dau-wau-mau-example.md)
 * [Funnel Queries - Sankey and Sunbusrt Visualizations](query-examples-hacks/sunburst-sankey-example.md)
+
+## Redash Hacks
 * [Conditional Formatting and General Text Formatting](query-examples-hacks/redash-hacks.md#conditional-formatting)
 * [Clickable URLs in tables](query-examples-hacks/redash-hacks.md#clickable-urls-in-table)
 * [Images Inside tables](query-examples-hacks/redash-hacks.md#images-inside-table)
