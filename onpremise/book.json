@@ -1,5 +1,5 @@
 {
-    "plugins": [ "theme-redash", "algolia" ],
+    "plugins": [ "theme-redash", "algolia", "bootstrap-callout2" ],
     "intercom": false,
     "pluginsConfig": {
         "algolia": {
