@@ -54,7 +54,7 @@ You can also use the anchor tag to show a name instead of the URL:
 ```sql
 SELECT <a href="https://demo.redash.io/queries/' || id || '">' || name || '</a>' as name
 ...
-'''
+```
 
 ## Images Inside tables {#images-inside-table}
 

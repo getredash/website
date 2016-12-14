@@ -44,7 +44,7 @@
 ## Query Examples
 * [Cohort Query Example](query-examples-hacks/cohort-example.md)
 * [DAU, WAU, MAU example](query-examples-hacks/dau-wau-mau-example.md)
-* [Funnel Queries - Sankey and Sunbusrt Visualizations](query-examples-hacks/sunburst-sankey-example.md)
+* [Funnel Queries - Sankey and Sunbusrt Visualizations](query-examples-hacks/sunbusrt-sankey-example.md)
 
 ## Redash Hacks
 * [Conditional Formatting and General Text Formatting](query-examples-hacks/redash-hacks.md#conditional-formatting)
