@@ -13,4 +13,4 @@ Valid types of columns returned in results:
 * date
 
 To manipulate the data you get from the URL you can save the query that resulted with all the data and then query that data set.
-Read more about querying query results [here](queries/using-datasets-as-data-sources.md).
+Read more about querying query results [here](using-datasets-as-data-sources.md).
