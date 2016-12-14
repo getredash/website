@@ -1,4 +1,4 @@
-# Setup Redash on premise
+# Setup Redash On Premise
 
 This knowledge-base contains all the info you need to install Redash in your own environment/server.
 

@@ -42,7 +42,9 @@ You create them at `https://app.redash.io/<your company>/query_snippets` (curren
 
 A snippet can be something like: (the ${1:table} part is a placeholder)
 
-`join organizations org on org.id = ${1:table}.org_id`
+```sql
+JOIN organizations org ON org.id = ${1:table}.org_id
+```
 
 Then you can trigger them while writing a query with the trigger word you define - it'll be suggested (auto-completed) like all other fields.
 
@@ -52,9 +54,11 @@ You can add parameters to your query to make it easier to edit outside the sourc
 
 Here is a small example the demonstrates adding a date picker to a query/chart:
 
-`select date, count(*)
-from mytable
-where date = "{{date}}"`
+```sql
+SELECT DATE, COUNT(*)
+FROM mytable
+WHERE DATE = "{{date}}"
+```
 
 
 The `{{date}}` part is the parameter. It can be called whatever you want.
@@ -75,9 +79,11 @@ It is possible to have filters for query results and visualizations. Thanks to f
 
 If you want to focus only on a specific value, you will need to alias your column to `<columnName>::filter` . Here is an example:
 
-`select action as "action::filter", count (0) as "actions count"
-from events
-group by action`
+```sql
+SELECT action AS "action::filter", COUNT (0) AS "actions count"
+FROM events
+GROUP BY action
+```
 
 You can see this query and the rendered UI here: http://demo.redash.io/queries/143/source#table
 
@@ -87,9 +93,11 @@ You can see this query and the rendered UI here: http://demo.redash.io/queries/1
 
 If you are interested in multi filters (meaning that you can select multiple values), you will need to alias your column to `<columnName>::multi-filter`. Here is an example:
 
-`select action as "action::multi-filter", count (0) as "actions count"
-from events
-group by action`
+```sql
+SELECT action AS "action::multi-filter", COUNT (0) AS "actions count"
+FROM events
+GROUP BY action
+```
 
 You can see this query and the rendered UI here: [http://demo.redash.io/queries/144/source#table](http://demo.redash.io/queries/143/source#table)
 

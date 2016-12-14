@@ -38,6 +38,18 @@
 * [Using Datasets as Data Sources](queries/using-datasets-as-data-sources.md)
 * [How to Duplicate Queries?](queries/query_actions.md#how_to_duplicate_a_query)
 * [Querying a Google Spreadsheets Data Source](queries/query-google-spreadsheets.md)
+* [Querying URLs](queries/query-url.md)
+
+## Query Examples
+* [Cohort Query Example](query-examples-hacks/cohort-example.md)
+* [DAU, WAU, MAU example](query-examples-hacks/dau-wau-mau-example.md)
+* [Funnel Queries - Sankey and Sunbusrt Visualizations](query-examples-hacks/sunbusrt-sankey-example.md)
+
+## Redash Hacks
+* [Conditional Formatting and General Text Formatting](query-examples-hacks/redash-hacks.md#conditional-formatting)
+* [Clickable URLs in tables](query-examples-hacks/redash-hacks.md#clickable-urls-in-table)
+* [Images Inside tables](query-examples-hacks/redash-hacks.md#images-inside-table)
+* [Default Parameter Value](query-examples-hacks/redash-hacks.md#default-param-value)
 
 ## Alerts
 * [How to Setup an Alert](alerts/how-to-setup-an-alert.md)
@@ -58,10 +70,6 @@
 * [How to Share Dashboard (view only)?](dashboards/dashboards.md#sharing_dashs)
 * [Embedding Dashboards](dashboards/dashboards.md#embed_dash)
 * [Dashboard Filters (flags)](dashboards/dashboards.md#dash_filters_flags)
-
-## Alerts
-* [How to setup an alert](alerts/how-to-setup-an-alert.md)
-* [Adding Alert Destination - Slack](alerts/slack-alert-destination.md)
 
 ## Troubleshooting
 * [Status Page](troubleshooting/status-page.md)

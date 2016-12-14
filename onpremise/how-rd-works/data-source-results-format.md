@@ -1,5 +1,13 @@
 # **Data Source Results Format**
 
+Valid types of columns returned in results:
+* integer
+* float
+* boolean
+* string
+* datetime
+* date
+
 All data sources in Redash return the following results in JSON format:
 
 ```
