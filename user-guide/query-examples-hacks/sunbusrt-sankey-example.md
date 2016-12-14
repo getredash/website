@@ -18,7 +18,10 @@ Here is a step by step example using the `WITH` clause in PostgreSQL, you can vi
           created_at as occurred_at
           from events
           where created_at > current_date - 30
-          and not ((action = 'view' and object_type='widget') or (action = 'view' and object_type='visualization') or (action = 'view' and object_type='query') or action = 'execute' or action ='execute_query')
+          and not ((action = 'view' and object_type='widget') or (action = 'view' and object_type='visualization')
+          or (action = 'view' and object_type='query')
+          or action = 'execute'
+          or action ='execute_query')
       ),
       ```
 
