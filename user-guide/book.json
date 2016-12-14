@@ -1,3 +1,4 @@
 {
-    "plugins": [ "theme-faq" ]
+    "plugins": [ "theme-faq" ],
+    "intercom": true
 }
