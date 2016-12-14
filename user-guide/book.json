@@ -1,4 +1,12 @@
 {
-    "plugins": [ "theme-faq" ],
-    "intercom": true
+    "plugins": [ "theme-redash", "algolia", "bootstrap-callout" ],
+    "intercom": true,
+    "pluginsConfig": {
+        "algolia": {
+            "index": "user-guide",
+            "applicationID": "QFZW4KBIT0",
+            "publicKey": "1c74ec31459a537e57b2c94a01d061b7",
+            "freeAccount": "true"
+        }
+    }
 }
