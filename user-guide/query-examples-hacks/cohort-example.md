@@ -10,7 +10,7 @@ Here is an example for a cohort query in PostgreSQL, step by step:
 
 1. Select the time frame you want to investigate (usually a between a week and a month)
 
-      ```SQL
+      ```sql
       WITH
       time_frame AS (
       SELECT CURRENT_DATE - 14
@@ -19,7 +19,7 @@ Here is an example for a cohort query in PostgreSQL, step by step:
 
 2. Define your population relatively to the cohort date, for each following day
 
-      ```SQL
+      ```sql
       population AS (
         select created_at::DATE AS cohort_date, id AS unique_id
         FROM users
@@ -29,7 +29,7 @@ Here is an example for a cohort query in PostgreSQL, step by step:
 
 3. Define what's an active user to you - what event interest you to examine
 
-      ```SQL
+      ```sql
       activity AS (
         SELECT created_at::DATE AS activity_date, org_id AS unique_id, cohort_date
         FROM events
@@ -40,7 +40,7 @@ Here is an example for a cohort query in PostgreSQL, step by step:
 
 4. Aggregate your population by cohort date (day 1, day 2...)
 
-      ```SQL
+      ```sql
       population_agg AS (
         SELECT cohort_date, COUNT(distinct unique_id) AS total
         FROM population
@@ -50,7 +50,7 @@ Here is an example for a cohort query in PostgreSQL, step by step:
 
 5. Write your query to show your population % by cohort dates
 
-      ```SQL
+      ```sql
       SELECT activity.cohort_date AS DATE,
           date_part('day',age(activity_date, activity.cohort_date)) AS day,
           COUNT(distinct unique_id) AS value,

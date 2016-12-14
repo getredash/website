@@ -13,7 +13,7 @@ Documented hacks up-to-date are:
 
 While Redash doesn't naturally support conditional formatting, this can be bypassed quite easily with some html tags.
 
-      ```SQL
+      ```sql
       CASE
           WHEN cat.color IN ('short_hair',
                                 'semi_short_hair')
@@ -39,7 +39,7 @@ You are welcome to try other Bootstrap CSS tricks and share with us.
 ## Clickable URLs in tables {#clickable-urls-in-table}
 
 To create clickable links in your table, use this template:
-      ```SQL
+      ```sql
       SELECT 'http://demo.redash.io/queries/' || id  || '/source' AS url, name, created_at
       FROM queries
       WHERE is_archived = false
@@ -51,7 +51,7 @@ The results will be clickable links, like in this query in our demo account: htt
 ![](../assets/url_results.png)
 
 You can also use the anchor tag to show a name instead of the URL:
-      ```SQL
+      ```sql
       SELECT <a href="https://demo.redash.io/queries/' || id || '">' || name || '</a>' as name
       ...
       '''
@@ -61,7 +61,7 @@ You can also use the anchor tag to show a name instead of the URL:
 To add images to tables you can use the `img` tag.
 
 For example:
-      ```SQL
+      ```sql
       SELECT cat, '<img src="https://demo.redash.io/images/'|| cat ||'.png" alt="cat" width="'||20||'" height="20";>' AS image
       FROM cats
       ```
@@ -76,7 +76,7 @@ Schedules and alerts don't handle parameters well so it's needed to create a spe
 
 This way you can have an "all" parameter that shows all values, allowing the query to be scheduled and get alerts for.
 
-      ```SQL
+      ```sql
       CASE
               WHEN '{{date}}' = 'All' THEN date IS NOT NULL
               ELSE date = '{{date}}'

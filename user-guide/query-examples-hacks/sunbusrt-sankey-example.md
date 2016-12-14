@@ -10,7 +10,7 @@ Here is a step by step example using the `WITH` clause in PostgreSQL, you can vi
 
 1. Define the actions or events you want to examine - in this case we took all events and concated them into a readable string, each database has its way of saving event types etc. We also removed 'view' and 'execute' events as we want to investigate interactions and not just passive presence of users.
 
-      ```SQL
+      ```sql
       WITH
         events AS (
           select user_id,
@@ -24,7 +24,7 @@ Here is a step by step example using the `WITH` clause in PostgreSQL, you can vi
 
 2. Define how many events are in a sequence - each e stands for an event in this case, a sequence is 5 events and we cound how many users completed each step and continued to the next one.
 
-      ```SQL
+      ```sql
       sequences as (
       SELECT e1,
              e2,
@@ -36,7 +36,7 @@ Here is a step by step example using the `WITH` clause in PostgreSQL, you can vi
 
 3. Assign event numbers inside each session, each event is e+it's number.
 
-      ```SQL
+      ```sql
       FROM (
       SELECT user_id,
            session_number,
@@ -49,7 +49,7 @@ Here is a step by step example using the `WITH` clause in PostgreSQL, you can vi
 
 4. Define event number within a session, chronologically.
 
-      ```SQL
+      ```sql
       FROM (
       SELECT e.user_id,
            e.occurred_at,
@@ -59,7 +59,7 @@ Here is a step by step example using the `WITH` clause in PostgreSQL, you can vi
       ```
 5. Define a session start and end points and name a session as s.
 
-      ```SQL
+      ```sql
       FROM (
            SELECT user_id,
                   occurred_at AS session_start,
@@ -79,7 +79,7 @@ Here is a step by step example using the `WITH` clause in PostgreSQL, you can vi
           ```  
 6. Join all the tables you need to join - in this case we join events with sequences (that we created so far) and group by events inside a session, order by creation date and limit it to keep things under speedy control.
 
-      ```SQL
+      ```sql
       JOIN events e
         ON e.user_id = s.user_id
        AND e.occurred_at >= s.session_start
@@ -95,7 +95,7 @@ Here is a step by step example using the `WITH` clause in PostgreSQL, you can vi
 
 7. `SELECT *` (sometimes it's ok!) and you're done.
 
-      ```SQL
+      ```sql
       SELECT * FROM sequences
       ```
 Voila:

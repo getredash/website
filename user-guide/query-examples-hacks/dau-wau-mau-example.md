@@ -12,7 +12,7 @@ Here is a step by step example for this type of query in PostgreSQL - you can [v
 
   Also define what an active user is - in this case we count an active user by the first time we saw its id in the events table.
 
-      ```SQL
+      ```sql
       WITH
       dau AS (
             SELECT created_at::DATE AS "date", count(distinct user_id) AS dau
@@ -24,7 +24,7 @@ Here is a step by step example for this type of query in PostgreSQL - you can [v
 
 2. Calculate the dates of each group - use relative dates and exact ones to keep your dataset tidy and your query speedy.
 
-      ```SQL
+      ```sql
       SELECT "date", dau,
              (SELECT count(distinct user_id)
               FROM events

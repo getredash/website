@@ -8,9 +8,11 @@ To use it, you need to create a new data source of type "Query Results (Alpha)".
 
 Then you can use it to write queries like:
 
-```SELECT a.name, b.count
-FROM query_123 a
-JOIN query_456 b on a.id = b.id```
+```SQL
+SELECT A.NAME, B.COUNT
+FROM QUERY_123 A
+JOIN QUERY_456 B ON A.ID = B.ID
+```
 
 You reference queries as "query_<id>" in either the FROM or the JOIN clause.
 
