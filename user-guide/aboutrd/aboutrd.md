@@ -28,26 +28,25 @@ Redash was built to allow fast and easy access to billions of records, that we p
 
 Redash plays nice with all data sources!
 
+- Amazon Athena
+- Amazon DynamoDB
 - Amazon Redshift
-- BigQuery
-- PostgreSQL
-- MySQL
-- TreasureData
-- Microsoft SQL Server
-- MongoDB
+- Cassandra
 - ElasticSearch
-- Hive
+- Google BigQuery
 - Google Spreadsheets
+- Graphite
+- Hive
 - Impala
 - InfluxDB
+- Microsoft SQL Server
+- MongoDB
+- MySQL
+- PostgreSQL
 - Presto
 - ScyllaDB
-- Cassandra
-- Amazon DynamoDB
-- Python
+- TreasureData
 - Vertica
-- Graphite
-- Stitch
 
 Also, we added an option to query other query results - this way you can enjoy a dataset from multiple data sources (originally). Read more about [using datasets as data sources](../queries/using-datasets-as-data-sources.md)
 
@@ -60,6 +59,7 @@ If you encounter any issues that are browser specific, please let us know.
 ## Privacy and Security {#privacy-security}
 
 We're hosted on AWS and follow best practices:
+
 1. All our servers are in a private network and are not accessible from the Internet, except for the load balancer and a bastion server for SSH (that does not have any credentials on it).
 2. HTTPS/SSL for everything.
 3. 2FA for our internal systems.

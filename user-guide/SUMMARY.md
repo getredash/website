@@ -60,6 +60,9 @@
 * [Adding Alert Destination - Slack](alerts/slack-alert-destination.md)
 * [Alert Status and Frequency](alerts/alert-status-freq.md)
 
+## Data Sources Setup
+* [Amazon Athena Setup](data-sources/amazon-athena.md)
+
 ## Query Examples
 * [Cohort Query Example](query-examples-hacks/cohort-example.md)
 * [DAU, WAU, MAU example](query-examples-hacks/dau-wau-mau-example.md)
