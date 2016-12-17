@@ -38,22 +38,3 @@ When loading a cached result, `ttl` will be the one set to the query (if it was 
 When loading a non cached result, `ttl` will be 0 which will “force” the server to execute the query.
 
 As a response to `/api/query_results` the server will send either the query results (in case of a cached query) or job id of the currently executing query. When job id received the client will start polling on this id, until a query result received (this is encapsulated in `Query` and `QueryResult` services).
-
-## Ideas on How to Implement Query Parameters
-
-Please note that parameters work well in dashboards but they won't work when embedding visualizations outside of Redash.
-
-
-### Client Side Only Implementation
-
-(This was actually implemented in. See pull request [#363](https://github.com/getredash/redash/pull/363) for details.)
-
-The basic idea of how to implement parametized queries is to treat the query as a template and merge it with parameters taken from query string or UI (or both).
-
-When the caching facility isn’t required (with queries that return in a reasonable time frame) the implementation can be completely client side and the backend can be “blind” to the parameters - it just receives the final query to execute and returns result.
-
-As one improvement over this, we can let the UI/user specify the TTL value when making the request to `/api/query_results`, in which case caching will be availble too, while not having to make the server aware of the parameters.
-
-### Hybrid
-
-Another option, will be to store the list of possible parameters for a query, with their default/optional values. In such case, the server can prefetch all the options and cache them to provide faster results to the client.
