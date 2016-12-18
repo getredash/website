@@ -1,6 +1,6 @@
 # Setting up Development Environment (using Vagrant)
 
-To simplify contribution there is a [Vagrant box](https://vagrantcloud.com/redash/boxes/dev) available with all the needed software to run Redash for development (use it only for development, for demo purposes there is [redash/demo](https://vagrantcloud.com/redash/boxes/demo) box and the AWS/GCE images).
+To simplify contribution there is a [Vagrant box](https://vagrantcloud.com/redash/boxes/dev) available with all the needed software to run Redash for development (use it only for development).
 
 To get started with this box:
 
