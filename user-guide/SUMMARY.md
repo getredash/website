@@ -59,7 +59,7 @@
 * [How to Setup an Alert](alerts/how-to-setup-an-alert.md)
 * [Adding Alert Destination - Slack](alerts/slack-alert-destination.md)
 * [Alert Status and Frequency](alerts/alert-status-freq.md)
-* [Creating an Alert with a Target Value from Another Query](alerts/alert-dynamic-value-from-other-query.md)
+* [Trigger Alert Based on a Dynamic Target Value](alerts/alert-dynamic-value-from-other-query.md)
 
 ## Data Sources Setup
 * [Amazon Athena Setup](data-sources/amazon-athena.md)
@@ -74,6 +74,7 @@
 * [Clickable URLs in tables](query-examples-hacks/redash-hacks.md#clickable-urls-in-table)
 * [Images Inside tables](query-examples-hacks/redash-hacks.md#images-inside-table)
 * [Default Parameter Value](query-examples-hacks/redash-hacks.md#default-param-value)
+* [Trigger Alert Based on a Dynamic Target Value](alerts/alert-dynamic-value-from-other-query.md)
 
 ## Troubleshooting
 * [Status Page](troubleshooting/status-page.md)
