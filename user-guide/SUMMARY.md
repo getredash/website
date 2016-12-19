@@ -62,6 +62,9 @@
 
 ## Data Sources Setup
 * [Amazon Athena Setup](data-sources/amazon-athena.md)
+* [BigQuery Setup](data-sources/bigquery.md)
+* [Google Spreadsheets Setup](queries/query-google-spreadsheets.md)
+* [URL as Data Source Setup](queries/query-url.md)
 
 ## Query Examples
 * [Cohort Query Example](query-examples-hacks/cohort-example.md)
