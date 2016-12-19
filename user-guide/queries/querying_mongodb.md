@@ -82,3 +82,27 @@ We support MongoDB Extended JSON along with our own extension - $humanTime:
 It accepts human readable string like the above (“3 years ago”, “yesterday”, etc) or timestamps.
 
 Live example on the demo instance: http://demo.redash.io/queries/2112/source.
+
+###MongoDB Filtering
+You can add filters to Mongo queries by projecting a column with the '::filter' keyword added on to the end.
+
+```
+{
+    "collection": "zipcodes",
+    "aggregate": [
+        {
+            "$project": {
+                "_id": "$_id",
+                "city": "$city",
+                "loc": "$loc",
+                "pop": "$pop",
+                "state::filter": "$state"
+            }
+        }
+    ]
+}
+```
+
+The above example will show a 'State' column, and allow you to filter on this column.
+
+Live example on the demo instance: http://demo.redash.io/queries/3523/source.
