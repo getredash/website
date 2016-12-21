@@ -46,6 +46,14 @@ A snippet can be something like: (the ${1:table} part is a placeholder)
 JOIN organizations org ON org.id = ${1:table}.org_id
 ```
 
+Other ideas for snippets:
+* `JOIN`s you use a lot (`JOIN {{table1}} on table1.id = {{table}}.user_id`)
+* Clauses like `WITH` and `CASE` (`WITH active_users as (SELECT COUNT(DISTINCT user_id) AS active_users_count FROM events_log WHERE created_at > CURRENT_DATE - 7 GROUP BY 1)`)
+* [Conditional Formatting](../query-examples-hacks/redash-hacks.md#conditional-formatting)
+* [Clickable URLs in tables](../query-examples-hacks/redash-hacks.md#clickable-urls-in-table)
+* [Images Inside tables](../query-examples-hacks/redash-hacks.md#images-inside-table)
+* [Default Parameter Value](../query-examples-hacks/redash-hacks.md#default-param-value)
+
 Then you can trigger them while writing a query with the trigger word you define - it'll be suggested (auto-completed) like all other fields.
 
 ## How to Use Parameters? {#query_params}
