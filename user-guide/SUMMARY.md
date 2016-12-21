@@ -38,6 +38,7 @@
 * [Using Datasets as Data Sources](queries/using-datasets-as-data-sources.md)
 * [How to Duplicate Queries?](queries/query_actions.md#how_to_duplicate_a_query)
 * [Querying a Google Spreadsheets Data Source](queries/query-google-spreadsheets.md)
+* [Querying Google Analytics](data-sources/google-analytics.md#queries)
 * [Querying URLs](queries/query-url.md)
 
 ## Visualization
@@ -63,6 +64,7 @@
 ## Data Sources Setup
 * [Amazon Athena Setup](data-sources/amazon-athena.md)
 * [BigQuery Setup](data-sources/bigquery.md)
+* [Google Analytics Instructions](data-sources/google-analytics.md)
 * [Google Spreadsheets Setup](queries/query-google-spreadsheets.md)
 * [URL as Data Source Setup](queries/query-url.md)
 
