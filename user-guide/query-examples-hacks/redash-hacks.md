@@ -1,7 +1,9 @@
 # Redash Hacks
 
-We recommend to add your favorite hacks as snippets for quick and easy access when writing your queries.
-Learn how to create snippets [here](../queries/writing_queries.md#query_snippets)
+> #### Add Hacks as Snippets
+>
+> We recommend to add your favorite hacks as snippets for quick and easy access when writing your queries.
+> Learn how to create snippets [here](../queries/writing_queries.md#query_snippets)
 
 Documented hacks up-to-date are:
 * [Conditional Formatting](#conditional-formatting)
@@ -45,7 +47,9 @@ FROM queries
 WHERE is_archived = false
 AND name != 'New Query'
 ```
-Please note that || is a PostgreSQL operator/function - for other databases you'll need to use the suitable concat operator.
+> #### Syntax note
+>
+> Please note that || is a PostgreSQL operator/function - for other databases you'll need to use the suitable concat operator.
 
 The results will be clickable links, like in this query in our demo account: http://demo.redash.io/queries/3420/source
 ![](../assets/url_results.png)
@@ -66,7 +70,9 @@ SELECT cat, '<img src="https://demo.redash.io/images/'|| cat ||'.png" alt="cat" 
 FROM cats
 ```
 
-Please note that || is a PostgreSQL operator/function - for other databases you'll need to use the suitable concat operator.
+> #### Syntax note
+>
+> Please note that || is a PostgreSQL operator/function - for other databases you'll need to use the suitable concat operator.
 
 You can view a [live example](http://demo.redash.io/queries/1896/source#table) in our demo account.
 
