@@ -1,3 +1,7 @@
+---
+description: Query data from multiple databases and platforms with Redash's own Query Results data source in SQLite - every data set becomes a data source.
+---
+
 ### Using Datasets as Data Sources
 
 We added a new type of data source - the query results data source. It allows you to run queries on top of existing query results, so you can easily use it to merge results or perform any other kind of "post processing".

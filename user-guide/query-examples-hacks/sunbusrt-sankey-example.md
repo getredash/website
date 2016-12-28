@@ -1,3 +1,7 @@
+---
+description: Write and investigate user flow and funnel queries in a few moments with this example we use internally in Redash.
+---
+
 # Funnel Queries (Sankey and Sunbusrt Visualizations)
 
 Sankey and Sunburst visualizations are very good for understanding behavioral flows and sequences.

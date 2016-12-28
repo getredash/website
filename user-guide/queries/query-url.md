@@ -1,3 +1,7 @@
+---
+description: Import JSON formatted URL based data to Redash and query it like any other data source, query multiple sources easily.
+---
+
 # Querying URLs
 
 Using a URL based data source requires that the URL return the [_results JSON format_](https://redash.io/help-onpremise/how-rd-works/data-source-results-format.html)

@@ -1,3 +1,7 @@
+---
+description: Large data sets take a long time to run - query handling , query runner memory or network issues.
+---
+
 # Queries with Large Data Sets Take a Long Time to Run
 
 Sometimes queries with large results (over a few hundred thousand) can take a long time to run.

@@ -1,3 +1,7 @@
+---
+description: Connect MongoDB to Redash easily and query, aggregate, filter, visualize and share it in moments.
+---
+
 # Querying MongoDB
 
 ###Simple query example:

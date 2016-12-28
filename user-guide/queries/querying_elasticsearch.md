@@ -1,3 +1,7 @@
+---
+description: Connect ElasticSearch to Redash easily and query, visualize and share it in moments.
+---
+
 # Querying ElasticSearch
 
 ElasticSearch currently supports only simple Lucene style queries (like Kibana but without the aggregation).
