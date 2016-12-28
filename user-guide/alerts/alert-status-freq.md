@@ -1,3 +1,7 @@
+---
+description: Set alerts in Redash to get an update about your queries' status every time they run.
+---
+
 # Alert Status and Frequency
 
 The alert status is checked every time the query is executed - alerts work only with scheduled queries.

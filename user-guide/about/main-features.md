@@ -1,3 +1,7 @@
+---
+description: Main features of Redash - web query editor, create visualizations and gather them into thematic dashboard, get real-time alerts when your data changes, API for extra flexibility.
+---
+
 # Main Features
 
 1. Query editor - enjoy all the latest standards like auto-complete and snippets. Share both your results and queries to support an open and data driven approach within the organization.
