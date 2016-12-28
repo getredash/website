@@ -15,6 +15,8 @@ From your Google Cloud Console, you need to create a service account and assign 
 
 From all the settings the mandatory ones are the key file and the Project ID.
 
+![](../assets/bigquery_mandatories.png)
+
 ## BigQuery Permissions and Roles {#bigquery-user-role}
 If you're using the predefined roles in BigQuery you need to use the admin role, as this is the only role that can create queries and list tables.
 
