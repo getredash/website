@@ -1,6 +1,13 @@
 # BigQuery Setup
 
-From your Google Cloud Console, you need to create a service account and assign it permissions to access BigQuery. See details on creating a service account (here)[https://developers.google.com/identity/protocols/OAuth2ServiceAccount#creatinganaccount].
+## Setup The Datasource
+
+From your Google Cloud Console, you need to create a service account and assign it permissions to access BigQuery.
+
+### Create a Service Account
+1. Open the [Service accounts page](https://console.developers.google.com/permissions/serviceaccounts). If prompted, select a project.
+2. Click **Create service account**.
+3. In the Create service account window, type a name for the service account, and select Furnish a new private key. When prompted, select **JSON key file type**. Then click **Create**.
 
 > #### primary::
 >
