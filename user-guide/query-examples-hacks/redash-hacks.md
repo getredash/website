@@ -87,8 +87,8 @@ Kelly (thanks Kelly!) from Hudl shared this in our [Slack community](http://slac
 
 ## Adding Tags to Queries {#query-tags}
 
-Somewhere in the middle between naming queries with long-tediou-very descriptive names and having fancy clickable tags we neutrally present to you - #tags!
+Somewhere in the middle between naming queries with long-tediou-very descriptive names and having fancy clickable tags you can use #tags!
 
 Add a #marketing, #devops or #xmas-sales "tag" to your query names and then search for all queries with that #tag.
 
-Same goes for Dashboards (although you can already group them by topics when using a `marketing:online-traffic`, `marketing:new-vs-returning-users` convention). Read more [here](../dashboards/dashboards.md#grouping_dashs).
+Same goes for Dashboards (although you can already group them by topics when using a Marketing:online-traffic, Marketing:New v. Returning Users convention). Read more [here](../dashboards/dashboards.md#grouping_dashs).
