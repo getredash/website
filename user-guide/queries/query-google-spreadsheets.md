@@ -2,7 +2,10 @@
 
 To load your spreadsheet in Redash share your it with your ServiceAccount’s email (it can be found in the credentials json file, for example 43242343247-fjdfakljr3r2@developer.gserviceaccount.com).
 
-See details on creating a service account [here](https://developers.google.com/identity/protocols/OAuth2ServiceAccount#creatinganaccount)
+### Create a Service Account
+1. Open the [Service accounts page](https://console.developers.google.com/permissions/serviceaccounts). If prompted, select a project.
+2. Click **Create service account**.
+3. In the Create service account window, type a name for the service account, and select Furnish a new private key. When prompted, select **JSON key file type**. Then click **Create**.
 
 The query format is “DOC_UUID|SHEET_NUM” (for example “kjsdfhkjh4rsEFSDFEWR232jkddsfh|0”) - this will be the equivalent of `SELECT * FROM db` type of query and will show you the entire table.
 
