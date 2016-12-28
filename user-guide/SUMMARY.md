@@ -64,7 +64,7 @@
 ## Data Sources Setup
 * [Amazon Athena Setup](data-sources/amazon-athena.md)
 * [BigQuery Setup](data-sources/bigquery.md)
-* [Google Analytics Instructions](data-sources/google-analytics.md)
+* [Google Analytics Setup](data-sources/google-analytics.md)
 * [Google Spreadsheets Setup](queries/query-google-spreadsheets.md)
 * [URL as Data Source Setup](queries/query-url.md)
 
