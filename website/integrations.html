@@ -1,0 +1,111 @@
+---
+title: Supported Databases, APIs and Integrations
+layout: default
+permalink: /integrations/
+---
+
+		<section class="section section--pt-lg">
+			<div class="container">
+				<h1 class="text-center">Query All the Data Sources You Need</h1>
+				<h4 class="text-center font-light">Redash supports SQL, NoSQL, Big Data and API data sources - query data from different sources and types to answer complex issues.</h4>
+			</div><!-- container -->
+		</section><!-- section -->
+
+		<section class="section bg-mutted">
+			<div class="container container-sm">
+				<h2>Databases</h2>
+
+				<div class="cards">
+
+					{% for database in site.data_sources %}
+					<a href="{{database.url}}" class="card__item">
+						<div class="card__item-brand">
+							<img src="{{database.logo}}" class="card__item-brand_img" alt="{{database.name}}">
+						</div><!-- card__brand -->
+						<p class="card__item-title">{{database.name}}</p>
+					</a>
+					{% endfor %}
+
+				</div><!-- cards -->
+
+			</div><!-- container -->
+		</section><!-- section -->
+
+
+		<section class="section">
+			<div class="container container-sm">
+				<h2>Integrations</h2>
+
+				<div class="cards">
+
+					{% for integration in site.integrations %}
+					<div class="card__item">
+						<div class="card__item-brand">
+							<img src="{{integration.logo}}" class="card__item-brand_img" alt="{{integration.name}}">
+						</div><!-- card__brand -->
+						<p class="card__item-title">{{integration.name}}</p>
+					</div>
+					{% endfor %}
+
+				</div><!-- cards -->
+
+			</div><!-- container -->
+		</section><!-- section -->
+
+
+		<section class="section bg-mutted">
+			<div class="container container-sm">
+				<h2>Partners</h2>
+
+				<div class="cards">
+
+					{% for partner in site.partners %}
+					<a href="{{partner.url}}" class="card__item">
+						<div class="card__item-brand">
+							<img src="{{partner.logo}}" class="card__item-brand_img" alt="{{partner.name}}">
+						</div><!-- card__brand -->
+						<p class="card__item-title">{{partner.name}}</p>
+					</a>
+					{% endfor %}
+
+				</div><!-- cards -->
+
+			</div><!-- container -->
+		</section><!-- section -->
+
+		<section class="section">
+			<div class="container">
+				<p class="lead text-center">Didn't find what you were looking for?<br> Email us: <a href="mailto:email@email.com" class="underline">email@email.com</a></p>
+			</div><!-- container -->
+		</section><!-- section -->
+
+
+		<section class="section section--small section--has-triangle section--has-triangle-gray bg-gray">
+			<div class="container">
+				<h2 class="text-center mb-xs h1">Get Started with Redash for <span class="font-medium text-danger">Free</span></h2>
+				<p class="lead text-center mb-sm">Easy setup. Query and visualize in minutes.</p>
+			</div><!-- container -->
+		</section><!-- section -->
+
+
+		<section class="section bg-mutted-soft">
+			<div class="container">
+				<div class="row text-center">
+					<div class="col-sm-6">
+						<h3 class="mb-xs">Plug and Play</h3>
+						<p class="mb-xs">Hosted by Redash</p>
+						<p>Don't worry about intallations, hosting and upgrates.<br> All plans include a 30-day free trial. No credit card required.</p>
+						<a href="#" class="btn btn-danger btn-long text-uppercase">Start Trial</a>
+						<br>
+						<small><a href="#" class="underline">See plans</a></small>
+					</div><!-- col -->
+
+					<div class="col-sm-6">
+						<h3 class="mb-xs">Open Source</h3>
+						<p class="mb-xs">Self hosted</p>
+						<p>Maximum flexibility in your own environment.<br> Friendly and permissive license (BSD-3)</p>
+						<a href="#" class="btn btn-danger-ghost btn-long text-uppercase">Setup guide</a>
+					</div><!-- col -->
+				</div><!-- row -->
+			</div><!-- container -->
+		</section><!-- section -->
