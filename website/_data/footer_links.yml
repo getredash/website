@@ -8,8 +8,8 @@
       url: Pricing
 - name: Company
   links:
-    - name: About
-      url: about
+    # - name: About
+      # url: about
     - name: Blog
       url: https://blog.redash.io/
     - name: Terms of Service

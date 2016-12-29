@@ -106,84 +106,23 @@ title: Make Your Company Data Driven
 
 				<div class="cards cards--elastic">
 
-					<a href="" class="card__item">
+					{% for database in site.data_sources %}
+          {% if database.show_on_homepage %}
+					<a href="{{database.url}}" class="card__item">
 						<div class="card__item-brand">
-							<img src="assets/images/temp/AmazonDynamoDB.png" class="card__item-brand_img" alt="">
+							<img src="{{database.logo}}" class="card__item-brand_img" alt="{{database.name}}">
 						</div><!-- card__brand -->
-						<p class="card__item-title">Amazon DynamoDB</p>
+						<p class="card__item-title">{{database.name}}</p>
 					</a>
+          {% endif %}
+					{% endfor %}
+        </div>
 
-					<a href="" class="card__item">
-						<div class="card__item-brand">
-							<img src="assets/images/temp/AmazonRedshift.png" class="card__item-brand_img" alt="">
-						</div><!-- card__brand -->
-						<p class="card__item-title">Amazon Redshift</p>
-					</a>
-
-					<a href="" class="card__item">
-						<div class="card__item-brand">
-							<img src="assets/images/temp/BigQuery.png" class="card__item-brand_img" alt="">
-						</div><!-- card__brand -->
-						<p class="card__item-title">BigQuery</p>
-					</a>
-
-					<a href="" class="card__item">
-						<div class="card__item-brand">
-							<img src="assets/images/temp/Cassandra.png" class="card__item-brand_img" alt="">
-						</div><!-- card__brand -->
-						<p class="card__item-title">Cassandra</p>
-					</a>
-
-					<a href="" class="card__item">
-						<div class="card__item-brand">
-							<img src="assets/images/temp/ElasticSearch2.png" class="card__item-brand_img" alt="">
-						</div><!-- card__brand -->
-						<p class="card__item-title">ElasticSearch</p>
-					</a>
-
-					<a href="" class="card__item">
-						<div class="card__item-brand">
-							<img src="assets/images/temp/Graphite.png" class="card__item-brand_img" alt="">
-						</div><!-- card__brand -->
-						<p class="card__item-title">Graphite</p>
-					</a>
-
-				</div><!-- cards -->
-
-				<a href="#" class="underline">See all supported datasources and integrations</a>
+				<a href="/integrations" class="underline">See all supported datasources and integrations</a>
 
 			</div><!-- container -->
 		</section><!-- section -->
 
-
-		<section class="section section--small section--has-triangle section--has-triangle-gray bg-gray">
-			<div class="container">
-				<h2 class="text-center mb-xs h1">Get Started with Redash for <span class="font-medium text-danger">Free</span></h2>
-				<p class="lead text-center mb-sm">Easy setup. Query and visualize in minutes.</p>
-			</div><!-- container -->
-		</section><!-- section -->
-
-
-		<section class="section bg-mutted-soft">
-			<div class="container">
-				<div class="row text-center">
-					<div class="col-sm-6">
-						<h3 class="mb-xs">Plug and Play</h3>
-						<p class="mb-xs">Hosted by Redash</p>
-						<p>Don't worry about intallations, hosting and upgrates.<br> All plans include a 30-day free trial. No credit card required.</p>
-						<a href="#" class="btn btn-danger btn-long text-uppercase">Start Trial</a>
-						<br>
-						<small><a href="#" class="underline">See plans</a></small>
-					</div><!-- col -->
-
-					<div class="col-sm-6">
-						<h3 class="mb-xs">Open Source</h3>
-						<p class="mb-xs">Self hosted</p>
-						<p>Maximum flexibility in your own environment.<br> Friendly and permissive license (BSD-3)</p>
-						<a href="#" class="btn btn-danger-ghost btn-long text-uppercase">Setup guide</a>
-					</div><!-- col -->
-				</div><!-- row -->
-			</div><!-- container -->
-		</section><!-- section -->
+    {% include get_started.html %}
 
     <script async defer src="https://buttons.github.io/buttons.js"></script>
