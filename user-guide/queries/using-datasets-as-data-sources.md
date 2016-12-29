@@ -1,4 +1,8 @@
-### Using Datasets as Data Sources
+### Using Query Results as Data Sources
+
+> #### primary::
+> 
+> This is currently only available in the hosted version of Redash and not yet open source. We do plan to open source it after the 1.0 release. To get notified of future version releases, make sure to subscribe to the [newsletter](https://redash.io/newsletter).
 
 We added a new type of data source - the query results data source. It allows you to run queries on top of existing query results, so you can easily use it to merge results or perform any other kind of "post processing".
 
