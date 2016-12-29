@@ -3,12 +3,12 @@ baseurl: ''
 collections:
   data_sources:
     output: true
-    permalink: /data_sources/:path
+    permalink: /data-sources/:path
   partners:
     output: true
     permalink: /integrations/:path
   integrations:
     output: true
-    permalink: /integrations/:path
+    permalink: /data-sources/:path
 gems:
   - jekyll-redirect-from
