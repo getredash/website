@@ -1,8 +1,8 @@
 # Querying ElasticSearch
 
-ElasticSearch currently supports only simple Lucene style queries (like Kibana but without the aggregation).
+We support two flavors of ElasticSearch queries, Lucene/string style queries (like Kibana) and the more elaborate JSON based queries. For the first one create a data source of type `Kibana` and for the later create data source of type `ElasticSearch`.
 
-Simple query example:
+## String query example:
 
 * Query the index named “twitter”
 * Filter by “user:kimchy”
@@ -21,7 +21,7 @@ Simple query example:
 }
 ```
 
-Simple query on a logstash ElasticSearch instance:
+## Simple query on a logstash ElasticSearch instance:
 
 * Query the index named “logstash-2015.04.* (in this case its all of April 2015)
 * Filter by type:events AND eventName:UserUpgrade AND channel:selfserve
@@ -40,7 +40,7 @@ Simple query on a logstash ElasticSearch instance:
 }
 ```
 
-Simple query on a ElasticSearch instance:
+## JSON document query on a ElasticSearch instance:
 
 * Query the index named “twitter”
 * Filter by user equal “kimchy”
