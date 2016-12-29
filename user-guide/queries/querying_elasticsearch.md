@@ -2,9 +2,6 @@
 
 ElasticSearch currently supports only simple Lucene style queries (like Kibana but without the aggregation).
 
-Full blown JSON based ElasticSearch queries (including aggregations) will be added later.
-
-
 Simple query example:
 
 * Query the index named “twitter”
