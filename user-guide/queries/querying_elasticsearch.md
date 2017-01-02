@@ -1,3 +1,7 @@
+---
+description: Connect ElasticSearch to Redash easily and query, visualize and share it in moments.
+---
+
 # Querying ElasticSearch
 
 We support two flavors of ElasticSearch queries, Lucene/string style queries (like Kibana) and the more elaborate JSON based queries. For the first one create a data source of type `Kibana` and for the later create data source of type `ElasticSearch`.

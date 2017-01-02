@@ -1,3 +1,8 @@
+---
+description: Create dashboards for any topic you want to overview, add text and visualizations that update automatically according to your live data.
+---
+
+
 # Dashboards
 
 * [How to Create a Dashboard?](#create_new_dash)

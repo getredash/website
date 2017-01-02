@@ -1,3 +1,7 @@
+---
+description: Query complete but it returned no data - data source connected and there were no errors.
+---
+
 # Error Running Query : Query completed but it returned no data.
 
 ![](../assets/query_complete_no_data.png)

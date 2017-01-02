@@ -1,3 +1,7 @@
+---
+description: Redash is our hacker'ish take on freeing the data within our company, it was built to allow fast and easy access to billions of records. Today Redash supports querying multiple databases, including: Redshift, Google BigQuery,Google Spreadsheets, PostgreSQL, MySQL and custom scripts.
+---
+
 # What's Redash?
 
 Redash is an open source tool for teams to query, visualize and collaborate. Redash is quick to setup and works with any data source you might need so you can query from anywhere in no time.

@@ -1,3 +1,7 @@
+---
+description: Redash is hosted in AWS and follows strict best practices.
+---
+
 # Privacy and Security
 
 We're hosted on AWS and follow best practices:

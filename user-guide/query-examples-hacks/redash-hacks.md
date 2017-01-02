@@ -1,3 +1,7 @@
+---
+description: Redash is our hacker'ish solution to make companies data driven - here are a few hacks that can help you make more out of your Redash.
+---
+
 # Redash Hacks
 
 We recommend to add your favorite hacks as snippets for quick and easy access when writing your queries.

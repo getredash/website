@@ -1,3 +1,7 @@
+---
+description: Query data from multiple data sources with Redash's own Query Results data source - every query result becomes a data source.
+---
+
 ### Using Query Results as Data Sources
 
 > #### primary::
