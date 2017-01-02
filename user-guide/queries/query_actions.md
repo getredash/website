@@ -1,5 +1,5 @@
 ---
-description: Redash is a powerful online query editor for teams: write queries, fork others' queries, schedule auto-refresh rate, download your datasets or automatically export them to JSON, CSV or Google Spreadsheets (using IMPORTDATA).
+description: "Redash is a powerful online query editor for teams: write queries, fork others' queries, schedule auto-refresh rate, download your datasets or automatically export them to JSON, CSV or Google Spreadsheets (using IMPORTDATA)."
 ---
 
 # Query Actions
