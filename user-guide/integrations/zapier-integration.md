@@ -3,10 +3,10 @@
 You can connect Redash to Zapier and trigger an action every time a new line is added to you query results - for example, a Slack bot that announces every time a new order came in.
 The best way is to have a scheduled query that refreshes frequently so the notification you get is in real-time.
 
-For now you'll need to ask us for an invitation as it's still in beta - you can do that via Intercom (at the bottom right corner of every page in /help or inside the Redash webapp, it looks like this: ![](../assets/intercom_button.png)) or (Slack)[https://redash.slack.com/].
+For now you'll need to ask us for an invitation as it's still in beta - you can do that via Intercom (at the bottom right corner of every page in /help or inside the Redash webapp or (Slack)[https://redash.slack.com/].
 
 Here's a short example of connecting Redash to Zapier and creating a new Zap:
-1. Open the invitation you got via email to use the beta Redash trigger app (,create an account if needed) and click ![](../assets/make_a_zap.png) right next to your account area at the top of the page.
+1. Open the invitation you got via email to use the beta Redash trigger app (,create an account if needed) and click "Make a Zap" right next to your account area at the top of the page.
 
 2. Choose a trigger app - in this case, Redash (it won't be available to you unless you have received and opened the invitation)
 
