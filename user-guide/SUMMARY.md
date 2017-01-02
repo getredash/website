@@ -63,6 +63,9 @@
 ## Data Sources Setup
 * [Amazon Athena Setup](data-sources/amazon-athena.md)
 
+## Integrations
+* [Creating a Zap in Zapier for New Query Results](integrations/zapier-integration.md)
+
 ## Query Examples
 * [Cohort Query Example](query-examples-hacks/cohort-example.md)
 * [DAU, WAU, MAU example](query-examples-hacks/dau-wau-mau-example.md)
