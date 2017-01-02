@@ -20,7 +20,7 @@ Here's a short example of connecting Redash to Zapier and creating a new Zap:
 
   4.3. API key - also in your user settings, select the API KEY tab and copy it from there
 
-  4.4. Tese your connection!
+  4.4. Test your connection!
 5. Select the query you want to get the Zap for by entering the query ID (`https://app.redash.io/myorg/queries/{query id}`)
 
 6. Select the app you want to do something when a new query result is added to your query - Slack is a good option
