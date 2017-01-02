@@ -23,7 +23,7 @@ Here's a short example of connecting Redash to Zapier and creating a new Zap:
   4.4. Test your connection!
 5. Select the query you want to get the Zap for by entering the query ID (`https://app.redash.io/myorg/queries/{query id}`)
 
-6. Select the app you want to do something when a new query result is added to your query - Slack is a good option
+6. Select the app you want to perform an action when a new query result is added to your query - Slack is a good option.
 
 7. Select an action - for this example we'll use "Send Channel Message". You'll need to connect your Slack account to Zapier as well, if you are logged-in in your browser it'll be pretty instant.
 
