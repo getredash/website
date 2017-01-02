@@ -73,6 +73,7 @@
 * [Clickable URLs in tables](query-examples-hacks/redash-hacks.md#clickable-urls-in-table)
 * [Images Inside tables](query-examples-hacks/redash-hacks.md#images-inside-table)
 * [Default Parameter Value](query-examples-hacks/redash-hacks.md#default-param-value)
+* [Adding Tags to Queries](query-examples-hacks/redash-hacks.md##query-tags)
 
 ## Troubleshooting
 * [Status Page](troubleshooting/status-page.md)

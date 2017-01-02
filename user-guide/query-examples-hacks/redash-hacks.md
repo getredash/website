@@ -8,6 +8,7 @@ Documented hacks up-to-date are:
 * [Clickable URLs in tables](#clickable-urls-in-table)
 * [Images Inside tables](#images-inside-table)
 * [Default Parameter Value](#default-param-value)
+* [Query Tags](#query-tags)
 
 ## Conditional Formatting and General Text Formatting {#conditional-formatting}
 
@@ -81,5 +82,11 @@ CASE
         WHEN '{{date}}' = 'All' THEN date IS NOT NULL
         ELSE date = '{{date}}'
   END
-  ```
+```
 Kelly (thanks Kelly!) from Hudl shared this in our [Slack community](http://slack.redash.io).
+
+## Adding Tags to Queries {#query-tags}
+
+Somewhere in the middle between naming queries with long-tediou-very descriptive names and having fancy clickable tags you can use #tags! Add a `#marketing`, `#devops` or `#xmas-sales` "tag" to your query names and then search for all queries with that #tag.
+
+Same goes for Dashboards (although you can already group them by topics when using the prefix convention, read more [here](../dashboards/dashboards.md#grouping_dashs)).
