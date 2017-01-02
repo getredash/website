@@ -1,3 +1,7 @@
+---
+description: Get live updates in Slack when your Redash queries' values hit a certain trigger.
+---
+
 # Adding Alert Destination - Slack
 
 1. Create a new destination from: `https://app.redash.io/<your account>/destinations/new` with type Slack.

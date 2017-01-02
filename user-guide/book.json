@@ -1,4 +1,5 @@
 {
+    "title": "Redash Help Center",
     "plugins": [ "theme-redash", "algolia", "bootstrap-callout2" ],
     "intercom": true,
     "pluginsConfig": {

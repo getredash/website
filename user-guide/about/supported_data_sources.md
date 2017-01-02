@@ -1,3 +1,7 @@
+---
+description: Redash supports data sources, platforms and integrations: Amazon Redshift, MySQL, PostgreSQL, BigQuery, MongoDB, ElasticSearch, Google Analytics, Google Spreadsheets and many more.
+---
+
 # Supported Data Sources
 
 Redash plays nice with many data sources!

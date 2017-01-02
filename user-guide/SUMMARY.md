@@ -35,7 +35,7 @@
 * [How to Add a Filter to a Query?](queries/writing_queries.md#query_filters)
 * [How to Schedule a Query?](queries/query_actions.md#how_to_schedule_a_query)
 * [Query Snippets and Shortcuts](queries/writing_queries.md#query_snippets)
-* [Using Datasets as Data Sources](queries/using-datasets-as-data-sources.md)
+* [Using Query Results as Data Sources](queries/using-datasets-as-data-sources.md)
 * [How to Duplicate Queries?](queries/query_actions.md#how_to_duplicate_a_query)
 * [Querying a Google Spreadsheets Data Source](queries/query-google-spreadsheets.md)
 * [Querying URLs](queries/query-url.md)
@@ -75,6 +75,7 @@
 * [Images Inside tables](query-examples-hacks/redash-hacks.md#images-inside-table)
 * [Default Parameter Value](query-examples-hacks/redash-hacks.md#default-param-value)
 * [Trigger Alert Based on a Dynamic Target Value](alerts/alert-dynamic-value-from-other-query.md)
+* [Adding Tags to Queries](query-examples-hacks/redash-hacks.md##query-tags)
 
 ## Troubleshooting
 * [Status Page](troubleshooting/status-page.md)
