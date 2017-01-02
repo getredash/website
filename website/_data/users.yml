@@ -1,23 +1,27 @@
+- name: SoundCloud
+  image: "/assets/images/user_soundcloud.jpg"
+- name: Cloudflare
+  image: "/assets/images/temp/cloudflare_logo.png"
+- name: Outbrain
+  image: "/assets/images/temp/user_outbrain.jpg"
+- name: Nexar
+  image: "/assets/images/temp/user_nexar.jpg"
 - name: HealthJoy
   image: "/assets/images/temp/user_healthjoy.png"
 - name: Interlude
   image: "/assets/images/temp/user_interlude.png"
-- name: Cloudflare
-  image: "/assets/images/temp/cloudflare_logo.png"
+- name: HackerRank
+  image: "/assets/images/user_hackerrank.jpg"
+- name: Bending Spoons
+  image: "/assets/images/user_bendingspoons.png"
 - name: Hailo
   image: "/assets/images/temp/hailo-logo.jpg"
 - name: Ipros
   image: "/assets/images/temp/user_ipros.png"
-- name: Joytunes
+- name: JoyTunes
   image: "/assets/images/temp/user_joytunes.jpeg"
 - name: Komoona
   image: "/assets/images/temp/user_komoona.png"
-- name: Nexar
-  image: "/assets/images/temp/user_nexar.jpg"
-- name: NextPeer
-  image: "/assets/images/temp/user_nextpeer.png"
-- name: Outbrain
-  image: "/assets/images/temp/user_outbrain.jpg"
 - name: Ravello
   image: "/assets/images/temp/user_ravello.jpg"
 - name: SiteBooster
@@ -30,3 +34,5 @@
   image: "/assets/images/temp/user_easytaxi.png"
 - name: Gogobot
   image: "/assets/images/temp/user_gogobot.png"
+- name: NextPeer
+  image: "/assets/images/temp/user_nextpeer.png"
