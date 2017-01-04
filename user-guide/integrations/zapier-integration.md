@@ -10,9 +10,9 @@ Here's a short example of connecting Redash to Zapier and creating a new Zap:
 
 2. Choose a trigger app - in this case, Redash (it won't be available to you unless you have received and opened the invitation)
 
-3. Choose a trigger - for now we have only "New Query Results" in there, this means the Zap will get triggered everytime a new line is added to the results set of your query.
+3. Choose a trigger - for now we have only "New Query Results" in there, this means the Zap will get triggered everytime a new line is added to the results set of your query. The free Zapier account supports checking for new results every 15 minute so you should schedule the query to refresh according to the frequency in Zapier.
 
-4. Connect your Redash account:
+4. Connect your Redash account to Zapier:
 
   4.1. Full domain of your Redash account (Something like: `https://app.redash.io/myorg/` or `https://redash.myorg.com/` (note the slash at the end))
 
@@ -29,6 +29,8 @@ Here's a short example of connecting Redash to Zapier and creating a new Zap:
 
 8. Enter the channel, message text (you can select different column values from your query), bot/your user in slack, bot name, bot icon emoji or icon url, auto expend links and mentions settings. Bots are cool so you should definitely send the zap as a bot!
 
-9. Test your connection and you're done!
+![](../assets/‏‏zapier_slack_template-wider.png)
+
+9. Test your connection and turn your zap on!
 
 ![](../assets/zappy_bot.png)
