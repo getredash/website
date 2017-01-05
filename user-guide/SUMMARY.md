@@ -40,6 +40,7 @@
 * [Querying a Google Spreadsheets Data Source](queries/query-google-spreadsheets.md)
 * [Querying Google Analytics](data-sources/google-analytics.md#queries)
 * [Querying URLs](queries/query-url.md)
+* [How to Delete a Query?](queries/query_actions.md#how-to-archive-query)
 
 ## Visualization
 * [How to Create a Visualization from My Dataset?](visualization/visualization.md#create_new_viz)
@@ -72,6 +73,7 @@
 * [Cohort Query Example](query-examples-hacks/cohort-example.md)
 * [DAU, WAU, MAU example](query-examples-hacks/dau-wau-mau-example.md)
 * [Funnel Queries - Sankey and Sunbusrt Visualizations](query-examples-hacks/sunbusrt-sankey-example.md)
+* [Link Query Results to Filtered Dashboards](query-examples-hacks/query-results-lead-to-filtered-dashboard.md)
 
 ## Redash Hacks
 * [Conditional Formatting and General Text Formatting](query-examples-hacks/redash-hacks.md#conditional-formatting)
