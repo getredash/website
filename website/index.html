@@ -1,110 +1,111 @@
 ---
 layout: default
 title: Make Your Company Data Driven
+has_jumbo: true
 ---
   <section class="section section--hero bg-blue-gray">
-			<div class="container">
-				<h1 class="text-center text-white mb-xs">Make Your Company Data Driven</h1>
-				<h3 class="text-center font-light text-white">Connect to any data source, easily visualize and share your data</h3>
-				<div class="text-center mb-sm">
-					<a href="#" class="btn btn-danger">Get Started</a>
-				</div>
+		<div class="container">
+			<h1 class="text-center text-white mb-xs">Make Your Company Data Driven</h1>
+			<h3 class="text-center font-light text-white">Connect to any data source, easily visualize and share your data</h3>
+			<div class="text-center mb-sm">
+				<a href="#" class="btn btn-danger">Get Started</a>
+			</div>
 
-				<div class="screens-carousel-holder">
+			<div class="screens-carousel-holder">
 
-					<div class="browser-toolbar">
-						<div class="browser-toolbar__btns">
-							<div class="browser-toolbar__btn">
-							</div><!-- browser-toolbar__btn -->
-						</div><!-- browser-toolbar__btns -->
-					</div><!-- browser-toolbar -->
+				<div class="browser-toolbar">
+					<div class="browser-toolbar__btns">
+						<div class="browser-toolbar__btn">
+						</div><!-- browser-toolbar__btn -->
+					</div><!-- browser-toolbar__btns -->
+				</div><!-- browser-toolbar -->
 
-					<div class="screens-carousel">
-						<div>
-							<img src="assets/images/temp/redash_screenshot_query-slide-1.png" class="full-width" alt="">
-						</div>
+				<div class="screens-carousel">
+					<div>
+						<img src="assets/images/temp/redash_screenshot_query-slide-1.png" class="full-width" alt="">
+					</div>
 
-						<div>
-							<img src="assets/images/temp/redash_screenshot_vis-slide-2.png" class="full-width hidden" alt="">
-						</div>
+					<div>
+						<img src="assets/images/temp/redash_screenshot_vis-slide-2.png" class="full-width hidden" alt="">
+					</div>
 
-						<div>
-							<img src="assets/images/temp/redash_screenshot_dashboard-slide-3.png" class="full-width hidden" alt="">
-						</div>
-					</div><!-- screens-carousel -->
+					<div>
+						<img src="assets/images/temp/redash_screenshot_dashboard-slide-3.png" class="full-width hidden" alt="">
+					</div>
 				</div><!-- screens-carousel -->
+			</div><!-- screens-carousel -->
 
-			</div><!-- container -->
-		</section><!-- section -->
+		</div><!-- container -->
+	</section><!-- section -->
 
-		{% include users.html %}
+	{% include users.html %}
 
-		<section class="section section--small bg-mutted-soft text-center">
-			<div class="container">
-				<h3 class="font-light mb-xs"><i class="fa fa-heart-o" aria-hidden="true"></i> Redash is open source</h3>
-				<p>Customize and add features, no lock-in, contribute back to the community.</p>
-				<a class="github-button" href="https://github.com/getredash/redash" data-style="mega" data-count-href="/getredash/redash/stargazers" data-count-api="/repos/getredash/redash#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star getredash/redash on GitHub">Star</a>
-			</div><!-- container -->
-		</section><!-- section -->
+	<section class="section section--small bg-mutted-soft text-center">
+		<div class="container">
+			<h3 class="font-light mb-xs"><i class="fa fa-heart-o" aria-hidden="true"></i> Redash is open source</h3>
+			<p>Customize and add features, no lock-in, contribute back to the community.</p>
+			<a class="github-button" href="https://github.com/getredash/redash" data-style="mega" data-count-href="/getredash/redash/stargazers" data-count-api="/repos/getredash/redash#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star getredash/redash on GitHub">Star</a>
+		</div><!-- container -->
+	</section><!-- section -->
 
-		<section class="section section--small text-center">
-			<div class="container">
-				<div class="row">
-          <div class="col-md-4">
-            <h3><i class="fa fa-list-alt" aria-hidden="true"></i> Query</h3>
-            <p>One place to query all your data sources, in your browser</p>
-          </div>
-          <div class="col-md-4">
-            <h3><i class="fa fa-signal" aria-hidden="true"></i> Visualize</h3>
-            <p>Easily convert your data into rich visualizations, and collect them into a dashboard.</p>
-          </div>
-          <div class="col-md-4">
-            <h3><i class="fa fa-users" aria-hidden="true"></i> Collaborate</h3>
-            <p>Share your findings, fork others’ and create new insights.</p>
-          </div>
-      	</div>
-
-        <div class="row">
-          <div class="col-md-4">
-            <h3><i class="fa fa-tasks" aria-hidden="true"></i> All your data in one place</h3>
-            <p>Create dashboards or merge data from multiple data sources.</p>
-          </div>
-          <div class="col-md-4">
-            <h3><i class="fa fa-random" aria-hidden="true"></i> Interactive</h3>
-            <p>Use filters and parameters to allow users to play with results without having to write SQL queries.</p>
-          </div>
-          <div class="col-md-4">
-            <h3><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Alerts</h3>
-            <p>Make your data come to you, proactively alert you on important changes.</p>
-          </div>
+	<section class="section section--small text-center">
+		<div class="container">
+			<div class="row">
+        <div class="col-md-4">
+          <h3><i class="fa fa-list-alt" aria-hidden="true"></i> Query</h3>
+          <p>One place to query all your data sources, in your browser</p>
         </div>
-			</div><!-- container -->
-		</section><!-- section -->
-
-
-		<section class="section section--small bg-mutted-soft text-center">
-			<div class="container">
-				<h2 class="font-light">Query All the Data Sources You Need</h2>
-				<h5 class="font-light">Redash supports SQL, NoSQL, Big Data and API data sources - query data from different sources and types to answer complex issues.</h5>
-
-				<div class="cards cards--elastic">
-					{% for database in site.data_sources %}
-          {% if database.show_on_homepage %}
-					<a href="{{database.url}}" class="card__item">
-						<div class="card__item-brand">
-							<img src="{{database.logo}}" class="card__item-brand_img" alt="{{database.name}}">
-						</div><!-- card__brand -->
-						<p class="card__item-title">{{database.name}}</p>
-					</a>
-          {% endif %}
-					{% endfor %}
+        <div class="col-md-4">
+          <h3><i class="fa fa-signal" aria-hidden="true"></i> Visualize</h3>
+          <p>Easily convert your data into rich visualizations, and collect them into a dashboard.</p>
         </div>
+        <div class="col-md-4">
+          <h3><i class="fa fa-users" aria-hidden="true"></i> Collaborate</h3>
+          <p>Share your findings, fork others’ and create new insights.</p>
+        </div>
+    	</div>
 
-				<a href="/integrations" class="btn btn-danger-ghost btn-long uppercase">See all supported datasources and integrations</a>
+      <div class="row">
+        <div class="col-md-4">
+          <h3><i class="fa fa-tasks" aria-hidden="true"></i> All your data in one place</h3>
+          <p>Create dashboards or merge data from multiple data sources.</p>
+        </div>
+        <div class="col-md-4">
+          <h3><i class="fa fa-random" aria-hidden="true"></i> Interactive</h3>
+          <p>Use filters and parameters to allow users to play with results without having to write SQL queries.</p>
+        </div>
+        <div class="col-md-4">
+          <h3><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Alerts</h3>
+          <p>Make your data come to you, proactively alert you on important changes.</p>
+        </div>
+      </div>
+		</div><!-- container -->
+	</section><!-- section -->
 
-			</div><!-- container -->
-		</section><!-- section -->
 
-    {% include get_started.html %}
+	<section class="section section--small bg-mutted-soft text-center">
+		<div class="container">
+			<h2 class="font-light">Query All the Data Sources You Need</h2>
+			<h5 class="font-light">Redash supports SQL, NoSQL, Big Data and API data sources - query data from different sources and types to answer complex issues.</h5>
 
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
+			<div class="cards cards--elastic">
+				{% for database in site.data_sources %}
+        {% if database.show_on_homepage %}
+				<a href="{{database.url}}" class="card__item">
+					<div class="card__item-brand">
+						<img src="{{database.logo}}" class="card__item-brand_img" alt="{{database.name}}">
+					</div><!-- card__brand -->
+					<p class="card__item-title">{{database.name}}</p>
+				</a>
+        {% endif %}
+				{% endfor %}
+      </div>
+
+			<a href="/integrations" class="btn btn-danger-ghost btn-long text-uppercase">See all supported datasources and integrations</a>
+
+		</div><!-- container -->
+	</section><!-- section -->
+
+  {% include get_started.html %}
+
+  <script async defer src="https://buttons.github.io/buttons.js"></script>

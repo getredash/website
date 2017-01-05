@@ -4,6 +4,8 @@
       url: /features/
     - name: Integrations
       url: /integrations/
+    - name: Slack Bot
+      url: /slack/
     - name: Pricing
       url: /pricing/
 - name: Company
