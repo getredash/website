@@ -45,7 +45,10 @@ $navbar-fs: 15px;
     }
   }
 }
+
 .navbar-btn {
+  color: white !important;
+
   @include respond-to(xs-min) {
     margin-top: 17px;
     margin-bottom: 17px;
