@@ -13,9 +13,7 @@
   font-size: 18px;
   font-family: $font-light;
   box-shadow: 0px 0px 14px 4px rgba($gray, .75);
-  //@extend .flex-grow;
   flex-basis: 100%;
-  // height: 100%;
   @include respond-to(sm) {
     font-size: 14px;
   }
@@ -56,7 +54,7 @@
   }
 }
 .price__heading {
-  padding: 22px 15px;
+  padding: 15px 15px;
   @extend .flex, .flex-content-center, .flex-item-center;
   @include respond-to(xs-min) {
     min-height: 88px;
@@ -83,15 +81,18 @@
     }
   }
   .price-holder {
-    padding-top: 31px;
-    padding-bottom: 31px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     @include respond-to(xs-min) {
-      min-height: 116px;
+      // min-height: 116px;
     }
     @include respond-to(xs) {
-      padding-top: 15px;
-      padding-bottom: 15px;
+      padding-top: 5px;
+      padding-bottom: 5px;
     }
+  }
+  &:last-child {
+    padding-bottom: 10px;
   }
 }
 .price-holder {
@@ -108,7 +109,7 @@
   color: $scorpion;
 }
 .price__footer {
-  padding: 20px 15px 50px 15px;
+  padding: 20px 15px 15px 15px;
   @include respond-to(xs) {
     padding: 20px 15px;
   }
