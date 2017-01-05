@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+	$('[data-toggle="popover"]').popover({trigger: 'hover'})
 	//Slick carousel initial
 	$('#brands-carousel').slick({
 		infinite: true,
