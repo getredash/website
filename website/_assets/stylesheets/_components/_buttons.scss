@@ -9,8 +9,8 @@
     background: $danger;
     border-color: $danger;
     &:hover, &:focus {
-      background-color: #ED6D5C;
-      border-color: $danger;
+      background-color: darken($danger, 7%);
+      border-color: darken($danger, 10%);
     }
   }
   &.btn-danger-ghost {
@@ -18,7 +18,6 @@
     border-color: $danger;
     color: $danger;
     &:hover, &:focus {
-      // background: transparent;
       background-color: $danger;
       border-color: $danger;
       color: white;
@@ -28,8 +27,8 @@
     background: $primary;
     border-color: $primary;
     &:hover, &:focus {
-      background: $primary;
-      border-color: $primary;
+      background-color: lighten($primary, 10%);
+      border-color: lighten($primary, 10%);
     }
   }
   &.btn-long {
