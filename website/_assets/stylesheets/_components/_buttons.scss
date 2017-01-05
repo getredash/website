@@ -1,0 +1,51 @@
+/* BUTTONS */
+
+.btn {
+  font-size: 16px;
+  padding: 8px 16px;
+  min-height: 34px;
+  font-family: $font-regular;
+  &.btn-danger {
+    background: $danger;
+    border-color: $danger;
+    &:hover, &:focus {
+      background-color: #ED6D5C;
+      border-color: $danger;
+    }
+  }
+  &.btn-danger-ghost {
+    background: transparent;
+    border-color: $danger;
+    color: $danger;
+    &:hover, &:focus {
+      // background: transparent;
+      background-color: $danger;
+      border-color: $danger;
+      color: white;
+    }
+  }
+  &.btn-primary {
+    background: $primary;
+    border-color: $primary;
+    &:hover, &:focus {
+      background: $primary;
+      border-color: $primary;
+    }
+  }
+  &.btn-long {
+    padding-left: 44px;
+    padding-right: 44px;
+  }
+  &.navbar-btn {
+    font-size: 14px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+  &.btn-small {
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  &+.btn {
+    margin-left: 10px;
+  }
+}

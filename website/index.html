@@ -25,11 +25,11 @@ title: Make Your Company Data Driven
 						</div>
 
 						<div>
-							<img src="assets/images/temp/redash_screenshot_vis-slide-2.png" class="full-width" alt="">
+							<img src="assets/images/temp/redash_screenshot_vis-slide-2.png" class="full-width hidden" alt="">
 						</div>
 
 						<div>
-							<img src="assets/images/temp/redash_screenshot_dashboard-slide-3.png" class="full-width" alt="">
+							<img src="assets/images/temp/redash_screenshot_dashboard-slide-3.png" class="full-width hidden" alt="">
 						</div>
 					</div><!-- screens-carousel -->
 				</div><!-- screens-carousel -->
@@ -37,23 +37,7 @@ title: Make Your Company Data Driven
 			</div><!-- container -->
 		</section><!-- section -->
 
-
-		<section class="section section--small" id="anchor">
-			<div class="container">
-				<h3 class="text-center mb-lg">Join Thousands of Teams Around the World that Use Redash</h3>
-				<div id="brands-carousel" class="text-center">
-          {% for user in site.data.users %}
-					<div>
-						<div class="carousel__logo-holder">
-							<img src="{{user.image}}" class="carousel__logo" alt="">
-						</div><!-- carousel__logo-holder -->
-						<p class="carousel__title">{{user.name}}</p>
-					</div>
-          {% endfor %}
-				</div><!-- brands-carousel -->
-			</div><!-- container -->
-		</section><!-- section -->
-
+		{% include users.html %}
 
 		<section class="section section--small bg-mutted-soft text-center">
 			<div class="container">
@@ -62,7 +46,6 @@ title: Make Your Company Data Driven
 				<a class="github-button" href="https://github.com/getredash/redash" data-style="mega" data-count-href="/getredash/redash/stargazers" data-count-api="/repos/getredash/redash#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star getredash/redash on GitHub">Star</a>
 			</div><!-- container -->
 		</section><!-- section -->
-
 
 		<section class="section section--small text-center">
 			<div class="container">

@@ -1,15 +1,27 @@
 {
-  "name": "knowledge-base",
+  "name": "redash-website",
   "version": "1.0.0",
-  "description": "Welcome to the official Redash knowledge base! Here you'll find answers and guides to make the best out of you Redash.",
+  "description": "Redash Website",
   "main": "index.js",
   "dependencies": {
-    "gitbook-plugin-theme-faq": "^1.1.0",
     "gitbook-cli": "^2.3.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0",
+    "gulp-watch": "^4.3.9",
+    "imagemin-pngquant": "^5.0.0",
+    "imagemin-jpeg-recompress": "^5.1.0",
+    "pump": "^1.0.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp build",
+    "watch": "gulp watch"
   },
   "repository": {
     "type": "git",

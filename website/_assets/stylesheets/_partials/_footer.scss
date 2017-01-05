@@ -1,0 +1,59 @@
+/* FOOTER */
+
+$footer-bg: $small-blue;
+$footer-color: $legaloblolly;
+$footer-fs: 14px;
+$footer-sm: 14px;
+
+.footer {
+  padding: 55px 0 55px 0;
+  background: $footer-bg;
+  color: $footer-color;
+  font-size: $footer-fs;
+  @include respond-to(sm) {
+    padding: 30px 0 30px 0;
+    font-size: $footer-sm;
+  }
+  @include respond-to(xs) {
+    padding: 30px 0;
+  }
+}
+.footer__item {
+  @include respond-to(xs-min) {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.footer__title {
+  color: $white;
+  font-size: 22px;
+  margin-bottom: 30px;
+  @include respond-to(sm) {
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+}
+.footer__list {
+  @extend .list-unstyled;
+  line-height: 2;
+}
+.footer__list-link {
+  color: $footer-color;
+  &:hover, &:focus {
+    color: $white;
+  }
+}
+.footer__form {
+  margin-bottom: 15px;
+  @include respond-to(xs) {
+    margin-bottom: 5px;
+  }
+}
+.footer__list--social {
+  @extend .list-inline;
+  .footer__list-link {
+    font-size: 22px;
+  }
+}

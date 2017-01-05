@@ -1,0 +1,115 @@
+/* PRICE */
+
+.prices-holder {
+  @extend .flex, .flex-content-center;
+  @include respond-to(xs) {
+    display: block;
+  }
+}
+
+.prices-holder__item {
+  text-align: center;
+  background: $white;
+  font-size: 18px;
+  font-family: $font-light;
+  box-shadow: 0px 0px 14px 4px rgba($gray, .75);
+  //@extend .flex-grow;
+  flex-basis: 100%;
+  // height: 100%;
+  @include respond-to(sm) {
+    font-size: 14px;
+  }
+  @include respond-to(xs) {
+    font-size: 16px;
+  }
+  &:not(:last-child) {
+    @include respond-to(xs) {
+      margin-bottom: 20px;
+    }
+  }
+  &+.prices-holder__item {
+    @include respond-to(xs-min) {
+      margin-left: 1px;
+    }
+  }
+}
+.prices-holder__item--preview {
+  box-shadow: none;
+  background: transparent;
+  text-align: right;
+  font-family: $font-bold;
+  flex-basis: auto;
+  flex-shrink: 0;
+  @include respond-to(sm) {
+    font-size: 12px;
+  }
+  @include respond-to(xs) {
+    display: none;
+  }
+  .price__list {
+    >li {
+      @extend .flex, .flex-content-center, .flex-column, .flex-item-end;
+      &:nth-child(odd) {
+        background: transparent;
+      }
+    }
+  }
+}
+.price__heading {
+  padding: 22px 15px;
+  @extend .flex, .flex-content-center, .flex-item-center;
+  @include respond-to(xs-min) {
+    min-height: 88px;
+  }
+  @include respond-to(xs) {
+    padding: 15px;
+  }
+}
+.price__title {
+  font-size: 33px;
+  color: $danger;
+}
+.price__list {
+  @extend .list-unstyled;
+  @include respond-to(xs) {
+    margin-bottom: 0;
+  }
+  >li {
+    padding: 8px 15px;
+    min-height: 45px;
+    @extend .flex, .flex-content-center, .flex-item-center;
+    &:nth-child(odd) {
+      background: $mutted;
+    }
+  }
+  .price-holder {
+    padding-top: 31px;
+    padding-bottom: 31px;
+    @include respond-to(xs-min) {
+      min-height: 116px;
+    }
+    @include respond-to(xs) {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+  }
+}
+.price-holder {
+  @extend .flex, .flex-content-center, .flex-column;
+}
+.price-holder__price {
+  font-size: 33px;
+  color: $danger;
+  font-family: $font-regular;
+}
+.price-holder__price__month {
+  font-family: $font-light;
+  font-size: 18px;
+  color: $scorpion;
+}
+.price__footer {
+  padding: 20px 15px 50px 15px;
+  @include respond-to(xs) {
+    padding: 20px 15px;
+  }
+}

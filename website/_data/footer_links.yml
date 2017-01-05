@@ -5,7 +5,7 @@
     - name: Integrations
       url: /integrations/
     - name: Pricing
-      url: Pricing
+      url: /pricing/
 - name: Company
   links:
     # - name: About

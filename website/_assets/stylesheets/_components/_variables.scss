@@ -1,0 +1,62 @@
+/* VARIABLES */
+
+
+/*************************
+	Local color variable
+*************************/
+/* For color names was used site - http://chir.ag/projects/name-that-color */
+/* White group */
+$white: #ffffff;
+/* Black group */
+$black: #000000;
+/* Gray group */
+$legaloblolly: #BDC9D0; //Nav and footer links color
+$alabaster: #f7f7f7; //Mutted
+$seachell: #f1f1f1; //Mutted soft
+$alto: #dcdcdc; //Gray
+$scorpion: #5e5e5e; //Body text color
+$gallery: #f0f0f0;
+$silver: #cccccc;
+$hoki: #668899; //Navbar bg
+/* Blue group */
+$small-blue: #5c7e8f; //Footer bg
+/* Red group */
+$bittersweet: #FF7864; //Danger
+/*************************
+	Global color variable
+*************************/
+$body-text-color: $scorpion;
+
+$mutted: $alabaster;
+$mutted-soft: $seachell;
+$gray: $alto;
+$danger: $bittersweet;
+$primary: $small-blue;
+$blue-gray: $hoki;
+
+/*************************
+	Fonts variable
+*************************/
+$font-base: 'Roboto-Regular';
+
+$font-light: 'Roboto-Light';
+$font-regular: 'Roboto-Regular';
+$font-medium: 'Roboto-Medium';
+$font-bold: 'Roboto-Bold';
+
+$font-icon: 'FontAwesome';
+
+/*************************
+	Body variable
+*************************/
+$body-font-family: $font-base;
+$body-font-size: 15px;
+$body-font-size-xs: 15px;
+$body-line-height: 1.6;
+$body-main-color: $body-text-color;
+
+
+/*************************
+	Links color variable
+*************************/
+$link-color: $danger;
