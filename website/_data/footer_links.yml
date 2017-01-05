@@ -27,4 +27,4 @@
     - name: Gitter
       url: https://gitter.im/getredash/redash
     - name: Slack
-      url: https://slack.redash.io/
+      url: http://slack.redash.io/
