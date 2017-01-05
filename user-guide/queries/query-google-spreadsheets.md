@@ -1,3 +1,8 @@
+---
+description: Connect Google Spreadsheets to Redash and query it like any other data source, query multiple sources easily.
+---
+
+
 # Querying a Google Spreadsheets Data Source
 
 To load your spreadsheet in Redash share your it with your ServiceAccount’s email (it can be found in the credentials json file, for example 43242343247-fjdfakljr3r2@developer.gserviceaccount.com).

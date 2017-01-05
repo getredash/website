@@ -1,3 +1,7 @@
+---
+description: Set alerts in Redash - select a query and the trigger value you want to be notified about.
+---
+
 # How to Setup an Alert
 
 In the Alerts view you'll see all existing alerts and an option to create a new one.

@@ -1,3 +1,7 @@
+---
+description: Inviting users to Redash, creating and editing user groups, permissions for different groups.
+---
+
 # User, Group and Query Management
 
 ## Inviting Users to Redash {#inviting_users}

@@ -88,7 +88,6 @@ title: Make Your Company Data Driven
 				<h5 class="font-light">Redash supports SQL, NoSQL, Big Data and API data sources - query data from different sources and types to answer complex issues.</h5>
 
 				<div class="cards cards--elastic">
-
 					{% for database in site.data_sources %}
           {% if database.show_on_homepage %}
 					<a href="{{database.url}}" class="card__item">
