@@ -75,7 +75,6 @@
   >li {
     padding: 8px 15px;
     min-height: 45px;
-    @extend .flex, .flex-content-center, .flex-item-center;
     &:nth-child(odd) {
       background: $mutted;
     }
