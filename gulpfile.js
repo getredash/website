@@ -118,7 +118,6 @@ gulp.task('server:build', function() {
 
 gulp.task('build', [
   'sass:build',
-  'server:build',
   'img:build',
   'javascript:build',
   'vendors:build',
