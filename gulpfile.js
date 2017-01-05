@@ -10,6 +10,7 @@ var gulp                   = require('gulp'),
     imageminJpegRecompress = require('imagemin-jpeg-recompress'),
     imageminSvgo           = require('gulp-imagemin').svgo,
     imageminPngquant       = require('imagemin-pngquant'),
+    browserSync            = require('browser-sync').create(),
     watch                  = require('gulp-watch');
 
 var task = {};
@@ -47,7 +48,10 @@ gulp.task('sass:build', function () {
     cascade: false
   }))
   .pipe(cleanCSS({compatibility: 'ie8'}))
-  .pipe(gulp.dest(path.build.stylesheets));
+  .pipe(gulp.dest(path.build.stylesheets))
+  .pipe(browserSync.reload({
+    stream: true
+  }));
 });
 
 
@@ -55,19 +59,28 @@ gulp.task('sass:build', function () {
 gulp.task('javascript:build', task.javascript = function () {
   gulp.src(path.src.javascript)
   .pipe(uglify())
-  .pipe(gulp.dest(path.build.javascript));
+  .pipe(gulp.dest(path.build.javascript))
+  .pipe(browserSync.reload({
+    stream: true
+  }));
 });
 
 // FONTS
 gulp.task('fonts:build', task.fonts = function () {
   gulp.src(path.src.fonts)
-  .pipe(gulp.dest(path.build.fonts));
+  .pipe(gulp.dest(path.build.fonts))
+  .pipe(browserSync.reload({
+    stream: true
+  }));
 });
 
 // VENDORS
 gulp.task('vendors:build', task.vendors = function () {
   gulp.src(path.src.vendors)
-  .pipe(gulp.dest(path.build.vendors));
+  .pipe(gulp.dest(path.build.vendors))
+  .pipe(browserSync.reload({
+    stream: true
+  }));
 });
 
 //Images
@@ -78,11 +91,34 @@ gulp.task('img:build', task.img = function () {
     imageminSvgo(),
     imageminPngquant({nofs: true, speed: 1})
   ]))
-  .pipe(gulp.dest(path.build.img));
+  .pipe(gulp.dest(path.build.img))
+  .pipe(browserSync.reload({
+    stream: true
+  }));
 });
+
+
+// Server
+gulp.task('server:build', function() {
+  browserSync.init({
+    port : 3200,
+    server: {
+      baseDir: "_site"
+    },
+    notify: {
+      styles: {
+        top: 'auto',
+        bottom: '0'
+      }
+    },
+    open: true
+  });
+});
+
 
 gulp.task('build', [
   'sass:build',
+  'server:build',
   'img:build',
   'javascript:build',
   'vendors:build',
