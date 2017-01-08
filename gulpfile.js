@@ -105,7 +105,7 @@ gulp.task('img:build', task.img = function () {
 });
 
 gulp.task('jekyll:build', (code) => {
-  return cp.spawn('jekyll', ['build', '--incremental', '-s', 'website'], { stdio: 'inherit' }) // Adding incremental reduces build time.
+  return cp.spawn('jekyll', ['build', '-s', 'website'], { stdio: 'inherit' }) // Adding incremental reduces build time.
     .on('error', (error) => gutil.log(gutil.colors.red(error.message)))
     .on('close', code);
 })
@@ -120,7 +120,10 @@ gulp.task('server:build', function() {
   browserSync.init({
     port : 3200,
     server: {
-      baseDir: "_site"
+      baseDir: "_site",
+      serveStaticOptions: {
+        extensions: ['html']
+      }
     },
     notify: {
       styles: {
