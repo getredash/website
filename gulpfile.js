@@ -11,7 +11,10 @@ var gulp                   = require('gulp'),
     imageminSvgo           = require('gulp-imagemin').svgo,
     imageminPngquant       = require('imagemin-pngquant'),
     browserSync            = require('browser-sync').create(),
-    watch                  = require('gulp-watch');
+    watch                  = require('gulp-watch'),
+    combiner               = require('stream-combiner2'),
+    gulpif                 = require('gulp-if'),
+    cp                     = require('child_process');
 
 var task = {};
 
@@ -39,6 +42,15 @@ var path = {
   }
 };
 
+function isProduction() {
+  return process.env.NODE_ENV === 'production';
+}
+
+// TODO: should probably use lazypipe here.
+function outputDest(path) {
+  return combiner(gulpif(!isProduction(), gulp.dest(path.replace('website', '_site'))));
+}
+
 //Stylesheets
 gulp.task('sass:build', function () {
   return gulp.src(path.src.stylesheets)
@@ -49,9 +61,8 @@ gulp.task('sass:build', function () {
   }))
   .pipe(cleanCSS({compatibility: 'ie8'}))
   .pipe(gulp.dest(path.build.stylesheets))
-  .pipe(browserSync.reload({
-    stream: true
-  }));
+  .pipe(outputDest(path.build.stylesheets))
+  .pipe(browserSync.stream());
 });
 
 
@@ -60,27 +71,24 @@ gulp.task('javascript:build', task.javascript = function () {
   gulp.src(path.src.javascript)
   .pipe(uglify())
   .pipe(gulp.dest(path.build.javascript))
-  .pipe(browserSync.reload({
-    stream: true
-  }));
+  .pipe(outputDest(path.build.javascript))
+  .pipe(browserSync.stream());
 });
 
 // FONTS
 gulp.task('fonts:build', task.fonts = function () {
   gulp.src(path.src.fonts)
   .pipe(gulp.dest(path.build.fonts))
-  .pipe(browserSync.reload({
-    stream: true
-  }));
+  .pipe(outputDest(path.build.fonts))
+  .pipe(browserSync.stream());
 });
 
 // VENDORS
 gulp.task('vendors:build', task.vendors = function () {
   gulp.src(path.src.vendors)
   .pipe(gulp.dest(path.build.vendors))
-  .pipe(browserSync.reload({
-    stream: true
-  }));
+  .pipe(outputDest(path.build.vendors))
+  .pipe(browserSync.stream());
 });
 
 //Images
@@ -92,11 +100,20 @@ gulp.task('img:build', task.img = function () {
     imageminPngquant({nofs: true, speed: 1})
   ]))
   .pipe(gulp.dest(path.build.img))
-  .pipe(browserSync.reload({
-    stream: true
-  }));
+  .pipe(outputDest(path.build.img))
+  .pipe(browserSync.stream());
 });
 
+gulp.task('jekyll:build', (code) => {
+  return cp.spawn('jekyll', ['build', '--incremental', '-s', 'website'], { stdio: 'inherit' }) // Adding incremental reduces build time.
+    .on('error', (error) => gutil.log(gutil.colors.red(error.message)))
+    .on('close', code);
+})
+
+gulp.task('jekyll:watch', ['jekyll:build'], (cb) => {
+  browserSync.reload();
+  cb();
+});
 
 // Server
 gulp.task('server:build', function() {
@@ -111,7 +128,7 @@ gulp.task('server:build', function() {
         bottom: '0'
       }
     },
-    open: true
+    open: false
   });
 });
 
@@ -125,6 +142,10 @@ gulp.task('build', [
 ]);
 
 gulp.task('watch', function () {
+  watch(['website/**/*.html', 'website/**/*.md', '!_site/**/*.*'], function (event, cb) {
+    gulp.start('jekyll:watch');
+  });
+
   watch([path.watch.stylesheets], function (event, cb) {
     gulp.start('sass:build');
   });
@@ -142,4 +163,4 @@ gulp.task('watch', function () {
   });
 });
 
-gulp.task('default', ['build', 'watch']);
+gulp.task('default', ['build', 'server:build', 'watch']);
