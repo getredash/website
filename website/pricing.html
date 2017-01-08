@@ -94,25 +94,27 @@ permalink: /pricing/
 				</div><!-- content-item -->
 
 				<div class="content-item">
-					<h3 class="font-regular">I only need more of a certain feature and taking the pricier plan is problematic for me - is there a solution?</h3>
+					<h3 class="font-regular">Is my data secure with Redash?</h3>
 					<p>
-						Sure, let us know what are your needs and we'll find something that works for both of us.<br>
-						<a href="mailto:email@email.co" class="underline">email@email.co</a>
-					</p>
-				</div><!-- content-item -->
+						We're hosted on AWS and follow best practices:
 
-				<div class="content-item">
-					<h3 class="font-regular">What if I need more than what is offered in the Business plan?</h3>
-					<p>
-						Contact us and describe your situation, we'll work it out.<br>
-						<a href="mailto:email@email.co" class="underline">email@email.co</a>
+						<ul>
+							<li>
+							All our servers are in a private network and are not accessible from the Internet, except for the load balancer and a bastion server for SSH (that does not have any credentials on it).
+							</li>
+							<li>
+							HTTPS/SSL for everything.
+							</li>
+							<li>
+							2FA for our internal systems.
+							</li>
+						</ul>
+
+						If you have any specific concerns, please contact us and we'll be happy to help.
 					</p>
 				</div><!-- content-item -->
 			</div><!-- container -->
 		</section><!-- section -->
 
-
-
 		{% include core_features.html %}
-
 		{% include get_started.html %}
