@@ -1,5 +1,6 @@
 #!/bin/bash
 
+rm -rf _site
 npm run build
 # jekyll build -s website/
 gitbook install user-guide
