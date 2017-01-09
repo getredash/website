@@ -32,7 +32,7 @@ var path = {
     img: 'website/_assets/images/**/*.*',
     javascript: 'website/_assets/javascript/**/*.js',
     fonts: 'website/_assets/fonts/**/*.*',
-    vendors: 'website/_assets/vendors/**/*.*'
+    vendors: 'website/_assets/vendors/**/*'
   },
   watch: {
     stylesheets: 'website/_assets/stylesheets/**/*.scss',
