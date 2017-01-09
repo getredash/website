@@ -1,0 +1,58 @@
+/* SECTION */
+
+.section {
+  position: relative;
+  padding: 75px 0;
+  @include respond-to(sm) {
+    padding: 50px 0;
+  }
+  @include respond-to(xs) {
+    padding: 25px 0;
+  }
+}
+
+.section--pt-lg {
+  @include respond-to(sm-min) {
+    padding-top: 90px;
+  }
+}
+.section--pt-sm {
+  @include respond-to(sm-min) {
+    padding-top: 50px;
+  }
+}
+.section--pt-xs {
+  @include respond-to(sm-min) {
+    padding-top: 35px;
+  }
+}
+.section--small {
+  @include respond-to(xs-min) {
+    padding: 40px 0;
+  }
+}
+
+.section--hero {
+  padding: 0px 0px 35px 0;
+}
+
+.section--has-triangle {
+  &:after {
+    z-index: 20;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 22px 22px 0px 22px;
+    border-color: transparent transparent transparent transparent;
+    content: '';
+    position: absolute;
+    bottom: -22px;
+    left: 50%;
+    margin-left: -22px;
+  }
+}
+.section--has-triangle-gray {
+  &:after {
+    border-color: $gray transparent transparent transparent;
+  }
+}

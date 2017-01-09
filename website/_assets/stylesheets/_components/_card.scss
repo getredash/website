@@ -1,0 +1,91 @@
+/* CARD */
+
+$card-border: $silver;
+$card-hover-color: $hoki;
+
+.cards {
+  @extend .flex, .flex-wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.cards--elastic {
+  .card__item {
+    flex: 1;
+    @include respond-to(md) {
+      flex: 1 0 33%;
+    }
+    @include respond-to(xs) {
+      flex: 1 0 50%;
+    }
+  }
+  .card__item-title {
+    @include text-overflow();
+  }
+}
+
+.card__item {
+  //display: block;
+  position: relative;
+  text-align: center;
+  margin-bottom: 40px;
+  flex-basis: 200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  @extend .flex, .flex-column;
+  @include respond-to(md) {
+    flex-basis: 20%;
+  }
+  @include respond-to(sm) {
+    flex-basis: 25%;
+  }
+  @include respond-to(xs) {
+    flex-basis: 33%;
+  }
+  @include respond-to(xs-phone) {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+  }
+  &:hover, &:focus {
+    color: inherit;
+    .card__item-brand {
+      border-color: $card-hover-color;
+    }
+    .card__item-title {
+      color: $card-hover-color;
+    }
+  }
+}
+.card__item-brand {
+  @include transition(250ms);
+  border: 1px solid $card-border;
+  padding: 30px;
+  @extend .flex, .flex-content-center, .flex-item-center;
+  background: $white;
+  flex: 1;
+  width: 100%;
+  @include respond-to(md) {
+    //min-height: 190px;
+  }
+  @include respond-to(xs) {
+    //min-height: 250px;
+  }
+  @include respond-to(xs-phone) {
+    //min-height: 250px;
+    padding: 15px;
+  }
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+.card__item-brand_img {
+  @extend .img-responsive;
+}
+.card__item-title {
+  @include transition(250ms);
+  font-size: 16px;
+  color: $scorpion;
+  //@include text-overflow();
+  @include respond-to(xs-phone) {
+    font-size: 12px;
+  }
+}
