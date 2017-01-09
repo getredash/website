@@ -9,10 +9,8 @@ Currently this is a mashup of a Jekyll website and 2 GitBooks:
 The website is built and hosted with Netlify. When deployed, it runs the [bulid script](https://github.com/getredash/website/blob/master/bin/build):
 
 ```bash
-# "Build" site's static assets (JS, SCSS, images)
+# "Build" site's static assets (JS, SCSS, images) & run Jekyll
 npm run build
-# Build the website
-jekyll build -s website/
 # Build the user guide and place it in the Jekyll output folder:
 gitbook build user-guide _site/help
 # Build the on-premise guide and place it in the Jekyll output folder:
