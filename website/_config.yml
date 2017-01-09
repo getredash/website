@@ -12,3 +12,5 @@ collections:
     permalink: /data-sources/:path
 gems:
   - jekyll-redirect-from
+  - jekyll-last-modified-at
+  - jekyll-sitemap

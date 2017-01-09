@@ -127,7 +127,6 @@ gulp.task('html:build', ['javascript:build'], () => {
     .pipe(useref({ searchPath: 'website' }))      // Concatenate with gulp-useref
     .pipe(htmlFilter)
     .pipe(rev())                // Rename the concatenated files (but not index.html)
-    .pipe(print())
     .pipe(htmlFilter.restore)
     .pipe(revReplace())         // Substitute in new filenames
     .pipe(gulp.dest('_site/'));
