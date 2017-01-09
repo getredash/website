@@ -6,7 +6,9 @@
 					<h3 class="footer__title">{{category.name}}</h3>
 					<ul class="footer__list">
 						{% for link in category.links %}
-						<li class="footer__list-item"><a href="{{link.url}}" class="footer__list-link">{{link.name}}</a></li>
+						<li class="footer__list-item">
+							<a data-track data-track-location='footer' href="{{link.url}}" class="footer__list-link">{{link.name}}</a>
+						</li>
 						{% endfor %}
 					</ul><!-- footer__list -->
 				</div><!-- col -->
