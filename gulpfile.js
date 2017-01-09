@@ -116,10 +116,9 @@ gulp.task('jekyll:watch', ['jekyll:build'], (cb) => {
   cb();
 });
 
-gulp.task('layouts:build', ['javascript:build'], () => {
-  return gulp.src('website/_layouts/*.html')
+gulp.task('html:build', ['javascript:build'], () => {
+  return gulp.src('_site/**/*.html')
           .pipe(useref({ searchPath: 'website' }))
-          .pipe(gulpif('*.html', gulp.dest('_site/_layouts/')))
           .pipe(gulp.dest('_site/'));
 });
 
