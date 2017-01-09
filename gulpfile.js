@@ -1,21 +1,25 @@
 'use strict';
 
-var gulp                   = require('gulp'),
-    sass                   = require('gulp-sass'),
-    autoprefixer           = require('gulp-autoprefixer'),
-    cleanCSS 	             = require('gulp-clean-css'),
-    uglify                 = require('gulp-uglify'),
-    pump                   = require('pump'),
-    imagemin               = require('gulp-imagemin'),
-    imageminJpegRecompress = require('imagemin-jpeg-recompress'),
-    imageminSvgo           = require('gulp-imagemin').svgo,
-    imageminPngquant       = require('imagemin-pngquant'),
-    browserSync            = require('browser-sync').create(),
-    combiner               = require('stream-combiner2'),
-    watch                  = require('gulp-watch'),
-    gulpif                 = require('gulp-if'),
-    useref                 = require('gulp-useref'),
-    cp                     = require('child_process');
+var gulp = require('gulp');
+var rev = require('gulp-rev');
+var revReplace = require('gulp-rev-replace');
+var sass = require('gulp-sass');
+var autoprefixer = require('gulp-autoprefixer');
+var cleanCSS = require('gulp-clean-css');
+var uglify = require('gulp-uglify');
+var pump = require('pump');
+var imagemin = require('gulp-imagemin');
+var imageminJpegRecompress = require('imagemin-jpeg-recompress');
+var imageminSvgo = require('gulp-imagemin').svgo;
+var imageminPngquant = require('imagemin-pngquant');
+var browserSync = require('browser-sync').create();
+var combiner = require('stream-combiner2');
+var watch = require('gulp-watch');
+var gulpif = require('gulp-if');
+var filter = require('gulp-filter');
+var useref = require('gulp-useref');
+var cp = require('child_process');
+var print = require('gulp-print');
 
 var task = {};
 
@@ -117,9 +121,16 @@ gulp.task('jekyll:watch', ['jekyll:build'], (cb) => {
 });
 
 gulp.task('html:build', ['javascript:build'], () => {
+  const htmlFilter = filter(['**/*', '!**/*.html'], { restore: true });
+
   return gulp.src('_site/**/*.html')
-          .pipe(useref({ searchPath: 'website' }))
-          .pipe(gulp.dest('_site/'));
+    .pipe(useref({ searchPath: 'website' }))      // Concatenate with gulp-useref
+    .pipe(htmlFilter)
+    .pipe(rev())                // Rename the concatenated files (but not index.html)
+    .pipe(print())
+    .pipe(htmlFilter.restore)
+    .pipe(revReplace())         // Substitute in new filenames
+    .pipe(gulp.dest('_site/'));
 });
 
 // Server
