@@ -24,7 +24,7 @@
     "stream-combiner2": "^1.1.1"
   },
   "scripts": {
-    "build": "gulp build && gulp jekyll:build && gulp layouts:build",
+    "build": "gulp build && gulp jekyll:build && gulp html:build",
     "watch": "gulp watch"
   },
   "repository": {
