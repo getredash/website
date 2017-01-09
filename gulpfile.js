@@ -11,9 +11,10 @@ var gulp                   = require('gulp'),
     imageminSvgo           = require('gulp-imagemin').svgo,
     imageminPngquant       = require('imagemin-pngquant'),
     browserSync            = require('browser-sync').create(),
-    watch                  = require('gulp-watch'),
     combiner               = require('stream-combiner2'),
+    watch                  = require('gulp-watch'),
     gulpif                 = require('gulp-if'),
+    useref                 = require('gulp-useref'),
     cp                     = require('child_process');
 
 var task = {};
@@ -68,11 +69,11 @@ gulp.task('sass:build', function () {
 
 // JAVASCRIPT
 gulp.task('javascript:build', task.javascript = function () {
-  gulp.src(path.src.javascript)
-  .pipe(uglify())
-  .pipe(gulp.dest(path.build.javascript))
-  .pipe(outputDest(path.build.javascript))
-  .pipe(browserSync.stream());
+  return gulp.src(path.src.javascript)
+    .pipe(uglify())
+    .pipe(gulp.dest(path.build.javascript))
+    .pipe(outputDest(path.build.javascript))
+    .pipe(browserSync.stream());
 });
 
 // FONTS
@@ -115,6 +116,13 @@ gulp.task('jekyll:watch', ['jekyll:build'], (cb) => {
   cb();
 });
 
+gulp.task('layouts:build', ['javascript:build'], () => {
+  return gulp.src('website/_layouts/*.html')
+          .pipe(useref({ searchPath: 'website' }))
+          .pipe(gulpif('*.html', gulp.dest('_site/_layouts/')))
+          .pipe(gulp.dest('_site/'));
+});
+
 // Server
 gulp.task('server:build', function() {
   browserSync.init({
@@ -145,7 +153,7 @@ gulp.task('build', [
 ]);
 
 gulp.task('watch', function () {
-  watch(['website/**/*.html', 'website/**/*.md', '!_site/**/*.*'], function (event, cb) {
+  watch(['website/**/*.html', 'website/**/*.md', 'website/**/*.yml', '!_site/**/*.*'], function (event, cb) {
     gulp.start('jekyll:watch');
   });
 

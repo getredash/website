@@ -8,6 +8,8 @@
       url: /slack/
     - name: Pricing
       url: /pricing/
+    - name: Demo
+      url: https://demo.redash.io/
 - name: Company
   links:
     # - name: About
