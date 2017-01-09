@@ -23,13 +23,10 @@
                     form.find('input').prop('disabled', false);
                     if (resp.result === 'success') {
                         msg = '<i class="fa fa-check"></i> Thank you. We have sent you a confirmation email.';
-                        $(label).parent().removeClass('has-error');
-                        $(label).parent().addClass('has-success');
 
                         form.find('.input-group').hide();
                         analytics.track('Signed up to Newsletter');
                     } else {
-                        $(label).parent().addClass('has-error');
                         var index = -1;
                         try {
                             var parts = resp.msg.split(' - ', 2);
@@ -50,6 +47,7 @@
                             index = -1;
                             msg = resp.msg;
                         }
+                        msg = '<i class="fa fa-exclamation-circle"></i> ' + msg;
                     }
 
                     label.html(msg);

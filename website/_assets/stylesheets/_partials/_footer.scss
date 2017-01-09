@@ -17,6 +17,10 @@ $footer-sm: 14px;
   @include respond-to(xs) {
     padding: 30px 0;
   }
+
+  label {
+    color: white;
+  }
 }
 .footer__item {
   @include respond-to(xs-min) {
