@@ -64,10 +64,10 @@ $(document).ready(function(){
     });
   });
 
-  var form = document.getElementById('mc-embedded-subscribe-form');
+  var form = document.getElementById('newsletterForm');
   if (form) {
-      $(form).ajaxChimp({
-        url: 'https://redash.us1.list-manage.com/subscribe/post?u=a905176d2294593084d5264e5&id=53ca028761'
-      });
+    $(form).ajaxChimp({
+      url: 'https://redash.us1.list-manage.com/subscribe/post?u=a905176d2294593084d5264e5&id=53ca028761'
+    });
   }
 });
