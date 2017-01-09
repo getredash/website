@@ -1,5 +1,5 @@
 source: .
-baseurl: ''
+url: 'https://redash.io'
 collections:
   data_sources:
     output: true
