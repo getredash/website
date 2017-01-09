@@ -55,15 +55,15 @@ function outputDest(path) {
 //Stylesheets
 gulp.task('sass:build', function () {
   return gulp.src(path.src.stylesheets)
-  .pipe(sass().on('error', sass.logError))
-  .pipe(autoprefixer({
-    browsers: ['last 2 versions'],
-    cascade: false
-  }))
-  .pipe(cleanCSS({compatibility: 'ie8'}))
-  .pipe(gulp.dest(path.build.stylesheets))
-  .pipe(outputDest(path.build.stylesheets))
-  .pipe(browserSync.stream());
+    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
+    }))
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(gulp.dest(path.build.stylesheets))
+    .pipe(outputDest(path.build.stylesheets))
+    .pipe(browserSync.stream());
 });
 
 
@@ -78,31 +78,31 @@ gulp.task('javascript:build', task.javascript = function () {
 
 // FONTS
 gulp.task('fonts:build', task.fonts = function () {
-  gulp.src(path.src.fonts)
-  .pipe(gulp.dest(path.build.fonts))
-  .pipe(outputDest(path.build.fonts))
-  .pipe(browserSync.stream());
+  return gulp.src(path.src.fonts)
+    .pipe(gulp.dest(path.build.fonts))
+    .pipe(outputDest(path.build.fonts))
+    .pipe(browserSync.stream());
 });
 
 // VENDORS
 gulp.task('vendors:build', task.vendors = function () {
-  gulp.src(path.src.vendors)
-  .pipe(gulp.dest(path.build.vendors))
-  .pipe(outputDest(path.build.vendors))
-  .pipe(browserSync.stream());
+  return gulp.src(path.src.vendors)
+    .pipe(gulp.dest(path.build.vendors))
+    .pipe(outputDest(path.build.vendors))
+    .pipe(browserSync.stream());
 });
 
 //Images
 gulp.task('img:build', task.img = function () {
-  gulp.src(path.src.img)
-  .pipe(imagemin([
-    imageminJpegRecompress({quality: 'low'}),
-    imageminSvgo(),
-    imageminPngquant({nofs: true, speed: 1})
-  ]))
-  .pipe(gulp.dest(path.build.img))
-  .pipe(outputDest(path.build.img))
-  .pipe(browserSync.stream());
+  return gulp.src(path.src.img)
+    .pipe(imagemin([
+      imageminJpegRecompress({quality: 'low'}),
+      imageminSvgo(),
+      imageminPngquant({nofs: true, speed: 1})
+    ]))
+    .pipe(gulp.dest(path.build.img))
+    .pipe(outputDest(path.build.img))
+    .pipe(browserSync.stream());
 });
 
 gulp.task('jekyll:build', (code) => {
