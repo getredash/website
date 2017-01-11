@@ -28,7 +28,6 @@ Redash was built to allow fast and easy access to billions of records, that we p
 
 Redash plays nice with all data sources!
 
-* Alooma
 * Amazon Athena
 * Amazon DynamoDB
 * Amazon DynamoDB
@@ -45,7 +44,6 @@ Redash plays nice with all data sources!
 * Hive
 * Impala
 * InfluxDB
-* IronSource Atom
 * Microsoft SQL Server
 * MongoDB
 * MySQL
@@ -54,8 +52,6 @@ Redash plays nice with all data sources!
 * Presto
 * Python
 * ScyllaDB
-* Segment
-* Stitch
 * TreasureData
 * Vertica
 
