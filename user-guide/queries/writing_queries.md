@@ -1,11 +1,15 @@
+---
+description: Write queries in their natural syntax, explore schemas, work faster with snippets and shortcuts, add parameters and filters for 0-coding manipulations.
+---
+
 # Writing Queries
 
 * [How to Write a Query?](#how_to_write_a_query)
 * [Exploring Schemas](#exploring-schemas)
-* [Query Snippets and Shortcuts](#query_snippets)
+* [Query Snippets](#query_snippets)
 * [How to Use Parameters?](#query_params)
 * [How to Add a Filter to a Query?](#query_filters)
-* [Query Snippets and Shortcuts](#query_snippets)
+* [Query Shortcuts](#shortcuts)
 
 ![](../assets/gifs/queries/add_new_query.gif)
 

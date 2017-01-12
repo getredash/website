@@ -1,0 +1,22 @@
+/* FORMS */
+$field-border: $legaloblolly;
+$field-bg: rgba($legaloblolly, .5);
+$field-color: $white;
+$field-fs: 16px;
+$placeholder-color: $white;
+$placeholder-opacity: 0;
+
+.form-control {
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	border-color: $field-border;
+	background: $field-bg;
+	color: $field-color;
+	box-shadow: none;
+	@include custom-placeholder($color: $field-color, $font-size: $field-fs);
+	&:focus {
+		box-shadow: none;
+		border-color: $white;
+		@include custom-placeholder-opacity($opacity: $placeholder-opacity);
+	}
+}

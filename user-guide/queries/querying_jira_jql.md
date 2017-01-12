@@ -1,3 +1,7 @@
+---
+description: Connect JQL to Redash easily and query in JQL, visualize and share it in moments.
+---
+
 # Querying JIRA (JQL)
 
 Simple query, just return issues with no filtering:

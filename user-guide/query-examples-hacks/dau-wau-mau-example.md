@@ -1,3 +1,7 @@
+---
+description: Write complex DAU, WAU, MAU queries in a few moments with this example we use internally in Redash.
+---
+
 # Daily, Weekly or Monthly Active Users
 
 DAU, WAU and MAU are pretty easy to calculate once you define your user groups (daily, weekly...) and calculate the dates for each group. Visualizations are always recommended for this type of data.

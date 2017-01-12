@@ -1,0 +1,75 @@
+/* NAVBAR */
+
+$navbar-bg: $hoki;
+$navbar-color: $legaloblolly;
+$navbar-height: 68px;
+$navbar-fs: 15px;
+
+.navbar {
+  background: $navbar-bg;
+  border-radius: 0;
+  margin-bottom: 0;
+  border: none;
+  min-height: $navbar-height;
+  box-shadow: 0px 0px 3px 0px rgba($black, .5);
+  &.navbar-without-shadow {
+    box-shadow: none;
+  }
+  &.navbar-has-shadow {
+    box-shadow: 0px 0px 3px 0px rgba($black, .5) !important;
+  }
+}
+
+.navbar-nav {
+  >li {
+    &.active {
+        >a {
+            color: $white;
+            &:hover, &:focus {
+                background: transparent;
+                color: $white;
+            }
+        }
+    }
+    >a {
+      font-size: $navbar-fs;
+      color: $navbar-color;
+      font-family: $font-medium;
+      @include respond-to(xs-min) {
+        padding: 24px 25px;
+      }
+      &:hover, &:focus {
+          background: transparent;
+          color: $white;
+      }
+    }
+  }
+}
+
+.navbar-btn {
+  color: white !important;
+
+  @include respond-to(xs-min) {
+    margin-top: 17px;
+    margin-bottom: 17px;
+    margin-left: 10px;
+  }
+  @include respond-to(xs) {
+    margin-left: 15px;
+  }
+}
+.navbar-brand {
+  width: 130px;
+  height: auto;
+  padding: 7.5px 15px;
+}
+.navbar-brand__img {
+  width: 100%;
+}
+.navbar-toggle {
+  margin-top: 17px;
+  margin-bottom: 17px;
+  .icon-bar {
+    background: $white;
+  }
+}

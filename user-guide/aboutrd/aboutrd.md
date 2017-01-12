@@ -1,3 +1,7 @@
+---
+description: Learn more about Redash - why we built it, main features, supported data sources, privacy and security.
+---
+
 # About Redash
 
 * [What's Redash?](#whats_redash)

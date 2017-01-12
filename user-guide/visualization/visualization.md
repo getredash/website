@@ -1,3 +1,7 @@
+---
+description: Create various visualizations easily in a few moments. Share, embed and download visualizations and use wherever needed.
+---
+
 # Visualizations
 
 * [How to Create a Visualization from My Dataset?](#create_new_viz)

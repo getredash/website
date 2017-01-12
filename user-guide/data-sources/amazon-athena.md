@@ -1,3 +1,8 @@
+---
+description: Connect Amazon Athena to Redash and query, visualize and share your data in moments.
+---
+
+
 # Amazon Athena
 
 ## IAM User Setup

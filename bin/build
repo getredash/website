@@ -1,6 +1,9 @@
 #!/bin/bash
 
-jekyll build -s website/
+rm -rf _site
+npm run build
+# jekyll build -s website/
 gitbook install user-guide
 gitbook build user-guide _site/help
 gitbook build onpremise _site/help-onpremise
+cp _redirects _site/

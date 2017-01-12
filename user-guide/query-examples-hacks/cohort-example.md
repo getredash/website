@@ -1,3 +1,7 @@
+---
+description: Write complex Cohort queries in a few moments with this example we use internally in Redash.
+---
+
 # Cohort Query Example
 
 Cohorts are a good tool to review retention of users over a defined period of time.

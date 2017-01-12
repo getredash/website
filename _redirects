@@ -1,0 +1,5 @@
+/testing / 301
+/datasources/bigquery.html /data-sources/google-bigquery
+/datasources/bigquery /data-sources/google-bigquery
+/datasources/redshift.html /data-sources/amazon-redshift
+/datasources/redshift /data-sources/amazon-redshift

@@ -30,7 +30,7 @@ Please take the time to read the full terms, and understand better what are our 
 In order to register to the services, Redash may perform several actions to verify your identity, including the authentication of your email account, or validation of other information. When you register, you state and warrant that you adhere to Redash’s eligibility terms, as stated hereunder:
 
 
-  1. **Who Can Register?** Organizations can register multiple entities per multiple parts of the organization. If you are the authorized agent of your corporation, you may set up an organizational Redash account, which you may share later with other employees. When you open the account, it shall be under your corporate name, and you, personally, shall have an additional “Administrator” account.
+1. **Who Can Register?** Organizations can register multiple entities per multiple parts of the organization. If you are the authorized agent of your corporation, you may set up an organizational Redash account, which you may share later with other employees. When you open the account, it shall be under your corporate name, and you, personally, shall have an additional “Administrator” account.
 
     i. **Corporation:** If you are a corporation, you hereby warrant that you are a valid corporation, business, partnership, non-profit entity and/or government agency, which is solvent and may enter into these binding terms. You hereby warrant the following:
 
@@ -48,13 +48,13 @@ In order to register to the services, Redash may perform several actions to veri
 
       1. **Age:** You are over 18 years of age, or if you are a corporation, the corporation is valid and allowed to enter into this agreement. If you are under 18 and over 13, you obtained your parents consent to these terms of service. If you’re under 13, don’t use the Redash service.
 
-  1. **Registration and Log-In**: You will be able to register and log-in to Redash’s services using specific log-in methods, as updated by Redash from time to time. Currently, the following means apply:
+1. **Registration and Log-In**: You will be able to register and log-in to Redash’s services using specific log-in methods, as updated by Redash from time to time. Currently, the following means apply:
 
     i. **Using A Google Account**: You may use your Google Account to access Redash’s services. However, if you lose access to your Google Account, Redash will not be able to provide you with your information.
 
     ii. **Using a Email and Password**: You may also use your email address and password to access the Redash services. If you this method, your password shall be retained at Redash’s servers using standard security practices.
 
-  1. **Securing Your Account**: When registering to the services, you may be required to provide Redash with some information, and Redash may request to access additional information. Due to the sensitivity of information stored on your behalf on service and the potential risk if it is exposed, you are required to use a strong password. If you don’t know how to choose a strong password, then don’t use any of the following: (i) your name with “123” added; (2) your phone number, or any other number; (iii) any word which appears in the dictionary; (iv) anything like “password1234” or “q1w2e3r4t5y6” even if it is a mix of name and numbers. A good password is something that is easy to remember but hard to guess; things like “willzyxwasthewhaleinsouthpark” is a great password.
+1. **Securing Your Account**: When registering to the services, you may be required to provide Redash with some information, and Redash may request to access additional information. Due to the sensitivity of information stored on your behalf on service and the potential risk if it is exposed, you are required to use a strong password. If you don’t know how to choose a strong password, then don’t use any of the following: (i) your name with “123” added; (2) your phone number, or any other number; (iii) any word which appears in the dictionary; (iv) anything like “password1234” or “q1w2e3r4t5y6” even if it is a mix of name and numbers. A good password is something that is easy to remember but hard to guess; things like “willzyxwasthewhaleinsouthpark” is a great password.
 
     i. **Don’t Share Login Details: **Please do not allow others to use your account and create multiple accounts for multiple users. You are required to inform Redash, immediately, upon any case where you believe that your account was breached and in any case you are in knowledge of any unauthorized use of any Redash account. Such notification shall be by email to [support@Redash.](mailto:support@Redash.com)io.
 
@@ -64,7 +64,7 @@ In order to register to the services, Redash may perform several actions to veri
 
 Redash provides the following services as a part of the “service” and or “services”; where these Terms refer to the term “Services” and/or “Service” they refer to the services provided under this agreement and defined in this article. It may add other services and functionality and/or modify some of the services according to future decisions. However, material changes in the service shall be posted.
 
-  1. **Adding Data Sources**: In order to use the Redash services, you shall need to add a few data sources, which are credentials for your databases. These data sources are mostly username/password/hostport, but may be done differently, like with oauth if this is supported, or even via SSL. Redash recommends that you use different username/pass for the Service, and it recommends that the credentials shall be to a read only user, Moreover, if possible, please use SSL to connect to the database. Redash will do its best to protect these login details, but they are stored in a way which allows Redash to access them.
+1. **Adding Data Sources**: In order to use the Redash services, you shall need to add a few data sources, which are credentials for your databases. These data sources are mostly username/password/hostport, but may be done differently, like with oauth if this is supported, or even via SSL. Redash recommends that you use different username/pass for the Service, and it recommends that the credentials shall be to a read only user, Moreover, if possible, please use SSL to connect to the database. Redash will do its best to protect these login details, but they are stored in a way which allows Redash to access them.
 
   1. **Create Queries**: Redash may allow you to create custom queries, which include periodic queries. Such queries shall be run from your data sources, and may also use public APIs for additional information. Please notice that Redash’s acceptable use policy prohibits some queries, and your violation of the AUP may cause termination of your account.
 
@@ -95,9 +95,9 @@ You shall not: (i) copy, distribute or modify any part of the Redash service wit
 
 By either providing Redash with visual, textual, audiovisual, or other material or by using Redash's Service to create content, You hereby accept Redash's User Generated Content Policy as set forth. You acknowledge that any violation of the User Generated Content Policy may cause termination of Your service, removal of your content and legal action by both Redash and the person whose rights were infringed.
 
-  1. **What is "Content"?** For the purpose of these Terms, the term Content shall refer to: (i) images and/or text and/or videos used in creating content through the service, as well as comments; (ii) images or videos retrieved from 3rd parties in such items; (iii) description, text and information processed through Service; (iv) submissions made through Service.
+1. **What is "Content"?** For the purpose of these Terms, the term Content shall refer to: (i) images and/or text and/or videos used in creating content through the service, as well as comments; (ii) images or videos retrieved from 3rd parties in such items; (iii) description, text and information processed through Service; (iv) submissions made through Service.
 
-  1. **Guidelines:** You hereby warrant that Your Content is not offensive and does not infringe the right of any 3rd party, including, but not only:
+1. **Guidelines:** You hereby warrant that Your Content is not offensive and does not infringe the right of any 3rd party, including, but not only:
 
     a. **Intellectual Property Infringing**: Your Content does not infringe any 3rd party copyright, design, patent, trademark, trade secrets or any other intellectual property rights.
 
@@ -109,9 +109,9 @@ By either providing Redash with visual, textual, audiovisual, or other material 
 
     e. **Scams**: Your Content is not used to initiate or encourage any participation in a scam, market manipulation, pyramid scheme, religion, alcoholics anonymous meetings, cults, phishing or otherwise any use which may be used to extract goods and/or money from others, including any virtual property.
 
-  1. **License**: You hereby warrant that you are the sole owner and proprietor of any content you distribute through the service. For the service, You hereby grant Redash license to use your Content to provide other users with the Services. It does not mean that Redash may publish it publicly, it means that Redash can provide others, inside your organization, with the contents of your post.
+1. **License**: You hereby warrant that you are the sole owner and proprietor of any content you distribute through the service. For the service, You hereby grant Redash license to use your Content to provide other users with the Services. It does not mean that Redash may publish it publicly, it means that Redash can provide others, inside your organization, with the contents of your post.
 
-  1. **Warranty**: You hereby warrant that you are either the sole proprietor or a designated licensee of any content you post through the service and that no other party's rights are infringed or violated by your use of the content and the Service. You moreover warrant that no legal claim, dispute or lawsuit was filed against you or threatened against you for publishing content through the Service.
+1. **Warranty**: You hereby warrant that you are either the sole proprietor or a designated licensee of any content you post through the service and that no other party's rights are infringed or violated by your use of the content and the Service. You moreover warrant that no legal claim, dispute or lawsuit was filed against you or threatened against you for publishing content through the Service.
 
 
 ### 6. License:

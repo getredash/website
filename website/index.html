@@ -1,295 +1,110 @@
 ---
 layout: default
 title: Make Your Company Data Driven
+has_jumbo: true
 ---
-<!-- jumbo -->
-<div class="homepage">
+  <section class="section section--hero bg-blue-gray">
+		<div class="container">
+			<h1 class="text-center text-white mb-xs">Make Your Company Data Driven</h1>
+			<h3 class="text-center font-light text-white">Connect to any data source, easily visualize and share your data</h3>
+			<div class="text-center mb-sm">
+				<a data-track data-track-location='hero' track-event='Clicked Get Started' href="/get-started/" class="btn btn-danger">Get Started</a>
+			</div>
 
-  <div class="jumbo_frontpage">
-      <div class="container">
-          <div class="row">
-              <div class="col-md-12 text-center">
-                  <h2>Make Your Company Data Driven</h2>
-                  <h3>Connect to any data source, easily visualize and share your data</h3>
-                  <p id="buttons">
-                     <a href="https://demo.redash.io/" data-track data-track-location="hero" data-track-event="Clicked Demo"  class="btn btn-primary btn-lg btn-redash">Demo</a>
-                     <a href="/#get-started" data-track data-track-location="hero" data-track-event="Clicked Get Started" class="btn btn-primary btn-lg btn-redash">Get Started</a>
-                                     </p>
-                  <div class="chrome">
-                      <div class="toolbar">
-                        <div class="circle-wrap">
-                          <span class="circles"></span>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="screenshots" style="">
-                      <div>
-                        <img src="/static/img/redash_screenshot_query.png" alt="Query your data." class="img-responsive">
-                      </div>
-                      <div>
-                        <img src="/static/img/redash_screenshot_vis.png" alt="Visualize your data." class="hidden img-responsive">
-                      </div>
-                      <div>
-                        <img src="/static/img/redash_screenshot_dashboard.png" alt="Group visualizations into dashboards in minutes." class="hidden img-responsive">
-                      </div>
-                  </div>
-              </div>
-          </div>
+			<div class="screens-carousel-holder">
+				<div class="browser-toolbar">
+					<div class="browser-toolbar__btns">
+						<div class="browser-toolbar__btn">
+						</div><!-- browser-toolbar__btn -->
+					</div><!-- browser-toolbar__btns -->
+				</div><!-- browser-toolbar -->
+
+				<div class="screens-carousel">
+					<div>
+						<img src="assets/images/temp/redash_screenshot_query-slide-1.png" class="full-width" alt="">
+					</div>
+
+					<div>
+						<img src="assets/images/temp/redash_screenshot_vis-slide-2.png" class="full-width hidden" alt="">
+					</div>
+
+					<div>
+						<img src="assets/images/temp/redash_screenshot_dashboard-slide-3.png" class="full-width hidden" alt="">
+					</div>
+				</div><!-- screens-carousel -->
+			</div><!-- screens-carousel -->
+
+		</div><!-- container -->
+	</section><!-- section -->
+
+	{% include users.html %}
+
+	<section class="section section--small bg-mutted-soft text-center">
+		<div class="container">
+			<h3 class="font-light mb-xs"><i class="fa fa-heart-o" aria-hidden="true"></i> Redash is open source</h3>
+			<p>Customize and add features, no lock-in, contribute back to the community.</p>
+			<a class="github-button" href="https://github.com/getredash/redash" data-style="mega" data-count-href="/getredash/redash/stargazers" data-count-api="/repos/getredash/redash#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star getredash/redash on GitHub">Star</a>
+		</div><!-- container -->
+	</section><!-- section -->
+
+	<section class="section section--small text-center">
+		<div class="container">
+			<div class="row">
+        <div class="col-md-4">
+          <h3><i class="fa fa-list-alt" aria-hidden="true"></i> Query</h3>
+          <p>One place to query all your data sources, in your browser</p>
+        </div>
+        <div class="col-md-4">
+          <h3><i class="fa fa-signal" aria-hidden="true"></i> Visualize</h3>
+          <p>Easily convert your data into rich visualizations, and collect them into a dashboard.</p>
+        </div>
+        <div class="col-md-4">
+          <h3><i class="fa fa-users" aria-hidden="true"></i> Collaborate</h3>
+          <p>Share your findings, fork others’ and create new insights.</p>
+        </div>
+    	</div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <h3><i class="fa fa-tasks" aria-hidden="true"></i> All your data in one place</h3>
+          <p>Create dashboards or merge data from multiple data sources.</p>
+        </div>
+        <div class="col-md-4">
+          <h3><i class="fa fa-random" aria-hidden="true"></i> Interactive</h3>
+          <p>Use filters and parameters to allow users to play with results without having to write SQL queries.</p>
+        </div>
+        <div class="col-md-4">
+          <h3><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Alerts</h3>
+          <p>Make your data come to you, proactively alert you on important changes.</p>
+        </div>
       </div>
-  </div>
-
-  <div class="container-fluid features">
-      <div class="container text-center">
-          <div class="row">
-              <div class="col-md-4">
-                  <h3><span class="glyphicon glyphicon-list-alt"></span> Query</h3>
-                  <p>One place to query all your data sources, in your browser</p>
-              </div>
-              <div class="col-md-4">
-                  <h3><span class="glyphicon glyphicon-signal"></span> Visualize</h3>
-                  <p>Easily convert your data into rich visualizations, and collect them into a dashboard.</p>
-              </div>
-              <div class="col-md-4">
-                  <h3><span class="glyphicon glyphicon-user"></span> Collaborate</h3>
-                  <p>Share your findings, fork others’ and create new insights.</p>
-              </div>
-            </div>
-          <div class="row">
-              <div class="col-md-4">
-                  <h3><span class="glyphicon glyphicon-tasks"></span> All your data in one place</h3>
-                  <p>Create dashboards or merge data from multiple data sources.</p>
-              </div>
-              <div class="col-md-4">
-                  <h3><span class="glyphicon glyphicon-random"></span> Interactive</h3>
-                  <p>Use filters and parameters to allow users to play with results without having to write SQL queries.</p>
-              </div>
-              <div class="col-md-4">
-                  <h3><span class="glyphicon glyphicon-warning-sign"></span> Alerts</h3>
-                  <p>Make your data come to you, proactively alert you on important changes.</p>
-              </div>
-          </div>
-                    <hr>
-          <div class="row">
-              <div class="col-md-12">
-                  <h3><span class="glyphicon glyphicon-heart-empty"></span> Redash is open source</h3>
-                  <h4>Customize and add features, no lock-in, contribute back to the community.</h4>
-                  <br>
-                  <iframe src="https://ghbtns.com/github-btn.html?user=getredash&repo=redash&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
-              </div>
-          </div>
-          <br>
-          <br>
-      </div>
-  </div>
-
-  <div class="container-fluid">
-
-      <div class="container text-center">
-          <hr>
-          <div class="row">
-              <h2 class="text-center">Redash plays nice with any data source, any place</h2>
-              <br>
-              <div class="col-xs-4 col-sm-2 text-center db-logos grey-img">
-                  <h4>Amazon Redshift</h4>
-                  <img src="static/img/ds_redshift.png" class=" img-logo">
-              </div>
-              <div class="col-xs-4 col-sm-2 text-center db-logos grey-img">
-                  <h4>BigQuery</h4>
-                  <img src="static/img/ds_bigquery.png" class=" img-logo grey-img">
-              </div>
-              <div class="col-xs-4 col-sm-2 text-center db-logos grey-img">
-                  <h4>PostgreSQL</h4>
-                  <img src="static/img/ds_postgres.png" class=" img-logo grey-img">
-              </div>
-              <div class="col-xs-4 col-sm-2 text-center db-logos grey-img">
-                  <h4>MySQL</h4>
-                  <img src="static/img/ds_mysql.png" class=" img-logo grey-img">
-              </div>
-              <div class="col-xs-4 col-sm-2 text-center db-logos grey-img">
-                  <h4>TreasureData</h4>
-                  <img src="static/img/ds_treasuredata_new.png" class=" img-logo grey-img">
-              </div>
-              <div class="col-xs-4 col-sm-2 text-center db-logos grey-img">
-                  <h4>Microsoft SQL Server</h4>
-                  <img src="static/img/ds_sql_server.png" class=" img-logo grey-img">
-              </div>
-              <div class="col-xs-4 col-sm-2 text-center db-logos grey-img">
-                  <h4>MongoDB</h4>
-                  <img src="static/img/ds_mongo.png" class=" img-logo grey-img">
-              </div>
-              <div class="col-xs-4 col-sm-2 text-center db-logos grey-img">
-                  <h4>ElasticSearch</h4>
-                  <img src="static/img/ds_elastic.png" class=" img-logo grey-img">
-              </div>
-              <div class="col-xs-4 col-sm-2 text-center db-logos grey-img">
-                  <h4>Hive</h4>
-                  <img src="static/img/ds_hive.png" class=" img-logo grey-img">
-              </div>
-              <div class="col-xs-4 col-sm-2 text-center db-logos grey-img">
-                  <h4>Google Spreadsheets</h4>
-                  <img src="static/img/ds_gs.png" class=" img-logo grey-img">
-              </div>
-              <div class="col-xs-4 col-sm-2 text-center db-logos grey-img">
-                  <h4>Impala</h4>
-                  <img src="static/img/ds_impala.png" class=" img-logo grey-img">
-              </div>
-              <div class="col-xs-4 col-sm-2 text-center db-logos grey-img">
-                  <h4>InfluxDB</h4>
-                  <img src="static/img/ds_influx.png" class=" img-logo grey-img">
-              </div>
-              <div class="col-xs-4 col-sm-2 text-center db-logos grey-img">
-                  <h4>Presto</h4>
-                  <img src="static/img/ds_presto.png" class=" img-logo grey-img">
-              </div>
-              <div class="col-xs-4 col-sm-2 text-center db-logos grey-img">
-                  <h4>ScyllaDB</h4>
-                  <img src="static/img/ds_scylla.png" class="img-logo grey-img">
-              </div>
-              <div class="col-xs-4 col-sm-2 text-center db-logos grey-img">
-                  <h4>Cassandra</h4>
-                  <img src="static/img/ds_cassandra.png" class="img-logo grey-img">
-              </div>
-              <div class="col-xs-4 col-sm-2 text-center db-logos grey-img">
-                  <h4>Amazon DynamoDB</h4>
-                  <img src="static/img/ds_dynamodb.png" class="img-logo grey-img">
-              </div>
-              <div class="col-xs-4 col-sm-2 text-center db-logos grey-img">
-                  <h4>Python</h4>
-                  <img src="static/img/ds_python.png" class=" img-logo grey-img">
-              </div>
-              <div class="col-xs-4 col-sm-2 text-center db-logos grey-img">
-                  <h4>Vertica</h4>
-                  <img src="static/img/ds_vertica.png" class=" img-logo grey-img">
-              </div>
-              <div class="col-xs-4 col-sm-2 text-center db-logos grey-img">
-                  <h4>Graphite</h4>
-              </div>
-              <div class="col-xs-4 col-sm-2 text-center db-logos grey-img">
-                  <h4>Stitch</h4>
-                  <a href="https://www.stitchdata.com/?utm_source=redash&utm_medium=partners-page&utm_campaign=partners"><img src="static/img/ds_stitch.png" class=" img-logo grey-img"></a>
-              </div>
-          </div>
-
-      </div>
-  </div>
-
-  <div class="container-fluid">
-      <div class="container text-center">
-          <hr>
-          <div class="row1">
-              <h2 class="text-center">Tousands of teams around the world use Redash</h2>
-              <br>
-              <div class="users slick">
-                  <div class="user-logo">
-                      <h4>EverythingMe</h4>
-                      <img src="static/img/user_evme.png" class=" img-logo">
-                  </div>
-                  <div class="user-logo">
-                      <h4>Yallo</h4>
-                      <img src="static/img/user_yallo.png" class=" img-logo">
-                  </div>
-                  <div class="user-logo">
-                      <h4>Bringg</h4>
-                      <img src="static/img/user_bringg.png" class=" img-logo">
-                  </div>
-                  <div class="user-logo">
-                      <h4>CloudFlare</h4>
-                      <img src="static/img/cloudflare_logo.png" class="img-logo">
-                  </div>
-                  <div class="user-logo">
-                      <h4>NextPeer</h4>
-                      <img src="static/img/user_nextpeer.png" class=" img-logo">
-                  </div>
-                  <div class="user-logo">
-                      <h4>Fundbox</h4>
-                      <img src="static/img/user_fundbox.png" class=" img-logo">
-                  </div>
-                  <div class="user-logo">
-                      <h4>Interlude</h4>
-                      <img src="static/img/user_interlude.png" class=" img-logo">
-                  </div>
-                  <div class="user-logo">
-                      <h4>Ravello Systems</h4>
-                      <img src="static/img/user_ravello.jpg" class=" img-logo">
-                  </div>
-                  <div class="user-logo">
-                      <h4>Site Booster</h4>
-                      <img src="static/img/user_sitebooster.png" class=" img-logo">
-                  </div>
-                  <div class="user-logo">
-                      <h4>Outbrain</h4>
-                      <img src="static/img/user_outbrain.jpg" class=" img-logo">
-                  </div>
-                  <div class="user-logo">
-                      <h4>Gogobot</h4>
-                      <img src="static/img/user_gogobot.png" class=" img-logo">
-                  </div>
-                  <div class="user-logo">
-                      <h4>Komoona</h4>
-                      <img src="static/img/user_komoona.png" class=" img-logo">
-                  </div>
-                  <div class="user-logo">
-                      <h4>iPROS</h4>
-                      <img src="static/img/user_ipros.png" class=" img-logo">
-                  </div>
-                  <div class="user-logo">
-                      <h4>JoyTunes</h4>
-                      <img src="static/img/user_joytunes.jpeg" class=" img-logo">
-                  </div>
-                  <div class="user-logo">
-                      <h4>EasyTaxi</h4>
-                      <img src="static/img/user_easytaxi.png" class=" img-logo">
-                  </div>
-                  <div class="user-logo">
-                      <h4>Nexar</h4>
-                      <img src="static/img/user_nexar.jpg" class=" img-logo">
-                  </div>
-                  <div class="user-logo">
-                      <h4>HealthJoy</h4>
-                      <img src="static/img/user_healthjoy.png" class=" img-logo">
-                  </div>
-                  <div class="user-logo">
-                      <h4>Hailo</h4>
-                      <img src="static/img/hailo-logo.jpg" class=" img-logo">
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
+		</div><!-- container -->
+	</section><!-- section -->
 
 
-  <a name="get-started"></a>
-  <div class="container-fluid">
-      <div class="container text-centeR">
-      <hr>
-          <div class="row" id="get-started">
-              <div id="hosted" class="col-md-6 col-sm-12">
-                  <h2><img src="static/img/logo_white.png"> <label>HOSTED</label></h2>
-                  <p>Start querying and sharing in a few clicks with our hosted service.</p>
-                  <strong>Instant and hassle free</strong>
-                  <div id="signup">
-                      <div>
-                          <a href="https://app.redash.io/signup" data-track data-track-location="get-started" data-track-event="Start Trial" class="btn btn-primary btn-lg btn-redash">Start Free 30 Day Trial</a>
-                      </div>
-                  </div>
-              </div>
-              <span>or</span>
-              <div id="opensource" class="col-md-6 col-sm-12">
-                  <h2><img src="static/img/logo_white.png"> <label>0.12</label></h2>
-                  <p>Setup and install Redash on your own server free of charge.</p>
-                  <strong>Perfect for developers</strong>
-                  <a href="https://redash.io/help-onpremise/" data-track data-track-location="get-started" data-track-event="Clicked Quick Start Guide"  class="btn btn-full">Quick start guide</a>
-              </div>
-          </div>
+	<section class="section section--small bg-mutted-soft text-center">
+		<div class="container">
+			<h2 class="font-light">Query All the Data Sources You Need</h2>
+			<h5 class="font-light">Redash supports SQL, NoSQL, Big Data and API data sources - query data from different sources and types to answer complex issues.</h5>
+
+			<div class="cards cards--elastic">
+				{% for database in site.data_sources %}
+        {% if database.show_on_homepage %}
+				<a href="{{database.url}}" class="card__item">
+					<div class="card__item-brand">
+						<img src="{{database.logo}}" class="card__item-brand_img" alt="{{database.name}}">
+					</div><!-- card__brand -->
+					<p class="card__item-title">{{database.name}}</p>
+				</a>
+        {% endif %}
+				{% endfor %}
       </div>
 
-  </div>
-  <a name="newsletter"></a>
-  <div class="container-fluid">
-      <div class="container">
-        <hr>
-        {% include newsletter.html %}
-      </div>
-  </div>
+			<a href="/integrations" class="btn btn-danger-ghost btn-long text-uppercase">See all supported datasources and integrations</a>
 
-</div>
+		</div><!-- container -->
+	</section><!-- section -->
+
+  {% include get_started.html %}
+
+  <script async defer src="https://buttons.github.io/buttons.js"></script>

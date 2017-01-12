@@ -1,3 +1,8 @@
+---
+description: Getting started with Redash is easy and takes only a few minutes - connect a data source, write a query, add a visualization, create a dashboard and invite your colleagues!
+---
+
+
 # Getting Started with Redash
 
 To get the most out of Redash, we recommend following these 5 steps:
