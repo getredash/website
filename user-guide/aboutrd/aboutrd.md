@@ -34,7 +34,6 @@ Redash plays nice with all data sources!
 
 * Amazon Athena
 * Amazon DynamoDB
-* Amazon DynamoDB
 * Amazon Redshift
 * BigQuery
 * Cassandra
