@@ -40,6 +40,8 @@ You install them with pip:
 pip install -r requirements.txt -r requirements_dev.txt
 ```
 
+(We recommend installing them in a virtualenv)
+
 ### Node.js Packages
 
 Install all packages with:
