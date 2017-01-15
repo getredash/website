@@ -4,8 +4,9 @@ description: "Redash is a powerful online query editor for teams: write queries,
 
 # Query Actions
 
-* [How to create a new query?](#how_to_create_a_query)
+* [How to Create a new query?](#how_to_create_a_query)
 * [How to Duplicate Queries?](#how_to_duplicate_a_query)
+* [How to Delete a Query?](#how-to-archive-query)
 * [How to Schedule a Query?](#how_to_schedule_a_query)
 * [How to Download the Results of My Query?](#how_to_download_a_dataset)
 * [How to Export Query Results to CSV or Json?](#how_to_export_query_csv_json)
@@ -25,6 +26,16 @@ For now only admins can edit all queries.
 ![](../assets/gifs/queries/fork_query.gif)
 
 Soon we'll add an option to share edit permissions and view changes history for each query.
+
+![](../assets/archive_query.png)
+
+After archiving a query it won't show up in search or your recent queries and all alerts or dashboards that used it will no longer work/show up.
+
+## How to Delete a Query? {#how-to-archive-query}
+
+To archive a query, open the little menu at the top-right area of the query editor, next to the Save option:
+
+
 
 ## How to schedule a query? {#how_to_schedule_a_query}
 
