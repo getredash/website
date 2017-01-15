@@ -1,4 +1,16 @@
 source: .
-baseurl: ''
+url: 'https://redash.io'
+collections:
+  data_sources:
+    output: true
+    permalink: /data-sources/:path
+  partners:
+    output: true
+    permalink: /integrations/:path
+  integrations:
+    output: true
+    permalink: /data-sources/:path
 gems:
-    - jekyll-redirect-from
+  - jekyll-redirect-from
+  - jekyll-last-modified-at
+  - jekyll-sitemap

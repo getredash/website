@@ -32,25 +32,31 @@ Redash was built to allow fast and easy access to billions of records, that we p
 
 Redash plays nice with all data sources!
 
-- Amazon Athena
-- Amazon DynamoDB
-- Amazon Redshift
-- Cassandra
-- ElasticSearch
-- Google BigQuery
-- Google Spreadsheets
-- Graphite
-- Hive
-- Impala
-- InfluxDB
-- Microsoft SQL Server
-- MongoDB
-- MySQL
-- PostgreSQL
-- Presto
-- ScyllaDB
-- TreasureData
-- Vertica
+* Amazon Athena
+* Amazon DynamoDB
+* Amazon Redshift
+* BigQuery
+* Cassandra
+* ElasticSearch
+* JIRA
+* JSON
+* Google Analytics
+* Google Spreadsheets
+* Graphite
+* Greenplum
+* Hive
+* Impala
+* InfluxDB
+* Microsoft SQL Server
+* MongoDB
+* MySQL
+* Oracle
+* PostgreSQL
+* Presto
+* Python
+* ScyllaDB
+* TreasureData
+* Vertica
 
 Also, we added an option to query other query results - this way you can enjoy a dataset from multiple data sources (originally). Read more about [using datasets as data sources](../queries/using-datasets-as-data-sources.md)
 

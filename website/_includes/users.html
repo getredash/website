@@ -1,0 +1,15 @@
+		<section class="section section--small" id="anchor">
+			<div class="container">
+				<h3 class="text-center mb-lg">Join the 1000s of teams already using Redash.</h3>
+				<div id="brands-carousel" class="text-center">
+          {% for user in site.data.users %}
+					<div>
+						<div class="carousel__logo-holder">
+							<img src="{{user.image}}" class="carousel__logo" alt="">
+						</div><!-- carousel__logo-holder -->
+						<p class="carousel__title">{{user.name}}</p>
+					</div>
+          {% endfor %}
+				</div><!-- brands-carousel -->
+			</div><!-- container -->
+		</section><!-- section -->
