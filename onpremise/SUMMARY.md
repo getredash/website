@@ -2,7 +2,6 @@
 
 ## On-Premise Setup
 * [Setting up a Redash instance](setup/setting-up-redash-instance.md)
-* [Setting up development environment (using Vagrant)](setup/setting-up-development-environment-using-vagrant.md)
 
 ## Configuration and Setup
 * [Settings - Environment Variables](setup/settings-environment-variables.md)
@@ -13,6 +12,9 @@
 ## Maintenance
 * [How to Upgrade Redash](maintenance/how-to-upgrade-redash.md)
 * [Ongoing Maintenance and Basic Operations](maintenance/ongoing-maintenance-and-basic-operations.md)
+
+## Developer Guide
+* [Setting up development environment (using Vagrant)](setup/setting-up-development-environment-using-vagrant.md)
 
 ## How Redash Works
 * [Query Execution Model](how-rd-works/query-execution-model.md)
