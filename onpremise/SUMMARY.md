@@ -14,6 +14,7 @@
 * [Ongoing Maintenance and Basic Operations](maintenance/ongoing-maintenance-and-basic-operations.md)
 
 ## Developer Guide
+* [Guide](dev/guide.md)
 * [Setting up development environment (using Vagrant)](setup/setting-up-development-environment-using-vagrant.md)
 
 ## How Redash Works
