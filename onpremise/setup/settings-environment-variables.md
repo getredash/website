@@ -58,7 +58,7 @@ The follow is a list of settings and what they control:
 | REDASH_DATE_FORMAT |  | DD/MM/YY |
 | REDASH_FEATURE_ALLOW_ALL_TO_EDIT |  | true |
 | REDASH_FEATURE_SHOW_QUERY_RESULTS_COUNT | disable/enable showing count of query results in status  | true |
-| REDASH_VERSION_CEHCK |  | true |
+| REDASH_VERSION_CHECK |  | true |
 | REDASH_FEATURE_DISABLE_REFRESH_QUERIES | disable scheduled query execution | false |
 | REDASH_BIGQUERY_HTTP_TIMEOUT |  | 600 |
 | REDASH_SCHEMA_RUN_TABLE_SIZE_CALCULATIONS |  | false |
