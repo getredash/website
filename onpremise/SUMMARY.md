@@ -15,7 +15,8 @@
 
 ## Developer Guide
 * [Guide](dev/guide.md)
-* [Setting up development environment (using Vagrant)](setup/setting-up-development-environment-using-vagrant.md)
+* [Docker Based Developer Installation Guide](dev/docker.md)
+* [Developer Installation Guide](dev/setup.md)
 
 ## How Redash Works
 * [Query Execution Model](how-rd-works/query-execution-model.md)

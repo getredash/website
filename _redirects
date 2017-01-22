@@ -3,3 +3,4 @@
 /datasources/bigquery /data-sources/google-bigquery
 /datasources/redshift.html /data-sources/amazon-redshift
 /datasources/redshift /data-sources/amazon-redshift
+/help-onpremise/setup/setting-up-development-environment-using-vagrant.html /help-onpremise/dev/guide.html 301
