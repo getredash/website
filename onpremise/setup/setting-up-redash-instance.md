@@ -58,16 +58,17 @@ Please note that currently the Google Compute Engine images are for version 0.9.
 
 ### Docker Compose
 
+For development environment setup, please refer to the [developer guide](../dev/guide.md) (which includes Docker specific instructions as well).
+
 1. Make sure you have a Docker machine up and running.
 2. Make sure your current working directory is the root of this GitHub repository.
-3. Copy `docker-compose-example.yml` to `docker-compose.yml` and modify
+3. Use the `docker-compose.production.yml` configuration and modify
    configuration values as needed. For example, you may want to change:
     * The Postgres volume location
     * The value of `REDASH_COOKIE_SECRET` (especially if this instance is not
       just for testing purposes)
-4. Run `./setup/docker/create_database.sh`. This will access the postgres
-   container and set up the database.
-5. Run `docker-compose up`
+4. Run `docker-compose -f docker-compose.production.yml run --rm server create_db` to setup the database.
+5. Run `docker-compose -f docker-compose.production.yml up`
 6. Run `docker-machine ls`, take note of the ip for the Docker machine you are using, and open the web browser.
 7. Visit that Docker machine IP at port 80, and you should see a Redash login screen.
 
