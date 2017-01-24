@@ -1,0 +1,57 @@
+/* FROM TO */
+
+.from-to-holder {
+  text-align: center;
+  position: relative;
+}
+.from-to-holder__item {
+  display: inline-block;
+  max-width: 140px;
+  vertical-align: middle;
+  &+.from-to-holder__item {
+    margin-left: 220px;
+    @include respond-to(xs) {
+      margin-left: 100px;
+    }
+  }
+}
+.from-to-holder__line {
+  height: 4px;
+  display: block;
+  width: 190px;
+  position: absolute;
+  background-repeat: repeat-x;
+  background-size: 6px 4px;
+  background-image: radial-gradient(circle, $hoki 1.5px, transparent 1px);
+  background-position: left center;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 50%;
+  margin-top: -20px;
+  margin-left: -85px;
+  font-family: $font-icon;
+  @include respond-to(xs) {
+    width: 70px;
+    margin-left: -25px;
+  }
+  &:before {
+    @extend .fa, .fa-angle-right;
+    color: $hoki;
+    position: absolute;
+    right: -7px;
+    transform: translateY(-50%);
+    top: 50%;
+    margin-top: -1px;
+    font-size: 26px;
+  }
+}
+.from-to-holder__logo {
+  width: 100%;
+  max-width: 60px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.from-to-holder__title {
+  font-size: 18px;
+  font-family: $font-light;
+}
