@@ -7,7 +7,8 @@ your API server and run locally only the webpack dev-server.
 The setup in this case is very simple:
 
 1. [Install Node.js](https://nodejs.org/en/download/) (v6 or later is recommended, can be installed with Homebrew on OS/X)
-2. Install npm packages: `npm install`.
-3. Start webpack dev-server: `REDASH_BACKEND="URL of your redash server" npm run start`.
+2. Git clone the repository.
+3. Change to the repository directoy, and install npm packages: `npm install`.
+4. Start webpack dev-server: `REDASH_BACKEND="URL of your redash server" npm run start`.
 
 The `REDASH_BACKEND=""` part of the command sets the URL of your remote Redash server.
