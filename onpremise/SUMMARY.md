@@ -17,6 +17,7 @@
 * [Guide](dev/guide.md)
 * [Docker Based Developer Installation Guide](dev/docker.md)
 * [Developer Installation Guide](dev/setup.md)
+* [Using a remote server and installing locally only the frontend dependencies](dev/remote-server.md)
 
 ## How Redash Works
 * [Query Execution Model](how-rd-works/query-execution-model.md)

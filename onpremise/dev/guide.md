@@ -22,4 +22,15 @@ the frontend we use ES6, Angular (1.5) and Webpack for bundling.
 
 * [Docker Based Developer Installation Guide](./docker.md) (recommended for beginners)
 * [Developer Installation Guide](./setup.md) (recommended for experienced developers)
-* Using a remote server and installing locally only frontend dependencies (TBD)
+* [Using a remote server and installing locally only the frontend dependencies](./remote-server.md)
+
+## Additional Resources
+
+* [How to create a new visualization](https://discuss.redash.io/t/how-to-create-new-visualization-types-in-redash/86)
+* [How to create a new query runner](https://discuss.redash.io/t/creating-a-new-query-runner-data-source-in-redash/347)
+
+## Getting Help
+
+* [Discussion Forum](https://discuss.redash.io/)
+* [Gitter (chat)](https://gitter.im/getredash/redash)
+* [Slack Community](http://slack.redash.io/)
