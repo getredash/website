@@ -49,7 +49,9 @@ bin/run ./manage.py check_settings
 
 ## Creating Database Tables
 
-TBD
+```bash
+bin/run ./manage.py database create_tables
+```
 
 ## Processes
 
