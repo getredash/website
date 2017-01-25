@@ -88,7 +88,7 @@ Once you created the instance with either the image or the script, you should ha
 
 First ssh to your instance and change directory to `/opt/redash`. If you’re using the GCE image, switch to root (`sudo su`).
 
-### Users & Google Authentication Setup
+### Users & Google Authentication Setup {#google_oauth}
 
 Most of the settings you need to edit are in the `/opt/redash/.env` file.
 
@@ -112,11 +112,11 @@ sudo -u redash bin/run ./manage.py org set_google_apps_domains {{domains}}
 
 If you’re passing multiple domains, separate them with commas.
 
-1. Restart the web server to apply the configuration changes:`sudo supervisorctl restart redash_server`.
+1. Restart the web server to apply the configuration changes: `sudo supervisorctl restart redash_server`.
 2. Once you have Google OAuth enabled, you can login using your Google Apps account. If you want to grant admin permissions to some users, you can do this by adding them to the admin group (from `/groups` page).
 3. If you don’t use Google OAuth or just need username/password logins, you can create additional users by opening the `/users/new` page.
 
-### Datasources
+### Data Sources
 
 To make Redash truly useful, you need to setup your data sources in it. Browse to `/data_sources` on your instance, to create new data source connection.
 
@@ -138,7 +138,6 @@ export REDASH_MAIL_PASSWORD="" # default: None
 export REDASH_MAIL_DEFAULT_SENDER="" # Email address to send from
 
 export REDASH_HOST="" # base address of your Redash instance, for example: "https://demo.redash.io"
-
 ```
 
 Once you updated the configuration, restart all services with `sudo supervisorctl restart all`.
