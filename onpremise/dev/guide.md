@@ -1,9 +1,5 @@
 # Developer Guide
 
-> #### primary::
->
-> **This page is a work in progress. [Comments are more than welcome](https://github.com/getredash/redash/issues/1480).**
-
 Redash is a Python (2.7) and Javascript app. To fully run Redash you will also need
 PostgreSQL (version 9.3 or newer) and Redis (version 2.8 or newer). While it's not
 needed in production, for development you will need a recent version of Node.js
