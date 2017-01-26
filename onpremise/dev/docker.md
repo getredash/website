@@ -44,6 +44,12 @@ docker-compose run --rm postgres psql -h postgres -U postgres -c "create databas
 Once all Docker services are running (can be started either by `docker-compose up` or
 `docker-compose start`), Redash is available at `http://localhost:5000/`.
 
+While we will use webpack's dev server, we still need to build the frontend assets at least once, as some of them used for static pages (login page and such):
+
+```bash
+npm run build
+```
+
 To work on the frontend code, you need to use the webpack dev server, which you start with:
 
 ```bash
