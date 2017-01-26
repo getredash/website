@@ -32,6 +32,12 @@ Install all packages with:
 npm install
 ```
 
+First time build assets:
+
+```bash
+npm run build
+```
+
 ## Configuration
 
 For development, in most cases the default configuration is enough. But if you need
