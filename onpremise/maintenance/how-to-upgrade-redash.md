@@ -17,6 +17,10 @@ Run it:
 sudo ./upgrade
 ```
 
+> #### primary::
+>
+> Unlike the old upgrade method, this script needs to be run directly from the Redash server.
+
 ## **How to upgrade -- v1.0.0 and newer**
 
 In the final release of v1.0.0 the upgrade script will be part of the Redash deployment, and running the script will be simple as:
