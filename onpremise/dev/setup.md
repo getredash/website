@@ -4,10 +4,7 @@
 
 ### PostgreSQL & Redis
 
-Refer to the documentation of Python, PostgreSQL, Redis and Node.js on how to install
-them in your environment. On macOS, you can use `brew` to install them. On Linux
-you can use your package manager, although need to make sure it installs recent
-enough versions.
+Refer to the documentation of Python (2.7), PostgreSQL (9.3 or newer), Redis (2.8.3 or newer) and Node.js (v6 or newer) on how to install them in your environment. On macOS, you can use `brew` to install them. On Linux you can use your package manager, although need to make sure it installs recent enough versions.
 
 ### Python Packages
 
