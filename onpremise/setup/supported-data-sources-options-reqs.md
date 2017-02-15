@@ -118,7 +118,21 @@ For information on how to write ElasticSearch queries, see [_documentation_](htt
 
 ## Impala
 
-...
+* Options:
+  * Database name (mandatory)
+  * Host (mandatory)
+    * Address to Impala daemon.
+  * LDAP Password
+  * LDAP User
+  * Port
+    * Port to a Impala daemon. 21050 is the default port.
+  * beeswax or hiveserver2
+  * Timeout
+  * Use LDAP
+
+* Additional requirements:
+  * `impyla` python package.
+
 
 ## URL
 
