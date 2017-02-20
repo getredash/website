@@ -64,4 +64,4 @@ If your queries have filters and you want to apply filters at the dashboard leve
 
 This can be done through the admin interface at /admin/dashboard or manually by setting the column dashboard_filters_enabled of the table dashboards to TRUE in the Redash database.
 
-If you are using the hosted service and want to enable this for your dashboard/s - please contact us and send the URL of the dashboard you want to apply the filter/s for. Make sure to add filters to each query you want to filter in tat dashboard.
+If you are using the hosted service and want to enable this for your dashboard - please contact us and send the URL of the dashboard you want to apply the filters for. Make sure to add filters to each query you want to filter in that dashboard.
