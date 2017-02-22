@@ -64,6 +64,7 @@
 
 ## Data Sources Setup
 * [Amazon Athena Setup](data-sources/amazon-athena.md)
+* [Axibase Time Series Database](data-sources/axibase_tsd.md)
 * [BigQuery Setup](data-sources/bigquery.md)
 * [Google Analytics Setup](data-sources/google-analytics.md)
 * [Google Spreadsheets Setup](queries/query-google-spreadsheets.md)
