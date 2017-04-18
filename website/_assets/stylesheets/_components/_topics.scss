@@ -22,7 +22,7 @@ $topic-color: $small-blue;
 .topics__item {
   min-height: 190px;
   border-radius: 4px;
-  border: 1px solid $topic-color;
+  border: 1px solid $gray;
   @extend .flex, .flex-content-center, .flex-item-center;
   font-size: 18px;
   padding: 15px;
@@ -32,6 +32,7 @@ $topic-color: $small-blue;
     min-height: 120px;
   }
   &:hover, &:focus {
+    border-color: $topic-color;
     color: darken($link-color, 10%);
   }
 }
