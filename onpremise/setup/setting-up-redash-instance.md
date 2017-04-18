@@ -1,8 +1,8 @@
 # Setting up a Redash Instance
 
-The [provisioning script](https://raw.githubusercontent.com/getredash/redash/master/setup/ubuntu/bootstrap.sh) works on Ubuntu 12.04, Ubuntu 14.04 and Debian Wheezy. This script installs all needed dependencies and creates basic setup.
+The [provisioning script](https://raw.githubusercontent.com/getredash/redash/master/setup/ubuntu/bootstrap.sh) works on Ubuntu 16.04. This script installs all needed dependencies and creates basic setup.
 
-To ease the process, there are also images for AWS, Google Compute Cloud and Docker. These images created with the same provision script using Packer.
+To ease the process, there are also images for AWS, Google Compute Cloud and Docker. These images were created with the same provision script using Packer.
 
 ## Create an Instance
 
@@ -10,18 +10,21 @@ To ease the process, there are also images for AWS, Google Compute Cloud and Doc
 
 Launch the instance with from the pre-baked AMI (for small deployments t2.small should be enough):
 
-* us-east-1: [ami-3ff16228](https://console.aws.amazon.com/ec2/home?region=us-east-1#LaunchInstanceWizard:ami=ami-3ff16228)
-* us-west-1: [ami-fdc6869d](https://console.aws.amazon.com/ec2/home?region=us-west-1#LaunchInstanceWizard:ami=ami-fdc6869d)
-* us-west-2: [ami-670cc507](https://console.aws.amazon.com/ec2/home?region=us-west-2#LaunchInstanceWizard:ami=ami-670cc507)
-* eu-west-1: [ami-5f95fb2c](https://console.aws.amazon.com/ec2/home?region=eu-west-1#LaunchInstanceWizard:ami=ami-5f95fb2c)
-* eu-central-1: [ami-8f1ee9e0](https://console.aws.amazon.com/ec2/home?region=eu-central-1#LaunchInstanceWizard:ami=ami-8f1ee9e0)
-* sa-east-1: [ami-3113845d](https://console.aws.amazon.com/ec2/home?region=sa-east-1#LaunchInstanceWizard:ami=ami-3113845d)
-* ap-northeast-1: [ami-b30ec9d2](https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#LaunchInstanceWizard:ami=ami-b30ec9d2)
-* ap-northeast-2: [ami-8f29e3e1](https://console.aws.amazon.com/ec2/home?region=ap-northeast-2#LaunchInstanceWizard:ami=ami-8f29e3e1)
-* ap-southeast-2: [ami-acac99cf](https://console.aws.amazon.com/ec2/home?region=ap-southeast-2#LaunchInstanceWizard:ami=ami-acac99cf)
-* ap-southeast-1: [ami-b5b26cd6](https://console.aws.amazon.com/ec2/home?region=ap-southeast-1#LaunchInstanceWizard:ami=ami-b5b26cd6)
+| Region | AMI |
+| ------------- | -------------|
+| us-east-1 | [ami-9ea12788](https://console.aws.amazon.com/ec2/home?region=us-east-1#LaunchInstanceWizard:ami=ami-9ea12788) |
+| us-west-1 | [ami-1a441e7a](https://console.aws.amazon.com/ec2/home?region=us-west-1#LaunchInstanceWizard:ami=ami-1a441e7a) |
+| us-west-2 | [ami-7530a715](https://console.aws.amazon.com/ec2/home?region=us-west-2#LaunchInstanceWizard:ami=ami-7530a715) |
+| eu-west-1 | [ami-b37a43d5](https://console.aws.amazon.com/ec2/home?region=eu-west-1#LaunchInstanceWizard:ami=ami-b37a43d5) |
+| eu-central-1 | [ami-0f2bfb60](https://console.aws.amazon.com/ec2/home?region=eu-central-1#LaunchInstanceWizard:ami=ami-0f2bfb60) |
+| sa-east-1 | [ami-e85e3d84](https://console.aws.amazon.com/ec2/home?region=sa-east-1#LaunchInstanceWizard:ami=ami-e85e3d84) |
+| ap-south-1 | [ami-47403328](https://console.aws.amazon.com/ec2/home?region=ap-south-1#LaunchInstanceWizard:ami=ami-47403328) |
+| ap-northeast-1 | [ami-34cfe853](https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#LaunchInstanceWizard:ami=ami-34cfe853) |
+| ap-northeast-2 | [ami-9f9745f1](https://console.aws.amazon.com/ec2/home?region=ap-northeast-2#LaunchInstanceWizard:ami=ami-9f9745f1) |
+| ap-southeast-2 | [ami-90aea1f3](https://console.aws.amazon.com/ec2/home?region=ap-southeast-2#LaunchInstanceWizard:ami=ami-90aea1f3) |
+| ap-southeast-1 | [ami-d9902fba](https://console.aws.amazon.com/ec2/home?region=ap-southeast-1#LaunchInstanceWizard:ami=ami-d9902fba) |
 
-(the above AMIs are of version: 0.11.1)
+(the above AMIs are of version: 1.0.1)
 
 When launching the instance make sure to use a security group, that only allows incoming traffic on: port 22 (SSH), 80 (HTTP) and 443 (HTTPS). These AMIs are based on Ubuntu so you will need to use the user `ubuntu` when connecting to the instance via SSH.
 
@@ -32,29 +35,11 @@ Now proceed to “[Setup](#setup-redash-instance-setup)”.
 First, you need to add the images to your account:
 
 ```
-$ gcloud compute images create "redash-091-b1377" --source-uri gs://redash-images/redash.0.9.1.b1377.tar.gz
+$ gcloud compute images create "redash-1-0-1" --source-uri gs://redash-images/redash.1.0.1.b2833.tar.gz
 
 ```
 
 Next you need to launch an instance using this image (n1-standard-1 instance type is recommended).
-
-If you plan using Redash with BigQuery, you can use a dedicated image which comes with BigQuery preconfigured (using instance permissions):
-
-```
-$ gcloud compute images create "redash-091-b1377-bq" --source-uri gs://redash-images/redash.0.9.1.b1377-bq.tar.gz
-
-```
-
-Note that you need to launch this instance with BigQuery access:
-
-```
-$ gcloud compute instances create <your_instance_name> --image redash-091-b1377-bq --scopes storage-ro,bigquery
-
-```
-
-(the same can be done from the web interface, just make sure to enable BigQuery access)
-
-Please note that currently the Google Compute Engine images are for version 0.9.1. After creating the instance, please run the [_upgrade process_](../maintenance/how-to-upgrade-redash.md) and then proceed to [“](#setup-redash-instance-setup) [Setup](#setup-redash-instance-setup)[”](#setup-redash-instance-setup).
 
 ### Docker Compose
 
@@ -76,15 +61,17 @@ Now proceed to “[Setup](#setup-redash-instance-setup)”.
 
 ### Other
 
-Download the provision script and run it on your machine. Note that:
+Download the [provisioning script](https://raw.githubusercontent.com/getredash/redash/master/setup/ubuntu/bootstrap.sh) and run it on a new machine. Note that:
 
 1. You need to run the script as root.
-2. It was tested only on Ubuntu 12.04, Ubuntu 14.04 and Debian Wheezy.
-3. It’s designed to run on a “clean” machine. If you’re running this script on a machine that is used for other purposes, you might want to tweak it to your needs (like removing the `apt-get dist-upgrade`call at the beginning of it).
+2. It was tested only on Ubuntu 16.04.
+3. It’s designed to run on a “clean” machine. If you’re running this script on a machine that is used for other purposes, you might want to tweak it to your needs.
 
 ## <a name="setup-redash-instance-setup"></a> Setup
 
-Once you created the instance with either the image or the script, you should have a running Redash instance with everything you need to get started . Redash should be available using the server IP or DNS name you assigned to it. You can point your browser to this address, and login with the user “admin” (password: “admin”). But to make it useful, there are a few more steps that you need to manually do to complete the setup:
+Once you created the instance with either the image or the script, you should have a running Redash instance with everything you need to get started. Redash should be available using the server IP or DNS name you assigned to it. You can point your browser to this address. 
+
+Before you can continue, it will ask you to create your admin account. Once this is done, you can start using Redash. But to make it useful, there are a few more steps that you need to manually do to complete the setup:
 
 First ssh to your instance and change directory to `/opt/redash`. If you’re using the GCE image, switch to root (`sudo su`).
 
@@ -92,14 +79,11 @@ First ssh to your instance and change directory to `/opt/redash`. If you’re us
 
 Most of the settings you need to edit are in the `/opt/redash/.env` file.
 
-1. Update the cookie secret (important! otherwise anyone can sign new cookies and impersonate users): change “veryverysecret” in the line: `export REDASH_COOKIE_SECRET=veryverysecret` to something else (you can run the command `pwgen 32 -1` to generate a random string).
-2. By default we create an admin user with the password “admin”. You can change this password opening the: `/users/me#password` page after logging in as admin.
-3. If you want to use Google OAuth to authenticate users, you need to create a Google Developers project (see [instructions](../setup/how-to-create-a-google-developers-project.md) and then add the needed configuration in the `.env` file:
+If you want to use Google OAuth to authenticate users, you need to create a Google Developers project (see [instructions](../setup/how-to-create-a-google-developers-project.md) and then add the needed configuration in the `.env` file:
 
 ```
 export REDASH_GOOGLE_CLIENT_ID=""
 export REDASH_GOOGLE_CLIENT_SECRET=""
-
 ```
 
 1. Configure the domain(s) you want to allow to use with Google Apps, by running the command:

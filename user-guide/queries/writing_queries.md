@@ -117,10 +117,9 @@ You can see this query and the rendered UI here: [http://demo.redash.io/queries/
 
 Note that you can use `__filter` or `__multiFilter`, (double underscore instead of double quotes) if your database doesn’t support :: in column names (such as BigQuery).
 
-## Shortcuts {#shortcuts}
+## Keyboard Shortcuts {#shortcuts}
 
-Execute = ctrl+ enter or cmd+ enter
+* Execute query: `Ctrl`/`Cmd` + `Enter`
+* Save query: `Ctrl`/`Cmd` + `S`
 
-Save = ctrl+S or cmd+S
-
-Auto-complete - for schemas with more than 5000 tables+columns start typing and then hit ctrl+spacebar or cmd+spacebar to see suggestions. For smaller schemas just typing will trigger the relevant suggestions.
+Auto-complete - for schemas with more than 5000 tables & columns start typing and then hit Ctrl+Space to see suggestions. For smaller schemas just typing will trigger the relevant suggestions.

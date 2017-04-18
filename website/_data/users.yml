@@ -36,3 +36,5 @@
   image: "/assets/images/temp/user_gogobot.png"
 - name: NextPeer
   image: "/assets/images/temp/user_nextpeer.png"
+- name: Drivy
+  image: "/assets/images/temp/user_drivy.png"
