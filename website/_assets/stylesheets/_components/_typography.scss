@@ -11,8 +11,18 @@ html, body {
 	}
 }
 
+html {
+	height: 100%;
+}
+
 body {
+	min-height: 100%;
+	@extend .flex, .flex-column;
 	padding-top: $navbar-height;
+}
+
+main {
+	flex: 1;
 }
 
 
