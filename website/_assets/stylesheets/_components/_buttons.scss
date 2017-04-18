@@ -23,6 +23,16 @@
       color: $white;
     }
   }
+  &.btn-brand {
+    border-color: darken($bridesmaid, 30%);
+    background: white;
+    color: darken($bridesmaid, 30%);
+    &:hover, &:focus {
+      border-color: darken($bridesmaid, 40%);
+      background: rgba($bridesmaid, .25);
+      color: darken($bridesmaid, 40%);
+    }
+  }
   &.btn-danger-ghost {
     background: transparent;
     border-color: $danger;

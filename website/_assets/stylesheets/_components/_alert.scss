@@ -5,6 +5,11 @@
     border-color: $danger;
     background: rgba($danger, .25);
   }
+  &.alert-brand {
+    border-color: $bridesmaid;
+    background: rgba($bridesmaid, .25);
+    color: darken($bridesmaid, 30%);
+  }
 }
 .alert--flex {
   @extend .flex, .flex-between, .flex-item-center;

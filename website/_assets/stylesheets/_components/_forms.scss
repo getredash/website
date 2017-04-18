@@ -29,3 +29,26 @@ $placeholder-opacity: 0;
 		border-color: $primary;
 	}
 }
+
+.form-group {
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+.input-lg {
+	height: 60px;
+}
+
+.form-group--search {
+	&:before {
+		font-family: $font-icon;
+		@extend .fa, .fa-search;
+		position: absolute;
+		left: 35px;
+		transform: translateY(-50%);
+		top: 50%;
+	}
+	.form-control {
+		padding-left: 50px;
+	}
+}
