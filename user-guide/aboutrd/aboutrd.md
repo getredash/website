@@ -18,7 +18,7 @@ Share your results and dashboards with other team members and empower your entir
 
 Redash is our take on freeing the data within our company in a way that will better fit our culture and usage patterns. We tried to use traditional BI suites and discovered a set of bloated, technically challenged and slow tools/flows. What we were looking for was a more hacker’ish way to look at data, so we built one.
 
-Redash was built to allow fast and easy access to billions of records, that we process and collect using Amazon Redshift (“petabyte scale data warehouse” that “speaks” PostgreSQL). Today Redash has support for querying multiple databases, including: Redshift, Google BigQuery,Google Spreadsheets, PostgreSQL, MySQL, Graphite and custom scripts.
+Redash was built to allow fast and easy access to billions of records, that we process and collect using Amazon Redshift (“petabyte scale data warehouse” that “speaks” PostgreSQL). Today Redash has support for querying multiple databases, including: Redshift, Google BigQuery,Google Spreadsheets, PostgreSQL, MySQL, Graphite, Axibase Time Series Database and custom scripts.
 
 ## Main Features {#main_features}
 
@@ -35,6 +35,7 @@ Redash plays nice with all data sources!
 * Amazon Athena
 * Amazon DynamoDB
 * Amazon Redshift
+* Axibase Time Series Database
 * BigQuery
 * Cassandra
 * ElasticSearch
