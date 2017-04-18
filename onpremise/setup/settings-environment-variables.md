@@ -54,7 +54,7 @@ The follow is a list of settings and what they control:
 | REDASH_ENABLED_QUERY_RUNNERS |  | ”,”.join(default_query_runners) |
 | REDASH_ADDITIONAL_QUERY_RUNNERS |  |  |
 | REDASH_SENTRY_DSN |  |  |
-| REDASH_ALLOW_SCRIPTS_IN_USER_INPUT | disable sanitization of text input, allowing full HTML  | true |
+| REDASH_ALLOW_SCRIPTS_IN_USER_INPUT | disable sanitization of text input, allowing full HTML  | false |
 | REDASH_DATE_FORMAT |  | DD/MM/YY |
 | REDASH_FEATURE_ALLOW_ALL_TO_EDIT |  | true |
 | REDASH_FEATURE_SHOW_QUERY_RESULTS_COUNT | disable/enable showing count of query results in status  | true |
