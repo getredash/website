@@ -20,3 +20,12 @@ $placeholder-opacity: 0;
 		@include custom-placeholder-opacity($opacity: $placeholder-opacity);
 	}
 }
+
+.form-control--white {
+	background: $white;
+	color: $primary;
+	@include custom-placeholder($color: $primary, $font-size: $field-fs);
+	&:focus {
+		border-color: $primary;
+	}
+}
