@@ -71,3 +71,9 @@ ol, ul {
 .content-item-sm {
 	margin-bottom: 25px;
 }
+
+.text-center-xs {
+	@include respond-to(xs) {
+		text-align: center;
+	}
+}
