@@ -47,22 +47,16 @@ $topic-color: $small-blue;
 }
 
 .topics__list__item {
-  &+.topics__list__item {
-    .topics__list__link {
-      padding-top: 30px;
-      margin-top: 30px;
-      border-top: 2px dotted $gray;
-      @include respond-to(xs) {
-        margin-top: 20px;
-        padding-top: 20px;
-      }
-    }
-  }
+  border-bottom: 1px solid $gray;
 }
 
 .topics__list__link {
   display: block;
   color: $topic-color;
+  padding: 30px 0;
+  @include respond-to(xs) {
+    padding: 20px 0;
+  }
   &:hover, &:focus {
     color: darken($link-color, 10%);
   }
