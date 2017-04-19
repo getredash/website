@@ -1,0 +1,11 @@
+/* PANEL */
+
+.panel-nav {
+  color: $scorpion;
+  a {
+    color: $scorpion;
+    &:hover, &:focus {
+      color: $danger;
+    }
+  }
+}
