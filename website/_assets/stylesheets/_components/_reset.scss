@@ -77,3 +77,19 @@ ol, ul {
 		text-align: center;
 	}
 }
+
+.box {
+	padding: 25px;
+	&:not(:first-child) {
+		margin-top: 25px;
+	}
+	&:not(:last-child) {
+		margin-bottom: 25px;
+	}
+	@include respond-to(xs) {
+		padding: 20px;
+	}
+}
+.box--mutted {
+	background: $mutted;
+}

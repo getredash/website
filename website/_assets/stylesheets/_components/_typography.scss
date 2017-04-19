@@ -80,6 +80,11 @@ h5, .h5 {
 h6, .h6 {
 }
 
+ul, ol {
+	ul, ol {
+		padding-left: 30px;
+	}
+}
 
 a {
 	color: $link-color;
