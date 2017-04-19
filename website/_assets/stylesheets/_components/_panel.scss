@@ -1,11 +1,14 @@
 /* PANEL */
 
 .panel-nav {
-  color: $scorpion;
+  color: $mine-shaft;
   a {
-    color: $scorpion;
+    color: $mine-shaft;
+    display: block;
+    padding: 5px;
     &:hover, &:focus {
-      color: $danger;
+      color: $mine-shaft;
+      background: $wild-sand;
     }
   }
 }
