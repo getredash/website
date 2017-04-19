@@ -120,6 +120,14 @@ b, strong {
 	font-family: $font-bold;
 }
 
+hr {
+	border-color: #ddd;
+}
+.hr--sm {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
 .data-text {
 	&:before {
 		content: '<';
