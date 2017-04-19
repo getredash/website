@@ -21,6 +21,9 @@ $navbar-fs: 15px;
 }
 
 .navbar-nav {
+  &.navbar-right {
+    margin-right: 0;
+  }
   >li {
     &.active {
         >a {

@@ -36,3 +36,38 @@ $topic-color: $small-blue;
     color: darken($link-color, 10%);
   }
 }
+
+.topics__list {
+  &:not(:first-child) {
+    margin-top: 50px;
+    @include respond-to(xs) {
+      margin-top: 30px;
+    }
+  }
+}
+
+.topics__list__item {
+  &+.topics__list__item {
+    .topics__list__link {
+      padding-top: 30px;
+      margin-top: 30px;
+      border-top: 2px dotted $gray;
+      @include respond-to(xs) {
+        margin-top: 20px;
+        padding-top: 20px;
+      }
+    }
+  }
+}
+
+.topics__list__link {
+  display: block;
+  color: $topic-color;
+  &:hover, &:focus {
+    color: darken($link-color, 10%);
+  }
+}
+.topics__list__title {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
