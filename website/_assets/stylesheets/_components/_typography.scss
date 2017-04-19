@@ -11,8 +11,18 @@ html, body {
 	}
 }
 
+html {
+	height: 100%;
+}
+
 body {
+	min-height: 100%;
+	@extend .flex, .flex-column;
 	padding-top: $navbar-height;
+}
+
+main {
+	flex: 1;
 }
 
 
@@ -70,6 +80,11 @@ h5, .h5 {
 h6, .h6 {
 }
 
+ul, ol {
+	ul, ol {
+		padding-left: 30px;
+	}
+}
 
 a {
 	color: $link-color;
@@ -85,6 +100,15 @@ button {
 }
 .underline {
 	text-decoration: underline;
+}
+.underline-link-holder {
+	a {
+		color: $body-text-color;
+		border-bottom: 1px solid $danger;
+		&:hover, &:focus {
+			color: darken($danger, 10%);
+		}
+	}
 }
 p {
 	margin-bottom: 10px;
@@ -103,6 +127,14 @@ p {
 }
 b, strong {
 	font-family: $font-bold;
+}
+
+hr {
+	border-color: #ddd;
+}
+.hr--sm {
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .data-text {

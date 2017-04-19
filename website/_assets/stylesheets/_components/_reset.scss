@@ -71,3 +71,25 @@ ol, ul {
 .content-item-sm {
 	margin-bottom: 25px;
 }
+
+.text-center-xs {
+	@include respond-to(xs) {
+		text-align: center;
+	}
+}
+
+.box {
+	padding: 25px;
+	&:not(:first-child) {
+		margin-top: 25px;
+	}
+	&:not(:last-child) {
+		margin-bottom: 25px;
+	}
+	@include respond-to(xs) {
+		padding: 20px;
+	}
+}
+.box--mutted {
+	background: $mutted;
+}

@@ -1,4 +1,13 @@
 $(document).ready(function(){
+
+	if ($(window).width() > 767) {
+		//Initial sticky-kit Source: http://leafo.net/sticky-kit/
+		$(".sticky-in-parent").stick_in_parent({
+		    offset_top: 100
+		});
+	}
+
+
 	$('[data-toggle="popover"]').popover({trigger: 'hover'})
 	//Slick carousel initial
 	$('#brands-carousel').slick({
@@ -70,4 +79,5 @@ $(document).ready(function(){
       url: 'https://redash.us1.list-manage.com/subscribe/post?u=a905176d2294593084d5264e5&id=53ca028761'
     });
   }
+
 });

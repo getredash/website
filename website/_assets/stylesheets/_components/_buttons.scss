@@ -13,6 +13,26 @@
       border-color: darken($danger, 10%);
     }
   }
+  &.btn-white {
+    background: $white;
+    border-color: $danger;
+    color: $danger;
+    &:hover, &:focus {
+      background: $danger;
+      border-color: $danger;
+      color: $white;
+    }
+  }
+  &.btn-brand {
+    border-color: darken($bridesmaid, 30%);
+    background: white;
+    color: darken($bridesmaid, 30%);
+    &:hover, &:focus {
+      border-color: darken($bridesmaid, 40%);
+      background: rgba($bridesmaid, .25);
+      color: darken($bridesmaid, 40%);
+    }
+  }
   &.btn-danger-ghost {
     background: transparent;
     border-color: $danger;
@@ -46,5 +66,13 @@
   }
   &+.btn {
     margin-left: 10px;
+  }
+  &.btn-input-group {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  &.btn-input-lg {
+    padding-top: 11px;
+    padding-bottom: 11px;
   }
 }
