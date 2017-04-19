@@ -46,18 +46,6 @@ $(document).ready(function(){
 		pauseOnFocus: false
 	});
 
-	/* ======== SCROLL TO ELEMENT ======== */
-	$('[data-click=scroll-to-target]').on('click', function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    var target = $(this).attr('href');
-    var headerHeight = 68;
-		$('.navbar-collapse.in').removeClass('in');
-    $('html, body').animate({
-        scrollTop: $(target).offset().top - headerHeight
-    }, 500);
-  });
-
 	//Navbar shadow scroll action on Landing page
 	$(window).scroll(function (event) {
     var scroll = $(window).scrollTop();
