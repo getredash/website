@@ -1,9 +1,12 @@
 $(document).ready(function(){
 
-	//Initial sticky-kit Source: http://leafo.net/sticky-kit/
-	$(".sticky-in-parent").stick_in_parent({
-	    offset_top: 100
-	});
+	if ($(window).width() > 767) {
+		//Initial sticky-kit Source: http://leafo.net/sticky-kit/
+		$(".sticky-in-parent").stick_in_parent({
+		    offset_top: 100
+		});
+	}
+
 
 	$('[data-toggle="popover"]').popover({trigger: 'hover'})
 	//Slick carousel initial
