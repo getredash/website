@@ -101,6 +101,15 @@ button {
 .underline {
 	text-decoration: underline;
 }
+.underline-link-holder {
+	a {
+		color: $body-text-color;
+		border-bottom: 1px solid $danger;
+		&:hover, &:focus {
+			color: darken($danger, 10%);
+		}
+	}
+}
 p {
 	margin-bottom: 10px;
 	/* &:last-child {
