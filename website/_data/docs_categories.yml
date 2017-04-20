@@ -1,0 +1,20 @@
+- slug: querying
+  title: Querying
+- slug: visualizations
+  title: Visualizations
+- slug: dashboards
+  title: Dashboards
+- slug: data-sources
+  title: "Data Sources"
+- slug: users
+  title:  User, Groups and Permissions
+- slug: alerts
+  title: Alerts
+- slug: integrations
+  title: Integrations
+- slug: query-examples
+  title: Query Examples
+- slug: hacks
+  title: Redash Hacks
+- slug: troubleshooting
+  title: Troubleshooting

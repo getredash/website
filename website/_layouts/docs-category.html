@@ -1,0 +1,62 @@
+---
+layout: default
+---
+
+<section class="section section--small bg-mutted">
+    <div class="container">
+      <ol class="breadcrumb">
+          <li><a href="/docs/">Home</a></li>
+          <li class="active">{{ page.title }}</li>
+      </ol>
+
+      <div class="row">
+        <div class="col-md-8 col-sm-7 push-xs-down">
+          <h1 class="h2 mt-0">{{ page.title }}</h1>
+      </div><!-- col -->
+
+      <div class="col-md-4 col-sm-5">
+          <form action="">
+            <div class="form-group form-group--search">
+              <input class="form-control input-lg form-control--white" type="text" placeholder="Search for...">
+          </div><!-- form-group -->
+      </form>
+  </div><!-- col -->
+</div><!-- row -->
+</div><!-- container -->
+</section><!-- section -->
+
+
+<section class="section">
+    <div class="container">
+      <div class="row row--flex">
+        <div class="col-md-8 col-sm-7 push-xs-down">
+          <p>
+            {{page.content}}
+          </p>
+
+          {% for article in site.docs %}
+            {% if article.category == page.category and article.layout != 'docs-category' %}
+              <ul class="topics__list list-unstyled">
+                <li class="topics__list__item">
+                  <a href="{{article.url}}" class="topics__list__link">
+                    <h4 class="topics__list__title">{{article.title}}</h4>
+                    <p>{{article.description}}</p>
+                </a>
+              </li><!-- topics__list__item -->
+            {% endif %}
+          {% endfor %}
+
+</ul><!-- topics__list -->
+</div><!-- col -->
+
+<div class="col-md-4 col-sm-5">
+  <div class="sticky-in-parent">
+    <div class="alert alert-brand text-center" role="alert">
+      <h5 class="alert__title alert__title--no-mb mb-20">Help us improve Redash docs</h5>
+      <a href="#" class="btn btn-brand">Contribute</a>
+  </div><!-- alert -->
+</div><!-- sticky-in-parent -->
+</div><!-- col -->
+</div><!-- row -->
+</div><!-- container -->
+</section><!-- section -->

@@ -1,0 +1,45 @@
+---
+layout: default
+title: Make Your Company Data Driven
+has_jumbo: true
+permalink: /docs/
+---
+  <section class="section bg-mutted">
+		<div class="container">
+      <h1 class="text-center">Knowledge Base</h1>
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+          <form action="">
+            <div class="form-group form-group--search">
+              <input class="form-control input-lg form-control--white" type="text" placeholder="Search for..."> </div><!-- form-group -->
+          </form>
+        </div><!-- col -->
+      </div><!-- row -->
+		</div><!-- container -->
+	</section><!-- section -->
+
+
+  <section class="section">
+		<div class="container">
+      <div class="topics topics--mb-xl">
+        <div class="row row--flex">
+
+        {% assign categories = (site.docs | sort: 'order', 'last' | where:'layout', 'docs-category') %}
+          {% for category in categories %}
+            <div class="col-sm-4">
+              <a href="{{category.url}}" class="topics__item">
+                {{category.title}}
+              </a><!-- topics__item -->
+            </div><!-- col -->
+          {% endfor %}
+        </div><!-- row -->
+      </div><!-- topics -->
+
+      <div class="alert alert-brand alert--flex text-center-xs" role="alert">
+        <h4 class="alert__title alert__title--no-mb">Help us improve Redash docs</h4>
+        <a href="#" class="btn btn-brand">Contribute</a>
+      </div><!-- alert -->
+		</div><!-- container -->
+	</section><!-- section -->
+
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
