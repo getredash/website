@@ -6,7 +6,7 @@ layout: default
         <div class="container">
       <ol class="breadcrumb">
         <li><a href="/docs/">Home</a></li>
-        <li><a href="/docs/{{page.category}}/">{% assign categoryTitle = (site.data.docs_categories | where:"slug", page.category) %}{{ categoryTitle[0].title }}</a></li>
+        <li><a href="/docs/{{page.category}}/">{% assign cat = (site.docs | where:"category", page.category | where:"layout", "docs-category") %}{{ cat[0].title }}</a></li>
         <li class="active">{{page.title}}</li>
       </ol>
 
@@ -30,30 +30,20 @@ layout: default
   <section class="section">
         <div class="container">
       <div class="row row--flex">
+      
+        {% if page.toc %}
         <div class="col-md-4 col-md-push-8 col-sm-5 col-sm-push-7 push-xs-down">
           <div class="sticky-in-parent">
             <div class="panel panel-default">
               <div class="panel-body">
                 <p class="text-uppercase mt-0"><b>QUICK NAV</b></p>
                 <hr class="hr--sm">
-                <ul class="panel-nav list-unstyled">
-                  <li><a href="#anchor-title-1" data-click="scroll-to-target">Anchor title 1</a></li>
-                  <li><a href="#anchor-title-2" data-click="scroll-to-target">Anchor title 2</a></li>
-                  <li><a href="#anchor-title-3" data-click="scroll-to-target">Anchor title 3</a></li>
-                  <li>
-                    <a href="#anchor-title-4" data-click="scroll-to-target">Anchor title 4</a>
-                    <ol>
-                      <li><a href="#anchor-title-5" data-click="scroll-to-target">Anchor title 5</a></li>
-                      <li><a href="#anchor-title-6" data-click="scroll-to-target">Anchor title 6</a></li>
-                      <li><a href="#anchor-title-7" data-click="scroll-to-target">Anchor title 7</a></li>
-                    </ol>
-                  </li>
-                  <li><a href="#anchor-title-8" data-click="scroll-to-target">Anchor title 8</a></li>
-                </ul><!-- list-unstyled -->
+                {{ content | toc_only }}
               </div><!-- panel-body -->
             </div><!-- panel -->
           </div><!-- sticky-in-parent -->
         </div><!-- col -->
+        {% endif %}
 
         <div class="col-md-8 col-md-pull-4 col-sm-7 col-sm-pull-5 underline-link-holder">
           {{page.content}}

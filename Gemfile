@@ -5,3 +5,4 @@ gem "jekyll"
 gem "jekyll-redirect-from"
 gem 'jekyll-sitemap'
 gem 'jekyll-last-modified-at'
+gem 'nokogiri'
