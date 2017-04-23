@@ -7,8 +7,8 @@ $(document).ready(function(){
 		});
 	}
 
+	$('[data-toggle="popover"]').popover({trigger: 'hover'});
 
-	$('[data-toggle="popover"]').popover({trigger: 'hover'})
 	//Slick carousel initial
 	$('#brands-carousel').slick({
 		infinite: true,
@@ -50,10 +50,14 @@ $(document).ready(function(){
 	$(window).scroll(function (event) {
     var scroll = $(window).scrollTop();
 		var headerHeight = 68;
-    $('.navbar').toggleClass('navbar-has-shadow',
-     //add 'ok' class when div position match or exceeds else remove the 'ok' class.
-      scroll >= $('#anchor').offset().top - headerHeight
-    );
+    var offset = $('#anchor').offset();
+
+    if (offset) {
+      $('.navbar').toggleClass('navbar-has-shadow',
+       //add 'ok' class when div position match or exceeds else remove the 'ok' class.
+        scroll >= offset.top - headerHeight
+      );
+    } 
 	});
 	//trigger the scroll
 	$(window).scroll();
@@ -73,11 +77,7 @@ $(document).ready(function(){
     });
   });
 
-  var form = document.getElementById('newsletterForm');
-  if (form) {
-    $(form).ajaxChimp({
-      url: 'https://redash.us1.list-manage.com/subscribe/post?u=a905176d2294593084d5264e5&id=53ca028761'
-    });
-  }
-
+  $('.newsletter-form').ajaxChimp({
+    url: 'https://redash.us1.list-manage.com/subscribe/post?u=a905176d2294593084d5264e5&id=53ca028761'
+  });
 });
