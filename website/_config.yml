@@ -14,6 +14,10 @@ collections:
     output: true
     permalink: /docs/:path/
 gems:
+  - algoliasearch-jekyll
   - jekyll-redirect-from
   - jekyll-last-modified-at
   - jekyll-sitemap
+algolia:
+  application_id: 'QFZW4KBIT0'
+  index_name:     'docs'

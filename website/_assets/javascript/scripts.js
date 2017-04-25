@@ -80,4 +80,21 @@ $(document).ready(function(){
   $('.newsletter-form').ajaxChimp({
     url: 'https://redash.us1.list-manage.com/subscribe/post?u=a905176d2294593084d5264e5&id=53ca028761'
   });
+
+});
+
+$(function() {
+  $('.search-box').on('keyup', function() {
+    const query = $(this).val();
+
+    if (query) {
+      // show results
+      $('.container.content').addClass('hidden');
+      $('.container.search-results').removeClass('hidden');
+      // actually search for it...
+    } else {
+      $('.container.content').removeClass('hidden');
+      $('.container.search-results').addClass('hidden');
+    }
+  })
 });

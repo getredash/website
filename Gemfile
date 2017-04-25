@@ -6,3 +6,7 @@ gem "jekyll-redirect-from"
 gem 'jekyll-sitemap'
 gem 'jekyll-last-modified-at'
 gem 'nokogiri'
+
+group :jekyll_plugins do
+    gem 'algoliasearch-jekyll'
+end

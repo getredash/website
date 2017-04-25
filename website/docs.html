@@ -11,7 +11,7 @@ permalink: /docs/
         <div class="col-sm-8 col-sm-offset-2">
           <form action="">
             <div class="form-group form-group--search">
-              <input class="form-control input-lg form-control--white" type="text" placeholder="Search for..."> </div><!-- form-group -->
+              <input class="form-control input-lg form-control--white search-box" type="text" placeholder="Search for..."> </div><!-- form-group -->
           </form>
         </div><!-- col -->
       </div><!-- row -->
@@ -20,10 +20,12 @@ permalink: /docs/
 
 
   <section class="section">
-		<div class="container">
+    <div class="container search-results hidden">
+    </div>
+
+		<div class="container content">
       <div class="topics topics--mb-xl">
         <div class="row row--flex">
-
         {% assign categories = (site.docs | sort: 'order', 'last' | where:'layout', 'docs-category') %}
           {% for category in categories %}
             <div class="col-sm-4">

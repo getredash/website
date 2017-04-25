@@ -162,7 +162,7 @@ gulp.task('build', [
 ]);
 
 gulp.task('watch', function () {
-  watch(['website/**/*.html', 'website/**/*.md', 'website/**/*.yml', '!_site/**/*.*'], function (event, cb) {
+  watch(['website/**/*.html', 'website/**/*.json', 'website/**/*.md', 'website/**/*.yml', '!_site/**/*.*'], function (event, cb) {
     gulp.start('jekyll:watch');
   });
 
