@@ -11,6 +11,7 @@ permalink: /docs/articles.json
         {
           "title"    : "{{ article.title }}",
           "url"     : "{{ article.url }}",
+          "slug"    : "{{ article.slug }}",
           "category"     : "{{ article.category }}",
           "date"     : "{{ article.date }}",
           "content"  : {{ article.content | jsonify }}
