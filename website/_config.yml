@@ -20,4 +20,6 @@ gems:
   - jekyll-sitemap
 algolia:
   application_id: 'QFZW4KBIT0'
+  search_key: '1c74ec31459a537e57b2c94a01d061b7'
   index_name:     'docs'
+  record_css_selector: 'p,ul,tr'

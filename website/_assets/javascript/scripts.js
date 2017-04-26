@@ -82,19 +82,3 @@ $(document).ready(function(){
   });
 
 });
-
-$(function() {
-  $('.search-box').on('keyup', function() {
-    const query = $(this).val();
-
-    if (query) {
-      // show results
-      $('.container.content').addClass('hidden');
-      $('.container.search-results').removeClass('hidden');
-      // actually search for it...
-    } else {
-      $('.container.content').removeClass('hidden');
-      $('.container.search-results').addClass('hidden');
-    }
-  })
-});
