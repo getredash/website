@@ -1,5 +1,4 @@
 $(document).ready(function(){
-
 	if ($(window).width() > 767) {
 		//Initial sticky-kit Source: http://leafo.net/sticky-kit/
 		$(".sticky-in-parent").stick_in_parent({
