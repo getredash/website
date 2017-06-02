@@ -8,10 +8,7 @@ From your Google Cloud Console, you need to create a service account and assign 
 1. Open the [Service accounts page](https://console.developers.google.com/permissions/serviceaccounts). If prompted, select a project.
 2. Click **Create service account**.
 3. In the Create service account window, type a name for the service account, and select Furnish a new private key. When prompted, select **JSON key file type**. Then click **Create**.
-
-> #### primary::
->
-> Note that when generating the key file, select the JSON type and later use it when setting > up the data source.
+4. When assigning a role to this service account, use the "BigQuery Admin" role. If you prefer to create a specific role for Redash, see below for a list of required permissions.
 
 From all the settings the mandatory ones are the key file and the Project ID.
 
