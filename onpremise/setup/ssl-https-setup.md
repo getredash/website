@@ -58,3 +58,13 @@ server {
   }
 }
 ```
+
+## option case: client --(https)--> ELB --(http)--> EC2
+
+Wehn your setup is client --(https)--> ELB --(http)--> EC2, in which case you need to add the following header to your nginx configuration:
+
+```
+proxy_set_header X-Forwarded-Proto $http_x_forwarded_proto;
+```
+
+Which will correctly set the forwarded protocol header to be https and then Flask will correctly create the URLs (this is the setup I use).
