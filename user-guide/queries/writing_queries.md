@@ -81,6 +81,8 @@ This is how an "action" parameter looks:
 
 ![](../assets/param_example.png)
 
+Parameters can be changed from dashboards. If you have a parameter that is shared between many queries then you can make a parmeter for a query "global" by clicking a checkbox in the parameter settings. Global parameters allow you to only need to update a shared value once for each of your queries in a dashboard.
+
 **Please note that you'll need to re-execute the query with the newly set parameter to get the desires results.**
 
 While parameters work in dashboards, they won't work when embedding visualizations outside of Redash.
