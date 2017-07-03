@@ -1,11 +1,11 @@
 - name: SoundCloud
   image: "/assets/images/user_soundcloud.jpg"
 - name: Cloudflare
-  image: "/assets/images/temp/cloudflare_logo.png"
+  image: "/assets/images/temp/cloudflare_logo.jpg"
 - name: Outbrain
   image: "/assets/images/temp/user_outbrain.jpg"
 - name: Nexar
-  image: "/assets/images/temp/user_nexar.jpg"
+  image: "/assets/images/temp/nexar_logo.jpg"
 - name: HealthJoy
   image: "/assets/images/temp/user_healthjoy.png"
 - name: Interlude
@@ -26,6 +26,8 @@
   image: "/assets/images/temp/user_ravello.jpg"
 - name: SiteBooster
   image: "/assets/images/temp/user_sitebooster.png"
+- name: Anyclip
+  image: "/assets/images/temp/user_anyclip_logo.png"
 - name: Bringg
   image: "/assets/images/temp/user_bringg.png"
 - name: Fundbox
