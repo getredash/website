@@ -2,6 +2,8 @@
   image: "/assets/images/user_soundcloud.jpg"
 - name: Cloudflare
   image: "/assets/images/temp/cloudflare_logo.jpg"
+- name: Sentry
+  image: "/assets/images/user_sentry.jpg"
 - name: Outbrain
   image: "/assets/images/temp/user_outbrain.jpg"
 - name: Nexar
