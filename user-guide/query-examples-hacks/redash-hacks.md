@@ -61,7 +61,7 @@ The results will be clickable links, like in this query in our demo account: htt
 
 You can also use the anchor tag to show a name instead of the URL:
 ```sql
-SELECT <a href="https://demo.redash.io/queries/' || id || '">' || name || '</a>' as name
+SELECT '<a href="https://demo.redash.io/queries/' || id || '">' || name || '</a>' as name
 ...
 ```
 
