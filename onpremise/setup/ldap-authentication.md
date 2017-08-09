@@ -35,4 +35,4 @@ FROM redash/redash:latest
 RUN pip install ldap3
 ```
 
-In your docker-compose file you will have to repalce `image: redash/redash:latest` to `build: .` assuming the custom Dockerfile is in the same directory.
+In your docker-compose file you will have to replace `image: redash/redash:latest` with `build: .` assuming the custom Dockerfile is in the same directory.
