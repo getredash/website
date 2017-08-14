@@ -56,3 +56,20 @@ In v2.0.0 we fixed the upgrade script to use the correct command.
 The upgrade process updates the code, applies migrations and upgrade Python requirements. But it does not upgrade Python requirements for the data sources (described in `/opt/redash/current/requirements_all_ds.txt`). 
 
 In some cases, old packages will prevent the data source from loading. Make sure to manually update the requirements relevant to the data sources you need.
+
+#### I don't see BigQuery in the data sources list after upgrading to v2.0.0
+
+You need to upgrade the following Python packages:
+
+```
+google-api-python-client==1.5.1
+oauth2client==3.0.0
+```
+
+(`sudo pip install -U google-api-python-client==1.5.1oauth2client==3.0.0`)
+
+#### I don't see Athena in the data sources list after upgrading to v2.0.0
+
+Make sure to install PyAthena:
+
+`sudo pip install PyAthena>=1.0.0`
