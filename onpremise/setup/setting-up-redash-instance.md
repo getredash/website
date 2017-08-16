@@ -35,7 +35,7 @@ Now proceed to “[Setup](#setup-redash-instance-setup)”.
 First, you need to add the images to your account:
 
 ```
-$ gcloud compute images create "redash-1-0-1" --source-uri gs://redash-images/redash.2.0.0.b2990.tar.gz
+$ gcloud compute images create "redash-2-0-0" --source-uri gs://redash-images/redash.2.0.0.b2990.tar.gz
 
 ```
 
