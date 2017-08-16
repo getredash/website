@@ -12,19 +12,19 @@ Launch the instance with from the pre-baked AMI (for small deployments t2.small 
 
 | Region | AMI |
 | ------------- | -------------|
-| us-east-1 | [ami-9ea12788](https://console.aws.amazon.com/ec2/home?region=us-east-1#LaunchInstanceWizard:ami=ami-9ea12788) |
-| us-west-1 | [ami-1a441e7a](https://console.aws.amazon.com/ec2/home?region=us-west-1#LaunchInstanceWizard:ami=ami-1a441e7a) |
-| us-west-2 | [ami-7530a715](https://console.aws.amazon.com/ec2/home?region=us-west-2#LaunchInstanceWizard:ami=ami-7530a715) |
-| eu-west-1 | [ami-b37a43d5](https://console.aws.amazon.com/ec2/home?region=eu-west-1#LaunchInstanceWizard:ami=ami-b37a43d5) |
-| eu-central-1 | [ami-0f2bfb60](https://console.aws.amazon.com/ec2/home?region=eu-central-1#LaunchInstanceWizard:ami=ami-0f2bfb60) |
-| sa-east-1 | [ami-e85e3d84](https://console.aws.amazon.com/ec2/home?region=sa-east-1#LaunchInstanceWizard:ami=ami-e85e3d84) |
-| ap-south-1 | [ami-47403328](https://console.aws.amazon.com/ec2/home?region=ap-south-1#LaunchInstanceWizard:ami=ami-47403328) |
-| ap-northeast-1 | [ami-34cfe853](https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#LaunchInstanceWizard:ami=ami-34cfe853) |
-| ap-northeast-2 | [ami-9f9745f1](https://console.aws.amazon.com/ec2/home?region=ap-northeast-2#LaunchInstanceWizard:ami=ami-9f9745f1) |
-| ap-southeast-2 | [ami-90aea1f3](https://console.aws.amazon.com/ec2/home?region=ap-southeast-2#LaunchInstanceWizard:ami=ami-90aea1f3) |
-| ap-southeast-1 | [ami-d9902fba](https://console.aws.amazon.com/ec2/home?region=ap-southeast-1#LaunchInstanceWizard:ami=ami-d9902fba) |
+| us-east-1 | [ami-2d3c0a56](https://console.aws.amazon.com/ec2/home?region=us-east-1#LaunchInstanceWizard:ami=ami-2d3c0a56) |
+| us-west-1 | [ami-5a1d373a](https://console.aws.amazon.com/ec2/home?region=us-west-1#LaunchInstanceWizard:ami=ami-5a1d373a) |
+| us-west-2 | [ami-2325c85b](https://console.aws.amazon.com/ec2/home?region=us-west-2#LaunchInstanceWizard:ami=ami-2325c85b) |
+| eu-west-1 | [ami-6abd4013](https://console.aws.amazon.com/ec2/home?region=eu-west-1#LaunchInstanceWizard:ami=ami-6abd4013) |
+| eu-central-1 | [ami-13cd657c](https://console.aws.amazon.com/ec2/home?region=eu-central-1#LaunchInstanceWizard:ami=ami-13cd657c) |
+| sa-east-1 | [ami-1695e47a](https://console.aws.amazon.com/ec2/home?region=sa-east-1#LaunchInstanceWizard:ami=ami-1695e47a) |
+| ap-south-1 | [ami-29daa046](https://console.aws.amazon.com/ec2/home?region=ap-south-1#LaunchInstanceWizard:ami=ami-29daa046) |
+| ap-northeast-1 | [ami-fde8199b](https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#LaunchInstanceWizard:ami=ami-fde8199b) |
+| ap-northeast-2 | [ami-0fba6261](https://console.aws.amazon.com/ec2/home?region=ap-northeast-2#LaunchInstanceWizard:ami=ami-0fba6261) |
+| ap-southeast-2 | [ami-4a879f29](https://console.aws.amazon.com/ec2/home?region=ap-southeast-2#LaunchInstanceWizard:ami=ami-4a879f29) |
+| ap-southeast-1 | [ami-0dc2a76e](https://console.aws.amazon.com/ec2/home?region=ap-southeast-1#LaunchInstanceWizard:ami=ami-0dc2a76e) |
 
-(the above AMIs are of version: 1.0.1)
+(the above AMIs are of version: 2.0.0)
 
 When launching the instance make sure to use a security group, that only allows incoming traffic on: port 22 (SSH), 80 (HTTP) and 443 (HTTPS). These AMIs are based on Ubuntu so you will need to use the user `ubuntu` when connecting to the instance via SSH.
 
@@ -35,7 +35,7 @@ Now proceed to “[Setup](#setup-redash-instance-setup)”.
 First, you need to add the images to your account:
 
 ```
-$ gcloud compute images create "redash-1-0-1" --source-uri gs://redash-images/redash.1.0.1.b2833.tar.gz
+$ gcloud compute images create "redash-1-0-1" --source-uri gs://redash-images/redash.2.0.0.b2990.tar.gz
 
 ```
 
@@ -72,6 +72,10 @@ Download the [provisioning script](https://raw.githubusercontent.com/getredash/r
 Once you created the instance with either the image or the script, you should have a running Redash instance with everything you need to get started. Redash should be available using the server IP or DNS name you assigned to it. You can point your browser to this address. 
 
 Before you can continue, it will ask you to create your admin account. Once this is done, you can start using Redash. But to make it useful, there are a few more steps that you need to manually do to complete the setup:
+
+> #### warning::
+>
+> Make sure to complete the web based setup before using the CLI or proceeding with the rest of the setup.
 
 First ssh to your instance and change directory to `/opt/redash`. If you’re using the GCE image, switch to root (`sudo su`).
 
