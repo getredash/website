@@ -12,15 +12,24 @@ default is [urn:oasis:names:tc:SAML:2.0:nameid-format:transient](urn:oasis:names
 If you want to specify entityid in AuthnRequest, add REDASH_SAML_ENTITY_ID config value, eg [http://demo.redash.io/saml/callback](http://demo.redash.io/saml/callback)
 
 On the SAML provider side, example configuration for OneLogin is:
+
 SAML Consumer URL: [http://demo.redash.io/saml/login](http://demo.redash.io/saml/login)
+
 SAML Audience: [http://demo.redash.io/saml/callback](http://demo.redash.io/saml/callback)
+
 SAML Recipient: [http://demo.redash.io/saml/callback](http://demo.redash.io/saml/callback)
 
-Example configuration for Okta is: Single Sign On URL: [http://demo.redash.io/saml/callback](http://demo.redash.io/saml/callback)
+Example configuration for Okta is:
+
+Single Sign On URL: [http://demo.redash.io/saml/callback](http://demo.redash.io/saml/callback)
+
 Recipient URL: [http://demo.redash.io/saml/callback](http://demo.redash.io/saml/callback)
+
 Destination URL: [http://demo.redash.io/saml/callback](http://demo.redash.io/saml/callback)
 
 with parameters ‘FirstName’ and ‘LastName’, both configured to be included in the SAML assertion.
+
+![alt text](https://raw.githubusercontent.com/yershalom/website/master/assets/screenshots/Redash_okta_settings.png "Example Okta Settings")
 
 ## Authorization
 
