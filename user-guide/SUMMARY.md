@@ -76,7 +76,7 @@
 ## Query Examples
 * [Cohort Query Example](query-examples-hacks/cohort-example.md)
 * [DAU, WAU, MAU example](query-examples-hacks/dau-wau-mau-example.md)
-* [Funnel Queries - Sankey and Sunbusrt Visualizations](query-examples-hacks/sunbusrt-sankey-example.md)
+* [Funnel Queries - Sankey and Sunburst Visualizations](query-examples-hacks/sunburst-sankey-example.md)
 * [Link Query Results to Filtered Dashboards](query-examples-hacks/query-results-lead-to-filtered-dashboard.md)
 
 ## Redash Hacks
