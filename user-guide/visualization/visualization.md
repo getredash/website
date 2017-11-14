@@ -57,7 +57,7 @@ Visualization types:
 
 ## How to Embed Visualizations? {#embed_viz}
 
-Redash allows your to embed visualization that will update every time the query they belong to will run (amazing!).
+Redash allows you to embed visualization that will update every time the query they belong to will run (amazing!).
 
 ![](../assets/embed_viz.png)
 
