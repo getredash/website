@@ -1,8 +1,20 @@
-# **How to Upgrade Redash**
+# How to Upgrade Redash
 
 It's recommended to upgrade your Redash instance once there are new releases, to benefit from new features and bug fixes. The upgrade process is relatively simple, and assuming you used one of the base images we provide, you can simply run the upgrade script. **If you have a custom deployment, you can use the upgrade script as reference to create your own process**.
 
-## **How to upgrade -- pre v1.0.0 versions**
+## How to upgrade (v1.0.0 and newer)
+
+Starting from v1.0.0, the upgrade script is part of the codebase, and running the script is as simple as:
+
+```bash
+cd /opt/redash/current
+sudo bin/upgrade
+```
+### Docker
+
+If you're using Docker to run Redash, don't use the upgrade script, but rather update the Docker image you're using.
+
+## How to upgrade (pre v1.0.0 versions)
 
 In v1.0.0 we added the script to the repository, but if you have an earlier version, you will need to download the script first (**note that you need to download it to your Redash server**):
 
@@ -25,19 +37,6 @@ Before doing the upgrade, please make sure to do the following changes to your `
 > #### warning::
 >
 > You can upgrade to v1.0.0 and later only from v0.12.0, so if you have an older version, run: sudo upgrade --channel legacy first and then sudo upgrade.
-
-## **How to upgrade -- v1.0.0 and newer**
-
-Starting from v1.0.0, the upgrade script is part of the codebase, and running the script is as simple as:
-
-```bash
-cd /opt/redash/current
-sudo bin/upgrade
-```
-
-## Docker
-
-If you're using Docker to run Redash, don't use the upgrade script, but rather update the Docker image you're using.
 
 ## Troubleshooting
 
@@ -73,3 +72,7 @@ oauth2client==3.0.0
 Make sure to install PyAthena:
 
 `sudo pip install PyAthena>=1.0.0`
+
+### Getting "AttributeError: 'module' object has no attribute 'SSL_ST_INIT'" error during upgrade
+
+Make sure to upgrade the PyOpenSSL package (see the version specified in `requirements_all_ds.txt`).

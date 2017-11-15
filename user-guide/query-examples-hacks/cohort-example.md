@@ -56,7 +56,7 @@ Here is an example for a cohort query in PostgreSQL, step by step:
 
       ```sql
       SELECT activity.cohort_date AS DATE,
-          date_part('day',age(activity_date, activity.cohort_date)) AS day,
+          date_part('day',age(activity_date, activity.cohort_date)) AS day_number,
           COUNT(distinct unique_id) AS value,
           total
       FROM activity
