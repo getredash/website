@@ -1,8 +1,10 @@
 # LDAP/AD Authentication
 
-## Authentication
+Starting from Redash v3, there is direct support for LDAP/AD authentication. To set it up you will need to install the `ldap3` Python package (version `2.2.4`, GPL licensed) and add the relevant configuration values (see below). Once you done both, you need to restart the application service.
 
-Add these to your .env/docker-compose file:
+## Configuration
+
+Add the following to your environment variables (`.env` file or Docker configuration):
 
 * `REDASH_LDAP_LOGIN_ENABLED`: When `true` LDAP login will be enabled at `ldap/login` endpoint. **[Required]**
 	* If `REDASH_PASSWORD_LOGIN_ENABLED` is `false`, users will be prevented from logging in to Redash using Redash's authentication and will instead automatically be redirected to the LDAP login endpoint.
@@ -21,10 +23,6 @@ Add these to your .env/docker-compose file:
 	* `%(username)s` is the username entered in the ldap login page
 * `REDASH_SEARCH_DN`: The search DN to bind to. Ex. `"cn=users,dc=ORG,dc=local"` **[Required]**
 
-## Requirements
-
-LDAP authentication requires an additional package ldap3==2.2.4. This is not included in Redash by default because of a GPL license conflict. 
-
 ## Docker
 
 If using LDAP in a docker setup, then you will have to create a custom image (https://github.com/getredash/redash/pull/1836#issuecomment-321331014):
@@ -35,4 +33,4 @@ FROM redash/redash:latest
 RUN pip install ldap3
 ```
 
-In your docker-compose file you will have to replace `image: redash/redash:latest` with `build: .` assuming the custom Dockerfile is in the same directory.
+If you're using Docker Compose to run Redash, you can replace replace `image: redash/redash:latest` with `build: .` assuming the custom Dockerfile is in the same directory.
