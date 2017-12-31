@@ -82,5 +82,5 @@ which will auto reload and refresh whenever you make changes to the frontend cod
 Currently we currently have tests only for the backend code. To run them invoke:
 
 ```bash
-make test
+pytest tests/
 ```
