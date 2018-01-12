@@ -19,7 +19,7 @@ For SQL databases just use the native syntax for that database.
 
 For NoSQL languages Redash has a few nuances:
 
-* [Querying ElasticSearch](querying_elasticsearch.md)
+* [Querying Elasticsearch](querying_elasticsearch.md)
 * [Querying JIRA (JQL)](querying_jira_jql.md)
 * [Querying MongoDB](querying_mongodb.md)
 

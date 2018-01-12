@@ -23,7 +23,7 @@
 ## Querying
 * [How to Create a New Query?](queries/query_actions.md#how_to_create_a_query)
 * [How to Write a Query?](queries/writing_queries.md#how_to_write_a_query)
-* [Querying ElasticSearch](queries/querying_elasticsearch.md)
+* [Querying Elasticsearch](queries/querying_elasticsearch.md)
 * [Querying JIRA (JQL)](queries/querying_jira_jql.md)
 * [Querying MongoDB](queries/querying_mongodb.md)
 * [Shortcuts](queries/writing_queries.md#shortcuts)

@@ -72,9 +72,9 @@ If one of the listed data source types isn’t available when trying to create a
 
 For information on how to write MongoDB queries, see [_documentation_](https://redash.io/help/queries/querying_mongodb.html).
 
-## ElasticSearch
+## Elasticsearch
 
-For information on how to write ElasticSearch queries, see [_documentation_](https://redash.io/help/queries/querying_elasticsearch.html).
+For information on how to write Elasticsearch queries, see [_documentation_](https://redash.io/help/queries/querying_elasticsearch.html).
 
 ## InfluxDB
 
