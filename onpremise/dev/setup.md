@@ -19,7 +19,7 @@ You install them with pip:
 pip install -r requirements.txt -r requirements_dev.txt
 ```
 
-(We recommend installing them in a virtualenv)
+(We recommend installing them in a virtualenv. For using some data source types, you need to install additional dependencies from requirements_all_ds.txt.)
 
 ### Node.js Packages
 
