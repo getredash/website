@@ -1,10 +1,10 @@
 ---
-description: Connect ElasticSearch to Redash easily and query, visualize and share it in moments.
+description: Connect Elasticsearch to Redash easily and query, visualize and share it in moments.
 ---
 
-# Querying ElasticSearch
+# Querying Elasticsearch
 
-We support two flavors of ElasticSearch queries, Lucene/string style queries (like Kibana) and the more elaborate JSON based queries. For the first one create a data source of type `Kibana` and for the later create data source of type `ElasticSearch`.
+We support two flavors of Elasticsearch queries, Lucene/string style queries (like Kibana) and the more elaborate JSON based queries. For the first one create a data source of type `Kibana` and for the later create data source of type `Elasticsearch`.
 
 ## String query example:
 
@@ -25,7 +25,7 @@ We support two flavors of ElasticSearch queries, Lucene/string style queries (li
 }
 ```
 
-## Simple query on a logstash ElasticSearch instance:
+## Simple query on a logstash Elasticsearch instance:
 
 * Query the index named “logstash-2015.04.* (in this case its all of April 2015)
 * Filter by type:events AND eventName:UserUpgrade AND channel:selfserve
@@ -44,7 +44,7 @@ We support two flavors of ElasticSearch queries, Lucene/string style queries (li
 }
 ```
 
-## JSON document query on a ElasticSearch instance:
+## JSON document query on a Elasticsearch instance:
 
 * Query the index named “twitter”
 * Filter by user equal “kimchy”

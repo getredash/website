@@ -38,7 +38,7 @@ Redash plays nice with all data sources!
 * Axibase Time Series Database
 * BigQuery
 * Cassandra
-* ElasticSearch
+* Elasticsearch
 * JIRA
 * JSON
 * Google Analytics
