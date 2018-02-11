@@ -13,7 +13,7 @@
 /help/queries/querying_mongodb.html http://help.redash.io/article/113-querying-mongodb
 /help/queries/using-datasets-as-data-sources.html http://help.redash.io/article/152-query-results-data-source
 /help/queries/query-google-spreadsheets.html http://help.redash.io/article/114-querying-a-goog
-/data-sources/google-analytics.html http://help.redash.io/article/117-querying-goog
+/help/data-sources/google-analytics.html http://help.redash.io/article/117-querying-goog
 /help/queries/query-url.html http://help.redash.io/article/118-querying-urls
 /help/visualization/visualization.html http://help.redash.io/category/24-visualizations
 /help/dashboards/dashboards.html http://help.redash.io/category/22-dashboards
