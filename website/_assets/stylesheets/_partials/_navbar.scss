@@ -6,17 +6,17 @@ $navbar-height: 68px;
 $navbar-fs: 15px;
 
 .navbar {
-  background: $navbar-bg;
   border-radius: 0;
   margin-bottom: 0;
   border: none;
   min-height: $navbar-height;
-  box-shadow: 0px 0px 3px 0px rgba($black, .5);
+  background: #fff;
+
   &.navbar-without-shadow {
     box-shadow: none;
   }
   &.navbar-has-shadow {
-    box-shadow: 0px 0px 3px 0px rgba($black, .5) !important;
+    box-shadow: 0px 0px 10px -3px rgba($black, .25) !important;
   }
 }
 
