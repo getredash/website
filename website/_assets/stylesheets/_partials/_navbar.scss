@@ -1,9 +1,9 @@
 /* NAVBAR */
 
 $navbar-bg: $hoki;
-$navbar-color: $legaloblolly;
+$navbar-color: $black;
 $navbar-height: 68px;
-$navbar-fs: 15px;
+$navbar-fs: 13px;
 
 .navbar {
   border-radius: 0;
@@ -24,26 +24,24 @@ $navbar-fs: 15px;
   &.navbar-right {
     margin-right: 0;
   }
-  >li {
+  > li {
     &.active {
-        >a {
-            color: $white;
-            &:hover, &:focus {
-                background: transparent;
-                color: $white;
-            }
+      > a {
+
+        &:hover, &:focus {
+          background: transparent;
+
         }
+      }
     }
-    >a {
+    > a {
       font-size: $navbar-fs;
       color: $navbar-color;
-      font-family: $font-medium;
       @include respond-to(xs-min) {
         padding: 24px 25px;
       }
       &:hover, &:focus {
-          background: transparent;
-          color: $white;
+        background: transparent;
       }
     }
   }
@@ -61,14 +59,17 @@ $navbar-fs: 15px;
     margin-left: 15px;
   }
 }
+
 .navbar-brand {
   width: 130px;
   height: auto;
   padding: 7.5px 15px;
 }
+
 .navbar-brand__img {
   width: 100%;
 }
+
 .navbar-toggle {
   margin-top: 17px;
   margin-bottom: 17px;
