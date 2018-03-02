@@ -38,7 +38,7 @@ $navbar-fs: 13px;
       font-size: $navbar-fs;
       color: $navbar-color;
       @include respond-to(xs-min) {
-        padding: 24px 25px;
+        padding: 24px 12px;
       }
       &:hover, &:focus {
         background: transparent;
@@ -49,6 +49,7 @@ $navbar-fs: 13px;
 
 .navbar-btn {
   color: white !important;
+  font-weight: 500;
 
   @include respond-to(xs-min) {
     margin-top: 17px;
@@ -61,13 +62,13 @@ $navbar-fs: 13px;
 }
 
 .navbar-brand {
-  width: 130px;
   height: auto;
-  padding: 7.5px 15px;
+  padding: 15px;
 }
 
 .navbar-brand__img {
-  width: 100%;
+  width: 36px;
+  height: 36px;
 }
 
 .navbar-toggle {
