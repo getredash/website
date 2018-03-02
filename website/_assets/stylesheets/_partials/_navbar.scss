@@ -3,7 +3,7 @@
 $navbar-bg: $hoki;
 $navbar-color: $black;
 $navbar-height: 68px;
-$navbar-fs: 13px;
+$navbar-fs: 14px;
 
 .navbar {
   border-radius: 0;
@@ -36,6 +36,7 @@ $navbar-fs: 13px;
     }
     > a {
       font-size: $navbar-fs;
+      font-weight: 500;
       color: $navbar-color;
       @include respond-to(xs-min) {
         padding: 24px 12px;

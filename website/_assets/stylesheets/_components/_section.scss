@@ -32,13 +32,16 @@
   }
 }
 
+
+
+.section--users {
+  padding: 25px 0;
+}
+
 .section--hero {
   padding: 25px 0 125px;
 
   h1 {
-    color: $black;
-    font-weight: 500;
-    font-size: 36px;
     margin: 50px 0 25px;
   }
 
@@ -59,6 +62,7 @@
   .btn {
     font-size: 16px;
     margin-top: 25px;
+    padding: 10px 25px;
   }
 }
 

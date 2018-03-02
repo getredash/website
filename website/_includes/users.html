@@ -1,15 +1,13 @@
-<section class="section section--small bg-mutted-soft" id="anchor">
+<section class="section section--users bg-mutted-soft" id="anchor">
     <div class="container">
-        <h3 class="text-center mb-lg">Join the 1000s of teams already using Redash.</h3>
-        <div id="brands-carousel" class="text-center">
-            {% for user in site.data.users %}
-            <div>
-                <div class="carousel__logo-holder">
-                    <img src="{{user.image}}" class="carousel__logo" alt="">
-                </div><!-- carousel__logo-holder -->
-                <p class="carousel__title">{{user.name}}</p>
+        <div class="row">
+            <div class="col-md-7">
+                <img src="/assets/images/elements/users-list.png" width="528px">
             </div>
-            {% endfor %}
-        </div><!-- brands-carousel -->
+            <div class="col-md-5">
+                <h4 class="">Thousands of teams from 125 countries are already using Redash</h4>
+            </div>
+        </div>
+
     </div><!-- container -->
 </section><!-- section -->
