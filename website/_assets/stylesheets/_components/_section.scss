@@ -33,7 +33,38 @@
 }
 
 .section--hero {
-  padding: 0px 0px 35px 0;
+  padding: 25px 0 125px;
+
+  h1 {
+    color: $black;
+    font-weight: 500;
+    font-size: 36px;
+    margin: 50px 0 25px;
+  }
+
+  h3 {
+    color: #333333;
+    font-size: 18px;
+    font-weight: 400;
+    width: 88%;
+    line-height: 1.5;
+  }
+
+  p {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #333;
+  }
+
+  .btn {
+    font-size: 16px;
+    margin-top: 25px;
+  }
+}
+
+.browser-image {
+  margin-top: 25px;
+  box-shadow: 0 6px 18px -5px rgba(175,175,175,0.50);
 }
 
 .section--has-triangle {
