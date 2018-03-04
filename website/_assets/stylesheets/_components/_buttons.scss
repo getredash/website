@@ -78,3 +78,21 @@
     padding-bottom: 11px;
   }
 }
+
+.btn-secondary {
+  background: #FFFFFF;
+  border: 1px solid rgba(33,150,243,0.20);
+  box-shadow: 0 6px 13px -6px rgba(33,150,243,0.25);
+  border-radius: 2px;
+  font-weight: 500;
+  font-size: 13px;
+  color: #2196F3;
+  text-align: center;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border: 1px solid rgba(33,150,243,0.40);
+    box-shadow: 0 6px 17px -3px rgba(33,150,243,0.20);
+    color: #2196F3;
+  }
+}
