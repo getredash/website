@@ -91,6 +91,16 @@
 }
 
 
+.section__open-source {
+  p {
+    font-size: 18px;
+    color: #707070;
+    letter-spacing: 0;
+    line-height: 30px;
+    margin: 30px 0;
+  }
+}
+
 .section__feature {
   padding-bottom: 0;
 
@@ -145,15 +155,37 @@
     border: 1px solid rgba(102,136,153,0.18);
     box-shadow: 0 5px 9px -1px #EBF2FF;
     border-radius: 3px;
-    width: 25%;
+    width: 29%;
     float: left;
     text-align: center;
-    margin-right: 25px;
+    margin: 0 15px;
   }
 
   h4 {
     font-size: 18px;
     font-weight: 600;
-    margin: 25px 0;
+    margin: 10px 0 25px 0;
   }
+}
+
+.integrations-container {
+  padding: 50px;
+  box-shadow: 0 8px 25px 0 rgba(155,155,155,0.15);
+  border-radius: 3px;
+
+  h2 {
+    margin: 0 0 25px;
+  }
+
+  img {
+    margin-right: 50px;
+  }
+
+  p {
+    font-size: 18px;
+    color: #707070;
+    letter-spacing: 0;
+    line-height: 30px;
+  }
+
 }
