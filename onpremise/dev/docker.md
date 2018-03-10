@@ -10,6 +10,14 @@ which we will run locally.
 
 ## Setup
 
+### Prepare The Source code
+Firstly, you need to setup the source code directory from the official repository.
+
+```bash
+git clone git@github.com:getredash/redash.git
+cd redash/
+```
+
 ### Create Docker Services
 Once you have the above setup, you need to create the Docker services:
 
