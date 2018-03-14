@@ -13,11 +13,11 @@
 - name: Company
   links:
     - name: About
-      url: /help/
+      url: /about/
     - name: Blog
       url: https://blog.redash.io/
     - name: Community
-      url: /community.html
+      url: /community/
     #    - name: Terms of Service
     #      url: /terms.html
     #    - name: Privacy Policy
