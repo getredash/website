@@ -160,10 +160,11 @@
 
 
 
+#customers-illustrated {
+  width: 75%;
+}
 
-
-
-#customers-illustrated, #open-source-illustrated  {
+#open-source-illustrated  {
   width: 100%;
 }
 
@@ -199,6 +200,10 @@
 @media (max-width: 1200px) {
   .section {
     padding: 50px 0;
+  }
+
+  #customers-illustrated {
+    width: 100%;
   }
 
   .section--users {
