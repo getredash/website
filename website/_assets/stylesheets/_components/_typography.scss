@@ -166,7 +166,23 @@ hr {
 	}
 }
 
+.highlight-p {
+	font-size: 18px;
+	color: #707070;
+	letter-spacing: 0;
+	line-height: 30px;
+}
 
+.highlight-ul {
+	list-style-image: url('/assets/images/elements/check.svg');
+	padding-left: 25px;
+	line-height: 30px;
+
+	li {
+		color: #333;
+		font-size: 18px;
+	}
+}
 
 /*Font classes*/
 .font-light {

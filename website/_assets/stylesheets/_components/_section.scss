@@ -70,34 +70,8 @@
   box-shadow: 0 6px 18px -5px rgba(175,175,175,0.50);
 }
 
-.section--has-triangle {
-  &:after {
-    z-index: 20;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 22px 22px 0px 22px;
-    border-color: transparent transparent transparent transparent;
-    content: '';
-    position: absolute;
-    bottom: -22px;
-    left: 50%;
-    margin-left: -22px;
-  }
-}
-.section--has-triangle-gray {
-  &:after {
-    border-color: $gray transparent transparent transparent;
-  }
-}
-
-
 .section__open-source {
   p {
-    font-size: 18px;
-    color: #707070;
-    letter-spacing: 0;
-    line-height: 30px;
     margin: 30px 0;
   }
 }
@@ -113,22 +87,8 @@
   }
 
   p {
-    font-size: 18px;
-    color: #707070;
     margin: 0 0 25px 0;
     width: 75%;
-    line-height: 30px;
-  }
-
-  ul {
-    list-style-image: url('/assets/images/elements/check.svg');
-    padding-left: 25px;
-    line-height: 30px;
-  }
-
-  ul li {
-    color: #333;
-    font-size: 18px;
   }
 }
 
@@ -174,10 +134,10 @@
 .section__integrations {
   p {
     margin-bottom: 70px;
-    font-size: 18px;
-    color: #707070;
-    letter-spacing: 0;
-    line-height: 30px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 
   .integrations-container {
@@ -194,6 +154,14 @@
     }
   }
 }
+
+
+
+
+
+
+
+
 
 #customers-illustrated, #open-source-illustrated  {
   width: 100%;
@@ -213,9 +181,19 @@
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 // Optimization
-
-
 
 /* Large devices (large desktops, 1200px and down) */
 @media (max-width: 1200px) {
@@ -255,7 +233,7 @@
 }
 
 /* Medium devices (desktops, 992px and down) */
-@media (max-width: 992px) {
+@media (min-width: 768px) and (max-width: 992px) {
   .section--hero h1 {
     margin-top: 0;
   }
@@ -296,6 +274,11 @@
       margin-bottom: 0;
     }
   }
+
+  .highlight-p, .highlight-ul li {
+    font-size: 16px;
+    line-height: 1.5;
+  }
 }
 
 /* Small devices (tablets, 768px and down) */
@@ -323,9 +306,53 @@
     .col-sm-2 {
       text-align: center;
     }
+
+    h3 {
+      line-height: 1.5;
+    }
   }
 
   .footer__list--social {
     margin-top: 0;
+  }
+
+  .section__more-features .feature-container {
+    margin: 0 5px;
+    padding: 7px;
+    width: 28%;
+
+    img {
+      width: 64px;
+    }
+
+    h4 {
+      font-size: 13px;
+      font-weight: 500;
+    }
+  }
+
+  .section--hero h1 {
+    margin-top: 0;
+  }
+
+  .section__feature p {
+    width: 100%;
+  }
+
+  #visualize-illustrated, #write-query-illustrated {
+    width: 50%;
+  }
+  
+  .section--users {
+    text-align: center;
+  }
+
+  .highlight-p, .highlight-ul li {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .footer__item--other {
+    clear: both;
   }
 }
