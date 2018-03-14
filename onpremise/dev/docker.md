@@ -77,8 +77,8 @@ If you pulled a new version with new packages or added some yourself, you will n
 rebuild the `server` and `worker` images:
 
 ```bash
-docker-compose rebuild worker
-docker-compose rebuild server
+docker-compose build worker
+docker-compose build server
 ```
 
 ### Running Tests
