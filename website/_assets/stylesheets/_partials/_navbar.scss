@@ -6,6 +6,12 @@ $navbar-height: 68px;
 $navbar-fs: 14px;
 
 .navbar {
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
   border-radius: 0;
   margin-bottom: 0;
   border: none;
@@ -77,5 +83,18 @@ $navbar-fs: 14px;
   margin-bottom: 17px;
   .icon-bar {
     background: $white;
+  }
+}
+
+// Mobile
+
+.navbar-toggle .icon-bar {
+  background: $primary;
+}
+
+@media (max-width: 767px) {
+  .navbar-collapse {
+    background: #f8fafa;
+    padding-bottom: 10px;
   }
 }

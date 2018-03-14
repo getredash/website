@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             {% for category in site.data.footer_links %}
-            <div class="col-lg-2 col-md-2 col-sm-3 footer__item">
+            <div class="col-xs-4 col-md-2 col-sm-3 footer__item">
                 <h3 class="footer__title">{{category.name}}</h3>
                 <ul class="footer__list">
                     {% for link in category.links %}
@@ -27,8 +27,8 @@
                         </a>
                     </li>
                 </ul><!-- footer__list -->
-                <a data-track="" data-track-location="footer" href="/features/" class="footer__list-link">Terms</a>
-                <a data-track="" data-track-location="footer" href="/features/" class="footer__list-link">Privacy Policy</a>
+                <a data-track="" data-track-location="footer" href="/terms.html" class="footer__list-link">Terms</a>
+                <a data-track="" data-track-location="footer" href="/privacy.html" class="footer__list-link">Privacy Policy</a>
             </div><!-- col -->
         </div><!-- row -->
     </div><!-- container -->
