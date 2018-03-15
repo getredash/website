@@ -5,7 +5,8 @@ layout: docs
 <section class="section section--small bg-mutted">
   <div class="container">
     <ol class="breadcrumb">
-      <li><a href="/docs/">Home</a></li>
+      <li><a href="/help/">Home</a></li>
+      <li>{{site.data.usage_collections[page.parent_category]}}</li>
       <li class="active">{{ page.title }}</li>
     </ol>
 
@@ -40,9 +41,9 @@ layout: docs
         {% endif %}
 
         <ul class="topics__list list-unstyled">
-          {% assign articles = (site.docs | sort: 'order', 'last') %}
+          {% assign articles = (site.usage | sort: 'order', 'last') %}
           {% for article in articles %}
-          {% if article.category == page.category and article.layout != 'docs-category' %}
+          {% if article.categories contains page.category and article.layout != 'docs-category' and article.parent_category == page.parent_category %}
           <li class="topics__list__item">
             <a href="{{article.url}}" class="topics__list__link">
               <h4 class="topics__list__title">{{article.title}}</h4>

@@ -2,7 +2,7 @@
 layout: docs
 title: Make Your Company Data Driven
 has_jumbo: true
-permalink: /docs/
+permalink: /help/
 ---
   <section class="section bg-mutted">
 		<div class="container">
@@ -24,9 +24,11 @@ permalink: /docs/
     </div>
 
 		<div class="container content">
+      {% for parent_category in site.data.usage_collections %}
+      <h3>{{parent_category[1]}}</h3>
       <div class="topics topics--mb-xl">
         <div class="row row--flex">
-        {% assign categories = (site.docs | sort: 'order', 'last' | where:'layout', 'docs-category') %}
+        {% assign categories = (site.usage | sort: 'order', 'last' | where:'layout', 'docs-category' | where:'parent_category', parent_category[0]) %}
           {% for category in categories %}
             <div class="col-sm-4">
               <a href="{{category.url}}" class="topics__item">
@@ -36,6 +38,7 @@ permalink: /docs/
           {% endfor %}
         </div><!-- row -->
       </div><!-- topics -->
+      {% endfor %}
 
       <div class="alert alert-brand alert--flex text-center-xs" role="alert">
         <h4 class="alert__title alert__title--no-mb">Help us improve Redash docs</h4>

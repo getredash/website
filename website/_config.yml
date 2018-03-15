@@ -10,16 +10,13 @@ collections:
   integrations:
     output: true
     permalink: /data-sources/:path
-  docs:
+  usage:
     output: true
-    permalink: /docs/:path/
-  docs_new:
-    output: true
-    permalink: /new_docs/:path/
+    permalink: /help/:path
 defaults:
   - scope:
       path: ""
-      type: docs_new
+      type: usage
     values:
       layout: docs-article
 gems:
