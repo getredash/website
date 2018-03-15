@@ -13,6 +13,15 @@ collections:
   docs:
     output: true
     permalink: /docs/:path/
+  docs_new:
+    output: true
+    permalink: /new_docs/:path/
+defaults:
+  - scope:
+      path: ""
+      type: docs_new
+    values:
+      layout: docs-article
 gems:
   - algoliasearch-jekyll
   - jekyll-redirect-from
