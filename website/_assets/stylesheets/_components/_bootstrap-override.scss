@@ -82,8 +82,8 @@
 
 @media only screen and (min-width: 767px) {
   .navbar-nav>li>a {
-    padding: 12px 15px;
-    margin-top: 12px;
+    padding: 8px 15px;
+    margin-top: 16px;
   }
 }
 
@@ -96,6 +96,11 @@
   .navbar-btn {
     margin-top: 17px !important;
   }
+}
+
+.navbar-nav>li>a:focus, .navbar-nav>li>a:hover {
+  background: #f8fafa;
+  border-radius: 3px;
 }
 
 .dropdown-menu {

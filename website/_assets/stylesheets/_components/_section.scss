@@ -74,6 +74,11 @@
   p {
     margin: 30px 0;
   }
+
+  #open-source-illustrated {
+    transform: translatey(0px);
+    animation: float 12s ease-in-out infinite;
+  }
 }
 
 .section__feature {
