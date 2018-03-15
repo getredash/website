@@ -5,8 +5,9 @@ layout: docs
 <section class="section section--small bg-mutted">
   <div class="container">
     <ol class="breadcrumb">
-      <li><a href="/docs/">Home</a></li>
-      <li><a href="/docs/{{page.category}}/">{% assign cat = (site.docs | where:"category", page.category | where:"layout", "docs-category") %}{{ cat[0].title }}</a></li>
+      <li><a href="/help/">Home</a></li>
+      <li>{{site.data.usage_collections[page.parent_category]}}</li>
+      <li><a href="/help/{{page.parent_category}}/{{page.categories[0]}}">{% assign cat = (site.usage | where:"category", page.categories[0] | where:"layout", "docs-category") %}{{ cat[0].title }}</a></li>
       <li class="active">{{page.title}}</li>
     </ol>
 
