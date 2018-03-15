@@ -17,14 +17,14 @@
     - name: Blog
       url: https://blog.redash.io/
     - name: Community
-      url: /community/
+      url: /open-source/
     #    - name: Terms of Service
     #      url: /terms.html
     #    - name: Privacy Policy
     #      url: /privacy.html
 - name: Help
   links:
-    - name: User Guide
+    - name: Knowledge Base
       url: /help/
     - name: Forum
       url: https://discuss.redash.io/
