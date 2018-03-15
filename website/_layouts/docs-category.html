@@ -34,11 +34,7 @@ layout: docs
   <div class="container content">
     <div class="row row--flex">
       <div class="col-md-8 col-sm-7 push-xs-down">
-        {% if page.content != "\n"%}
-        <p>
-          {{page.content}}
-        </p>
-        {% endif %}
+        {{page.content}}
 
         <ul class="topics__list list-unstyled">
           {% assign articles = (site.usage | sort: 'order', 'last') %}
