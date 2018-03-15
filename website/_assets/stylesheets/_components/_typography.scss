@@ -127,6 +127,7 @@ button {
 }
 p {
 	margin-bottom: 10px;
+	color: #111;
 	/* &:last-child {
 		margin-bottom: 0;
 	} */
@@ -141,7 +142,7 @@ p {
 	}
 }
 b, strong {
-	font-family: $font-bold;
+	font-weight: 600;
 }
 
 hr {
