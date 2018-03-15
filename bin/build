@@ -2,6 +2,6 @@
 
 rm -rf _site
 npm run build
+cp _redirects _site/
 gitbook install user-guide
 gitbook build onpremise _site/help-onpremise
-cp _redirects _site/
