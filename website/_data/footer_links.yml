@@ -1,7 +1,7 @@
 - name: Redash
   links:
     - name: Product
-      url: /features/
+      url: /product/
     - name: Integrations
       url: /integrations/
     - name: Slack Bot
