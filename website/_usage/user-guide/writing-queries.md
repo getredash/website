@@ -11,7 +11,7 @@ toc: true
 To start working on a new query, click "New Query" on the home page or under
 the Queries menu in the navigation bar.
 
-![]{% doc_img https://s3.amazonaws.com/helpscout.net/docs/assets/5877897f90336009736c5d9b/images/5a57bbbc042863193800e753/file-rzKFwqy8SP.gif %}
+![](https://s3.amazonaws.com/helpscout.net/docs/assets/5877897f90336009736c5d9b/images/5a57bbbc042863193800e753/file-rzKFwqy8SP.gif)
 
 ###  Publish/Unpublish
 
