@@ -1,12 +1,14 @@
 ---
-categories:
-- about-redash
-parent_category: general-faq
-helpscout_url: https://help.redash.io/article/141-whats-redash
-keywords: null
-title: What's Redash?
-slug: whats-redash
+title: General
+permalink: /help/faq/general/
+parent_category: faq
+category: general-faq
+layout: docs-category
+order: 1
 ---
+
+##  What's Redash?
+
 Redash is an open source tool built for teams to query, visualize and
 collaborate. Redash is quick to setup and works with any data source you might
 need so you can query from anywhere in no time.
@@ -27,4 +29,17 @@ process and collect using Amazon Redshift (“petabyte scale data warehouse”
 that “speaks” PostgreSQL). Today Redash has support for querying multiple
 databases, including: Redshift, Google BigQuery, Google Spreadsheets,
 PostgreSQL, MySQL, Graphite, Axibase Time Series Database and custom scripts.
+
+## Is Redash compatible with Windows?
+
+As a User, you can use Redash from any operating system with a modern browser
+(we recommend Chrome or Firefox). But, if you're looking to run the Open
+Source/Self-Hosted version of Redash then for this, you'll need a Linux server
+(or a VM/Docker container).
+
+## Browsers Redash Works Best On
+
+We recommend using Chrome or Firefox.
+
+If you encounter any issues that are browser specific, please let us know.
 
