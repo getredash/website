@@ -22,3 +22,49 @@
     transform: translatey(0px);
   }
 }
+
+.contributor-list {
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.contributor-card {
+  text-align: center;
+  box-shadow: 0 4px 9px rgba(0,0,0,.05125);
+  border: 1px solid #eaeaea;
+  border-radius: 3px;
+  margin: 15px;
+  margin-top: 25px;
+  padding: 25px;
+  min-width: 195px;
+
+  img {
+    border-radius: 50%;
+  }
+
+  h3 {
+    margin-bottom: 15px;
+  }
+}
+
+.section__os--contributor-list {
+  overflow: hidden;
+}
+
+.card {
+  padding: 45px;
+  border-radius: 3px;
+
+  h3 {
+    margin-top: 0;
+  }
+}
+
+.card--bug {
+  background: rgba(255,233,246,.6);
+}
+
+.card--feature {
+  background: rgba(233,242,255,.6);
+}
