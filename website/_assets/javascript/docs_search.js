@@ -23,7 +23,7 @@ $(function() {
         });
         resultsHtml += '</ul>';
 
-        $('.container.search-results').html(resultsHtml);
+        $('.container.search-results .hits').html(resultsHtml);
       });
 
       $('.container.content').addClass('hidden');
