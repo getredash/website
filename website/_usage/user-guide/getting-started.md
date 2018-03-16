@@ -22,13 +22,11 @@ The first thing you'll want to do is connect at least one [data source
 ](http://help.redash.io/article/119-supported-data-sources) . You can add a
 new data source from the quick link in the navigation bar:
 
-![](https://59005a708ebdd932a2ed5f47--
-redashio.netlify.com/assets/images/docs/data_source_quick_link.png)
+![](https://59005a708ebdd932a2ed5f47--redashio.netlify.com/assets/images/docs/data_source_quick_link.png)
 
 Or via the Data Source tab in your admin settings:
 
-![](https://59005a708ebdd932a2ed5f47--
-redashio.netlify.com/assets/images/docs/add_new_datasource.png)
+![](https://59005a708ebdd932a2ed5f47--redashio.netlify.com/assets/images/docs/add_new_datasource.png)
 
 If you’re using the Hosted Redash service, you'll need to allow access from
 the IP address 52.71.84.157 in your database firewall/security groups (unless
