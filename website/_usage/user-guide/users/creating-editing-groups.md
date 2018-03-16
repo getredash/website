@@ -18,8 +18,9 @@ Once you created a group, you can start adding users to it by typing their
 title: ![](https://redash.io/help/assets/view_only_group.png)
 
 Each group can be connected to specific data sources, read more about group
-permissions [here](http://help.redash.io/article/71-inviting-users-to-use-
-redash).
+permissions [here]({% link _usage/user-guide/users/inviting-users.md %}).
 
+{% callout %}
 Please Note "Default" and "Admin" groups can't be deleted
+{% endcallout %}
 

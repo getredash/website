@@ -7,8 +7,8 @@ keywords: null
 title: Inviting Users to Use Redash
 slug: inviting-users-to-use-redash
 ---
-Users can be invited Admins only - to invite a new user go to Settings>Users
-and hit New User:
+Users can be invited by Admins only - to invite a new user go to `Settings`>`Users`
+and click on `New User`.
 
 Next, you'll fill in their name and email. They'll get an invite via email and
 be required to set up a Redash account.
