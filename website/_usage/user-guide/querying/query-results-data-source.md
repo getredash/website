@@ -27,8 +27,10 @@ example, a query with the URL
 `https://app.redash.io/acme/queries/49588/source` will become `query_49588`
 when referenced as a table.
 
+{% callout %}
 You need to make sure the table name (`query_...`) is on the same line as the
 `FROM`/`JOIN` keywords.
+{% endcallout %}
 
 Few notes:
 

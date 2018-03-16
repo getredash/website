@@ -7,6 +7,7 @@ keywords: null
 title: Creating and Editing Queries
 slug: writing-queries
 toc: true
+order: 1
 ---
 To start working on a new query, click "New Query" on the home page or under
 the Queries menu in the navigation bar.
@@ -28,7 +29,7 @@ button. It's also possible to unpublish a published query by clicking on the
 
 In most cases we use the data sources native query language. In some cases
 there are differences or additions, which are documented in the [Querying Data
-Sources category](http://help.redash.io/category/102-querying).
+Sources category]({% link _usage/data-sources/querying_category.md %}).
 
 ### Schema Browser and Autocomplete
 
@@ -41,7 +42,9 @@ will show its columns. You can filter the schema with the search box and
 refresh it by clicking on the refresh button (otherwise it refreshes
 periodically in the background).
 
+{% callout %}
 Please note that not all data source types support loading the schema.
+{% endcallout %}
 
 Beside the schema browser, Redash supports autocomplete while typing your
 query. The autocomplete is auto triggered, unless you have a large schema
