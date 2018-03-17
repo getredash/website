@@ -1,0 +1,24 @@
+.featured-customer {
+  box-shadow: 0 4px 9px rgba(0,0,0,.05125);
+  border: 1px solid #eaeaea;
+  border-radius: 3px;
+
+  .featured-customer--content {
+    padding: 25px;
+    padding-top: 15px;
+  }
+
+  h2 {
+    margin-top: 0;
+
+    small {
+      background: #4080FE;
+      color: #fff;
+      font-weight: 600;
+      font-size: 14px;
+      border-radius: 2px;
+      padding: 3px 10px;
+      font-transform: allcaps;
+    }
+  }
+}
