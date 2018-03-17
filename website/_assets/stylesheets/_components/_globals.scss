@@ -25,3 +25,24 @@
 .m-b-25 {
   margin-bottom: 25px !important;
 }
+
+.card {
+  padding: 45px;
+  border-radius: 3px;
+
+  h3 {
+    margin-top: 0;
+  }
+}
+
+.card--bug {
+  background: rgba(255,233,246,.6);
+}
+
+.card--feature {
+  background: rgba(233,242,255,.6);
+}
+
+.card--yellow {
+  background: rgba(255, 251, 236, 0.6);
+}
