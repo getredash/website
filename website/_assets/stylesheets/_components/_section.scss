@@ -196,13 +196,6 @@
 
 
 
-
-
-
-
-
-
-
 // Optimization
 
 /* Large devices (large desktops, 1200px and down) */
@@ -297,12 +290,20 @@
     font-size: 16px;
     line-height: 1.5;
   }
+
+  .visualize-dashboards-illustrated {
+    margin-top: 0px;
+  }
 }
 
 /* Small devices (tablets, 768px and down) */
 @media (max-width: 768px) {
   .section {
     padding: 20px 0;
+  }
+
+  .visualize-dashboards-illustrated {
+    margin-top: 0px;
   }
 
   #integrations-illustrated {
