@@ -14,21 +14,22 @@ source of type `Elasticsearch`.
 
 ## String query example:
 
-  * Query the index named “twitter”
-  * Filter by “user:kimchy”
-  * Return the fields: “@timestamp”, “tweet” and “user”
-  * Return up to 15 results
-  * Sort by @timestamp ascending
+* Query the index named “twitter”
+* Filter by “user:kimchy”
+* Return the fields: “@timestamp”, “tweet” and “user”
+* Return up to 15 results
+* Sort by @timestamp ascending
 
-    
-    
-    {
-    	"index": "twitter",
-    	"query": "user:kimchy",
-    	"fields": ["@timestamp", "tweet", "user"],
-    	"limit": 15,
-    	"sort": "@timestamp:asc"
-    }
+
+```json
+{
+  "index": "twitter",
+  "query": "user:kimchy",
+  "fields": ["@timestamp", "tweet", "user"],
+  "limit": 15,
+  "sort": "@timestamp:asc"
+}
+```
     
 
 ## Simple query on a logstash Elasticsearch instance:
@@ -40,15 +41,15 @@ source of type `Elasticsearch`.
   * Sort by @timestamp ascending
 
     
-    
-    {
-    	"index": "logstash-2015.04.*",
-    	"query": "type:events AND eventName:UserUpgrade AND channel:selfserve",
-    	"fields": ["@timestamp", "userId", "channel", "utm_source", "utm_medium", "utm_campaign", "utm_content"],
-    	"limit": 250,
-    	"sort": "@timestamp:asc"
-    }
-    
+```json    
+{
+  "index": "logstash-2015.04.*",
+  "query": "type:events AND eventName:UserUpgrade AND channel:selfserve",
+  "fields": ["@timestamp", "userId", "channel", "utm_source", "utm_medium", "utm_campaign", "utm_content"],
+  "limit": 250,
+  "sort": "@timestamp:asc"
+}
+```
 
 ## JSON document query on a ElasticSearch instance:
 
@@ -57,19 +58,19 @@ source of type `Elasticsearch`.
   * Return the fields: “@timestamp”, “tweet” and “user”
   * Return up to 15 results
   * Sort by @timestamp ascending
-
     
-    
-    {
-    	"index": "twitter",
-    	"query": {
-    		"match": {
-    			"user": "kimchy"
-    		}
-    	},
-    	"fields": ["@timestamp", "tweet", "user"],
-    	"limit": 15,
-    	"sort": "@timestamp:asc"
+```json    
+{
+  "index": "twitter",
+  "query": {
+    "match": {
+      "user": "kimchy"
     }
+  },
+  "fields": ["@timestamp", "tweet", "user"],
+  "limit": 15,
+  "sort": "@timestamp:asc"
+}
+```
     
 

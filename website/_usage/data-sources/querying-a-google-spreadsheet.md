@@ -15,15 +15,9 @@ key file -- you upload this file when setting up the data source. ****
 
 ### How to create a Google Service Account?
 
-1
-
-    Open the [Service accounts page](https://console.developers.google.com/permissions/serviceaccounts). If prompted, select a project. 
-2
-
-    Click "Create Service Account" at the top of the page.
-3
-
-    In the Create service account window, type a name for the Service Account, and select "Furnish a New Private Key". When prompted, select  **JSON key file** type. Then click  Create.
+1. Open the [Service accounts page](https://console.developers.google.com/permissions/serviceaccounts). If prompted, select a project. 
+2. Click "Create Service Account" at the top of the page.
+3. In the Create service account window, type a name for the Service Account, and select "Furnish a New Private Key". When prompted, select  **JSON key file** type. Then click  Create.
 
 ## Querying
 
@@ -39,6 +33,7 @@ data source you created and in the query text enter the Spreadsheet ID and
 example: `1DFuuOMFzNoFQ5EJ2JE2zB79-0uR5zVKvc0EikmvnDgk|0` to load the first
 sheet or `1DFuuOMFzNoFQ5EJ2JE2zB79-0uR5zVKvc0EikmvnDgk|1` to load the second.
 
+{% callout info %}
 **What is the Spreadsheet ID?**
 
 You can find the Spreadsheet ID in the spreadsheet URL. So for example, if the
@@ -46,16 +41,19 @@ spreadsheet URL is:
 <https://docs.google.com/spreadsheets/d/1DFuuOMFzNoFQ5EJ2JE2zB79-0uR5zVKvc0EikmvnDgk/edit#gid=0>
 
 Then the id will be   `1DFuuOMFzNoFQ5EJ2JE2zB79-0uR5zVKvc0EikmvnDgk`.
+{% endcallout %}
 
+{% callout warning %}
 If your organization has restrictions on sharing spreadsheets with external
 accounts, it might not work, but worth a try - especially if you created the
 service account with a Google account from the same organization.
+{% endcallout %}
 
 ### Filtering The Data
 
 When you load a spreadsheet into Redash, we load it in full. If you want to
 filter some data or aggregate it, you can use one of the following methods:
 
-  * Use the ["Query Results" data source](http://help.redash.io/article/152-using-query-results-as-data-sources), which allows you to run queries on top of existing queries.
+  * Use the ["Query Results" data source]({% link _usage/user-guide/querying/query-results-data-source.md %}), which allows you to run queries on top of existing queries.
   * Use [Google BigQuery's integration with Google Drive](https://cloud.google.com/blog/big-data/2016/05/bigquery-integrates-with-google-drive) to create a Google BigQuery external table based on the Google Spreadsheet.
 

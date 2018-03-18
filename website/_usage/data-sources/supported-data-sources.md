@@ -3,13 +3,13 @@ categories:
 - setup
 parent_category: data-sources
 helpscout_url: https://help.redash.io/article/119-supported-data-sources
-keywords: null
 title: Supported Data Sources
 slug: supported-data-sources
+order: 1
 ---
 Redash supports the following Data Sources:
 
-|  Hosted Redash  |  Self Hosted Redash  
+Data Source |  Hosted Redash  |  Self Hosted Redash  
 ---|---|---  
 Amazon Athena  |  ✅  |  ✅  
 Amazon DynamoDB  |  ✅  |  ✅  

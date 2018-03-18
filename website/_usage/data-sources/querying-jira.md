@@ -7,12 +7,12 @@ keywords: null
 title: Querying JIRA (JQL)
 slug: querying-jira
 ---
-For a simple query, one that returns issues with no filtering:
 
+For a simple query, one that returns issues with no filtering:
     
-    
-    {}
-    
+```
+{}
+```
 
 Return only specific fields:
 

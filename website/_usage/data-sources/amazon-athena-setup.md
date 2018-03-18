@@ -15,16 +15,11 @@ contain your data.
 
 ### Create IAM Policy to Allow Access to Your S3 Bucket
 
-1
-
-    Sign in to the IAM console at <https://console.aws.amazon.com/iam/>. 
-2
-
-    In the navigation pane, choose Policies, and then Create Policy.
+1. Sign in to the IAM console at <https://console.aws.amazon.com/iam/>. 
+2. In the navigation pane, choose Policies, and then Create Policy.
 
 In the policy body, you can use a policy similar to:
-
-    
+  
     
     {
     	"Version": "2012-10-17",

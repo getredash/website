@@ -3,9 +3,9 @@ categories:
 - querying
 parent_category: data-sources
 helpscout_url: https://help.redash.io/article/113-querying-mongodb
-keywords: null
 title: Querying MongoDB
 slug: querying-mongodb
+toc: true
 ---
 We take the JSON query you pass and convert it to a
 [db.collections.find](https://docs.mongodb.com/manual/reference/method/db.collection.find/)
@@ -20,7 +20,6 @@ by passing an `aggregate`  dictionary.
 
 ### Simple Query Example
 
-    
     
     {
     	"collection": "my_collection",
@@ -47,8 +46,6 @@ by passing an `aggregate`  dictionary.
     	"count": true
     }
     
-
-###
 
 ### Aggregation
 

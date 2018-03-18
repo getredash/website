@@ -12,6 +12,5 @@ To load a CSV file from a URL, you use the CSV file address as the query text
 as the first row.
 
 To further filter or manipulate the data you can use the [Query Results data
-source](http://help.redash.io/article/152-using-query-results-as-data-
-sources).
+source]({% link _usage/user-guide/querying/query-results-data-source.md %}).
 
