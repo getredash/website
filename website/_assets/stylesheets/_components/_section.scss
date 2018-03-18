@@ -248,6 +248,10 @@
     margin-top: 0;
   }
 
+  .section__os--hero h1 {
+    margin-top: 100px;
+  }
+
   .section {
     padding: 35px 0;
   }
@@ -345,6 +349,10 @@
     margin-top: 0;
   }
 
+  .section__os--hero h1 {
+    margin-top: 25px;
+  }
+
   .section__feature p {
     width: 100%;
   }
@@ -364,5 +372,9 @@
   
   .footer__item--other {
     clear: both;
+  }
+
+  .contributor-card {
+    min-width: 145px;
   }
 }
