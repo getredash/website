@@ -77,6 +77,18 @@
   }
 }
 
+.label {
+  padding: 4px 15px;
+  border-radius: 25px;
+  line-height: 2.5;
+}
+
+.label-primary {
+  border: 1px solid #4080FE;
+  color: #4080FE;
+  background: rgba(255,255,255,0.75);
+}
+
 
 // Navigation
 
