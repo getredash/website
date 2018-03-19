@@ -1,6 +1,5 @@
 ---
-categories:
-- example-queries
+category: example-queries
 parent_category: examples
 helpscout_url: https://help.redash.io/article/132-cohort-q
 title: Cohort Query Example

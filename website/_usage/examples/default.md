@@ -1,9 +1,7 @@
 ---
-categories:
-- redash-hacks
+category: redash-hacks
 parent_category: examples
 helpscout_url: https://help.redash.io/article/139-default
-keywords: null
 title: Default Parameter Value
 slug: default
 ---

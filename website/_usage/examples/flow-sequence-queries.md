@@ -1,6 +1,5 @@
 ---
-categories:
-- example-queries
+category: example-queries
 parent_category: examples
 helpscout_url: https://help.redash.io/article/134-funnel
 title: Flow/Sequence Queries - Sankey and Sunburst Visualizations

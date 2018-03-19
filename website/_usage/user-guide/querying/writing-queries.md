@@ -1,9 +1,7 @@
 ---
-categories:
-- querying
+category: querying
 parent_category: user-guide
 helpscout_url: https://help.redash.io/article/25-writing-queries
-keywords: null
 title: Creating and Editing Queries
 slug: writing-queries
 toc: true

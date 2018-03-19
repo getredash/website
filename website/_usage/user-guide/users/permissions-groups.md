@@ -1,9 +1,7 @@
 ---
-categories:
-- user-groups-permissions
+category: user-groups-permissions
 parent_category: user-guide
 helpscout_url: https://help.redash.io/article/73-permissions-groups
-keywords: null
 title: Permissions & Groups
 slug: permissions-groups
 ---

@@ -1,9 +1,7 @@
 ---
-categories:
-- setup
+category: setup
 parent_category: data-sources
 helpscout_url: https://help.redash.io/article/157-mongodb-setup
-keywords: null
 title: MongoDB Setup
 slug: mongodb-setup
 ---

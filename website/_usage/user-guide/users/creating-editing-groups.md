@@ -1,9 +1,7 @@
 ---
-categories:
-- user-groups-permissions
+category: user-groups-permissions
 parent_category: user-guide
 helpscout_url: https://help.redash.io/article/72-creating-editing-groups
-keywords: null
 title: Creating & Editing Groups
 slug: creating-editing-groups
 ---

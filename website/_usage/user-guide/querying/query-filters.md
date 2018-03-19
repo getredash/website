@@ -1,9 +1,7 @@
 ---
-categories:
-- querying
+category: querying
 parent_category: user-guide
 helpscout_url: https://help.redash.io/article/45-query-filters
-keywords: null
 title: Query Filters
 slug: query-filters
 ---

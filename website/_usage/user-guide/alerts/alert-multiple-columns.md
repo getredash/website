@@ -1,6 +1,5 @@
 ---
-categories:
-- alerts
+category: alerts
 parent_category: user-guide
 helpscout_url: https://help.redash.io/article/70-alert-multiple-columns
 keywords:

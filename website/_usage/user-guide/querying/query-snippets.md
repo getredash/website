@@ -1,9 +1,7 @@
 ---
-categories:
-- querying
+category: querying
 parent_category: user-guide
 helpscout_url: https://help.redash.io/article/39-query-snippets-shortcuts
-keywords: null
 title: Query Snippets
 slug: query-snippets
 ---

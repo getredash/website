@@ -1,9 +1,7 @@
 ---
-categories:
-- visualizations
+category: visualizations
 parent_category: user-guide
 helpscout_url: https://help.redash.io/article/58-visualization-types
-keywords: null
 title: Visualization Types
 slug: visualization-types
 ---

@@ -1,9 +1,7 @@
 ---
-categories:
-- redash-hacks
+category: redash-hacks
 parent_category: examples
 helpscout_url: https://help.redash.io/article/138-image
-keywords: null
 title: Images Inside Tables
 slug: image
 ---

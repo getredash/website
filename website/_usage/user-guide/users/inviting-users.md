@@ -1,9 +1,7 @@
 ---
-categories:
-- user-groups-permissions
+category: user-groups-permissions
 parent_category: user-guide
 helpscout_url: https://help.redash.io/article/71-inviting-users-to-use-redash
-keywords: null
 title: Inviting Users to Use Redash
 slug: inviting-users-to-use-redash
 ---

@@ -1,6 +1,5 @@
 ---
-categories:
-- setup
+category: setup
 parent_category: data-sources
 helpscout_url: https://help.redash.io/article/123-axibase-time-series-database
 title: Axibase Time Series Database

@@ -1,6 +1,5 @@
 ---
-categories:
-- setup
+category: setup
 parent_category: data-sources
 helpscout_url: https://help.redash.io/article/119-supported-data-sources
 title: Supported Data Sources

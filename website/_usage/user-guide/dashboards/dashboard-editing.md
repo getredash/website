@@ -1,6 +1,5 @@
 ---
-categories:
-- dashboards
+category: dashboards
 parent_category: user-guide
 helpscout_url: https://help.redash.io/article/61-creating-a-dashboard
 title: Creating and Editing Dashboards

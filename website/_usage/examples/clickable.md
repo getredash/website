@@ -1,9 +1,7 @@
 ---
-categories:
-- redash-hacks
+category: redash-hacks
 parent_category: examples
 helpscout_url: https://help.redash.io/article/137-clickable
-keywords: null
 title: Clickable URLs in Tables
 slug: clickable
 ---

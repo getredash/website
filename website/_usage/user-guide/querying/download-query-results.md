@@ -1,10 +1,8 @@
 ---
-categories:
-- querying
+category: querying
 - integrations-and-api
 parent_category: user-guide
 helpscout_url: https://help.redash.io/article/43-download-query-results
-keywords: null
 title: Download or Export Query Results
 slug: download-query-results
 ---
