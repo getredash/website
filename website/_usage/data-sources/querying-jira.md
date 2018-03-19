@@ -1,9 +1,7 @@
 ---
-categories:
-- querying
+category: querying
 parent_category: data-sources
 helpscout_url: https://help.redash.io/article/112-querying-jira
-keywords: null
 title: Querying JIRA (JQL)
 slug: querying-jira
 ---

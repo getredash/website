@@ -1,9 +1,7 @@
 ---
-categories:
-- querying
+category: querying
 parent_category: user-guide
 helpscout_url: https://help.redash.io/article/152-query-results-data-source
-keywords: null
 title: Querying Existing Query Results
 slug: query-results-data-source
 ---

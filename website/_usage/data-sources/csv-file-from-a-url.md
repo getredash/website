@@ -1,9 +1,7 @@
 ---
-categories:
-- setup
+category: setup
 parent_category: data-sources
 helpscout_url: https://help.redash.io/article/153-csv-file-from-a-url
-keywords: null
 title: CSV File from a URL
 slug: csv-file-from-a-url
 ---

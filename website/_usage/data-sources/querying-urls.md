@@ -1,9 +1,7 @@
 ---
-categories:
-- querying
+category: querying
 parent_category: data-sources
 helpscout_url: https://help.redash.io/article/118-querying-urls
-keywords: null
 title: Querying URLs
 slug: querying-urls
 ---

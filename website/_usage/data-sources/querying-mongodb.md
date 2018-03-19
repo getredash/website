@@ -1,6 +1,5 @@
 ---
-categories:
-- querying
+category: querying
 parent_category: data-sources
 helpscout_url: https://help.redash.io/article/113-querying-mongodb
 title: Querying MongoDB

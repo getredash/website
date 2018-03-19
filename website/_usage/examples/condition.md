@@ -1,9 +1,7 @@
 ---
-categories:
-- redash-hacks
+category: redash-hacks
 parent_category: examples
 helpscout_url: https://help.redash.io/article/136-condition
-keywords: null
 title: Conditional Formatting & General Text Formatting
 slug: condition
 ---

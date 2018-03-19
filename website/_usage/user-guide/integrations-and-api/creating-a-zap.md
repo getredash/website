@@ -1,9 +1,7 @@
 ---
-categories:
-- integrations-and-api
+category: integrations-and-api
 parent_category: user-guide
 helpscout_url: https://help.redash.io/article/130-creating-a-zap
-keywords: null
 title: Creating a Zap in Zapier for New Query Results
 slug: creating-a-zap
 ---

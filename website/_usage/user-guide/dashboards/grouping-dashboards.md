@@ -1,9 +1,7 @@
 ---
-categories:
-- dashboards
+category: dashboards
 parent_category: user-guide
 helpscout_url: https://help.redash.io/article/63-grouping-dashboards
-keywords: null
 title: Grouping Dashboards
 slug: grouping-dashboards
 ---

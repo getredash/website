@@ -1,9 +1,7 @@
 ---
-categories:
-- redash-hacks
+category: redash-hacks
 parent_category: examples
 helpscout_url: https://help.redash.io/article/140-adding-tags
-keywords: null
 title: Adding Tags to Queries
 slug: adding-tags
 ---

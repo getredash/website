@@ -1,9 +1,7 @@
 ---
-categories:
-- integrations-and-api
+category: integrations-and-api
 parent_category: user-guide
 helpscout_url: https://help.redash.io/article/129-how-to-use-google-spreadsheets-importdata-function
-keywords: null
 title: How To Use Google Spreadsheets IMPORTDATA Function
 slug: how-to-use-google-spreadsheets-importdata-function
 ---

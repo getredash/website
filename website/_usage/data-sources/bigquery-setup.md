@@ -1,6 +1,5 @@
 ---
-categories:
-- setup
+category: setup
 parent_category: data-sources
 helpscout_url: https://help.redash.io/article/124-bigquery-setup
 title: BigQuery Setup

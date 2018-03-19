@@ -1,9 +1,7 @@
 ---
-categories:
-- setup
+category: setup
 parent_category: data-sources
 helpscout_url: https://help.redash.io/article/122-amazon-athena-setup
-keywords: null
 title: Amazon Athena Setup
 slug: amazon-athena-setup
 ---

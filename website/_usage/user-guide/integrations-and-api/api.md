@@ -1,9 +1,7 @@
 ---
-categories:
-- integrations-and-api
+category: integrations-and-api
 parent_category: user-guide
 helpscout_url: https://help.redash.io/article/128-api-key-authentication
-keywords: null
 title: API
 ---
 

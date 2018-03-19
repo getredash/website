@@ -1,6 +1,5 @@
 ---
-categories:
-- example-queries
+category: example-queries
 parent_category: examples
 helpscout_url: https://help.redash.io/article/133-dau-wau-mau-example
 title: DAU, WAU, MAU Example

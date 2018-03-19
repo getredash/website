@@ -1,9 +1,7 @@
 ---
-categories:
-- querying
+category: querying
 parent_category: user-guide
 helpscout_url: https://help.redash.io/article/41-scheduling-a-query
-keywords: null
 title: Scheduling A Query
 slug: scheduling-a-query
 ---

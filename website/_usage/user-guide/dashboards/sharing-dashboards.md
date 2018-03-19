@@ -1,6 +1,5 @@
 ---
-categories:
-- dashboards
+category: dashboards
 parent_category: user-guide
 helpscout_url: https://help.redash.io/article/64-sharing-dashboards
 title: Sharing and Embedding Dashboards

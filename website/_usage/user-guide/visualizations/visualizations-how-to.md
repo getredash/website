@@ -1,6 +1,5 @@
 ---
-categories:
-- visualizations
+category: visualizations
 parent_category: user-guide
 title: Visualizations How To
 toc: true

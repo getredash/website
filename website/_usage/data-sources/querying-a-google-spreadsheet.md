@@ -1,9 +1,7 @@
 ---
-categories:
-- querying
+category: querying
 parent_category: data-sources
 helpscout_url: https://help.redash.io/article/114-querying-a-google-spreadsheet
-keywords: null
 title: Querying a Google Spreadsheet
 slug: querying-a-google-spreadsheet
 ---
