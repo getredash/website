@@ -110,7 +110,7 @@ gulp.task('img:build', task.img = function () {
 });
 
 gulp.task('jekyll:build', (code) => {
-  return cp.spawn('jekyll', ['build', '-s', 'website'], { stdio: 'inherit' }) // Adding incremental reduces build time.
+  return cp.spawn('bundle', ['exec', 'jekyll', 'build', '-s', 'website'], { stdio: 'inherit' }) // Adding incremental reduces build time.
     .on('error', (error) => console.log(error.message))
     .on('close', code);
 })
@@ -162,7 +162,7 @@ gulp.task('build', [
 ]);
 
 gulp.task('watch', function () {
-  watch(['website/**/*.html', 'website/**/*.md', 'website/**/*.yml', '!_site/**/*.*'], function (event, cb) {
+  watch(['website/**/*.html', 'website/**/*.json', 'website/**/*.md', 'website/**/*.yml', '!_site/**/*.*'], function (event, cb) {
     gulp.start('jekyll:watch');
   });
 

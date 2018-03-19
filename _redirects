@@ -33,5 +33,3 @@
 /help/troubleshooting/query_complete_no_data.html http://help.redash.io/article/146-error
 /help/troubleshooting/large-queries-run-forever.html http://help.redash.io/article/147-queries
 /help/query-examples-hacks/query-results-lead-to-filtered-dashboard.html http://help.redash.io/article/135-link
-/help/**/*.html http://help.redash.io
-/help http://help.redash.io

@@ -1,12 +1,11 @@
 {
-  "name": "postcss",
-  "description": "",
-  "main": "index.js",
+  "name": "Redash Website",
+  "description": "Homepage and documentation for Redash.",
   "authors": [
-    "Nagalsky Nikita <nagalsky.nikita@gmail.com>"
+    "Redash Team <team@redash.io>"
   ],
   "license": "ISC",
-  "homepage": "https://github.com/Nagalsky/postCSS",
+  "homepage": "https://github.com/getredash/website",
   "moduleType": [],
   "ignore": [
     "**/.*",

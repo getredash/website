@@ -1,6 +1,7 @@
 node_modules
 website/assets/
 .jekyll-metadata
+user-guide-copy/
 
 ### Jekyll ###
 _site/
