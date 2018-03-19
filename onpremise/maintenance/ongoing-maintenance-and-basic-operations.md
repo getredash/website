@@ -2,9 +2,7 @@
 
 ## Configuration and Logs
 
-The supervisor config can be found in `/opt/redash/supervisord/supervisord.conf`. 
-
-New Redash images install Supervisor with a system package whose configuration can be found in `/etc/supervisor/conf.d/redash.conf`.
+The supervisor config can be found in: `/etc/supervisor/conf.d/redash.conf` if you're using the new images that install Supervisor with a system packages. Otherwise, you can find it at `/opt/redash/supervisord/supervisord.conf`.
 
 There, you can see the names of Redash's processes (`redash_celery`, `redash_server` and `redash_celery_scheduled`), as well as the location of their logs.
 
