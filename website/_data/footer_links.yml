@@ -5,7 +5,7 @@
     - name: Integrations
       url: /integrations/
     - name: Slack Bot
-      url: /slack/
+      url: /slack
     - name: Customers
       url: /customers/
     - name: Pricing

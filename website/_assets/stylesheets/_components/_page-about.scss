@@ -3,5 +3,9 @@
 
   .contributor-card {
     min-width: 245px;
+
+    img {
+      border-radius: 50%;
+    }
   }
 }
