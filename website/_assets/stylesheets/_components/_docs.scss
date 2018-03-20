@@ -5,3 +5,8 @@ div.docs img {
     @include img-responsive;
     @include center-block;
 }
+
+div.docs table {
+	@extend .table;
+	@extend .table-bordered;
+}
