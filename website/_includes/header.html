@@ -1,24 +1,38 @@
-	<nav class="navbar navbar-fixed-top {% if page.has_jumbo %} navbar-without-shadow {% endif %}">
-	  <div class="container">
-	    <div class="navbar-header">
-	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-	        <span class="sr-only">Toggle navigation</span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	      </button>
-	      <a class="navbar-brand" href="/">
-	        <img src="/assets/images/elements/redash_logo.svg" class="navbar-brand__img" alt="">
-	      </a>
-	    </div>
+<nav class="navbar">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"
+                    aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">
+                <img src="/assets/images/elements/redash-logo.svg" class="navbar-brand__img" alt="">
+            </a>
+        </div>
 
-	    <div class="collapse navbar-collapse" id="navbar-collapse">
-	      <ul class="nav navbar-nav navbar-right">
-	        <li><a data-track data-track-location='header' href="/features/">Features</a></li>
-	        <li><a data-track data-track-location='header' href="/help/">Help</a></li>
-	        <li><a data-track data-track-location='header' href="https://app.redash.io/">Login</a></li>
-	        <li><a data-track data-track-location='header' track-event='Clicked Get Started' href="/get-started/" class="btn btn-danger navbar-btn">Get Started</a></li>
-	      </ul>
-	    </div><!-- /.navbar-collapse -->
-	  </div><!-- /.container -->
-	</nav>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav navbar-left">
+                <li><a data-track data-track-location='header' href="/product/">Product</a></li>
+                <li><a data-track data-track-location='header' href="/customers/">Customers</a></li>
+                <li><a data-track data-track-location='header' href="/open-source/">Community</a></li>
+                <li><a data-track data-track-location='header' href="/pricing/">Pricing</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Help <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/help/">Knowledge Base</a></li>
+                        <li><a href="https://discuss.redash.io/">Forum</a></li>
+                        <li><a href="http://slack.redash.io/">Slack</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a data-track data-track-location='header' href="https://app.redash.io/">Login</a></li>
+                <li><a data-track data-track-location='header' track-event='Clicked Get Started' href="/get-started/" class="btn btn-primary navbar-btn">Get Started</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container -->
+</nav>

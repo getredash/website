@@ -22,3 +22,12 @@ cp _redirects _site/
 Each part can be developed separately using each tool's live preview (`serve` command).
 
 Eventually we will switch to a single tool (Jekyll?) for all the parts.
+
+## Website
+
+Go to website folder and use the following commands
+
+Build assets and run server: bundle exec jekyll serve --watch 
+
+Watch and auto-build stylesheets: gulp watch
+
