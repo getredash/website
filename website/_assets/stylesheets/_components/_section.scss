@@ -302,6 +302,14 @@
     padding: 20px 0;
   }
 
+  .contributor-list--team {
+    flex-direction: column;
+
+    .contributor-card {
+      min-width: 100%;
+    }
+  }
+
   .visualize-dashboards-illustrated {
     margin-top: 0px;
   }
