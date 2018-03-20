@@ -1,9 +1,9 @@
 ---
-permalink: /docs/articles.json
+permalink: /kb/articles.json
 ---
 
-{% assign articles = (site.usage | where:"layout", "docs-article") %}
-{% assign categories = (site.usage | where:"layout", "docs-category") %}
+{% assign articles = (site.kb | where:"layout", "kb-article") %}
+{% assign categories = (site.kb | where:"layout", "kb-category") %}
 
 {
     "articles": [

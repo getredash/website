@@ -10,15 +10,15 @@ collections:
   integrations:
     output: true
     permalink: /data-sources/:path
-  usage:
+  kb:
     output: true
     permalink: /help/:path
 defaults:
   - scope:
       path: ""
-      type: usage
+      type: kb
     values:
-      layout: docs-article
+      layout: kb-article
 gems:
   - algoliasearch-jekyll
   - jekyll-redirect-from
