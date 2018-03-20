@@ -1,9 +1,9 @@
 .bs-callout {
     padding: 20px;
     margin: 20px 0;
-    border: 1px solid #eee;
+    border: 0px solid transparent;
     border-left-width: 5px;
-    border-radius: 3px;
+    background: #f8fafa;
 }
 .bs-callout h4 {
     margin-top: 0;
@@ -25,7 +25,7 @@
     color: #777;
 }
 .bs-callout-primary {
-    border-left-color: #428bca;
+    border-left-color: $primary;
 }
 .bs-callout-primary h4 {
     color: #428bca;
