@@ -16,7 +16,7 @@ toc: true
 4. Grant the group 'Read' permission from 'All entities'. 
 5. Press the Save button.
 
-![](https://redash.io/help/assets/atsd_user_group.png)
+![](/assets/images/docs/gitbook/atsd_user_group.png)
 
 ### Create User
 
@@ -25,7 +25,7 @@ toc: true
 3. Add the user to the previously created User Group as a member in the 'Entity Permissions' section. 
 4. Press the Save button.
 
-![](https://redash.io/help/assets/atsd_user.png)
+![](/assets/images/docs/gitbook/atsd_user.png)
 
 ## Create Data Source
 
@@ -49,11 +49,11 @@ toc: true
   * Save the data source.
   * Test the connection by clicking the 'Test' button.
 
-![](https://redash.io/help/assets/atsd_datasource.png)
+![](/assets/images/docs/gitbook/atsd_datasource.png)
 
 ## Run a Query
 
 Once the Test is successful, you can query the data stored in Axibase Time
 Series Database.
 
-![](https://redash.io/help/assets/atsd_query.jpg)
+![](/assets/images/docs/gitbook/atsd_query.jpg)

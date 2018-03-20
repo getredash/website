@@ -21,7 +21,7 @@ To change an existing widget's parameters, enter the query of that widget
 option under each visualization, clicking it will open the current settings
 for that visualization (type, x, y, group...).
 
-![](https://redash.io/help/assets/visualization_examples/edit_viz.png)
+![](/assets/images/docs/gitbook/visualization_examples/edit_viz.png)
 
 Hit "Save" to apply your changes or "Cancel" to leave no trace.
 
@@ -30,7 +30,7 @@ Hit "Save" to apply your changes or "Cancel" to leave no trace.
 Redash allows you to embed a visualization that will update every time the
 query it belongs to runs.
 
-![](https://redash.io/help/assets/embed_viz.png)
+![](/assets/images/docs/gitbook/embed_viz.png)
 
 Click the "Embed" button to view the IFrame code you need to copy or a link to
 the image you can place anywhere.
@@ -41,5 +41,5 @@ To download a chart visualization as an image file go ahead and hover over the t
 right area of the visualization and click the camera icon. It will be
 downloaded to your device.
 
-![](https://redash.io/help/assets/download_viz.png)
+![](/assets/images/docs/gitbook/download_viz.png)
 

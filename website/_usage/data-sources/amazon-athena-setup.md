@@ -44,11 +44,11 @@ buckets, but please note that we have separate permissions for the bucket (
   * Enter the desired User Name.
   * Check the checkbox next to Programmatic Access and then click Next.
 
-![](https://redash.io/help/assets/athena_iam_console1.png)
+![](/assets/images/docs/gitbook/athena_iam_console1.png)
 
   * In the Permissions step, select Attach existing policies directly and attach the AWSQuicksightAthenaAccess policy along with the one to access S3 buckets you created previously.
 
-![](https://redash.io/help/assets/athena_iam_console2.png)
+![](/assets/images/docs/gitbook/athena_iam_console2.png)
 
   * Click Next, then review all the details and Create User.
   * Take note of the Access Key ID and Secret Access Key.
@@ -62,7 +62,7 @@ and fill out the details using the information from the previous step:
   * AWS Region is the region where you use Amazon Athena.
   * S3 Staging Path is the bucket Amazon Athena uses for staging/query results, you might have created it already if you used Amazon Athena from AWS console - simply copy the same path.
 
-![](https://redash.io/help/assets/athena_data_source.png)
+![](/assets/images/docs/gitbook/athena_data_source.png)
 
 ## Run a Query
 

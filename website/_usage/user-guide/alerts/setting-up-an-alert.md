@@ -17,7 +17,7 @@ order: 1
 In the Alerts view, you'll see all existing alerts and an option to create a
 new one.
 
-![](https://redash.io/help/assets/alerts.png)
+![](/assets/images/docs/gitbook/alerts.png)
 
 To set up a new alert you'll need to follow these steps:
 
@@ -25,12 +25,12 @@ To set up a new alert you'll need to follow these steps:
 2. Select the column you want to watch.
 3. Select the trigger type (greater/less than or equals to).
 4. Select your magic number:
-    ![](https://redash.io/help/assets/alerts_settings.png)
+    ![](/assets/images/docs/gitbook/alerts_settings.png)
 5. Leave Rearm Seconds empty to get 1 alert when the status changes from Triggered to OK, enter a number to get an alert every time the query runs (by schedule) + the Rearm seconds value. 
 6. Save.
 7. Define alert destinations - email, [Slack]({% link _usage/user-guide/alerts/slack-alert-destination.md %}), HipChat and webhooks are supported.
 
-![](https://redash.io/help/assets/alert_destination.png)
+![](/assets/images/docs/gitbook/alert_destination.png)
 
 ## Alert Status & Frequency
 

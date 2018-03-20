@@ -12,7 +12,7 @@ for a reference.
 You can create them at  `https://app.redash.io/<your company>/query_snippets`
 (currently only admins can create them, but anyone can use).
 
-![](https://redash.io/help/assets/Snippet.png)
+![](/assets/images/docs/gitbook/Snippet.png)
 
 A snippet can be something like: (the ${1:table} part is a placeholder)
 

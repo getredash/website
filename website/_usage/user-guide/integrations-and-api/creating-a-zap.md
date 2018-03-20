@@ -18,16 +18,16 @@ Here's a short example of connecting Redash to Zapier and creating a new Zap:
 4. Connect your Redash account to Zapier: 
     1. Full domain of your Redash account (Something like:  `https://app.redash.io/myorg/` or `https://redash.myorg.com/` (note the slash at the end)) 
     2. Your User ID - go to your account in Redash, the number in the URL just after /users/ is your User ID, i.e.  `https://app.redash.io/myorg/users/{user id}`
-    3. API key - also in your user settings, select the API KEY tab and copy it from there ![](https://redash.io/help/assets/user_api_key.png)
+    3. API key - also in your user settings, select the API KEY tab and copy it from there ![](/assets/images/docs/gitbook/user_api_key.png)
     4. Test your connection! 
 5. Select the query you want to get the Zap for by entering the query ID (`https://app.redash.io/myorg/queries/{query id}`) 
 6. Select the app you want to perform an action when a new query result is added to your query - Slack is a good option. 
 7. Select an action - for this example, we'll use "Send Channel Message". You'll need to connect your Slack account to Zapier as well if you are logged-in in your browser it'll be pretty instant. 
 8. Enter the channel, message text (you can select different column values from your query), bot/your user in slack, bot name, bot icon emoji or icon url, auto expend links and mentions settings. Bots are cool so you should definitely send the zap as a bot. 
 
-![](https://redash.io/help/assets/%E2%80%8F%E2%80%8Fzapier_slack_template_wider.png)
+![](/assets/images/docs/gitbook/%E2%80%8F%E2%80%8Fzapier_slack_template_wider.png)
 
 **Test your connection and turn your zap on!**
 
-![](https://redash.io/help/assets/zappy_bot.png)
+![](/assets/images/docs/gitbook/zappy_bot.png)
 

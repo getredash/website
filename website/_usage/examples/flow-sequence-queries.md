@@ -106,7 +106,7 @@ We used the `WITH` clause in this example - `WITH` clauses allow you to name a s
 
 Voila:
 
-![Sankey Visualization](https://redash.io/help/assets/visualization_examples/Sankey.png)
+![Sankey Visualization](/assets/images/docs/gitbook/visualization_examples/Sankey.png)
 
-![Sunburst Visualization](https://redash.io/help/assets/visualization_examples/Sunburst.png)
+![Sunburst Visualization](/assets/images/docs/gitbook/visualization_examples/Sunburst.png)
 

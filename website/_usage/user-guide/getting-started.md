@@ -71,8 +71,7 @@ Click the “New Visualization” button just above the results to select the
 perfect visualization for your needs.  You can view more detailed instructions
 [here](http://help.redash.io/article/56-creating-a-new-visualization).
 
-![](https://59005a708ebdd932a2ed5f47--
-redashio.netlify.com/assets/images/docs/gifs/visualization/new_viz.gif)
+![](https://59005a708ebdd932a2ed5f47--redashio.netlify.com/assets/images/docs/gifs/visualization/new_viz.gif)
 
 ## Invite Colleagues
 
@@ -95,6 +94,5 @@ required to set up a Redash account.
 
 Users can be added to existing groups - add users to it by typing their name:
 
-![](https://lh4.googleusercontent.com/JeYKlKvqDS_r4q29WkWf-
-3URjixdwYnL4jz4QdHnbtdhN2FGEmPxNILR7qWd71wvImxcmJcTuBkjmwXhfzrBkF7Uh65y48E4t6ofacjT06d5a4zpLb52UJNAzfsfuCUJjMz52ioZ)
+![](https://lh4.googleusercontent.com/JeYKlKvqDS_r4q29WkWf-3URjixdwYnL4jz4QdHnbtdhN2FGEmPxNILR7qWd71wvImxcmJcTuBkjmwXhfzrBkF7Uh65y48E4t6ofacjT06d5a4zpLb52UJNAzfsfuCUJjMz52ioZ)
 

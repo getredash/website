@@ -12,5 +12,5 @@ dashboard group and name.
 e.g. Dashboards named "Foo: Bar" and "Foo: Baz" will both be shown in the Foo
 group in the dashboards menu.
 
-![](https://redash.io/help/assets/group_dashboards.png)
+![](/assets/images/docs/gitbook/group_dashboards.png)
 

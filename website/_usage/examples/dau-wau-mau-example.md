@@ -50,5 +50,5 @@ We used the `WITH` clause in this example - `WITH` clauses allow you to name a s
     		
 
 3. Select a nifty visualization:
-   ![](https://redash.io/help/assets/visualization_examples/dau_wau_mau.png)
+   ![](/assets/images/docs/gitbook/visualization_examples/dau_wau_mau.png)
 

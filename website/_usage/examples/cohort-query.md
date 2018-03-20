@@ -72,5 +72,5 @@ We used the `WITH` clause in this example - `WITH` clauses allow you to name a s
     ```
 
 6. Add a cohort visualization to your query and you're done!
-  ![](https://redash.io/help/assets/visualization_examples/cohort.png)
+  ![](/assets/images/docs/gitbook/visualization_examples/cohort.png)
 

@@ -19,7 +19,7 @@ Please note that || is a PostgreSQL operator/function - for other databases,
 you'll need to use the suitable concat operator.
 
 The results will be clickable links, like in this query in our demo account:
-<http://demo.redash.io/queries/3420/source>![](https://redash.io/help/assets/url_results.png)
+<http://demo.redash.io/queries/3420/source>![](/assets/images/docs/gitbook/url_results.png)
 
 You can also use the anchor tag to show a name instead of the URL:
 

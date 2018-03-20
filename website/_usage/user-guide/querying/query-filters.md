@@ -21,7 +21,7 @@ instead of double quotes) if your database doesn’t support :: in column names
 (such as BigQuery).
 {% endcallout %}
 
-![](https://redash.io/help/assets/filter_example_action_create.png)
+![](/assets/images/docs/gitbook/filter_example_action_create.png)
 
 If you're interested in multi filters (meaning you can select multiple
 values), you will need to alias your column to  `<columnName>::multi-filter`.
@@ -29,5 +29,5 @@ Here's an example:
     
     SELECT action AS "action::multi-filter", COUNT (0) AS "actions count" FROM events GROUP BY action
     
-![](https://redash.io/help/assets/multifilter_example.png)
+![](/assets/images/docs/gitbook/multifilter_example.png)
 
