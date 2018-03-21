@@ -10,8 +10,9 @@ which we will run locally.
 
 ## Setup
 
-### Prepare The Source code
-Firstly, you need to setup the source code directory from the official repository.
+### Clone the Git repository
+
+First you will need to clone the Git repository:
 
 ```bash
 git clone git@github.com:getredash/redash.git
