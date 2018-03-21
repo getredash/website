@@ -21,7 +21,8 @@ Add the following to your environment variables (`.env` file or Docker configura
 * `REDASH_LDAP_SEARCH_TEMPLATE`: The search template used by the DN to find the user. 
 	* By default this is `"(cn=%(username)s)"`, but for AD it should be `"(sAMAccountName=%(username)s)"`
 	* `%(username)s` is the username entered in the ldap login page
-* `REDASH_SEARCH_DN`: The search DN to bind to. Ex. `"cn=users,dc=ORG,dc=local"` **[Required]**
+* `REDASH_LDAP_SEARCH_DN`: The search DN to bind to. Ex. `"cn=users,dc=ORG,dc=local"` **[Required]**
+    * Prior to 4.0, this option was called `REDASH_SEARCH_DN`
 
 ## Docker
 
