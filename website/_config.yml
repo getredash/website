@@ -10,7 +10,22 @@ collections:
   integrations:
     output: true
     permalink: /data-sources/:path
+  kb:
+    output: true
+    permalink: /help/:path
+defaults:
+  - scope:
+      path: ""
+      type: kb
+    values:
+      layout: kb-article
 gems:
+  - algoliasearch-jekyll
   - jekyll-redirect-from
   - jekyll-last-modified-at
   - jekyll-sitemap
+algolia:
+  application_id: 'QFZW4KBIT0'
+  search_key: '1c74ec31459a537e57b2c94a01d061b7'
+  index_name:     'docs'
+  record_css_selector: 'p,ul,tr'

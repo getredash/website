@@ -4,19 +4,20 @@ layout: default
 permalink: /integrations/
 ---
 
-		<section class="section section--pt-lg">
-			<div class="container">
-				<h1 class="text-center">Query All the Data Sources You Need</h1>
-				<h4 class="text-center font-light">Redash supports SQL, NoSQL, Big Data and API data sources - query data from different sources and types to answer complex issues.</h4>
-			</div><!-- container -->
-		</section><!-- section -->
+<section class="section section--pt-lg">
+	<div class="container">
+		<h1 class="text-center">Query all the data sources you need</h1>
+		<h4 class="text-center font-light">Redash supports SQL, NoSQL, Big Data and API data sources - query data from different sources and types to answer complex issues.</h4>
+	</div><!-- container -->
+</section><!-- section -->
 
-		<section class="section bg-mutted">
-			<div class="container container-sm">
+<section class="section">
+	<div class="container container-sm">
+		<div class="row">
+			<div class="col-md-12 text-center">
 				<h2>Databases</h2>
 
 				<div class="cards">
-
 					{% for database in site.data_sources %}
 					<a href="{{database.url}}" class="card__item">
 						<div class="card__item-brand">
@@ -25,15 +26,17 @@ permalink: /integrations/
 						<p class="card__item-title">{{database.name}}</p>
 					</a>
 					{% endfor %}
-
 				</div><!-- cards -->
+			</div>
+		</div>
+	</div><!-- container -->
+</section><!-- section -->
 
-			</div><!-- container -->
-		</section><!-- section -->
 
-
-		<section class="section">
-			<div class="container container-sm">
+<section class="section">
+	<div class="container container-sm">
+		<div class="row">
+			<div class="col-md-12 text-center">
 				<h2>Integrations</h2>
 
 				<div class="cards">
@@ -56,13 +59,16 @@ permalink: /integrations/
 					{% endfor %}
 
 				</div><!-- cards -->
+			</div>
+		</div>
+	</div><!-- container -->
+</section><!-- section -->
 
-			</div><!-- container -->
-		</section><!-- section -->
 
-
-		<section class="section bg-mutted">
-			<div class="container container-sm">
+<section class="section">
+	<div class="container container-sm">
+		<div class="row">
+			<div class="col-md-12 text-center">
 				<h2>Partners</h2>
 
 				<div class="cards">
@@ -77,16 +83,17 @@ permalink: /integrations/
 					{% endfor %}
 
 				</div><!-- cards -->
-
-			</div><!-- container -->
-		</section><!-- section -->
-
-		<!--
-		<section class="section">
-			<div class="container">
-				<p class="lead text-center">Didn't find what you were looking for?<br> Email us: <a href="mailto:email@email.com" class="underline">email@email.com</a></p>
 			</div>
-		</section>
-	-->
+		</div>
+	</div><!-- container -->
+</section><!-- section -->
 
-		{% include get_started.html %}
+<!--
+<section class="section">
+	<div class="container">
+		<p class="lead text-center">Didn't find what you were looking for?<br> Email us: <a href="mailto:email@email.com" class="underline">email@email.com</a></p>
+	</div>
+</section>
+-->
+
+{% include get_started.html %}

@@ -18,45 +18,58 @@ html {
 body {
 	min-height: 100%;
 	@extend .flex, .flex-column;
-	padding-top: $navbar-height;
+	//padding-top: $navbar-height;
 }
 
 main {
 	flex: 1;
 }
 
+.serif {
+ font-family: "PT Serif", serif !important;
+}
 
+.em {
+	font-style: italic;
+}
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	//margin-top: 0;
 	margin-bottom: 20px;
 	line-height: 1.3;
-	font-family: $font-medium;
+	font-weight: 500;
 	&:last-child {
 		margin-bottom: 0;
 	}
 }
 
+
 h1, .h1 {
-	font-size: 42px;
-	font-family: $font-light;
+	color: $black;
+	font-size: 36px;
+
 	@include respond-to(sm) {
-		font-size: 38px;
-	}
-	@include respond-to(xs) {
 		font-size: 32px;
-	}
-}
-h2, .h2 {
-	font-size: 32px;
-	@include respond-to(sm) {
-		font-size: 30px;
 	}
 	@include respond-to(xs) {
 		font-size: 28px;
 	}
 }
+h2, .h2 {
+	color: $black;
+	font-size: 24px;
+	line-height: 40px;
+	@include respond-to(sm) {
+		font-size: 24px;
+		line-height: 38px;
+	}
+	@include respond-to(xs) {
+		font-size: 22px;
+		line-height: 36px;
+	}
+}
 h3, .h3 {
+	color: $black;
 	font-size: 24px;
 	@include respond-to(sm) {
 		font-size: 22px;
@@ -66,12 +79,15 @@ h3, .h3 {
 	}
 }
 h4, .h4 {
+	color: $black;
 	font-size: 21px;
+	line-height: 1.6;
 	@include respond-to(xs) {
 		font-size: 18px;
 	}
 }
 h5, .h5 {
+	color: $black;
 	font-size: 17px;
 	@include respond-to(xs) {
 		font-size: 16px;
@@ -112,6 +128,7 @@ button {
 }
 p {
 	margin-bottom: 10px;
+	color: #111;
 	/* &:last-child {
 		margin-bottom: 0;
 	} */
@@ -126,7 +143,7 @@ p {
 	}
 }
 b, strong {
-	font-family: $font-bold;
+	font-weight: 600;
 }
 
 hr {
@@ -151,7 +168,23 @@ hr {
 	}
 }
 
+.highlight-p {
+	font-size: 18px;
+	color: #707070;
+	letter-spacing: 0;
+	line-height: 30px;
+}
 
+.highlight-ul {
+	list-style-image: url('/assets/images/elements/check.svg');
+	padding-left: 25px;
+	line-height: 30px;
+
+	li {
+		color: #333;
+		font-size: 18px;
+	}
+}
 
 /*Font classes*/
 .font-light {
@@ -202,6 +235,10 @@ hr {
 }
 .bg-blue-gray {
 	background: $blue-gray;
+}
+
+.bg-soft-blue {
+	background: $soft-blue;
 }
 
 /*Margin classess*/

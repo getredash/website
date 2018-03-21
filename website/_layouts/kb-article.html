@@ -1,0 +1,60 @@
+---
+layout: docs
+---
+
+<section class="section section--small bg-mutted">
+  <div class="container">
+    <ol class="breadcrumb">
+      <li><a href="/help/">Home</a></li>
+      <li>{{site.data.usage_collections[page.parent_category]}}</li>
+      <li><a href="/help/{{page.parent_category}}/{{page.categories[0]}}">{% assign cat = (site.kb | where:"category", page.categories[0] | where:"layout", "kb-category") %}{{ cat[0].title }}</a></li>
+      <li class="active">{{page.title}}</li>
+    </ol>
+
+    <div class="row">
+      <div class="col-md-8 col-sm-7 push-xs-down">
+        <h1 class="h2 mt-0">{{page.title}}</h1>
+      </div><!-- col -->
+
+      <div class="col-md-4 col-sm-5">
+        <form action="">
+          <div class="form-group form-group--search">
+            <input class="form-control input-lg form-control--white search-box" type="text" placeholder="Search for...">
+          </div><!-- form-group -->
+        </form>
+      </div><!-- col -->
+    </div><!-- row -->
+  </div><!-- container -->
+</section><!-- section -->
+
+
+<section class="section">
+  {% include kb_search_results.html %}
+  <div class="container content docs">
+    <div class="row row--flex">
+      <div class="col-md-4 col-md-push-8 col-sm-5 col-sm-push-7 push-xs-down">
+      {% if page.toc %}
+        <div class="sticky-in-parent">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <p class="text-uppercase mt-0"><b>QUICK NAV</b></p>
+              <hr class="hr--sm">
+              {{ content | toc_only }}
+            </div><!-- panel-body -->
+          </div><!-- panel -->
+        </div><!-- sticky-in-parent -->
+      {% endif %}
+      </div><!-- col -->
+
+      <div class="col-md-8 col-md-pull-4 col-sm-7 col-sm-pull-5 underline-link-holder">
+        {{page.content}}
+        <hr>
+        <p>
+          <small>
+          <a href="https://github.com/getredash/website/edit/master/website/{{ page.relative_path}}">Edit on GitHub</a>
+          </small>
+        </p>
+      </div><!-- col -->
+    </div><!-- row -->
+  </div><!-- container -->
+</section><!-- section -->

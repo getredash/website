@@ -1,3 +1,6 @@
+---
+description: Use Redash to connect to any data source (Redshift, BigQuery, MySQL, PostgreSQL, MongoDB and many others), query, visualize and share your data to make your company data driven.
+---
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,10 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>{{ page.title }} | Redash</title>
-    <meta name="description" content="Use Redash to connect to any data source (Redshift, BigQuery, MySQL, PostgreSQL, MongoDB and many others), query, visualize and share your data to make your company data driven.">
-    <meta name="keywords" content="Query, SQL, Visualize, Data, Insights, Dashboard, Alert, Alerts, web based sql client, integration, integrations, Amazong Redshift, BigQuery, PotsgreSQL, MySQL, TreasureData, MS SQL Server, MongoDB, Elasticsearch, Hive, Google Spreadsheets, Impala, InfluxDB, Presto, ScyllaDB, Cassandra, Amazon DynamoDB, Python, Vertica, Graphite, Stitch, URL">
-    <meta name="og:image" content="http://redash.io/assets/images/logo.png">
-    <meta name="og:logo" content="http://redash.io/assets/images/logo.png">
+    <meta name="description" content="{{ page.description }}">
+    <meta name="keywords" content="Query, SQL, Visualize, Data, Insights, Dashboard, Alert, Alerts, web based sql client, integration, integrations, Amazong Redshift, BigQuery, PotsgreSQL, MySQL, TreasureData, MS SQL Server, MongoDB, ElasticSearch, Hive, Google Spreadsheets, Impala, InfluxDB, Presto, ScyllaDB, Cassandra, Amazon DynamoDB, Python, Vertica, Graphite, Stitch, URL">
+
     <link rel="icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
@@ -17,6 +19,19 @@
 
   	<meta name="format-detection" content="telephone=no">
   	<link rel="stylesheet" href="/assets/stylesheets/main.css">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:description" content="{{ page.description }}">
+    <meta property="og:url" content="https://redash.io{{ page.url }}">
+    <meta property="og:image" content="{{ site.url }}/assets/images/social-facebook-1200x630.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@getredash">
+    <meta name="twitter:creator" content="@getredash">
+    <meta name="twitter:title" content="{{ page.title }}">
+    <meta name="twitter:description" content="{{ page.description }}">
+    <meta name="twitter:image" content="{{ site.url }}/assets/images/social-twitter-600x314.png">
 </head>
 
 <body>
@@ -28,6 +43,13 @@
 
     {% include footer.html %}
 
+    <script>
+    window.ALGOLIA = {
+      applicationId: '{{site.algolia.application_id}}',
+      searchApiKey: '{{site.algolia.search_key}}'
+    }
+    </script>
+
     <!-- build:js /assets/javascript/vendors.js -->
   	<script src="/assets/vendors/jquery/dist/jquery.min.js"></script>
   	<script src="/assets/vendors/slick-carousel/slick/slick.min.js"></script>
@@ -35,10 +57,14 @@
   	<script src="/assets/vendors/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
     <!-- endbuild -->
 
+    <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearchLite.min.js"></script>
+
     <!-- build:js /assets/javascript/main.js -->
   	<script src="/assets/javascript/jquery.ajaxchimp.js"></script>
+    <script src="/assets/javascript/docs_search.js"></script>
   	<script src="/assets/javascript/scripts.js"></script>
-  	<script src="/assets/javascript/analytics.js"></script>
+  	<script src="/assets/javascript/analytics.js"></script> 
     <!-- endbuild -->
+
 </body>
 </html>

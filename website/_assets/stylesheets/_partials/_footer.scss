@@ -1,15 +1,14 @@
 /* FOOTER */
 
 $footer-bg: $small-blue;
-$footer-color: $legaloblolly;
-$footer-fs: 14px;
+$footer-color: $black;
+$footer-fs: 16px;
 $footer-sm: 14px;
 
 .footer {
-  padding: 55px 0 55px 0;
-  background: $footer-bg;
-  color: $footer-color;
+  padding: 30px 0;
   font-size: $footer-fs;
+  background: #f8fafa;
   @include respond-to(sm) {
     padding: 30px 0 30px 0;
     font-size: $footer-sm;
@@ -25,15 +24,16 @@ $footer-sm: 14px;
 .footer__item {
   @include respond-to(xs-min) {
     &:not(:last-child) {
-      margin-bottom: 20px;
+      margin-bottom: 0px;
     }
   }
 }
 
 .footer__title {
-  color: $white;
-  font-size: 22px;
-  margin-bottom: 30px;
+  font-size: $footer-fs;
+  font-weight: 400;
+  color: #9f9f9f;
+  margin: 0 0 20px 0;
   @include respond-to(sm) {
     margin-bottom: 15px;
     font-size: 20px;
@@ -46,7 +46,7 @@ $footer-sm: 14px;
 .footer__list-link {
   color: $footer-color;
   &:hover, &:focus {
-    color: $white;
+    color: $primary;
   }
 }
 .footer__form {
@@ -56,8 +56,25 @@ $footer-sm: 14px;
   }
 }
 .footer__list--social {
-  @extend .list-inline;
-  .footer__list-link {
-    font-size: 22px;
+  margin-top: 110px;
+}
+
+.get-started {
+  padding: 20px 0 !important;
+
+  .row {
+    background: $seachell;
+    border: 1px solid #C4D2D9;
+    border-radius: 3px;
+    padding: 25px;
   }
+
+  h3 {
+    margin: 0;
+    color: $black;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 2;
+  }
+
 }

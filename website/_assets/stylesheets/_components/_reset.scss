@@ -50,7 +50,8 @@ ol, ul {
 }
 
 .img--has-shadow {
-	box-shadow: -2px 3px 5px 1px rgba($black, .2);
+	border: none;
+	box-shadow: 0 6px 18px -5px rgba(175,175,175,.5);
 }
 
 .img-content {

@@ -1,0 +1,42 @@
+---
+layout: docs
+title: Make Your Company Data Driven
+has_jumbo: true
+permalink: /help/
+---
+  <section class="section bg-mutted">
+		<div class="container">
+      <h1 class="text-center">Knowledge Base</h1>
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+          <form action="">
+            <div class="form-group form-group--search">
+              <input class="form-control input-lg form-control--white search-box" type="text" placeholder="Search for..."> </div><!-- form-group -->
+          </form>
+        </div><!-- col -->
+      </div><!-- row -->
+		</div><!-- container -->
+	</section><!-- section -->
+
+
+  <section class="section">
+    {% include kb_search_results.html %}
+
+		<div class="container content">
+      {% for parent_category in site.data.usage_collections %}
+      <h3>{{parent_category[1]}}</h3>
+      <div class="topics topics--mb-xl">
+        <div class="row row--flex">
+        {% assign categories = (site.kb | sort: 'order', 'last' | where:'layout', 'kb-category' | where:'parent_category', parent_category[0]) %}
+          {% for category in categories %}
+            <div class="col-sm-4">
+              <a href="{{category.url}}" class="topics__item">
+                {{category.title}}
+              </a><!-- topics__item -->
+            </div><!-- col -->
+          {% endfor %}
+        </div><!-- row -->
+      </div><!-- topics -->
+      {% endfor %}
+		</div><!-- container -->
+	</section><!-- section -->

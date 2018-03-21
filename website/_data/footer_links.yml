@@ -1,32 +1,28 @@
-- name: Product
+- name: Redash
   links:
-    - name: Features
-      url: /features/
+    - name: Product
+      url: /product/
     - name: Integrations
       url: /integrations/
     - name: Slack Bot
-      url: /slack/
+      url: /slack
+    - name: Customers
+      url: /customers/
     - name: Pricing
       url: /pricing/
-    - name: Demo
-      url: https://demo.redash.io/
 - name: Company
   links:
-    # - name: About
-      # url: about
+    - name: About
+      url: /about/
     - name: Blog
       url: https://blog.redash.io/
-    - name: Terms of Service
-      url: /terms.html
-    - name: Privacy Policy
-      url: /privacy.html
+    - name: Community
+      url: /community/
 - name: Help
   links:
-    - name: User Guide
+    - name: Knowledge Base
       url: /help/
     - name: Forum
       url: https://discuss.redash.io/
-    - name: Gitter
-      url: https://gitter.im/getredash/redash
     - name: Slack
       url: http://slack.redash.io/

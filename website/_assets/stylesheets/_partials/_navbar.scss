@@ -1,22 +1,28 @@
 /* NAVBAR */
 
 $navbar-bg: $hoki;
-$navbar-color: $legaloblolly;
+$navbar-color: $black;
 $navbar-height: 68px;
-$navbar-fs: 15px;
+$navbar-fs: 14px;
 
 .navbar {
-  background: $navbar-bg;
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
   border-radius: 0;
   margin-bottom: 0;
   border: none;
   min-height: $navbar-height;
-  box-shadow: 0px 0px 3px 0px rgba($black, .5);
+  background: #fff;
+
   &.navbar-without-shadow {
     box-shadow: none;
   }
   &.navbar-has-shadow {
-    box-shadow: 0px 0px 3px 0px rgba($black, .5) !important;
+    box-shadow: 0px 0px 10px -3px rgba($black, .25) !important;
   }
 }
 
@@ -24,26 +30,25 @@ $navbar-fs: 15px;
   &.navbar-right {
     margin-right: 0;
   }
-  >li {
+  > li {
     &.active {
-        >a {
-            color: $white;
-            &:hover, &:focus {
-                background: transparent;
-                color: $white;
-            }
+      > a {
+
+        &:hover, &:focus {
+          background: transparent;
+
         }
+      }
     }
-    >a {
+    > a {
       font-size: $navbar-fs;
+      font-weight: 500;
       color: $navbar-color;
-      font-family: $font-medium;
       @include respond-to(xs-min) {
-        padding: 24px 25px;
+        padding: 24px 12px;
       }
       &:hover, &:focus {
-          background: transparent;
-          color: $white;
+        background: transparent;
       }
     }
   }
@@ -51,6 +56,7 @@ $navbar-fs: 15px;
 
 .navbar-btn {
   color: white !important;
+  font-weight: 500;
 
   @include respond-to(xs-min) {
     margin-top: 17px;
@@ -61,18 +67,34 @@ $navbar-fs: 15px;
     margin-left: 15px;
   }
 }
+
 .navbar-brand {
-  width: 130px;
   height: auto;
-  padding: 7.5px 15px;
+  padding: 15px;
 }
+
 .navbar-brand__img {
-  width: 100%;
+  width: 36px;
+  height: 36px;
 }
+
 .navbar-toggle {
   margin-top: 17px;
   margin-bottom: 17px;
   .icon-bar {
     background: $white;
+  }
+}
+
+// Mobile
+
+.navbar-toggle .icon-bar {
+  background: $primary;
+}
+
+@media (max-width: 767px) {
+  .navbar-collapse {
+    background: #f8fafa;
+    padding-bottom: 10px;
   }
 }

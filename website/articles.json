@@ -1,0 +1,31 @@
+---
+permalink: /kb/articles.json
+---
+
+{% assign articles = (site.kb | where:"layout", "kb-article") %}
+{% assign categories = (site.kb | where:"layout", "kb-category") %}
+
+{
+    "articles": [
+    {% for article in articles %}
+        {
+          "title"    : "{{ article.title }}",
+          "url"     : "{{ article.url }}",
+          "slug"    : "{{ article.slug }}",
+          "category"     : "{{ article.category }}",
+          "date"     : "{{ article.date }}",
+          "content"  : {{ article.content | jsonify }}
+        } {% if forloop.last %}{% else %},{% endif %}
+    {% endfor %}
+    ],
+    "categories": [
+    {% for cat in categories %}
+        {
+          "slug"    : "{{ cat.category }}",
+          "title"    : "{{ cat.title }}",
+          "description"     : "{{ cat.description }}",
+          "parent": 0
+        } {% if forloop.last %}{% else %},{% endif %}
+    {% endfor %}
+    ] 
+}

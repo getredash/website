@@ -1,15 +1,21 @@
-		<section class="section section--small" id="anchor">
-			<div class="container">
-				<h3 class="text-center mb-lg">Join the 1000s of teams already using Redash.</h3>
-				<div id="brands-carousel" class="text-center">
-          {% for user in site.data.users %}
-					<div>
-						<div class="carousel__logo-holder">
-							<img src="{{user.image}}" class="carousel__logo" alt="">
-						</div><!-- carousel__logo-holder -->
-						<p class="carousel__title">{{user.name}}</p>
-					</div>
-          {% endfor %}
-				</div><!-- brands-carousel -->
-			</div><!-- container -->
-		</section><!-- section -->
+<section class="section section--users bg-mutted-soft" id="anchor">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-7">
+                <img src="/assets/images/elements/users-list.png" id="customers-illustrated" class="hidden-xs">
+                <img src="/assets/images/elements/users-list-center.png" id="customers-illustrated" class="visible-xs">
+            </div>
+            <div class="col-sm-5">
+                <h4 class="">Thousands of teams from 125 countries are already using Redash</h4>
+
+                <h3 class="serif em">“Redash brought data insights into our business.” </h3>
+                <p>
+                    <img src="/assets/images/customers/dan-ya-shwartz.jpg" width="32px" class="profile-image">
+                    Dan-ya Shwartz, Data Scientist
+                </p>
+                <a data-track data-track-location='customers' track-event='Clicked Customers' href="/customers/" class="btn btn-secondary">Customers</a>
+            </div>
+        </div>
+
+    </div><!-- container -->
+</section><!-- section -->

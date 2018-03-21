@@ -1,0 +1,12 @@
+div.docs img {
+    padding: 25px;
+    background-color: $alabaster;
+
+    @include img-responsive;
+    @include center-block;
+}
+
+div.docs table {
+	@extend .table;
+	@extend .table-bordered;
+}

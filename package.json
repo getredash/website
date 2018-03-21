@@ -29,7 +29,9 @@
   },
   "scripts": {
     "build": "gulp build && gulp jekyll:build && gulp html:build",
-    "watch": "gulp watch"
+    "watch": "gulp watch",
+    "fetch-contributors": "node bin/fetch-contributors.js",
+    "dev": "gulp"
   },
   "repository": {
     "type": "git",
