@@ -8,43 +8,6 @@ $(document).ready(function(){
 
 	$('[data-toggle="popover"]').popover({trigger: 'hover'});
 
-	//Slick carousel initial
-	$('#brands-carousel').slick({
-		infinite: true,
-  	slidesToShow: 7,
-  	slidesToScroll: 1,
-		autoplay: false,
-  	autoplaySpeed: 3000,
-		pauseOnHover: false,
-		pauseOnFocus: false,
-		responsive: [
-    {
-      breakpoint: 991,
-      settings: {
-        slidesToShow: 5
-      }
-    },
-    {
-      breakpoint: 767,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
-      }
-    }
-  ]
-	});
-
-  $('.screens-carousel .hidden').removeClass('hidden');
-	$('.screens-carousel').slick({
-		infinite: true,
-  	slidesToShow: 1,
-  	slidesToScroll: 1,
-		autoplay: true,
-  	autoplaySpeed: 3000,
-		pauseOnHover: false,
-		pauseOnFocus: false
-	});
-
 	//Navbar shadow scroll action on Landing page
 	$(window).scroll(function (event) {
     var scroll = $(window).scrollTop();
