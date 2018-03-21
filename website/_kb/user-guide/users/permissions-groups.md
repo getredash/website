@@ -1,5 +1,5 @@
 ---
-category: user-groups-permissions
+category: user-management
 parent_category: user-guide
 helpscout_url: https://help.redash.io/article/73-permissions-groups
 title: Permissions & Groups

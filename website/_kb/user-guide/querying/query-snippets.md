@@ -28,10 +28,7 @@ Here are some other ideas for snippets:
 
   * `JOIN`s you use a lot (`JOIN on table1.id = .user_id`)
   * Clauses like `WITH` and `CASE` (`WITH active_users as (SELECT COUNT(DISTINCT user_id) AS active_users_count FROM events_log WHERE created_at > CURRENT_DATE - 7 GROUP BY 1)`)
-  * [Conditional Formatting]({% link _kb/examples/condition.md %})
-  * [Clickable URLs in tables]({% link _kb/examples/clickable.md %})
-  * [Images Inside tables]({% link _kb/examples/image.md %})
-  * [Default Parameter Value]({% link _kb/examples/default.md %})
+  * [Conditional Formatting](https://discuss.redash.io/t/conditional-formatting-general-text-formatting/1706/1)
 
 You can then trigger them while writing a query with the trigger word you
 define - it'll be suggested (auto-completed) like all other fields.
