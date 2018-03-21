@@ -34,7 +34,7 @@
 /help/query-examples-hacks/redash-hacks.html https://discuss.redash.io/c/tips-tricks-query-examples
 /help/query-examples-hacks/query-results-lead-to-filtered-dashboard.html https://discuss.redash.io/c/tips-tricks-query-examples
 /help-onpremise/setup/setting-up-redash-instance.html /help/open-source/setup
-/help-onpremise/setup/settings-environment-variables.html /help/open-source/admin-guide/setings-env-vars
+/help-onpremise/setup/settings-environment-variables.html /help/open-source/admin-guide/env-vars-settings
 /help-onpremise/setup/ssl-https-setup.html /help/open-source/admin-guide/https-ssl-setup
 /help-onpremise/maintenance/how-to-upgrade-redash.html /help/open-source/admin-guide/how-to-upgrade
 /help-onpremise/maintenance/ongoing-maintenance-and-basic-operations.html /help/open-source/admin-guide/maintenance
