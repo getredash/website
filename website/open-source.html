@@ -62,45 +62,11 @@ permalink: /open-source/
         <div class="row">
             <div class="col-md-12">
                 <div class="contributor-list text-center">
+                    {% for contributor in site.data.contributors %}
                     <div class="contributor-pics">
-                        <a href="https://github.com/arikfr"><img src="/assets/images/contributors/arikfr.jpg" width="64px"></a>
+                        <a href="{{ contributor.html_url }}"><img src="{{ contributor.avatar_url }}" width="64px"></a>
                     </div>
-
-                    <div class="contributor-pics">
-                        <a href="https://github.com/amirnissim"><img src="/assets/images/contributors/amirnissim.png" width="64px"></a>
-                    </div>
-
-                    <div class="contributor-pics">
-                        <a href="https://github.com/kravets-levko"><img src="/assets/images/contributors/kravets-levko.jpg" width="64px"></a>
-                    </div>
-
-                    <div class="contributor-pics">
-                        <a href="https://github.com/erans"><img src="/assets/images/contributors/erans.jpg" width="64px"></a>
-                    </div>
-
-                    <div class="contributor-pics">
-                        <a href="https://github.com/javier-sanz"><img src="/assets/images/contributors/javier-sanz.png" width="64px"></a>
-                    </div>
-
-                    <div class="contributor-pics">
-                        <a href="https://github.com/ariarijp"><img src="/assets/images/contributors/ariarijp.jpg" width="64px"></a>
-                    </div>
-
-                    <div class="contributor-pics">
-                        <a href="https://github.com/kyoshidajp"><img src="/assets/images/contributors/kyoshidajp.jpg" width="64px"></a>
-                    </div>
-
-                    <div class="contributor-pics">
-                        <a href="https://github.com/tonyjiangh"><img src="/assets/images/contributors/tonyjiangh.jpg" width="64px"></a>
-                    </div>
-
-                    <div class="contributor-pics">
-                        <a href="https://github.com/kocsmy"><img src="/assets/images/contributors/kocsmy.jpg" width="64px"></a>
-                    </div>
-
-                    <div class="contributor-pics">
-                        <a href="https://github.com/tjwudi"><img src="/assets/images/contributors/tjwudi.jpg" width="64px"></a>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
