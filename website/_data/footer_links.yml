@@ -17,11 +17,7 @@
     - name: Blog
       url: https://blog.redash.io/
     - name: Community
-      url: /open-source/
-    #    - name: Terms of Service
-    #      url: /terms.html
-    #    - name: Privacy Policy
-    #      url: /privacy.html
+      url: /community/
 - name: Help
   links:
     - name: Knowledge Base
