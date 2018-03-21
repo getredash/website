@@ -3,5 +3,6 @@
 rm -rf _site
 npm run build
 cp _redirects _site/
+bundle exec jekyll algolia push -s website
 gitbook install onpremise
 gitbook build onpremise _site/help-onpremise
