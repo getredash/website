@@ -2,6 +2,7 @@
 category: admin-guide
 parent_category: open-source
 title: How to Upgrade
+order: 1
 ---
 
 It's recommended to upgrade your Redash instance once there are new releases, to benefit from new features and bug fixes. The upgrade process is relatively simple, and assuming you used one of the base images we provide, you can simply run the upgrade script. **If you have a custom deployment, you can use the upgrade script as reference to create your own process**.

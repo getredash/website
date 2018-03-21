@@ -4,8 +4,8 @@ parent_category: open-source
 title: Setting up a Redash Instance
 toc: true
 layout: kb-category
+order: 1
 ---
-# Setting up a Redash Instance
 
 The [provisioning script](https://raw.githubusercontent.com/getredash/redash/master/setup/ubuntu/bootstrap.sh) works on Ubuntu 16.04. This script installs all needed dependencies and creates basic setup.
 
@@ -80,9 +80,9 @@ Once you created the instance with either the image or the script, you should ha
 
 Before you can continue, it will ask you to create your admin account. Once this is done, you can start using Redash. But to make it useful, there are a few more steps that you need to manually do to complete the setup:
 
-> #### warning::
->
-> Make sure to complete the web based setup before using the CLI or proceeding with the rest of the setup.
+{% callout warning %}
+Make sure to complete the web based setup before using the CLI or proceeding with the rest of the setup.
+{% endcallout %}
 
 First ssh to your instance and change directory to `/opt/redash`. If you’re using the GCE image, switch to root (`sudo su`).
 
@@ -114,8 +114,6 @@ If you’re passing multiple domains, separate them with commas.
 ### Data Sources
 
 To make Redash truly useful, you need to setup your data sources in it. Browse to `/data_sources` on your instance, to create new data source connection.
-
-See [_documentation_](https://redash.io/help-onpremise/setup/supported-data-sources-options-reqs.html) for the different options. Your instance comes ready with dependencies needed to setup supported sources.
 
 ### Mail Configuration
 
@@ -150,6 +148,6 @@ It’s recommended to upgrade once in a while your Redash instance to benefit fr
 
 Redash uses environment variables for configuration. For a full list of environment variables, see the [settings article](../setup/settings-environment-variables.md).
 
-> #### primary::
->
-> If this is a production setup, you should enforce HTTPS and make sure you set the cookie secret (see [instructions](../setup/ssl-https-setup.md).
+{% callout %}
+If this is a production setup, you should enforce HTTPS and make sure you set the cookie secret (see [instructions](../setup/ssl-https-setup.md).
+{% endcallout %}
