@@ -1,4 +1,8 @@
-# Developer Installation Guide
+---
+category: dev-guide
+parent_category: open-source
+title: Developer Installation Guide
+---
 
 ## Installing Dependencies
 

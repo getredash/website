@@ -1,4 +1,9 @@
-# How to Upgrade Redash
+---
+category: admin-guide
+parent_category: open-source
+title: How to Upgrade
+order: 1
+---
 
 It's recommended to upgrade your Redash instance once there are new releases, to benefit from new features and bug fixes. The upgrade process is relatively simple, and assuming you used one of the base images we provide, you can simply run the upgrade script. **If you have a custom deployment, you can use the upgrade script as reference to create your own process**.
 
@@ -34,9 +39,9 @@ Before doing the upgrade, please make sure to do the following changes to your `
 1. If you have local PostreSQL database, you will need to update the URL from `postgresql://redash` to `postgresql:///redash`.
 2. Remove the `REDASH_STATIC_ASSETS_PATH` definition.
 
-> #### warning::
->
-> You can upgrade to v1.0.0 and later only from v0.12.0, so if you have an older version, run: sudo upgrade --channel legacy first and then sudo upgrade.
+{% callout warning %}
+You can upgrade to v1.0.0 and later only from v0.12.0, so if you have an older version, run: `sudo upgrade --channel legacy` first and then `sudo upgrade`.
+{% endcallout %}
 
 ## Troubleshooting
 

@@ -1,4 +1,8 @@
-# LDAP/AD Authentication
+---
+category: admin-guide
+parent_category: open-source
+title: LDAP/AD Authentication
+---
 
 Starting from Redash v3, there is direct support for LDAP/AD authentication. To set it up you will need to install the `ldap3` Python package (version `2.2.4`, GPL licensed) and add the relevant configuration values (see below). Once you done both, you need to restart the application service.
 

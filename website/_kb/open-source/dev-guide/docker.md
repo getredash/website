@@ -1,4 +1,8 @@
-# Docker Based Developer Installation Guide
+---
+category: dev-guide
+parent_category: open-source
+title: Docker Based Developer Installation Guide
+---
 
 ## Installing Docker, Docker Compose and Node.js
 

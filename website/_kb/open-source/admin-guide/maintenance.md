@@ -1,5 +1,10 @@
-# Ongoing Maintenance and Basic Operations
-
+---
+category: admin-guide
+parent_category: open-source
+title: Ongoing Maintenance and Basic Operations
+toc: true
+order: 2
+---
 ## Configuration and Logs
 
 The supervisor config can be found in: `/etc/supervisor/conf.d/redash.conf` if you're using the new images that install Supervisor with a system packages. Otherwise, you can find it at `/opt/redash/supervisord/supervisord.conf`.

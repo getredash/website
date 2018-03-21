@@ -1,4 +1,8 @@
-# Using a Remote Server and Installing Locally only the Frontend Dependencies
+---
+category: dev-guide
+parent_category: open-source
+title: Using a Remote Server and Installing Locally only the Frontend Dependencies
+---
 
 If you want to work only on the frontend side of Redash, and have a Redash instance
 deployed already (running version 1.0.0 or newer), you can use this instance as

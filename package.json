@@ -1,11 +1,9 @@
 {
   "name": "redash-website",
   "version": "1.0.0",
-  "description": "Redash Website",
+  "description": "Redash Website & Knowledge Base",
   "main": "index.js",
-  "dependencies": {
-    "gitbook-cli": "^2.3.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "bower": "^1.7.9",
     "browser-sync": "^2.16.0",
@@ -42,5 +40,8 @@
   "bugs": {
     "url": "https://github.com/getredash/docs/issues"
   },
-  "homepage": "https://github.com/getredash/docs#readme"
+  "homepage": "https://github.com/getredash/docs#readme",
+  "optionalDependencies": {
+    "fsevents": "^1.1.3"
+  }
 }
