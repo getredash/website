@@ -58,3 +58,11 @@ server {
   }
 }
 ```
+
+## Using another proxy/load balancer infront of nginx
+
+If you setup includes another proxy/load balancer in front of Redash's nginx, you will need to add the following header to your nginx configuration to make sure it knows the correct protocol in use:
+
+```
+proxy_set_header X-Forwarded-Proto $http_x_forwarded_proto;
+```
