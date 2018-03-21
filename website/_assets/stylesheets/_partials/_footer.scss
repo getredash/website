@@ -8,6 +8,7 @@ $footer-sm: 14px;
 .footer {
   padding: 30px 0;
   font-size: $footer-fs;
+  background: #f8fafa;
   @include respond-to(sm) {
     padding: 30px 0 30px 0;
     font-size: $footer-sm;
