@@ -10,6 +10,15 @@ which we will run locally.
 
 ## Setup
 
+### Clone the Git repository
+
+First you will need to clone the Git repository:
+
+```bash
+git clone git@github.com:getredash/redash.git
+cd redash/
+```
+
 ### Create Docker Services
 Once you have the above setup, you need to create the Docker services:
 
