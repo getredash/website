@@ -1,4 +1,13 @@
 $(document).ready(function(){
+
+  $('#main-video').hover(function toggleControls() {
+    if (this.hasAttribute("controls")) {
+      this.removeAttribute("controls");
+    } else {
+      this.setAttribute("controls", "controls");
+    }
+  });
+
 	if ($(window).width() > 767) {
 		//Initial sticky-kit Source: http://leafo.net/sticky-kit/
 		$(".sticky-in-parent").stick_in_parent({
