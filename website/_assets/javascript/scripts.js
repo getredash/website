@@ -17,21 +17,21 @@ $(document).ready(function(){
 
 	$('[data-toggle="popover"]').popover({trigger: 'hover'});
 
-	//Navbar shadow scroll action on Landing page
-	$(window).scroll(function (event) {
-    var scroll = $(window).scrollTop();
-		var headerHeight = 68;
-    var offset = $('#anchor').offset();
-
-    if (offset) {
-      $('.navbar').toggleClass('navbar-has-shadow',
-       //add 'ok' class when div position match or exceeds else remove the 'ok' class.
-        scroll >= offset.top - headerHeight
-      );
-    } 
-	});
-	//trigger the scroll
-	$(window).scroll();
+	// //Navbar shadow scroll action on Landing page
+	// $(window).scroll(function (event) {
+    // var scroll = $(window).scrollTop();
+	// 	var headerHeight = 68;
+    // var offset = $('#anchor').offset();
+    //
+    // if (offset) {
+     //  $('.navbar').toggleClass('navbar-has-shadow',
+     //   //add 'ok' class when div position match or exceeds else remove the 'ok' class.
+     //    scroll >= offset.top - headerHeight
+     //  );
+    // }
+	// });
+	// //trigger the scroll
+	// $(window).scroll();
 
   $('a[data-track]').each(function(_, element) {
     var $element = $(element);
