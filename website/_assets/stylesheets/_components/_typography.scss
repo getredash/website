@@ -111,20 +111,19 @@ a {
 		text-decoration: none;
 	}
 }
+
+p a {
+	transition: all 0.25s cubic-bezier(0.2, 1, 0.4, 1);
+	&:hover, &:focus {
+		background-color: #daeeff;
+	}
+}
+
 button {
 	@include transition(250ms);
 }
 .underline {
 	text-decoration: underline;
-}
-.underline-link-holder {
-	a {
-		color: $body-text-color;
-		border-bottom: 1px solid $danger;
-		&:hover, &:focus {
-			color: darken($danger, 10%);
-		}
-	}
 }
 p {
 	margin-bottom: 10px;
