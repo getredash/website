@@ -302,6 +302,10 @@
     padding: 20px 0;
   }
 
+  .section__feature--query h2 {
+    margin-top: 25px;
+  }
+
   .contributor-list--team {
     flex-direction: column;
 
@@ -315,7 +319,7 @@
   }
 
   #integrations-illustrated {
-    width: 50%;
+    width: 75%;
     margin-bottom: 25px;
   }
 
@@ -371,7 +375,7 @@
   }
 
   #visualize-illustrated, #write-query-illustrated {
-    width: 50%;
+    width: 75%;
   }
   
   .section--users {
