@@ -1,4 +1,8 @@
-# LDAP/AD Authentication
+---
+category: admin-guide
+parent_category: open-source
+title: LDAP/AD Authentication
+---
 
 Starting from Redash v3, there is direct support for LDAP/AD authentication. To set it up you will need to install the `ldap3` Python package (version `2.2.4`, GPL licensed) and add the relevant configuration values (see below). Once you done both, you need to restart the application service.
 
@@ -21,7 +25,8 @@ Add the following to your environment variables (`.env` file or Docker configura
 * `REDASH_LDAP_SEARCH_TEMPLATE`: The search template used by the DN to find the user. 
 	* By default this is `"(cn=%(username)s)"`, but for AD it should be `"(sAMAccountName=%(username)s)"`
 	* `%(username)s` is the username entered in the ldap login page
-* `REDASH_SEARCH_DN`: The search DN to bind to. Ex. `"cn=users,dc=ORG,dc=local"` **[Required]**
+* `REDASH_LDAP_SEARCH_DN`: The search DN to bind to. Ex. `"cn=users,dc=ORG,dc=local"` **[Required]**
+    * Prior to 4.0, this option was called `REDASH_SEARCH_DN`
 
 ## Docker
 

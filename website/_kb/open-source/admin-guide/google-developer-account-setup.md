@@ -1,4 +1,8 @@
-# How to Create a Google Developers Project
+---
+category: admin-guide
+parent_category: open-source
+title: How to Create a Google Developers Project
+---
 
 1. Go to the [Google Developers Console](https://console.developers.google.com/).
 
@@ -27,14 +31,12 @@
   ```
   http://redash.example.com
   https://redash.example.com
-
   ```
 
   * In the Authorized redirect URI field, enter the redirect URI callback:
 
   ```
   http://redash.example.com/oauth/google_callback
-
   ```
 
   * Click the `Create` button.

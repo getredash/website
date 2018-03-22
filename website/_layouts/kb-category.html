@@ -35,6 +35,7 @@ layout: docs
       <div class="col-md-8 col-sm-7 push-xs-down">
         {{page.content}}
 
+        {% if page.hide_topics != true %}
         <ul class="topics__list list-unstyled">
           {% assign articles = (site.kb | sort: 'order', 'last') %}
           {% for article in articles %}
@@ -48,6 +49,7 @@ layout: docs
           {% endif %}
           {% endfor %}
         </ul><!-- topics__list -->
+        {% endif %}
       </div><!-- col -->
 
       <div class="col-md-4 col-sm-5">

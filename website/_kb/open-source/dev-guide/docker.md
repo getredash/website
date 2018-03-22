@@ -1,4 +1,8 @@
-# Docker Based Developer Installation Guide
+---
+category: dev-guide
+parent_category: open-source
+title: Docker Based Developer Installation Guide
+---
 
 ## Installing Docker, Docker Compose and Node.js
 
@@ -9,6 +13,15 @@ which we will run locally.
 2. [Install Node.js](https://nodejs.org/en/download/) (v6 or later is recommended, can be installed with Homebrew on OS/X)
 
 ## Setup
+
+### Clone the Git repository
+
+First you will need to clone the Git repository:
+
+```bash
+git clone git@github.com:getredash/redash.git
+cd redash/
+```
 
 ### Create Docker Services
 Once you have the above setup, you need to create the Docker services:

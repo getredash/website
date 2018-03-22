@@ -18,19 +18,12 @@ slug: getting-started
 
 ## Add A Data Source
 
-The first thing you'll want to do is connect at least one [data source
-]({% link _kb/data-sources/supported-data-sources.md %}) . You can add a
-new data source from the quick link in the navigation bar:
+The first thing you'll want to do is connect at least one [data source]({% link _kb/data-sources/supported-data-sources.md %}). You can add open the Data Sources management page by clickingo on the settings icon:
 
-![](https://59005a708ebdd932a2ed5f47--redashio.netlify.com/assets/images/docs/data_source_quick_link.png)
-
-Or via the Data Source tab in your admin settings:
-
-![](https://59005a708ebdd932a2ed5f47--redashio.netlify.com/assets/images/docs/add_new_datasource.png)
+![](/assets/images/docs/settings_icon.png)
 
 {% callout %}
-If you’re using the Hosted Redash service and your datasource is behind a firewall, you'll need to allow access from
-the IP address 52.71.84.157 in your database firewall/Security Groups.
+If you’re using the Hosted Redash service and your datasource is behind a firewall, you'll need to allow access from the IP address 52.71.84.157 in your database firewall/Security Groups.
 {% endcallout %}
 
 {% callout %}
@@ -39,35 +32,24 @@ When possilble, we recommend using a user with *read-only permissions*.
 
 ## Write A Query
 
-Once you've connected at least one data source, give it a go and write a query
-in our comfy Query Editor!
-
-Click “New Query” on the homepage or under the Queries menu in the navigation
-bar. See the   [“Writing Queries” page]({% link _kb/user-guide/querying/writing-queries.md %}) for detailed instructions on how to write queries.
+Once you've connected at least one data source, give it a go and write a query: **click on "Create" in the navigation bar, and then choose "Query"**. See the [“Writing Queries” page]({% link _kb/user-guide/querying/writing-queries.md %}) for detailed instructions on how to write queries.
 
 ![](https://59005a708ebdd932a2ed5f47--redashio.netlify.com/assets/images/docs/gifs/queries/add_new_query.gif)
 
-## Create A Dashboard
-
-Easily combine visualizations and text into thematic dashboards and share them
-in minutes. You can add a new dashboard via the Dashboard menu (the bottom
-item will be 'New Dashboard') or via the home screen. For more details,
-[click here]({% link _kb/user-guide/dashboards/dashboard-editing.md %}).
-
-![](https://59005a708ebdd932a2ed5f47--redashio.netlify.com/assets/images/docs/gifs/dashboards/dashboards.gif)
-
 ## Adding Visualizations
 
-Query results (good old tables) are great, but visualizations are even better
-at helping us digest complex information. Redash supports  [multiple types of
-visualizations]({% link _kb/user-guide/visualizations/visualization-types.md %}) so you
-should find one that suits your needs (let us know if something is missing).
+Query results (good old tables) are great, but visualizations are even better at helping us digest complex information. Redash supports [multiple types of
+visualizations]({% link _kb/user-guide/visualizations/visualization-types.md %}) so you should find one that suits your needs (let us know if something is missing).
 
-Click the “New Visualization” button just above the results to select the
-perfect visualization for your needs.  You can view more detailed instructions
-[here]({% link _kb/user-guide/visualizations/visualizations-how-to.md %}).
+Click the “New Visualization” button just above the results to select the perfect visualization for your needs.  You can view more detailed instructions [here]({% link _kb/user-guide/visualizations/visualizations-how-to.md %}).
 
 ![](https://59005a708ebdd932a2ed5f47--redashio.netlify.com/assets/images/docs/gifs/visualization/new_viz.gif)
+
+## Create A Dashboard
+
+Easily combine visualizations and text into thematic dashboards and share them in minutes. You can add a new dashboard by clicking on "Create" in the navigation bar, and then choose "Dashboard". For more details, [click here]({% link _kb/user-guide/dashboards/dashboard-editing.md %}).
+
+![](https://59005a708ebdd932a2ed5f47--redashio.netlify.com/assets/images/docs/gifs/dashboards/dashboards.gif)
 
 ## Invite Colleagues
 
