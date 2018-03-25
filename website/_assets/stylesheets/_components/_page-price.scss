@@ -7,6 +7,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  transition: all 0.5s ease-in-out;
 
   .pricing-body {
     flex-grow: 1;
@@ -32,6 +33,7 @@
     font-size: 150%;
     font-weight: 500;
     margin: 20px 0;
+    transition: all 0.2s ease-in-out;
 
     sub {
       bottom: 0;
@@ -70,6 +72,8 @@
     .pricing-charge {
       color: darken(#2196F3, 5%);
     }
+
+    box-shadow: 0 6px 18px -5px rgba(175,175,175,.5);
   }
 }
 
