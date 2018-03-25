@@ -1,4 +1,26 @@
 /* PRICE */
+
+.on-premise-box {
+  border: 1px solid #e8e8e8;
+  border-radius: 3px;
+  display: inline-block;
+  margin-top: 50px;
+  padding: 15px;
+  transition: all 0.5s ease-in-out;
+
+  p:last-of-type {
+    margin: 0;
+  }
+
+  &:hover, &:active, &.active {
+    box-shadow: 0 6px 18px -5px rgba(175,175,175,.5);
+  }
+
+  @media (max-width: 692px) {
+    margin-top: 25px;
+  }
+}
+
 .pricing-plan {
   width: 25%;
   margin: 0 15px;
@@ -86,6 +108,8 @@
     .pricing-plan {
       width: 100%;
       margin-bottom: 25px;
+      margin-left: 0;
+      margin-right: 0;
     }
   }
 }
