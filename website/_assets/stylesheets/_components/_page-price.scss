@@ -72,3 +72,16 @@
     }
   }
 }
+
+.pricing-plan-container {
+  display: flex;
+
+  @media (max-width: 692px) {
+    flex-direction: column;
+
+    .pricing-plan {
+      width: 100%;
+      margin-bottom: 25px;
+    }
+  }
+}
