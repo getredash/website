@@ -131,10 +131,10 @@
     border: 1px solid rgba(102,136,153,0.18);
     box-shadow: 0 5px 9px -1px #EBF2FF;
     border-radius: 3px;
-    width: 29%;
+    width: 30%;
     float: left;
     text-align: center;
-    margin: 0 15px;
+    margin: 0 10px;
     padding: 15px;
   }
 
@@ -356,7 +356,7 @@
   .section__more-features .feature-container {
     margin: 0 5px;
     padding: 7px;
-    width: 28%;
+    width: 30%;
 
     img {
       width: 64px;
@@ -391,6 +391,10 @@
   .highlight-p, .highlight-ul li {
     font-size: 14px;
     line-height: 1.5;
+  }
+
+  .section__integrations p {
+    margin-bottom: 25px;
   }
   
   .footer__item--other {
