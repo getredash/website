@@ -1,7 +1,7 @@
 .featured-customer {
   box-shadow: 0 4px 9px rgba(0,0,0,.05125);
   border: 1px solid #eaeaea;
-  border-radius: 3px;
+  border-radius: $border-radius;
 
   .featured-customer--content {
     padding: 25px;

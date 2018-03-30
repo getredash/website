@@ -107,7 +107,7 @@ label {
 }
 
 .nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
-  border-radius: 3px;
+  border-radius: $border-radius;
   background-color: #f8fafa;
 }
 
@@ -119,7 +119,7 @@ label {
 
 .navbar-nav>li>a:focus, .navbar-nav>li>a:hover {
   background: #f8fafa;
-  border-radius: 3px;
+  border-radius: $border-radius;
 }
 
 .dropdown-menu {
