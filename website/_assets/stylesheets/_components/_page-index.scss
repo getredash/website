@@ -3,7 +3,7 @@
     //background: rgba(255,251,236,.9);
     padding: 3px 7px;
     color: rgba(0, 0, 0, 0.9);
-    border-radius: 2px;
+    border-radius: $border-radius;
     //border: 1px solid rgba(236, 236, 236, 0.6);
     opacity: 0.8;
     transition: all 1.5s cubic-bezier(0.2, 1, 0.4, 1);

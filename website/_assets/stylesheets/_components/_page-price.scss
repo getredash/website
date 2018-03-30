@@ -10,7 +10,7 @@
 
 .on-premise-box {
   border: 1px solid #e8e8e8;
-  border-radius: 3px;
+  border-radius: $border-radius;
   display: inline-block;
   padding: 15px;
   transition: all 0.5s ease-in-out;
@@ -38,7 +38,7 @@
     flex-grow: 1;
     flex-shrink: 0;
     box-shadow: 0 0 0 1px #e8e8e8;
-    border-radius: 3px;
+    border-radius: $border-radius;
     padding: 15px;
     display: flex;
     flex-direction: column;
@@ -89,7 +89,7 @@
       padding: 0.3em 2em;
       text-transform: uppercase;
       background: #2196F3;
-      border-radius: 3px;
+      border-radius: $border-radius;
     }
   }
 

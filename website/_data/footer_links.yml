@@ -14,6 +14,8 @@
   links:
     - name: About
       url: /about/
+    - name: Contact
+      url: /contact/
     - name: Blog
       url: https://blog.redash.io/
     - name: Community

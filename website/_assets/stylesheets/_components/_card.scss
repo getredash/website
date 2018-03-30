@@ -57,7 +57,7 @@ $card-hover-color: $hoki;
   @include transition(250ms);
   box-shadow: 0 4px 9px rgba(0,0,0,.05125);
   border: 1px solid #eaeaea;
-  border-radius: 3px;
+  border-radius: $border-radius;
   padding: 30px;
   @extend .flex, .flex-content-center, .flex-item-center;
   background: $white;
