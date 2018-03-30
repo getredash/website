@@ -112,7 +112,7 @@ a {
 	}
 }
 
-p a {
+p a, li a {
 	transition: all 0.25s cubic-bezier(0.2, 1, 0.4, 1);
 	&:hover, &:focus {
 		background-color: #daeeff;
