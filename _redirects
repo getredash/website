@@ -43,3 +43,5 @@
 /help-onpremise/dev/setup.html /help/open-source/dev-guide/setup
 /dev/remote-server.html /help/open-source/dev-guide/remote-server
 /help-onpremise/* /help/
+/features /product 301
+/get-started /pricing
