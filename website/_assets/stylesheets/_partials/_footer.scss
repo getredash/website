@@ -65,7 +65,7 @@ $footer-sm: 14px;
   .row {
     background: $seachell;
     border: 1px solid #C4D2D9;
-    border-radius: 3px;
+    border-radius: $border-radius;
     padding: 25px;
   }
 
