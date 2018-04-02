@@ -18,7 +18,6 @@
   "dependencies": {
     "jquery": "latest",
     "bootstrap-sass": "bootstrap-sass-official#^3.3.7",
-    "slick-carousel": "^1.6.0",
     "sticky-kit": "^1.1.2"
   }
 }
