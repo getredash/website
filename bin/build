@@ -1,6 +1,9 @@
 #!/bin/bash
 
+# We run algolia push first, as it builds the website but skips the assets build
 bundle exec jekyll algolia push -s website
 rm -rf _site
+
+# Build the website
 npm run build
 cp _redirects _site/
