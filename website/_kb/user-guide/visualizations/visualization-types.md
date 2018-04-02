@@ -34,8 +34,7 @@ redashio.netlify.com/assets/images/docs/visualization_examples/cohort.png)
 redashio.netlify.com/assets/images/docs/visualization_examples/counter.png)
 
 ### Funnel
-![](https://59005a708ebdd932a2ed5f47--
-redashio.netlify.com/assets/images/docs/visualization_examples/funnel.png)
+![](/assets/images/docs/visualization_examples/funnel.png)
 
 ### Map
 
