@@ -65,7 +65,7 @@ share insights with others in your team via Email, Slack or HipChat.
 Users can only be invited by admins - to invite a new user go to
 Settings>Users and hit New User:
 
-![](https://lh4.googleusercontent.com/oI5jelwLl2ke9qFzJyckCmBgKlmAiofRLUdR5uBBxzasGLsC-0-AC7TPvOGUnJZbWCVy3ESioGq4C5-7FDovR5m5tX364RrmA9riJ54rU1rMaMAM10supFsDlOvok0F4Ib2gcunJ)
+![](/assets/images/docs/gitbook/add-user.png)
 
 Then, fill in their name and email. They'll get an invite via email and be
 required to set up a Redash account.
