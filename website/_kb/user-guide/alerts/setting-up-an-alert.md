@@ -14,13 +14,14 @@ title: Setting Up An Alert
 slug: setting-up-an-alert
 order: 1
 ---
-In the Alerts view, you'll see all existing alerts and an option to create a
-new one.
+In the Alerts view, you'll see all existing alerts.
 
 ![](/assets/images/docs/gitbook/alerts.png)
 
 To set up a new alert you'll need to follow these steps:
 
+0. First, go to Create > Alert
+    ![](/assets/images/docs/gitbook/create-alert.png)
 1. Select the query you want to trigger an alert for (just start typing). Note that queries with parameters won't work.
 2. Select the column you want to watch.
 3. Select the trigger type (greater/less than or equals to).

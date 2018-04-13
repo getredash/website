@@ -18,7 +18,5 @@ widgets, so no navigation and other buttons you see in the Redash app).
 To share a dashboard, toggle the share URL and send the secret link that gets
 generated:
 
-![](/assets/images/docs/gitbook/disabled_share_url.png)
-
-![](/assets/images/docs/gitbook/share_dash_link.png)
+![](/assets/images/docs/gitbook/turn-on-url-sharing.gif)
 
