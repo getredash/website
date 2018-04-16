@@ -8,7 +8,7 @@ order: 1
 It's recommended to upgrade your Redash instance once there are new releases, to benefit from new features and bug fixes. The upgrade process is relatively simple, and assuming you used one of the base images we provide, you can simply run the upgrade script. **If you have a custom deployment, you can use the upgrade script as reference to create your own process**.
 
 {% callout warning %}
-Bitnami instances are not comptaible with this script.
+Bitnami instances are not compatible with this script.
 {% endcallout %}
 
 ## How to upgrade (v1.0.0 and newer)
