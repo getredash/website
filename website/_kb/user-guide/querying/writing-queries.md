@@ -33,12 +33,10 @@ Sources category]({% link _kb/data-sources/querying_category.md %}).
 
 To the left of the query editor, you will find the Schema Browser:
 
-![](http://d33v4339jhl8k0.cloudfront.net/docs/assets/5877897f90336009736c5d9b/images/5a42799e0428631938004ad7/file-qJlSAp0sl0.png)
+<img src="/assets/images/docs/gitbook/schema-browser.png" width="60%">
 
 The schema browser will list all your tables, and when clicking on a table
-will show its columns. You can filter the schema with the search box and
-refresh it by clicking on the refresh button (otherwise it refreshes
-periodically in the background).
+will show its columns. To insert an item into your query, simply click the double arrow on the right side. You can filter the schema with the search box and refresh it by clicking on the refresh button (otherwise it refreshes periodically in the background).
 
 {% callout %}
 Please note that not all data source types support loading the schema.
@@ -59,11 +57,11 @@ autocomplete can be manually triggered with `Ctrl` \+ `Space`.
 ### Archiving a Query
 
 Once a query is no longer useful, you can archive it. Archiving is almost the
-same as deleting, except that direct links to the query will still work. To
+same as deleting, except that **direct links to the query will still work.** To
 archive a query, open the little menu at the top-right area of the query
 editor, next to the Save button and click Archive.
 
-![archive_query.png](https://github.com/getredash/website/blob/master/user-guide/assets/archive_query.png?raw=true)
+![](/assets/images/docs/gitbook/archive_query.png)
 
 ### Duplicating (Forking) a Query
 

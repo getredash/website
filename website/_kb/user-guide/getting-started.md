@@ -72,5 +72,5 @@ required to set up a Redash account.
 
 Users can be added to existing groups - add users to it by typing their name:
 
-![](https://lh4.googleusercontent.com/JeYKlKvqDS_r4q29WkWf-3URjixdwYnL4jz4QdHnbtdhN2FGEmPxNILR7qWd71wvImxcmJcTuBkjmwXhfzrBkF7Uh65y48E4t6ofacjT06d5a4zpLb52UJNAzfsfuCUJjMz52ioZ)
+![](/assets/images/docs/gitbook/view-only-groups.png)
 
