@@ -20,7 +20,7 @@ slug: slack-bot-posting-visualizations-to-slack
 
 ## Setting up the Slack Bot
 
-1. Click on the "Add to Slack" link:
+1. Click on the [Add to Slack](https://redash.io/slack) link:
     ![](https://s3.amazonaws.com/helpscout.net/docs/assets/5877897f90336009736c5d9b/images/5a1c432e2c7d3a272c0df966/file-TQbF399E9U.png)
 2. Once the bot is added to your Slack workspace, you'll get pinged by it to finish setup  
     ![](https://s3.amazonaws.com/helpscout.net/docs/assets/5877897f90336009736c5d9b/images/5a1c4476042863319924c774/file-GPUjLNs1gl.png)
