@@ -29,9 +29,9 @@ To set up a new alert you'll need to follow these steps:
     ![](/assets/images/docs/gitbook/alerts_settings.png)
 5. Leave Rearm Seconds empty to get 1 alert when the status changes from Triggered to OK, enter a number to get an alert every time the query runs (by schedule) + the Rearm seconds value. 
 6. Save.
-7. Define alert destinations - email, [Slack]({% link _kb/user-guide/alerts/slack-alert-destination.md %}), HipChat and webhooks are supported.
+7. Define alert destinations - email, [Slack]({% link _kb/user-guide/alerts/slack-alert-destination.md %}), Mattermost, HipChat and webhooks are supported.
 
-![](/assets/images/docs/gitbook/alert_destination.png)
+<img src="/assets/images/docs/gitbook/alert_destination.png" width="60%">
 
 ## Alert Status & Frequency
 
