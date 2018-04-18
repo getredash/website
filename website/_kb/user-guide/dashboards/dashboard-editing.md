@@ -7,12 +7,12 @@ slug: creating-a-dashboard
 toc: true
 ---
 
-## Creating a Dashbaord
+## Creating a Dashboard
 
 A dashboard is defined as a combination of visualizations and text boxes. Want
 to know more? Keep reading!
 
-![](https://s3.amazonaws.com/helpscout.net/docs/assets/5877897f90336009736c5d9b/images/5a4e89222c7d3a194367dd0d/file-uINxRd8tXD.gif)
+![](/assets/images/docs/gifs/dashboards/dashboards.gif)
 
 You can create a new dashboard from the navigation:
 

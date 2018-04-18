@@ -49,9 +49,9 @@ Click the “New Visualization” button just above the results to select the pe
 
 ## 4. Create A Dashboard
 
-You can combine visualizations and text into thematic and powerful dashboards and share them. Add a new dashboard by clicking on "Create" in the navigation bar, and then choose "Dashboard". For more details, [click here]({% link _kb/user-guide/dashboards/dashboard-editing.md %}).
+You can combine visualizations and text into thematic & powerful dashboards. Add a new dashboard by clicking on "Create" in the navigation bar, and then choose "Dashboard". Dashboards are visible for your team members or they can be shared publicly. For more details, [click here]({% link _kb/user-guide/dashboards/dashboard-editing.md %}).
 
-![](https://59005a708ebdd932a2ed5f47--redashio.netlify.com/assets/images/docs/gifs/dashboards/dashboards.gif)
+![](/assets/images/docs/gifs/dashboards/dashboards.gif)
 
 ## 5. Invite Colleagues
 

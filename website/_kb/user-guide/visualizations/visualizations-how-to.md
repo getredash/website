@@ -6,7 +6,7 @@ toc: true
 order: 1
 ---
 
-## Creat a New Visualization
+## Create a New Visualization
 
 Once your query has finished running for the first time, you can add a
 visualization for your results by clicking the “New Visualization” button
