@@ -36,7 +36,7 @@ We recommend using a user with **read-only permissions**, if possible.
 
 Once you've connected a data source, it's time to write a query: **click on "Create" in the navigation bar, and then choose "Query"**. See the [“Writing Queries” page]({% link _kb/user-guide/querying/writing-queries.md %}) for detailed instructions on how to write queries.
 
-![](https://59005a708ebdd932a2ed5f47--redashio.netlify.com/assets/images/docs/gifs/queries/add_new_query.gif)
+![](/assets/images/docs/gifs/queries/add_new_query.gif)
 
 ## 3. Add Visualizations
 
@@ -45,7 +45,7 @@ visualizations]({% link _kb/user-guide/visualizations/visualization-types.md %})
 
 Click the “New Visualization” button just above the results to select the perfect visualization for your needs.  You can view more detailed instructions [here]({% link _kb/user-guide/visualizations/visualizations-how-to.md %}).
 
-![](https://59005a708ebdd932a2ed5f47--redashio.netlify.com/assets/images/docs/gifs/visualization/new_viz.gif)
+![](/assets/images/docs/gifs/visualization/new_viz.gif)
 
 ## 4. Create A Dashboard
 

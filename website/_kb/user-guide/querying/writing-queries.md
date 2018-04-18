@@ -7,10 +7,9 @@ slug: writing-queries
 toc: true
 order: 1
 ---
-To start working on a new query, click "New Query" on the home page or under
-the Queries menu in the navigation bar.
+To start working on a new query, click "Create" in the nav then select "Query".
 
-![](https://s3.amazonaws.com/helpscout.net/docs/assets/5877897f90336009736c5d9b/images/5a57bbbc042863193800e753/file-rzKFwqy8SP.gif)
+![](/assets/images/docs/gifs/queries/add_new_query.gif)
 
 ###  Publish/Unpublish
 
@@ -69,5 +68,5 @@ If you need to create a copy of an existing query (created by you or someone
 else), you can fork it. To fork a query, just click on the Fork button (see
 example below)
 
-![](https://s3.amazonaws.com/helpscout.net/docs/assets/5877897f90336009736c5d9b/images/5a57c0f92c7d3a1943682776/file-GtsnSfIBTe.gif)
+![](/assets/images/docs/gifs/queries/fork_query.gif)
 
