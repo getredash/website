@@ -2,7 +2,7 @@
 category: dashboards
 parent_category: user-guide
 helpscout_url: https://help.redash.io/article/63-grouping-dashboards
-title: Grouping Dashboards Using #Hashtags
+title: Grouping Dashboards Using Tags
 slug: grouping-dashboards
 ---
 Dashboards can be grouped with `#hashtags`. You simply add the `#hashtags` to the dashboard name. All currently used `#hashtags` will appear on the dashboards page left pane:
