@@ -12,8 +12,11 @@ enabled by following a naming convention for columns.
 If you want to focus on a specific value, you'll need to alias your column to
 `<columnName>::filter` . Here's an example:
 
-    SELECT action AS "action::filter", COUNT (0) AS "actions count" FROM events GROUP BY action
-    
+```
+SELECT action AS "action::filter", COUNT (0) AS "actions count" 
+FROM events 
+GROUP BY action
+``` 
 
 {% callout %}
 Note that you can use  `__filter` or `__multiFilter`, (double underscore
@@ -27,7 +30,11 @@ If you're interested in multi filters (meaning you can select multiple
 values), you will need to alias your column to  `<columnName>::multi-filter`.
 Here's an example:
     
-    SELECT action AS "action::multi-filter", COUNT (0) AS "actions count" FROM events GROUP BY action
-    
+```
+SELECT action AS "action::multi-filter", COUNT (0) AS "actions count" 
+FROM events 
+GROUP BY action
+```
+
 ![](/assets/images/docs/gitbook/multifilter_example.png)
 
