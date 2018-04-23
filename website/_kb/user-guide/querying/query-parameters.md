@@ -23,8 +23,7 @@ In the above example `{{action}}` is the parameter definition. Once added and
 recognized by Redash, you will see parameter input box appear:
 {% endraw %}
 
-![](https://s3.amazonaws.com/helpscout.net/docs/assets/5877897f90336009736c5d9b/images/5a0951a22c7d3a272c0d99bd
-/file-o7Gfv8oYHD.png)
+<img src="/assets/images/docs/gitbook/query-parameter.png" width="100%">
 
 Now you can input any value in this text box and execute the query to get the
 results.
@@ -33,8 +32,7 @@ results.
 
 Clicking on the cog icon next to the parameter will open its settings window:
 
-![](https://s3.amazonaws.com/helpscout.net/docs/assets/5877897f90336009736c5d9b/images/5a09524d04286331992465de
-/file-FC6jmuhei4.png)
+<img src="/assets/images/docs/gitbook/query-parameter-modal.png" width="100%">
 
 {% raw %}
   * **Title** : by default the parameter title will be the same as the keyword in the query text. If you want to give it a friendlier name, you can change it here.

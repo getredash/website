@@ -25,7 +25,7 @@ Here's a short example of connecting Redash to Zapier and creating a new Zap:
 7. Select an action - for this example, we'll use "Send Channel Message". You'll need to connect your Slack account to Zapier as well if you are logged-in in your browser it'll be pretty instant. 
 8. Enter the channel, message text (you can select different column values from your query), bot/your user in slack, bot name, bot icon emoji or icon url, auto expend links and mentions settings. Bots are cool so you should definitely send the zap as a bot. 
 
-![](/assets/images/docs/gitbook/%E2%80%8F%E2%80%8Fzapier_slack_template_wider.png)
+![](/assets/images/docs/gitbook/zapier_slack_template_wider.png)
 
 **Test your connection and turn your zap on!**
 

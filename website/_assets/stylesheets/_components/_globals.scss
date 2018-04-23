@@ -2,6 +2,14 @@ body {
   padding-top: 60px;
 }
 
+// ::selection {
+//   background: #2750d8; /* WebKit/Blink Browsers */
+//   color: white !important;
+// }
+// ::-moz-selection {
+//   background: #2750d8; /* Gecko Browsers */
+// }
+
 .p-0 {
   padding: 0 !important;
 }
@@ -83,16 +91,3 @@ body {
     margin-top: 0;
   }
 }
-
-.card--red {
-  background: rgba(255, 239, 233, 0.6);
-}
-
-.card--blue {
-  background: rgba(233,242,255,.6);
-}
-
-.card--yellow {
-  background: rgba(255, 251, 236, 0.6);
-}
-

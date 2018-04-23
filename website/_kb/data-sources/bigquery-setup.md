@@ -12,7 +12,7 @@ toc: true
 From all the settings the mandatory ones are the JSON Key File and the Project
 ID.
 
-![](https://59005a708ebdd932a2ed5f47--redashio.netlify.com/assets/images/docs/bigquery_setup_options.png)
+![](/assets/images/docs/gitbook/bigquery_mandatories.PNG)
 
 ### Create a Service Account
 

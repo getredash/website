@@ -7,27 +7,25 @@ slug: creating-a-dashboard
 toc: true
 ---
 
-## Creating a Dashbaord
+## Creating a Dashboard
 
 A dashboard is defined as a combination of visualizations and text boxes. Want
 to know more? Keep reading!
 
-![](https://s3.amazonaws.com/helpscout.net/docs/assets/5877897f90336009736c5d9b/images/5a4e89222c7d3a194367dd0d/file-uINxRd8tXD.gif)
+![](/assets/images/docs/gifs/dashboards/dashboards.gif)
 
-You can add a new dashboard via the Dashboard menu (the last item will be New
-Dashboard) or via the home screen:
+You can create a new dashboard from the navigation:
 
-![](https://s3.amazonaws.com/helpscout.net/docs/assets/5877897f90336009736c5d9b/images/5a4e89470428631938009a98/file-FQFo7Lke0E.png)
+![](/assets/images/docs/gitbook/create-dashboard.png)
 
 After naming your dashboard, you can start adding widgets to it from existing
 query visualizations or create different commentary texts.
 
-![](https://s3.amazonaws.com/helpscout.net/docs/assets/5877897f90336009736c5d9b/images/5a4e89612c7d3a194367dd10/file-Asb8dFjNzM.png)
+![](/assets/images/docs/gitbook/add-widgets-to-dashboard.png)
 
-Select an existing query or add a text, you can select between 2 sizes -
-regular (half screen width) or double (full screen width).
+Search existing queries or pick a recent one from the pre-populated list:
 
-![](https://s3.amazonaws.com/helpscout.net/docs/assets/5877897f90336009736c5d9b/images/5a4e896d0428631938009a9c/file-14X1y9u9Mj.png)
+![](/assets/images/docs/gitbook/add-widgets-modal.png)
 
 ## Adding Visualizations
 
@@ -49,8 +47,8 @@ to all Queries.
 
 1\. Open dashboard settings:
 
-[![](https://downloads.intercomcdn.com/i/o/36970048/c1fe5b9c85158472f0fb8668/Screenshot.png)](https://downloads.intercomcdn.com/i/o/36970048/c1fe5b9c85158472f0fb8668/Screenshot.png)
+<img src="/assets/images/docs/gitbook/edit-dashboard.png" width="60%">
 
 2\. Check the "Use Dashboard Level Filters" checkbox:
 
-[![](https://downloads.intercomcdn.com/i/o/36970064/3f05689d7a8c425cc9d9b69f/Screenshot+%281%29.png)](https://downloads.intercomcdn.com/i/o/36970064/3f05689d7a8c425cc9d9b69f/Screenshot+%281%29.png)
+![](/assets/images/docs/gitbook/dashboard-filter.png)
