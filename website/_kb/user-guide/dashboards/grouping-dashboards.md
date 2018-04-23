@@ -2,15 +2,11 @@
 category: dashboards
 parent_category: user-guide
 helpscout_url: https://help.redash.io/article/63-grouping-dashboards
-title: Grouping Dashboards
+title: Grouping Dashboards Using Tags
 slug: grouping-dashboards
 ---
-You can group multiple dashboards within the dashboards menu. To do this,
-simply follow the naming convention of using a colon (:) to separate the
-dashboard group and name.
+Dashboards can be grouped with `#hashtags`. You simply add the `#hashtags` to the dashboard name. All currently used `#hashtags` will appear on the dashboards page left pane:
 
-e.g. Dashboards named "Foo: Bar" and "Foo: Baz" will both be shown in the Foo
-group in the dashboards menu.
+![Dashboard Tags](/assets/images/docs/dashboard_tags.png)
 
-![](/assets/images/docs/gitbook/grouping-dashboards.gif)
-
+You can click on any of the tags to show all dashboards with this tag or Shift+Click on multiple tags to show dashboards that use all selected tags together.

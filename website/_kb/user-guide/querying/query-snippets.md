@@ -16,13 +16,9 @@ You can create them at  `https://app.redash.io/<your company>/query_snippets`
 
 A snippet can be something like: (the ${1:table} part is a placeholder)
 
-    
-    
-    JOIN organizations org ON org.id = $ {
-    	1: table
-    }.org_id
-    
-    
+```
+JOIN organizations org ON org.id = $ {1:table}.org_id
+```  
 
 Here are some other ideas for snippets:
 
