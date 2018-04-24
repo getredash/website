@@ -12,46 +12,42 @@ default view.
 
 ### Boxplot
 
-![](https://59005a708ebdd932a2ed5f47--
-redashio.netlify.com/assets/images/docs/visualization_examples/boxplot.png)
+![](/assets/images/docs/visualization_examples/boxplot.png)
 
 ### Chart - Line, Bar, Area, Pie, Scatter
 
-![](https://59005a708ebdd932a2ed5f47--
-redashio.netlify.com/assets/images/docs/visualization_examples/chart.png)
+![](/assets/images/docs/visualization_examples/chart.png)
 
-![](https://59005a708ebdd932a2ed5f47--
-redashio.netlify.com/assets/images/docs/visualization_examples/pie_chart.png)
+![](/assets/images/docs/visualization_examples/chart_2.png)
+
+![](/assets/images/docs/visualization_examples/pie_chart.png)
 
 ### Cohort
 
-![](https://59005a708ebdd932a2ed5f47--
-redashio.netlify.com/assets/images/docs/visualization_examples/cohort.png)
+![](/assets/images/docs/visualization_examples/cohort.png)
 
 ### Counter
 
-![](https://59005a708ebdd932a2ed5f47--
-redashio.netlify.com/assets/images/docs/visualization_examples/counter.png)
+![](/assets/images/docs/visualization_examples/counter.png)
 
 ### Funnel
 ![](/assets/images/docs/visualization_examples/funnel.png)
 
 ### Map
 
-![](https://59005a708ebdd932a2ed5f47--
-redashio.netlify.com/assets/images/docs/visualization_examples/map.png)
+![](/assets/images/docs/visualization_examples/map.png)
 
 ### Pivot Table
 
+![](/assets/images/docs/visualization_examples/pivot-table.png)
+
 ### Sankey
 
-![](https://59005a708ebdd932a2ed5f47--
-redashio.netlify.com/assets/images/docs/visualization_examples/sankey.png)
+![](/assets/images/docs/visualization_examples/sankey.png)
 
 ### Sunburst
 
-![](https://59005a708ebdd932a2ed5f47--
-redashio.netlify.com/assets/images/docs/visualization_examples/sunburst.png)
+![](/assets/images/docs/visualization_examples/sunburst.png)
 
 ### Word Cloud
 
