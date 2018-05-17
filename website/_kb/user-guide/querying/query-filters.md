@@ -13,7 +13,7 @@ If you want to focus on a specific value, you'll need to alias your column to
 `<columnName>::filter` . Here's an example:
 
 ```
-SELECT action AS "action::filter", COUNT (0) AS "actions count" 
+SELECT action AS "action::filter", COUNT(0) AS "actions count" 
 FROM events 
 GROUP BY action
 ``` 
