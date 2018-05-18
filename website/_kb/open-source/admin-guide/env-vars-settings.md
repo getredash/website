@@ -10,7 +10,6 @@ The follow is a list of settings and what they control:
 
 | Name | Description | Default Value |
 | -- | -- | -- |
-| REDASH_NAME | name of the site, used in page titles | Redash |
 | REDASH_REDIS_URL |  | “redis://localhost:6379/0” |
 | REDASH_PROXIES_COUNT |  | 1 |
 | REDASH_STATSD_HOST |  | 127.0.0.1 |
@@ -20,25 +19,30 @@ The follow is a list of settings and what they control:
 | REDASH_DATABASE_URL |  | postgresql://postgres |
 | REDASH_CELERY_BROKER |  | REDIS_URL |
 | REDASH_CELERY_BACKEND |  | CELERY_BROKER |
-| REDASH_CELERY_TASK_RESULT_EXPIRES | How many seconds to keep Celery task results in cache (in seconds) | 3600 |
-| REDASH_HEROKU_CELERY_WORKER_COUNT |  | 2 |
+| REDASH_CELERY_TASK_RESULT_EXPIRES | How many seconds to keep Celery task results in cache (in seconds) | 3600 * 4 |
 | REDASH_QUERY_RESULTS_CLEANUP_ENABLED |  | true |
 | REDASH_QUERY_RESULTS_CLEANUP_COUNT |  | 100 |
 | REDASH_QUERY_RESULTS_CLEANUP_MAX_AGE |  | 7 |
 | REDASH_SCHEMAS_REFRESH_SCHEDULE | how often to refresh the data sources schemas (in minutes) | 30 |
 | REDASH_AUTH_TYPE |  | api_key |
-| REDASH_PASSWORD_LOGIN_ENABLED |  | true |
 | REDASH_ENFORCE_HTTPS |  | false |
+| REDASH_INVITATION_TOKEN_MAX_AGE |  | 60 * 60 * 24 * 7 |
 | REDASH_MULTI_ORG |  | false |
 | REDASH_GOOGLE_CLIENT_ID |  |  |
 | REDASH_GOOGLE_CLIENT_SECRET |  |  |
-| REDASH_SAML_METADATA_URL |  |  |
-| REDASH_SAML_LOCAL_METADATA_PATH |  |  |
-| REDASH_SAML_CALLBACK_SERVER_NAME |  |  |
-| REDASH_SAML_NAMEID_FORMAT |  |  |
-| REDASH_SAML_ENTITY_ID |  |  |
-| REDASH_STATIC_ASSETS_PATH |  | ”../rd_ui/app/” |
-| REDASH_JOB_EXPIRY_TIME |  | 3600 * 6 |
+| REDASH_REMOTE_USER_LOGIN_ENABLED |  | false |
+| REDASH_REMOTE_USER_HEADER |  | X-Forwarded-Remote-User |
+| REDASH_LDAP_LOGIN_ENABLED |  | false |
+| REDASH_LDAP_URL |  | None |
+| REDASH_LDAP_BIND_DN |  | None |
+| REDASH_LDAP_BIND_DN_PASSWORD |  |  | 
+| REDASH_LDAP_DISPLAY_NAME_KEY |  | displayName |
+| REDASH_LDAP_EMAIL_KEY |  | mail |
+| REDASH_LDAP_CUSTOM_USERNAME_PROMPT |  | LDAP/AD/SSO username: |
+| REDASH_LDAP_SEARCH_TEMPLATE |  | (cn=%(username)s) |
+| REDASH_LDAP_SEARCH_DN |  | REDASH_SEARCH_DN |
+| REDASH_STATIC_ASSETS_PATH |  | ”../client/dist/” |
+| REDASH_JOB_EXPIRY_TIME |  | 3600 * 12 |
 | REDASH_COOKIE_SECRET |  | c292a0a3aa32397cdb050e233733900f |
 | REDASH_LOG_LEVEL |  | INFO |
 | REDASH_MAIL_SERVER |  | localhost |
@@ -51,18 +55,32 @@ The follow is a list of settings and what they control:
 | REDASH_MAIL_MAX_EMAILS |  | None |
 | REDASH_MAIL_ASCII_ATTACHMENTS |  | false |
 | REDASH_HOST |  |  |
+| REDASH_ALERTS_DEFAULT_MAIL_SUBJECT_TEMPLATE |  | ({state}) {alert_name} |
+| REDASH_THROTTLE_LOGIN_PATTERN |  | 50/hour |
+| REDASH_LIMITER_STORAGE |  | REDIS_URL |
 | REDASH_CORS_ACCESS_CONTROL_ALLOW_ORIGIN |  |  |
 | REDASH_CORS_ACCESS_CONTROL_ALLOW_CREDENTIALS |  | false |
 | REDASH_CORS_ACCESS_CONTROL_REQUEST_METHOD |  | GET, POST, PUT |
 | REDASH_CORS_ACCESS_CONTROL_ALLOW_HEADERS |  | Content-Type |
 | REDASH_ENABLED_QUERY_RUNNERS |  | ”,”.join(default_query_runners) |
 | REDASH_ADDITIONAL_QUERY_RUNNERS |  |  |
+| REDASH_DISABLED_QUERY_RUNNERS |  |  |
+| REDASH_ADHOC_QUERY_TIME_LIMIT |  | None |
+| REDASH_ENABLED_DESTINATIONS |  | ”,”.join(default_destinations) |
+| REDASH_ADDITIONAL_DESTINATIONS |  |  |
+| REDASH_EVENT_REPORTING_WEBHOOKS |  |  |
 | REDASH_SENTRY_DSN |  |  |
 | REDASH_ALLOW_SCRIPTS_IN_USER_INPUT | disable sanitization of text input, allowing full HTML  | false |
+| REDASH_DASHBOARD_REFRESH_INTERVALS |  | 60,300,600,1800,3600,43200,86400 |
+| REDASH_QUERY_REFRESH_INTERVALS |  | 60, 300, 600, 900, 1800, 3600, 7200, 10800, 14400, 18000, 21600, 25200, 28800, 32400, 36000, 39600, 43200, 86400, 604800, 1209600, 2592000 |
 | REDASH_DATE_FORMAT |  | DD/MM/YY |
-| REDASH_FEATURE_ALLOW_ALL_TO_EDIT |  | true |
 | REDASH_FEATURE_SHOW_QUERY_RESULTS_COUNT | disable/enable showing count of query results in status  | true |
 | REDASH_VERSION_CHECK |  | true |
 | REDASH_FEATURE_DISABLE_REFRESH_QUERIES | disable scheduled query execution | false |
+| REDASH_FEATURE_SHOW_PERMISSIONS_CONTROL |  | false |
+| REDASH_FEATURE_ALLOW_CUSTOM_JS_VISUALIZATIONS |  | false |
+| REDASH_FEATURE_DUMB_RECENTS |  | false |
+| REDASH_FEATURE_AUTO_PUBLISH_NAMED_QUERIES |  | true |
 | REDASH_BIGQUERY_HTTP_TIMEOUT |  | 600 |
 | REDASH_SCHEMA_RUN_TABLE_SIZE_CALCULATIONS |  | false |
+| REDASH_ALLOW_PARAMETERS_IN_EMBEDS | | false |
