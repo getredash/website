@@ -18,6 +18,7 @@ Google Analytics  |  ✅  |  ✅
 Google BigQuery  |  ✅  |  ✅  
 Cassandra  |  ✅  |  ✅  
 ClickHouse  |  ✅  |  ✅  
+CockroachDB  |  ✅  |  ✅  
 Elasticsearch  |  ✅  |  ✅  
 JIRA  |  ✅  |  ✅  
 JSON  |  ✅  |  ✅  
@@ -28,6 +29,7 @@ Greenplum  |  ✅  |  ✅
 Hive  |  ✅  |  ✅  
 Impala  |  ✅  |  ✅  
 InfluxDB  |  ✅  |  ✅  
+MapD  |  ✅  |  ✅  
 Microsoft SQL Server  |  ✅  |  ✅  
 MongoDB  |  ✅  |  ✅  
 MySQL  |  ✅  |  ✅  
