@@ -8,6 +8,7 @@ keywords:
 - template
 title: Query Parameters
 slug: query-parameters
+toc: true
 ---
 To make queries more dynamic without the need to change their source code, you
 can use parameters. A parameter is being defined by adding a keyword
@@ -48,4 +49,26 @@ IMPORTANT: currently parameters only work within Redash and are not supported
 in embeds or shared dashboards. Also, parameters require Full Access
 permission to the data source (vs. View Only).
 {% endcallout %}
+
+### FAQ
+
+**Can I reuse the same parameter multiple times in a single query?**
+
+Sure! Just use the same identifier in the curly brackets. Example:
+
+```sql
+SELECT {{org_id}}, count(0)
+FROM queries
+WHERE org_id = {{org_id}}
+```
+
+**Can I use multiple parameters in a single query?**
+
+Of course, just use a unique name for each one. Example:
+
+```sql
+SELECT count(0)
+FROM queries
+WHERE org_id = {{org_id}} AND created_at > '{{start_date}}'
+```
 
