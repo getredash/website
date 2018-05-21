@@ -71,4 +71,3 @@ SELECT count(0)
 FROM queries
 WHERE org_id = {{org_id}} AND created_at > '{{start_date}}'
 ```
-
