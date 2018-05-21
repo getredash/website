@@ -6,7 +6,7 @@ title: Creating & Editing Groups
 slug: creating-editing-groups
 ---
 Only admins can edit & create groups - to create a new group
-go to Settings>Groups and hit **New Group**:
+go to `Settings`>`Groups` and hit **New Group**:
 
 ![](/assets/images/docs/gitbook/group_settings.png)
 
