@@ -54,7 +54,7 @@ permission to the data source (vs. View Only).
 
 **Can I reuse the same parameter multiple times in a single query?**
 
-Sure! Just use the same identifier in the curly brackets. Example:
+Sure! Just use the same identifier in the curly brackets. In this example:
 
 {% raw %}
 ```sql
@@ -62,11 +62,13 @@ SELECT {{org_id}}, count(0)
 FROM queries
 WHERE org_id = {{org_id}}
 ```
+
+We use the `{{org_id}}` parameter twice.
 {% endraw %}
 
 **Can I use multiple parameters in a single query?**
 
-Of course, just use a unique name for each one. Example:
+Of course, just use a unique name for each one. In this example:
 
 {% raw %}
 ```sql
@@ -74,4 +76,6 @@ SELECT count(0)
 FROM queries
 WHERE org_id = {{org_id}} AND created_at > '{{start_date}}'
 ```
+
+We use two parameters: `{{org_id}}` and `{{start_date}}`.
 {% endraw %} 
