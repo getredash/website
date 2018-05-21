@@ -56,18 +56,22 @@ permission to the data source (vs. View Only).
 
 Sure! Just use the same identifier in the curly brackets. Example:
 
+{% raw %}
 ```sql
 SELECT {{org_id}}, count(0)
 FROM queries
 WHERE org_id = {{org_id}}
 ```
+{% endraw %}
 
 **Can I use multiple parameters in a single query?**
 
 Of course, just use a unique name for each one. Example:
 
+{% raw %}
 ```sql
 SELECT count(0)
 FROM queries
 WHERE org_id = {{org_id}} AND created_at > '{{start_date}}'
 ```
+{% endraw %} 
