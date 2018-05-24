@@ -14,7 +14,6 @@ Redash values your privacy, and therefore has set up this extensive privacy poli
 
 Redash collects some information, both personally identifiable and non-personally identifiable, according to the following criteria:
 
-
 1. **Information You Provide Redash**: Redash may retain information you voluntarily provide it, such as your name, email address, profile photo and other information you submit through the services.
 
 1. **Information Redash Collects Through Your Use of the Services**: Redash may also retain information it gathers through your use of the services such as your device’s type, browser type, screen resolution, operating system, system preferences, the pages you viewed, the content you submitted and other information it collects through your use of the services, which is in its nature non-personally identifiable.
@@ -31,15 +30,26 @@ Redash uses some third party services to provide with parts of the services and 
 
 ### Who Has Access To Your Information?
 
-Redash uses selected third parties to provide you with the service, and shall share some information with them, under strict confidentiality obligations, to provide you with the services. Such service providers shall include, amongst others, Amazon Web Services, Google (Cloud Services), Google Analytics, Segment.com, Sentry and MailChimp. Moreover, Redash’s employees and agents, who are under the most strict confidentiality obligations, also have monitored access to some of your information. Redash’s employees undergo casual and routine monitoring. Lastly, your information will be shared with people you specifically ask to share.
+Redash uses selected third parties to provide you with the service, and shall share some information with them, under strict confidentiality obligations, to provide you with the services. Such service providers shall include, amongst others: 
+
+* Amazon Web Services
+* Google (Cloud Services)
+* Google Analytics
+* Segment.com
+* Sentry
+* MailChimp
+* Intercom
+* Stripe
+
+Moreover, Redash’s employees and agents, who are under the most strict confidentiality obligations, also have monitored access to some of your information. Redash’s employees undergo casual and routine monitoring. Lastly, your information will be shared with people you specifically ask to share.
 
 ### How Is Your Information Secured?
 
-Your information is secured in Redash’s server, which is secured under industry standards. Redash also performs occasional penetration tests, to make sure your information is secure.
+Your information is secured in Redash’s servers, which is secured under industry standards. Redash also performs occasional penetration tests, to make sure your information is secure.
 
 ### How Can You Review Your Information?
 
-You can review all your information using Redash’s web panel.
+You can review all your information using Redash’s web application.
 
 ### How Can You Remove Your Information?
 
