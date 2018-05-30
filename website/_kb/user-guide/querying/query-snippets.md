@@ -19,7 +19,7 @@ Here's an example for a simple snippet:
 JOIN organizations org ON org.id = $ {1:table}.org_id
 ```  
 
-`${1:table}` is a place holder, tha the snippet user can easily replace with the actual content they need.
+`${1:table}` is a place holder, which the snippet user can easily replace with the actual content they need.
 
 Once defined, you can trigger the snippet while writing a query with the trigger word you defined - it'll be suggested (auto-completed) like all other fields.
 
