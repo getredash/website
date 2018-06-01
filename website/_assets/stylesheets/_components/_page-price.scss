@@ -24,8 +24,12 @@
   }
 }
 
+.dotted-helper {
+  border-bottom: 1px dashed #929292;
+}
+
 .pricing-plan {
-  width: 25%;
+  width: 29%;
   margin: 0 15px;
   flex-grow: 0;
   flex-shrink: 0;
@@ -47,6 +51,10 @@
 
   .pricing-name {
     color: #333;
+    font-weight: 600;
+    background: $mutted;
+    padding: 8px;
+    border-radius: $border-radius;
   }
 
   .btn {
@@ -67,11 +75,15 @@
   }
 
   .pricing-description {
-    line-height: 1.7em;
+    line-height: 1.5em;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 
   .pricing-notes {
-    margin: 15px 0 0 0;
+    margin: 0 0 5px 0;
     color: #aaa;
   }
 
@@ -102,6 +114,11 @@
   }
 }
 
+.pricing-icon {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
 .pricing-plan-container {
   display: flex;
 
@@ -109,10 +126,10 @@
     flex-direction: column;
 
     .pricing-plan {
-      width: 100%;
+      width: 80%;
       margin-bottom: 25px;
-      margin-left: 0;
-      margin-right: 0;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 }
