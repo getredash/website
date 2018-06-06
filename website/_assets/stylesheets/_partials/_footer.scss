@@ -62,19 +62,18 @@ $footer-sm: 14px;
 .get-started {
   padding: 20px 0 !important;
 
-  .row {
+  .get-started--signup {
     background: $seachell;
     border: 1px solid #C4D2D9;
     border-radius: $border-radius;
     padding: 25px;
-  }
 
-  h3 {
-    margin: 0;
-    color: $black;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 2;
+    h3 {
+      margin: 0;
+      color: $black;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 2;
+    }
   }
-
 }
