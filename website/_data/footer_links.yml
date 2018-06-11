@@ -14,12 +14,14 @@
   links:
     - name: About
       url: /about/
-    - name: Contact
-      url: /contact/
     - name: Blog
       url: https://blog.redash.io/
+    - name: Newsletter
+      url: https://www.getrevue.co/profile/redash
     - name: Community
       url: /community/
+    - name: Contact
+      url: /contact/
 - name: Help
   links:
     - name: Knowledge Base

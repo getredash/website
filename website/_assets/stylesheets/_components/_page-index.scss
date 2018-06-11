@@ -15,3 +15,31 @@
     opacity: 1;
   }
 }
+
+
+section.subscribe {
+  padding: 75px 0;
+
+  @media (max-width: 767px) {
+    display: inline-block;
+    padding: 25px 0;
+
+    h4 {
+      font-size: 90%;
+      line-height: 1.5;
+    }
+  }
+
+  .form-control {
+    font-size: 17px;
+    width: 300px;
+
+    @media (max-width: 767px) {
+      display: inline-block;
+    }
+
+    @media (max-width: 400px) {
+      width: 100%;
+    }
+  }
+}
