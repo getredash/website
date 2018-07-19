@@ -33,6 +33,8 @@ $topic-color: $small-blue;
   }
   &:hover, &:focus {
     border-color: $topic-color;
+    background: lighten($link-color, 38%);
+    border-width: 2px;
     color: darken($link-color, 10%);
   }
 }
