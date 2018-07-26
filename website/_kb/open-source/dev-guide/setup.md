@@ -42,7 +42,7 @@ npm run build
 ## Configuration
 
 For development, in most cases the default configuration is enough. But if you need
-to adjust the database configuration, mail settings or any [other setting](../setup/settings-environment-variables.md),
+to adjust the database configuration, mail settings or any [other setting](../admin-guide/env-vars-settings.md),
 you do so with environment variables.
 
 To avoid having to export those variables manually, you can use a `.env` file and
