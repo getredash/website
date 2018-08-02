@@ -21,7 +21,10 @@ sudo bin/upgrade
 ```
 ### Docker
 
-If you're using Docker to run Redash, don't use the upgrade script, but rather update the Docker image you're using.
+If you're using Docker to run Redash, **don't use the upgrade script**. Instead you need to:
+
+1. Update the Docker image you're using.
+2. Apply migrations (if needed). To apply migrations you need to invoke the image with `manage db upgrade` as the command. The way to do this depends on the way you deploy Redash.
 
 ## How to upgrade (pre v1.0.0 versions)
 
