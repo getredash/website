@@ -19,6 +19,11 @@ Starting from v1.0.0, the upgrade script is part of the codebase, and running th
 cd /opt/redash/current
 sudo bin/upgrade
 ```
+
+{% callout info %}
+If you're upgrading to a beta version, you need to specify the channel: `sudo bin/upgrade --channel beta`.
+{% endcallout %}
+
 ### Docker
 
 If you're using Docker to run Redash, **don't use the upgrade script**. Instead you need to:
