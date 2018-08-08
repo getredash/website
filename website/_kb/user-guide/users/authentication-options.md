@@ -22,8 +22,9 @@ Once you enable SAML, additional settings will appear:
 
 ![](/assets/images/docs/gitbook/saml-details.png)
 
-1. Only SAML Metadata URL is required to make SAML authentication work. You can get this URL from your SAML provider like [OneLogin](https://www.onelogin.com/connector/redash).
-2. Set up Redash callback URL in your SAML provider: `https://app.redash.io/<your-company>/saml/callback` or `https://app.redash.io/<your-company>` for OneLogin
+1. SAML Metadata URL is required to make SAML authentication work. You can get this URL from your SAML provider like [OneLogin](https://www.onelogin.com/connector/redash).
+2. Set up Redash callback URL in your SAML provider: `https://app.redash.io/saml/callback?org_slug=<organization name>`. If you have single organization name, set `default` as value for org_slug.
+3. Within SAML provider, map user fields FirstName and LastName to matching values as those two fields are mandatory for user creation.
 
 By default any user created with SAML/SSO will join the default group. It's possible to configure the SAML provider to pass what groups the user should join by setting the `RedashGroups` parameter. If you use OneLogin's predefined Redash application, it will always pass this parameter, meaning that even for existing users, it will override their current groups memberships. Hence you need to make sure it's up to date.
 
