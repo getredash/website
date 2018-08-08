@@ -124,6 +124,7 @@ export REDASH_MAIL_DEFAULT_SENDER="" # Email address to send from
 
 export REDASH_HOST="" # base address of your Redash instance, for example: "https://demo.redash.io"
 ```
+Note that in case you are running redash in docker containers, you have to add this configuration to the environment variables of the worker container.
 
 Once you updated the configuration, restart all services with `sudo supervisorctl restart all`.
 
