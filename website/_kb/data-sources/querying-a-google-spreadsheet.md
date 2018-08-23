@@ -30,6 +30,7 @@ data source you created and in the query text enter the Spreadsheet ID and
 (optionally) sheet number, separated by a vertical bar symbol (|). For
 example: `1DFuuOMFzNoFQ5EJ2JE2zB79-0uR5zVKvc0EikmvnDgk|0` to load the first
 sheet or `1DFuuOMFzNoFQ5EJ2JE2zB79-0uR5zVKvc0EikmvnDgk|1` to load the second.
+The Spreadsheet ID is the whole query, leave out any SQL.
 
 {% callout info %}
 **What is the Spreadsheet ID?**
