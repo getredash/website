@@ -13,6 +13,8 @@ To ease the process, there are also images for AWS, Google Compute Cloud and Doc
 
 ## Create an Instance
 
+For basic deployments we recommend a minimum of 2GB of RAM and reasonable amount of CPU allocation. As usage grows you might need additional RAM and CPU power to support increased number of background workers and API processes.
+
 ### AWS
 
 Launch the instance with from the pre-baked AMI (for small deployments t2.small should be enough):
