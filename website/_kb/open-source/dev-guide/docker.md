@@ -19,7 +19,7 @@ which we will run locally.
 First you will need to clone the Git repository:
 
 ```bash
-git clone git@github.com:getredash/redash.git
+git clone https://github.com/getredash/redash.git
 cd redash/
 ```
 
