@@ -27,13 +27,17 @@ Hit "Save" to apply your changes or "Cancel" to leave no trace.
 
 ## Embedding Visualizations
 
-Redash allows you to embed a visualization that will update every time the
-query it belongs to runs.
+For any visualization you create in Redash, you can get an embed link:
 
 <img src="/assets/images/docs/gitbook/embed_viz.png" width="60%">
 
 Click the "Embed" button to view the `<iframe>` code you need to copy or a link to
 the image you can place anywhere.
+
+{% callout warning %}
+Queries with parameters do not support embeds at the moment.
+{% endcallout %}
+
 
 ### Downloading A Visualization as an Image File
 
