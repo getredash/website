@@ -60,20 +60,32 @@ $footer-sm: 14px;
 }
 
 .get-started {
-  padding: 20px 0 !important;
+  padding: 20px 0 35px !important;
+
+  .container {
+    background-image: url("/assets/images/elements/visualize-data.png");
+    background-clip: content-box;
+    background-size: 79%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 
   .get-started--signup {
-    background: $seachell;
-    border: 1px solid #C4D2D9;
+    background: rgba(255,255,255,0.92);
+    border: 1px solid #e8e8e8;
     border-radius: $border-radius;
     padding: 25px;
-
     h3 {
       margin: 0;
+      margin-bottom: 10px;
       color: $black;
       font-size: 18px;
       font-weight: 500;
       line-height: 2;
     }
   }
+}
+
+.get-started:after {
+    background-image: url("/assets/images/elements/visualize-data.png");
 }
