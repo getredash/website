@@ -1,5 +1,4 @@
 /* BUTTONS */
-
 .btn {
   font-size: 13px;
   border-radius: $border-radius;
@@ -95,4 +94,9 @@
     box-shadow: 0 6px 17px -3px rgba(33,150,243,0.20);
     color: #2196F3;
   }
+}
+
+.btn-lg {
+  padding: 10px 18px;
+  font-size: 105%;
 }
