@@ -2,12 +2,12 @@
 
 We use Jekyll as our static site generator.
 
-The website is built and hosted with Netlify. When deployed, it runs the [bulid script](https://github.com/getredash/website/blob/master/bin/build).
+The website is built and hosted with Netlify. When deployed, it runs the [build script](https://github.com/getredash/website/blob/master/bin/build).
 
 ## Updating contributors data file
 
 ```
-npm run fetch-contributors > website/_data/contributors.js
+npm run fetch-contributors > website/_data/contributors.json
 ```
 
 ## Website development
