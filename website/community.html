@@ -1,6 +1,6 @@
 ---
 title: Redash is built by the open source community
-description: More than 150 contributors, 1300+ forks and years of constant development...
+description: More than 200 contributors and years of constant development...
 layout: default
 permalink: /community/
 ---
@@ -12,7 +12,7 @@ permalink: /community/
                 <img src="/assets/images/elements/open-source.png" id="open-source-illustrated">
             </div>
             <div class="col-sm-5">
-                <h1>Redash is built by the open source community of 180+ contributors</h1>
+                <h1>Redash is built by the open source community of {{ site.data.contributors | size | divided_by: 10 | floor | divided_by: 0.1 | round }}+ contributors</h1>
                 
                 <a class="github-button" href="https://github.com/getredash/redash" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star getredash/redash on GitHub">Star</a>
                 <a class="github-button" href="https://github.com/getredash" data-size="large" aria-label="Follow @getredash on GitHub">Follow @getredash</a>
@@ -29,7 +29,7 @@ permalink: /community/
     <div class="container">
         <div class="row text-center">
             <div class="col-sm-4">
-                <h1>180+</h1>
+                <h1>{{ site.data.contributors | size | divided_by: 10 | floor | divided_by: 0.1 | round }}+</h1>
                 <p>Total contributors</p>
             </div>
 

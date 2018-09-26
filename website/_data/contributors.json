@@ -1,7 +1,3 @@
-
-> redash-website@1.0.0 fetch-contributors /home/felmas/Dev/r/redash-website
-> node bin/fetch-contributors.js
-
 [
   {
     "login": "arikfr",
