@@ -65,6 +65,15 @@ For development environment setup, please refer to the [developer guide]({% link
 
 Now proceed to “[Setup](#setup-redash-instance-setup)”.
 
+### Cloudron
+
+Redash is available as a 1-click install on [Cloudron](https://cloudron.io). For those unaware, Cloudron is a complete
+solution for installing apps on your server and keeping them up-to-date and secure.
+
+ [![Install](https://cloudron.io/img/button.svg)](https://cloudron.io/button.html?app=io.redash.cloudronapp)
+
+There is a demo [here](https://my-demo.cloudron.me) (username: cloudron password: cloudron).
+
 ### Other
 
 Download the [provisioning script](https://raw.githubusercontent.com/getredash/redash/master/setup/ubuntu/bootstrap.sh) and run it on a new machine. Note that:
