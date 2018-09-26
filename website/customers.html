@@ -22,98 +22,20 @@ permalink: /customers/
     </div>
 </section>
 
-<section class="section">
+<section class="section customer-quotes">
     <div class="container">
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-12">
+                {% for customer in site.data.customers %}
                 <div class="card card--customer">
-                    <img src="/assets/images/customers/root.png" alt="Root <3 Redash" class="customer-logo">
-                    <h4 class="serif"><em>"Root is an extremely data-driven company. We make dozens of changes to our product every week, and we measure the impact of all of them. Redash allows us to easily analyze data and share results among our team."</em></h4>
+                    <img src="{{customer.logo}}" alt="{{customer.customer}} <3 Redash" class="customer-logo">
+                    <h4 class="serif"><em>"{{customer.quote}}"</em></h4>
                     <p>
-                        <img src="/assets/images/customers/dan-manges.jpg" width="48px" class="profile-image">
-                        by Dan Manges, CTO at <a href="https://www.joinroot.com/">Root Insurance</a>
+                        <img src="{{customer.profile-img}}" width="48px" class="profile-image">
+                        by {{customer.person}}, {{customer.role}} at <a href="{{customer.url}}">{{customer.customer}}</a>
                     </p>
                 </div>
-
-                <div class="card card--customer">
-                    <img src="/assets/images/customers/findhotel.png" alt="FindHotel <3 Redash" class="customer-logo">
-                    <h4 class="serif"><em>"At FindHotel every important decision is based on data, and Redash has quickly become one of the preferred tools to share a data story across the company. Redash dashboards combined with the large number of supported data sources have made our company data fully transparent for everyone. From technical metrics such as pipeline latencies and infrastructure costs, to high level business metrics. Everything can be easily accessed and visualised with Redash."</em></h4>
-                    <p>
-                        <img src="/assets/images/customers/german-gomez-herrero.jpg" width="48px" class="profile-image">
-                        by German Gomez-Herrero, CTO at <a href="https://www.findhotel.net/">FindHotel</a>
-                    </p>
-                </div>
-
-                <div class="card card--customer">
-                    <img src="/assets/images/customers/mybook.png" alt="MyBook <3 Redash" class="customer-logo">
-                    <h4 class="serif"><em>"Redash greatly reduced the need to build custom analytics UI. Our Marketing team now heavily uses cohort dashboards, it is their daily tool now! Overall, Redash saves ton of time for the team."</em></h4>
-                    <p>
-                        <img src="/assets/images/customers/ilya-baryshev.jpg" width="48px" class="profile-image">
-                        by Ilya Baryshev, CTO at <a href="https://mybook.ru/">MyBook</a>
-                    </p>
-                </div>
-
-                <div class="card card--customer">
-                        <img src="/assets/images/customers/sheetsu.png" alt="Sheetsu <3 Redash" class="customer-logo">
-                    <h4 class="serif"><em>"It's easy for us to connect data from different sources and see the bigger picture and get more knowledge from all the data we are gathering in all different places. Redash helped us to see how our business is going. Before doing anything, we are setting the KPIs, which we are tracking on the dashboards. We have queries that help us answer some of the questions, why our users behave in such way or another. Very easy to set up. Perfect to collaborate with other team mates."</em></h4>
-                    <p>
-                        <img src="/assets/images/customers/michael-oblak.jpg" width="48px" class="profile-image">
-                        by Michael Oblak, Founder of <a href="http://sheetsu.com/">Sheetsu</a>
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-sm-6">
-                <div class="card card--customer">
-                    <img src="/assets/images/customers/auptix.png" alt="AuptiX <3 Redash" class="customer-logo">
-                    <h4 class="serif"><em>"Redash enabled us to surface visualizations and dashboards to everyone in the company -- remarkably easily and efficiently. The capabilities to share query results and combine many queries into publicly viewable dashboards work flawlessly and get the job done."</em></h4>
-                    <p>
-                        <img src="/assets/images/customers/lu-saenz.jpg" width="48px" class="profile-image">
-                        by Lu Saenz, VP Engineering & Product at <a href="https://www.auptix.com/">AuptiX</a>
-                    </p>
-                </div>
-
-                <div class="card card--customer">
-                    <img src="/assets/images/customers/voxfeed.png" alt="VoxFeed <3 Redash" class="customer-logo">
-                    <h4 class="serif"><em>"Since we use Redash Dashboards our team is more involved in all areas of our business and we take always data-driven decisions. We passed from spending about an hour scripting to get a report, to just type a simple query and have the results ready-to-use immediately."</em></h4>
-                    <p>
-                        <img src="/assets/images/customers/manuel-de-la-torre.png" width="48px" class="profile-image">
-                        by Manuel de la Torre, CTO at <a href="https://voxfeed.com/">VoxFeed</a>
-                    </p>
-                </div>
-
-                <div class="card card--customer">
-                    <img src="/assets/images/customers/skyeng.png" alt="SkyEng <3 Redash" class="customer-logo">
-                    <h4 class="serif"><em>"I love Redash for the simplicity, price and a great number of usage patterns. My favourite features are parameters and filters as well as Redash API."</em></h4>
-                    <p>
-                        by Gleb Sologub, Product Analyst at <a href="http://skyeng.ru/">SkyEng</a>
-                    </p>
-                </div>
-
-                <div class="card card--customer">
-                        <img src="/assets/images/customers/data-miner.png" alt="DataMiner <3 Redash" class="customer-logo">
-                    <h4 class="serif"><em>"Redash is as essential as email to my company. We love data but accessing the data is a pain without Redash. Any company I go to, I get them hooked on Redash. It's an easy sell :)"</em></h4>
-                    <p>
-                        <img src="/assets/images/customers/ben-dehghan.jpg" width="48px" class="profile-image">
-                        by Ben Dehghan, Co-Founder of <a href="https://data-miner.io/">Data Miner</a>
-                    </p>
-                </div>
-
-                <div class="card card--customer">
-                    <img src="/assets/images/customers/atomized.jpeg" alt="Atomized <3 Redash" class="customer-logo">
-                    <h4 class="serif"><em>"The ability to query multiple data sources from a single window in a read-only environment is a huge plus for our team on a day to day basis. Redash allowed our team to provide better customer service by giving us the information we need without requiring a developer to get involved."</em></h4>
-                    <p>
-                        by Jon Lee, CTO at <a href="https://www.atomized.com/">Atomized</a>
-                    </p>
-                </div>
-
-                <!-- <div class="card card--customer">
-                    <h4 class="serif"><em>"Redash allowed me to easily create visualizations and dashboards using my existing data instead of streaming events to a 3rd party."</em></h4>
-                    <p>
-                        <img src="/assets/images/customers/elad-itzhakian.jpg" width="48px" class="profile-image">
-                        by Elad Itzhakian, Full Stack Developer
-                    </p>
-                </div> -->
+                {% endfor %}
             </div>
         </div>
     </div>
@@ -122,6 +44,7 @@ permalink: /customers/
 <section class="section section__customers--alooma">
     <div class="container">
         <div class="row">
+            <h2 class="text-center">Read our case studies</h2>
             <div class="col-md-8 col-md-offset-2">
                 <div class="featured-customer">
                     <div class="featured-customer--content">
