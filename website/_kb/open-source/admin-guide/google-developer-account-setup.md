@@ -4,41 +4,20 @@ parent_category: open-source
 title: How to Create a Google Developers Project
 ---
 
-1. Go to the [Google Developers Console](https://console.developers.google.com/).
 
-2. Select a project, or create a new one by clicking Create Project:
-
-  1. In the Project name field, type in a name for your project.
-  2. In the Project ID field, optionally type in a project ID for your project or use the one that the console has created for you. This ID must be unique world-wide.
-  3. Click the Create button and wait for the project to be created.
-  4. Click on the new project name in the list to start editing the project.
-
-3. In the left sidebar, select the APIs item below “APIs & auth”. A list of Google web services appears.
-
-4. Find the Google+ API service and set its status to ON—notice that this action moves the service to the top of the list.
-
-5. In the sidebar under “APIs & auth”, select Credentials and in that screen choose the OAuth consent screen tab
-
-  * Choose an Email Address and specify a Product Name.
-
-6. In the sidebar under “APIs & auth”, select Credentials.
-
-7. Click Add Credentials button and choose OAuth 20 Client ID.
-
-  * In the Application type section of the dialog, select Web application.
-  * In the Authorized JavaScript origins field, enter the origin for your app. You can enter multiple origins to use with multiple Redash instance. Wildcards are not allowed. In the example below, we assume your Redash instance address is _redash.example.com_:
-
-  ```
-  http://redash.example.com
-  https://redash.example.com
-  ```
-
-  * In the Authorized redirect URI field, enter the redirect URI callback:
-
-  ```
-  http://redash.example.com/oauth/google_callback
-  ```
-
-  * Click the `Create` button.
-
-8. In the resulting Client ID for web application section, copy the Client ID and Client secret to your `.env` file.
+1. Sign into the [API manager in the Google Cloud console](https://console.cloud.google.com/apis/credentials).
+2. Likely you will need to create a new project in Google Cloud, so click `Create`.
+![Create new project](/assets/images/docs/google_oauth_1.png)
+3. Give your project a name, like "Redash" and click create.
+![Give project name](/assets/images/docs/google_oauth2.png)
+4. Click `Create Credentials` and select OAuth Client ID.
+![Create credentials](/assets/images/docs/google_oauth3.png)
+5. If you see it, click on the button that says `Configure Consent Screen`.
+![Configure consent](/assets/images/docs/google_oauth4.png)
+6. Fill out the Product Name field and click Save. (This will be displayed to users during the sign in flow).
+![Fill out product name](/assets/images/docs/google_oauth5.png)
+7. Select the Application Type `Web Application`. Give your application a name and in Authorized Javascript Origins, put the address of your Redash instance (something like: `https://redash.acme.com`).
+8. In the Authorized redirect URIs section, put the address of your Redash instance suffixed by `/oauth/google_callback` (i.e. `https://redash.acme.com/oauth/google_callback`). Click create.
+![Set callbacks](/assets/images/docs/google_oauth6.png)
+9. Copy your client ID and secret and paste them in the fields on the left to finish connecting Google.
+![Copy Client ID and Secret](/assets/images/docs/google_oauth7.png)
