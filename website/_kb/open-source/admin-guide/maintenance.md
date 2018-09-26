@@ -3,8 +3,13 @@ category: admin-guide
 parent_category: open-source
 title: Ongoing Maintenance and Basic Operations
 toc: true
-order: 2
+order: 3
 ---
+
+{% callout %}
+**These instructions are not relevant for those who use our Docker based instances and should be updated.** We will appreciate your help with updating this guide.
+{% endcallout %}
+
 ## Configuration and Logs
 
 The supervisor config can be found in: `/etc/supervisor/conf.d/redash.conf` if you're using the new images that install Supervisor with a system packages. Otherwise, you can find it at `/opt/redash/supervisord/supervisord.conf`.
