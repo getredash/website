@@ -20,7 +20,7 @@ you've done this you can use it to write queries like:
     
 
 When referencing a query as a table in the Query Results query, the table name
-is the query ID (the number in the URL) prefixed with _query__. So for
+is the query ID (the number in the URL) prefixed with _query_. So for
 example, a query with the URL
 `https://app.redash.io/acme/queries/49588/source` will become `query_49588`
 when referenced as a table.
