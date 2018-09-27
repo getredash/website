@@ -98,3 +98,34 @@ $navbar-fs: 14px;
     padding-bottom: 10px;
   }
 }
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .navbar .container {
+    width: auto;
+  }
+}
+
+@media (max-width: 849px) {
+  .navbar-header {
+    float: none;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+  .navbar-collapse.collapse {
+    display: none!important;
+  }
+  .navbar-nav>li>a {
+    margin-top: 0;
+  }
+  .navbar-nav {
+    float: none!important;
+    background: #f8fafa;
+  }
+  .navbar-nav>li {
+    float: none;
+  }
+  .collapse.in{
+    display:block !important;
+  }
+}
