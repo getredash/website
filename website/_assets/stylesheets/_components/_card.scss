@@ -57,25 +57,6 @@ $card-hover-color: $hoki;
   }
 }
 
-.customer-quotes {
-
-  .col-sm-12 {
-
-    .card--customer {
-      width: 66%;
-      margin: 1%;
-      margin-bottom: 25px
-    }
-
-    .card--customer:nth-child(2n){
-      float: right;
-    }
-    .card--customer:nth-child(2n+1){
-      float: left;
-    }
-  }
-}
-
 .card__item {
   //display: block;
   position: relative;

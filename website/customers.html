@@ -25,8 +25,10 @@ permalink: /customers/
 <section class="section customer-quotes">
     <div class="container">
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-6">
                 {% for customer in site.data.customers %}
+                {% assign mod = forloop.index | modulo: 2 %}
+                {% if mod == 0 %}
                 <div class="card card--customer">
                     <img src="{{customer.logo}}" alt="{{customer.customer}} <3 Redash" class="customer-logo">
                     <h4 class="serif"><em>"{{customer.quote}}"</em></h4>
@@ -35,6 +37,23 @@ permalink: /customers/
                         by {{customer.person}}, {{customer.role}} at <a href="{{customer.url}}">{{customer.customer}}</a>
                     </p>
                 </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+
+            <div class="col-sm-6">
+                {% for customer in site.data.customers %}
+                {% assign mod = forloop.index | modulo: 2 %}
+                {% if mod == 1 %}
+                <div class="card card--customer">
+                    <img src="{{customer.logo}}" alt="{{customer.customer}} <3 Redash" class="customer-logo">
+                    <h4 class="serif"><em>"{{customer.quote}}"</em></h4>
+                    <p>
+                        <img src="{{customer.profile-img}}" width="48px" class="profile-image">
+                        by {{customer.person}}, {{customer.role}} at <a href="{{customer.url}}">{{customer.customer}}</a>
+                    </p>
+                </div>
+                {% endif %}
                 {% endfor %}
             </div>
         </div>

@@ -26,13 +26,13 @@
   role: CTO
   profile-img: "/assets/images/customers/ilya-baryshev.jpg"
   quote: Redash greatly reduced the need to build custom analytics UI. Our Marketing team now heavily uses cohort dashboards, it is their daily tool now! Overall, Redash saves ton of time for the team.
-- customer: Sheetsu
-  url: http://sheetsu.com/
-  logo: "/assets/images/customers/sheetsu.png"
-  person: Michael Oblak
-  role: Founder
-  profile-img: "/assets/images/customers/michael-oblak.jpg"
-  quote: It's easy for us to connect data from different sources and see the bigger picture and get more knowledge from all the data we are gathering in all different places. Redash helped us to see how our business is going. Before doing anything, we are setting the KPIs, which we are tracking on the dashboards. We have queries that help us answer some of the questions, why our users behave in such way or another. Very easy to set up. Perfect to collaborate with other team mates.
+- customer: DataMiner
+  url: https://data-miner.io/
+  logo: "/assets/images/customers/data-miner.png"
+  person: Ben Dehghan
+  role: Co-Founder
+  profile-img: "/assets/images/customers/ben-dehghan.jpg"
+  quote: Redash is as essential as email to my company. We love data but accessing the data is a pain without Redash. Any company I go to, I get them hooked on Redash. It's an easy sell :)
 - customer: VoxFeed
   url: https://voxfeed.com/
   logo: "/assets/images/customers/voxfeed.png"
@@ -47,13 +47,13 @@
   role: Prouduct Analyst
   profile-img: ""
   quote: I love Redash for the simplicity, price and a great number of usage patterns. My favourite features are parameters and filters as well as Redash API.
-- customer: DataMiner
-  url: https://data-miner.io/
-  logo: "/assets/images/customers/data-miner.png"
-  person: Ben Dehghan
-  role: Co-Founder
-  profile-img: "/assets/images/customers/ben-dehghan.jpg"
-  quote: Redash is as essential as email to my company. We love data but accessing the data is a pain without Redash. Any company I go to, I get them hooked on Redash. It's an easy sell :)
+- customer: Sheetsu
+  url: http://sheetsu.com/
+  logo: "/assets/images/customers/sheetsu.png"
+  person: Michael Oblak
+  role: Founder
+  profile-img: "/assets/images/customers/michael-oblak.jpg"
+  quote: It's easy for us to connect data from different sources and see the bigger picture and get more knowledge from all the data we are gathering in all different places. Redash helped us to see how our business is going. Before doing anything, we are setting the KPIs, which we are tracking on the dashboards. We have queries that help us answer some of the questions, why our users behave in such way or another. Very easy to set up. Perfect to collaborate with other team mates.
 - customer: Atomized
   url: https://www.atomized.com/
   logo: "/assets/images/customers/atomized.jpeg"
