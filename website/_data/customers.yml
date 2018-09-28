@@ -12,13 +12,6 @@
   role: VP Engineering & Product
   profile-img: "/assets/images/customers/lu-saenz.jpg"
   quote: Redash enabled us to surface visualizations and dashboards to everyone in the company -- remarkably easily and efficiently. The capabilities to share query results and combine many queries into publicly viewable dashboards work flawlessly and get the job done.
-- customer: FindHotel
-  url: https://www.findhotel.net/
-  logo: "/assets/images/customers/findhotel.png"
-  person: German Gomez-Herrero
-  role: CTO
-  profile-img: "/assets/images/customers/german-gomez-herrero.jpg"
-  quote: At FindHotel every important decision is based on data, and Redash has quickly become one of the preferred tools to share a data story across the company. Redash dashboards combined with the large number of supported data sources have made our company data fully transparent for everyone. From technical metrics such as pipeline latencies and infrastructure costs, to high level business metrics. Everything can be easily accessed and visualised with Redash.
 - customer: MyBook
   url: https://mybook.ru/
   logo: "/assets/images/customers/mybook.png"
@@ -26,6 +19,13 @@
   role: CTO
   profile-img: "/assets/images/customers/ilya-baryshev.jpg"
   quote: Redash greatly reduced the need to build custom analytics UI. Our Marketing team now heavily uses cohort dashboards, it is their daily tool now! Overall, Redash saves ton of time for the team.
+- customer: FindHotel
+  url: https://www.findhotel.net/
+  logo: "/assets/images/customers/findhotel.png"
+  person: German Gomez-Herrero
+  role: CTO
+  profile-img: "/assets/images/customers/german-gomez-herrero.jpg"
+  quote: At FindHotel every important decision is based on data, and Redash has quickly become one of the preferred tools to share a data story across the company. Redash dashboards combined with the large number of supported data sources have made our company data fully transparent for everyone. From technical metrics such as pipeline latencies and infrastructure costs, to high level business metrics. Everything can be easily accessed and visualised with Redash.
 - customer: DataMiner
   url: https://data-miner.io/
   logo: "/assets/images/customers/data-miner.png"
