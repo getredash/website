@@ -8,7 +8,7 @@ $footer-sm: 14px;
 .footer {
   padding: 30px 0;
   font-size: $footer-fs;
-  background: #f8fafa;
+  //background: #f8fafa;
   @include respond-to(sm) {
     padding: 30px 0 30px 0;
     font-size: $footer-sm;
@@ -61,17 +61,23 @@ $footer-sm: 14px;
 
 .get-started {
   padding: 20px 0 35px !important;
-
   .container {
-    background-image: url("/assets/images/elements/visualize-data.png");
+    background-image: url("/assets/images/elements/visualize-data-bw.png");
     background-clip: content-box;
     background-size: 79%;
     background-repeat: no-repeat;
     background-position: center;
+    transition: all 1.15s ease-in-out;
+  }
+
+  &:hover {
+    .container {
+      background-image: url("/assets/images/elements/visualize-data.png");
+    }
   }
 
   .get-started--signup {
-    background: rgba(255,255,255,0.92);
+    background: rgba(255,255,255,0.94);
     border: 1px solid #e8e8e8;
     border-radius: $border-radius;
     padding: 30px;
