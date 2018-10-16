@@ -8,7 +8,7 @@ slug: google-analytics-setup
 
 ## Setup The Datasource
 ### Create a Service Account
-1. Open the [Service accounts page](https://console.developers.google.com/permissions/serviceaccounts). If prompted, select a project.
+1. Open the [Service accounts page](https://console.cloud.google.com/iam-admin/serviceaccounts). If prompted, select a project.
 2. Click **Create service account**.
 3. In the Create service account window, type a name for the service account, and select Furnish a new private key. When prompted, select **JSON key file type**. Then click **Create**.
 
