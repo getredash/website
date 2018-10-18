@@ -24,23 +24,23 @@ Launch the instance with the pre-baked AMI we create (for small deployments t2.s
 
 | Region | AMI |
 | ------------- | -------------|
-| us-east-1 | [ami-0b1f24678e41d08f2](https://console.aws.amazon.com/ec2/home?region=us-east-1#LaunchInstanceWizard:ami=ami-0b1f24678e41d08f2) |
-| us-east-2 | [ami-0e3a5d8bf11cf59d9](https://console.aws.amazon.com/ec2/home?region=us-east-2#LaunchInstanceWizard:ami=ami-0e3a5d8bf11cf59d9) |
-| us-west-1 | [ami-0252c80b1bac75b87](https://console.aws.amazon.com/ec2/home?region=us-west-1#LaunchInstanceWizard:ami=ami-0252c80b1bac75b87) |
-| us-west-2 | [ami-04fa53a777a8f3bcb](https://console.aws.amazon.com/ec2/home?region=us-west-2#LaunchInstanceWizard:ami=ami-04fa53a777a8f3bcb) |
-| eu-west-1 | [ami-07fc14298eedf9fd7](https://console.aws.amazon.com/ec2/home?region=eu-west-1#LaunchInstanceWizard:ami=ami-07fc14298eedf9fd7) |
-| eu-west-2 | [ami-09be8900d0af4cfda](https://console.aws.amazon.com/ec2/home?region=eu-west-2#LaunchInstanceWizard:ami=ami-09be8900d0af4cfda) |
-| eu-west-3 | [ami-02ff2b7d0e44f5f1f](https://console.aws.amazon.com/ec2/home?region=eu-west-3#LaunchInstanceWizard:ami=ami-02ff2b7d0e44f5f1f) |
-| eu-central-1 | [ami-0286d24adaf81f72f](https://console.aws.amazon.com/ec2/home?region=eu-central-1#LaunchInstanceWizard:ami=ami-0286d24adaf81f72f) |
-| ap-south-1 | [ami-051b86112c589c625](https://console.aws.amazon.com/ec2/home?region=ap-south-1#LaunchInstanceWizard:ami=ami-051b86112c589c625) |
-| ap-southeast-1 | [ami-035e0ea0206c1c61e](https://console.aws.amazon.com/ec2/home?region=ap-southeast-1#LaunchInstanceWizard:ami=ami-035e0ea0206c1c61e) |
-| ap-southeast-2 | [ami-00089c102413ca14d](https://console.aws.amazon.com/ec2/home?region=ap-southeast-2#LaunchInstanceWizard:ami=ami-00089c102413ca14d) |
-| ap-northeast-2 | [ami-016fe4e57c2ae2ef8](https://console.aws.amazon.com/ec2/home?region=ap-northeast-2#LaunchInstanceWizard:ami=ami-016fe4e57c2ae2ef8) |
-| ap-northeast-1 | [ami-07e7434fe9b3db8ce](https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#LaunchInstanceWizard:ami=ami-07e7434fe9b3db8ce) |
-| sa-east-1 | [ami-0054563b202227d18](https://console.aws.amazon.com/ec2/home?region=sa-east-1#LaunchInstanceWizard:ami=ami-0054563b202227d18) |
-| ca-central-1 | [ami-02348876de1a061c2](https://console.aws.amazon.com/ec2/home?region=ca-central-1#LaunchInstanceWizard:ami=ami-02348876de1a061c2) |
+| us-east-1 | [ami-0c654c3ab463d22f6](https://console.aws.amazon.com/ec2/home?region=us-east-1#LaunchInstanceWizard:ami=ami-0c654c3ab463d22f6) |
+| us-east-2 | [ami-009571af26dc2a231](https://console.aws.amazon.com/ec2/home?region=us-east-2#LaunchInstanceWizard:ami=ami-009571af26dc2a231) |
+| us-west-1 | [ami-0f01ea8717350fb36](https://console.aws.amazon.com/ec2/home?region=us-west-1#LaunchInstanceWizard:ami=ami-0f01ea8717350fb36) |
+| us-west-2 | [ami-0e164aeccb29a1be7](https://console.aws.amazon.com/ec2/home?region=us-west-2#LaunchInstanceWizard:ami=ami-0e164aeccb29a1be7) |
+| eu-west-1 | [ami-0d2cad8c08ea629b5](https://console.aws.amazon.com/ec2/home?region=eu-west-1#LaunchInstanceWizard:ami=ami-0d2cad8c08ea629b5) |
+| eu-west-2 | [ami-0a33a6ac6a556f82d](https://console.aws.amazon.com/ec2/home?region=eu-west-2#LaunchInstanceWizard:ami=ami-0a33a6ac6a556f82d) |
+| eu-west-3 | [ami-000cdecb7942d1bb5](https://console.aws.amazon.com/ec2/home?region=eu-west-3#LaunchInstanceWizard:ami=ami-000cdecb7942d1bb5) |
+| eu-central-1 | [ami-026f66c6ba3cedf99](https://console.aws.amazon.com/ec2/home?region=eu-central-1#LaunchInstanceWizard:ami=ami-026f66c6ba3cedf99) |
+| ap-south-1 | [ami-06f0212e0421ac789](https://console.aws.amazon.com/ec2/home?region=ap-south-1#LaunchInstanceWizard:ami=ami-06f0212e0421ac789) |
+| ap-northeast-1 | [ami-0c7d9b740e997aa69](https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#LaunchInstanceWizard:ami=ami-0c7d9b740e997aa69) |
+| ap-northeast-2 | [ami-0666f50746c473b4e](https://console.aws.amazon.com/ec2/home?region=ap-northeast-2#LaunchInstanceWizard:ami=ami-0666f50746c473b4e) |
+| sa-east-1 | [ami-089fb47d4de9cd2ff](https://console.aws.amazon.com/ec2/home?region=sa-east-1#LaunchInstanceWizard:ami=ami-089fb47d4de9cd2ff) |
+| ca-central-1 | [ami-092f8e28acda0fb0e](https://console.aws.amazon.com/ec2/home?region=ca-central-1#LaunchInstanceWizard:ami=ami-092f8e28acda0fb0e) |
+| ap-southeast-1 | [ami-0f62f9ad30c784647](https://console.aws.amazon.com/ec2/home?region=ap-southeast-1#LaunchInstanceWizard:ami=ami-0f62f9ad30c784647) |
+| ap-southeast-2 | [ami-00174774b5620691a](https://console.aws.amazon.com/ec2/home?region=ap-southeast-2#LaunchInstanceWizard:ami=ami-00174774b5620691a) |
 
-(the above AMIs are of version: 5.0.1)
+(the above AMIs are of version: 5.0.2)
 
 When launching the instance make sure to use a Security Group, that only allows incoming traffic on ports: 22 (SSH), 80 (HTTP) and 443 (HTTPS). These AMIs are based on Ubuntu so you will need to use the user `ubuntu` when connecting to the instance via SSH.
 
@@ -51,7 +51,7 @@ Now proceed to “[Setup](#setup-redash-instance-setup)”.
 First, you need to add the images to your account:
 
 ```
-$ gcloud compute images create "redash-5-0-1" --source-uri gs://redash-images/redash.5.0.1.b4850.tar.gz
+$ gcloud compute images create "redash-5-0-2" --source-uri gs://redash-images/redash.5.0.2-b5486-build2.tar.gz
 ```
 
 Next you need to launch an instance using this image (n1-standard-1 instance type is recommended).
