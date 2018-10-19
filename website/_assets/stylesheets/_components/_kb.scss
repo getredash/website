@@ -22,6 +22,38 @@
   }
 }
 
+.was-this-useful {
+  background: #f8fafa;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 40px 0 25px 0;
+  text-align: left;
+
+  h4 {
+    margin: 0;
+    font-size: 17px;
+    display: inline-block;
+    font-weight: 600;
+  }
+
+  .wtu {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-left: 5px;
+    background: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+
+    transition: all 0.25s ease-in-out;
+
+    &:hover {
+      background: $primary;
+      color: #fff;
+      transform: scale(1.05);
+    }
+  }
+}
+
 .h2--kb-page-title {
   margin-top: 0;
   line-height: 2.5;
