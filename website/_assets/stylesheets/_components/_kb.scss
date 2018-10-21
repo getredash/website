@@ -43,13 +43,35 @@
     background: #fff;
     border-radius: 3px;
     cursor: pointer;
-
     transition: all 0.25s ease-in-out;
 
     &:hover {
       background: $primary;
       color: #fff;
       transform: scale(1.05);
+    }
+
+    &:active {
+      transform: scale(0.97);
+    }
+  }
+
+  .btn-secondary {
+    float: right;
+    box-shadow: none;
+    border: none;
+    border-radius: 3px;
+    background: #fff;
+    transition: all 0.25s ease-in-out;
+
+    &:hover {
+      background: $primary;
+      color: #fff;
+      transform: scale(1.05);
+    }
+    
+    &:active {
+      transform: scale(0.97);
     }
   }
 }
