@@ -49,17 +49,18 @@ layout: docs
       <div class="col-md-8 col-md-pull-4 col-sm-7 col-sm-pull-5 underline-link-holder">
         {{page.content}}
         <div class="was-this-useful">
-          <h4>Did you find this useful?</h4>
+          <span class="wtu-thankyou" style="display: none;">Thank you for your feedback!</span>
 
-          <span class="wtu wtu-no">No 👎</span>
-          <span class="wtu wtu-yes">Yes 👍</span>
+          <span class="wtu-rate">
+            <h4>Did you find this useful?</h4>
 
-          <a class="btn btn-secondary" href="https://github.com/getredash/website/edit/master/website/{{ page.relative_path}}"><i class="fa fa-pencil" aria-hidden="true"></i> Edit on GitHub</a>
+            <span class="wtu wtu-no">No 👎</span>
+            <span class="wtu wtu-yes">Yes 👍</span>
+          </span>
+
+          <a class="btn btn-secondary" href="https://github.com/getredash/website/edit/master/website/{{ page.relative_path }}"><i class="fa fa-pencil" aria-hidden="true"></i> Edit on GitHub</a>
         </div>
 
-        <!--<p class="edit-on-github">-->
-            <!--<a class="btn btn-secondary" href="https://github.com/getredash/website/edit/master/website/{{ page.relative_path}}"><i class="fa fa-pencil" aria-hidden="true"></i> Edit on GitHub</a>-->
-        <!--</p>-->
       </div><!-- col -->
     </div><!-- row -->
   </div><!-- container -->
