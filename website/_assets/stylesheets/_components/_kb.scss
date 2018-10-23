@@ -29,11 +29,25 @@
   margin: 40px 0 25px 0;
   text-align: left;
 
+  .wtu-thankyou {
+    transition: all 0.5s ease-in-out;
+    margin-left: 5px;
+  }
+
   h4 {
     margin: 0;
     font-size: 17px;
     display: inline-block;
     font-weight: 600;
+    line-height: 2.1;
+
+    @media (max-width: 550px) {
+      display: block;
+    }
+
+    @media (min-width: 767px) and (max-width: 991px)  {
+      display: block;
+    }
   }
 
   .wtu {
@@ -45,6 +59,11 @@
     border-radius: 3px;
     cursor: pointer;
     transition: all 0.25s ease-in-out;
+
+    @media (max-width: 991px) {
+      margin-left: 0;
+      margin-right: 5px;
+    }
 
     &:hover {
       background: $primary;
@@ -74,6 +93,16 @@
 
     &:active {
       transform: scale(0.97);
+    }
+
+
+    @media (max-width: 1200px) {
+      float: none;
+      margin-top: 15px;
+    }
+
+    @media (max-width: 991px) {
+      display: none;
     }
   }
 }
