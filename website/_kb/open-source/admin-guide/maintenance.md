@@ -14,20 +14,7 @@ order: 3
 
 The supervisor config can be found in: `/etc/supervisor/conf.d/redash.conf` if you're using the new images that install Supervisor with a system packages. Otherwise, you can find it at `/opt/redash/supervisord/supervisord.conf`.
 
-There, you can see the names of Redash's processes (`redash_celery`, `redash_server` and `redash_celery_scheduled`), as well as the location of their logs.
-
-If no logs location is present, edit the configuration file (`sudo nano /etc/supervisor/conf.d/redash.conf`); add the following lines underneath `[program:redash_server]`:
-
-```
-stdout_logfile=/opt/redash/current/logs/api.log
-stderr_logfile=/opt/redash/current/logs/api_error.log
-```
-
-and the following line underneath `[program:redash_celery]`:
-
-```
-stdout_logfile=/opt/redash/current/logs/celery.log
-```
+There, you can see the names of Redash's processes (`redash_celery`, `redash_server` and `redash_celery_scheduled`), as well as the location of their logs. If no logs location is present, then the logs will be written to `/var/logs/supervisor`.
 
 ## Restart
 
