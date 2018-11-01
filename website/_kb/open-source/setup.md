@@ -119,7 +119,7 @@ If you want to use Google OAuth to authenticate users, you need to create a Goog
 * `REDASH_GOOGLE_CLIENT_ID` (Google OAuth Client ID)
 * `REDASH_GOOGLE_CLIENT_SECRET` (Google OAuth Client Secret)
 
-Once updated, restart the web server (`docker up -d server`). Once enabled, Redash will use Google OAuth to authenticate _existing_ user accounts. To enable automatic user creation who belong to a specific domain name, you can add this domain (or more) in the setting page:
+Once updated, restart the web server (`docker-compose up -d server`). Once enabled, Redash will use Google OAuth to authenticate _existing_ user accounts. To enable automatic user creation who belong to a specific domain name, you can add this domain (or more) in the setting page:
 
 ![](/assets/images/docs/redash_google_oauth_domain.png)
 
