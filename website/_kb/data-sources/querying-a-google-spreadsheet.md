@@ -44,8 +44,9 @@ Then the id will be   `1DFuuOMFzNoFQ5EJ2JE2zB79-0uR5zVKvc0EikmvnDgk`.
 
 {% callout warning %}
 If your organization has restrictions on sharing spreadsheets with external
-accounts, it might not work, but worth a try - especially if you created the
-service account with a Google account from the same organization.
+accounts, it will not work. As a workaround, you can add the email address of
+the Google Service Account you're using to the "Who Can Access" list of the 
+Google Sheet you're querying.
 {% endcallout %}
 
 ### Filtering The Data
