@@ -4,11 +4,14 @@ parent_category: user-guide
 title: Formatting Numbers in Visualizations
 toc: true
 ---
+
+In several Redash visualizationsyou can control how the numbers are formatted. You control the format by suppplying a format string. Below you can find examples for the various format options.
+
 ## Numbers
 
 {:.table.table-striped}
 |------------|--------------|---------------| 
-| Number     | Format       | String        | 
+| Number     | Format       | Output        | 
 |------------|--------------|---------------| 
 | 10000      | '0,0.0000'   | 10,000.0000   | 
 | 10000.23   | '0,0'        | 10,000        | 
@@ -35,7 +38,7 @@ toc: true
 
 {:.table.table-striped}
 |-----------|--------------|------------| 
-| Number    | Format       | String     | 
+| Number    | Format       | Output     | 
 |-----------|--------------|------------| 
 | 1000.234  | '$0,0.00'    | $1,000.23  | 
 | 1000.2    | '0,0[.]00 $' | 1,000.20 $ | 
@@ -49,7 +52,7 @@ toc: true
 
 {:.table.table-striped}
 |---------------|------------|-----------| 
-| Number        | Format     | String    | 
+| Number        | Format     | Output    | 
 |---------------|------------|-----------| 
 | 100           | '0b'       | 100B      | 
 | 1024          | '0b'       | 1KB       | 
@@ -63,7 +66,7 @@ toc: true
 
 {:.table.table-striped}
 |------------|-------------|----------| 
-| Number     | Format      | String   | 
+| Number     | Format      | Output   | 
 |------------|-------------|----------| 
 | 100        | '0%'        | 100%     | 
 | 97.4878234 | '0.000%'    | 97.488%  | 
@@ -75,7 +78,7 @@ toc: true
 
 {:.table.table-striped}
 |--------------|------------|----------| 
-| Number       | Format     | String   | 
+| Number       | Format     | Output   | 
 |--------------|------------|----------| 
 | 1123456789   | '0,0e+0'   | 1e+9     | 
 | 12398734.202 | '0.00e+0'  | 1.24e+7  | 
