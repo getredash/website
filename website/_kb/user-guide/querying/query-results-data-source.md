@@ -35,4 +35,4 @@ Few notes:
   1. When you run a query, we execute the underlying queries as well to make sure you have recent results in case you schedule this query. We might fine-tune this in the future to reduce the number of times we run the same query.
   2. The processing of the data is being done by SQLite in memory - in case of large result sets it might fail due to memory running out.
   3. Access to the data source is governed by the groups it's associated with, like any other data source. When a user runs a query we also check if he has permission to execute queries on the data sources the original queries use. So while a user who has access to this data source will be able to see any query that uses it, he won't be able to execute queries on data sources he doesn't have access to.
-
+  4. Ensure the Query Results data source you created is selected as the data source in the Query Editor.
