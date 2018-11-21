@@ -86,7 +86,7 @@ google-api-python-client==1.5.1
 oauth2client==3.0.0
 ```
 
-(`sudo pip install -U google-api-python-client==1.5.1oauth2client==3.0.0`)
+(`sudo pip install -U google-api-python-client==1.5.1 oauth2client==3.0.0`)
 
 #### I don't see Athena in the data sources list after upgrading to v2.0.0
 

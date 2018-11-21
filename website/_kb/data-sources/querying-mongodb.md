@@ -17,6 +17,8 @@ Also you can do aggregate queries (
 [db.collection.aggregate](https://docs.mongodb.com/manual/reference/method/db.collection.aggregate/))
 by passing an `aggregate`  dictionary.
 
+## Query Examples
+
 ### Simple Query Example
 
     
@@ -127,3 +129,19 @@ You can add filters to Mongo queries by projecting a column with the
 The above example will show a 'State' column, and allow you to filter on this
 column.
 
+## Troubleshooting
+
+### Sort exceeded memory limit of 104857600 bytes
+
+> Sort exceeded memory limit of 104857600 bytes, but did not opt in to external sorting. Aborting operation. Pass allowDiskUse:true to opt in.
+
+In MongoDB, the in-memory sorting have a limit of 100M, to perform a large sort, you need enable `allowDiskUse` option to write data to a temporary files for sorting.
+
+To enable the `allowDiskUse` option, just add the option to your query:
+
+```json
+{
+  ...
+  "allowDiskUse": true
+}
+```
