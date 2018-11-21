@@ -35,9 +35,10 @@ $card-hover-color: $hoki;
 }
 
 .card--customer {
-  transition: all .75s ease-in-out;
+  transition: all .25s ease;
   margin-bottom: 30px;
   padding: 25px !important;
+  transform: scale(0.95, 0.95);
 
   h4 {
     font-size: 19px;
@@ -53,7 +54,8 @@ $card-hover-color: $hoki;
   border-radius: $border-radius;
 
   &:hover {
-    box-shadow: 0 2px 20px rgba(0,0,0,.05125)
+    box-shadow: 0 2px 20px rgba(0,0,0,.05125);
+    transform: scale(0.97, 0.97);
   }
 }
 
