@@ -61,3 +61,31 @@
   role: CTO
   profile-img: ""
   quote: The ability to query multiple data sources from a single window in a read-only environment is a huge plus for our team on a day to day basis. Redash allowed our team to provide better customer service by giving us the information we need without requiring a developer to get involved.
+- customer: Redox
+  url: https://www.redoxengine.com/
+  logo: "/assets/images/customers/redox.png"
+  person: Tom Jessessky
+  role: Data and Analytics Lead
+  profile-img: "/assets/images/customers/tom-jessessky.jpg"
+  quote: Redash's ability to efficiently query Redshift has allowed it to fill in the gaps where our other (more expensive) dashboard tools fall short.
+- customer: SpareFoot
+  url: https://www.sparefoot.com/
+  logo: "/assets/images/customers/sparefoot.png"
+  person: Debyani Ghosh
+  role: Senior Data Architect
+  profile-img: ""
+  quote: Redash makes it easy for our analysts and engineers to save queries and share across the business. We like the fact that the end users have the same UI experience whether they are connecting to Redshift, Mysql or Data Lake via Athena.
+- customer: Just Add Music
+  url: https://www.justaddmusic.net/
+  logo: "/assets/images/customers/justaddmusic.png"
+  person: Dirk Bosman
+  role: Data Analyst
+  profile-img: "/assets/images/customers/dirk-bosman.jpg"
+  quote: With Redash, we have managed to integrate various data source in one single view to make our company more data-driven.
+- customer: Farmster
+  url: https://www.farmster.co/
+  logo: "/assets/images/customers/farmster.jpg"
+  person: Adam Abramson
+  role: Founder
+  profile-img: ""
+  quote: Redash is a huge plus for a startup seeking to display our progress to investors and partners in a simple and elegant way.
