@@ -19,11 +19,19 @@
       font-size: 14px;
       border-radius: $border-radius;
       padding: 3px 10px;
-      font-transform: allcaps;
+      text-transform: allcaps;
     }
   }
 }
 
 .profile-image {
   border-radius: 50%;
+}
+
+.customer-quotes__middle {
+  margin-top: -35px;
+
+  @media (max-width: 767px) {
+    margin-top: 0;
+  }
 }
