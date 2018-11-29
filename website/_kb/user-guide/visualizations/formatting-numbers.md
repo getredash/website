@@ -5,7 +5,7 @@ title: Formatting Numbers in Visualizations
 toc: true
 ---
 
-In several Redash visualizationsyou can control how the numbers are formatted. You control the format by suppplying a format string. Below you can find examples for the various format options.
+In several Redash visualizations you can control how the numbers are formatted. You control the format by suppplying a format string. Below you can find examples for the various format options.
 
 ## Numbers
 
