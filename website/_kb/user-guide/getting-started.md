@@ -55,7 +55,7 @@ You can combine visualizations and text into thematic & powerful dashboards. Add
 
 ## 5. Add an avatar
 
-Redash uses [Gravatar](https://en.gravatar.com/) to handle profile pictures. Sign up for Gravatar with the email address you used to sign-in to Redash. When you're finished making your Gravatar, log out of Redash and then log back in. Your profile picture will automatically appear.
+If you login to Redash with a Google account, Redash will automatically fetch your Google Account profile picture. Alternatively, Redash can use [Gravatar](https://en.gravatar.com/) to handle profile pictures. Sign up for Gravatar with the email address you used to sign-in to Redash. When you're finished making your Gravatar, log out of Redash and then log back in. Your profile picture will automatically appear.
 
 {% callout %}
 
