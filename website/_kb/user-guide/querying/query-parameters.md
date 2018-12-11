@@ -24,15 +24,7 @@ recognized by Redash, you will see a parameter input box appear below the query 
 
 <img src="/assets/images/docs/gitbook/query-parameter.png" width="100%">
 
-Once it's recognized by Redash, you can type any value into this text box and execute the query to get the
-results.
-
-
-{% callout danger %}
-
-If your Data Source in Redash has write privileges, avoid using Text parameters wherever possible. As of December 2018, [Redash does not parameterize queries](https://github.com/getredash/redash/issues/2904) in the underlying DBAPI. Query Parameters are passed in plain text to the database, running the risk of a malicious or accidental SQL injection. A fix for this circumstance is under active development. Limiting your Query Parameters to numerical, date/time or dropdown types protects you from SQL injection since Redash will not allow a value different than the designated type.
-
-{% endcallout %}
+Once it's recognized by Redash, you can type any value into this text box and execute the query to get the results.
 
 ## Add A Parameter From The UI
 
@@ -62,10 +54,10 @@ Since [Version 3](https://github.com/getredash/redash/blob/master/CHANGELOG.md#v
   * **Global** : by default when placed on a dashboard as a widget, queries with parameters will each have their own parameter input box(es). But when a query parameter is set to _Global_, all queries in a dashboard that share the same parameter name will use a combined parameter input box. For this to work, each query must have that parameter marked as _Global_.  
 
 {% callout danger %}
-Query Parameters only work within Redash and are not supported in embeds or shared dashboards. Also, parameters require Full Access permission to the data source (vs. View Only).
+
+Query Parameters only work within Redash and are not supported in embeds or shared dashboards. Also, a Redash user must have [Full Access]({% link _kb/user-guide/users/permissions-groups.md  %}) permission to the data source to use Query Parameters. 
+
 {% endcallout %}
-
-
 
 ### Date Parameters
 
