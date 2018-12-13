@@ -19,7 +19,7 @@ Once a query has been saved and published in Redash, it can be a hassle to `Edit
     WHERE action = '{{action}}'
 {% endraw %}
 
-In the above example `{{action}}` is the parameter definition. Once added and
+In the above example {%raw%}<code>{{action}}</code>{%endraw%} is the parameter definition. Once added and
 recognized by Redash, you will see a parameter input box appear below the query input text box and above your results:
 
 <img src="/assets/images/docs/gitbook/query-parameter.png" width="100%">
@@ -63,7 +63,13 @@ Query Parameters only work within Redash and are not supported in embeds or shar
 
 In many DBAPI's, you can use a string value to represent a date/time which is equivalent to a Text parameter in Redash. Redash's Date parameters are preferable because they have a special calendar interface to make choosing a date easy. If you know in advance, however, that your date parameters will always come from a short list, you can instead use the `Dropdown List` or `Query Based Dropdown List` type.
 
-If you are using Query Parameters of type `Date`, you can set the parameter's default value to the current date and time when the query is run. While most databases include functions for querying with the current date/time (`GETDATE()` in TSQL or `CURRENT_DATE` in MySQL e.g.), this feature in Redash lets you run the **same query** up-to-the-minute or further in the past.
+If you are using Query Parameters of type `Date`, you can set the parameter's default value to the current date and time when the query is run. While most databases include functions for querying with the current date/time (`GETDATE()` in TSQL or `CURRENT_DATE` in MySQL e.g.), this feature in Redash lets you run the **same query** either up-to-the-minute or further in the past.
+
+#### Date Range Parameters
+
+For queries that must select data between two dates, Redash provides three levels of Date / Time Range parameters. When chosen from the parameters settings screen, Redash places two complete parameters into your query: one for the start date and one for the end date. You will typically need to separate them in your query (into different `WHERE` clauses, e.g.). However, the parameter selection interface below the query window displays a unified widget to easily chose a date range without unnecessary clicking.
+
+Date Range parameters behave exactly like Date parameters but are meant to save you time.
 
 
 ### FAQ
