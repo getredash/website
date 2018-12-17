@@ -19,6 +19,7 @@ Google BigQuery ([instructions]({% link _kb/data-sources/bigquery-setup.md %})) 
 Cassandra  |  ✅  |  ✅  
 ClickHouse  |  ✅  |  ✅  
 CockroachDB  |  ✅  |  ✅  
+Druid  |  ✅  |  ✅  
 Elasticsearch  |  ✅  |  ✅  
 JIRA  |  ✅  |  ✅  
 JSON  |  ✅  |  ✅  
