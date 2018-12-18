@@ -1,13 +1,12 @@
 ---
 category: user-management
-parent_category: user-management
+parent_category: user-guide
 title: Adding A Profile Picture
-slug: profile-pictures
 ---
 
 If you login to Redash with a Google account, Redash will automatically fetch your Google Account profile picture. Alternatively, Redash uses [Gravatar](https://en.gravatar.com/) to handle profile pictures.
 
-Sign up for Gravatar with the email address you used to sign-in to Redash. When you're finished making your Gravatar, log out of Redash and then log back in. Your profile picture will automatically appear.
+Sign up for Gravatar with the email address you used to sign-in to Redash. Your Gravatar will appear on Redash within 5 minutes.
 
 {% callout %}
 
