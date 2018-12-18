@@ -14,29 +14,27 @@ Amazon Athena ([instructions]({% link _kb/data-sources/amazon-athena-setup.md %}
 Amazon DynamoDB  |  ✅  |  ✅  
 Amazon Redshift  |  ✅  |  ✅  
 Axibase Time Series Database ([instructions]({% link _kb/data-sources/axibase-time-series-database.md %})) |  ✅  |  ✅  
-Google Analytics ([instructions]({% link _kb/data-sources/google-analytics-setup.md %}))  |  ✅  |  ✅  
-Google BigQuery ([instructions]({% link _kb/data-sources/bigquery-setup.md %})) |  ✅  |  ✅  
 Cassandra  |  ✅  |  ✅  
 ClickHouse  |  ✅  |  ✅  
 CockroachDB  |  ✅  |  ✅  
+CSV ([instructions]({% link _kb/data-sources/csv-file-from-a-url.md %})) |  ✅  |  ✅ 
 Databricks |  ✅  |  ✅  
 DB2 by IBM |  ✅  |  ✅  
 Druid  |  ✅  |  ✅  
 Elasticsearch  |  ✅  |  ✅  
-JIRA  |  ✅  |  ✅  
-JSON  |  ✅  |  ✅  
-CSV ([instructions]({% link _kb/data-sources/csv-file-from-a-url.md %})) |  ✅  |  ✅ 
-Google Analytics  |  ✅  |  ✅  
+Google Analytics ([instructions]({% link _kb/data-sources/google-analytics-setup.md %}))  |  ✅  |  ✅  
+Google BigQuery ([instructions]({% link _kb/data-sources/bigquery-setup.md %})) |  ✅  |  ✅  
 Google Spreadsheets  |  ✅  |  ✅  
 Graphite  |  ✅  |  ✅  
-Greenplum  |  ✅  |  ✅  
+Greenplum  |   |  ✅  
 Hive  |  ✅  |  ✅  
 Impala  |  ✅  |  ✅  
 InfluxDB  |  ✅  |  ✅  
-JQL for Jira  |  ✅  |  ✅  
+JIRA  |  ✅  |  ✅  
+JSON  |  ✅  |  ✅  
 Kylin by Apache |  ✅  |  ✅  
-MapD  |  ✅  |  ✅  
-MEMSQL  |  ✅  |  ✅  
+MapD  |    |  ✅  
+MemSQL  |  ✅  |  ✅  
 Microsoft SQL Server ([instructions]({% link _kb/data-sources/azure-sql-database-setup.md %})) |  ✅  |  ✅  
 MongoDB ([instructions]({% link _kb/data-sources/mongodb-setup.md %})) |  ✅  |  ✅  
 MySQL  |  ✅  |  ✅  
@@ -48,9 +46,11 @@ Python  |  |  ✅
 Qubole  |  ✅  |  ✅  
 Rockset |  ✅  |  ✅  
 Salesforce |  ✅  |  ✅  
-Shell Scripts |  ✅  |  ✅  
+ScyllaDB  |  ✅  |  ✅
+Shell Scripts |   |  ✅  
 Snowflake  |  ✅  |  ✅  
-SQLite |  ✅  |  ✅  
+SQLite |    |  ✅  
 TreasureData  |  ✅  |  ✅  
 Vertica  |  ✅  |  ✅
+Yandex AppMetrrica |  ✅  |  ✅  
 Yandex Metrica |  ✅  |  ✅  
