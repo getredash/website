@@ -19,6 +19,8 @@ Google BigQuery ([instructions]({% link _kb/data-sources/bigquery-setup.md %})) 
 Cassandra  |  ✅  |  ✅  
 ClickHouse  |  ✅  |  ✅  
 CockroachDB  |  ✅  |  ✅  
+Databricks |  ✅  |  ✅  
+DB2 by IBM |  ✅  |  ✅  
 Druid  |  ✅  |  ✅  
 Elasticsearch  |  ✅  |  ✅  
 JIRA  |  ✅  |  ✅  
@@ -31,15 +33,24 @@ Greenplum  |  ✅  |  ✅
 Hive  |  ✅  |  ✅  
 Impala  |  ✅  |  ✅  
 InfluxDB  |  ✅  |  ✅  
+JQL for Jira  |  ✅  |  ✅  
+Kylin by Apache |  ✅  |  ✅  
 MapD  |  ✅  |  ✅  
+MEMSQL  |  ✅  |  ✅  
 Microsoft SQL Server ([instructions]({% link _kb/data-sources/azure-sql-database-setup.md %})) |  ✅  |  ✅  
 MongoDB ([instructions]({% link _kb/data-sources/mongodb-setup.md %})) |  ✅  |  ✅  
 MySQL  |  ✅  |  ✅  
 Oracle  |  ✅  |  ✅  
 PostgreSQL  |  ✅  |  ✅  
 Presto  |  ✅  |  ✅  
+Prometheus  |  ✅  |  ✅  
 Python  |  |  ✅  
-ScyllaDB  |  ✅  |  ✅  
+Qubole  |  ✅  |  ✅  
+Rockset |  ✅  |  ✅  
+Salesforce |  ✅  |  ✅  
+Shell Scripts |  ✅  |  ✅  
 Snowflake  |  ✅  |  ✅  
+SQLite |  ✅  |  ✅  
 TreasureData  |  ✅  |  ✅  
 Vertica  |  ✅  |  ✅
+Yandex Metrica |  ✅  |  ✅  
