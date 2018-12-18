@@ -9,17 +9,15 @@ toc: true
 
 ## Creating a Dashboard
 
-A dashboard is defined as a combination of visualizations and text boxes. Want
-to know more? Keep reading!
+A dashboard lets you combine visualizations and text boxes that provide context with your data.
 
 ![](/assets/images/docs/gifs/dashboards/dashboards.gif)
 
-You can create a new dashboard from the navigation:
+You can create a new dashboard with the **Create** button from the main navigation menu:
 
 ![](/assets/images/docs/gitbook/create-dashboard.png)
 
-After naming your dashboard, you can start adding widgets to it from existing
-query visualizations or create different commentary texts.
+After naming your dashboard, you can add widgets from existing query visualizations or by writing commentary with a text box. Start by clicking the **Add Widget** button.
 
 ![](/assets/images/docs/gitbook/add-widgets-to-dashboard.png)
 
@@ -27,23 +25,17 @@ Search existing queries or pick a recent one from the pre-populated list:
 
 ![](/assets/images/docs/gitbook/add-widgets-modal.png)
 
-## Adding Visualizations
+### Picking Visualizations
 
-Dashboards aggregate multiple query datasets, visualizations, and texts into
-one handy view.
+By default, query results are shown in a table. At the moment it's not possible to create a new visualization from the "Add Widget" menu, so you'll need to open the query and add the visualization there beforehand ([instructions]({% link _kb/user-guide/visualizations/visualizations-how-to.md %})).
 
-To add widgets to a dashboard, select the query you want to feature and the
-relevant visualization. By default, query results are shown in a table.
+### Adding Text Boxes
 
-At the moment it's not possible to create a new visualization from the "Add
-Widget" menu, so you'll need to open the query and add the visualization there
-beforehand ([instructions]({% link _kb/user-guide/visualizations/visualizations-how-to.md %})).
+Add a text box to your dashboard using the `Text Box` tab on the **Add Widget** dialog. You can style the text boxes in your dashboards using [Markdown](https://daringfireball.net/projects/markdown/syntax).
 
 ## Dashboard Filters
 
-When queries have filters you need to apply filters at the dashboard level as
-well. Setting your dashboard filters flag will cause the filter to be applied
-to all Queries.
+When queries have filters you need to apply filters at the dashboard level as well. Setting your dashboard filters flag will cause the filter to be applied to all Queries.
 
 1\. Open dashboard settings:
 
