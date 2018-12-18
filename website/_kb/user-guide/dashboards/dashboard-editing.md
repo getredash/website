@@ -9,7 +9,7 @@ toc: true
 
 ## Creating a Dashboard
 
-A dashboard lets you combine visualizations and text boxes that provide context with your data. Want to know more? Keep reading!
+A dashboard lets you combine visualizations and text boxes that provide context with your data.
 
 ![](/assets/images/docs/gifs/dashboards/dashboards.gif)
 
