@@ -10,7 +10,7 @@ We will use Docker to run all the services needed for Redash, except for Node.js
 which we will run locally.
 
 1. [Install Docker and Docker Compose](https://docs.docker.com/engine/installation/).
-2. [Install Node.js](https://nodejs.org/en/download/) (v6 or later is recommended, can be installed with Homebrew on OS/X)
+2. [Install Node.js](https://nodejs.org/en/download/) (latest LTS or later is recommended, can be installed with Homebrew on OS/X)
 
 ## Setup
 
