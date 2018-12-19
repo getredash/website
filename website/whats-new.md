@@ -1,8 +1,7 @@
 ---
 title: What's New
-layout: whatsnew
+layout: whats-new
 permalink: /whats-new/
-toc: true
 ---
 
 > This page tracks updates to the [hosted version](https://app.redash.io/) of Redash. If you're using the open source version, you should follow the CHANGELOG.
