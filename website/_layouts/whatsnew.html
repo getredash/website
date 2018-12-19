@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<section class="section section--small bg-mutted">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-sm-7 push-xs-down">
+        <h1 class="h1 h1--kb-page-title">📦 {{page.title}}</h1>
+      </div><!-- col -->
+    </div><!-- row -->
+  </div><!-- container -->
+</section><!-- section -->
+
+
+<section class="section section--small section--kb">
+  <div class="container content docs">
+    <div class="row row--flex">
+      <div class="col-md-4 col-md-push-8 col-sm-5 col-sm-push-7 push-xs-down">
+        <div class="sticky-in-parent">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <p class="text-uppercase mt-0"><b>QUICK NAV</b></p>
+              <hr class="hr--sm">
+              {{ content | toc_only }}
+            </div><!-- panel-body -->
+          </div><!-- panel -->
+        </div><!-- sticky-in-parent -->
+      </div><!-- col -->
+
+      <div class="col-md-8 col-md-pull-4 col-sm-7 col-sm-pull-5 underline-link-holder">
+        {{content}}
+      </div><!-- col -->
+    </div><!-- row -->
+  </div><!-- container -->
+</section><!-- section -->
