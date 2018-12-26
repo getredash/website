@@ -5,11 +5,9 @@ helpscout_url: https://help.redash.io/article/39-query-snippets-shortcuts
 title: Query Snippets
 slug: query-snippets
 ---
-Query snippets are small (or not so small) pieces of queries you want to share
-with your team to reduce the need to type them over and over again or looking
-for a reference.
+Copy and Paste are a big part of composing database queries. Because it's much easier to duplicate prior work than to write it from scratch. This is particularly true for common `JOIN` statements or complex `CASE` expressions. As your list of queries in Redash grows, however, it can be difficult to remember which queries contain the statement you need right now. Enter Query Snippets.
 
-You can create them at `Settings` -> `Query Snippets`.
+Query Snippets are segments of queries that your whole team can share and trigger via autocomplete. You can create them at `Settings` -> `Query Snippets`.
 
 ![](/assets/images/docs/gitbook/Snippet.png)
 
