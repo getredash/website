@@ -1,0 +1,131 @@
+---
+title: Redash customers
+description: Empowering data-driven decision making in thousands of teams across the globe. From small teams to huge organizations, Redash helps tens of thousands of users to query and visualize data in a new and meaningful way.
+layout: default
+permalink: /customers/
+---
+
+<section class="section section--pt-lg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <h1 class="mb-lg">Empowering data-driven decision making in thousands of teams across the globe</h1>
+                <p>From small teams to huge organizations, Redash helps tens of thousands of users to <strong>query databases and visualise data in a new and meaningful way.</strong></p>
+            </div>
+        </div>
+    </div><!-- container -->
+</section><!-- section -->
+
+<section class="section">
+    <div class="container">
+        <img src="/assets/images/elements/users-list-strip.png" width="100%" class="customer-logoshow">
+    </div>
+</section>
+
+<section class="section customer-quotes">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4">
+                {% for customer in site.data.customers %}
+                {% assign mod = forloop.index | modulo: 3 %}
+                {% if mod == 0 %}
+                <div class="card card--customer">
+                    <img src="{{customer.logo}}" alt="{{customer.customer}} <3 Redash" class="customer-logo">
+                    <h4 class="serif"><em>{{customer.quote}}</em></h4>
+                    <p>
+                        <img src="{{customer.profile-img}}" width="48px" class="profile-image">
+                        by <strong>{{customer.person}}</strong>, {{customer.role}} at <a href="{{customer.url}}">{{customer.customer}}</a>
+                    </p>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+
+            <div class="col-sm-4 customer-quotes__middle">
+                {% for customer in site.data.customers %}
+                {% assign mod = forloop.index | modulo: 3 %}
+                {% if mod == 1 %}
+                <div class="card card--customer">
+                    <img src="{{customer.logo}}" alt="{{customer.customer}} <3 Redash" class="customer-logo">
+                    <h4 class="serif"><em>{{customer.quote}}</em></h4>
+                    <p>
+                        <img src="{{customer.profile-img}}" width="48px" class="profile-image">
+                        by <strong>{{customer.person}}</strong>, {{customer.role}} at <a href="{{customer.url}}">{{customer.customer}}</a>
+                    </p>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+
+            <div class="col-sm-4">
+                {% for customer in site.data.customers %}
+                {% assign mod = forloop.index | modulo: 3 %}
+                {% if mod == 2 %}
+                <div class="card card--customer">
+                    <img src="{{customer.logo}}" alt="{{customer.customer}} <3 Redash" class="customer-logo">
+                    <h4 class="serif"><em>{{customer.quote}}</em></h4>
+                    <p>
+                        <img src="{{customer.profile-img}}" width="48px" class="profile-image">
+                        by <strong>{{customer.person}}</strong>, {{customer.role}} at <a href="{{customer.url}}">{{customer.customer}}</a>
+                    </p>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section__customers--alooma">
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center">Read our case studies</h2>
+            <div class="col-md-8 col-md-offset-2">
+                <div class="featured-customer">
+                    <div class="featured-customer--content">
+                        <img src="/assets/images/customers/studio71.png" alt="Studio71 logo" class="customer-logo" width="96">
+
+                        <h2>Studio71</h2>
+
+                        <p>Studio71 uses Redash to build a data driven culture, save time and support sales and talent management</p>
+
+                        <a data-track href="/case-studies/studio71" class="btn btn-secondary">Read Case Study →</a>
+                    </div>
+                </div>
+
+                <div class="featured-customer">
+                    <div class="featured-customer--content">
+                        <img src="/assets/images/customers/bubbleiq.png" alt="BubbleIQ logo" class="customer-logo" width="96">
+
+                        <h2>BubbleIQ</h2>
+
+                        <p>BubbleIQ uses Redash to support sales, save engineering time and report towards investors</p>
+
+                        <a data-track href="/case-studies/bubbleiq" class="btn btn-secondary">Read Case Study →</a>
+                    </div>
+                </div>
+
+                <div class="featured-customer">
+                    <img src="/assets/images/elements/redash-charts.jpg" width="100%">
+
+                    <div class="featured-customer--content">
+                        <h2>How Redash is helping Alooma sustain a data driven culture</h2>
+                        <p>by <img src="/assets/images/customers/dan-ya-shwartz.jpg" width="32px" class="profile-image"> <a href="https://twitter.com/danjas">Dan-ya Shwartz</a></p>
+
+                        <p><em>"Alooma and Redash share the same mission: to liberate data and unleash its full potential. Knowing that analytics and Business Intelligence (BI) were going to be paramount for running a data company, we wanted something that gave us full transparency down to the schemas without any abstraction layers. We needed to write our own SQL and collaborate over queries and dashboards in a simple way..."</em></p>
+
+                        <a data-track href="https://blog.redash.io/alooma-redash-for-pros-dashboads-etl-307dc189d3a5" class="btn btn-secondary">Continue Reading on Medium →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <a data-track href="/case-studies/" class="btn btn-primary">All Redash Case Studies →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% include get_started.html %}

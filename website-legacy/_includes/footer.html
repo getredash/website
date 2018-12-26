@@ -1,0 +1,39 @@
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            {% for category in site.data.footer_links %}
+            <div class="col-xs-4 col-md-2 col-sm-3 footer__item">
+                <h3 class="footer__title">{{category.name}}</h3>
+                <ul class="footer__list">
+                    {% for link in category.links %}
+                    <li class="footer__list-item">
+                        <a data-track data-track-location='footer' href="{{link.url}}" class="footer__list-link">{{link.name}}</a>
+                    </li>
+                    {% endfor %}
+                </ul><!-- footer__list -->
+            </div><!-- col -->
+            {% endfor %}
+
+            <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 col-sm-3 footer__item--other text-right">
+
+                <ul class="footer__list footer__list--social">
+                    <li class="footer__list-item">
+                        <a href="https://github.com/getredash" class="footer__list-link">
+                            <i class="fa fa-github-square" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="https://twitter.com/getredash" class="footer__list-link">
+                            <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul><!-- footer__list -->
+
+                <p>
+                  <a data-track="" data-track-location="footer" href="/terms.html" class="footer__list-link">Terms</a> ⚬
+                    <a data-track="" data-track-location="footer" href="/privacy.html" class="footer__list-link">Privacy Policy</a>
+                </p>
+            </div><!-- col -->
+        </div><!-- row -->
+    </div><!-- container -->
+</footer>

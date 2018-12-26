@@ -1,0 +1,131 @@
+---
+title: Redash is built by the open source community
+description: More than 200 contributors and years of constant development...
+layout: default
+permalink: /community/
+---
+
+<section class="section section--pt-lg section__os--hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-7">
+                <img src="/assets/images/elements/open-source.png" id="open-source-illustrated">
+            </div>
+            <div class="col-sm-5">
+                <h1>Redash is built by the open source community of {{ site.data.contributors | size | divided_by: 10 | floor | divided_by: 0.1 | round }}+ contributors</h1>
+                
+                <a class="github-button" href="https://github.com/getredash/redash" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star getredash/redash on GitHub">Star</a>
+                <a class="github-button" href="https://github.com/getredash" data-size="large" aria-label="Follow @getredash on GitHub">Follow @getredash</a>
+                <!--<br>-->
+                <!--<a data-track data-track-location='community-hero' track-event='Clicked View On GitHub' href="https://github.com/getredash/redash" class="btn btn-secondary btn-lg m-t-25">View on GitHub <i class="fa fa-external-link"></i>-->
+                </a>
+            </div>
+        </div>
+
+    </div><!-- container -->
+</section><!-- section -->
+
+<section class="section p-t-25 section__os--content">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-sm-4">
+                <h1>{{ site.data.contributors | size | divided_by: 10 | floor | divided_by: 0.1 | round }}+</h1>
+                <p>Total contributors</p>
+            </div>
+
+            <div class="col-sm-4">
+                <h1>1300+</h1>
+                <p>Forks</p>
+            </div>
+
+            <div class="col-sm-4">
+                <h1>1500</h1>
+                <p>Days of constant building and shipping</p>
+            </div>
+        </div>
+    </div><!-- container -->
+</section><!-- section -->
+
+
+<section class="section p-t-25 p-b-10 section__os--content">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h2>Our contributors</h2>
+            </div>
+        </div>
+    </div><!-- container -->
+</section><!-- section -->
+
+<section class="section p-t-0 section__os--contributor-list">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="contributor-list text-center">
+                    {% for contributor in site.data.contributors %}
+                    <div class="contributor-pics">
+                        <a href="{{ contributor.html_url }}"><img src="{{ contributor.avatar_url }}" width="64px"></a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row m-t-25">
+        <div class="col-md-12 text-center">
+            <p><a href="https://github.com/getredash/redash/graphs/contributors">All contributors →</a></p>
+        </div>
+    </div>
+</section>
+
+
+<section class="section p-t-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2 text-center">
+                <h2 class="serif">"Project maintainers are responsible for clarifying the standards of acceptable behavior and are expected to take appropriate and fair corrective action in response to any instances of unacceptable behavior."</h2>
+
+                <a data-track data-track-location='open-source' track-event='Clicked Code of Conduct' href="/community/code_of_conduct.html" class="btn btn-secondary">Our Code of Conduct</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--<section class="section section-get-involved">-->
+    <!--<div class="container">-->
+        <!--<div class="row">-->
+            <!--<div class="col-md-12 text-center">-->
+                <!--<h2>Contribute and get involved</h2>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</section>-->
+
+<section class="section section__os--feature-bug">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card card--blue">
+                    <h3>Got a feature request?</h3>
+                    <p>Check out our Forum for more and open a new topic. Looking forward to hear more!</p>
+
+                    <a data-track data-track-location='open-source' track-event='Clicked Go to Forum' href="https://discuss.redash.io/c/feature-requests" class="btn btn-secondary">Go to Redash Forum →</a>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card card--red">
+                    <h3>Need Support?</h3>
+                    <p>Check out our support forum and ask help from our community.</p>
+
+                    <a data-track data-track-location='open-source' track-event='Clicked go to Forum' href="https://discuss.redash.io/c/support" class="btn btn-secondary">Go to Support Forum →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% include get_started.html %}
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>

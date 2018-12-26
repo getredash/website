@@ -1,0 +1,32 @@
+- name: Redash
+  links:
+    - name: Product
+      url: /product/
+    - name: Integrations
+      url: /integrations/
+    - name: Slack Bot
+      url: /slack
+    - name: Customers
+      url: /customers/
+    - name: Case Studies
+      url: /case-studies/
+    - name: Pricing
+      url: /pricing/
+- name: Company
+  links:
+    - name: About
+      url: /about/
+    - name: Blog
+      url: https://blog.redash.io/
+    - name: Newsletter
+      url: https://www.getrevue.co/profile/redash
+    - name: Community
+      url: /community/
+    - name: Contact
+      url: /contact/
+- name: Help
+  links:
+    - name: Knowledge Base
+      url: /help/
+    - name: Forum
+      url: https://discuss.redash.io/

@@ -1,0 +1,11 @@
+.contributor-list--team {
+  justify-content: space-around;
+
+  .contributor-card {
+    min-width: 245px;
+
+    img {
+      border-radius: 50%;
+    }
+  }
+}
