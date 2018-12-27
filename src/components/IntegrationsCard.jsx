@@ -1,7 +1,8 @@
 import React from 'react'
 import Link from 'components/Link'
+import PropTypes from 'prop-types'
 
-const IntegrationsCard = ({ name, logo, link }) => {
+const IntegrationsCard = ({ name, logo, path }) => {
   const cardContent = (
     <div className="card__item-content">
       <div className="card__item-brand">
@@ -11,16 +12,21 @@ const IntegrationsCard = ({ name, logo, link }) => {
     </div>
   )
 
-  if (link) {
-    const url = `/data_sources/${name.toLowerCase().replace(/\s+/g, '-')}`
+  if (path) {
     return (
-      <Link to={url} className="card__item">
+      <Link to={path} className="card__item">
         {cardContent}
       </Link>
     )
   } else {
     return <div className="card__item">{cardContent}</div>
   }
+}
+
+IntegrationsCard.propTypes = {
+  name: PropTypes.string.isRequired,
+  logo: PropTypes.string.isRequired,
+  path: PropTypes.string,
 }
 
 export default IntegrationsCard

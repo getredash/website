@@ -53,7 +53,7 @@ const Footer = ({ data }) => (
             <a
               data-track
               data-track-location="footer"
-              href="/terms.html"
+              href="/terms"
               className="footer__list-link"
             >
               Terms
@@ -62,7 +62,7 @@ const Footer = ({ data }) => (
             <a
               data-track
               data-track-location="footer"
-              href="/privacy.html"
+              href="/privacy"
               className="footer__list-link"
             >
               {' '}

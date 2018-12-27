@@ -39,7 +39,7 @@ const IntegrationsPage = ({ data }) => (
                   <IntegrationsCard
                     name={card.name}
                     logo={card.logo}
-                    link={card.link}
+                    path={card.path}
                     key={card.name}
                   />
                 )
@@ -63,7 +63,7 @@ const IntegrationsPage = ({ data }) => (
                   <IntegrationsCard
                     name={card.name}
                     logo={card.logo}
-                    link={card.link}
+                    path={card.path}
                     key={card.name}
                   />
                 )
@@ -87,7 +87,7 @@ const IntegrationsPage = ({ data }) => (
                   <IntegrationsCard
                     name={card.name}
                     logo={card.logo}
-                    link={card.link}
+                    path={card.path}
                     key={card.name}
                   />
                 )
@@ -113,7 +113,7 @@ export const cardsQuery = graphql`
           frontmatter {
             name
             logo
-            link
+            path
           }
         }
       }
@@ -128,7 +128,7 @@ export const cardsQuery = graphql`
           frontmatter {
             name
             logo
-            link
+            path
           }
         }
       }
@@ -143,7 +143,7 @@ export const cardsQuery = graphql`
           frontmatter {
             name
             logo
-            link
+            path
           }
         }
       }

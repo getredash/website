@@ -1,5 +1,65 @@
 const path = require('path')
 
+exports.createPages = ({ actions, graphql }) => {
+  const { createPage } = actions
+
+  const textPageTemplate = path.resolve('src/templates/TextPage.jsx')
+  const dataSourcesTemplate = path.resolve('src/templates/DataSourcePage.jsx')
+
+  return graphql(`
+    {
+      TextPages: allMarkdownRemark(
+        filter: {
+          fileAbsolutePath: { regex: "/pages/text_pages/" }
+          frontmatter: { path: { ne: null } }
+        }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              path
+            }
+          }
+        }
+      }
+
+      DataSources: allMarkdownRemark(
+        filter: {
+          fileAbsolutePath: { regex: "/pages/data_sources/" }
+          frontmatter: { path: { ne: null } }
+        }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              path
+            }
+          }
+        }
+      }
+    }
+  `).then(result => {
+    if (result.errors) {
+      return Promise.reject(result.errors)
+    }
+    result.data.TextPages.edges.forEach(({ node }) => {
+      createPage({
+        path: node.frontmatter.path,
+        component: textPageTemplate,
+        context: {},
+      })
+    })
+
+    result.data.DataSources.edges.forEach(({ node }) => {
+      createPage({
+        path: node.frontmatter.path,
+        component: dataSourcesTemplate,
+        context: {},
+      })
+    })
+  })
+}
+
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     resolve: {
