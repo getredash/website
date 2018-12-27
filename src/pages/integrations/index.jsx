@@ -33,14 +33,13 @@ const IntegrationsPage = ({ data }) => (
             <h2>Databases</h2>
 
             <div className="cards">
-              {data.Databases.edges.map(edge => {
-                const card = edge.node.frontmatter
+              {data.Databases.edges.map(({ node: { frontmatter } }) => {
                 return (
                   <IntegrationsCard
-                    name={card.name}
-                    logo={card.logo}
-                    path={card.path}
-                    key={card.name}
+                    name={frontmatter.name}
+                    logo={frontmatter.logo}
+                    path={frontmatter.path}
+                    key={frontmatter.name}
                   />
                 )
               })}
@@ -57,14 +56,13 @@ const IntegrationsPage = ({ data }) => (
             <h2>Integrations</h2>
 
             <div className="cards">
-              {data.Integrations.edges.map(edge => {
-                const card = edge.node.frontmatter
+              {data.Integrations.edges.map(({ node: { frontmatter } }) => {
                 return (
                   <IntegrationsCard
-                    name={card.name}
-                    logo={card.logo}
-                    path={card.path}
-                    key={card.name}
+                    name={frontmatter.name}
+                    logo={frontmatter.logo}
+                    path={frontmatter.path}
+                    key={frontmatter.name}
                   />
                 )
               })}
@@ -81,14 +79,13 @@ const IntegrationsPage = ({ data }) => (
             <h2>Partners</h2>
 
             <div className="cards">
-              {data.Partners.edges.map(edge => {
-                const card = edge.node.frontmatter
+              {data.Partners.edges.map(({ node: { frontmatter } }) => {
                 return (
                   <IntegrationsCard
-                    name={card.name}
-                    logo={card.logo}
-                    path={card.path}
-                    key={card.name}
+                    name={frontmatter.name}
+                    logo={frontmatter.logo}
+                    path={frontmatter.path}
+                    key={frontmatter.name}
                   />
                 )
               })}

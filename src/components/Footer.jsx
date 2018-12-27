@@ -6,14 +6,14 @@ const Footer = ({ data }) => (
   <footer className="footer">
     <div className="container">
       <div className="row">
-        {data.allFooterLinksYaml.edges.map(edge => (
+        {data.allFooterLinksYaml.edges.map(({ node }) => (
           <div
             className="col-xs-4 col-md-2 col-sm-3 footer__item"
-            key={edge.node.name}
+            key={node.name}
           >
-            <h3 className="footer__title">{edge.node.name}</h3>
+            <h3 className="footer__title">{node.name}</h3>
             <ul className="footer__list">
-              {edge.node.links.map(link => (
+              {node.links.map(link => (
                 <li className="footer__list-item" key={link.name}>
                   <Link
                     data-track
