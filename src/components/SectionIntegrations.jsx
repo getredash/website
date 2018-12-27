@@ -7,7 +7,7 @@ const SectionIntegrations = () => (
       <div className="row integrations-container">
         <div className="col-sm-8">
           <img
-            src="img/elements/integrations.png"
+            src="/img/elements/integrations.png"
             id="integrations-illustrated"
             className="visible-xs"
           />
@@ -24,7 +24,7 @@ const SectionIntegrations = () => (
         </div>
         <div className="col-sm-4 text-right">
           <img
-            src="img/elements/integrations.png"
+            src="/img/elements/integrations.png"
             id="integrations-illustrated"
             className="hidden-xs"
           />

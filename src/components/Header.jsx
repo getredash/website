@@ -19,7 +19,7 @@ const Header = () => (
         </button>
         <Link className="navbar-brand" to="/">
           <img
-            src="img/elements/redash-logo.svg"
+            src="/img/elements/redash-logo.svg"
             className="navbar-brand__img"
             alt=""
           />
@@ -54,7 +54,7 @@ const Header = () => (
             </Link>
           </li>
           <li className="dropdown">
-            <Link
+            <a
               to="#"
               className="dropdown-toggle"
               data-toggle="dropdown"
@@ -64,7 +64,7 @@ const Header = () => (
             >
               Help
               <span className="caret" />
-            </Link>
+            </a>
             <ul className="dropdown-menu">
               <li>
                 <Link to="/help/">Knowledge Base</Link>

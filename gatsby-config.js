@@ -20,7 +20,6 @@ module.exports = {
         name: 'scss',
       },
     },
-    'gatsby-transformer-yaml',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -69,6 +68,8 @@ module.exports = {
         chunkSize: 10000,
       },
     },*/
+    'gatsby-transformer-remark',
+    'gatsby-transformer-yaml',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',

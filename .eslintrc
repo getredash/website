@@ -21,7 +21,7 @@
   },
   "rules": {
     "prettier/prettier": [
-      "error",
+      "warn",
       {
         "trailingComma": "es5",
         "singleQuote": true,

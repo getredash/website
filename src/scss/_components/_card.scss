@@ -67,7 +67,6 @@ $card-hover-color: $hoki;
   flex-basis: 190px;
   padding-left: 15px;
   padding-right: 15px;
-  @extend .flex, .flex-column;
   @include respond-to(md) {
     flex-basis: 20%;
   }
@@ -90,6 +89,10 @@ $card-hover-color: $hoki;
       color: $primary;
     }
   }
+}
+.card__item-content {
+  height: 100%;
+  @extend .flex, .flex-column;
 }
 .card__item-brand {
   @include transition(250ms);
