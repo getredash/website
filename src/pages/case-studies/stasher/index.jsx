@@ -1,6 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import Layout from 'components/Layout'
+import Link from 'components/Link'
 import SectionGetStarted from 'components/SectionGetStarted'
 
 const StasherPage = () => (
@@ -25,7 +26,7 @@ const StasherPage = () => (
               width="196"
             />
             <br />
-            <h1 className="">
+            <h1>
               Stasher uses Redash to track KPIs and collaborate with partners
             </h1>
           </div>
@@ -52,7 +53,9 @@ const StasherPage = () => (
                 </tr>
                 <tr>
                   <td>
-                    <a href="https://stasher.com">Stasher</a>
+                    <Link to="https://stasher.com" target="_blank">
+                      Stasher
+                    </Link>
                   </td>
                   <td>
                     <img
@@ -60,9 +63,12 @@ const StasherPage = () => (
                       width="38px"
                       className="profile-image"
                     />
-                    <a href="https://www.linkedin.com/in/jacob-wedderburn-day-499258111/">
+                    <Link
+                      to="https://www.linkedin.com/in/jacob-wedderburn-day-499258111/"
+                      target="_blank"
+                    >
                       Jacob Wedderburn
-                    </a>
+                    </Link>
                     ,<br />
                     CEO
                   </td>
@@ -74,7 +80,7 @@ const StasherPage = () => (
                       alt="Postgres Logo"
                       width="32"
                     />
-                    <a href="/data-sources/postgresql">Postgres</a>
+                    <Link to="/data-sources/postgresql">Postgres</Link>
                   </td>
                   <td>Travel</td>
                 </tr>
@@ -86,12 +92,15 @@ const StasherPage = () => (
           <div className="col-md-8 col-md-push-2">
             <h2>About Stasher</h2>
             <p>
-              <a href="https://stasher.com">Stasher</a>, the world's first
-              luggage storage network, connects you with hotels and stores that
-              can keep your luggage safe while you enjoy your time in a city.
-              They work with large partners like Accor Hotels and Premier Inn in
-              cities worldwide. No need for cash - with Stasher, you can book
-              on-demand and leave your luggage in secure storage rooms.
+              <Link to="https://stasher.com" target="_blank">
+                Stasher
+              </Link>
+              , the world's first luggage storage network, connects you with
+              hotels and stores that can keep your luggage safe while you enjoy
+              your time in a city. They work with large partners like Accor
+              Hotels and Premier Inn in cities worldwide. No need for cash -
+              with Stasher, you can book on-demand and leave your luggage in
+              secure storage rooms.
             </p>
             <blockquote>
               I'm Jacob, the CEO of Stasher. We founded Stasher to become the

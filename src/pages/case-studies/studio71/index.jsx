@@ -1,6 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import Layout from 'components/Layout'
+import Link from 'components/Link'
 import SectionGetStarted from 'components/SectionGetStarted'
 
 const Studio71Page = () => (
@@ -25,9 +26,7 @@ const Studio71Page = () => (
               width="256"
             />
             <br />
-            <h1 className="">
-              Studio71 uses Redash to build a data driven culture
-            </h1>
+            <h1>Studio71 uses Redash to build a data driven culture</h1>
           </div>
         </div>
       </div>
@@ -52,7 +51,9 @@ const Studio71Page = () => (
                 </tr>
                 <tr>
                   <td>
-                    <a href="https://studio71.com/us/">Studio71</a>
+                    <Link to="https://studio71.com/us/" target="_blank">
+                      Studio71
+                    </Link>
                   </td>
                   <td>
                     <img
@@ -60,7 +61,13 @@ const Studio71Page = () => (
                       width="38px"
                       className="profile-image"
                     />
-                    <a href="https://www.linkedin.com/in/flynn/">Mike Flynn</a>,
+                    <Link
+                      to="https://www.linkedin.com/in/flynn/"
+                      target="_blank"
+                    >
+                      Mike Flynn
+                    </Link>
+                    ,
                     <br />
                     CTO
                   </td>
@@ -72,30 +79,30 @@ const Studio71Page = () => (
                       alt="MySQL Logo"
                       width="32"
                     />
-                    <a href="/data-sources/mysql">MySQL</a>
+                    <Link to="/data-sources/mysql">MySQL</Link>
                     <br />
                     <img
                       src="/img/integrations/dynamodb_sql.png"
                       alt="DynamoDB Logo"
                       width="32"
                     />
-                    <a href="/data-sources/amazon-dynamodb">DynamoDB</a>
+                    <Link to="/data-sources/amazon-dynamodb">DynamoDB</Link>
                     <br />
                     <img
                       src="/img/integrations/google-analytics.png"
                       alt="Google Analytics Logo"
                       width="32"
                     />
-                    <a href="/data-sources/google-analytics">
+                    <Link to="/data-sources/google-analytics">
                       Google Analytics
-                    </a>
+                    </Link>
                     <br />
                     <img
                       src="/img/integrations/elasticsearch.png"
                       alt="Elasticsearch Logo"
                       width="32"
                     />
-                    <a href="/data-sources/elasticsearch">Elasticsearch</a>
+                    <Link to="/data-sources/elasticsearch">Elasticsearch</Link>
                   </td>
                   <td>Media</td>
                 </tr>

@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import Layout from 'components/Layout'
+import Link from 'components/Link'
 import SectionGetStarted from 'components/SectionGetStarted'
 
 export default function DataSourcePageTemplate({ data }) {
@@ -141,9 +142,9 @@ export default function DataSourcePageTemplate({ data }) {
             </div>
           </div>
           <div className="row text-center m-t-50">
-            <a href="/product/" className="btn btn-primary">
+            <Link to="/product/" className="btn btn-primary">
               Check all the features
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -174,7 +175,9 @@ export default function DataSourcePageTemplate({ data }) {
                     className="profile-image"
                   />
                   > by Dan Manges, CTO at{' '}
-                  <a href="https://www.joinroot.com/">Root Insurance</a>
+                  <Link to="https://www.joinroot.com/" target="_blank">
+                    Root Insurance
+                  </Link>
                 </p>
               </div>
             </div>
@@ -197,7 +200,9 @@ export default function DataSourcePageTemplate({ data }) {
                 </h4>
                 <p>
                   by Jon Lee, CTO at{' '}
-                  <a href="https://www.atomized.com/">Atomized</a>
+                  <Link to="https://www.atomized.com/" target="_blank">
+                    Atomized
+                  </Link>
                 </p>
               </div>
             </div>

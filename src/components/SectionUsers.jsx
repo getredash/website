@@ -32,15 +32,15 @@ const SectionUsers = () => (
             by Ben Dehghan, Co-Founder of{' '}
             <Link to="https://data-miner.io/">Data Miner</Link>
           </p>
-          <a
+          <Link
             data-track
             data-track-location="customers"
             track-event="Clicked Customers"
-            href="/customers/"
+            to="/customers/"
             className="btn btn-secondary"
           >
             Read what our customers say →
-          </a>
+          </Link>
         </div>
       </div>
     </div>

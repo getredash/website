@@ -19,9 +19,9 @@ const CustomerCard = ({
     <p>
       <img src={profile_img} width="48px" className="profile-image" />
       by <strong>{person}</strong>, {role} at{' '}
-      <a href={url} target="_blank">
+      <Link to={url} target="_blank">
         {customer}
-      </a>
+      </Link>
     </p>
   </div>
 )

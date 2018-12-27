@@ -1,6 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import Layout from 'components/Layout'
+import Link from 'components/Link'
 import SectionIntegrations from 'components/SectionIntegrations'
 import SectionGetStarted from 'components/SectionGetStarted'
 
@@ -43,15 +44,15 @@ const ProductPage = () => (
             <p>
               <img src="/img/elements/integrations-small.png" width="75%" />
             </p>
-            <a
+            <Link
               data-track
               data-track-location="product-hero"
               track-event="Clicked Check Integrations"
-              href="/integrations/"
+              to="/integrations"
               className="btn btn-secondary"
             >
               Check integrations
-            </a>
+            </Link>
           </div>
 
           <div className="col-md-6">
@@ -165,15 +166,15 @@ const ProductPage = () => (
                 Easily share your queries and visualizations where the
                 conversations happen.
               </p>
-              <a
+              <Link
                 data-track
                 data-track-location="democratize-data"
                 track-event="Clicked Check Slack integration"
-                href="/slack/"
+                to="/slack"
                 className="btn btn-secondary"
               >
                 Slack integration →
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -218,7 +219,9 @@ const ProductPage = () => (
                   className="profile-image"
                 />
                 by Dan Manges, CTO at{' '}
-                <a href="https://www.findhotel.net/">Root</a>
+                <Link to="https://www.findhotel.net/" target="_blank">
+                  Root
+                </Link>
               </p>
             </div>
           </div>
@@ -243,7 +246,9 @@ const ProductPage = () => (
                   className="profile-image"
                 />
                 by German Gomez-Herrero, CTO at{' '}
-                <a href="https://www.findhotel.net/">FindHotel</a>
+                <Link to="https://www.findhotel.net/" target="_blank">
+                  FindHotel
+                </Link>
               </p>
             </div>
           </div>
@@ -268,21 +273,23 @@ const ProductPage = () => (
                   className="profile-image"
                 />
                 by Ben Dehghan, Co-Founder of{' '}
-                <a href="https://data-miner.io/">Data Miner</a>
+                <Link to="https://data-miner.io/" target="_blank">
+                  Data Miner
+                </Link>
               </p>
             </div>
           </div>
         </div>
         <div className="row text-center">
-          <a
+          <Link
             data-track
             data-track-location="product-testimonials"
             track-event="Clicked Check Customers Say"
-            href="/customers/"
+            to="/customers"
             className="btn btn-secondary"
           >
             Read Customer Stories
-          </a>
+          </Link>
         </div>
       </div>
     </section>

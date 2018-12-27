@@ -1,6 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import Layout from 'components/Layout'
+import Link from 'components/Link'
 import SectionGetStarted from 'components/SectionGetStarted'
 
 const CaseStudiesPage = () => (
@@ -18,7 +19,7 @@ const CaseStudiesPage = () => (
       <div className="container">
         <div className="row">
           <div className="col-md-8 col-md-offset-2 text-center">
-            <h1 className="">Case Studies</h1>
+            <h1>Case Studies</h1>
             <p>
               See how various organizations use Redash to build a data-driven
               business
@@ -32,9 +33,9 @@ const CaseStudiesPage = () => (
       <div className="container">
         <div className="row">
           <div className="col-md-6">
-            <a
+            <Link
               data-track
-              href="/case-studies/stasher/"
+              to="/case-studies/stasher"
               className="featured-customer case-study-item"
             >
               <img
@@ -47,11 +48,11 @@ const CaseStudiesPage = () => (
                 Stasher uses Redash to track KPIs and collaborate with partners
               </p>
               <button className="btn btn-secondary">Learn more →</button>
-            </a>
+            </Link>
 
-            <a
+            <Link
               data-track
-              href="/case-studies/bubbleiq/"
+              to="/case-studies/bubbleiq"
               className="featured-customer case-study-item"
             >
               <img
@@ -65,12 +66,12 @@ const CaseStudiesPage = () => (
                 report towards investors
               </p>
               <button className="btn btn-secondary">Learn more →</button>
-            </a>
+            </Link>
           </div>
           <div className="col-md-6">
-            <a
+            <Link
               data-track
-              href="/case-studies/studio71/"
+              to="/case-studies/studio71"
               className="featured-customer case-study-item"
             >
               <img
@@ -84,7 +85,7 @@ const CaseStudiesPage = () => (
                 and support sales and talent management
               </p>
               <button className="btn btn-secondary">Learn more →</button>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

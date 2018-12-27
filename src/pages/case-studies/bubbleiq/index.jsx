@@ -1,6 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import Layout from 'components/Layout'
+import Link from 'components/Link'
 import SectionGetStarted from 'components/SectionGetStarted'
 
 const BubbleIQPage = () => (
@@ -52,7 +53,9 @@ const BubbleIQPage = () => (
                 </tr>
                 <tr>
                   <td>
-                    <a href="https://www.bubbleiq.com/">BubbleIQ</a>
+                    <Link to="https://www.bubbleiq.com/" target="_blank">
+                      BubbleIQ
+                    </Link>
                   </td>
                   <td>
                     <img
@@ -60,9 +63,12 @@ const BubbleIQPage = () => (
                       width="38px"
                       className="profile-image"
                     />
-                    <a href="https://www.linkedin.com/in/fletchrichman/">
+                    <Link
+                      to="https://www.linkedin.com/in/fletchrichman/"
+                      target="_blank"
+                    >
                       Fletcher Richman
-                    </a>
+                    </Link>
                     ,<br />
                     Co-founder & CEO
                   </td>
@@ -74,7 +80,7 @@ const BubbleIQPage = () => (
                       alt="MongoDB Logo"
                       width="32"
                     />
-                    <a href="/data-sources/mongodb">MongodDB</a>
+                    <Link to="/data-sources/mongodb">MongodDB</Link>
                   </td>
                   <td>Customer Support</td>
                 </tr>
@@ -86,11 +92,13 @@ const BubbleIQPage = () => (
           <div className="col-md-8 col-md-push-2">
             <h2>About BubbleIQ</h2>
             <p>
-              <a href="https://www.bubbleiq.com/">BubbleIQ</a> helps companies
-              streamline their support workflow by connecting helpdesk systems
-              (Zendesk, Salesforce) to real-time chat tools (Slack, Drift). This
-              allows companies to provide better support and a high-touch
-              relationship with their customers.
+              <Link to="https://www.bubbleiq.com/" target="_blank">
+                BubbleIQ
+              </Link>{' '}
+              helps companies streamline their support workflow by connecting
+              helpdesk systems (Zendesk, Salesforce) to real-time chat tools
+              (Slack, Drift). This allows companies to provide better support
+              and a high-touch relationship with their customers.
             </p>
             <p>
               Fletcher Richman serves as the CEO of BubbleIQ, which three

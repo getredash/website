@@ -50,24 +50,24 @@ const Footer = ({ data }) => (
           </ul>
 
           <p>
-            <a
+            <Link
               data-track
               data-track-location="footer"
-              href="/terms"
+              to="/terms"
               className="footer__list-link"
             >
               Terms
-            </a>{' '}
+            </Link>{' '}
             ⚬
-            <a
+            <Link
               data-track
               data-track-location="footer"
-              href="/privacy"
+              to="/privacy"
               className="footer__list-link"
             >
               {' '}
               Privacy Policy
-            </a>
+            </Link>
           </p>
         </div>
       </div>

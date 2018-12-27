@@ -1,6 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import Layout from 'components/Layout'
+import Link from 'components/Link'
 import CustomerCard from 'components/CustomerCard'
 import SectionGetStarted from 'components/SectionGetStarted'
 
@@ -134,13 +135,13 @@ const CustomersPage = ({ data }) => {
                     time and support sales and talent management
                   </p>
 
-                  <a
+                  <Link
                     data-track
-                    href="/case-studies/studio71"
+                    to="/case-studies/studio71"
                     className="btn btn-secondary"
                   >
                     Read Case Study →
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -160,13 +161,13 @@ const CustomersPage = ({ data }) => {
                     and report towards investors
                   </p>
 
-                  <a
+                  <Link
                     data-track
-                    href="/case-studies/bubbleiq"
+                    to="/case-studies/bubbleiq"
                     className="btn btn-secondary"
                   >
                     Read Case Study →
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -184,7 +185,7 @@ const CustomersPage = ({ data }) => {
                       width="32px"
                       className="profile-image"
                     />{' '}
-                    <a href="https://twitter.com/danjas">Dan-ya Shwartz</a>
+                    <Link href="https://twitter.com/danjas" target="_blank">Dan-ya Shwartz</Link>
                   </p>
 
                   <p>
@@ -200,22 +201,22 @@ const CustomersPage = ({ data }) => {
                     </em>
                   </p>
 
-                  <a
+                  <Link
                     data-track
-                    href="https://blog.redash.io/alooma-redash-for-pros-dashboads-etl-307dc189d3a5"
+                    to="https://blog.redash.io/alooma-redash-for-pros-dashboads-etl-307dc189d3a5"
                     className="btn btn-secondary"
                   >
                     Continue Reading on Medium →
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
           <div className="row">
             <div className="col-md-12 text-center">
-              <a data-track href="/case-studies/" className="btn btn-primary">
+              <Link data-track to="/case-studies" className="btn btn-primary">
                 All Redash Case Studies →
-              </a>
+              </Link>
             </div>
           </div>
         </div>

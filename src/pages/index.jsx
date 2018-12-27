@@ -1,6 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import Layout from 'components/Layout'
+import Link from 'components/Link'
 import SectionUsers from 'components/SectionUsers'
 import SectionIntegrations from 'components/SectionIntegrations'
 import SectionGetStarted from 'components/SectionGetStarted'
@@ -25,15 +26,15 @@ const Homepage = () => (
               Connect and query your data sources, build dashboards to visualize
               data and share them with your company.
             </h3>
-            <a
+            <Link
               data-track
               data-track-location="hero"
               track-event="Clicked Get Started"
-              href="https://app.redash.io/signup"
+              to="https://app.redash.io/signup"
               className="btn btn-primary btn-lg"
             >
               Get Started
-            </a>
+            </Link>
             <p className="weekly-signups">
               <span>879 businesses signed up last week</span>
             </p>
@@ -154,15 +155,15 @@ const Homepage = () => (
         <div className="row">
           <div className="col-lg-12 text-center">
             <br />
-            <a
+            <Link
               data-track
               data-track-location="features"
               track-event="Clicked All Redash Features"
-              href="/product/"
+              to="/product"
               className="btn btn-secondary"
             >
               All Redash Features
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -184,15 +185,15 @@ const Homepage = () => (
               Customize and add features, no lock-in, contribute back to the
               community
             </p>
-            <a
+            <Link
               data-track
               data-track-location="open-source"
               track-event="Clicked Community"
-              href="/community/"
+              to="/community/"
               className="btn btn-secondary"
             >
               Our Community
-            </a>
+            </Link>
           </div>
 
           <div className="col-lg-4 col-sm-5 text-right hidden-xs">
