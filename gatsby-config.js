@@ -70,6 +70,7 @@ module.exports = {
     },*/
     'gatsby-transformer-remark',
     'gatsby-transformer-yaml',
+    'gatsby-transformer-json',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',

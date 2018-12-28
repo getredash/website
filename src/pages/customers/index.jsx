@@ -1,20 +1,19 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import { graphql } from 'gatsby'
 import Layout from 'components/Layout'
 import Link from 'components/Link'
 import CustomerCard from 'components/CustomerCard'
 import SectionGetStarted from 'components/SectionGetStarted'
 
-const CustomersPage = ({ data }) => {
-  const leftColumnCards = data.allCustomersYaml.edges.filter(
-    (edge, index) => index % 3 === 2
-  )
-  const middleColumnCards = data.allCustomersYaml.edges.filter(
-    (edge, index) => index % 3 === 0
-  )
-  const rightColumnCards = data.allCustomersYaml.edges.filter(
-    (edge, index) => index % 3 === 1
-  )
+const CustomersPage = ({
+  data: {
+    allCustomersYaml: { edges },
+  },
+}) => {
+  const leftColumnCards = edges.filter((edge, index) => index % 3 === 2)
+  const middleColumnCards = edges.filter((edge, index) => index % 3 === 0)
+  const rightColumnCards = edges.filter((edge, index) => index % 3 === 1)
   return (
     <Layout>
       <Helmet>
@@ -185,7 +184,9 @@ const CustomersPage = ({ data }) => {
                       width="32px"
                       className="profile-image"
                     />{' '}
-                    <Link href="https://twitter.com/danjas" target="_blank">Dan-ya Shwartz</Link>
+                    <Link to="https://twitter.com/danjas" target="_blank">
+                      Dan-ya Shwartz
+                    </Link>
                   </p>
 
                   <p>

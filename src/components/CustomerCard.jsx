@@ -17,8 +17,8 @@ const CustomerCard = ({
       <em>{quote}</em>
     </h4>
     <p>
-      <img src={profile_img} width="48px" className="profile-image" />
-      by <strong>{person}</strong>, {role} at{' '}
+      <img src={profile_img} width="48px" className="profile-image" /> by{' '}
+      <strong>{person}</strong>, {role} at{' '}
       <Link to={url} target="_blank">
         {customer}
       </Link>

@@ -5,9 +5,11 @@ import Layout from 'components/Layout'
 import Link from 'components/Link'
 import SectionGetStarted from 'components/SectionGetStarted'
 
-export default function DataSourcePageTemplate({ data }) {
-  const { markdownRemark } = data
-  const { frontmatter } = markdownRemark
+export default function DataSourcePageTemplate({
+  data: {
+    markdownRemark: { frontmatter },
+  },
+}) {
   return (
     <Layout>
       <Helmet>

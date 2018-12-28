@@ -5,7 +5,7 @@ import Layout from 'components/Layout'
 import IntegrationsCard from 'components/IntegrationsCard'
 import SectionGetStarted from 'components/SectionGetStarted'
 
-const IntegrationsPage = ({ data }) => (
+const IntegrationsPage = ({ data: { Databases, Integrations, Partners } }) => (
   <Layout>
     <Helmet>
       <title>Supported Databases, APIs and Integrations</title>
@@ -33,7 +33,7 @@ const IntegrationsPage = ({ data }) => (
             <h2>Databases</h2>
 
             <div className="cards">
-              {data.Databases.edges.map(({ node: { frontmatter } }) => {
+              {Databases.edges.map(({ node: { frontmatter } }) => {
                 return (
                   <IntegrationsCard
                     name={frontmatter.name}
@@ -56,7 +56,7 @@ const IntegrationsPage = ({ data }) => (
             <h2>Integrations</h2>
 
             <div className="cards">
-              {data.Integrations.edges.map(({ node: { frontmatter } }) => {
+              {Integrations.edges.map(({ node: { frontmatter } }) => {
                 return (
                   <IntegrationsCard
                     name={frontmatter.name}
@@ -79,7 +79,7 @@ const IntegrationsPage = ({ data }) => (
             <h2>Partners</h2>
 
             <div className="cards">
-              {data.Partners.edges.map(({ node: { frontmatter } }) => {
+              {Partners.edges.map(({ node: { frontmatter } }) => {
                 return (
                   <IntegrationsCard
                     name={frontmatter.name}

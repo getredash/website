@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import Layout from 'components/Layout'
 
-export default function TextPageTemplate({
+export default function NarrowTextPageTemplate({
   data: {
     markdownRemark: { frontmatter, html },
   },
@@ -15,7 +15,11 @@ export default function TextPageTemplate({
         <meta name="title" content={frontmatter.title} />
       </Helmet>
       <div className="container p-t-25 p-b-25">
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+        <div className="row">
+          <div className="col-md-8 col-md-offset-2">
+            <div dangerouslySetInnerHTML={{ __html: html }} />
+          </div>
+        </div>
       </div>
     </Layout>
   )

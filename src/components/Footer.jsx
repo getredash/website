@@ -2,11 +2,15 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Link from 'components/Link'
 
-const Footer = ({ data }) => (
+const Footer = ({
+  data: {
+    allFooterLinksYaml: { edges },
+  },
+}) => (
   <footer className="footer">
     <div className="container">
       <div className="row">
-        {data.allFooterLinksYaml.edges.map(({ node }) => (
+        {edges.map(({ node }) => (
           <div
             className="col-xs-4 col-md-2 col-sm-3 footer__item"
             key={node.name}
@@ -41,7 +45,7 @@ const Footer = ({ data }) => (
             </li>
             <li className="footer__list-item">
               <Link
-                href="https://twitter.com/getredash"
+                to="https://twitter.com/getredash"
                 className="footer__list-link"
               >
                 <i className="fa fa-twitter-square" aria-hidden="true" />
