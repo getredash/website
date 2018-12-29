@@ -10,21 +10,17 @@ const CustomersPage = ({
   data: {
     allCustomersYaml: { edges },
   },
+  location,
 }) => {
   const leftColumnCards = edges.filter((edge, index) => index % 3 === 2)
   const middleColumnCards = edges.filter((edge, index) => index % 3 === 0)
   const rightColumnCards = edges.filter((edge, index) => index % 3 === 1)
   return (
-    <Layout>
-      <Helmet>
-        <title>Redash customers</title>
-        <meta name="title" content="Redash customers" />
-        <meta
-          name="description"
-          content="Empowering data-driven decision making in thousands of teams across the globe. From small teams to huge organizations, Redash helps tens of thousands of users to query and visualize data in a new and meaningful way."
-        />
-      </Helmet>
-
+    <Layout
+      title="Redash customers"
+      description="Empowering data-driven decision making in thousands of teams across the globe. From small teams to huge organizations, Redash helps tens of thousands of users to query and visualize data in a new and meaningful way."
+      location={location}
+    >
       <section className="section section--pt-lg">
         <div className="container">
           <div className="row">

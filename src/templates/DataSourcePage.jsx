@@ -6,16 +6,13 @@ import Link from 'components/Link'
 import SectionGetStarted from 'components/SectionGetStarted'
 
 export default function DataSourcePageTemplate({
+  location,
   data: {
     markdownRemark: { frontmatter },
   },
 }) {
   return (
-    <Layout>
-      <Helmet>
-        <title>{frontmatter.title}</title>
-        <meta name="title" content={frontmatter.title} />
-      </Helmet>
+    <Layout title={frontmatter.title} location={location}>
       <section className="section">
         <div className="container">
           <div className="from-to-holder">

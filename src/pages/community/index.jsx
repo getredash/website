@@ -6,23 +6,19 @@ import Link from 'components/Link'
 import SectionGetStarted from 'components/SectionGetStarted'
 
 const CommunityPage = ({
+  location,
   data: {
     allContributorsJson: { totalCount, edges },
   },
 }) => {
   const contrubutorsAmount = totalCount - (totalCount % 10)
   return (
-    <Layout>
+    <Layout
+      title="Redash is built by the open source community"
+      description="More than 200 contributors and years of constant development..."
+      location={location}
+    >
       <Helmet>
-        <title>Redash is built by the open source community</title>
-        <meta
-          name="title"
-          content="Redash is built by the open source community"
-        />
-        <meta
-          name="description"
-          content="More than 200 contributors and years of constant development..."
-        />
         <script async defer src="https://buttons.github.io/buttons.js" />
       </Helmet>
 

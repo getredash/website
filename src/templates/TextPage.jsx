@@ -9,11 +9,7 @@ export default function TextPageTemplate({
   },
 }) {
   return (
-    <Layout>
-      <Helmet>
-        <title>{frontmatter.title}</title>
-        <meta name="title" content={frontmatter.title} />
-      </Helmet>
+    <Layout title={frontmatter.title} location={location}>
       <div className="container p-t-25 p-b-25">
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </div>

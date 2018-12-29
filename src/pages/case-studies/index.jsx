@@ -4,17 +4,12 @@ import Layout from 'components/Layout'
 import Link from 'components/Link'
 import SectionGetStarted from 'components/SectionGetStarted'
 
-const CaseStudiesPage = () => (
-  <Layout>
-    <Helmet>
-      <title>Case Studies</title>
-      <meta name="title" content="Case Studies" />
-      <meta
-        name="description"
-        content="Stories about how Redash is being used"
-      />
-    </Helmet>
-
+const CaseStudiesPage = ({ location }) => (
+  <Layout
+    title="Case Studies"
+    description="Stories about how Redash is being used"
+    location={location}
+  >
     <section className="section">
       <div className="container">
         <div className="row">

@@ -4,16 +4,13 @@ import Helmet from 'react-helmet'
 import Layout from 'components/Layout'
 
 export default function NarrowTextPageTemplate({
+  location,
   data: {
     markdownRemark: { frontmatter, html },
   },
 }) {
   return (
-    <Layout>
-      <Helmet>
-        <title>{frontmatter.title}</title>
-        <meta name="title" content={frontmatter.title} />
-      </Helmet>
+    <Layout title={frontmatter.title} location={location}>
       <div className="container p-t-25 p-b-25">
         <div className="row">
           <div className="col-md-8 col-md-offset-2">

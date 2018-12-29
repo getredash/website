@@ -4,17 +4,8 @@ import Layout from 'components/Layout'
 import Link from 'components/Link'
 import SectionGetStarted from 'components/SectionGetStarted'
 
-const StasherPage = () => (
-  <Layout>
-    <Helmet>
-      <title>Stasher Redash Case Study</title>
-      <meta name="title" content="Stasher Redash Case Study" />
-      <meta
-        name="description"
-        content="Stasher uses Redash to build a more data driven culture"
-      />
-    </Helmet>
-
+const StasherPage = ({ location }) => (
+  <Layout title="Stasher Redash Case Study" description="Stasher uses Redash to build a more data driven culture" location={location}>
     <section className="section">
       <div className="container">
         <div className="row">

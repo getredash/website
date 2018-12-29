@@ -1,11 +1,64 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import Header from 'components/Header'
 import Footer from 'components/Footer'
 
 import 'scss/main.scss'
 
-export default ({ children }) => (
+export default ({ children, title, description, location }) => (
   <div>
+    <Helmet>
+      <title>{title || 'Make Your Company Data Driven'}</title>
+      <meta name="title" content={title} />
+      <meta name="description" content={description} />
+      <meta
+        name="keywords"
+        content="Query, SQL, Visualize, Data, Insights, Dashboard, Alert, Alerts, web based sql client, integration, integrations, Amazong Redshift, BigQuery, PotsgreSQL, MySQL, TreasureData, MS SQL Server, MongoDB, ElasticSearch, Hive, Google Spreadsheets, Impala, InfluxDB, Presto, ScyllaDB, Cassandra, Amazon DynamoDB, Python, Vertica, Graphite, Stitch, URL"
+      />
+      <link rel="icon" href="/img/favicon.ico" />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="/img/favicon-32x32.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="96x96"
+        href="/img/favicon-96x96.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="/img/favicon-16x16.png"
+      />
+
+      <meta name="format-detection" content="telephone=no" />
+
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta
+        property="og:url"
+        content={`https://redash.io${location && location.pathname}`}
+      />
+      <meta
+        property="og:image"
+        content="https://redash.io/img/social-facebook-1200x630.png"
+      />
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@getredash" />
+      <meta name="twitter:creator" content="@getredash" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta
+        name="twitter:image"
+        content="https://redash.io/img/social-twitter-600x314.png"
+      />
+    </Helmet>
     <Header />
     <main>{children}</main>
     <Footer />

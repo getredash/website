@@ -4,17 +4,12 @@ import Layout from 'components/Layout'
 import Link from 'components/Link'
 import SectionGetStarted from 'components/SectionGetStarted'
 
-const PricingPage = () => (
-  <Layout>
-    <Helmet>
-      <title>Redash as a Service</title>
-      <meta name="title" content="Redash as a Service" />
-      <meta
-        name="description"
-        content="Redash offers an affordable hosted solution so you don't need to worry about setting up and updating your Redash servers"
-      />
-    </Helmet>
-
+const PricingPage = ({ location }) => (
+  <Layout
+    title="Redash as a Service"
+    description="Redash offers an affordable hosted solution so you don't need to worry about setting up and updating your Redash servers"
+    location={location}
+  >
     <section className="section">
       <div className="container">
         <h1 className="text-center mb-xs">

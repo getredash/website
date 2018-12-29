@@ -5,17 +5,12 @@ import Link from 'components/Link'
 import SectionIntegrations from 'components/SectionIntegrations'
 import SectionGetStarted from 'components/SectionGetStarted'
 
-const ProductPage = () => (
-  <Layout>
-    <Helmet>
-      <title>All the tools to unlock your data</title>
-      <meta name="title" content="All the tools to unlock your data" />
-      <meta
-        name="description"
-        content="Use Redash to connect to any data source (Redshift, BigQuery, MySQL, PostgreSQL, MongoDB and many others), query, visualize and share your data to make your company data driven."
-      />
-    </Helmet>
-
+const ProductPage = ({ location }) => (
+  <Layout
+    title="All the tools to unlock your data"
+    description="Use Redash to connect to any data source (Redshift, BigQuery, MySQL, PostgreSQL, MongoDB and many others), query, visualize and share your data to make your company data driven."
+    location={location}
+  >
     <section className="section section-product-hero">
       <div className="container">
         <div className="row">

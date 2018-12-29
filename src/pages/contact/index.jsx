@@ -3,13 +3,8 @@ import { Helmet } from 'react-helmet'
 import Layout from 'components/Layout'
 import Link from 'components/Link'
 
-const ContactPage = () => (
-  <Layout>
-    <Helmet>
-      <title>Contact Redash</title>
-      <meta name="title" content="Contact Redash" />
-    </Helmet>
-
+const ContactPage = ({ location }) => (
+  <Layout title="Contact Redash" location={location}>
     <section className="section">
       <div className="container">
         <h1 className="text-center">

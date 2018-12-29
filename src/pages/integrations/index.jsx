@@ -5,17 +5,15 @@ import Layout from 'components/Layout'
 import IntegrationsCard from 'components/IntegrationsCard'
 import SectionGetStarted from 'components/SectionGetStarted'
 
-const IntegrationsPage = ({ data: { Databases, Integrations, Partners } }) => (
-  <Layout>
-    <Helmet>
-      <title>Supported Databases, APIs and Integrations</title>
-      <meta name="title" content="Supported Databases, APIs and Integrations" />
-      <meta
-        name="description"
-        content="Use Redash to connect to any data source (Redshift, BigQuery, MySQL, PostgreSQL, MongoDB and many others), query, visualize and share your data to make your company data driven."
-      />
-    </Helmet>
-
+const IntegrationsPage = ({
+  location,
+  data: { Databases, Integrations, Partners },
+}) => (
+  <Layout
+    title="Supported Databases, APIs and Integrations"
+    description="Use Redash to connect to any data source (Redshift, BigQuery, MySQL, PostgreSQL, MongoDB and many others), query, visualize and share your data to make your company data driven."
+    location={location}
+  >
     <section className="section section--pt-lg">
       <div className="container">
         <h1 className="text-center">Query all the data sources you need</h1>

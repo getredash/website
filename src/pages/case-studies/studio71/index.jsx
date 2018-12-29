@@ -4,17 +4,12 @@ import Layout from 'components/Layout'
 import Link from 'components/Link'
 import SectionGetStarted from 'components/SectionGetStarted'
 
-const Studio71Page = () => (
-  <Layout>
-    <Helmet>
-      <title>Studio71 Redash Case Study</title>
-      <meta name="title" content="Studio71 Redash Case Study" />
-      <meta
-        name="description"
-        content="Studio71 uses Redash to build a more data driven culture"
-      />
-    </Helmet>
-
+const Studio71Page = ({ location }) => (
+  <Layout
+    title="Studio71 Redash Case Study"
+    description="Studio71 uses Redash to build a more data driven culture"
+    location={props.location}
+  >
     <section className="section">
       <div className="container">
         <div className="row">

@@ -5,17 +5,12 @@ import Link from 'components/Link'
 import ContributorCard from 'components/ContributorCard'
 import SectionGetStarted from 'components/SectionGetStarted'
 
-const ProductPage = () => (
-  <Layout>
-    <Helmet>
-      <title>Redash is an Open Source company</title>
-      <meta name="title" content="Redash is an Open Source company" />
-      <meta
-        name="description"
-        content="Meet our team and get to know the story behind Redash"
-      />
-    </Helmet>
-
+const ProductPage = ({ location }) => (
+  <Layout
+    title="Redash is an Open Source company"
+    description="Meet our team and get to know the story behind Redash"
+    location={location}
+  >
     <section className="section section--pt-lg">
       <div className="container">
         <div className="row">

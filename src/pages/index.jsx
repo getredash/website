@@ -6,17 +6,12 @@ import SectionUsers from 'components/SectionUsers'
 import SectionIntegrations from 'components/SectionIntegrations'
 import SectionGetStarted from 'components/SectionGetStarted'
 
-const Homepage = () => (
-  <Layout>
-    <Helmet>
-      <title>Redash helps you make sense of your data</title>
-      <meta name="title" content="Redash helps you make sense of your data" />
-      <meta
-        name="description"
-        content="Use Redash to connect to any data source (Redshift, BigQuery, MySQL, PostgreSQL, MongoDB and many others), query, visualize and share your data to make your company data driven."
-      />
-    </Helmet>
-
+const Homepage = ({ location }) => (
+  <Layout
+    title="Redash helps you make sense of your data"
+    description="Use Redash to connect to any data source (Redshift, BigQuery, MySQL, PostgreSQL, MongoDB and many others), query, visualize and share your data to make your company data driven."
+    location={location}
+  >
     <section className="section section--hero">
       <div className="container">
         <div className="row">

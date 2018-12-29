@@ -4,17 +4,12 @@ import Layout from 'components/Layout'
 import Link from 'components/Link'
 import SectionGetStarted from 'components/SectionGetStarted'
 
-const BubbleIQPage = () => (
-  <Layout>
-    <Helmet>
-      <title>BubbleIQ Redash Case Study</title>
-      <meta name="title" content="BubbleIQ Redash Case Study" />
-      <meta
-        name="description"
-        content="BubbleIQ uses Redash to support sales, save engineering time and report towards investors"
-      />
-    </Helmet>
-
+const BubbleIQPage = ({ location }) => (
+  <Layout
+    title="BubbleIQ Redash Case Study"
+    description="BubbleIQ uses Redash to support sales, save engineering time and report towards investors"
+    location={location}
+  >
     <section className="section">
       <div className="container">
         <div className="row">

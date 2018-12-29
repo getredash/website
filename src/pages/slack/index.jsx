@@ -4,13 +4,8 @@ import Layout from 'components/Layout'
 import Link from 'components/Link'
 import SectionSlackExamples from 'components/SectionSlackExamples'
 
-const SlackPage = () => (
-  <Layout>
-    <Helmet>
-      <title>Make Your Company Data Driven</title>
-      <meta name="title" content="Make Your Company Data Driven" />
-    </Helmet>
-
+const SlackPage = ({ location }) => (
+  <Layout title="Make Your Company Data Driven" location={location}>
     <section className="section section--hero">
       <div className="container">
         <h1 className="text-center mb-xs">Bring data to your conversations</h1>
