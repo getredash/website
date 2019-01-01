@@ -1,5 +1,4 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
 import Layout from 'components/Layout'
 import Link from 'components/Link'
 import SectionUsers from 'components/SectionUsers'
@@ -36,7 +35,7 @@ const Homepage = ({ location }) => (
           </div>
           <div className="col-md-7 hidden-xs hidden-sm">
             <div className="browser-container hidden-xs">
-              <img src="/img/elements/browser-header.png" />
+              <img src="/assets/images/elements/browser-header.png" />
               <video
                 width="100%"
                 height="100%"
@@ -46,15 +45,15 @@ const Homepage = ({ location }) => (
                 id="main-video"
               >
                 <source
-                  src="/img/elements/redash-intro-720.mp4"
+                  src="/assets/images/elements/redash-intro-720.mp4"
                   type="video/mp4"
                 />
                 <source
-                  src="/img/elements/redash-intro-720.ogv"
+                  src="/assets/images/elements/redash-intro-720.ogv"
                   type="video/ogg"
                 />
                 <source
-                  src="/img/elements/redash-intro-720.webm"
+                  src="/assets/images/elements/redash-intro-720.webm"
                   type="video/webm"
                 />
                 Your browser does not support the video tag.
@@ -72,7 +71,7 @@ const Homepage = ({ location }) => (
         <div className="row">
           <div className="col-sm-6">
             <img
-              src="/img/elements/write-queries.png"
+              src="/assets/images/elements/write-queries.png"
               id="write-query-illustrated"
               className="visible-xs"
             />
@@ -92,7 +91,7 @@ const Homepage = ({ location }) => (
           </div>
           <div className="col-sm-6 hidden-xs">
             <img
-              src="/img/elements/write-queries.png"
+              src="/assets/images/elements/write-queries.png"
               id="write-query-illustrated"
             />
           </div>
@@ -105,7 +104,7 @@ const Homepage = ({ location }) => (
         <div className="row">
           <div className="col-sm-6">
             <img
-              src="/img/elements/visualize-data.png"
+              src="/assets/images/elements/visualize-data.png"
               id="visualize-illustrated"
             />
           </div>
@@ -132,17 +131,20 @@ const Homepage = ({ location }) => (
         <div className="row">
           <div className="col-lg-8 col-lg-offset-2 col-xs-12 p-0 flex-content-center flex">
             <div className="feature-container">
-              <img src="/img/elements/icon-api.png" width="64px" />
+              <img src="/assets/images/elements/icon-api.png" width="64px" />
               <h4>API</h4>
             </div>
 
             <div className="feature-container">
-              <img src="/img/elements/icon-alerts.png" width="64px" />
+              <img src="/assets/images/elements/icon-alerts.png" width="64px" />
               <h4>Alerts</h4>
             </div>
 
             <div className="feature-container">
-              <img src="/img/elements/icon-user-management.png" width="64px" />
+              <img
+                src="/assets/images/elements/icon-user-management.png"
+                width="64px"
+              />
               <h4>User Management</h4>
             </div>
           </div>
@@ -171,7 +173,7 @@ const Homepage = ({ location }) => (
         <div className="row">
           <div className="col-lg-4 col-lg-offset-2 col-sm-5 col-sm-offset-1">
             <img
-              src="/img/elements/open-source.png"
+              src="/assets/images/elements/open-source.png"
               id="open-source-illustrated"
               className="visible-xs"
             />
@@ -193,7 +195,7 @@ const Homepage = ({ location }) => (
 
           <div className="col-lg-4 col-sm-5 text-right hidden-xs">
             <img
-              src="/img/elements/open-source.png"
+              src="/assets/images/elements/open-source.png"
               id="open-source-illustrated"
             />
           </div>

@@ -15,24 +15,24 @@ export default ({ children, title, description, location }) => (
         name="keywords"
         content="Query, SQL, Visualize, Data, Insights, Dashboard, Alert, Alerts, web based sql client, integration, integrations, Amazong Redshift, BigQuery, PotsgreSQL, MySQL, TreasureData, MS SQL Server, MongoDB, ElasticSearch, Hive, Google Spreadsheets, Impala, InfluxDB, Presto, ScyllaDB, Cassandra, Amazon DynamoDB, Python, Vertica, Graphite, Stitch, URL"
       />
-      <link rel="icon" href="/img/favicon.ico" />
+      <link rel="icon" href="/assets/images/favicon.ico" />
       <link
         rel="icon"
         type="image/png"
         sizes="32x32"
-        href="/img/favicon-32x32.png"
+        href="/assets/images/favicon-32x32.png"
       />
       <link
         rel="icon"
         type="image/png"
         sizes="96x96"
-        href="/img/favicon-96x96.png"
+        href="/assets/images/favicon-96x96.png"
       />
       <link
         rel="icon"
         type="image/png"
         sizes="16x16"
-        href="/img/favicon-16x16.png"
+        href="/assets/images/favicon-16x16.png"
       />
 
       <meta name="format-detection" content="telephone=no" />
@@ -46,7 +46,7 @@ export default ({ children, title, description, location }) => (
       />
       <meta
         property="og:image"
-        content="https://redash.io/img/social-facebook-1200x630.png"
+        content="https://redash.io/assets/images/social-facebook-1200x630.png"
       />
 
       <meta name="twitter:card" content="summary_large_image" />
@@ -56,7 +56,7 @@ export default ({ children, title, description, location }) => (
       <meta name="twitter:description" content={description} />
       <meta
         name="twitter:image"
-        content="https://redash.io/img/social-twitter-600x314.png"
+        content="https://redash.io/assets/images/social-twitter-600x314.png"
       />
     </Helmet>
     <Header />

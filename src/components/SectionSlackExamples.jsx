@@ -10,7 +10,7 @@ const SectionSlackExamples = () => (
             Use the <code>/redash</code> slash command to search for Redash
             queries to add to the conversation.
             <img
-              src="/img/slack_slash_command.png"
+              src="/assets/images/slack_slash_command.png"
               alt="Slash Command Example"
               className="img-responsive"
               style={{ margin: '0 auto' }}
@@ -23,7 +23,7 @@ const SectionSlackExamples = () => (
             Convert Redash URLs in your conversation into rich embeds with
             preview of the visualization.
             <img
-              src="/img/slack_preview.png"
+              src="/assets/images/slack_preview.png"
               alt="Slash Attachment Example"
               className="img-responsive"
               style={{ margin: '0 auto' }}

@@ -1,5 +1,4 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
 import Layout from 'components/Layout'
 import Link from 'components/Link'
 import SectionSlackExamples from 'components/SectionSlackExamples'
@@ -23,7 +22,7 @@ const SlackPage = ({ location }) => (
 
         <div style={{ paddingTop: '10px' }}>
           <img
-            src="/img/elements/slack-redash.png"
+            src="/assets/images/elements/slack-redash.png"
             alt="Slack chat example"
             className="img-responsive center-block img-rounded img--has-shadow"
             width="75%"

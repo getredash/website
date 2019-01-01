@@ -1,17 +1,20 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
 import Layout from 'components/Layout'
 import Link from 'components/Link'
 import SectionGetStarted from 'components/SectionGetStarted'
 
 const StasherPage = ({ location }) => (
-  <Layout title="Stasher Redash Case Study" description="Stasher uses Redash to build a more data driven culture" location={location}>
+  <Layout
+    title="Stasher Redash Case Study"
+    description="Stasher uses Redash to build a more data driven culture"
+    location={location}
+  >
     <section className="section">
       <div className="container">
         <div className="row">
           <div className="col-md-8 col-md-offset-2 text-center">
             <img
-              src="/img/customers/stasher.jpg"
+              src="/assets/images/customers/stasher.jpg"
               alt="Stasher logo"
               className="customer-logo"
               width="196"
@@ -50,7 +53,7 @@ const StasherPage = ({ location }) => (
                   </td>
                   <td>
                     <img
-                      src="/img/customers/jacob-wedderburn.jpg"
+                      src="/assets/images/customers/jacob-wedderburn.jpg"
                       width="38px"
                       className="profile-image"
                     />
@@ -67,7 +70,7 @@ const StasherPage = ({ location }) => (
                   <td>2017</td>
                   <td>
                     <img
-                      src="/img/integrations/postgresql.png"
+                      src="/assets/images/integrations/postgresql.png"
                       alt="Postgres Logo"
                       width="32"
                     />

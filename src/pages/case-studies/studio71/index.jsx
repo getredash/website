@@ -1,5 +1,4 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
 import Layout from 'components/Layout'
 import Link from 'components/Link'
 import SectionGetStarted from 'components/SectionGetStarted'
@@ -8,14 +7,14 @@ const Studio71Page = ({ location }) => (
   <Layout
     title="Studio71 Redash Case Study"
     description="Studio71 uses Redash to build a more data driven culture"
-    location={props.location}
+    location={location}
   >
     <section className="section">
       <div className="container">
         <div className="row">
           <div className="col-md-8 col-md-offset-2 text-center">
             <img
-              src="/img/customers/studio71-vert.jpg"
+              src="/assets/images/customers/studio71-vert.jpg"
               alt="Studio71 logo"
               className="customer-logo"
               width="256"
@@ -52,7 +51,7 @@ const Studio71Page = ({ location }) => (
                   </td>
                   <td>
                     <img
-                      src="/img/customers/mike-flynn.jpg"
+                      src="/assets/images/customers/mike-flynn.jpg"
                       width="38px"
                       className="profile-image"
                     />
@@ -70,21 +69,21 @@ const Studio71Page = ({ location }) => (
                   <td>2016</td>
                   <td>
                     <img
-                      src="/img/integrations/mysql.png"
+                      src="/assets/images/integrations/mysql.png"
                       alt="MySQL Logo"
                       width="32"
                     />
                     <Link to="/data-sources/mysql">MySQL</Link>
                     <br />
                     <img
-                      src="/img/integrations/dynamodb_sql.png"
+                      src="/assets/images/integrations/dynamodb_sql.png"
                       alt="DynamoDB Logo"
                       width="32"
                     />
                     <Link to="/data-sources/amazon-dynamodb">DynamoDB</Link>
                     <br />
                     <img
-                      src="/img/integrations/google-analytics.png"
+                      src="/assets/images/integrations/google-analytics.png"
                       alt="Google Analytics Logo"
                       width="32"
                     />
@@ -93,7 +92,7 @@ const Studio71Page = ({ location }) => (
                     </Link>
                     <br />
                     <img
-                      src="/img/integrations/elasticsearch.png"
+                      src="/assets/images/integrations/elasticsearch.png"
                       alt="Elasticsearch Logo"
                       width="32"
                     />

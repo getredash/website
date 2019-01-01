@@ -1,5 +1,4 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
 import Layout from 'components/Layout'
 import Link from 'components/Link'
 import ContributorCard from 'components/ContributorCard'
@@ -16,7 +15,7 @@ const ProductPage = ({ location }) => (
         <div className="row">
           <div className="col-sm-5 col-sm-offset-2">
             <img
-              src="/img/elements/computing-on-a-chart.png"
+              src="/assets/images/elements/computing-on-a-chart.png"
               width="30%"
               className="visible-xs"
             />
@@ -38,7 +37,7 @@ const ProductPage = ({ location }) => (
             </Link>
           </div>
           <div className="col-sm-3 text-right hidden-xs">
-            <img src="/img/elements/computing-on-a-chart.png" width="250px" />
+            <img src="/assets/images/elements/computing-on-a-chart.png" width="250px" />
           </div>
         </div>
       </div>
@@ -61,27 +60,27 @@ const ProductPage = ({ location }) => (
             <div className="contributor-list contributor-list--team">
               <ContributorCard
                 name="Arik Fraimovich"
-                photo="/img/contributors/arikfr.jpg"
+                photo="/assets/images/contributors/arikfr.jpg"
                 github="https://github.com/arikfr"
                 twitter="https://twitter.com/arikfr"
               />
 
               <ContributorCard
                 name="Levko Kravets"
-                photo="/img/contributors/kravets-levko.jpg"
+                photo="/assets/images/contributors/kravets-levko.jpg"
                 github="https://github.com/kravets-levko"
               />
 
               <ContributorCard
                 name="Zsolt Kocsmarszky"
-                photo="/img/contributors/kocsmy.jpg"
+                photo="/assets/images/contributors/kocsmy.jpg"
                 github="https://github.com/kocsmy"
                 twitter="https://twitter.com/kocsmy"
               />
 
               <ContributorCard
                 name="Omer Lachish"
-                photo="/img/contributors/rauchy.jpg"
+                photo="/assets/images/contributors/rauchy.jpg"
                 github="https://github.com/rauchy"
                 twitter="https://twitter.com/rauchy"
               />

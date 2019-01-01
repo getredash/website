@@ -27,7 +27,7 @@ const CommunityPage = ({
           <div className="row">
             <div className="col-sm-7">
               <img
-                src="/img/elements/open-source.png"
+                src="/assets/images/elements/open-source.png"
                 id="open-source-illustrated"
               />
             </div>

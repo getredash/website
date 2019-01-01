@@ -1,5 +1,4 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
 import Layout from 'components/Layout'
 import Link from 'components/Link'
@@ -45,7 +44,7 @@ const CustomersPage = ({
       <section className="section">
         <div className="container">
           <img
-            src="/img/elements/users-list-strip.png"
+            src="/assets/images/elements/users-list-strip.png"
             width="100%"
             className="customer-logoshow"
           />
@@ -117,7 +116,7 @@ const CustomersPage = ({
               <div className="featured-customer">
                 <div className="featured-customer--content">
                   <img
-                    src="/img/customers/studio71.png"
+                    src="/assets/images/customers/studio71.png"
                     alt="Studio71 logo"
                     className="customer-logo"
                     width="96"
@@ -143,7 +142,7 @@ const CustomersPage = ({
               <div className="featured-customer">
                 <div className="featured-customer--content">
                   <img
-                    src="/img/customers/bubbleiq.png"
+                    src="/assets/images/customers/bubbleiq.png"
                     alt="BubbleIQ logo"
                     className="customer-logo"
                     width="96"
@@ -167,7 +166,7 @@ const CustomersPage = ({
               </div>
 
               <div className="featured-customer">
-                <img src="/img/elements/redash-charts.jpg" width="100%" />
+                <img src="/assets/images/elements/redash-charts.jpg" width="100%" />
 
                 <div className="featured-customer--content">
                   <h2>
@@ -176,7 +175,7 @@ const CustomersPage = ({
                   <p>
                     by{' '}
                     <img
-                      src="/img/customers/dan-ya-shwartz.jpg"
+                      src="/assets/images/customers/dan-ya-shwartz.jpg"
                       width="32px"
                       className="profile-image"
                     />{' '}

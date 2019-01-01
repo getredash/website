@@ -1,5 +1,4 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
 import Layout from 'components/Layout'
 import Link from 'components/Link'
 import SectionGetStarted from 'components/SectionGetStarted'
@@ -34,7 +33,7 @@ const CaseStudiesPage = ({ location }) => (
               className="featured-customer case-study-item"
             >
               <img
-                src="/img/customers/stasher.jpg"
+                src="/assets/images/customers/stasher.jpg"
                 alt="Stasher logo"
                 className="customer-logo"
               />
@@ -51,7 +50,7 @@ const CaseStudiesPage = ({ location }) => (
               className="featured-customer case-study-item"
             >
               <img
-                src="/img/customers/bubbleiq.png"
+                src="/assets/images/customers/bubbleiq.png"
                 alt="BubbleIQ logo"
                 className="customer-logo"
               />
@@ -70,7 +69,7 @@ const CaseStudiesPage = ({ location }) => (
               className="featured-customer case-study-item"
             >
               <img
-                src="/img/customers/studio71.png"
+                src="/assets/images/customers/studio71.png"
                 alt="Studio71 logo"
                 className="customer-logo"
               />

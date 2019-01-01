@@ -1,5 +1,4 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
 import Layout from 'components/Layout'
 import Link from 'components/Link'
 import SectionIntegrations from 'components/SectionIntegrations'
@@ -21,7 +20,7 @@ const ProductPage = ({ location }) => (
 
         <div className="row">
           <div className="col-md-6">
-            <img src="/img/elements/icon-query.png" width="64px" />
+            <img src="/assets/images/elements/icon-query.png" width="64px" />
             <h2 className="m-t-0">
               Enjoy the power and comfort of Redash's query editor with powerful
               collaboration
@@ -37,7 +36,10 @@ const ProductPage = ({ location }) => (
               </li>
             </ul>
             <p>
-              <img src="/img/elements/integrations-small.png" width="75%" />
+              <img
+                src="/assets/images/elements/integrations-small.png"
+                width="75%"
+              />
             </p>
             <Link
               data-track
@@ -52,8 +54,8 @@ const ProductPage = ({ location }) => (
 
           <div className="col-md-6">
             <div className="browser-container hidden-xs">
-              <img src="/img/elements/browser-header.png" />
-              <img src="/img/elements/query-editor-focus.png" />
+              <img src="/assets/images/elements/browser-header.png" />
+              <img src="/assets/images/elements/query-editor-focus.png" />
             </div>
           </div>
         </div>
@@ -65,14 +67,17 @@ const ProductPage = ({ location }) => (
         <div className="row">
           <div className="col-md-6 push-sm-down">
             <img
-              src="/img/elements/visualizing-data.png"
+              src="/assets/images/elements/visualizing-data.png"
               width="100%"
               className="visualize-dashboards-illustrated"
             />
           </div>
 
           <div className="col-md-6">
-            <img src="/img/elements/icon-dashboard.png" width="64px" />
+            <img
+              src="/assets/images/elements/icon-dashboard.png"
+              width="64px"
+            />
             <h4 className="m-b-0">Visualize as you will &</h4>
             <h2 className="m-t-0">create amazing dashboards</h2>
             <ul className="highlight-ul">
@@ -118,7 +123,7 @@ const ProductPage = ({ location }) => (
       <div className="container">
         <div className="row">
           <div className="col-md-4">
-            <img src="/img/elements/icon-alerts.png" width="64px" />
+            <img src="/assets/images/elements/icon-alerts.png" width="64px" />
             <h2>Alerts</h2>
             <p>
               Set up alerts and get notified on certain events on your data.
@@ -126,7 +131,7 @@ const ProductPage = ({ location }) => (
           </div>
 
           <div className="col-md-4">
-            <img src="/img/elements/icon-api.png" width="64px" />
+            <img src="/assets/images/elements/icon-api.png" width="64px" />
             <h2>API</h2>
             <p>
               Access Redash via API and extend its functionality as you like.
@@ -134,7 +139,10 @@ const ProductPage = ({ location }) => (
           </div>
 
           <div className="col-md-4">
-            <img src="/img/elements/icon-user-management.png" width="64px" />
+            <img
+              src="/assets/images/elements/icon-user-management.png"
+              width="64px"
+            />
             <h2>User Management</h2>
             <p>
               SSO, access control and many other great features for
@@ -155,7 +163,7 @@ const ProductPage = ({ location }) => (
         <div className="row">
           <div className="col-sm-6">
             <div className="card card--yellow">
-              <img src="/img/elements/slack.png" width="64px" />
+              <img src="/assets/images/elements/slack.png" width="64px" />
               <h4>Bring data to your Slack channel</h4>
               <p>
                 Easily share your queries and visualizations where the
@@ -175,7 +183,10 @@ const ProductPage = ({ location }) => (
 
           <div className="col-sm-6">
             <div className="card card--yellow">
-              <img src="/img/elements/icon-dashboard.png" width="64px" />
+              <img
+                src="/assets/images/elements/icon-dashboard.png"
+                width="64px"
+              />
 
               <h4>Share Dashboards</h4>
               <p>
@@ -195,7 +206,7 @@ const ProductPage = ({ location }) => (
           <div className="col-md-4">
             <div className="card card--customer">
               <img
-                src="/img/customers/root.png"
+                src="/assets/images/customers/root.png"
                 alt="Root <3 Redash"
                 className="customer-logo"
               />
@@ -209,7 +220,7 @@ const ProductPage = ({ location }) => (
               </h4>
               <p>
                 <img
-                  src="/img/customers/dan-manges.jpg"
+                  src="/assets/images/customers/dan-manges.jpg"
                   width="32x"
                   className="profile-image"
                 />
@@ -223,7 +234,7 @@ const ProductPage = ({ location }) => (
           <div className="col-md-4">
             <div className="card card--customer">
               <img
-                src="/img/customers/findhotel.png"
+                src="/assets/images/customers/findhotel.png"
                 alt="FindHotel <3 Redash"
                 className="customer-logo"
               />
@@ -236,7 +247,7 @@ const ProductPage = ({ location }) => (
               </h4>
               <p>
                 <img
-                  src="/img/customers/german-gomez-herrero.jpg"
+                  src="/assets/images/customers/german-gomez-herrero.jpg"
                   width="32px"
                   className="profile-image"
                 />
@@ -250,7 +261,7 @@ const ProductPage = ({ location }) => (
           <div className="col-md-4">
             <div className="card card--customer">
               <img
-                src="/img/customers/data-miner.png"
+                src="/assets/images/customers/data-miner.png"
                 alt="DataMiner <3 Redash"
                 className="customer-logo"
               />
@@ -263,7 +274,7 @@ const ProductPage = ({ location }) => (
               </h4>
               <p>
                 <img
-                  src="/img/customers/ben-dehghan.jpg"
+                  src="/assets/images/customers/ben-dehghan.jpg"
                   width="32px"
                   className="profile-image"
                 />

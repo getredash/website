@@ -1,6 +1,6 @@
 ---
 title: Query and Visualize data from Presto
 name: Presto
-logo: /img/integrations/presto.png
+logo: /assets/images/integrations/presto.png
 path: /data-sources/presto
 ---

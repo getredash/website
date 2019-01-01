@@ -1,6 +1,6 @@
 ---
 title: Query and Visualize data from Amazon DynamoDB
 name: Amazon DynamoDB
-logo: /img/integrations/dynamodb_sql.png
+logo: /assets/images/integrations/dynamodb_sql.png
 path: /data-sources/amazon-dynamodb
 ---

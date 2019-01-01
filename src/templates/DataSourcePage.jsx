@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Helmet from 'react-helmet'
 import Layout from 'components/Layout'
 import Link from 'components/Link'
 import SectionGetStarted from 'components/SectionGetStarted'
@@ -27,7 +26,7 @@ export default function DataSourcePageTemplate({
             <div className="from-to-plus"> + </div>
             <div className="from-to-holder__item">
               <img
-                src="/img/redash-256.png"
+                src="/assets/images/redash-256.png"
                 className="from-to-holder__logo"
                 alt=""
               />
@@ -47,7 +46,7 @@ export default function DataSourcePageTemplate({
           <div className="row">
             <div className="col-md-6 push-sm-down">
               <img
-                src="/img/elements/query-editor.png"
+                src="/assets/images/elements/query-editor.png"
                 className="img-responsive center-block img-rounded img--has-shadow"
                 alt=""
               />
@@ -80,7 +79,7 @@ export default function DataSourcePageTemplate({
           <div className="row">
             <div className="col-md-6 push-sm-down">
               <img
-                src="/img/elements/dashboard.png"
+                src="/assets/images/elements/dashboard.png"
                 className="img-responsive center-block img-rounded img--has-shadow"
                 alt=""
               />
@@ -119,7 +118,7 @@ export default function DataSourcePageTemplate({
           <div className="row">
             <div className="col-md-6 push-sm-down">
               <img
-                src="/img/elements/slack-redash.png"
+                src="/assets/images/elements/slack-redash.png"
                 className="img-responsive center-block img-rounded img--has-shadow"
                 alt="Slack chat demo"
               />
@@ -155,7 +154,7 @@ export default function DataSourcePageTemplate({
             <div className="col-lg-6">
               <div className="card card--customer">
                 <img
-                  src="/img/customers/root.png"
+                  src="/assets/images/customers/root.png"
                   alt="Root <3 Redash"
                   className="customer-logo"
                 />
@@ -169,7 +168,7 @@ export default function DataSourcePageTemplate({
                 </h4>
                 <p>
                   <img
-                    src="/img/customers/dan-manges.jpg"
+                    src="/assets/images/customers/dan-manges.jpg"
                     width="48px"
                     className="profile-image"
                   />
@@ -184,7 +183,7 @@ export default function DataSourcePageTemplate({
             <div className="col-lg-6">
               <div className="card card--customer">
                 <img
-                  src="/img/customers/atomized.jpeg"
+                  src="/assets/images/customers/atomized.jpeg"
                   alt="Atomized <3 Redash"
                   className="customer-logo"
                 />

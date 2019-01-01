@@ -71,3 +71,10 @@ div.docs h2, h3 {
   padding-top: 80px;
   margin-top: -80px;
 }
+
+.sticky-in-parent {
+  &.fixed {
+    position: fixed;
+    top: 100px;
+  }
+}

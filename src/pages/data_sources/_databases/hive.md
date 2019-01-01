@@ -1,6 +1,6 @@
 ---
 title: Query and Visualize data from Hive
 name: Hive
-logo: /img/integrations/hive.png
+logo: /assets/images/integrations/hive.png
 path: /data-sources/hive
 ---

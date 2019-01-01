@@ -1,14 +1,6 @@
 const path = require('path')
 
-exports.createPages = ({ actions, graphql }) => {
-  const { createPage } = actions
-
-  const textPageTemplate = path.resolve('src/templates/TextPage.jsx')
-  const narrowTextPageTemplate = path.resolve(
-    'src/templates/NarrowTextPage.jsx'
-  )
-  const dataSourcesTemplate = path.resolve('src/templates/DataSourcePage.jsx')
-
+exports.createPages = ({ actions: { createPage }, graphql }) => {
   return graphql(`
     {
       TextPages: allMarkdownRemark(
@@ -55,6 +47,21 @@ exports.createPages = ({ actions, graphql }) => {
           }
         }
       }
+
+      KnowledgeBase: allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/pages/kb/" } }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              category
+              parent_category
+              slug
+              layout
+            }
+          }
+        }
+      }
     }
   `).then(result => {
     if (result.errors) {
@@ -63,7 +70,7 @@ exports.createPages = ({ actions, graphql }) => {
     result.data.TextPages.edges.forEach(({ node }) => {
       createPage({
         path: node.frontmatter.path,
-        component: textPageTemplate,
+        component: path.resolve('src/templates/TextPage.jsx'),
         context: {},
       })
     })
@@ -71,7 +78,7 @@ exports.createPages = ({ actions, graphql }) => {
     result.data.NarrowTextPages.edges.forEach(({ node }) => {
       createPage({
         path: node.frontmatter.path,
-        component: narrowTextPageTemplate,
+        component: path.resolve('src/templates/NarrowTextPage.jsx'),
         context: {},
       })
     })
@@ -79,10 +86,30 @@ exports.createPages = ({ actions, graphql }) => {
     result.data.DataSources.edges.forEach(({ node }) => {
       createPage({
         path: node.frontmatter.path,
-        component: dataSourcesTemplate,
+        component: path.resolve('src/templates/DataSourcePage.jsx'),
         context: {},
       })
     })
+
+    result.data.KnowledgeBase.edges.forEach(
+      ({
+        node: {
+          frontmatter: { category, parent_category, slug },
+        },
+      }) => {
+        const slugPath = slug ? `/${slug}` : ''
+        const pagePath = `/help/${parent_category}/${category}${slugPath}`
+        createPage({
+          path: pagePath,
+          component: path.resolve('src/templates/HelpArticle.jsx'),
+          context: {
+            category,
+            parent_category,
+            slug,
+          },
+        })
+      }
+    )
   })
 }
 

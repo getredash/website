@@ -1,5 +1,4 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
 import Layout from 'components/Layout'
 import Link from 'components/Link'
 import SectionGetStarted from 'components/SectionGetStarted'
@@ -28,7 +27,7 @@ const PricingPage = ({ location }) => (
             <div className="pricing-body">
               <div>
                 <div className="pricing-icon">
-                  <img src="/img/pricing-starter.png" />
+                  <img src="/assets/images/pricing-starter.png" />
                 </div>
                 <div className="pricing-name">Starter</div>
                 <div className="pricing-charge">
@@ -84,7 +83,7 @@ const PricingPage = ({ location }) => (
             <div className="pricing-body">
               <div>
                 <div className="pricing-icon">
-                  <img src="/img/pricing-pro.png" />
+                  <img src="/assets/images/pricing-pro.png" />
                 </div>
                 <div className="pricing-name">Pro</div>
                 <div className="pricing-charge">
@@ -139,7 +138,7 @@ const PricingPage = ({ location }) => (
             <div className="pricing-body">
               <div>
                 <div className="pricing-icon">
-                  <img src="/img/pricing-business.png" />
+                  <img src="/assets/images/pricing-business.png" />
                 </div>
                 <div className="pricing-name">Business</div>
                 <div className="pricing-charge">
@@ -226,7 +225,7 @@ const PricingPage = ({ location }) => (
     <section className="section section--small">
       <div className="container text-center">
         <h2>Redash is trusted by thousands of companies around the globe</h2>
-        <img src="/img/elements/users-list-strip.png" width="100%" />
+        <img src="/assets/images/elements/users-list-strip.png" width="100%" />
       </div>
     </section>
 

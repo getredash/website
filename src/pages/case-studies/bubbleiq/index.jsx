@@ -1,5 +1,4 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
 import Layout from 'components/Layout'
 import Link from 'components/Link'
 import SectionGetStarted from 'components/SectionGetStarted'
@@ -15,7 +14,7 @@ const BubbleIQPage = ({ location }) => (
         <div className="row">
           <div className="col-md-8 col-md-offset-2 text-center">
             <img
-              src="/img/customers/bubbleiq.png"
+              src="/assets/images/customers/bubbleiq.png"
               alt="BubbleIQ logo"
               className="customer-logo"
               width="128"
@@ -54,7 +53,7 @@ const BubbleIQPage = ({ location }) => (
                   </td>
                   <td>
                     <img
-                      src="/img/customers/fletcher-richman.jpg"
+                      src="/assets/images/customers/fletcher-richman.jpg"
                       width="38px"
                       className="profile-image"
                     />
@@ -71,7 +70,7 @@ const BubbleIQPage = ({ location }) => (
                   <td>2017</td>
                   <td>
                     <img
-                      src="/img/integrations/mongodb.png"
+                      src="/assets/images/integrations/mongodb.png"
                       alt="MongoDB Logo"
                       width="32"
                     />
