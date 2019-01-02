@@ -3,6 +3,18 @@ category: dashboards
 parent_category: user-guide
 title: Favorites & Tagging
 slug: favorites-tagging
+
+# -----------------------------
+# *********** NOTE ************
+# -----------------------------
+# This page is duplicated from
+# the querying category. Jekyll
+# has no convenient way to link 
+# it twice in the user guide.
+# Changes to either file should
+# be pasted into the file that
+# shares the same name in the
+# querying directory.
 ---
 
 Redash users write a lot of queries and dashboards! Favorites and Tagging are here to make finding them easy as your collection of queries and dashboards grows from a few hundred to a few thousand.
