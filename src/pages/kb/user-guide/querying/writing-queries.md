@@ -27,7 +27,7 @@ button. It's also possible to unpublish a published query by clicking on the
 
 In most cases we use the data sources native query language. In some cases
 there are differences or additions, which are documented in the [Querying Data
-Sources category]({% link _kb/data-sources/querying_category.md %}).
+Sources category]({% link _kb/data-sources/querying/querying_category.md %}).
 
 ### Schema Browser and Autocomplete
 

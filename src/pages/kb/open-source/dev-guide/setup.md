@@ -2,7 +2,7 @@
 category: dev-guide
 parent_category: open-source
 title: Developer Installation Guide
-slug: dev-guide/setup
+slug: setup
 ---
 
 ## Installing Dependencies
@@ -15,8 +15,8 @@ Refer to the documentation of Python (2.7), PostgreSQL (9.3 or newer), Redis (2.
 
 For development the minimum required packages to install are described in:
 
-* requirements.txt
-* requirements_dev.txt
+- requirements.txt
+- requirements_dev.txt
 
 You install them with pip:
 
@@ -65,16 +65,16 @@ bin/run ./manage.py database create_tables
 
 The main Redash processes you have to run:
 
-* Web server
-* Celery worker(s) & scheduler
+- Web server
+- Celery worker(s) & scheduler
 
 In development you will also run Webpack's dev server or watch utility.
 
 Our recommendation:
 
-* Web server: `bin/run ./manage.py runserver --debugger --reload`
-* Celery: `./bin/run celery worker --app=redash.worker --beat -Qscheduled_queries,queries,celery -c2`
-* Webpack dev server: `npm run start`
+- Web server: `bin/run ./manage.py runserver --debugger --reload`
+- Celery: `./bin/run celery worker --app=redash.worker --beat -Qscheduled_queries,queries,celery -c2`
+- Webpack dev server: `npm run start`
 
 This will result in a Flask web server listening on port `5000`, Webpack dev server
 on port `8080` and 2 Celery workers ready to run queries.

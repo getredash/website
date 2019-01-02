@@ -3,7 +3,7 @@ category: admin-guide
 parent_category: open-source
 title: How to Upgrade (Legacy Images)
 order: 2
-slug: admin-guide/how-to-upgrade-legacy
+slug: how-to-upgrade-legacy
 ---
 
 {% callout important %}
@@ -74,7 +74,7 @@ In v2.0.0 we fixed the upgrade script to use the correct command.
 
 ### Some (or all) data sources disappeared after upgrading
 
-The upgrade process updates the code, applies migrations and upgrade Python requirements. But it does not upgrade Python requirements for the data sources (described in `/opt/redash/current/requirements_all_ds.txt`). 
+The upgrade process updates the code, applies migrations and upgrade Python requirements. But it does not upgrade Python requirements for the data sources (described in `/opt/redash/current/requirements_all_ds.txt`).
 
 In some cases, old packages will prevent the data source from loading. Make sure to manually update the requirements relevant to the data sources you need.
 

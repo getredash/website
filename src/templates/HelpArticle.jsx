@@ -15,16 +15,24 @@ class HelpPageTemplate extends React.Component {
   }
 
   updateMarkdownContent(html) {
+    /* Replace Jekyll tags with valid html */
     const calloutStartRE = /{% callout( [a-zA-Z]*)? %}/g
     const calloutEndRE = /{% endcallout %}/g
+    const linkRE = /({% |%7B%25%20)link( |%20)([a-zA-Z-_\/.]*)?( %}|%20%25%7D)/g
     let matched
-
     while ((matched = calloutStartRE.exec(html)) !== null) {
       const type = (matched[1] && matched[1].trim()) || 'primary'
       html = html.replace(
         matched[0],
         `<div className="bs-callout bs-callout-${type}">`
       )
+    }
+    while ((matched = linkRE.exec(html)) !== null) {
+      const link = matched[3] && matched[3].trim()
+      if (link) {
+        link = link.replace('_kb', '/help').replace('.md', '')
+        html = html.replace(matched[0], link)
+      }
     }
     html = html.replace(calloutEndRE, '</div>')
     const content = document.createElement('div')

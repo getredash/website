@@ -3,7 +3,7 @@ category: admin-guide
 parent_category: open-source
 title: HTTPS (SSL) Setup
 toc: true
-slug: admin-guide/https-ssl-setup
+slug: https-ssl-setup
 ---
 
 If you used the provided images or the bootstrap script, to start using SSL with your instance you need to:

@@ -3,7 +3,7 @@ category: admin-guide
 parent_category: open-source
 title: How to Upgrade
 order: 1
-slug: admin-guide/how-to-upgrade
+slug: how-to-upgrade
 ---
 
 {% callout important %}

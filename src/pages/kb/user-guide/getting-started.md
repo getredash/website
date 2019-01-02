@@ -8,16 +8,16 @@ category: getting-started
 parent_category: user-guide
 helpscout_url: https://help.redash.io/article/32-getting-started
 keywords:
-- Add Data Source
-- datasource
-- datasources
-- adding datasource
+  - Add Data Source
+  - datasource
+  - datasources
+  - adding datasource
 title: Getting Started
 ---
 
 ## 1. Add A Data Source
 
-The first thing you'll want to do is connect a data source ([see supported data sources]({% link _kb/data-sources/supported-data-sources.md %})). You can open the Data Sources management page by clicking the Settings icon:
+The first thing you'll want to do is connect a data source ([see supported data sources]({% link _kb/data-sources/setup/supported-data-sources.md %})). You can open the Data Sources management page by clicking the Settings icon:
 
 ![](/assets/images/docs/settings_icon.png)
 
@@ -42,7 +42,7 @@ Once you've connected a data source, it's time to write a query: **click on "Cre
 By default, your query results (data) will appear in a simple table. Visualizations are much better to help you digest complex information, so let's visualize your data. Redash supports [multiple types of
 visualizations]({% link _kb/user-guide/visualizations/visualization-types.md %}) so you should find one that suits your needs.
 
-Click the “New Visualization” button just above the results to select the perfect visualization for your needs.  You can view more detailed instructions [here]({% link _kb/user-guide/visualizations/visualizations-how-to.md %}).
+Click the “New Visualization” button just above the results to select the perfect visualization for your needs. You can view more detailed instructions [here]({% link _kb/user-guide/visualizations/visualizations-how-to.md %}).
 
 ![](/assets/images/docs/gifs/visualization/new_viz.gif)
 
@@ -69,4 +69,3 @@ Then, fill in their name and email. They'll get an invite via email and be requi
 To add a user to an existing group, go to `Setting`>`Groups`, select the group and add users by typing their name:
 
 ![](/assets/images/docs/gitbook/view-only-groups.png)
-

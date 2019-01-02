@@ -4,7 +4,7 @@ parent_category: open-source
 title: Ongoing Maintenance and Basic Operations
 toc: true
 order: 3
-slug: admin-guide/maintenance
+slug: maintenance
 ---
 
 {% callout %}
@@ -19,9 +19,9 @@ There, you can see the names of Redash's processes (`redash_celery`, `redash_ser
 
 ## Restart
 
-* Restart all processes: `sudo supervisorctl restart all`.
-* Restart the Web server: `sudo supervisorctl restart redash_server`.
-* Restart Celery workers: `sudo supervisorctl restart redash_celery`.
+- Restart all processes: `sudo supervisorctl restart all`.
+- Restart the Web server: `sudo supervisorctl restart redash_server`.
+- Restart Celery workers: `sudo supervisorctl restart redash_celery`.
 
 ### Restarting Celery Workers & the Queries Queue
 

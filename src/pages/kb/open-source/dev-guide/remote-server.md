@@ -2,7 +2,7 @@
 category: dev-guide
 parent_category: open-source
 title: Using a Remote Server and Installing Locally only the Frontend Dependencies
-slug: dev-guide/remote-server
+slug: remote-server
 ---
 
 If you want to work only on the frontend side of Redash, and have a Redash instance

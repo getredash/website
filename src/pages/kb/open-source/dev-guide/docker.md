@@ -2,7 +2,7 @@
 category: dev-guide
 parent_category: open-source
 title: Docker Based Developer Installation Guide
-slug: dev-guide/docker
+slug: docker
 ---
 
 ## Installing Docker, Docker Compose and Node.js
@@ -25,6 +25,7 @@ cd redash/
 ```
 
 ### Create Docker Services
+
 Once you have the above setup, you need to create the Docker services:
 
 ```bash
