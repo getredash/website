@@ -73,8 +73,6 @@ div.docs h2, h3 {
 }
 
 .sticky-in-parent {
-  &.fixed {
-    position: fixed;
-    top: 100px;
-  }
+  position: sticky;
+  top: 100px;
 }

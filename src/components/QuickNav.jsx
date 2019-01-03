@@ -5,45 +5,68 @@ class QuickNav extends React.Component {
     super(props)
 
     this.buildNav = this.buildNav.bind(this)
-    this.handleScroll = this.handleScroll.bind(this)
-    this.menuContent = null
-    this.menuElement = React.createRef()
+    this.state = {
+      navContent: null,
+    }
   }
 
   buildNav() {
     const content = document.createElement('div')
     content.innerHTML = this.props.html
     const headings = content.querySelectorAll('h1, h2, h3, h4, h5, h6')
-    const list = document.createElement('ul')
+    let ToC = ``,
+      level,
+      baseLevel
+
     let min_heading = 6
     headings.forEach(heading => {
-      min_heading = Math.min(
-        min_heading,
-        parseInt(heading.tagName.replace('H', ''))
-      )
+      min_heading = Math.min(min_heading, parseInt(heading.tagName.substr(1)))
     })
     headings.forEach(heading => {
-      const li = document.createElement('li')
-      const anchor = document.createElement('a')
-      li.classList.add('toc-entry', `toc-${heading.tagName.toLowerCase()}`)
-      anchor.setAttribute('href', `#${heading.id}`)
-      anchor.textContent = heading.textContent.replace(/[:.,]$/, '')
-      li.appendChild(anchor)
-      list.appendChild(li)
+      let newLine
+      const title = heading.textContent
+      const id =
+        heading.id ||
+        heading.textContent.replace(/[\. ,:-]+/g, '-').replace(/-$/, '')
+      const link = `#${id}`
+      const li = `<li class="toc-entry toc-${heading.tagName.toLowerCase()}">`
+
+      let prevLevel = level || min_heading
+      level = heading.tagName.substr(1)
+      baseLevel = baseLevel || level
+
+      if (prevLevel == 0 && level == min_heading) {
+        console.log(1)
+        newLine = `${li}`
+      } else if (level == prevLevel) {
+        console.log(2)
+        newLine = `</li>${li}`
+      } else if (level > prevLevel) {
+        console.log(3)
+        newLine = `<ul>${li}`.repeat(level - prevLevel)
+      } else if (level < prevLevel) {
+        console.log(4)
+        newLine = `</li></ul>`.repeat(prevLevel - level) + `</li>${li}`
+      }
+      newLine += `<a href="${link}">${title}</a>`
+      ToC += newLine
     })
-    this.menuContent = list
+
+    ToC += `</li></ul>`.repeat(Math.max(1, level - baseLevel))
+    ToC += `</li>`
+    return ToC
   }
 
-  handleScroll() {}
-
   componentDidMount() {
-    //this.handleScroll()
+    const navContent = this.buildNav()
+    this.setState({
+      navContent: navContent,
+    })
   }
 
   render() {
-    this.buildNav()
     return (
-      <div className="sticky-in-parent" ref={this.menuElement}>
+      <div className="sticky-in-parent">
         <div className="panel panel-default">
           <div className="panel-body">
             <p className="text-uppercase mt-0">
@@ -52,7 +75,7 @@ class QuickNav extends React.Component {
             <hr className="hr--sm" />
             <ul
               className="panel-nav list-unstyled"
-              dangerouslySetInnerHTML={{ __html: this.menuContent.innerHTML }}
+              dangerouslySetInnerHTML={{ __html: this.state.navContent }}
             />
           </div>
         </div>

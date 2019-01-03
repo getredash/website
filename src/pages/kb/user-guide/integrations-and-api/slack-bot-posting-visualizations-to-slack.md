@@ -10,13 +10,11 @@ slug: slack-bot-posting-visualizations-to-slack
 
 **Search for Queries (Use the `/redash` slash command to search for Redash queries to add to the conversation.**
 
-![](https://s3.amazonaws.com/helpscout.net/docs/assets/5877897f90336009736c5d9b/images/5a1c48972c7d3a272c0df9a2
-/file-VbAc93tixC.png)
+![](https://s3.amazonaws.com/helpscout.net/docs/assets/5877897f90336009736c5d9b/images/5a1c48972c7d3a272c0df9a2/file-VbAc93tixC.png)
 
 **Embed Redash URLs - Convert Redash URLs in your conversation into rich embeds with preview of the visualization.**
 
-![](https://s3.amazonaws.com/helpscout.net/docs/assets/5877897f90336009736c5d9b/images/5a1c4a81042863319924c7b4
-/file-D9EVKeW9IO.png)
+![](https://s3.amazonaws.com/helpscout.net/docs/assets/5877897f90336009736c5d9b/images/5a1c4a81042863319924c7b4/file-D9EVKeW9IO.png)
 
 ## Setting up the Slack Bot
 

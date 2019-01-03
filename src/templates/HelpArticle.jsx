@@ -12,12 +12,17 @@ class HelpPageTemplate extends React.Component {
     super(props)
 
     this.updateMarkdownContent = this.updateMarkdownContent.bind(this)
+    this.state = {
+      htmlContent: null,
+    }
   }
 
   updateMarkdownContent(html) {
     /* Replace Jekyll tags with valid html */
     const calloutStartRE = /{% callout( [a-zA-Z]*)? %}/g
     const calloutEndRE = /{% endcallout %}/g
+    const rawStartRE = /{%( |)raw( |)%}/g
+    const rawEndRE = /{%( |)endraw( |)%}/g
     const linkRE = /({% |%7B%25%20)link( |%20)([a-zA-Z-_\/.]*)?( %}|%20%25%7D)/g
     let matched
     while ((matched = calloutStartRE.exec(html)) !== null) {
@@ -27,6 +32,7 @@ class HelpPageTemplate extends React.Component {
         `<div className="bs-callout bs-callout-${type}">`
       )
     }
+    html = html.replace(calloutEndRE, '</div>')
     while ((matched = linkRE.exec(html)) !== null) {
       const link = matched[3] && matched[3].trim()
       if (link) {
@@ -34,28 +40,49 @@ class HelpPageTemplate extends React.Component {
         html = html.replace(matched[0], link)
       }
     }
-    html = html.replace(calloutEndRE, '</div>')
-    const content = document.createElement('div')
-    content.innerHTML = html
-    const headings = content.querySelectorAll('h1, h2, h3, h4, h5, h6')
+    html = html.replace(rawStartRE, '<pre>').replace(rawEndRE, '</pre>')
+
+    return html
+  }
+
+  updateContentAnchors() {
+    const headings = document
+      .getElementById('pageContent')
+      .querySelectorAll('h1, h2, h3, h4, h5, h6')
     headings.forEach(heading => {
       heading.id =
         heading.id ||
         heading.textContent.replace(/[\. ,:-]+/g, '-').replace(/-$/, '')
     })
-    return content
+  }
+
+  componentWillMount() {
+    const htmlContent = this.updateMarkdownContent(this.props.data.Article.html)
+    this.setState({
+      htmlContent: htmlContent,
+    })
+  }
+
+  componentDidMount() {
+    this.updateContentAnchors()
+    window.onload = () => {
+      if (window.location.hash) {
+        const anchor = document.getElementById(window.location.hash.substr(1))
+        window.scrollTo(0, anchor.getBoundingClientRect().top)
+      }
+    }
   }
 
   render() {
     const {
       location,
       data: {
-        Article: { html, frontmatter },
+        Article: { frontmatter },
         Parent,
         Section,
       },
     } = this.props
-    const content = this.updateMarkdownContent(html)
+
     return (
       <Layout
         title={frontmatter.title}
@@ -115,7 +142,10 @@ class HelpPageTemplate extends React.Component {
               <div className="row row--flex">
                 <div className="col-md-8 col-sm-7 push-xs-down">
                   <div
-                    dangerouslySetInnerHTML={{ __html: content.innerHTML }}
+                    id="pageContent"
+                    dangerouslySetInnerHTML={{
+                      __html: this.state.htmlContent,
+                    }}
                   />
 
                   {!frontmatter.hide_topics && (
@@ -127,7 +157,7 @@ class HelpPageTemplate extends React.Component {
                 </div>
 
                 <div className="col-md-4 col-sm-5">
-                  {frontmatter.toc && <QuickNav html={content.innerHTML} />}
+                  {frontmatter.toc && <QuickNav html={this.state.htmlContent} />}
                 </div>
               </div>
             )}
@@ -135,11 +165,14 @@ class HelpPageTemplate extends React.Component {
             {frontmatter.layout !== 'kb-category' && (
               <div className="row row--flex">
                 <div className="col-md-4 col-md-push-8 col-sm-5 col-sm-push-7 push-xs-down">
-                  {frontmatter.toc && <QuickNav html={content.innerHTML} />}
+                  {frontmatter.toc && <QuickNav html={this.state.htmlContent} />}
                 </div>
                 <div className="col-md-8 col-md-pull-4 col-sm-7 col-sm-pull-5 underline-link-holder">
                   <div
-                    dangerouslySetInnerHTML={{ __html: content.innerHTML }}
+                    id="pageContent"
+                    dangerouslySetInnerHTML={{
+                      __html: this.state.htmlContent,
+                    }}
                   />
                   <hr />
                   <p className="edit-on-github">

@@ -112,7 +112,7 @@ Once you updated the configuration, restart all services (`docker-compose up -d`
 
 It’s recommended to use some mail service, like [Amazon SES](https://aws.amazon.com/ses/) or [Mailgun](http://www.mailgun.com/) to send emails to ensure deliverability.
 
-### Google OAuth Setup {#google_oauth}
+### Google OAuth Setup
 
 If you want to use Google OAuth to authenticate users, you need to create a Google Developers project (see [instructions]({% link _kb/open-source/admin-guide/google-developer-account-setup.md %}) and then add the needed configuration in the `/opt/redash/env` file:
 

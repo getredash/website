@@ -11,15 +11,15 @@ slug: query-parameters
 toc: true
 ---
 
-Once a query has been saved and published in Redash, it can be a hassle to `Edit Source` every time you need to update a field selection or filter. You can save time with Query Parameters which allow you to insert values at runtime without editing the base query. **Redash recognizes any string between double curly braces {% raw %} {{ }} {% endraw %} as a Query Parameter**.
-  
+Once a query has been saved and published in Redash, it can be a hassle to `Edit Source` every time you need to update a field selection or filter. You can save time with Query Parameters which allow you to insert values at runtime without editing the base query. **Redash recognizes any string between double curly braces <code> {{ }} </code> as a Query Parameter**.
+
 {% raw %}
 SELECT count(0)
 FROM events
 WHERE action = '{{action}}'
 {% endraw %}
 
-In the above example {%raw%}<code>{{action}}</code>{%endraw%} is the parameter definition. Once added and
+In the above example <code>{{action}}</code> is the parameter definition. Once added and
 recognized by Redash, you will see a parameter input box appear below the query input text box and above your results:
 
 <img src="/assets/images/docs/gitbook/query-parameter.png" width="100%">
@@ -83,10 +83,11 @@ FROM users
 
 returned this data:
 
-|value |name |
-|1001 |John Smith |
-|1002 |Jane Doe |
-|1003 |Bobby Tables |
+| value | name         |
+| ----- | ------------ |
+| 1001  | John Smith   |
+| 1002  | Jane Doe     |
+| 1003  | Bobby Tables |
 
 Redash's dropdown list widget would look like this:
 
@@ -100,8 +101,6 @@ But when Redash executes the query, the value passed to the database would be 10
 
 Sure! Just use the same identifier in the curly brackets. In this example:
 
-{% raw %}
-
 ```sql
 SELECT {{org_id}}, count(0)
 FROM queries
@@ -109,13 +108,10 @@ WHERE org_id = {{org_id}}
 ```
 
 We use the `{{org_id}}` parameter twice.
-{% endraw %}
 
 **Can I use multiple parameters in a single query?**
 
 Of course, just use a unique name for each one. In this example:
-
-{% raw %}
 
 ```sql
 SELECT count(0)
@@ -124,4 +120,3 @@ WHERE org_id = {{org_id}} AND created_at > '{{start_date}}'
 ```
 
 We use two parameters: `{{org_id}}` and `{{start_date}}`.
-{% endraw %}

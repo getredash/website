@@ -6,7 +6,8 @@ title: Querying Google Analytics
 slug: querying-google-analytics
 ---
 
-## Example Queries {#queries}
+## Example Queries
+
 ```
 {
     "ids": "ga:97038718",
