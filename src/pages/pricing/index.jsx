@@ -1,7 +1,10 @@
 import React from 'react'
+import { Popover, OverlayTrigger } from 'react-bootstrap'
 import Layout from 'components/Layout'
 import Link from 'components/Link'
 import SectionGetStarted from 'components/SectionGetStarted'
+
+const popover = (id, text) => <Popover id={id}>{text}</Popover>
 
 const PricingPage = ({ location }) => (
   <Layout
@@ -40,27 +43,33 @@ const PricingPage = ({ location }) => (
                   <p>100 Saved Queries</p>
                   <p>
                     30 minutes minimum{' '}
-                    <span
-                      className="dotted-helper"
-                      data-container="body"
-                      data-toggle="popover"
-                      data-placement="top"
-                      data-content="How often queries can be scheduled to automatically refresh in the background."
+                    <OverlayTrigger
+                      trigger={['hover', 'focus']}
+                      placement="top"
+                      overlay={popover(
+                        1,
+                        'How often queries can be scheduled to automatically refresh in the background.'
+                      )}
                     >
-                      automatic refresh frequency
-                    </span>
+                      <span className="dotted-helper">
+                        automatic refresh frequency
+                      </span>
+                    </OverlayTrigger>
                   </p>
                   <p>
                     5 minutes maximum{' '}
-                    <span
-                      className="dotted-helper"
-                      data-container="body"
-                      data-toggle="popover"
-                      data-placement="top"
-                      data-content="How long your query is allowed to run."
+                    <OverlayTrigger
+                      trigger={['hover', 'focus']}
+                      placement="top"
+                      overlay={popover(
+                        2,
+                        'How long your query is allowed to run.'
+                      )}
                     >
-                      query execution time
-                    </span>
+                      <span className="dotted-helper">
+                        query execution time
+                      </span>
+                    </OverlayTrigger>
                   </p>
                 </div>
               </div>
@@ -96,27 +105,33 @@ const PricingPage = ({ location }) => (
                   <p>1000 Saved Queries</p>
                   <p>
                     5 minutes minimum{' '}
-                    <span
-                      className="dotted-helper"
-                      data-container="body"
-                      data-toggle="popover"
-                      data-placement="top"
-                      data-content="How often queries can be scheduled to automatically refresh in the background."
+                    <OverlayTrigger
+                      trigger={['hover', 'focus']}
+                      placement="top"
+                      overlay={popover(
+                        1,
+                        'How often queries can be scheduled to automatically refresh in the background.'
+                      )}
                     >
-                      automatic refresh frequency
-                    </span>
+                      <span className="dotted-helper">
+                        automatic refresh frequency
+                      </span>
+                    </OverlayTrigger>
                   </p>
                   <p>
                     2 hours maximum{' '}
-                    <span
-                      className="dotted-helper"
-                      data-container="body"
-                      data-toggle="popover"
-                      data-placement="top"
-                      data-content="How long your query is allowed to run."
+                    <OverlayTrigger
+                      trigger={['hover', 'focus']}
+                      placement="top"
+                      overlay={popover(
+                        2,
+                        'How long your query is allowed to run.'
+                      )}
                     >
-                      query execution time
-                    </span>
+                      <span className="dotted-helper">
+                        query execution time
+                      </span>
+                    </OverlayTrigger>
                   </p>
                 </div>
               </div>
@@ -151,27 +166,33 @@ const PricingPage = ({ location }) => (
                   <p>Unlimited Saved Queries</p>
                   <p>
                     1 minute minimum{' '}
-                    <span
-                      className="dotted-helper"
-                      data-container="body"
-                      data-toggle="popover"
-                      data-placement="top"
-                      data-content="How often queries can be scheduled to automatically refresh in the background."
+                    <OverlayTrigger
+                      trigger={['hover', 'focus']}
+                      placement="top"
+                      overlay={popover(
+                        1,
+                        'How often queries can be scheduled to automatically refresh in the background.'
+                      )}
                     >
-                      automatic refresh frequency
-                    </span>
+                      <span className="dotted-helper">
+                        automatic refresh frequency
+                      </span>
+                    </OverlayTrigger>
                   </p>
                   <p>
                     12 hours maximum{' '}
-                    <span
-                      className="dotted-helper"
-                      data-container="body"
-                      data-toggle="popover"
-                      data-placement="top"
-                      data-content="How long your query is allowed to run."
+                    <OverlayTrigger
+                      trigger={['hover', 'focus']}
+                      placement="top"
+                      overlay={popover(
+                        2,
+                        'How long your query is allowed to run.'
+                      )}
                     >
-                      query execution time
-                    </span>
+                      <span className="dotted-helper">
+                        query execution time
+                      </span>
+                    </OverlayTrigger>
                   </p>
                   <p>Audit logging</p>
                   <p>Group permissions</p>

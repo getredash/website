@@ -22,13 +22,7 @@ class Header extends React.Component {
       <nav className="navbar navbar-fixed-top navbar-has-shadow">
         <div className="container">
           <div className="navbar-header">
-            <button
-              type="button"
-              className="navbar-toggle collapsed"
-              data-toggle="collapse"
-              data-target="#navbar-collapse"
-              aria-expanded="false"
-            >
+            <button type="button" className="navbar-toggle collapsed">
               <span className="sr-only">Toggle navigation</span>
               <span className="icon-bar" />
               <span className="icon-bar" />
