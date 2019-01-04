@@ -1,6 +1,9 @@
 const path = require('path')
 
-exports.createPages = ({ actions: { createPage }, graphql }) => {
+exports.createPages = ({
+  actions: { createPage, createRedirect },
+  graphql,
+}) => {
   return graphql(`
     {
       TextPages: allMarkdownRemark(
@@ -62,11 +65,21 @@ exports.createPages = ({ actions: { createPage }, graphql }) => {
           }
         }
       }
+
+      Redirects: allRedirectsYaml {
+        edges {
+          node {
+            from
+            to
+          }
+        }
+      }
     }
   `).then(result => {
     if (result.errors) {
       return Promise.reject(result.errors)
     }
+
     result.data.TextPages.edges.forEach(({ node }) => {
       createPage({
         path: node.frontmatter.path,
@@ -110,6 +123,16 @@ exports.createPages = ({ actions: { createPage }, graphql }) => {
         })
       }
     )
+
+    result.data.Redirects.edges.forEach(({ node }) => {
+      createRedirect({
+        fromPath: node.from,
+        isPermanent: true,
+        redirectInBrowser: true,
+        toPath: node.to,
+        rest: true,
+      })
+    })
   })
 }
 

@@ -36,16 +36,12 @@ class QuickNav extends React.Component {
       baseLevel = baseLevel || level
 
       if (prevLevel == 0 && level == min_heading) {
-        console.log(1)
         newLine = `${li}`
       } else if (level == prevLevel) {
-        console.log(2)
         newLine = `</li>${li}`
       } else if (level > prevLevel) {
-        console.log(3)
         newLine = `<ul>${li}`.repeat(level - prevLevel)
       } else if (level < prevLevel) {
-        console.log(4)
         newLine = `</li></ul>`.repeat(prevLevel - level) + `</li>${li}`
       }
       newLine += `<a href="${link}">${title}</a>`
