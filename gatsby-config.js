@@ -58,16 +58,6 @@ module.exports = {
         mergeCachingHeaders: true,
       },
     },
-    /*{
-      resolve: `gatsby-plugin-algolia`,
-      options: {
-        appId: process.env.ALGOLIA_APP_ID,
-        apiKey: process.env.ALGOLIA_API_KEY,
-        indexName: 'docs',
-        //queries,
-        chunkSize: 10000,
-      },
-    },*/
     'gatsby-transformer-remark',
     'gatsby-transformer-yaml',
     'gatsby-transformer-json',

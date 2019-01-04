@@ -6,15 +6,39 @@ import Link from 'components/Link'
 import SearchResults from 'components/SearchResults'
 import ArticlesList from 'components/ArticlesList'
 import QuickNav from 'components/QuickNav'
+import index from 'data/algolia.js'
 
 class HelpPageTemplate extends React.Component {
   constructor(props) {
     super(props)
 
     this.updateMarkdownContent = this.updateMarkdownContent.bind(this)
+    this.handleKeyUp = this.handleKeyUp.bind(this)
+    this.search = this.search.bind(this)
     this.state = {
       htmlContent: null,
+      searchQuery: '',
+      hits: [],
     }
+  }
+
+  handleKeyUp(e) {
+    if (e.keyCode === 8) {
+      this.search(e)
+    }
+  }
+
+  search(e) {
+    this.setState({
+      searchQuery: e.target.value,
+    })
+    setTimeout(() => {
+      index.search(this.state.searchQuery, (err, content) => {
+        this.setState({
+          hits: content.hits,
+        })
+      })
+    })
   }
 
   updateMarkdownContent(html) {
@@ -127,6 +151,9 @@ class HelpPageTemplate extends React.Component {
                       className="form-control input-lg form-control--white search-box"
                       type="text"
                       placeholder="Search for..."
+                      value={this.state.searchQuery}
+                      onChange={this.search}
+                      onKeyUp={this.handleKeyUp}
                     />
                   </div>
                 </form>
@@ -136,61 +163,70 @@ class HelpPageTemplate extends React.Component {
         </section>
 
         <section className="section section--small section--kb">
-          <SearchResults />
-          <div className="container content docs">
-            {frontmatter.layout === 'kb-category' && (
-              <div className="row row--flex">
-                <div className="col-md-8 col-sm-7 push-xs-down">
-                  <div
-                    id="pageContent"
-                    dangerouslySetInnerHTML={{
-                      __html: this.state.htmlContent,
-                    }}
-                  />
+          {this.state.searchQuery.length > 0 && (
+            <SearchResults hits={this.state.hits} />
+          )}
 
-                  {!frontmatter.hide_topics && (
-                    <ArticlesList
-                      category={frontmatter.category}
-                      parent_category={frontmatter.parent_category}
+          {this.state.searchQuery.length === 0 && (
+            <div className="container content docs">
+              {frontmatter.layout === 'kb-category' && (
+                <div className="row row--flex">
+                  <div className="col-md-8 col-sm-7 push-xs-down">
+                    <div
+                      id="pageContent"
+                      dangerouslySetInnerHTML={{
+                        __html: this.state.htmlContent,
+                      }}
                     />
-                  )}
-                </div>
 
-                <div className="col-md-4 col-sm-5">
-                  {frontmatter.toc && <QuickNav html={this.state.htmlContent} />}
-                </div>
-              </div>
-            )}
+                    {!frontmatter.hide_topics && (
+                      <ArticlesList
+                        category={frontmatter.category}
+                        parent_category={frontmatter.parent_category}
+                      />
+                    )}
+                  </div>
 
-            {frontmatter.layout !== 'kb-category' && (
-              <div className="row row--flex">
-                <div className="col-md-4 col-md-push-8 col-sm-5 col-sm-push-7 push-xs-down">
-                  {frontmatter.toc && <QuickNav html={this.state.htmlContent} />}
+                  <div className="col-md-4 col-sm-5">
+                    {frontmatter.toc && (
+                      <QuickNav html={this.state.htmlContent} />
+                    )}
+                  </div>
                 </div>
-                <div className="col-md-8 col-md-pull-4 col-sm-7 col-sm-pull-5 underline-link-holder">
-                  <div
-                    id="pageContent"
-                    dangerouslySetInnerHTML={{
-                      __html: this.state.htmlContent,
-                    }}
-                  />
-                  <hr />
-                  <p className="edit-on-github">
-                    <small>
-                      <Link
-                        to={`https://github.com/getredash/website/edit/master/website${
-                          location.pathname
-                        }.md`}
-                        target="_blank"
-                      >
-                        Edit on GitHub
-                      </Link>
-                    </small>
-                  </p>
+              )}
+
+              {frontmatter.layout !== 'kb-category' && (
+                <div className="row row--flex">
+                  <div className="col-md-4 col-md-push-8 col-sm-5 col-sm-push-7 push-xs-down">
+                    {frontmatter.toc && (
+                      <QuickNav html={this.state.htmlContent} />
+                    )}
+                  </div>
+                  <div className="col-md-8 col-md-pull-4 col-sm-7 col-sm-pull-5 underline-link-holder">
+                    <div
+                      id="pageContent"
+                      dangerouslySetInnerHTML={{
+                        __html: this.state.htmlContent,
+                      }}
+                    />
+                    <hr />
+                    <p className="edit-on-github">
+                      <small>
+                        <Link
+                          to={`https://github.com/getredash/website/edit/master/website${
+                            location.pathname
+                          }.md`}
+                          target="_blank"
+                        >
+                          Edit on GitHub
+                        </Link>
+                      </small>
+                    </p>
+                  </div>
                 </div>
-              </div>
-            )}
-          </div>
+              )}
+            </div>
+          )}
         </section>
       </Layout>
     )

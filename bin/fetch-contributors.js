@@ -1,5 +1,4 @@
 const request = require('request')
-const fs = require('fs')
 
 function getPage(page) {
   const url = 'https://api.github.com/repos/getredash/redash/contributors'

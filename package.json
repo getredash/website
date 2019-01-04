@@ -4,12 +4,12 @@
   "description": "Redash Website & Knowledge Base",
   "main": "n/a",
   "dependencies": {
+    "algoliasearch": "^3.32.0",
     "bootstrap": "^4.2.1",
     "bootstrap-sass": "^3.4.0",
     "gatsby": "2.0.76",
     "gatsby-image": "2.0.25",
     "gatsby-link": "2.0.7",
-    "gatsby-plugin-algolia": "^0.3.0",
     "gatsby-plugin-catch-links": "2.0.9",
     "gatsby-plugin-feed": "2.0.11",
     "gatsby-plugin-google-analytics": "2.0.8",
@@ -87,7 +87,9 @@
     "lint:text": "textlint src/pages/**/index.md",
     "lint:textfix": "textlint --fix src/pages/**/index.md",
     "precommit": "lint-staged",
-    "test": "prettier --write \"**/*.+(js|jsx|json|css|scss)\""
+    "test": "prettier --write \"**/*.+(js|jsx|json|css|scss)\"",
+    "fetch-contributors": "node bin/fetch-contributors.js",
+    "export-index": "node bin/export-index.js"
   },
   "repository": {
     "type": "git",
