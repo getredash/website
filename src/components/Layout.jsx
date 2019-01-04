@@ -58,6 +58,8 @@ export default ({ children, title, description, location }) => (
         name="twitter:image"
         content="https://redash.io/assets/images/social-twitter-600x314.png"
       />
+
+      <script src="/assets/scripts/analytics.js" />
     </Helmet>
     <Header />
     <main>{children}</main>
