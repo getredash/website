@@ -92,10 +92,27 @@ $navbar-fs: 14px;
   background: $primary;
 }
 
+#navbar-collapse {
+  display: block!important;
+  transition: max-height .35s ease;
+  &.collapsed {
+    padding-bottom: 10px;
+  }
+  &.collapse {
+    padding-bottom: 0;
+    max-height: 0;
+    overflow: hidden!important;
+  }
+}
+
 @media (max-width: 767px) {
   .navbar-collapse {
     background: #f8fafa;
     padding-bottom: 10px;
+  }
+
+  .navbar-btn {
+    margin-bottom: 0;
   }
 }
 

@@ -6,15 +6,22 @@ class Header extends React.Component {
     super(props)
 
     this.toggleDropdown = this.toggleDropdown.bind(this)
+    this.toggleMenu = this.toggleMenu.bind(this)
     this.state = {
-      open: false,
+      dropdownOpen: false,
+      menuOpen: false,
     }
+  }
+
+  toggleMenu() {
+    const currentState = this.state.menuOpen
+    this.setState({ menuOpen: !currentState })
   }
 
   toggleDropdown(e) {
     e.preventDefault()
-    const currentState = this.state.open
-    this.setState({ open: !currentState })
+    const currentState = this.state.dropdownOpen
+    this.setState({ dropdownOpen: !currentState })
   }
 
   render() {
@@ -22,7 +29,11 @@ class Header extends React.Component {
       <nav className="navbar navbar-fixed-top navbar-has-shadow">
         <div className="container">
           <div className="navbar-header">
-            <button type="button" className="navbar-toggle collapsed">
+            <button
+              type="button"
+              className="navbar-toggle"
+              onClick={this.toggleMenu}
+            >
               <span className="sr-only">Toggle navigation</span>
               <span className="icon-bar" />
               <span className="icon-bar" />
@@ -37,7 +48,13 @@ class Header extends React.Component {
             </Link>
           </div>
 
-          <div className="collapse navbar-collapse" id="navbar-collapse">
+          <div
+            id="navbar-collapse"
+            className={`navbar-collapse ${
+              this.state.menuOpen ? 'collapsed in' : 'collapse'
+            }`}
+            aria-expanded={this.state.menuOpen}
+          >
             <ul className="nav navbar-nav navbar-left">
               <li>
                 <Link data-track data-track-location="header" to="/product/">
@@ -69,7 +86,7 @@ class Header extends React.Component {
                 </Link>
               </li>
               <li
-                className={`dropdown ${this.state.open ? 'open' : null}`}
+                className={`dropdown ${this.state.dropdownOpen ? 'open' : ''}`}
                 onClick={this.toggleDropdown}
               >
                 <Link
@@ -78,7 +95,7 @@ class Header extends React.Component {
                   data-toggle="dropdown"
                   role="button"
                   aria-haspopup="true"
-                  aria-expanded="false"
+                  aria-expanded={this.dropdownOpen}
                 >
                   Help
                   <span className="caret" />
