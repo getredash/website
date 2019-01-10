@@ -32,7 +32,7 @@ Impala  |  ✅  |  ✅
 InfluxDB  |  ✅  |  ✅  
 JIRA  |  ✅  |  ✅  
 JSON  |  ✅  |  ✅  
-Kylin by Apache |  ✅  |  ✅  
+Apache Kylin |  ✅  |  ✅  
 MapD  |    |  ✅  
 MemSQL  |  ✅  |  ✅  
 Microsoft SQL Server ([instructions]({% link _kb/data-sources/azure-sql-database-setup.md %})) |  ✅  |  ✅  
