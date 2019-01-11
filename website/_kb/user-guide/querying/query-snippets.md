@@ -43,7 +43,7 @@ An insertion point of zero `${0}` is always the *last* point in the tab order.
 Once defined, you can invoke your snippet from the Query Editor by typing the trigger word you defined in the Query Snippet editor. It will be suggested by auto complete like any other keyword in your database.
 
 {% callout info %}
-If you prefer to work without auto complete enabled you can still invoke Query Snippets by pressing `CTRL + Space` and typing the trigger word for your Query Snippet.
+If you prefer to work without live auto complete enabled you can still invoke Query Snippets by pressing `CTRL + Space` and typing the trigger word for your Query Snippet.
 {% endcallout %}
 
 Here are some other ideas for snippets:
