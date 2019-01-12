@@ -51,11 +51,6 @@ class Homepage extends React.Component {
                 >
                   Get Started
                 </Link>
-                {false && (
-                  <p className="weekly-signups">
-                    <span>879 businesses signed up last week</span>
-                  </p>
-                )}
               </div>
               <div className="col-md-7 hidden-xs hidden-sm">
                 <div className="browser-container hidden-xs">
