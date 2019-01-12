@@ -7,12 +7,12 @@ const SectionUsers = () => (
       <div className="row">
         <div className="col-sm-7">
           <img
-            src="img/elements/users-list.png"
+            src="/assets/images/elements/users-list.png"
             id="customers-illustrated"
             className="hidden-xs"
           />
           <img
-            src="img/elements/users-list-center.png"
+            src="/assets/images/elements/users-list-center.png"
             id="customers-illustrated"
             className="visible-xs"
           />
@@ -25,7 +25,7 @@ const SectionUsers = () => (
           </h3>
           <p>
             <img
-              src="img/customers/ben-dehghan.jpg"
+              src="/assets/images/customers/ben-dehghan.jpg"
               width="48px"
               className="profile-image"
             />{' '}
