@@ -48,12 +48,16 @@ layout: docs
 
       <div class="col-md-8 col-md-pull-4 col-sm-7 col-sm-pull-5 underline-link-holder">
         {{page.content}}
-        <hr>
-        <p class="edit-on-github">
-          <small>
-            <a href="https://github.com/getredash/website/edit/master/website/{{ page.relative_path}}">Edit on GitHub</a>
-          </small>
-        </p>
+        <div class="was-this-useful">
+          <h4>Did you find this useful?</h4>
+
+          <span class="wtu wtu-no">No 👎</span>
+          <span class="wtu wtu-yes">Yes 👍</span>
+          <span class="wtu-thankyou" style="opacity: 0;">Thank you!</span>
+
+          <a class="btn btn-secondary" href="https://github.com/getredash/website/edit/master/website/{{ page.relative_path }}"><i class="fa fa-pencil" aria-hidden="true"></i> Edit on GitHub</a>
+        </div>
+
       </div><!-- col -->
     </div><!-- row -->
   </div><!-- container -->
