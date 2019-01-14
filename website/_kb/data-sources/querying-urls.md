@@ -23,7 +23,7 @@ To manipulate the data you get from your URL data source you can save the
 query that resulted in all the data and query that data set. Read more about
 querying query results  [here]({% link _kb/user-guide/querying/query-results-data-source.md %}).
 
-### Example JSON
+### Example JSON 1
 
 ```
 {
@@ -73,3 +73,44 @@ querying query results  [here]({% link _kb/user-guide/querying/query-results-dat
 
 ```
 
+### Example JSON 2
+
+```
+{
+  "columns": [
+    {
+      "name": "date",
+      "type": "date",
+      "friendly_name": "Date"
+    },
+    {
+      "name": "order_count",
+      "type": "integer",
+      "friendly_name": "Order Count"
+    },
+    {
+      "name": "product_name",
+      "type": "string",
+      "friendly_name": "Product Name"
+    }
+  ],
+  "rows": [
+    {
+      "order_count": 45,
+      "product_name": "Raspberry Pi B+",
+      "date": "2014-01-30"
+    },
+    {
+      "order_count": 57,
+      "product_name": "Raspberry Pi Nano",
+      "date": "2014-01-30"
+    }
+  ]
+}
+
+```
+
+Few notes:
+
+  1. In the Example JSON above, the column name is the name of a particular row value.
+  2. Column name and type must match the row value name and type or Redash will fail to parse the values from each row.
