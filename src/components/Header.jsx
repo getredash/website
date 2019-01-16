@@ -97,8 +97,7 @@ class Header extends React.Component {
                   aria-haspopup="true"
                   aria-expanded={this.dropdownOpen}
                 >
-                  Help
-                  <span className="caret" />
+                  Help <span className="caret" />
                 </Link>
                 <ul className="dropdown-menu">
                   <li>
