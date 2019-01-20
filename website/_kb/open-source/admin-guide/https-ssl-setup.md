@@ -8,7 +8,7 @@ toc: true
 {% callout important %}
 The instructions below are for the legacy images. If you use the new Docker based images, see the following guide:
 
-https://gist.github.com/arikfr/64c9ff8d2f2b703d4e44fe9e45a7730e
+[https://gist.github.com/arikfr/64c9ff8d2f2b703d4e44fe9e45a7730e](https://gist.github.com/arikfr/64c9ff8d2f2b703d4e44fe9e45a7730e)
 {% endcallout %}
 
 If you used the provided images or the bootstrap script, to start using SSL with your instance you need to:
