@@ -19,5 +19,5 @@ Each group can be connected to specific data sources, read more about group
 permissions [here]({% link _kb/user-guide/users/inviting-users.md %}).
 
 {% callout %}
-Please Note "Default" and "Admin" groups can't be deleted
+"Default" and "Admin" groups can't be deleted.
 {% endcallout %}
