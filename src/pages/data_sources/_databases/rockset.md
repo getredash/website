@@ -1,7 +1,6 @@
 ---
 title: Query and Visualize data from Rockset
-layout: data_source
 name: Rockset
 logo: /assets/images/integrations/rockset.png
-show_on_homepage: true
+path: /data-sources/rockset
 ---
