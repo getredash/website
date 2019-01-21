@@ -2,5 +2,5 @@
 title: Query and Visualize data from Alooma
 name: Alooma
 logo: /assets/images/temp/Alooma.png
-path: /data-sources/alooma
+path: /integrations/alooma
 ---
