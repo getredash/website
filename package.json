@@ -81,7 +81,6 @@
   },
   "scripts": {
     "build": "gatsby build && cp _redirects public/",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.+(js|json|md)\"",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
@@ -89,19 +88,18 @@
     "lint:textfix": "textlint --fix src/pages/**/index.md",
     "precommit": "lint-staged",
     "test": "prettier --write \"**/*.+(js|jsx|json|css|scss)\"",
-    "fetch-contributors": "node bin/fetch-contributors.js",
-    "export-index": "node bin/export-index.js"
+    "fetch-contributors": "node bin/fetch-contributors.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/getredash/docs.git"
+    "url": "git+https://github.com/getredash/website.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "BSD",
   "bugs": {
-    "url": "https://github.com/getredash/docs/issues"
+    "url": "https://github.com/getredash/website/issues"
   },
-  "homepage": "https://github.com/getredash/docs#readme",
+  "homepage": "https://github.com/getredash/website#readme",
   "optionalDependencies": {
     "fsevents": "^1.1.3"
   }
