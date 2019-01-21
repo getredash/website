@@ -79,7 +79,7 @@
     ]
   },
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby build && cp _redirects public/",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.+(js|json|md)\"",
