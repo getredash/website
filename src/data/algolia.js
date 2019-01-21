@@ -5,6 +5,6 @@ const searchClient = algoliasearch(
   '1c74ec31459a537e57b2c94a01d061b7'
 )
 
-const index = searchClient.initIndex('docs')
+const index = searchClient.initIndex('kb')
 
 export default index

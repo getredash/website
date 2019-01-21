@@ -1,4 +1,4 @@
-module.exports = {
+const config = {
   siteMetadata: {
     title: 'Redash',
     description: 'Redash Website & Knowledge Base',
@@ -71,3 +71,10 @@ module.exports = {
     'gatsby-transformer-sharp',
   ],
 }
+
+if (process.env.CONTEXT === 'production') {
+  const algoliaConfig = require('./src/config/algolia')
+  config.plugins.push(algoliaConfig)
+}
+
+module.exports = config
