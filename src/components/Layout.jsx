@@ -59,7 +59,7 @@ export default ({ children, title, description, location }) => (
         content="https://redash.io/assets/images/social-twitter-600x314.png"
       />
 
-      <script src="/assets/scripts/analytics.js" />
+      <script src="/assets/scripts/a.js" />
     </Helmet>
     <Header />
     <main>{children}</main>
