@@ -1,5 +1,5 @@
 ---
-category: setting-up
+category: setup
 parent_category: open-source
 title: Setting up a Redash Instance
 toc: true
