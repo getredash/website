@@ -1,5 +1,5 @@
 ---
-category: user-management
+category: users
 parent_category: user-guide
 title: Authentication Options (SSO, Google OAuth, SAML)
 slug: authentication-options

@@ -46,3 +46,5 @@
 /help-onpremise/* /help/
 /features /product 301
 /get-started /pricing
+
+/help/user-guide/user-management/ /help/user-guide/users/

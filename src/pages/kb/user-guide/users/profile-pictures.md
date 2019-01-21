@@ -1,5 +1,5 @@
 ---
-category: user-management
+category: users
 parent_category: user-guide
 title: Adding a Profile Picture
 slug: profile-pictures
