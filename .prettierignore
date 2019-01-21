@@ -1,0 +1,6 @@
+node_modules
+public
+.cache
+.vscode
+package.json
+website-legacy

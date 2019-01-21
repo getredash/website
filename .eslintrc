@@ -1,0 +1,32 @@
+{
+  "extends": [
+    "prettier",
+    "prettier/react"
+  ],
+  "plugins": [
+    "react",
+    "prettier"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2016,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "rules": {
+    "prettier/prettier": [
+      "warn",
+      {
+        "trailingComma": "es5",
+        "singleQuote": true,
+        "semi": false
+      }
+    ]
+  }
+}
