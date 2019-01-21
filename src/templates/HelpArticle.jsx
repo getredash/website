@@ -53,7 +53,7 @@ class HelpPageTemplate extends React.Component {
       const type = (matched[1] && matched[1].trim()) || 'primary'
       html = html.replace(
         matched[0],
-        `<div className="bs-callout bs-callout-${type}">`
+        `<div class="bs-callout bs-callout-${type}">`
       )
     }
     html = html.replace(calloutEndRE, '</div>')
