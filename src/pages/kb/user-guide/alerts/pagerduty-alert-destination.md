@@ -3,7 +3,7 @@ category: alerts
 parent_category: user-guide
 helpscout_url: 
 title: Adding PagerDuty Alert Destination
-slug: adding-alert-destination-pagerduty
+slug: pagerduty-alert-destination
 ---
 
 First you need to obtain the PagerDuty Integration Key from your PagerDuty console.

@@ -3,7 +3,7 @@ category: alerts
 parent_category: user-guide
 helpscout_url: https://help.redash.io/article/68-adding-alert-destination-slack
 title: Adding Slack Alert Destination
-slug: adding-alert-destination-slack
+slug: slack-alert-destination
 ---
 
 1. Open "Alert Destinations" tab in the settings screen, and click on "+ New Alert Destination".
