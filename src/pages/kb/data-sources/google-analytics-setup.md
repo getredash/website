@@ -3,7 +3,7 @@ category: setup
 parent_category: data-sources
 helpscout_url: https://help.redash.io/article/125-google-analytics-setup
 title: Google Analytics Setup
-slug: google-analytics-setup
+slug: google-analytics
 ---
 
 ## Setup The Datasource

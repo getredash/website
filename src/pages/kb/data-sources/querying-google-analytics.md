@@ -1,9 +1,8 @@
 ---
 category: querying
 parent_category: data-sources
-helpscout_url: https://help.redash.io/article/117-querying-goog
 title: Querying Google Analytics
-slug: querying-google-analytics
+slug: google-analytics
 ---
 
 ## Example Queries

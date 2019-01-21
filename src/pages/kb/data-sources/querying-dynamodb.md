@@ -1,9 +1,8 @@
 ---
 category: querying
 parent_category: data-sources
-helpscout_url: https://help.redash.io/article/163-querying-dynamodb
 title: Querying DynamoDB
-slug: querying-dynamodb
+slug: dynamodb
 ---
 
 When connecting to DynamoDB we use a library named DQL to parse your queries

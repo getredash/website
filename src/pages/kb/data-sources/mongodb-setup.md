@@ -1,9 +1,8 @@
 ---
 category: setup
 parent_category: data-sources
-helpscout_url: https://help.redash.io/article/157-mongodb-setup
 title: MongoDB Setup
-slug: mongodb-setup
+slug: mongodb
 ---
 To setup a MongoDB connection, you need to at least provide a **Connection
 String**  and a **DB Name**.

@@ -1,9 +1,8 @@
 ---
 category: querying
 parent_category: data-sources
-helpscout_url: https://help.redash.io/article/111-querying-elasticsearch
 title: Querying Elasticsearch
-slug: querying-elasticsearch
+slug: elasticsearch
 ---
 Redash supports two flavors of Elasticsearch queries, Lucene/string style
 queries (like Kibana) and the more elaborate JSON based queries. For the first

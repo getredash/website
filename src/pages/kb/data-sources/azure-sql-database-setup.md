@@ -2,7 +2,7 @@
 category: setup
 parent_category: data-sources
 title: Microsoft Azure SQL Database Setup
-slug: azure-sql-database-setup
+slug: azure-sql-database
 ---
 
 When setting up a connection to Azure SQL Database, you need to pick "Microsoft SQL Server" as the type.

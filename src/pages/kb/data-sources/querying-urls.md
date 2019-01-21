@@ -1,9 +1,8 @@
 ---
 category: querying
 parent_category: data-sources
-helpscout_url: https://help.redash.io/article/118-querying-urls
 title: Querying URLs
-slug: querying-urls
+slug: urls
 ---
 Using a URL based data source requires that the URL use our format (see example below).
 

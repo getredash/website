@@ -1,9 +1,8 @@
 ---
 category: setup
 parent_category: data-sources
-helpscout_url: https://help.redash.io/article/122-amazon-athena-setup
 title: Amazon Athena Setup
-slug: amazon-athena-setup
+slug: amazon-athena
 ---
 ###  IAM User Setup
 

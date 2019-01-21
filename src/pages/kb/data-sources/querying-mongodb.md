@@ -1,9 +1,8 @@
 ---
 category: querying
 parent_category: data-sources
-helpscout_url: https://help.redash.io/article/113-querying-mongodb
 title: Querying MongoDB
-slug: querying-mongodb
+slug: mongodb
 toc: true
 ---
 We take the JSON query you pass and convert it to a
