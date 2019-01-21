@@ -101,7 +101,7 @@ class HelpPageTemplate extends React.Component {
     const {
       location,
       data: {
-        Article: { frontmatter },
+        Article: { frontmatter, parent },
         Parent,
         Section,
       },
@@ -213,9 +213,9 @@ class HelpPageTemplate extends React.Component {
                     <p className="edit-on-github">
                       <small>
                         <Link
-                          to={`https://github.com/getredash/website/edit/master/website${
-                            location.pathname
-                          }.md`}
+                          to={`https://github.com/getredash/website/edit/master/src/pages/${
+                            parent.relativePath
+                          }`}
                           target="_blank"
                         >
                           Edit on GitHub
@@ -253,6 +253,11 @@ export const pageQuery = graphql`
         toc
         layout
         hide_topics
+      }
+      parent {
+        ... on File {
+          relativePath
+        }
       }
     }
 
