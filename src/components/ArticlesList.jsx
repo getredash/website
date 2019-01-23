@@ -44,7 +44,10 @@ export default props => (
     query={graphql`
       {
         allMarkdownRemark(
-          sort: { order: ASC, fields: [frontmatter___title] }
+          sort: {
+            order: ASC
+            fields: [frontmatter___order, frontmatter___title]
+          }
           filter: {
             fileAbsolutePath: { regex: "/pages/kb/" }
             frontmatter: { layout: { ne: "kb-category" } }
