@@ -17,16 +17,20 @@ html {
 
 body {
 	min-height: 100%;
-	@extend .flex, .flex-column;
-	//padding-top: $navbar-height;
 }
 
 main {
 	flex: 1;
 }
 
+.wrapper {
+	@extend .flex, .flex-column;
+	padding-top: $navbar-height;
+	min-height: 100vh;
+}
+
 .serif {
- font-family: "PT Serif", serif !important;
+	font-family: "PT Serif", serif !important;
 }
 
 .em {
