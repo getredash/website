@@ -6,7 +6,7 @@ import Footer from 'components/Footer'
 import 'scss/main.scss'
 
 export default ({ children, title, description, location }) => (
-  <div>
+  <div className="wrapper">
     <Helmet>
       <title>{title || 'Make Your Company Data Driven'}</title>
       <meta name="title" content={title} />
