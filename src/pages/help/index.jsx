@@ -120,7 +120,7 @@ export const categoriesQuery = graphql`
     }
 
     Categories: allMarkdownRemark(
-      sort: { order: ASC, fields: [frontmatter___order] }
+      sort: { order: ASC, fields: [frontmatter___order, frontmatter___title] }
       filter: {
         fileAbsolutePath: { regex: "/pages/kb/" }
         frontmatter: { layout: { eq: "kb-category" } }
