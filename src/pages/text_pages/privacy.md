@@ -7,7 +7,7 @@ path: /privacy
 
 # Privacy Policy
 
-<p className="lead">
+<p class="lead">
 Redash values your privacy, and therefore has set up this extensive privacy policy to inform you of your rights. Please take into consideration that your information travels through third parties as a part of its services, and that Redash shall obey local regulations if required by law, which may require disclosure of information.
 </p>
 
