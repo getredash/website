@@ -17,7 +17,7 @@ Axibase Time Series Database ([instructions]({% link _kb/data-sources/axibase-ti
 Cassandra  |  ✅  |  ✅  
 ClickHouse  |  ✅  |  ✅  
 CockroachDB  |  ✅  |  ✅  
-CSV ([instructions]({% link _kb/data-sources/csv-file-from-a-url.md %})) |  ✅  |  ✅ 
+CSV ([instructions]({% link _kb/data-sources/csv-file-from-a-url.md %})) |  ✅  |   
 Databricks |  ✅  |  ✅  
 DB2 by IBM |  ✅  |  ✅  
 Druid  |  ✅  |  ✅  
