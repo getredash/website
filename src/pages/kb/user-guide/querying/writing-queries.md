@@ -12,20 +12,18 @@ To make new query, click `Create` in the navbar then select `Query`.
 
 ![](/assets/images/docs/gifs/queries/add_new_query.gif)
 
-### Published vs Unpublished Queries
-
-By default each query starts as an unpublished draft, which means that:
-
-- Only the user who created this query can see it in the "All Queries" list or in search results.
-- You can't add visualizations from an unpublished query to dashboards or use it in alerts.
-
-To publish a query, give it a name or click the `Publish` button. It's also possible to unpublish a published query by clicking on the `Unpublish` button in the query menu.
-
 ### Query Syntax
 
 In most cases we use the query language native to the data source. In some cases there are differences or additions, which are documented on the [Querying Data Sources]({% link _kb/data-sources/querying %}) page.
 
-### Schema Browser and Autocomplete
+### Keyboard Shorcuts
+
+- Execute query: `Ctrl`/`Cmd` + `Enter`
+- Save query: `Ctrl`/`Cmd` + `S`
+- Toggle Auto Complete: `Ctrl` \+ `Space`
+- Toggle Schema Browser `Alt`/`Option` + `D`
+
+### Schema Browser
 
 To the left of the query editor, you will find the Schema Browser:
 
@@ -37,17 +35,34 @@ The schema browser will list all your tables, and when clicking on a table will 
 Please note that not all data source types support loading the schema.
 {% endcallout %}
 
-Beside the schema browser, Redash supports autocomplete while typing your
-query. The autocomplete is auto triggered, unless you have a large schema
-(>5000 tokens - tables and columns). In case of a large schema, the
-autocomplete can be manually triggered with `Ctrl` \+ `Space`.
+You can hide the Schema Browser using the key shortcut or by double-clicking the pane handle on the interface. This can be useful when you want to maximize screen realestate while composing a query.
 
-### Keyboard Shorcuts
+### Auto Complete
 
-- Execute query: `Ctrl`/`Cmd` + `Enter`
-- Save query: `Ctrl`/`Cmd` + `S`
-- Toggle Auto Complete: `Ctrl` \+ `Space`
-- Toggle Schema Browser `Alt`/`Option` + `D`
+The query editor also includes an Auto Complete feature that makes writing complicated queries easier. Live Auto Complete is on by default. So you will see table and column suggestions as you type. You can disable Live Auto Complete by clicking the lightning bolt icon beneath the query editor. When Live Auto Complete is disabled, you can still activate Auto Complete by hitting `CTRL` + `Space`.
+
+{% callout %}
+
+Live Auto Complete is enabled by default unless your database schema exceeds five thousand tokens (tables or columns). In such cases, you can manually trigger Auto Complete using the keyboard shortcut.
+
+{% endcallout %}
+
+Auto Complete looks for schema tokens, query syntax identifiers (like `SELECT` or `JOIN`) and the titles of [Query Snippets]({% link _kb/user-guide/querying/query-snippets %}) 
+
+
+### Published vs Unpublished Queries
+
+By default each query starts as an unpublished draft, which means that:
+
+- Only the user who created this query can see it in the "All Queries" list or in search results.
+- You can't add visualizations from an unpublished query to dashboards or use it in alerts.
+
+To publish a query, give it a name or click the `Publish` button. It's also possible to unpublish a published query by clicking on the `Unpublish` button in the query menu.
+
+
+
+
+
 
 ### Archiving a Query
 
