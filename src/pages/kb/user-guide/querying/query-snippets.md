@@ -20,7 +20,7 @@ JOIN organizations org ON org.id = ${1:table}.org_id
 
 ## Insertion Points
 
-`${1:table}` is an insertion point with placeholder text. When Redash renders the snippet, the dollar sign `$` and curly braces `{%raw%}{}{%endraw%}` will be stripped away and the word `table` will be highlighted for the user to replace.
+`${1:table}` is an insertion point with placeholder text. When Redash renders the snippet, the dollar sign `$` and curly braces `{}` will be stripped away and the word `table` will be highlighted for the user to replace.
 
 {% callout info %}
 You can use the placeholder text as a desirable default value for the user to override at runtime.
@@ -41,10 +41,10 @@ An insertion point of zero `${0}` is always the *last* point in the tab order.
 {% endcallout %}
 
 ## Insert A Query Snippet
-Once defined, you can invoke your snippet from the Query Editor by typing the trigger word you defined in the Query Snippet editor. It will be suggested by auto complete like any other keyword in your database.
+If you have Live Auto Complete enabled, you can invoke your snippet from the Query Editor by typing the trigger word you defined in the Query Snippet editor. Auto Complete will suggest it like any other keyword in your database.
 
 {% callout info %}
-If you prefer to work without live auto complete enabled you can still invoke Query Snippets by pressing `CTRL + Space` and typing the trigger word for your Query Snippet.
+If you prefer to work without Live Auto Complete enabled you can still invoke Query Snippets by pressing `CTRL + Space` and typing the trigger word for your Query Snippet.
 {% endcallout %}
 
 Here are some other ideas for snippets:
