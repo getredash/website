@@ -8,7 +8,7 @@ toc: true
 order: 1
 ---
 
-To make new query, click `Create` in the navbar then select `Query`.
+To make a new query, click `Create` in the navbar then select `Query`.
 
 ![](/assets/images/docs/gifs/queries/add_new_query.gif)
 
@@ -20,7 +20,7 @@ In most cases we use the query language native to the data source. In some cases
 
 - Execute query: `Ctrl`/`Cmd` + `Enter`
 - Save query: `Ctrl`/`Cmd` + `S`
-- Toggle Auto Complete: `Ctrl` \+ `Space`
+- Toggle Auto Complete: `Ctrl` + `Space`
 - Toggle Schema Browser `Alt`/`Option` + `D`
 
 ### Schema Browser
