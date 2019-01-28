@@ -18,8 +18,7 @@ class Header extends React.Component {
     this.setState({ menuOpen: !currentState })
   }
 
-  toggleDropdown(e) {
-    e.preventDefault()
+  toggleDropdown() {
     const currentState = this.state.dropdownOpen
     this.setState({ dropdownOpen: !currentState })
   }
@@ -90,7 +89,6 @@ class Header extends React.Component {
                 onClick={this.toggleDropdown}
               >
                 <Link
-                  to="#"
                   className="dropdown-toggle"
                   data-toggle="dropdown"
                   role="button"
