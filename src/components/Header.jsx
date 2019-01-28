@@ -87,7 +87,6 @@ class Header extends React.Component {
               </li>
               <li
                 className={`dropdown ${this.state.dropdownOpen ? 'open' : ''}`}
-                onClick={this.toggleDropdown}
               >
                 <Link
                   to="#"
@@ -97,14 +96,18 @@ class Header extends React.Component {
                   aria-haspopup="true"
                   aria-expanded={this.dropdownOpen}
                 >
-                  Help <span className="caret" />
+                  <span onClick={this.toggleDropdown}>
+                    Help <span className="caret" />
+                  </span>
                 </Link>
                 <ul className="dropdown-menu">
                   <li>
                     <Link to="/help/">Knowledge Base</Link>
                   </li>
                   <li>
-                    <Link to="https://discuss.redash.io/">Forum</Link>
+                    <Link to="https://discuss.redash.io/" target="_blank">
+                      Forum
+                    </Link>
                   </li>
                 </ul>
               </li>
