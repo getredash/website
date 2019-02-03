@@ -25,11 +25,14 @@ Be careful that your table name (`query_49588` above) appears on the same line a
 {% endcallout %}
 
 ### Cached Query Results
-When you query the **Query Results** Data Source, Redash executes the underlying queries first. This ensures you have recent results in the event that you [schedule this query](/help/user-guide/querying/scheduling-a-query). You can reduce the running time of **Query Results** queries by using `cached_query_` for your table names instead of `query_`. This tells Redash to use the cached results from the most recent execution of a given query. This reduces the number of calls to your underlying Data Sources, improving performance by using older data. Here's an example query:
+When you query the **Query Results** Data Source, Redash executes the underlying queries first. This ensures you have recent results in the event that [schedule the Query Results query](/help/user-guide/querying/scheduling-a-query). You can reduce the running time of **Query Results** queries by using `cached_query_` for your table names instead of `query_`. This tells Redash to use the cached results from the most recent execution of a given query. This reduces the number of calls to your underlying Data Sources, improving performance by using older data. You can mix both syntaxes in the same query too, as shown below:
 
     SELECT a.name, b.count 
-    FROM cached_query_123 a 
+    FROM query_123 a 
     JOIN cached_query_456 b ON a.id = b.id
+<br>
 
 ### Query Results Permissions
-Access to the **Query Results** Data Source is governed by the groups it's associated with, [like any other Data Source](/help/user-guide/users/permissions-groups). But Redash will also check if that user has permission to execute queries on the Data Sources the original queries use. Redash does not perform this check when using the `cached_query_` syntax.
+Access to the **Query Results** Data Source is governed by the groups it's associated with [like any other Data Source](/help/user-guide/users/permissions-groups). But Redash will also check if a user has permission to execute queries on the Data Sources the original queries use.
+
+As an example: if a user does not have access to Data Source "A", they will not be able to query the results of queries against Data Source "A". Importantly, if that user opens an existing Query Results query that pulls data from a query of Data Source "A", the user will be able to see the most recently cached result of that query. But they will not be able to execute the query again.
