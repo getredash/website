@@ -72,13 +72,6 @@ const ProductPage = ({ location }) => (
               />
 
               <ContributorCard
-                name="Zsolt Kocsmarszky"
-                photo="/assets/images/contributors/kocsmy.jpg"
-                github="https://github.com/kocsmy"
-                twitter="https://twitter.com/kocsmy"
-              />
-
-              <ContributorCard
                 name="Omer Lachish"
                 photo="/assets/images/contributors/rauchy.jpg"
                 github="https://github.com/rauchy"
