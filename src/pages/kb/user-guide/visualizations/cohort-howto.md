@@ -15,7 +15,7 @@ A cohort analysis examines the outcomes of predetermined groups, called cohorts,
 - Weekly supplier delivery performance by week
 - Monthly average class GPA's by month
 
-While there are many ways to define the stages of a Cohort analysis, Redash's specializes in Cohorts visualizations with daily, weekly, or monthly stages. Also, Redash's cohort charts compare a cohort's measurements in a given period against that group's initial population size.
+While there are many ways to define the stages of a Cohort analysis, Redash's supports Cohorts visualizations with daily, weekly, or monthly stages. Also, Redash's cohort charts compare a cohort's measurements in a given period against that group's initial population size.
 
 ## Data Format
 
@@ -32,6 +32,6 @@ Redash expects your input samples to take the following format:
 
 ## Cohort Date Notes
 
-Even if you define your cohorts by month or week, Redash expects the values in your **Cohort Date** column to be a full date value. If you are grouping by month, `January 18th, 2018` should be shortened to `January 1st, 2018` or any other full date in January, **not** `January 2018`.
+Even if you define your cohorts by month or week, Redash expects the values in your **Cohort Date** column to be a full date value. If you are grouping by month, `2018-01-18` should be shortened to `2018-01-01` or any other full date in January, **not** `2018-01`.
 
 Due to a bug in the underlying rendering engine, Redash's cohort visualizer converts all date and time values to GMT before rendering. To avoid rendering issues, you should adjust the datetimes returned from your database by your local UTC offset.
