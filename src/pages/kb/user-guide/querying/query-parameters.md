@@ -11,20 +11,19 @@ slug: query-parameters
 toc: true
 ---
 
-Once a query has been saved and published in Redash, it can be a hassle to `Edit Source` every time you need to update a field selection or filter. You can save time with Query Parameters which allow you to insert values at runtime without editing the base query. **Redash recognizes any string between double curly braces <code> {{ }} </code> as a Query Parameter**.
+Unless specific to a one-time project, most queries can be reused by changing a `WHERE` clause (or filter block in NoSQL) to suit the present need. Yet it can be a hassle to `Edit Source` every time you make a minor change. Query Parameters let you insert values at run time without editing your base query. The syntax is straightforward: Redash recognizes any string between double curly braces <code> {{ }} </code> as a Query Parameter.
 
 {% raw %}
 SELECT count(0)
 FROM events
-WHERE action = '{{action}}'
+WHERE action = '{{ keyword }}'
 {% endraw %}
 
-In the above example <code>{{action}}</code> is the parameter definition. Once added and
-recognized by Redash, you will see a parameter input box appear below the query input text box and above your results:
+In the above example <code>{{ keyword }}</code> is the Query Parameter. To change the value of the parameter, Redash places an input box above the results pane. The contents of this input box are passed to the database instead of the double curly braces whenever you execute the query.
 
 <img src="/assets/images/docs/gitbook/query-parameter.png" width="100%">
 
-Once it's recognized by Redash, you can type any value into this text box and execute the query to get the results.
+<br> 
 
 ## Add A Parameter From The UI
 
