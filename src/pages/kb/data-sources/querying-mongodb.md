@@ -83,8 +83,7 @@ Aggregation query example:
 
 ### MongoDB Extended JSON Support
 
-We support  [MongoDB Extended JSON](https://docs.mongodb.com/manual/reference
-/mongodb-extended-json/) along with our own extension - `$humanTime`:
+We support  [MongoDB Extended JSON](https://docs.mongodb.com/manual/reference/mongodb-extended-json/) along with our own extension - `$humanTime`:
 
     
     
