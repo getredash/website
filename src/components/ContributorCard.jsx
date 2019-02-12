@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 const ContributorCard = ({ name, photo, github, twitter }) => (
   <div className="contributor-card">
-    <img src={photo} width="64px" />
+    <div style={{ backgroundImage: `url(${photo})` }} class="img" />
     <h3>{name}</h3>
     <p>
       {github && (

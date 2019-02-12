@@ -4,8 +4,13 @@
   .contributor-card {
     min-width: 245px;
 
-    img {
+    .img {
       border-radius: 50%;
+      width: 64px;
+      height: 64px;
+      background-size: cover;
+      background-position: center center;
+      margin: 0 auto;
     }
   }
 }
