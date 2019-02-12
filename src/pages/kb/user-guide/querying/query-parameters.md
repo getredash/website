@@ -119,3 +119,33 @@ WHERE org_id = {{org_id}} AND created_at > '{{start_date}}'
 ```
 
 We use two parameters: `{{org_id}}` and `{{start_date}}`.
+
+## Parameter Mapping on Dashboards
+
+Query Parameters can also be powerfully controlled within dashboards. You can link together parameters on different widgets, set static parameter values, or choose values individually for each widget.
+
+You select your desired parameter mapping when adding dashboard widgets that depend on a parameter value. Each parameter in the underlying query will appear in the **Parameters** list.
+
+<img src="/assets/images/docs/gitbook/dashboard_parameter_mapping.png" width="100%">
+
+{% callout info %}
+You can also access the parameter mapping interface by clicking the three dots on the top right of a dashboard widget, then clicking `Edit Parameters`.
+{% endcallout %}
+
++ **Title** is the display name for your parameter and will appear beside the value selector on your dashboard. It defaults to the parameter keyword (see next bullet). Edit it by clicking the pencil glyph. Note that a titles are not displayed for static dashboard parameters because the value selector is hidden. If you select `Static value` as your Value Source then the Title field will be grayed out.
+
++ **Keyword** is the string literal for this parameter in the underlying query. This is useful for debugging if your dashboard does not return expected results.
+
++ **Default Value** is what Redash will pass to the database the next time you refresh this dashboard.
+
++ **Value Source** is where you choose your preferred mapping. Click the pencil glyph to open the mapper settings.
+
+### Value Source Options
+
++ **New dashboard parameter:** Dashboard parameters allow you to set a parameter value in one place on your dashboard and map it to multiple visualizations. Use this option to create a new dashboard-level parameter.
+
++ **Existing dashboard parameter:** If you have already set up a dashboard-level parameter, use this option to map it to a specific query parameter. You will need to specify which pre-existing dashboard parameter will be mapped.
+
++ **Widget parameter:** This option will display a value selector inside your dashboard widget. This is useful for one-off parameters that are not shared between widgets.
+
++ **Static value:** Selecting this option will let you choose a static value for this widget, regardless of the values used on other widgets. Statically mapped parameter values do not display a value selector anywhere on the dashboard which is more compact. This lets you take advantage of the flexibility of Query Parameters without cluttering the user interface on a dashboard when certain parameters are not expected to change frequently.
