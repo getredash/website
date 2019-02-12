@@ -13,7 +13,7 @@ const ContributorCard = ({ name, photo, github, twitter }) => (
         </Link>
       )}{' '}
       {twitter && (
-        <Link to="https://twitter.com/arikfr" target="_blank">
+        <Link to={twitter} target="_blank">
           <i className="fa fa-twitter" />
         </Link>
       )}
