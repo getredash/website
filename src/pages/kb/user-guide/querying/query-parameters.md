@@ -44,7 +44,6 @@ You can open a parameter's settings pane by clicking the cog icon on the left:
 
 - **Title** : by default the parameter title will be the same as the keyword in the query text. If you want to give it a friendlier name, you can change it here.
 - **Type** : each parameter starts as a Text type. Supported types are Text, Number, Date, Date and Time, Date and Time (with Seconds), and Dropdown List.
-- **Global** : by default when placed on a dashboard as a widget, queries with parameters will each have their own parameter input box(es). But when a query parameter is set to _Global_, all queries in a dashboard that share the same parameter name will use a combined parameter input box. For this to work, each query must have that parameter marked as _Global_.
 
 {% callout danger %}
 
