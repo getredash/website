@@ -77,6 +77,13 @@ const ProductPage = ({ location }) => (
                 github="https://github.com/rauchy"
                 twitter="https://twitter.com/rauchy"
               />
+
+              <ContributorCard
+                name="Ran Byron"
+                photo="/assets/images/contributors/ranbena.jpg"
+                github="https://github.com/ranbena"
+                twitter="https://twitter.com/ranbena"
+              />
             </div>
           </div>
         </div>
