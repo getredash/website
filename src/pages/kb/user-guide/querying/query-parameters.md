@@ -141,7 +141,7 @@ You can also access the parameter mapping interface by clicking the three dots o
 
 + **Keyword** is the string literal for this parameter in the underlying query. This is useful for debugging if your dashboard does not return expected results.
 
-+ **Default Value** is what Redash will pass to the database the next time you refresh this dashboard.
++ **Default Value** is what Redash will use if no other value is specified.
 
 + **Value Source** is where you choose your preferred mapping. Click the pencil glyph to open the mapper settings.
 
