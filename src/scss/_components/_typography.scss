@@ -24,9 +24,13 @@ main {
 }
 
 .wrapper {
-	@extend .flex, .flex-column;
-	padding-top: $navbar-height;
-	min-height: 100vh;
+  @extend .flex, .flex-column;
+  padding-top: $navbar-height;
+  min-height: 100vh;
+}
+
+body.drawer .wrapper {
+  padding-top: 0px !important;
 }
 
 .serif {

@@ -197,7 +197,7 @@ class HelpPageTemplate extends React.Component {
 
               {frontmatter.layout !== 'kb-category' && (
                 <div className="row row--flex">
-                  <div className="col-md-4 col-md-push-8 col-sm-5 col-sm-push-7 push-xs-down">
+                  <div className="col-md-4 col-md-push-8 col-sm-5 col-sm-push-7 push-xs-down quick-nav">
                     {frontmatter.toc && (
                       <QuickNav html={this.state.htmlContent} />
                     )}

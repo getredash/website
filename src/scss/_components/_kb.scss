@@ -1,5 +1,6 @@
 .topics__list__link {
-  p, h4 {
+  p,
+  h4 {
     margin-bottom: 0;
   }
 
@@ -39,10 +40,10 @@ code {
   border: 1px solid #f5ecef;
   display: inline-block;
   line-height: 20px;
-  font-family: Source Code Pro,Menlo,monospace;
+  font-family: Source Code Pro, Menlo, monospace;
 }
 
-pre { 
+pre {
   border: none;
   border-radius: $border-radius;
   background: #071010;
@@ -67,7 +68,8 @@ div.docs table {
   @extend .table-bordered;
 }
 
-div.docs h2, h3 {
+div.docs h2,
+h3 {
   padding-top: 80px;
   margin-top: -80px;
 }
@@ -75,4 +77,8 @@ div.docs h2, h3 {
 .sticky-in-parent {
   position: sticky;
   top: 100px;
+}
+
+body.drawer div.quick-nav {
+  display: none;
 }

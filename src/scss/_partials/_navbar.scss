@@ -5,8 +5,11 @@ $navbar-color: $black;
 $navbar-height: 68px;
 $navbar-fs: 14px;
 
-.navbar {
+body.drawer .navbar {
+  display: none;
+}
 
+.navbar {
   .container {
     padding-left: 15px;
     padding-right: 15px;
@@ -22,7 +25,7 @@ $navbar-fs: 14px;
     box-shadow: none;
   }
   &.navbar-has-shadow {
-    box-shadow: 0 0 14px -6px rgba(0,0,0,.20)!important
+    box-shadow: 0 0 14px -6px rgba(0, 0, 0, 0.2) !important;
   }
 }
 
@@ -33,10 +36,9 @@ $navbar-fs: 14px;
   > li {
     &.active {
       > a {
-
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
           background: transparent;
-
         }
       }
     }
@@ -47,7 +49,8 @@ $navbar-fs: 14px;
       @include respond-to(xs-min) {
         padding: 24px 12px;
       }
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         background: transparent;
       }
     }
@@ -94,15 +97,15 @@ $navbar-fs: 14px;
 
 @media (max-width: 767px) {
   #navbar-collapse {
-    display: block!important;
-    transition: max-height .35s ease;
+    display: block !important;
+    transition: max-height 0.35s ease;
     &.collapsed {
       padding-bottom: 10px;
     }
     &.collapse {
       padding-bottom: 0;
       max-height: 0;
-      overflow: hidden!important;
+      overflow: hidden !important;
     }
   }
 
@@ -130,19 +133,19 @@ $navbar-fs: 14px;
     display: block;
   }
   .navbar-collapse.collapse {
-    display: none!important;
+    display: none !important;
   }
-  .navbar-nav>li>a {
+  .navbar-nav > li > a {
     margin-top: 0;
   }
   .navbar-nav {
-    float: none!important;
+    float: none !important;
     background: #f8fafa;
   }
-  .navbar-nav>li {
+  .navbar-nav > li {
     float: none;
   }
-  .collapse.in{
-    display:block !important;
+  .collapse.in {
+    display: block !important;
   }
 }
