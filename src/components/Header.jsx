@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'components/Link'
+import isInDrawer from '../lib/isInDrawer'
 
 class Header extends React.Component {
   constructor(props) {
@@ -25,6 +26,9 @@ class Header extends React.Component {
   }
 
   render() {
+    if (isInDrawer()) {
+      return null
+    }
     return (
       <nav className="navbar navbar-fixed-top navbar-has-shadow">
         <div className="container">
