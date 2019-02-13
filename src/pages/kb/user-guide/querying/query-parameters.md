@@ -121,6 +121,12 @@ We use two parameters: `{{org_id}}` and `{{start_date}}`.
 
 ## Parameter Mapping on Dashboards
 
+{% callout %}
+
+This is currently available on [Hosted Redash](https://app.redash.io/) and is part of the next Open Source release (v7.0).
+
+{% endcallout %}
+
 Query Parameters can also be powerfully controlled within dashboards. You can link together parameters on different widgets, set static parameter values, or choose values individually for each widget.
 
 You select your desired parameter mapping when adding dashboard widgets that depend on a parameter value. Each parameter in the underlying query will appear in the **Parameters** list.
