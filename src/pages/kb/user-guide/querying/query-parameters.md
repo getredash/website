@@ -11,20 +11,19 @@ slug: query-parameters
 toc: true
 ---
 
-Once a query has been saved and published in Redash, it can be a hassle to `Edit Source` every time you need to update a field selection or filter. You can save time with Query Parameters which allow you to insert values at runtime without editing the base query. **Redash recognizes any string between double curly braces <code> {{ }} </code> as a Query Parameter**.
+Unless specific to a one-time project, most queries can be reused by changing a `WHERE` clause (or filter block in NoSQL) to suit the present need. Yet it can be a hassle to `Edit Source` every time you make a minor change. Query Parameters let you insert values at run time without editing your base query. The syntax is straightforward: Redash recognizes any string between double curly braces <code> {{ }} </code> as a Query Parameter.
 
 {% raw %}
 SELECT count(0)
 FROM events
-WHERE action = '{{action}}'
+WHERE action = '{{ keyword }}'
 {% endraw %}
 
-In the above example <code>{{action}}</code> is the parameter definition. Once added and
-recognized by Redash, you will see a parameter input box appear below the query input text box and above your results:
+In the above example <code>{{ keyword }}</code> is the Query Parameter. To change the value of the parameter, Redash places an input box above the results pane. The contents of this input box are passed to the database instead of the double curly braces whenever you execute the query.
 
 <img src="/assets/images/docs/gitbook/query-parameter.png" width="100%">
 
-Once it's recognized by Redash, you can type any value into this text box and execute the query to get the results.
+<br> 
 
 ## Add A Parameter From The UI
 
@@ -44,7 +43,6 @@ You can open a parameter's settings pane by clicking the cog icon on the left:
 
 - **Title** : by default the parameter title will be the same as the keyword in the query text. If you want to give it a friendlier name, you can change it here.
 - **Type** : each parameter starts as a Text type. Supported types are Text, Number, Date, Date and Time, Date and Time (with Seconds), and Dropdown List.
-- **Global** : by default when placed on a dashboard as a widget, queries with parameters will each have their own parameter input box(es). But when a query parameter is set to _Global_, all queries in a dashboard that share the same parameter name will use a combined parameter input box. For this to work, each query must have that parameter marked as _Global_.
 
 {% callout danger %}
 
@@ -120,3 +118,39 @@ WHERE org_id = {{org_id}} AND created_at > '{{start_date}}'
 ```
 
 We use two parameters: `{{org_id}}` and `{{start_date}}`.
+
+## Parameter Mapping on Dashboards
+
+{% callout %}
+
+This is currently available on [Hosted Redash](https://app.redash.io/) and is part of the next Open Source release (v7.0).
+
+{% endcallout %}
+
+Query Parameters can also be powerfully controlled within dashboards. You can link together parameters on different widgets, set static parameter values, or choose values individually for each widget.
+
+You select your desired parameter mapping when adding dashboard widgets that depend on a parameter value. Each parameter in the underlying query will appear in the **Parameters** list.
+
+<img src="/assets/images/docs/gitbook/dashboard_parameter_mapping.png" width="100%">
+
+{% callout info %}
+You can also access the parameter mapping interface by clicking the three dots on the top right of a dashboard widget, then clicking `Edit Parameters`.
+{% endcallout %}
+
++ **Title** is the display name for your parameter and will appear beside the value selector on your dashboard. It defaults to the parameter keyword (see next bullet). Edit it by clicking the pencil glyph. Note that a titles are not displayed for static dashboard parameters because the value selector is hidden. If you select `Static value` as your Value Source then the Title field will be grayed out.
+
++ **Keyword** is the string literal for this parameter in the underlying query. This is useful for debugging if your dashboard does not return expected results.
+
++ **Default Value** is what Redash will use if no other value is specified.
+
++ **Value Source** is where you choose your preferred mapping. Click the pencil glyph to open the mapper settings.
+
+### Value Source Options
+
++ **New dashboard parameter:** Dashboard parameters allow you to set a parameter value in one place on your dashboard and map it to multiple visualizations. Use this option to create a new dashboard-level parameter.
+
++ **Existing dashboard parameter:** If you have already set up a dashboard-level parameter, use this option to map it to a specific query parameter. You will need to specify which pre-existing dashboard parameter will be mapped.
+
++ **Widget parameter:** This option will display a value selector inside your dashboard widget. This is useful for one-off parameters that are not shared between widgets.
+
++ **Static value:** Selecting this option will let you choose a static value for this widget, regardless of the values used on other widgets. Statically mapped parameter values do not display a value selector anywhere on the dashboard which is more compact. This lets you take advantage of the flexibility of Query Parameters without cluttering the user interface on a dashboard when certain parameters are not expected to change frequently.
