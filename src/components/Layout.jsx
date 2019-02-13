@@ -2,12 +2,11 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import Header from 'components/Header'
 import Footer from 'components/Footer'
-import isInDrawer from '../lib/isInDrawer'
 
 import 'scss/main.scss'
 
 export default ({ children, title, description, location }) => (
-  <div className={isInDrawer() ? 'wrapper drawer-mode' : 'wrapper'}>
+  <div className="wrapper">
     <Helmet>
       <title>{title || 'Make Your Company Data Driven'}</title>
       <meta name="title" content={title} />
