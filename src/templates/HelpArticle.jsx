@@ -6,6 +6,7 @@ import Link from 'components/Link'
 import SearchResults from 'components/SearchResults'
 import ArticlesList from 'components/ArticlesList'
 import QuickNav from 'components/QuickNav'
+import withIframeHook from 'components/hoc/withIFrameHook'
 import index from 'data/algolia.js'
 
 class HelpPageTemplate extends React.Component {
@@ -275,4 +276,4 @@ export const pageQuery = graphql`
   }
 `
 
-export default HelpPageTemplate
+export default withIframeHook(HelpPageTemplate)
