@@ -173,8 +173,7 @@ class HelpPageTemplate extends React.Component {
                     {Parent.frontmatter.title}
                   </Link>
                 </li>
-              )}{' '}
-              <li className="active">{frontmatter.title}</li>
+              )}
             </ol>
 
             <div className="row">
