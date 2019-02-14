@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import Layout from 'components/Layout'
 import Link from 'components/Link'
 import SearchResults from 'components/SearchResults'
+import withIframeHook from 'components/hoc/withIframeHook'
 import index from 'data/algolia.js'
 
 class HelpPage extends React.Component {
@@ -140,4 +141,4 @@ export const categoriesQuery = graphql`
   }
 `
 
-export default HelpPage
+export default withIframeHook(HelpPage)
