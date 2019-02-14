@@ -8,6 +8,13 @@ import ArticlesList from 'components/ArticlesList'
 import QuickNav from 'components/QuickNav'
 import index from 'data/algolia.js'
 
+const HELP_DRAWER_COOKIE = 'help_drawer_cookie'
+const DRAWER_CLASSNAME = 'drawer'
+const MESSAGES = {
+  HELP_DRAWER_READY: 'drawer_ready',
+  HELP_DRAWER_REQUEST: 'drawer_request',
+}
+
 class HelpPageTemplate extends React.Component {
   constructor(props) {
     super(props)
@@ -94,6 +101,37 @@ class HelpPageTemplate extends React.Component {
         const anchor = document.getElementById(window.location.hash.substr(1))
         window.scrollTo(0, anchor.getBoundingClientRect().top)
       }
+    }
+    // if loaded in iframe
+    if (window.parent !== window) {
+      this.initHelpDrawer()
+    }
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('message', this.onPostMessage)
+  }
+
+  initHelpDrawer() {
+    if (HELP_DRAWER_COOKIE in sessionStorage) {
+      // cookie set from before, no need to wait
+      this.onHelpDrawerConfirmed()
+    } else {
+      // wait for parent msg
+      window.addEventListener('message', this.onPostMessage, '*')
+    }
+  }
+
+  onHelpDrawerConfirmed() {
+    document.body.classList.add(DRAWER_CLASSNAME) // changes styling
+    window.parent.postMessage(MESSAGES.HELP_DRAWER_READY, '*') // notify parent
+  }
+
+  onPostMessage = (event) => {
+    if (event.data === MESSAGES.HELP_DRAWER_REQUEST) {
+      sessionStorage[HELP_DRAWER_COOKIE] = true; // set session cookie for next time
+      window.removeEventListener('message', this.onPostMessage) // no more listen
+      this.onHelpDrawerConfirmed()
     }
   }
 
