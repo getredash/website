@@ -10,7 +10,7 @@ Redash makes it easy to share your dashboards. Just click the `Publish` button o
 
 {% callout info %}
 
-You can revoke access to a dashboard for external users by toggling `Allow public access`. This will break any links to this dashboard that were shared previously. If you toggle the checkbox again a new secret link will be generated.
+You can revoke access to a dashboard for external users by toggling `Allow public access`. This will break any links to this dashboard that were shared previously. If you toggle the switch again a new secret link will be generated.
 
 {% endcallout %}
 
