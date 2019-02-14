@@ -92,10 +92,6 @@ class HelpPageTemplate extends React.Component {
     this.setState({
       htmlContent: htmlContent,
     })
-    // if loaded in iframe
-    if (window.parent !== window) {
-      this.initHelpDrawer()
-    }
   }
 
   componentDidMount() {
@@ -105,6 +101,10 @@ class HelpPageTemplate extends React.Component {
         const anchor = document.getElementById(window.location.hash.substr(1))
         window.scrollTo(0, anchor.getBoundingClientRect().top)
       }
+    }
+    // if loaded in iframe
+    if (window.parent !== window) {
+      this.initHelpDrawer()
     }
   }
 
