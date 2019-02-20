@@ -77,7 +77,7 @@ If you need to create a copy of an existing query (created by you or someone els
 
 ## Managing Query Permissions
 
-By default, saved queries can only be modified by the user who created them and members of the Admin group. But Redash includes experimental support to share edit permissions with non-Admin users. You need to enable it first. Open your organization settings and check the "Enable experimental multiple owners support"
+By default, saved queries can only be modified by the user who created them and members of the Admin group. But Redash includes experimental support to share edit permissions with non-Admin users. An Admin in your organization needs to enable it first. Open your organization settings and check the "Enable experimental multiple owners support"
 
 ![](/assets/images/docs/gitbook/experimental-owners-support.png)
 
