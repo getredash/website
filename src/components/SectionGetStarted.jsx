@@ -7,7 +7,7 @@ const GetStarted = () => (
       <div className="row get-started--signup text-center">
         <div className="col-sm-12 p-0">
           <h3 className="mb-xs">
-            Get started with Redash and build more data-driven future
+            Get started with Redash and build a more data-driven future
           </h3>
           <Link
             data-track
