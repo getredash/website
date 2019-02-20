@@ -33,6 +33,12 @@ By default, query results are shown in a table. At the moment it's not possible 
 
 Add a text box to your dashboard using the `Text Box` tab on the **Add Widget** dialog. You can style the text boxes in your dashboards using [Markdown](https://daringfireball.net/projects/markdown/syntax).
 
+{% callout info %}
+
+You can include static images on your dashboards within your markdown-formatted text boxes. Just use markdown image syntax:`![]( <url for image > )`
+
+{% endcallout %}
+
 ## Dashboard Filters
 
 When queries have filters you need to apply filters at the dashboard level as well. Setting your dashboard filters flag will cause the filter to be applied to all Queries.
@@ -44,3 +50,16 @@ When queries have filters you need to apply filters at the dashboard level as we
 2\. Check the "Use Dashboard Level Filters" checkbox:
 
 ![](/assets/images/docs/gitbook/dashboard-filter.png)
+
+## Managing Dashboard Permissions
+
+By default, dashboards can only be modified by the user who created them and members of the Admin group. But Redash includes experimental support to share edit permissions with non-Admin users. An Admin in your organization needs to enable it first. Open your organization settings and check the "Enable experimental multiple owners support"
+
+![](/assets/images/docs/gitbook/experimental-owners-support.png)
+
+Now the Dashboard options menu includes a `Manage Permissions` option. Clicking on it it will open a dialog where you can add other users as editors to your dashboard.
+
+![](/assets/images/docs/gitbook/experimental-permissions-button.png)
+
+Please note that currently the users you add won't receive a notification, so you will need to notify them manually.
+
