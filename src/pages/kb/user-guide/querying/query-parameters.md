@@ -39,10 +39,15 @@ You can discover the key shortcut on your operating system by hovering your curs
 
 You can open a parameter's settings pane by clicking the cog icon on the left:
 
-<img src="/assets/images/docs/gitbook/query-parameter-modal.png" width="100%">
+<img src="/assets/images/docs/gitbook/query-parameter-modalv6.png" width="100%">
 
 - **Title** : by default the parameter title will be the same as the keyword in the query text. If you want to give it a friendlier name, you can change it here.
 - **Type** : each parameter starts as a Text type. Supported types are Text, Number, Date, Date and Time, Date and Time (with Seconds), and Dropdown List.
+
+{% callout info %}
+Prior to Redash version 7, the parameter settings pane in the Query Editor included a `Global` tickbox, which notified Redash that you intended to use this parameter across multiple widgets in a dashboard. The `Global` tickbox has been replaced since version 6 with the new *Parameter Mapping on Dashboards* functionality described below.
+
+{% endcallout %}
 
 {% callout danger %}
 
