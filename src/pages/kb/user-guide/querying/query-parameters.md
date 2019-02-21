@@ -45,7 +45,7 @@ You can open a parameter's settings pane by clicking the cog icon on the left:
 - **Type** : each parameter starts as a Text type. Supported types are Text, Number, Date, Date and Time, Date and Time (with Seconds), and Dropdown List.
 
 {% callout info %}
-Prior to Redash version 6, the parameter settings pane in the Query Editor included a `Global` tickbox, which notified Redash that you intended to use this parameter across multiple widgets in a dashboard. The `Global` tickbox has been replaced since version 6 with the new *Parameter Mapping on Dashboards* functionality described below.
+Prior to Redash version 7, the parameter settings pane in the Query Editor included a `Global` tickbox, which notified Redash that you intended to use this parameter across multiple widgets in a dashboard. The `Global` tickbox has been replaced since version 6 with the new *Parameter Mapping on Dashboards* functionality described below.
 
 {% endcallout %}
 
