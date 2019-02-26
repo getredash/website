@@ -91,6 +91,12 @@ const ProductPage = ({ location }) => (
                 github="https://github.com/susodapop"
                 twitter="https://twitter.com/susodapop"
               />
+
+              <ContributorCard
+                name="Gabriel Dutra"
+                photo="/assets/images/contributors/gabrieldutra.jpg"
+                github="https://github.com/gabrieldutra"
+              />
             </div>
           </div>
         </div>
