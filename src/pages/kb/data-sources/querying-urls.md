@@ -1,28 +1,56 @@
 ---
 category: querying
 parent_category: data-sources
-title: Querying URLs
+title: Querying URLs & JSON APIs
 slug: urls
+toc: true
 ---
-Using a URL based data source requires that the URL use our format (see example below).
 
-The query itself inside Redash will simply contain the URL to be executed
-(i.e.   <http://myserver/path/myquery>) and result with all the data it has.
+Sometimes you need to visualize data not contained in an RDBMS or NOSQL data store. For those times, Redash provides two URL-based mechanisms to pull in your data: `URL` and `JSON`. Either source can be added from the settings screen in Redash.
 
-Here's a list of valid column types returned in results:
+`URL` is powerful because you can load large amounts of tabular data while abstracting away the underlying storage mechanism. This data source allows you to explicitly declare the types of data returned (text, dates, numbers e.g.). If a traditional database connection is unavailable, `URL` is the best way to load data to Redash.
 
-  * integer
-  * float
-  * boolean
-  * string
-  * datetime
-  * date
+Alternatively, you can use `JSON` for non-tabular data or API's where you do not control the underlying data structure. Redash treats all incoming data from the `JSON` data source as text; so you should be prepared to use [table formatting]({% link _kb/user-guide/visualizations/table-visualizations.md %}) when rendering the data.
 
-To manipulate the data you get from your URL data source you can save the
-query that resulted in all the data and query that data set. Read more about
-querying query results  [here]({% link _kb/user-guide/querying/query-results-data-source.md %}).
+{% callout info %}
+If the server behind your `URL` data source requires HTTP authentication headers, you can enter them during data source setup. For the `JSON` data source, authentication must be explicitly passed in your queries.
+{% endcallout %}
 
-### Example JSON
+# URL
+The `URL` data source expects your endpoints to return tabular data in [JSON format].
+
+## Usage
+
+The body of your query will include only the URL that returns data, for example:
+
+```sql
+http://myserver/path/myquery
+```
+
+To manipulate the data (filter, sort, aggregate etc.) you can use the [Query Results Data Source]({% link _kb/user-guide/querying/query-results-data-source.md %}).
+
+## Required Format
+
+The returned object must expose two keys: `columns` and `rows`.
+
++ The `columns` key should expose an array of javascript objects describing the columns to be included in your data set. Each object will include three keys:
+  - `name`
+  - `type`
+  - `friendly_name`
+
++ `rows` should return an array of javascript objects representing each row of data. The keys for each object should match the `name` keys described in your `columns` array.
+
+The following data types are supported for columns:
+
++ text
++ integer
++ float
++ boolean
++ string
++ datetime
++ date
+
+An example of returned data appears below:
 
 ```
 {
@@ -72,3 +100,85 @@ querying query results  [here]({% link _kb/user-guide/querying/query-results-dat
 
 ```
 
+# JSON
+
+Use the `JSON` Data Source to query arbitrary JSON API's. Setup is easy because no authentication is needed. Any RESTful JSON API will handle authentication through HTTP headers. So just create a new Data Source of type `JSON` and name it whatever you like ("JSON" is a good choice).
+
+## Usage
+
+This Data Source takes queries in [YAML format]. Here's some examples using the GitHub API:
+
+### Return a list of objects from an endpoint
+
+```yaml
+url: https://api.github.com/repos/getredash/redash/issues
+```
+
+This will return the result of the above API call as is.
+
+![](/assets/images/docs/gitbook/json_list_of_objects.png)
+
+
+### Return a single object
+
+```yaml
+url: https://api.github.com/repos/getredash/redash
+```
+
+The above API call returns a single object, and this object is being converted to a row.
+
+![Single JSON Object](/assets/images/docs/gitbook/json_single_object.png)
+
+### Return Specific Fields
+
+In case you want to pick only specific fields from the resulting object(s), you can pass the `fields` option:
+
+```yaml
+url: https://api.github.com/repos/getredash/redash/issues
+fields: [number, title]
+```
+![](/assets/images/docs/gitbook/json_field_select.png)
+
+
+### Return an inner object
+
+Many JSON API's can return nested objects. You can access a nested object with the `path` key.
+
+```yaml
+url: https://api.github.com/repos/getredash/redash/issues/3495
+path: assignees
+```
+
+The above query will use the `assignee` objects from the API result as the query result.
+
+### Pass query string parameters
+
+You can either craft your own URLs, or you can pass the `params` option:
+
+```yaml
+url: "https://api.github.com/search/issues"
+params:
+  q: is:open type:pr repo:getredash/redash
+  sort: created
+  order: desc
+```
+
+The above is the same as:
+
+```yaml
+url: "https://api.github.com/search/issues?q=+is:open+type:pr+repo:getredash/redash&sort=created&order=desc"
+```
+
+### Additional HTTP Options
+
+You can pass additional keys to modify various HTTP options:
+
+* `method` - the HTTP method to use (default: `get`)
+* `headers` - a dictionary of headers to send with the request
+* `auth` - basic authentication username/password (should be passed as an array: `[username, password]`)
+* `params` - a dictionary of query string parameters to add to the URL
+* `data` - a dictionary of values to use as request body
+* `json` - same as `data` except that it's being converted to JSON
+
+[YAML format]: https://www.tutorialspoint.com/yaml/yaml_basics.htm
+[JSON format]: https://json.org
