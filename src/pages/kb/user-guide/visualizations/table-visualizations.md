@@ -46,7 +46,7 @@ Redash also supports data types outside the common database specifications.
 
 - **JSON Documents**
 
-    If you're underlying data returns JSON formatted text in a field, you can instruct Redash to display it as such. This lets you collapse and expand elements in a clean format.
+    If you're underlying data returns JSON formatted text in a field, you can instruct Redash to display it as such. This lets you collapse and expand elements in a clean format. This is particularly useful when querying RESTful APIs with the [JSON Data Source]({% link _kb/data-sources/querying/urls %})
 
 - **Images**
 
