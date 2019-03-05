@@ -8,9 +8,13 @@ toc: true
 
 Sometimes you need to visualize data not contained in an RDBMS or NOSQL data store. For those times, Redash provides two URL-based mechanisms to pull in your data: `URL` and `JSON`. Either source can be added from the settings screen in Redash.
 
-`URL` is powerful because you can load large amounts of tabular data while abstracting away the underlying storage mechanism. This data source allows you to explicitly declare the types of data returned (text, dates, numbers e.g.). If a traditional database connection is unavailable, `URL` is the best way to load data to Redash.
+With `URL`, you can load large amounts of tabular data while abstracting away the underlying storage mechanism. This data source allows you to explicitly declare the types of data returned (text, dates, numbers e.g.).
 
-Alternatively, you can use `JSON` for non-tabular data or API's where you do not control the underlying data structure. Redash treats all incoming data from the `JSON` data source as text; so you should be prepared to use [table formatting]({% link _kb/user-guide/visualizations/table-visualizations.md %}) when rendering the data.
+{% callout warning %}
+The features of the `URL` data source will eventually be rolled into the `JSON` data source. At that time, the `URL` data source will be deprecated and this documentation will be updated. For future development we recommend using the `JSON` data source.
+{% endcallout %}
+
+Now you can use the `JSON` data source for tabular data, non-tabular data, or API's where you do not control the underlying data structure. Redash treats all incoming data from the `JSON` data source as text; so you should be prepared to use [table formatting]({% link _kb/user-guide/visualizations/table-visualizations.md %}) when rendering the data.
 
 {% callout info %}
 If the server behind your `URL` data source requires HTTP authentication headers, you can enter them during data source setup. For the `JSON` data source, authentication must be explicitly passed in your queries.
