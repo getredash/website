@@ -24,6 +24,7 @@ default view.
 ![](/assets/images/docs/visualization_examples/pie_chart.png)
 
 ### Cohort
+Further documentation available [here]({% link _kb/user-guide/visualizations/visualization-types.md  %})
 
 ![](/assets/images/docs/visualization_examples/cohort.png)
 
