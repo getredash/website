@@ -1,4 +1,5 @@
 exports.onRouteUpdate = ({ location }) => {
+  window.analytics && window.analytics.page();
   if (
     typeof window !== 'undefined' &&
     (!location.action || location.action === 'push')
