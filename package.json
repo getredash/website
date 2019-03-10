@@ -2,45 +2,104 @@
   "name": "redash-website",
   "version": "1.0.0",
   "description": "Redash Website & Knowledge Base",
-  "main": "index.js",
-  "dependencies": {},
+  "main": "n/a",
+  "dependencies": {
+    "algoliasearch": "^3.32.0",
+    "bootstrap-sass": "^3.4.0",
+    "gatsby": "2.0.91",
+    "gatsby-image": "2.0.25",
+    "gatsby-link": "2.0.7",
+    "gatsby-plugin-algolia": "^0.3.0",
+    "gatsby-plugin-catch-links": "2.0.9",
+    "gatsby-plugin-feed": "2.0.11",
+    "gatsby-plugin-google-analytics": "2.0.8",
+    "gatsby-plugin-manifest": "2.0.12",
+    "gatsby-plugin-netlify": "2.0.6",
+    "gatsby-plugin-nprogress": "2.0.7",
+    "gatsby-plugin-offline": "2.0.20",
+    "gatsby-plugin-preact": "2.0.8",
+    "gatsby-plugin-react-helmet": "3.0.5",
+    "gatsby-plugin-react-next": "2.0.1-13",
+    "gatsby-plugin-sass": "^2.0.0-rc.2",
+    "gatsby-plugin-sharp": "2.0.16",
+    "gatsby-plugin-sitemap": "2.0.3",
+    "gatsby-plugin-twitter": "2.0.8",
+    "gatsby-remark-copy-linked-files": "2.0.8",
+    "gatsby-remark-images": "3.0.1",
+    "gatsby-remark-prismjs": "3.1.4",
+    "gatsby-remark-responsive-iframe": "2.0.8",
+    "gatsby-remark-smartypants": "2.0.7",
+    "gatsby-source-filesystem": "2.0.12",
+    "gatsby-transformer-json": "^2.1.6",
+    "gatsby-transformer-remark": "2.1.17",
+    "gatsby-transformer-sharp": "2.1.9",
+    "gatsby-transformer-yaml": "^2.1.6",
+    "package.json": "^2.0.1",
+    "react-bootstrap": "^0.32.4",
+    "source-map": "^0.7.3"
+  },
   "devDependencies": {
-    "bower": "^1.7.9",
-    "browser-sync": "^2.16.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-clean-css": "^2.0.12",
-    "gulp-filter": "^4.0.0",
-    "gulp-if": "^2.0.2",
-    "gulp-imagemin": "^3.0.3",
-    "gulp-print": "^2.0.1",
-    "gulp-rev": "^7.1.2",
-    "gulp-rev-replace": "^0.4.3",
-    "gulp-sass": "^2.3.2",
-    "gulp-uglify": "^2.0.0",
-    "gulp-useref": "^3.1.2",
-    "gulp-watch": "^4.3.9",
-    "imagemin-jpeg-recompress": "^5.1.0",
-    "imagemin-pngquant": "^5.0.0",
-    "pump": "^1.0.1",
-    "stream-combiner2": "^1.1.1"
+    "@fortawesome/fontawesome-svg-core": "1.2.10",
+    "@fortawesome/free-brands-svg-icons": "5.6.1",
+    "@fortawesome/free-solid-svg-icons": "5.6.1",
+    "@fortawesome/react-fontawesome": "0.1.3",
+    "animate.css": "3.7.0",
+    "babel-eslint": "10.0.1",
+    "emergence.js": "1.1.2",
+    "eslint": "5.11.0",
+    "eslint-config-prettier": "3.3.0",
+    "eslint-plugin-prettier": "3.0.0",
+    "eslint-plugin-react": "7.11.1",
+    "font-awesome": "4.7.0",
+    "gh-pages": "2.0.1",
+    "husky": "1.3.0",
+    "lint-staged": "8.1.0",
+    "lodash": "4.17.11",
+    "modern-normalize": "0.5.0",
+    "node-sass": "4.11.0",
+    "prettier": "1.15.3",
+    "prismjs": "1.15.0",
+    "react": "16.7.0",
+    "react-dom": "16.7.0",
+    "react-helmet": "5.2.0",
+    "textlint": "11.0.2",
+    "textlint-rule-preset-ja-spacing": "2.0.1",
+    "textlint-rule-preset-japanese": "4.0.0"
+  },
+  "resolutions": {
+    "natives": "1.1.3"
+  },
+  "lint-staged": {
+    "*.{js,json,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.md": [
+      "npm run lint:textfix",
+      "git add"
+    ]
   },
   "scripts": {
-    "build": "gulp build && gulp jekyll:build && gulp html:build",
-    "watch": "gulp watch",
-    "fetch-contributors": "node bin/fetch-contributors.js",
-    "dev": "gulp"
+    "build": "gatsby build && cp _redirects public/",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.+(js|json|md)\"",
+    "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
+    "lint:text": "textlint src/pages/**/index.md",
+    "lint:textfix": "textlint --fix src/pages/**/index.md",
+    "precommit": "lint-staged",
+    "test": "prettier --write \"**/*.+(js|jsx|json|css|scss)\"",
+    "fetch-contributors": "node bin/fetch-contributors.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/getredash/docs.git"
+    "url": "git+https://github.com/getredash/website.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "BSD",
   "bugs": {
-    "url": "https://github.com/getredash/docs/issues"
+    "url": "https://github.com/getredash/website/issues"
   },
-  "homepage": "https://github.com/getredash/docs#readme",
+  "homepage": "https://github.com/getredash/website#readme",
   "optionalDependencies": {
     "fsevents": "^1.1.3"
   }

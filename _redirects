@@ -1,28 +1,29 @@
 /testing / 301
+/v4 /
 /datasources/bigquery.html /data-sources/google-bigquery
 /datasources/bigquery /data-sources/google-bigquery
 /datasources/redshift.html /data-sources/amazon-redshift
 /datasources/redshift /data-sources/amazon-redshift
-/help-onpremise/setup/setting-up-development-environment-using-vagrant.html /help-onpremise/dev/guide.html 301
+/help-onpremise/setup/setting-up-development-environment-using-vagrant.html /help/open-source/dev-guide/ 301
 /help/getting_started/getting_started.html /help/user-guide/getting-started
 /help/aboutrd/aboutrd.html /help/faq/general/
 /help/user-mgmt/user-mgmt.html /help/user-guide/user-management/
 /help/queries/query_actions.html /help/user-guide/querying/
-/help/queries/querying_elasticsearch.html /help/data-sources/querying-elasticsearch
-/help/queries/querying_jira_jql.html /help/data-sources/querying-jira
-/help/queries/querying_mongodb.html help/data-sources/querying-mongodb
+/help/queries/querying_elasticsearch.html /help/data-sources/querying/elasticsearch
+/help/queries/querying_jira_jql.html /help/data-sources/querying/jira
+/help/queries/querying_mongodb.html /help/data-sources/querying/mongodb
 /help/queries/using-datasets-as-data-sources.html /help/user-guide/querying/query-results-data-source
-/help/queries/query-google-spreadsheets.html help/data-sources/querying-a-google-spreadsheet
-/help/data-sources/google-analytics.html /help/data-sources/querying-google-analytics
-/help/queries/query-url.html /help/data-sources/querying-urls
+/help/queries/query-google-spreadsheets.html /help/data-sources/querying/google-spreadsheet
+/help/data-sources/google-analytics.html /help/data-sources/querying/google-analytics
+/help/queries/query-url.html /help/data-sources/querying/urls
 /help/visualization/visualization.html /help/user-guide/visualizations/visualizations-how-to
 /help/dashboards/dashboards.html /help/user-guide/dashboards/dashboard-editing
 /help/alerts/how-to-setup-an-alert.html /help/user-guide/alerts/setting-up-an-alert
 /help/alerts/slack-alert-destination.html /help/user-guide/alerts/slack-alert-destination
 /help/alerts/alert-status-freq.html /help/user-guide/alerts/setting-up-an-alert
-/help/data-sources/amazon-athena.html /help/data-sources/amazon-athena-setup
-/help/data-sources/axibase_tsd.html /help/data-sources/axibase-time-series-database
-/help/data-sources/bigquery.html /help/data-sources/bigquery-setup
+/help/data-sources/amazon-athena.html /help/data-sources/setup/amazon-athena
+/help/data-sources/axibase_tsd.html /help/data-sources/setup/axibase-time-series-database
+/help/data-sources/bigquery.html /help/data-sources/setup/bigquery
 /help/integrations/zapier-integration.html /help/user-guide/integrations-and-api/creating-a-zap
 /help/troubleshooting/status-page.html /help/faq/troubleshooting/
 /help/troubleshooting/error-worker-exited-prematurely-signal-9-sigkill.html /help/faq/troubleshooting/
@@ -45,3 +46,21 @@
 /help-onpremise/* /help/
 /features /product 301
 /get-started /pricing
+
+/help/user-guide/user-management/ /help/user-guide/users/
+
+/help/data-sources/amazon-athena-setup /help/data-sources/setup/amazon-athena
+/help/data-sources/azure-sql-database-setup /help/data-sources/setup/azure-sql-database
+/help/data-sources/bigquery-setup /help/data-sources/setup/bigquery
+/help/data-sources/axibase-time-series-database /help/data-sources/setup/axibase-time-series-database
+/help/data-sources/google-analytics-setup /help/data-sources/setup/google-analytics
+/help/data-sources/csv-file-from-a-url /help/data-sources/setup/csv-file-from-a-url
+/help/data-sources/mongodb-setup /help/data-sources/setup/mongodb
+/help/data-sources/querying-google-analytics /help/data-sources/querying/google-analytics
+/help/data-sources/querying-dynamodb /help/data-sources/querying/dynamodb
+/help/data-sources/querying-elasticsearch /help/data-sources/querying/elasticsearch
+/help/data-sources/querying-a-google-spreadsheet /help/data-sources/querying/google-spreadsheet
+/help/data-sources/querying-mongodb /help/data-sources/querying/mongodb
+/help/data-sources/querying-urls /help/data-sources/querying/urls
+/help/data-sources/querying-jira /help/data-sources/querying/jira
+/help/data-sources/supported-data-sources /help/data-sources/setup/supported-data-sources

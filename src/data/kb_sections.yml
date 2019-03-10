@@ -1,0 +1,8 @@
+- name: User Guide
+  slug: user-guide
+- name: Data Sources
+  slug: data-sources
+- name: FAQ
+  slug: faq
+- name: Open Source & Self Hosted
+  slug: open-source

@@ -1,15 +1,13 @@
 # Redash Website and Knowledge Base
 
-We use Jekyll as our static site generator.
-
-The website is built and hosted with Netlify. When deployed, it runs the [bulid script](https://github.com/getredash/website/blob/master/bin/build).
+We use Gatsby as our static site generator. The website is built and hosted with Netlify.
 
 ## Updating contributors data file
 
 ```
-npm run fetch-contributors > website/_data/contributors.js
+npm run fetch-contributors > website/_data/contributors.json
 ```
 
 ## Website development
 
-`npm run dev` will run a Gulp task that will watch for changes and trigger Jekyll or assets build when necessary. Uses port `3200` by default.
+`yarn run develop` will start Gatsby in development mode and serve the the website on `http://localhost:8000/`.
