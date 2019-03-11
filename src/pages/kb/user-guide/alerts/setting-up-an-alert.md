@@ -52,7 +52,7 @@ Use the settings panel to configure your alert:
 * **Reference** is the absolute value that your _Value Column_ will be compared to. The most recent query result is shown as the **Value**
 * **Rearm seconds** effects how frequently you will receive notifications when your query meets the Alert criteria and does not change. See further discussion below.
 
-Finally add an [alert destination]({% link _kb/user-guide/alerts/creating-new-alert-destination.md %}) and save your alert. If you skip this step you will not receive any notifications when the alert is triggered.
+Save your alert. After you do this, you can add an [alert destination]({% link _kb/user-guide/alerts/creating-new-alert-destination.md %}). If you skip this step you will not receive any notifications when the alert is triggered.
 
 ![](/assets/images/docs/gitbook/alert_destination.png)
 
