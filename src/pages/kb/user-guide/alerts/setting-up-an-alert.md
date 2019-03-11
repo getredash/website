@@ -62,7 +62,7 @@ The status of your Alert criteria is checked every time the query is executed. A
 
 * `TRIGGERED` means that your query matched the criteria defined in your alert configuration. If you set your alert to trigger when the value of "cats" is greater than 1500 as long as it's above 1500 your alert is triggered.
 * `OK` means that the most recent query execution did not match the criteria defined in your alert. This doesn't mean that the Alert has not been triggered previously. If your "cats" value is now 1470 your alert will show as OK.
-* `UNKNOWN` means the query has not executed since you configured the Alert. You should see this status immediately after creating your Alert. The status will always show triggered or OK after that. If it does not change following your next query execution then review the above instructions as you have likely configured the Alert incorrectly.
+* `UNKNOWN` means Redash does not have enough data to evaluate the alert criteria. You should see this status immediately after creating your Alert until the query has executed. The Alert will also show this status if there was no data in the query result or if the most recent query result doesn't have the configured _Value Column_.
 
 Redash sends notifications to your chosen Alert Destinations whenever it detects that the Alert status has changed from `OK` to `TRIGGERED` or vice versa. Consider this example where an Alert is configured on a query that is scheduled to run once daily. The daily status of the Alert appears in the table below. Prior to Monday the alert status was `OK`.
 
