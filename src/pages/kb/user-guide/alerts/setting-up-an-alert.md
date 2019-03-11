@@ -41,9 +41,9 @@ Use the settings panel to configure your alert:
 
 ![](/assets/images/docs/gitbook/alerts_settings.png)
 
-* **Value Column** is the column in your query return that you would like to watch.
-* **Op** is short for "Operation". You can choose greater than, less than, or equal to.
-* **Reference** is the absolute value that your _Value Column_ will be compared to. The most recent query return is shown as the **Value**
+* **Value Column** is the column in your query result that you would like to watch.
+* **Op** is short for "Operator". You can choose greater than, less than, or equal to.
+* **Reference** is the absolute value that your _Value Column_ will be compared to. The most recent query result is shown as the **Value**
 * **Rearm seconds** effects how frequently you will receive notifications when your query meets the Alert criteria and does not change. See further discussion below.
 
 Finally add an [alert destination]({% link _kb/user-guide/alerts/creating-new-alert-destination.md %}) and save your alert. If you skip this step you will not receive any notifications when the alert is triggered.
