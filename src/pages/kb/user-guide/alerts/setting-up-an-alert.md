@@ -17,7 +17,7 @@ order: 1
 ---
 Alerts provide a convenient way for Redash to notify you when your scheduled queries match some arbitrary criteria. They are often used to monitor system statuses, financial goals, and unusual account activity. Through integrations with Zapier and IFTTT they can also trigger business processes like user on-boarding work flows or support tickets.
 
-You can see all of your existing alerts by clicking `Alerts` on the main navigation menu. This will show you all the alerts in your organization by name, user, current state, and created date.
+Click `Alerts` on the main navigation menu to see a list of the existing Alerts.
 
 ![](/assets/images/docs/gitbook/alerts.png)
 
