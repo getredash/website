@@ -49,7 +49,7 @@ If you wish to change, observe and debug tests as they run, we recommend using t
    ```bash
    npm run cypress open
    ```
-   Now you can select and run individual test suites, set breakpoints and logs, utilize Chrome's Developer Toos etc. You can refer to [their documentantion](https://docs.cypress.io/).
+   Now you can select and run individual test suites, set breakpoints and logs, utilize Chrome Developer Tools, etc. You can refer to [their documentantion](https://docs.cypress.io/).
 
    Any changes to a test will trigger its rerun.
 If you make changes to Redash frontend code though, make sure to keep it in sync by running the following command in parallel:
