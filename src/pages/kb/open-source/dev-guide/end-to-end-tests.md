@@ -5,41 +5,63 @@ title: Frontend End-to-End Tests
 slug: end-to-end-tests
 ---
 
-{% callout %}
-The E2E tests are based in the [Docker Based Developer Installation]({% link _kb/open-source/dev-guide/docker.md %}), so make sure you have it if need to run our tests locally.
-{% endcallout %}
+Redash uses [Cypress]([https://cypress.io](https://www.cypress.io/)) for E2E tests, running as the CI build check "frontend-e2e-tests"  on each pull request.
+Test specs are located in the folder `/client/cypress/integrations`. 
+
+-------------
+
 
 ## Running E2E tests locally
 
-Redash uses Cypress for E2E tests and its dependencies are not installed by default, so first you will need to install them:
-```bash
-npm run cypress:install
-```
+#### Prerequisites
+1. If you haven't already, install Redash's [Docker services]({% link _kb/open-source/dev-guide/docker.md %}) first.
 
-Stop your development environment if it's running:
-```bash
-docker-compose stop
-```
+2. Install Cypress:
+    ```bash
+   npm run cypress:install
+   ```
+3. Stop your development environment, if currently running:
+   ```bash
+   docker-compose stop
+   ```
 
-If you just want to run the tests and get a report you can run `npm run cypress`. In case you want to create/change tests it's recommended to run the commands separately:
+<br />
 
-1. Start the server:
+#### Run tests
+Run the full test suite with a detailed report:
 ```bash
-npm run cypress start
+npm run cypress
 ```
-2. Seed data:
-```bash
-npm run cypress db-seed
-```
-3. Open Cypress interface:
-```bash
-npm run cypress open
-```
-5. Change what you need and explore Cypress, you can refer to [their documentantion](https://docs.cypress.io/). To keep frontend code in sync with the server you can use:
-```bash
-npm run watch
-```
-6. When done, stop the server (this will also reset tests state):
-```bash
-npm run cypress stop
-```
+<br />
+
+#### Create, edit and debug tests
+If you wish to change, observe and debug tests as they run, we recommend using the Cypress interface.
+
+1. Start the Cypress server:
+   ```bash
+   npm run cypress start
+   ```
+2. Seed initial data:
+   ```bash
+   npm run cypress db-seed
+   ```
+3. Open the Cypress interface:
+   ```bash
+   npm run cypress open
+   ```
+   Now you can select and run individual test suites, set breakpoints and logs, utilize Chrome's Developer Toos etc. You can refer to [their documentantion](https://docs.cypress.io/).
+
+   Any changes to a test will trigger its rerun.
+If you make changes to Redash frontend code though, make sure to keep it in sync by running the following command in parallel:
+   ```bash
+   npm run watch
+   ```
+4. When you're done, stop the server:
+   ```bash
+   npm run cypress stop
+   ```
+   This will also reset tests state.
+
+<br /><br />
+
+For any question on installations, troubleshooting and best practices, please refer to our [forum](https://discuss.redash.io).
