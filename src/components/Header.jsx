@@ -88,18 +88,17 @@ class Header extends React.Component {
               <li
                 className={`dropdown ${this.state.dropdownOpen ? 'open' : ''}`}
               >
-                <Link
-                  to="#"
+                <a
+                  href="#"
                   className="dropdown-toggle"
                   data-toggle="dropdown"
                   role="button"
                   aria-haspopup="true"
                   aria-expanded={this.dropdownOpen}
+                  onClick={this.toggleDropdown}
                 >
-                  <span onClick={this.toggleDropdown}>
-                    Help <span className="caret" />
-                  </span>
-                </Link>
+                  Help <span className="caret" />
+                </a>
                 <ul className="dropdown-menu">
                   <li>
                     <Link to="/help/">Knowledge Base</Link>
