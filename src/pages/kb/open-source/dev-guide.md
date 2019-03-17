@@ -26,6 +26,7 @@ Windows users: while it should be possible to run Redash on a Windows machine, w
 * [Debugging a Redash Server on Docker Using Visual Studio Code]({% link _kb/open-source/dev-guide/debugging.md %})
 * [Developer Installation Guide]({% link _kb/open-source/dev-guide/setup.md %}) (recommended for experienced developers)
 * [Using a remote server and installing locally only the frontend dependencies]({% link _kb/open-source/dev-guide/remote-server.md %})
+* [Frontend End-to-End Tests]({% link _kb/open-source/dev-guide/end-to-end-tests.md %})
 
 ## Additional Resources
 
