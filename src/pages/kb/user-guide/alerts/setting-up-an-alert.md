@@ -80,13 +80,13 @@ By default, Redash would send a notification on Wednesday when the status change
 
 ## Setting Rearm Seconds for an Alert
 
-To send notifications more frequently, set the **Rearm seconds** to any nonzero value. This tells Redash to treat the next query execution after the chosen number of seconds as though the status has changed and therefore send a notification.
+To send notifications more frequently, set the **Rearm seconds** to any nonzero value. This tells Redash to treat a `TRIGGERED` status after the chosen number of seconds as though the status has changed and therefore send a notification.
 
-For example, if the Alert above were configured with **Rearm seconds** equal to `1` a notification would be sent every day. Normally, Redash would see the `OK` status on Monday but would not send a notification because the value the previous day was also `OK`. But with _Rearm seconds_ elected, Redash will treat _any status_ as though it were different from the previous execution and send a notification anyway.
+For example, if the above Alert were configured with **Rearm seconds** equal to `1` a notification would be sent every day that the status was `TRIGGERED` (Wednesday - Saturday) and one on Sunday when the status changed back to `OK`.
 
 {% callout info %}
 
-Alert notifications are directly tied to the query executions. If a query is scheduled to execute one per week, and is not executed manually by a Redash user, then you will receive one notification per week at most, regardless of the configured _Rearm seconds_. You 
+Alert notifications are directly tied to the query executions. If a query is scheduled to execute once per week, and is not executed manually by a Redash user, then you will receive one notification per week at most, regardless of the configured _Rearm seconds_.
 
 {% endcallout %}
 
@@ -96,37 +96,31 @@ The _Rearm seconds_ interval and query schedule are inversely related. If the in
 
 {% callout info %}
 
-For a query that executes every 24 hours, any _Rearm seconds_ value between 1 and 86,400 will result in a notification being sent once daily.
+For a query that executes every 24 hours, any _Rearm seconds_ value between 1 and 86,400 will have the same effect: a notification will be sent every day if the Alert status is `TRIGGERED`.
 
 {% endcallout %}
 
-Imagine you set an Alert on a query that executes every five minutes. You have configured _Rearm seconds_ equal to `3600` (one hour). This guarantees that you will receive a status notification at least once an hour. But you will also receive a notification if the status changes. The one hour rearm prevents Redash from sending you a notification every five minutes while the Alert is triggered. So in the below time-line:
+Imagine you set an Alert on a query that executes every fifteen minutes. You have configured _Rearm seconds_ equal to `3600` (one hour). This guarantees that you will receive a status notification once an hour if the status is `TRIGGERED`. But you will also receive a notification if the status changes. The one hour rearm prevents Redash from sending you a notification every fifteen minutes while the Alert is triggered. So in the below time-line:
 
-| Time    | Alert Status | 
-|---------|--------------| 
-| 8:00 AM | OK           | 
-| 8:05 AM | TRIGGERED    | 
-| 8:10 AM | TRIGGERED    | 
-| 8:15 AM | OK           | 
-| 8:20 AM | OK           | 
-| 8:25 AM | TRIGGERED    | 
-| 8:30 AM | TRIGGERED    | 
-| 8:35 AM | TRIGGERED    | 
-| 8:40 AM | TRIGGERED    | 
-| 8:45 AM | TRIGGERED    | 
-| 8:50 AM | TRIGGERED    | 
-| 8:55 AM | OK           | 
-| 9:00 AM | OK           | 
+| Time     | Alert Status | 
+|----------|--------------| 
+| 8:00 AM  | OK           | 
+| 8:15 AM  | OK           | 
+| 8:30 AM  | TRIGGERED    | 
+| 8:45 AM  | TRIGGERED    | 
+| 9:00 AM  | TRIGGERED    | 
+| 9:15 AM  | TRIGGERED    | 
+| 9:30 AM  | TRIGGERED    | 
+| 9:45 AM  | OK           | 
+| 10:00 AM | TRIGGERED    | 
 
 You would receive the following notifications:
 
-| Alert Time | Alert Message       | Reason                                 | 
-|------------|---------------------|----------------------------------------| 
-| 8:00 AM    | Status is OK        | Alert was rearmed by Rearm seconds     | 
-| 8:05 AM    | Status is TRIGGERED | The query meets alert criteria         | 
-| 8:15 AM    | Status is OK        | The query does not meet alert criteria | 
-| 8:25 AM    | Status is TRIGGERED | The query meets alert criteria         | 
-| 8:55 AM    | Status is OK        | The query does not meet alert criteria | 
+| Alert Time | Alert Message       | Reason            | 
+|------------|---------------------|-------------------| 
+| 8:30 AM    | Status is TRIGGERED | Status changed    | 
+| 9:30 AM    | Status is TRIGGERED | Alert was rearmed | 
+| 9:45 AM    | Status is OK        | Status changed    | 
+| 10:00 AM   | Status is TRIGGERED | Status changed    | 
 
 Importantly, assuming the alert was not triggered at all during the nine o'clock hour, the next alert would not arrive until 9:55 AM, the next scheduled query execution after the _Rearm seconds_ was completed.
-
