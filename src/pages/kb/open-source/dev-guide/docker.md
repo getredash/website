@@ -42,6 +42,12 @@ file to see the full configuration.
 npm install
 ```
 
+### Build Front-End Modules
+
+```bash
+npm run build
+```
+
 ### Create Database
 
 ```bash
