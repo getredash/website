@@ -114,6 +114,7 @@ const ProductPage = ({ location }) => (
               <span className="label label-primary">Pivot Table</span>
               <span className="label label-primary">Funnel</span>
             </p>
+            <p class="m-t-25 m-b-0"><a href="/help/user-guide/visualizations/visualization-types">See examples in the Redash Docs</a></p>
           </div>
         </div>
       </div>

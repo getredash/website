@@ -24,7 +24,7 @@ default view.
 ![](/assets/images/docs/visualization_examples/pie_chart.png)
 
 ### Cohort
-Further documentation available [here]({% link _kb/user-guide/visualizations/visualization-types.md  %})
+Further documentation available [here]({% link _kb/user-guide/visualizations/cohort-howto.md %})
 
 ![](/assets/images/docs/visualization_examples/cohort.png)
 
@@ -54,6 +54,4 @@ Further documentation available [here]({% link _kb/user-guide/visualizations/vis
 
 ### Word Cloud
 
-![](https://lh3.googleusercontent.com/zL59WdbVoKe-
-aiyibUMKYCE8m0D9tjFNn_w1_Cq_FDE-viHZn-PK-zGEgZLhzhMR-
-bpB_7BCEspnOlgx1ernmm27iZsckPP2Xu9Jt9jZhELzgR8oSSGHH9ZoZ4k8snQsEBAWPFJ7)
+![](/assets/images/docs/visualization_examples/d3-cloud.png)
