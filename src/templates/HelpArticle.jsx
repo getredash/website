@@ -70,32 +70,11 @@ class HelpPageTemplate extends React.Component {
     return html
   }
 
-  updateContentAnchors() {
-    const headings = document
-      .getElementById('pageContent')
-      .querySelectorAll('h1, h2, h3, h4, h5, h6')
-    headings.forEach(heading => {
-      heading.id =
-        heading.id ||
-        heading.textContent.replace(/[\. ,:-]+/g, '-').replace(/-$/, '')
-    })
-  }
-
   componentWillMount() {
     const htmlContent = this.updateMarkdownContent(this.props.data.Article.html)
     this.setState({
       htmlContent: htmlContent,
     })
-  }
-
-  componentDidMount() {
-    this.updateContentAnchors()
-    window.onload = () => {
-      if (window.location.hash) {
-        const anchor = document.getElementById(window.location.hash.substr(1))
-        window.scrollTo(0, anchor.getBoundingClientRect().top)
-      }
-    }
   }
 
   render() {
