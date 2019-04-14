@@ -44,13 +44,6 @@ const config = {
               wrapperStyle: 'margin-bottom: 1.0725rem',
             },
           },
-          {
-            resolve: 'gatsby-remark-autolink-headers',
-            options: {
-              icon: null,
-              maintainCase: true,
-            },
-          },
           'gatsby-remark-prismjs',
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
@@ -65,6 +58,7 @@ const config = {
         mergeCachingHeaders: true,
       },
     },
+    'gatsby-transformer-remark',
     'gatsby-transformer-yaml',
     'gatsby-transformer-json',
     'gatsby-plugin-catch-links',
