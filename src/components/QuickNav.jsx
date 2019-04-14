@@ -44,7 +44,7 @@ class QuickNav extends React.Component {
       } else if (level < prevLevel) {
         newLine = `</li></ul>`.repeat(prevLevel - level) + `</li>${li}`
       }
-      newLine += `<a href="${link}">${title}</a>`
+      newLine += `<a href="${link}" onclick="document.querySelector('${link}').scrollIntoView({ behavior: 'smooth' }); return false;">${title}</a>`
       ToC += newLine
     })
 

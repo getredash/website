@@ -81,6 +81,14 @@ class HelpPageTemplate extends React.Component {
     })
   }
 
+  scrollToAnchor() {
+    // setTimeout for Safari, to ensure window load completed (tested 10/10 with 100ms)
+    setTimeout(() => {
+      const el = document.querySelector(`${window.location.hash}`)
+      el && el.scrollIntoView({ behavior: 'smooth' })
+    }, 100)
+  }
+
   componentWillMount() {
     const htmlContent = this.updateMarkdownContent(this.props.data.Article.html)
     this.setState({
@@ -90,10 +98,11 @@ class HelpPageTemplate extends React.Component {
 
   componentDidMount() {
     this.updateContentAnchors()
-    window.onload = () => {
-      if (window.location.hash) {
-        const anchor = document.getElementById(window.location.hash.substr(1))
-        window.scrollTo(0, anchor.getBoundingClientRect().top)
+    if (window.location.hash) {
+      if (document.readyState === 'complete') {
+        this.scrollToAnchor()
+      } else {
+        window.addEventListener('load', () => this.scrollToAnchor())
       }
     }
   }
