@@ -40,6 +40,7 @@ const ContactPage = ({ location }) => (
               className="redash-contact-form"
               action="/contact/thank-you/"
               netlify="true"
+              enctype="application/x-www-form-urlencoded"
             >
               <p className="hidden">
                 <label>
