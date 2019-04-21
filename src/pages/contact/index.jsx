@@ -39,16 +39,11 @@ const ContactPage = ({ location }) => (
               method="POST"
               className="redash-contact-form"
               action="/contact/thank-you/"
-              netlify="true"
               enctype="application/x-www-form-urlencoded"
+              data-netlify
+              data-netlify-honeypot="bot-field"
             >
-              <p className="hidden">
-                <label>
-                  Don’t fill this out if you're human:{' '}
-                  <input name="bot-field" />
-                </label>
-              </p>
-
+              <input type="hidden" name="form-name" value="contact" />
               <div className="form-group">
                 <label htmlFor="name">My name is</label>
                 <input
