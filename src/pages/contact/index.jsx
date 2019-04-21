@@ -56,6 +56,7 @@ class ContactForm extends React.Component {
             id="name"
             placeholder="Your name"
             required
+            onChange={e => this.handleChange(e)}
           />
         </div>
 
@@ -68,6 +69,7 @@ class ContactForm extends React.Component {
             id="email"
             placeholder="your@email.com"
             required
+            onChange={e => this.handleChange(e)}
           />
         </div>
 
@@ -81,6 +83,7 @@ class ContactForm extends React.Component {
             rows="3"
             width="100%"
             required
+            onChange={e => this.handleChange(e)}
           />
         </div>
 
