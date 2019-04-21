@@ -42,7 +42,7 @@ class ContactForm extends React.Component {
         action="/contact/thank-you/"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
-        onSubmit={this.handleSubmit}
+        onSubmit={e => this.handleSubmit(e)}
       >
         {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
         <input type="hidden" name="form-name" value="contact" />
