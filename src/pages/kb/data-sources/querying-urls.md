@@ -10,7 +10,7 @@ Sometimes you need to visualize data not contained in an RDBMS or NOSQL data sto
 
 {% callout info %}
 
-The `JSON` data source is currently only available as part of SaaS Redash. This page will be updated when it is added to the Open Source version as well.
+The `JSON` data source is currently only available as part of SaaS Redash. This page will be updated when it is added to the Open Source version as well. This is expected in the next major version release (version 8).
 
 {% endcallout %}
 
