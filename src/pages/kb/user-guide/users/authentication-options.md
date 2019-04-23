@@ -31,33 +31,32 @@ By default any user created with SAML/SSO will join the default group. It's poss
 
 ### How to Configure Okta
 
-Redash communicates with Okta over the SAML 2.0 protocol. Setup takes a couple of minutes. Start in your Okta control panel by adding a new application. Choose `Web` as a platform. The sign-on method is `SAML 2.0`. Okta expects a few URLs when configuring a new application:
+It takes just a couple of minutes to setup Redash with Okta over the SAML 2.0 protocol. Start in your Okta control panel by clicking the button to add a new application. Choose `Web` as the platform. The sign-on method is `SAML 2.0`. On the next screen Okta has fields for a few URLs:
 
 + Single Sign On URL
 + Recipient URL
 + Destination URL
 + Audience URI
 
-You will use the same URL (called an endpoint) for all of these fields. The Redash endpoint is: `https://app.redash.io/org-slug/saml/callback`
+You will use the same value in all of these fields. For SaaS customers, the URL is: `https://app.redash.io/org-slug/saml/callback`
 
 {% callout info %}
 Make sure you replace `org-slug` in this URL with the unique slug for your organization.
-
 {% endcallout %}
 
-After you fill in these URLs, set the Name Id format to `EmailAddress`. The Application username is `Email`. You also need to add two attribute statements:
+After you fill in these URLs, set the Name Id format to `EmailAddress`. The Application username is `Email`. You also need to add two attribute statements and then save your changes:
 
 |    Name |     Value    |
 |---------|--------------|
 |FirstName|user.firstName|
 |LastName |user.lastName |
 
-Save your changes. Next you will provide Okta's information to Redash. Navigate to the `Settings` tab under the Redash settings menu. Toggle the `SAML Enabled` option. Three fields will appear. For the `SAML Metadata URL`, look under the **Sign On** tab of your Okta settings for a link called "Identity Provider Metadata" and paste the link into Redash. This link will point to an XML document on Okta's server.
+Next you will provide Okta's information to Redash. Navigate to the `Settings` tab under the Redash settings menu. Toggle the `SAML Enabled` option. Three fields will appear. For the `SAML Metadata URL`, look under the **Sign On** tab of your Okta settings for a link called "Identity Provider Metadata" and paste the link into Redash. This link will point to an XML document on Okta's server.
 
 To get the `SAML Entity ID`, click the "View Setup Instructions" button in Okta's **Sign On** tab. Paste the "Identity Provider Single Sign-On URL" into Redash's `SAML Entity ID` field.  
 
 Lastly, look for the "IDP metadata" on the setup instructions page in Okta. The "IDP metadata" is a blob of XML that contains a key called `<md:NameIDFormat>`. Paste its contents into Redash's `SAML NameID Format` box. For example: `urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress`
 
-Your changes on this screen will save automatically.
+Your changes on this screen will save automatically. Now you can login to Redash using your Okta credentials.
 
 You can now log in to Redash using Okta SSO.
