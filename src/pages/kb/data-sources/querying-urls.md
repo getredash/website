@@ -8,6 +8,12 @@ toc: true
 
 Sometimes you need to visualize data not contained in an RDBMS or NOSQL data store. For those times, Redash provides two URL-based mechanisms to pull in your data: `URL` and `JSON`. Either source can be added from the settings screen in Redash.
 
+{% callout info %}
+
+The `JSON` data source is currently only available as part of SaaS Redash. This page will be updated when it is added to the Open Source version as well. This is expected in the next major version release (version 8).
+
+{% endcallout %}
+
 With `URL`, you can load large amounts of tabular data while abstracting away the underlying storage mechanism. This data source allows you to explicitly declare the types of data returned (text, dates, numbers e.g.).
 
 {% callout warning %}
