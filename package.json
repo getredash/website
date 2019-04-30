@@ -6,7 +6,7 @@
   "dependencies": {
     "algoliasearch": "^3.32.0",
     "bootstrap-sass": "^3.4.0",
-    "gatsby": "2.0.91",
+    "gatsby": "*",
     "gatsby-image": "2.0.25",
     "gatsby-link": "2.0.7",
     "gatsby-plugin-algolia": "^0.3.0",
