@@ -89,3 +89,10 @@
   role: Founder
   profile-img: ""
   quote: Redash is a huge plus for a startup seeking to display our progress to investors and partners in a simple and elegant way.
+- customer: Datree
+  url: https://datree.io/
+  logo: "/assets/images/customers/datree.png"
+  person: Eyar Zilberman
+  role: CPO
+  profile-img: "/assets/images/customers/eyar-zilberman.jpg"
+  quote: Redash is the right tool to use when creating a new data-related MVP. With Redash, the feedback-loop from customers is much more fast and simple!
