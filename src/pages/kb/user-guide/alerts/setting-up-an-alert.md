@@ -15,7 +15,7 @@ title: Setting Up An Alert
 slug: setting-up-an-alert
 order: 1
 ---
-Alerts provide a convenient way for Redash to notify you when your scheduled queries match some arbitrary criteria. They are often used to monitor system statuses, financial goals, and unusual account activity. Through integrations with Zapier and IFTTT they can also trigger business processes like user on-boarding work flows or support tickets.
+Redash alerts can notify you when your scheduled queries match some arbitrary criteria. Use them to monitor business data or integrated them with tools like Zapier or IFTTT to trigger business processes like user onbarding or support tickets. 
 
 {% callout info %}
 
@@ -52,7 +52,7 @@ Use the settings panel to configure your alert:
 * **Reference** is the absolute value that your _Value Column_ will be compared to. The most recent query result is shown as the **Value**
 * **Rearm seconds** effects how frequently you will receive notifications when your query meets the Alert criteria and does not change. See further discussion below.
 
-Save your alert. After you do this, you can add an [alert destination]({% link _kb/user-guide/alerts/creating-new-alert-destination.md %}). If you skip this step you will not receive any notifications when the alert is triggered.
+Save your alert. After you do this, you can add an [alert destination]({% link _kb/user-guide/alerts/creating-new-alert-destination.md %}). If you skip this step you will not be notified when the alert is triggered.
 
 ![](/assets/images/docs/gitbook/alert_destination.png)
 
