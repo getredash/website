@@ -2,6 +2,7 @@
 category: alerts
 parent_category: user-guide
 helpscout_url: https://help.redash.io/article/67-setting-up-an-alert
+toc: True
 keywords:
 - Set up Alert
 - setup alert
@@ -14,43 +15,112 @@ title: Setting Up An Alert
 slug: setting-up-an-alert
 order: 1
 ---
-In the Alerts view, you'll see all existing alerts.
+Redash alerts can notify you when your scheduled queries match some arbitrary criteria. Use them to monitor business data or integrated them with tools like Zapier or IFTTT to trigger business processes like user onbarding or support tickets. 
+
+{% callout info %}
+
+While Alerts are usually combined with scheduled queries, the Alert criteria will be evaluated every time the query is executed. A schedule is not necessary but is recommended.
+
+{% endcallout %}
+
+Click `Alerts` on the main navigation menu to see a list of the existing Alerts.
 
 ![](/assets/images/docs/gitbook/alerts.png)
 
-To set up a new alert you'll need to follow these steps:
+# Usage
 
-0. First, go to Create > Alert
-    ![](/assets/images/docs/gitbook/create-alert.png)
-1. Select the query you want to trigger an alert for (just start typing). Note that queries with parameters won't work.
-2. Select the column you want to watch.
-3. Select the trigger type (greater/less than or equals to).
-4. Select your magic number:
-    ![](/assets/images/docs/gitbook/alerts_settings.png)
-5. Leave Rearm Seconds empty to get 1 alert when the status changes from Triggered to OK, enter a number to get an alert every time the query runs (by schedule) + the Rearm seconds value. 
-6. Save.
-7. Define alert destinations - email, [Slack]({% link _kb/user-guide/alerts/slack-alert-destination.md %}), Mattermost, HipChat and webhooks are supported.
+Create a new Alert by clicking the blue `Create` button in the navigation menu and selecting `Alert`.
 
-<img src="/assets/images/docs/gitbook/alert_destination.png" width="60%">
+![](/assets/images/docs/gitbook/create-alert.png)
 
-## Alert Status & Frequency
+Find the query that you would like to monitor using the search bar. Keep in mind that Alerts do not work with queries that use parameters.
 
-The Alert Status is checked every time the query is executed - (alerts only work with scheduled queries).
+![](/assets/images/docs/gitbook/new-alert-query-search.png)
 
-Alerts have 3 Status Types:
+{% callout info %}
 
-* `TRIGGERED` - the value you set the alert for is triggered (if you set your alert to trigger when the value of "cats" is greater than 1500 as long as it's above 1500 your alert is triggered)
-* `OK` - the value you have set to trigger the alert is not reached for now (might happen after the alert was triggered or before it was ever triggered, if your "cats" value is now 1470 your alert will show as OK)
-* `UNKNOWN` - you should see this status once you have set your alert and it wasn't yet checked. To make your alert in the know, run the query it is linked to after setting the alert.
+If you set an Alert for a query that returns more than one row of data, the Alert will only read the first row of data.
 
-### Get an Alert Upon Status Change
+{% endcallout %}
 
-If you leave the REARM value empty alerts will only be sent when the status
-changes (from OK to Triggered or vice versa).
+Use the settings panel to configure your alert:
 
-#### Get an Alert Everytime the Query Runs
+![](/assets/images/docs/gitbook/alerts_settings.png)
 
-To get an alert every time the query runs, set the REARM value - the value is
-for seconds that pass since the system detects a change until it sends the
-alert, a 1-minute "delay" would require entering '60' in the REARM field.
+* **Value Column** is the column in your query result that you would like to watch.
+* **Op** is short for "Operator". You can choose greater than, less than, or equal to.
+* **Reference** is the absolute value that your _Value Column_ will be compared to. The most recent query result is shown as the **Value**
+* **Rearm seconds** effects how frequently you will receive notifications when your query meets the Alert criteria and does not change. See further discussion below.
 
+Save your alert. After you do this, you can add an [alert destination]({% link _kb/user-guide/alerts/creating-new-alert-destination.md %}). If you skip this step you will not be notified when the alert is triggered.
+
+![](/assets/images/docs/gitbook/alert_destination.png)
+
+# Alert Status & Frequency
+
+The status of your Alert criteria is checked every time the query is executed. Alerts have three possible statuses:
+
+* `TRIGGERED` means that your query matched the criteria defined in your alert configuration. If you set your alert to trigger when the value of "cats" is greater than 1500 as long as it's above 1500 your alert is triggered.
+* `OK` means that the most recent query execution did not match the criteria defined in your alert. This doesn't mean that the Alert has not been triggered previously. If your "cats" value is now 1470 your alert will show as OK.
+* `UNKNOWN` means Redash does not have enough data to evaluate the alert criteria. You should see this status immediately after creating your Alert until the query has executed. The Alert will also show this status if there was no data in the query result or if the most recent query result doesn't have the configured _Value Column_.
+
+Redash sends notifications to your chosen Alert Destinations whenever it detects that the Alert status has changed from `OK` to `TRIGGERED` or vice versa. Consider this example where an Alert is configured on a query that is scheduled to run once daily. The daily status of the Alert appears in the table below. Prior to Monday the alert status was `OK`.
+
+| Day       | Alert Status | 
+|-----------|--------------| 
+| Monday    | OK           | 
+| Tuesday   | OK           | 
+| Wednesday | TRIGGERED    | 
+| Thursday  | TRIGGERED    | 
+| Friday    | TRIGGERED    | 
+| Saturday  | TRIGGERED    | 
+| Sunday    | OK           | 
+
+By default, Redash would send a notification on Wednesday when the status changed from `OK` to `TRIGGERED` and again on Sunday when it switches back. It will not send alerts on Thursday, Friday, or Saturday unless you specifically configure it to do so because the Alert status did not change between executions on those days.
+
+## Setting Rearm Seconds for an Alert
+
+To send notifications more frequently, set the **Rearm seconds** to any nonzero value. This tells Redash to treat a `TRIGGERED` status after the chosen number of seconds as though the status has changed and therefore send a notification.
+
+For example, if the above Alert were configured with **Rearm seconds** equal to `1` a notification would be sent every day that the status was `TRIGGERED` (Wednesday - Saturday) and one on Sunday when the status changed back to `OK`.
+
+{% callout info %}
+
+Alert notifications are directly tied to the query executions. If a query is scheduled to execute once per week, and is not executed manually by a Redash user, then you will receive one notification per week at most, regardless of the configured _Rearm seconds_.
+
+{% endcallout %}
+
+### Query execution schedule and Rearm seconds
+
+The _Rearm seconds_ interval and query schedule are inversely related. If the interval between query executions is shorter, your _Rearm seconds_ value will usually be higher to prevent excessive notifications. If your query only executes once per week, then any _Rearm seconds_ that is shorter than the query execution interval will behave the same way. Most users just use `1` in this case.
+
+{% callout info %}
+
+For a query that executes every 24 hours, any _Rearm seconds_ value between 1 and 86,400 will have the same effect: a notification will be sent every day if the Alert status is `TRIGGERED`.
+
+{% endcallout %}
+
+Imagine you set an Alert on a query that executes every fifteen minutes. You have configured _Rearm seconds_ equal to `3600` (one hour). This guarantees that you will receive a status notification once an hour if the status is `TRIGGERED`. But you will also receive a notification if the status changes. The one hour rearm prevents Redash from sending you a notification every fifteen minutes while the Alert is triggered. So in the below time-line:
+
+| Time     | Alert Status | 
+|----------|--------------| 
+| 8:00 AM  | OK           | 
+| 8:15 AM  | OK           | 
+| 8:30 AM  | TRIGGERED    | 
+| 8:45 AM  | TRIGGERED    | 
+| 9:00 AM  | TRIGGERED    | 
+| 9:15 AM  | TRIGGERED    | 
+| 9:30 AM  | TRIGGERED    | 
+| 9:45 AM  | OK           | 
+| 10:00 AM | TRIGGERED    | 
+
+You would receive the following notifications:
+
+| Alert Time | Alert Message       | Reason            | 
+|------------|---------------------|-------------------| 
+| 8:30 AM    | Status is TRIGGERED | Status changed    | 
+| 9:30 AM    | Status is TRIGGERED | Alert was rearmed | 
+| 9:45 AM    | Status is OK        | Status changed    | 
+| 10:00 AM   | Status is TRIGGERED | Status changed    | 
+
+Importantly, assuming the alert was not triggered at all during the nine o'clock hour, the next alert would not arrive until 9:55 AM, the next scheduled query execution after the _Rearm seconds_ was completed.
