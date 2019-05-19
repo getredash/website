@@ -36,6 +36,8 @@ GROUP BY action
 
 ![](/assets/images/docs/gitbook/multifilter_example.png)
 
+You can use Query Filters on dashboards too. By default, the filter widget will appear beside each visualization where the filter has been added to the query. If you'd like to link together the filter widgets into a dashboard-level Query Filter see [these instructions]({% link _kb/user-guide/dashboards/dashboard-editing.md  %}).
+
 ## Limitations
 
 Query Filters aren't suitable for especially large data sets or query results with hundreds or thousands of distinct field values. Depending on your computer and browser configuration, excessive data can deteriorate the user experience.
