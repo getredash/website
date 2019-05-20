@@ -70,4 +70,6 @@ source of type `Elasticsearch`.
 }
 ```
     
+## A note on authentication
 
+Redash has two data sources for ElasticSearch: standard and Amazon ElasticSearch service. In general, you should use the Amazon data source if you host your ElasticSearch instance there. However, if your Amazon ES instance does not require authentication then you **must** use the standard ES data source. The Amazon ES Data source only works when the underlying ES instance requires authentication.
