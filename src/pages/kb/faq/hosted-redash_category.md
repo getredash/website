@@ -13,7 +13,7 @@ Each time you run a query we cache the query results.  This means there's
 always some subset of your data cached in our system. The most recent query
 result is cached indefinitely.
 
-## How to Cancel My Subscription?
+## How Can I Cancel My Subscription?
 
 Subscription cancellations currently need to be handled on our end.  But don’t
 worry - it’s still fast and easy. If you want to cancel your subscription
