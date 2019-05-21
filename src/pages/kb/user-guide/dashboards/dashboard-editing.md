@@ -63,3 +63,18 @@ Now the Dashboard options menu includes a `Manage Permissions` option. Clicking 
 
 Please note that currently the users you add won't receive a notification, so you will need to notify them manually.
 
+## Dashboard Refresh
+
+When you open a dashboard, Redash displays the most recent cached query result for each visualization. Dashboard data may grow stale as a result, depending on how often you run the underlying queries (either manually or with a scheduled query). However, you can force Redash to execute all of the underlying queries by clicking the Refresh button on the upper-right. 
+
+If you want your dashboards to stay fresh but don't want to make scheduled queries, you can use Automatic Dashboard Refresh. When enabled, the underlying queries will be executed periodically as long as your browser is open.
+
+![](/assets/images/docs/gitbook/dashboard-refresh.png)
+
+{% callout info %}
+
+Automatic Dashboard Refresh occurs as part of the Redash frontend application. Your refresh schedule is only in-effect as long as a logged-in user has the dashboard open in their browser. To guarantee that your queries are executed regularly (which is important for alerts), you should use a [Scheduled Query]({% link _kb/user-guide/querying/scheduling-a-query.md  %}) instead.
+
+{% endcallout %}
+
+Importantly, when visitors access a public dashboard they will always see the cached query result. Refreshing a public dashboard does **not** execute the underlying queries. The only way that visitors to a public dashboard link will see refreshed data is if a logged-in Redash user executes the underlying queries or if a query schedule is in effect.
