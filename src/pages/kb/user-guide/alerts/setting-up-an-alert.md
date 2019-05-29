@@ -15,11 +15,11 @@ title: Setting Up An Alert
 slug: setting-up-an-alert
 order: 1
 ---
-Redash alerts can notify you when your scheduled queries match some arbitrary criteria. Use them to monitor business data or integrated them with tools like Zapier or IFTTT to trigger business processes like user onbarding or support tickets. 
+Redash alerts can notify you when your [**Scheduled Queries**]({% link _kb/user-guide/querying/scheduling-a-query.md %}) match some arbitrary criteria. Use them to monitor business data or integrated them with tools like Zapier or IFTTT to trigger business processes like user onbarding or support tickets. While Alerts are usually combined with scheduled queries, the Alert criteria will be evaluated every time the query is executed.
 
-{% callout info %}
+{% callout warning %}
 
-While Alerts are usually combined with scheduled queries, the Alert criteria will be evaluated every time the query is executed. A schedule is not necessary but is recommended.
+A query schedule is not necessary but is _highly recommended_ for alerts. If you configure an Alert without a query schedule you will only receive notifications if a user in your organization manually executes a given query.
 
 {% endcallout %}
 
