@@ -26,8 +26,8 @@ We _strongly recommend_ that you configure schedules for any queries tied to [Al
 
 When running queries with parameters on a schedule the scheduler will use the default parameter values for the query execution.
 
+## Failed Scheduled Query Reports
 
-#### Scheduled Queries with Parameters
+If your scheduled query executions fail for some reason, Redash will notify your organizations admin group by email.
 
-When running queries with parameters on a schedule the scheduler will use the
-default parameter values for the query execution.
+<img src="/assets/images/docs/gitbook/failure-report.png">
