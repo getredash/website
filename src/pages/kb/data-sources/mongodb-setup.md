@@ -24,3 +24,8 @@ You might notice that there is a separate field for the DB Name in the data
 source configuration and we also include it in the connection string. This is
 usually required on shared hosts like MLab.
 
+### Troubleshooting
+
+**Error: "SSL handshake failed: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed"**
+
+This usually happens when your MongoDB server is using self signed certificates. You can either switch to a properly signed certificate or just add the `ssl_cert_reqs=CERT_NONE` option to your Connection String.
