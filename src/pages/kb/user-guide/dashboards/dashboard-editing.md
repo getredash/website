@@ -73,7 +73,7 @@ If you want your dashboards to stay fresh but don't want to make scheduled queri
 
 {% callout info %}
 
-Automatic Dashboard Refresh occurs as part of the Redash frontend application. Your refresh schedule is only in-effect as long as a logged-in user has the dashboard open in their browser. To guarantee that your queries are executed regularly (which is important for alerts), you should use a [Scheduled Query]({% link _kb/user-guide/querying/scheduling-a-query.md  %}) instead.
+Automatic Dashboard Refresh occurs as part of the Redash frontend application. Your refresh schedule is only in-effect as long as a logged-in user has the dashboard open in their browser. To guarantee that your queries are executed regularly (which is important for alerts), you should use a [Scheduled Query]({% link _kb/user-guide/querying/scheduling-a-query.md %}) instead.
 
 {% endcallout %}
 
