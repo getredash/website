@@ -25,3 +25,9 @@ In the dialog that will open you will find:
 
 - Query API key.
 - Latest results URL in CSV and JSON format. You can also get the Excel format by changing the file type suffix from `json`/`csv` to `xlsx`.
+
+{% callout info %}
+
+The latest results in CSV or JSON format option will not work for queries that use parameters.
+
+{% endcallout %}
