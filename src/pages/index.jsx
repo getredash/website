@@ -28,7 +28,7 @@ class Homepage extends React.Component {
     return (
       <Layout
         title="Redash helps you make sense of your data"
-        description="Use Redash to connect to any data source (Redshift, BigQuery, MySQL, PostgreSQL, MongoDB and many others), query, visualize and share your data to make your company data driven."
+        description="Use Redash to connect to any data source (PostgreSQL, MySQL, Redshift, BigQuery, MongoDB and many others), query, visualize and share your data to make your company data driven."
         location={this.props.location}
       >
         <section className="section section--hero">
