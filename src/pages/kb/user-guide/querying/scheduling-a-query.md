@@ -28,6 +28,6 @@ When running queries with parameters on a schedule the scheduler will use the de
 
 ## Failed Scheduled Query Reports
 
-If your scheduled query executions fail for some reason, Redash will notify your organizations admin group by email.
+If one or many scheduled query executions fails for some reason, Redash will send an hourly report to the queries' owners detailing the failures. These emails go out regularly every hour until there are no more failures. If you ignore them, the emails will mute themselves after the hundredth (100th) occurence of each error. Importantly, these failure report emails run on a job that is independent of your query schedules. It may take up to an hour after a failed query execution before you receive an email report.
 
 <img src="/assets/images/docs/gitbook/failure-report.png">
