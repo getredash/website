@@ -9,40 +9,32 @@ slug: visualizations-how-to
 
 ## Create a New Visualization
 
-Once your query has finished running for the first time, you can add a
-visualization for your results by clicking the “New Visualization” button
-above the results (currently shown only when the source code is shown).
+Once your query has finished running for the first time, you can add a visualization by clicking the “New Visualization” button above the results table.
 
-![](/assets/images/docs/gifs/visualization/new_viz.gif)
+![](/assets/images/docs/gitbook/new-viz.png)
 
 ## Edit A Visualization
 
-To change an existing widget's parameters, enter the query of that widget
-(just click its title). Then, view the source code and you'll see an "Edit"
-option under each visualization, clicking it will open the current settings
-for that visualization (type, x, y, group...).
-
-<img src="/assets/images/docs/gitbook/edit_viz.png" width="60%">
-
-Hit "Save" to apply your changes or "Cancel" to leave no trace.
+You can modify the settings of an existing visualization from the query editor screen. Click the visualization on the tab bar and you'll see an `Edit Visualization` option beneath each visualization. Clicking it will open the current settings for that visualization (type, X axis, Y axis, groupings etc.). Hit "Save" to apply your changes or "Cancel" to leave no trace.
 
 ## Embedding Visualizations
 
-For any visualization you create in Redash, you can get an embed link:
+It's easy to embed Redash visualizations. Just click the elipsis button beneath any visualization to show further options and select `Embed Elsewhere`.
 
-<img src="/assets/images/docs/gitbook/embed_viz.png" width="60%">
+<img src="/assets/images/docs/gitbook/embed-viz.png" width="60%">
 
-Click the "Embed" button to view the `<iframe>` code you need to copy or a link to
-the image you can place anywhere.
+This will pop up the `<iframe>` code you can drop into your HTML pages.
 
 {% callout warning %}
 Queries with parameters do not support embeds at the moment.
 {% endcallout %}
 
+For SaaS customers, there is also a hardlink to a PNG of your visualization hosted through `snap.redash.io`. The PNG embed is especially useful in contexts where iframes won't work (like GitHub issues). 
+
+If you need the visualization PNG to include a `Cache-Control: no-cache` header, just tack the Query String variable `?no-cache` to the end of your PNG embed link.
+
 ### Downloading A Visualization as an Image File
 
-To download a chart visualization as an image file go ahead and hover over the top
-right area of the visualization and click the camera icon. It will be
-downloaded to your device.
+For chart visualizations, you can also download a local image file. Just hover your mouse near the top right area of the visualization and click the camera icon that appears. A PNG will be downloaded to your device.
 
 <img src="/assets/images/docs/gitbook/download_viz.png" width="60%">
