@@ -29,7 +29,9 @@ This will pop up the `<iframe>` code you can drop into your HTML pages.
 Queries with parameters do not support embeds at the moment.
 {% endcallout %}
 
-For SaaS customers, there is also a hardlink to a PNG of your visualization hosted through `snap.redash.io`. The PNG embed is especially useful in contexts where iframes are won't work (like Github issues). If you need the visualization PNG to include a `Cache-Control: no-cache` header, just tack the Query String variable `?no-cache` to the end of your PNG embed link.
+For SaaS customers, there is also a hardlink to a PNG of your visualization hosted through `snap.redash.io`. The PNG embed is especially useful in contexts where iframes won't work (like GitHub issues). 
+
+If you need the visualization PNG to include a `Cache-Control: no-cache` header, just tack the Query String variable `?no-cache` to the end of your PNG embed link.
 
 ### Downloading A Visualization as an Image File
 
