@@ -15,7 +15,7 @@ Once your query has finished running for the first time, you can add a visualiza
 
 ## Edit A Visualization
 
-You can modify the controls for an existing visualization from the query editor screen. Click the visualization on the tab bar and you'll see an `Edit Visualization` option beneath each visualization. Clicking it will open the current settings for that visualization (viz type, X axis, Y axis, groupings etc.). Hit "Save" to apply your changes or "Cancel" to leave no trace.
+You can modify the settings of an existing visualization from the query editor screen. Click the visualization on the tab bar and you'll see an `Edit Visualization` option beneath each visualization. Clicking it will open the current settings for that visualization (type, X axis, Y axis, groupings etc.). Hit "Save" to apply your changes or "Cancel" to leave no trace.
 
 ## Embedding Visualizations
 
