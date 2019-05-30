@@ -35,6 +35,6 @@ If you need the visualization PNG to include a `Cache-Control: no-cache` header,
 
 ### Downloading A Visualization as an Image File
 
-You can also download a local image file go ahead of your visualization by hovering over the top right area of the visualization and clicking the camera icon. It will be downloaded to your device.
+For chart visualizations, you can also download a local image file. Just hover your mouse near the top right area of the visualization and click the camera icon that appears. A PNG will be downloaded to your device.
 
 <img src="/assets/images/docs/gitbook/download_viz.png" width="60%">
