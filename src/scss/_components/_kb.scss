@@ -81,3 +81,32 @@ div.docs h3 {
 body.drawer div.quick-nav {
   display: none;
 }
+
+// help drawer buttons
+#drawerButtons {
+  position: fixed;
+  z-index: 2;
+  top: 13px;
+  right: 13px;
+  padding-right: 26px; // leaving space for ant-drawer-close button
+  padding-left: 2px;
+  padding-top: 1px;
+  border-radius: 3px;
+  background: rgba($mutted, .75);
+  border: 2px solid $mutted;
+}
+
+// mimics ant-drawer-close button
+#drawerButtons a {
+  color: rgba($black, .45);
+  font-size: 14px;
+  padding: 7px 6px 5px;
+}
+#drawerButtons a:hover {
+  color: rgba($black, .75);
+}
+
+// show only in drawer mode
+body:not(.drawer) #drawerButtons {
+  display: none;
+}

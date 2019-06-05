@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import Layout from 'components/Layout'
 import Link from 'components/Link'
 import SearchResults from 'components/SearchResults'
+import DrawerButtons from 'components/DrawerButtons'
 import withIframeHook from 'components/hoc/withIframeHook'
 import index from 'data/algolia.js'
 
@@ -47,6 +48,7 @@ class HelpPage extends React.Component {
       <Layout title="Make Your Company Data Driven" location={location}>
         <section className="section bg-mutted">
           <div className="container">
+            <DrawerButtons />
             <h1 className="text-center">Knowledge Base</h1>
             <div className="row">
               <div className="col-sm-8 col-sm-offset-2">

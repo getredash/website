@@ -6,6 +6,7 @@ import Link from 'components/Link'
 import SearchResults from 'components/SearchResults'
 import ArticlesList from 'components/ArticlesList'
 import QuickNav from 'components/QuickNav'
+import DrawerButtons from 'components/DrawerButtons'
 import withIframeHook from 'components/hoc/withIframeHook'
 import index from 'data/algolia.js'
 
@@ -121,6 +122,7 @@ class HelpPageTemplate extends React.Component {
         )}
         <section className="section section--small bg-mutted">
           <div className="container">
+            <DrawerButtons />
             <ol className="breadcrumb">
               <li>
                 <Link to="/help">Home</Link>
