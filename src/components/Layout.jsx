@@ -5,11 +5,12 @@ import Footer from 'components/Footer'
 
 import 'scss/main.scss'
 
-function reportUrlChange() {
+export const RESET_URL = 'reset'
+export function reportUrlChange(arg) {
   // should match https://git.io/fjzPu
   const data = {
     type: 'iframe_url',
-    message: window.location.href,
+    message: arg === RESET_URL ? '' : window.location.href,
   }
   window.parent.postMessage(data, '*')
 }
