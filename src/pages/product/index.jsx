@@ -226,7 +226,7 @@ const ProductPage = ({ location }) => (
                   className="profile-image"
                 />
                 by Dan Manges, CTO at{' '}
-                <Link to="https://www.findhotel.net/" target="_blank">
+                <Link to="https://www.joinroot.com/" target="_blank">
                   Root
                 </Link>
               </p>
