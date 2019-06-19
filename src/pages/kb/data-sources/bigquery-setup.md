@@ -35,7 +35,6 @@ Want to create your own role? The permissions you need to assign are:
   * bigquery.jobs.create
   * bigquery.jobs.get
   * bigquery.jobs.update
-  * bigquery.datasets.list
   * bigquery.datasets.get
   * bigquery.tables.list
   * bigquery.tables.get
