@@ -8,7 +8,7 @@ toc: true
 
 ### Data Source Setup Screen
 
-When setting up the BigQuery data source, only the **Project ID** and **JSON Key File** are required. If you dont't have a JSON key file then you will need to create a new service account (details below).
+When setting up the BigQuery data source, only the **Project ID** and **JSON Key File** are required. If you don't have a JSON key file then you will need to create a new service account (details below).
 
 ![](/assets/images/docs/gitbook/bigquery_mandatories.PNG)
 
