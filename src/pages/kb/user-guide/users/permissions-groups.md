@@ -29,6 +29,8 @@ dashboard, he'll see where a visualization would be but won't be able to see
 any details. The screenshot shown below shows a Dashboard Widget with a
 visualization the user doesn’t have access to.
 
+![](/assets/images/docs/gitbook/restricted-widget.png)
+
 If a user has access to at least one widget on a dashboard, they'll be able to
 see the dashboard in the list of all dashboards.
 
