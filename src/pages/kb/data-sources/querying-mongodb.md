@@ -5,22 +5,27 @@ title: Querying MongoDB
 slug: mongodb
 toc: true
 ---
-We take the JSON query you pass and convert it to a
-[db.collections.find](https://docs.mongodb.com/manual/reference/method/db.collection.find/)
-call. The query part is named `query` in the JSON document and projection is
-named `fields`. You can also pass a `sort` dictionary that defines the sorting
-order (see example below), `skip` and `limit` for pagination and if set a
-value (any value) to `count` it will perform a count query.
 
-Also you can do aggregate queries (
-[db.collection.aggregate](https://docs.mongodb.com/manual/reference/method/db.collection.aggregate/))
-by passing an `aggregate`  dictionary.
+Write your MongoDB query as a JSON object. During execution, Redash will convert it into either a [`db.collection.find()`](https://docs.mongodb.com/manual/reference/method/db.collection.find/) call or a [`db.collection.aggregate()`](https://docs.mongodb.com/manual/reference/method/db.collection.aggregate/) call. Here's how your JSON object is mapped and sent to MongoDB:
+
+| MongoDB Token                  | Where to write in Redash                              | 
+|--------------------------------|-------------------------------------------------------| 
+| `db`                           | On the data source setup screen                       | 
+| `collection`                   | Add a `collection` key in your query object           | 
+| `query`                        | Add a `query` key in your query object                | 
+| `projection`                   | Add a `fields` key in your query object               | 
+| `.sort() method`               | Add a `sort` key in your query object                 | 
+| `.skip() method`               | Add a `skip` key in your query object                 | 
+| `.limit() method`              | Add a `limit` key in your query object                | 
+| `db.collection.count()` method | Use a `count` key with any value in your query object | 
+
+The values you use for each key are passed unmodified as as parameters to MongoDB.
 
 ## Query Examples
 
 ### Simple Query Example
 
-    
+
     {
     	"collection": "my_collection",
     	"query": {
@@ -37,6 +42,9 @@ by passing an `aggregate`  dictionary.
     }
     
 
+An equivalent query in Javascript would be written: `db.my_collection.find({"type": 1}, {"_id": 1, "name": 2}).sort([{"name": "date","direction": -1}])`
+
+
 ### Count Query Example
 
     
@@ -49,15 +57,11 @@ by passing an `aggregate`  dictionary.
 
 ### Aggregation
 
-Aggregation uses a syntax similar to the one used in PyMongo. However, to
-support the correct order of sorting, it uses a regular list for the “$sort”
-operation that converts into a SON (sorted dictionary) object before
-execution.
+Aggregation uses a syntax similar to the one used in PyMongo. However, to support the correct order of sorting, it uses a regular list for the “$sort” operation that converts into a SON (sorted dictionary) object before execution.
 
 Aggregation query example:
 
-    
-    
+
     {
     	"collection": "things",
     	"aggregate": [{
@@ -79,14 +83,12 @@ Aggregation query example:
     		}]
     	}]
     }
-    
+
 
 ### MongoDB Extended JSON Support
 
 We support  [MongoDB Extended JSON](https://docs.mongodb.com/manual/reference/mongodb-extended-json/) along with our own extension - `$humanTime`:
 
-    
-    
     {
     	"collection": "date_test",
     	"query": {
@@ -100,8 +102,13 @@ We support  [MongoDB Extended JSON](https://docs.mongodb.com/manual/reference/mo
     }
     
 
-It accepts a human-readable string like the above (“3 years ago”, “yesterday”,
-etc) or timestamps.
+It accepts a human-readable string like the above (“3 years ago”, “yesterday”, etc) or timestamps.
+
+{% callout info %}
+
+The `$humantime` function is needed when using [Query Parameters]({% link _kb/user-guide/querying/query-parameters.md %}) of type Date with MongoDB. If your Date query parameters do not behave as expected, wrap them in `$humantime` calls (`"{{param}}"` would be converted to `{"$humanTime": "{{ param }}"}`). This is necessary because Date type Query Parameters do not meet MongoDB's date format requirements.
+
+{% endcallout %}
 
 ### MongoDB Filtering
 
