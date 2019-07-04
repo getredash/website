@@ -25,13 +25,12 @@ class HelpPage extends React.Component {
   }
 
   search(e) {
-    this.setState({
-      searchQuery: e.target.value,
-    })
-    setTimeout(() => {
-      index.search(this.state.searchQuery, (err, content) => {
-        this.setState({
-          hits: content.hits,
+    this.setState({ searchQuery: e.target.value }, () => {
+      setTimeout(() => {
+        index.search(this.state.searchQuery, (err, content) => {
+          this.setState({
+            hits: content.hits,
+          })
         })
       })
     })
@@ -50,7 +49,7 @@ class HelpPage extends React.Component {
             <h1 className="text-center">Knowledge Base</h1>
             <div className="row">
               <div className="col-sm-8 col-sm-offset-2">
-                <form action="">
+                <form action="" onSubmit={e => e.preventDefault()}>
                   <div className="form-group form-group--search">
                     <input
                       className="form-control input-lg form-control--white search-box"
