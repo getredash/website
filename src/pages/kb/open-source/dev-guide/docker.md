@@ -29,7 +29,7 @@ cd redash/
 Once you have the above setup, you need to create the Docker services:
 
 ```bash
-docker-compose up
+docker-compose up -d
 ```
 
 This will build the Docker images and fetch some prebuilt images and then start the services
@@ -84,7 +84,8 @@ the Celery workers run:
 docker-compose restart worker
 ```
 
-(or just stop `docker-compose up` and run it again)
+(or just stop all the running services with `docker-compose stop` then run them again
+with `docker-compose up -d`)
 
 ### Installing new Python packages (requirements.txt)
 
