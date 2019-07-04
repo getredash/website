@@ -28,9 +28,11 @@ class HelpPage extends React.Component {
     this.setState({ searchQuery: e.target.value }, () => {
       setTimeout(() => {
         index.search(this.state.searchQuery, (err, content) => {
-          this.setState({
-            hits: content.hits,
-          })
+          if (content && content.query === this.state.searchQuery) {
+            this.setState({
+              hits: content.hits,
+            })
+          }
         })
       })
     })
