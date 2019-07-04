@@ -106,7 +106,9 @@ It accepts a human-readable string like the above (“3 years ago”, “yesterd
 
 {% callout info %}
 
-The `$humantime` function is needed when using [Query Parameters]({% link _kb/user-guide/querying/query-parameters.md %}) of type Date with MongoDB. If your Date query parameters do not behave as expected, wrap them in `$humantime` calls (`"{{param}}"` would be converted to `{"$humanTime": "{{ param }}"}`). This is necessary because Date type Query Parameters do not meet MongoDB's date format requirements.
+The `$humanTime` function is also needed when using [Query Parameters]({% link _kb/user-guide/querying/query-parameters.md %}) of type Date or Date/Time with MongoDB, due to the difference between the format Redash uses and the one MongoDB expects. 
+
+When using a Date (or Date Range) parameter, wrap it with a `$humanTime` object: `{{param}}` becomes `{"$humanTime": "{{param}} 00:00"}` (the ` 00:00` suffix is needed only with Date parameters, for Date Time parameters you should skip it).
 
 {% endcallout %}
 
