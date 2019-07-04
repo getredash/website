@@ -35,7 +35,8 @@
     "gatsby-transformer-yaml": "^2.1.6",
     "package.json": "^2.0.1",
     "react-bootstrap": "^0.32.4",
-    "source-map": "^0.7.3"
+    "source-map": "^0.7.3",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.10",
@@ -87,7 +88,9 @@
     "lint:textfix": "textlint --fix src/pages/**/index.md",
     "precommit": "lint-staged",
     "test": "prettier --write \"**/*.+(js|jsx|json|css|scss)\"",
-    "fetch-contributors": "node bin/fetch-contributors.js"
+    "fetch-contributors": "node bin/fetch-contributors.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -101,5 +104,6 @@
   "homepage": "https://github.com/getredash/website#readme",
   "optionalDependencies": {
     "fsevents": "^1.1.3"
-  }
+  },
+  "snyk": true
 }
