@@ -124,6 +124,20 @@ WHERE org_id = {{org_id}} AND created_at > '{{start_date}}'
 
 We use two parameters: `{{org_id}}` and `{{start_date}}`.
 
+**Can I use parameters in embedded visualizations?**
+
+Yes, with one exception. If a query uses a Text type parameter, it cannot be embedded because Text parameters are not safe from SQL injection. All other types of query parameters can be safely embedded in visualizations.
+
+**Can I use parameters in shared dashboards?**
+
+No. Dashboards that use query parameters can only be viewed by logged-in Redash users.
+
+{% callout info %}
+
+Prior to Version 8 of Redash, parameters were not allowed in embedded visualizations. In a future version, all types of parameters will be allowed on publicly shared dashboards and visualizations. Our hosted platform always runs the latest available version of the app.
+
+{% endcallout %}
+
 ## Parameter Mapping on Dashboards
 
 {% callout %}
