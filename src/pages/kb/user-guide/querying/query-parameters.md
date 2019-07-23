@@ -126,7 +126,7 @@ We use two parameters: `{{org_id}}` and `{{start_date}}`.
 
 **Can I use parameters in embedded visualizations?**
 
-Yes, with one exception. If a query uses a Text type parameter, it cannot be embedded because Text parameters are not safe from SQL injection. All other types of query parameters can be safely embedded in visualizations.
+Yes, with one exception. If a query uses a Text type parameter, unless it is a Query Based Dropdown List parameter, it cannot be embedded because Text parameters are not safe from SQL injection. All other types of query parameters can be safely embedded in visualizations, including Query Based Dropdown List type parameters that include Text values.
 
 **Can I use parameters in shared dashboards?**
 
