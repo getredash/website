@@ -97,6 +97,12 @@ const ProductPage = ({ location }) => (
                 photo="/assets/images/contributors/gabrieldutra.jpg"
                 github="https://github.com/gabrieldutra"
               />
+
+              <ContributorCard
+                name="Justin Clift"
+                photo="/assets/images/contributors/justinclift.jpg"
+                github="https://github.com/justinclift"
+              />
             </div>
           </div>
         </div>
