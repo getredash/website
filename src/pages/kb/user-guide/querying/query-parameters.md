@@ -63,7 +63,7 @@ If you are using Query Parameters of type `Date`, you can set the parameter's de
 
 #### Date Range Parameters
 
-For queries that must select data between two dates, Redash provides three levels of Date / Time Range parameters. When chosen from the parameters settings screen, Redash places two complete parameters into your query: one for the start date and one for the end date. You will typically need to separate them in your query (into different `WHERE` clauses, e.g.). However, the parameter selection interface below the query window displays a unified widget to easily chose a date range without unnecessary clicking.
+For queries that must select data between two timestamps, Redash provides three levels of Date / Time Range parameters. When chosen from the parameters settings screen, Redash places a pair of parameters into your query: one for the start date and one for the end date. A parameter selection interface will appear below the query window displayed as a unified widget to quickly chose a date range. You can move these parameters around in your query as needed (see the example below). When the query is sent to your database, the start and end dates / times will be passed as strings in ISO8601 format. 
 
 Date Range parameters behave exactly like Date parameters but are meant to save you time.
 
@@ -72,9 +72,14 @@ Date Range parameters behave exactly like Date parameters but are meant to save 
 Here's an example of how you'd integrate a date range parameter into a SQL query. Assume you have created a date range param called `myDate`:
 
 ```
-SELECT column1, column2, column3 FROM table_name
-WHERE table_name.date_column >= {{ myDate.start }}
-AND table_name.date_column <={{ myDate.end }}
+SELECT
+	column1,
+	column2,
+	column3
+FROM table_name
+WHERE
+	table_name.date_column >= {{ myDate.start }}
+	AND table_name.date_column <={{ myDate.end }}
 ```
 
 When you create a date range parameter, the `{{ myDate.start }}` and `{{ myDate.end }}` tokens will be added to your query text. You can move them around your query as needed.
