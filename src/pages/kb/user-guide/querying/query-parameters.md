@@ -67,6 +67,20 @@ For queries that must select data between two dates, Redash provides three level
 
 Date Range parameters behave exactly like Date parameters but are meant to save you time.
 
+{% callout info %}
+
+Here's an example of how you'd integrate a date range parameter into a SQL query. Assume you have created a date range param called `myDate`:
+
+```
+SELECT column1, column2, column3 FROM table_name
+WHERE table_name.date_column >= {{ myDate.start }}
+AND table_name.date_column <={{ myDate.end }}
+```
+
+When you create a date range parameter, the `{{ myDate.start }}` and `{{ myDate.end }}` tokens will be added to your query text. You can move them around your query as needed.
+
+{% endcallout %}
+
 ### Dropdown Lists
 
 If you want to restrict the scope of possible parameter values when running a query, you can use Redash's `Dropdown List` parameter type. When selected from the parameter settings panel, a text box appears where you can enter your allowed values, each one separated by a new line. Dropdown lists are `Text` parameters under the hood, so if you want to use dates/datetimes in your dropdown, you should enter them in the format your data source requires.
