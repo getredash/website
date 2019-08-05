@@ -24,6 +24,7 @@
 /help/data-sources/amazon-athena.html /help/data-sources/setup/amazon-athena
 /help/data-sources/axibase_tsd.html /help/data-sources/setup/axibase-time-series-database
 /help/data-sources/bigquery.html /help/data-sources/setup/bigquery
+/help/data-sources/querying/urls /help/data-sources/setup/json
 /help/integrations/zapier-integration.html /help/user-guide/integrations-and-api/creating-a-zap
 /help/troubleshooting/status-page.html /help/faq/troubleshooting/
 /help/troubleshooting/error-worker-exited-prematurely-signal-9-sigkill.html /help/faq/troubleshooting/

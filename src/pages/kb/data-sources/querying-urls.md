@@ -1,8 +1,8 @@
 ---
-category: querying
+category: setup
 parent_category: data-sources
-title: Querying URLs & JSON APIs
-slug: urls
+title: JSON & URL APIs
+slug: json
 toc: true
 ---
 
@@ -25,6 +25,86 @@ Now you can use the `JSON` data source for tabular data, non-tabular data, or AP
 {% callout info %}
 If the server behind your `URL` data source requires HTTP authentication headers, you can enter them during data source setup. For the `JSON` data source, authentication must be explicitly passed in your queries.
 {% endcallout %}
+
+# JSON
+
+Use the `JSON` Data Source to query arbitrary JSON API's. Setup is easy because no authentication is needed. Any RESTful JSON API will handle authentication through HTTP headers. So just create a new Data Source of type `JSON` and name it whatever you like ("JSON" is a good choice).
+
+## Usage
+
+This Data Source takes queries in [YAML format]. Here's some examples using the GitHub API:
+
+### Return a list of objects from an endpoint
+
+```yaml
+url: https://api.github.com/repos/getredash/redash/issues
+```
+
+This will return the result of the above API call as is.
+
+![](/assets/images/docs/gitbook/json_list_of_objects.png)
+
+
+### Return a single object
+
+```yaml
+url: https://api.github.com/repos/getredash/redash
+```
+
+The above API call returns a single object, and this object is being converted to a row.
+
+![Single JSON Object](/assets/images/docs/gitbook/json_single_object.png)
+
+### Return Specific Fields
+
+In case you want to pick only specific fields from the resulting object(s), you can pass the `fields` option:
+
+```yaml
+url: https://api.github.com/repos/getredash/redash/issues
+fields: [number, title]
+```
+![](/assets/images/docs/gitbook/json_field_select.png)
+
+
+### Return an inner object
+
+Many JSON API's can return nested objects. You can access a nested object with the `path` key.
+
+```yaml
+url: https://api.github.com/repos/getredash/redash/issues/3495
+path: assignees
+```
+
+The above query will use the `assignee` objects from the API result as the query result.
+
+### Pass query string parameters
+
+You can either craft your own URLs, or you can pass the `params` option:
+
+```yaml
+url: "https://api.github.com/search/issues"
+params:
+  q: is:open type:pr repo:getredash/redash
+  sort: created
+  order: desc
+```
+
+The above is the same as:
+
+```yaml
+url: "https://api.github.com/search/issues?q=+is:open+type:pr+repo:getredash/redash&sort=created&order=desc"
+```
+
+### Additional HTTP Options
+
+You can pass additional keys to modify various HTTP options:
+
+* `method` - the HTTP method to use (default: `get`)
+* `headers` - a dictionary of headers to send with the request
+* `auth` - basic authentication username/password (should be passed as an array: `[username, password]`)
+* `params` - a dictionary of query string parameters to add to the URL
+* `data` - a dictionary of values to use as request body
+* `json` - same as `data` except that it's being converted to JSON
 
 # URL
 The `URL` data source expects your endpoints to return tabular data in [JSON format].
@@ -109,86 +189,6 @@ An example of returned data appears below:
 }
 
 ```
-
-# JSON
-
-Use the `JSON` Data Source to query arbitrary JSON API's. Setup is easy because no authentication is needed. Any RESTful JSON API will handle authentication through HTTP headers. So just create a new Data Source of type `JSON` and name it whatever you like ("JSON" is a good choice).
-
-## Usage
-
-This Data Source takes queries in [YAML format]. Here's some examples using the GitHub API:
-
-### Return a list of objects from an endpoint
-
-```yaml
-url: https://api.github.com/repos/getredash/redash/issues
-```
-
-This will return the result of the above API call as is.
-
-![](/assets/images/docs/gitbook/json_list_of_objects.png)
-
-
-### Return a single object
-
-```yaml
-url: https://api.github.com/repos/getredash/redash
-```
-
-The above API call returns a single object, and this object is being converted to a row.
-
-![Single JSON Object](/assets/images/docs/gitbook/json_single_object.png)
-
-### Return Specific Fields
-
-In case you want to pick only specific fields from the resulting object(s), you can pass the `fields` option:
-
-```yaml
-url: https://api.github.com/repos/getredash/redash/issues
-fields: [number, title]
-```
-![](/assets/images/docs/gitbook/json_field_select.png)
-
-
-### Return an inner object
-
-Many JSON API's can return nested objects. You can access a nested object with the `path` key.
-
-```yaml
-url: https://api.github.com/repos/getredash/redash/issues/3495
-path: assignees
-```
-
-The above query will use the `assignee` objects from the API result as the query result.
-
-### Pass query string parameters
-
-You can either craft your own URLs, or you can pass the `params` option:
-
-```yaml
-url: "https://api.github.com/search/issues"
-params:
-  q: is:open type:pr repo:getredash/redash
-  sort: created
-  order: desc
-```
-
-The above is the same as:
-
-```yaml
-url: "https://api.github.com/search/issues?q=+is:open+type:pr+repo:getredash/redash&sort=created&order=desc"
-```
-
-### Additional HTTP Options
-
-You can pass additional keys to modify various HTTP options:
-
-* `method` - the HTTP method to use (default: `get`)
-* `headers` - a dictionary of headers to send with the request
-* `auth` - basic authentication username/password (should be passed as an array: `[username, password]`)
-* `params` - a dictionary of query string parameters to add to the URL
-* `data` - a dictionary of values to use as request body
-* `json` - same as `data` except that it's being converted to JSON
 
 [YAML format]: https://www.tutorialspoint.com/yaml/yaml_basics.htm
 [JSON format]: https://json.org
