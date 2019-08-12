@@ -31,6 +31,13 @@ const config = {
       options: {
         plugins: [
           {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              target: "_blank",
+              rel: "nofollow noopener noreferrer"
+            }
+          },
+          {
             resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 750,
@@ -58,7 +65,6 @@ const config = {
         mergeCachingHeaders: true,
       },
     },
-    'gatsby-transformer-remark',
     'gatsby-transformer-yaml',
     'gatsby-transformer-json',
     'gatsby-plugin-catch-links',
