@@ -31,7 +31,7 @@ Hive  |  ✅  |  ✅
 Impala  |  ✅  |  ✅  
 InfluxDB  |  ✅  |  ✅  
 JIRA  |  ✅  |  ✅  
-JSON  |  ✅  |  ✅  
+JSON ([instructions]({% link _kb/data-sources/querying-urls.md %})) |  ✅  |  ✅  
 Apache Kylin |  ✅  |  ✅  
 MapD  |    |  ✅  
 MemSQL  |  ✅  |  ✅  
