@@ -65,9 +65,11 @@ Please note that currently the users you add won't receive a notification, so yo
 
 ## Dashboard Refresh
 
-When you open a dashboard, Redash displays the most recent cached query result for each visualization. Dashboard data may grow stale as a result, depending on how often you run the underlying queries (either manually or with a scheduled query). However, you can force Redash to execute all of the underlying queries by clicking the Refresh button on the upper-right. 
+Even large dashboards should load quickly because they fetch their data from a cache that renews whenever a query runs. But if you haven't run the queries recently, your dashboard might be stale. It could even mix old data with new if some queries ran more recently than others.
 
-If you want your dashboards to stay fresh but don't want to make scheduled queries, you can use Automatic Dashboard Refresh. When enabled, the underlying queries will be executed periodically as long as your browser is open.
+To force a refresh, click the Refresh button on the upper-right of the dashboard editor. This runs all the dashboard queries and updates its visualizations.
+
+If you want this to happen periodically you can activate Automatic Dashboard Refresh from the UI by clicking the dropdown pictured below. Or you can pass a `refresh` query string variable with your dashboard URL. The allowed refresh intervals are expressed in seconds: 60,300,600,1800,3600,43200, 86400.
 
 ![](/assets/images/docs/gitbook/dashboard-refresh.png)
 
@@ -77,4 +79,4 @@ Automatic Dashboard Refresh occurs as part of the Redash frontend application. Y
 
 {% endcallout %}
 
-Importantly, when visitors access a public dashboard they will always see the cached query result. Refreshing a public dashboard does **not** execute the underlying queries. The only way that visitors to a public dashboard link will see refreshed data is if a logged-in Redash user executes the underlying queries or if a query schedule is in effect.
+Importantly for users accessing a public dashboard, the Refresh button will **not** execute the underlying queries. It just checks the cache and updates the dashboard if it finds newer results. The only way that visitors to a public dashboard will see refreshed data is if a logged-in Redash user executes the underlying queries or if a query schedule is in effect.
