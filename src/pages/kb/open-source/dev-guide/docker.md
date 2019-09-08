@@ -75,18 +75,6 @@ Now the dev server is available at `http://localhost:8080`. It rebuilds the fron
 code when you change it and refreshes the browser. All the API calls are proxied to
 `localhost:5000` (the server running in Docker).
 
-### Restarting Celery Workers
-
-The Web server will restart on code changes, but the Celery workers won't. To restart
-the Celery workers run:
-
-```
-docker-compose restart worker
-```
-
-(or just stop all the running services with `docker-compose stop` then run them again
-with `docker-compose up -d`)
-
 ### Installing new Python packages (requirements.txt)
 
 If you pulled a new version with new packages or added some yourself, you will need to
