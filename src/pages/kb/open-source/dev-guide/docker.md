@@ -34,7 +34,10 @@ docker-compose up -d
 
 This will build the Docker images and fetch some prebuilt images and then start the services
 (Redash web server, worker, PostgreSQL and Redis). You can refer to the `docker-compose.yml`
-file to see the full configuration.
+file to see the full configuration. 
+
+If you hit an `errno 137` particularly at `RUN npm run build`, make sure you give your Docker 
+VM enough memory (4GB or more).
 
 ### Install npm Packages
 
