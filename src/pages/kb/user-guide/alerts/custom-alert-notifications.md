@@ -35,6 +35,12 @@ Any static content is valid, and you can also incorporate some built-in template
 An example subject, for instance, could be:
 ```Alert "{{ALERT_NAME}}" changed status to {{ALERT_STATUS}}```
 
-Click the "Preview" toggle button to make sure template variables get rendered correctly and save your changes by clicking the "Save" button.
+Click the "Preview" toggle button to preview the rendered result and save your changes by clicking the "Save" button.
+
+{% callout warning %}
+
+The preview is useful for verifying that template variables get rendered correctly. It is not an accurate representation of the eventual notification content, as each alert destinations can display notifications differently.
+
+{% endcallout %}
 
 To return to the default Redash message templates, reselect "Default template" at any time.
