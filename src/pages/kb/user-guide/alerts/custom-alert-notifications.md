@@ -1,7 +1,6 @@
 ---
 category: alerts
 parent_category: user-guide
-helpscout_url: https://help.redash.io/article/74-custom-alert-notifications
 keywords:
 - Alert
 - Notification
