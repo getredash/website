@@ -6,29 +6,15 @@ slug: json
 toc: true
 ---
 
-Sometimes you need to visualize data not contained in an RDBMS or NOSQL data store. For those times, Redash provides two URL-based mechanisms to pull in your data: `URL` and `JSON`. Either source can be added from the settings screen in Redash.
+Sometimes you need to visualize data not contained in an RDBMS or NOSQL data store, but available from some HTTP API. For those times, Redash provides the `JSON` data source (first introduced in Redash v8).
 
-{% callout info %}
+Redash treats all incoming data from the `JSON` data source as text; so you should be prepared to use 
 
-The `JSON` data source is currently only available as part of SaaS Redash. This page will be updated when it is added to the Open Source version as well. This is expected in the next major version release (version 8).
-
-{% endcallout %}
-
-With `URL`, you can load large amounts of tabular data while abstracting away the underlying storage mechanism. This data source allows you to explicitly declare the types of data returned (text, dates, numbers e.g.).
-
-{% callout warning %}
-The features of the `URL` data source will eventually be rolled into the `JSON` data source. At that time, the `URL` data source will be deprecated and this documentation will be updated. For future development we recommend using the `JSON` data source.
-{% endcallout %}
-
-Now you can use the `JSON` data source for tabular data, non-tabular data, or API's where you do not control the underlying data structure. Redash treats all incoming data from the `JSON` data source as text; so you should be prepared to use [table formatting]({% link _kb/user-guide/visualizations/table-visualizations.md %}) when rendering the data.
-
-{% callout info %}
-If the server behind your `URL` data source requires HTTP authentication headers, you can enter them during data source setup. For the `JSON` data source, authentication must be explicitly passed in your queries.
-{% endcallout %}
-
-# JSON
+# JSON Data Source Type
 
 Use the `JSON` Data Source to query arbitrary JSON API's. Setup is easy because no authentication is needed. Any RESTful JSON API will handle authentication through HTTP headers. So just create a new Data Source of type `JSON` and name it whatever you like ("JSON" is a good choice).
+
+Redash will detect data types supported by JSON (like numbers, strings, booleans), but others (mostly date/timestamp) will be treated as strings (unless specified in ISO-8601 format).
 
 ## Usage
 
@@ -106,8 +92,13 @@ You can pass additional keys to modify various HTTP options:
 * `data` - a dictionary of values to use as request body
 * `json` - same as `data` except that it's being converted to JSON
 
-# URL
-The `URL` data source expects your endpoints to return tabular data in [JSON format].
+# URL Data Source Type
+
+{% callout warning %}
+The `URL` data source type is deprecated since Redash v8. You can still use existing data sources created with this type, but you can't create new ones. We recommend migrating to the JSON data source type.
+{% endcallout %}
+
+The `URL` data source expects your endpoints to return JSON with a special data structure (see below).
 
 ## Usage
 
@@ -119,7 +110,7 @@ http://myserver/path/myquery
 
 To manipulate the data (filter, sort, aggregate etc.) you can use the [Query Results Data Source]({% link _kb/user-guide/querying/query-results-data-source.md %}).
 
-## Required Format
+## Required Data Structure
 
 The returned object must expose two keys: `columns` and `rows`.
 
