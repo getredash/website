@@ -8,7 +8,7 @@ toc: true
 
 Sometimes you need to visualize data not contained in an RDBMS or NOSQL data store, but available from some HTTP API. For those times, Redash provides the `JSON` data source (first introduced in Redash v8).
 
-Redash treats all incoming data from the `JSON` data source as text; so you should be prepared to use 
+Redash treats all incoming data from the `JSON` data source as text; so you should be prepared to use [table formatting]({% link _kb/user-guide/visualizations/table-visualizations.md %}) when rendering the data.
 
 # JSON Data Source Type
 
