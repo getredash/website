@@ -21,9 +21,9 @@ A box will appear, consisting of input fields for subject and body.
 
 Any static content is valid, and you can also incorporate some built-in template variables:
 
-* `ALERT_STATUS` - The evaluated alert status (string)
-* `ALERT_CONDITION` - The alert condition operator (string).
-* `ALERT_THRESHOLD` -  The alert threshold (string or number).
+* `ALERT_STATUS` - The evaluated alert [status]({% link _kb/user-guide/alerts/setting-up-an-alert.md %}#Alert-Status-&-Frequency) (string).
+* `ALERT_CONDITION` - The alert [condition operator]({% link _kb/user-guide/alerts/setting-up-an-alert.md %}#Configuration-settings) (string).
+* `ALERT_THRESHOLD` -  The alert [threshold]({% link _kb/user-guide/alerts/setting-up-an-alert.md %}#Configuration-settings) (string or number).
 * `ALERT_NAME` - The alert name (string).
 * `ALERT_URL` - The alert page url (string).
 * `QUERY_NAME` - The correlated query name (string).
