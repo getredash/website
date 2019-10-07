@@ -47,8 +47,6 @@ Use the settings panel to configure your alert:
 
 ![](/assets/images/docs/gitbook/alerts_settings.png)
 
-### Configuration settings
-
 * **Value Column** is the column in your query result that you would like to watch.
 * **Op** is short for "Operator". You can choose greater than, less than, or equal to.
 * **Reference** is the absolute value that your _Value Column_ will be compared to. The most recent query result is shown as the **Value**
