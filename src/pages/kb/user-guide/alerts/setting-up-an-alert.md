@@ -19,7 +19,7 @@ Redash alerts can notify you when your [**Scheduled Queries**]({% link _kb/user-
 
 {% callout warning %}
 
-A query schedule is not necessary but is _highly recommended_ for alerts. If you configure an Alert without a query schedule you will only receive notifications if a user in your organization manually executes a given query.
+A query schedule is not mandatory but is _highly recommended_ for alerts. If you configure an Alert without a query schedule you will only receive notifications if a user in your organization manually executes the given query.
 
 {% endcallout %}
 
