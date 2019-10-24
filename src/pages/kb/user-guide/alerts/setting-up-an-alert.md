@@ -39,8 +39,6 @@ To see a list of current Alerts click **Alerts** on the navbar. By default, they
 
 ![](/assets/images/docs/gitbook/alerts.png)
 
-
-
 # Usage
 
 Click the **Create** button in the navbar and then click **Alert**.
@@ -50,7 +48,6 @@ Click the **Create** button in the navbar and then click **Alert**.
 Search for a target query. If you don't see it the one you want, make sure it is published and does not use parameters. Alerts don't work for queries with parameters. 
 
 ![](/assets/images/docs/gitbook/new-alert-query-search.png)
-
 
 Use the settings panel to configure your alert.
 
@@ -72,15 +69,11 @@ Next, adjust how many notifications to receive while your alert is triggered. Th
 
 Regardless of which notification setting you pick here, you will receive a notification whenever the status goes from `OK` to `TRIGGERED` or from `TRIGGERED` to `OK`. The schedule settings above only impact how many notifications you will receive if the status remains `TRIGGERED` from one execution to the next.
 
+Finally, pick a **Template**. The default template is a message with links to the Alert configuration screen and the Query screen. Many users will want to include more specific information about the Alert. To do this you can [Customize The Alert Template]({% link _kb/user-guide/alerts/custom-alert-notifications.md %}).
+
 ![](/assets/images/docs/gitbook/alert_settings_V9.png)
 
-
-
-{% callout %}
-
-You can read below about changing the notification contents and frequency. When you're ready click **Create Alert** and choose an [alert destination]({% link _kb/user-guide/alerts/creating-new-alert-destination.md %}). If you skip this step you will not be notified when the alert is triggered.
-
-{% endcallout %}
+When you're finished, click **Create Alert** and then choose an [Alert Destination]({% link _kb/user-guide/alerts/creating-new-alert-destination.md %}). If you skip this step you will not be notified when the alert is triggered.
 
 ![](/assets/images/docs/gitbook/alert_destination.png)
 
@@ -90,9 +83,7 @@ You can read below about changing the notification contents and frequency. When 
 * `OK` means that on the most recent query execution, the _Value Column_ did not meet the _Condition_ and _Threshhold_ you configured. This doesn't mean that the Alert was not triggered previously. If your "cats" value is now 1470 your alert will show as OK.
 * `UNKNOWN` means Redash does not have enough data to evaluate the alert criteria. You will see this status immediately after creating your Alert until the query has executed. You will also see this status if there was no data in the query result or if the most recent query result doesn't include the _Value Column_ you configured.
 
-# Alert Status & Frequency
-
-
+# Notification Frequency
 
 Redash sends notifications to your chosen Alert Destinations whenever it detects that the Alert status has changed from `OK` to `TRIGGERED` or vice versa. Consider this example where an Alert is configured on a query that is scheduled to run once daily. The daily status of the Alert appears in the table below. Prior to Monday the alert status was `OK`.
 
@@ -106,5 +97,4 @@ Redash sends notifications to your chosen Alert Destinations whenever it detects
 | Saturday  | TRIGGERED    | 
 | Sunday    | OK           | 
 
-By default, Redash would send a notification on Wednesday when the status changed from `OK` to `TRIGGERED` and again on Sunday when it switches back. It will not send alerts on Thursday, Friday, or Saturday unless you specifically configure it to do so because the Alert status did not change between executions on those days.
-
+If the notification frequency is set to _Just Once_, Redash would send a notification on Wednesday when the status changed from `OK` to `TRIGGERED` and again on Sunday when it switches back. It will not send alerts on Thursday, Friday, or Saturday unless you specifically configure it to do so because the Alert status did not change between executions on those days.

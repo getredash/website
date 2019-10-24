@@ -1,7 +1,6 @@
 ---
 category: alerts
 parent_category: user-guide
-layout: kb-category
 toc: True
 keywords:
 - Set up Alert
@@ -13,8 +12,14 @@ keywords:
 - alert destination
 title: Setting Up An Alert (V8 and Earlier)
 slug: setting-up-an-alert-v8
-order: 1
+order: 500
 ---
+
+{% callout danger %}
+
+This doc is for Redash V8 and earlier.
+
+{% endcallout %}
 
 Redash alerts can notify you when your [**Scheduled Queries**]({% link _kb/user-guide/querying/scheduling-a-query.md %}) match some arbitrary criteria. Use them to monitor business data or integrated them with tools like Zapier or IFTTT to trigger business processes like user onbarding or support tickets. While Alerts are usually combined with scheduled queries, the Alert criteria will be evaluated every time the query is executed.
 
