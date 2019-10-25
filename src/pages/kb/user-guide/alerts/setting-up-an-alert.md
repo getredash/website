@@ -55,6 +55,8 @@ Use the settings panel to configure your alert.
 * The **Condition** dropdown controls the logical operation to be applied.
 * The **Threshhold** text input will be compared against the _Value Column_ using the _Condition_ you specify.
 
+![](/assets/images/docs/gitbook/alert_settings_V9.png)
+
 {% callout info %}
 
 If a target query returns multiple records, Redash Alerts only see the first one. As you change the Value Column setting, the current value of that field in the top row is shown beneath it.
@@ -71,7 +73,6 @@ Regardless of which notification setting you pick here, you will receive a notif
 
 Finally, pick a **Template**. The default template is a message with links to the Alert configuration screen and the Query screen. Many users will want to include more specific information about the Alert. To do this you can [Customize The Alert Template]({% link _kb/user-guide/alerts/custom-alert-notifications.md %}).
 
-![](/assets/images/docs/gitbook/alert_settings_V9.png)
 
 When you're finished, click **Create Alert** and then choose an [Alert Destination]({% link _kb/user-guide/alerts/creating-new-alert-destination.md %}). If you skip this step you will not be notified when the alert is triggered.
 
