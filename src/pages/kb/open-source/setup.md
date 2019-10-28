@@ -14,9 +14,10 @@ For basic deployments we recommend a minimum of 2GB of RAM and reasonable amount
 To create an instance, you have the following options:
 
 1. [AWS EC2 AMI](#aws)
-2. [Google Compute Engine Image](#gce)
-3. [Other](#other)
-4. [Docker](#docker)
+2. [DigitalOcean](#do)
+3. [Google Compute Engine Image](#gce)
+4. [Other](#other)
+5. [Docker](#docker)
 
 ### <a name="aws"></a> AWS
 
@@ -24,27 +25,32 @@ Launch the instance with the pre-baked AMI we create (for small deployments t2.s
 
 | Region | AMI |
 | ------------- | -------------|
-| us-east-1 | [ami-0c654c3ab463d22f6](https://console.aws.amazon.com/ec2/home?region=us-east-1#LaunchInstanceWizard:ami=ami-0c654c3ab463d22f6) |
-| us-east-2 | [ami-009571af26dc2a231](https://console.aws.amazon.com/ec2/home?region=us-east-2#LaunchInstanceWizard:ami=ami-009571af26dc2a231) |
-| us-west-1 | [ami-0f01ea8717350fb36](https://console.aws.amazon.com/ec2/home?region=us-west-1#LaunchInstanceWizard:ami=ami-0f01ea8717350fb36) |
-| us-west-2 | [ami-0e164aeccb29a1be7](https://console.aws.amazon.com/ec2/home?region=us-west-2#LaunchInstanceWizard:ami=ami-0e164aeccb29a1be7) |
-| eu-west-1 | [ami-0d2cad8c08ea629b5](https://console.aws.amazon.com/ec2/home?region=eu-west-1#LaunchInstanceWizard:ami=ami-0d2cad8c08ea629b5) |
-| eu-west-2 | [ami-0a33a6ac6a556f82d](https://console.aws.amazon.com/ec2/home?region=eu-west-2#LaunchInstanceWizard:ami=ami-0a33a6ac6a556f82d) |
-| eu-west-3 | [ami-000cdecb7942d1bb5](https://console.aws.amazon.com/ec2/home?region=eu-west-3#LaunchInstanceWizard:ami=ami-000cdecb7942d1bb5) |
-| eu-central-1 | [ami-026f66c6ba3cedf99](https://console.aws.amazon.com/ec2/home?region=eu-central-1#LaunchInstanceWizard:ami=ami-026f66c6ba3cedf99) |
-| ap-south-1 | [ami-06f0212e0421ac789](https://console.aws.amazon.com/ec2/home?region=ap-south-1#LaunchInstanceWizard:ami=ami-06f0212e0421ac789) |
-| ap-northeast-1 | [ami-0c7d9b740e997aa69](https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#LaunchInstanceWizard:ami=ami-0c7d9b740e997aa69) |
-| ap-northeast-2 | [ami-0666f50746c473b4e](https://console.aws.amazon.com/ec2/home?region=ap-northeast-2#LaunchInstanceWizard:ami=ami-0666f50746c473b4e) |
-| sa-east-1 | [ami-089fb47d4de9cd2ff](https://console.aws.amazon.com/ec2/home?region=sa-east-1#LaunchInstanceWizard:ami=ami-089fb47d4de9cd2ff) |
-| ca-central-1 | [ami-092f8e28acda0fb0e](https://console.aws.amazon.com/ec2/home?region=ca-central-1#LaunchInstanceWizard:ami=ami-092f8e28acda0fb0e) |
-| ap-southeast-1 | [ami-0f62f9ad30c784647](https://console.aws.amazon.com/ec2/home?region=ap-southeast-1#LaunchInstanceWizard:ami=ami-0f62f9ad30c784647) |
-| ap-southeast-2 | [ami-00174774b5620691a](https://console.aws.amazon.com/ec2/home?region=ap-southeast-2#LaunchInstanceWizard:ami=ami-00174774b5620691a) |
+| us-east-1 | [ami-0d915a031cabac0e0](https://console.aws.amazon.com/ec2/home?region=us-east-1#LaunchInstanceWizard:ami=ami-0d915a031cabac0e0) |
+| us-east-2 | [ami-0b97435028ca44fcc](https://console.aws.amazon.com/ec2/home?region=us-east-2#LaunchInstanceWizard:ami=ami-0b97435028ca44fcc) |
+| us-west-1 | [ami-068d0753a46192935](https://console.aws.amazon.com/ec2/home?region=us-west-1#LaunchInstanceWizard:ami=ami-068d0753a46192935) |
+| us-west-2 | [ami-0c457f229774da543](https://console.aws.amazon.com/ec2/home?region=us-west-2#LaunchInstanceWizard:ami=ami-0c457f229774da543) |
+| eu-west-1 | [ami-046c6a0123bf94619](https://console.aws.amazon.com/ec2/home?region=eu-west-1#LaunchInstanceWizard:ami=ami-046c6a0123bf94619) |
+| eu-west-2 | [ami-0dbe8ba0cd21ea12b](https://console.aws.amazon.com/ec2/home?region=eu-west-2#LaunchInstanceWizard:ami=ami-0dbe8ba0cd21ea12b) |
+| eu-west-3 | [ami-041bf9180061ce7ea](https://console.aws.amazon.com/ec2/home?region=eu-west-3#LaunchInstanceWizard:ami=ami-041bf9180061ce7ea) |
+| eu-central-1 | [ami-0f8184e6f30cc0c33](https://console.aws.amazon.com/ec2/home?region=eu-central-1#LaunchInstanceWizard:ami=ami-0f8184e6f30cc0c33) |
+| eu-north-1 | [ami-08dd1b893371bcaac](https://console.aws.amazon.com/ec2/home?region=eu-north-1#LaunchInstanceWizard:ami=ami-08dd1b893371bcaac) |
+| ap-south-1 | [ami-0ff23052091536db2](https://console.aws.amazon.com/ec2/home?region=ap-south-1#LaunchInstanceWizard:ami=ami-0ff23052091536db2) |
+| ap-southeast-1 | [ami-0527e82bae7c51958](https://console.aws.amazon.com/ec2/home?region=ap-southeast-1#LaunchInstanceWizard:ami=ami-0527e82bae7c51958) |
+| ap-southeast-2 | [ami-0bae8773e653a32ec](https://console.aws.amazon.com/ec2/home?region=ap-southeast-2#LaunchInstanceWizard:ami=ami-0bae8773e653a32ec) |
+| ap-northeast-1 | [ami-060741a96307668be](https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#LaunchInstanceWizard:ami=ami-060741a96307668be) |
+| ap-northeast-2 | [ami-0d991ac4f545a6b34](https://console.aws.amazon.com/ec2/home?region=ap-northeast-2#LaunchInstanceWizard:ami=ami-0d991ac4f545a6b34) |
+| sa-east-1 | [ami-076f350d5a5ec448d](https://console.aws.amazon.com/ec2/home?region=sa-east-1#LaunchInstanceWizard:ami=ami-076f350d5a5ec448d) |
+| ca-central-1 | [ami-0071deaa12b66d1bf](https://console.aws.amazon.com/ec2/home?region=ca-central-1#LaunchInstanceWizard:ami=ami-0071deaa12b66d1bf) |
 
-(the above AMIs are of version: 5.0.2)
+(the above AMIs are of version: 8.0.0)
 
 When launching the instance make sure to use a Security Group, that only allows incoming traffic on ports: 22 (SSH), 80 (HTTP) and 443 (HTTPS). These AMIs are based on Ubuntu so you will need to use the user `ubuntu` when connecting to the instance via SSH.
 
 Now proceed to “[Setup](#setup-redash-instance-setup)”.
+
+### <a name="do"></a> DigitalOcean
+
+To get started on DigitalOcean, you can use the image from DigitalOcean's Marketplace ([Redash on the Marketplace](https://marketplace.digitalocean.com/apps/redash)). Once started the Droplet, proceed to "[Setup](#setup-redash-instance-setup)".
 
 ### <a name="gce"></a> Google Compute Engine
 
@@ -53,25 +59,26 @@ To get started on GCE, run the following commands in your [Cloud Shell](https://
 First, you need to add the Redash image to your account:
 
 ```
-$ gcloud compute images create "redash-5-0-2" --source-uri gs://redash-images/redash.5.0.2-b5486-build2.tar.gz
+$ gcloud compute images create "redash-8-0-0" --source-uri gs://redash-images/redash.8.0.0-b32245-1.tar.gz
 ```
 
 Next, you need to launch an instance using this image. The `n1-standard-1` [machine type](https://cloud.google.com/compute/docs/machine-types#standard_machine_types) is recommended. You can launch an instance using the image with the command below (you may need to specify the [zone](https://cloud.google.com/compute/docs/regions-zones/#available) of the instance with the `--zone` [parameter](https://cloud.google.com/sdk/gcloud/reference/compute/instances/create#--zone)):
 
 ```
-$ gcloud compute instances create redash --image redash-5-0-2
+$ gcloud compute instances create redash --image redash-8-0-0
 ```
 
 Now proceed to “[Setup](#setup-redash-instance-setup)”.
 
+
 ### <a name="other"></a> Other
 
-The AWS and Google Compute Engine images are created using our [Setup Script](https://github.com/getredash/redash/tree/master/setup), which is designed to run on Ubuntu 18.04 server. You can either use the script as is (if you intend to run it on Ubuntu) or use it as a blueprint to create your own setup.
+The AWS, DigitalOcean and Google Compute Engine images are created using our [Setup Script](https://github.com/getredash/setup), which is designed to run on Ubuntu 18.04 server. You can either use the script as is (if you intend to run it on Ubuntu) or use it as a blueprint to create your own setup.
 
 What the script does is:
 
 1. Install Docker and Docker Compose.
-2. Download our recommended [Docker Compose configuration](https://github.com/getredash/redash/blob/master/setup/docker-compose.yml) and create initial configuration.
+2. Download our recommended [Docker Compose configuration](https://github.com/getredash/setup/blob/master/data/docker-compose.yml) and create initial configuration.
 3. Start everything.
 
 Note that the script assumes you are running it on a "clean" machine. If you’re running this script on a machine that is used for other purposes, you might want to tweak it to your needs.
@@ -82,7 +89,7 @@ For development environment setup, please refer to the [developer guide]({% link
 
 For every Redash release we also create updated [Docker image](https://hub.docker.com/r/redash/redash). Our image follows best practices and can be used in any container orchestation platforms like Kubernetes, ECS or just simply with Docker Compose (which we use in our images).
 
-To run Redash you need several instances of Redash (API server and background workers to run queries) along with Redis and PostgreSQL. If you don't want or can't use our images or [Setup Script](https://github.com/getredash/redash/tree/master/setup), you can refer to the [Docker Compose configuration](https://github.com/getredash/redash/blob/master/setup/docker-compose.yml) to understand what services you need to define.
+To run Redash you need several instances of Redash (API server and background workers to run queries) along with Redis and PostgreSQL. If you don't want or can't use our images or [Setup Script](https://github.com/getredash/setup), you can refer to the [Docker Compose configuration](https://github.com/getredash/setup/blob/master/data/docker-compose.yml) to understand what services you need to define.
 
 ## <a name="setup-redash-instance-setup"></a> Setup
 
