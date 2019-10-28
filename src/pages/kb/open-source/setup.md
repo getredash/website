@@ -54,13 +54,13 @@ To get started on GCE, run the following commands in your [Cloud Shell](https://
 First, you need to add the Redash image to your account:
 
 ```
-$ gcloud compute images create "redash-5-0-2" --source-uri gs://redash-images/redash.5.0.2-b5486-build2.tar.gz
+$ gcloud compute images create "redash-8-0-0" --source-uri gs://redash-images/redash.8.0.0-b32245-1.tar.gz
 ```
 
 Next, you need to launch an instance using this image. The `n1-standard-1` [machine type](https://cloud.google.com/compute/docs/machine-types#standard_machine_types) is recommended. You can launch an instance using the image with the command below (you may need to specify the [zone](https://cloud.google.com/compute/docs/regions-zones/#available) of the instance with the `--zone` [parameter](https://cloud.google.com/sdk/gcloud/reference/compute/instances/create#--zone)):
 
 ```
-$ gcloud compute instances create redash --image redash-5-0-2
+$ gcloud compute instances create redash --image redash-8-0-0
 ```
 
 Now proceed to “[Setup](#setup-redash-instance-setup)”.
