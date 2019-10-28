@@ -14,9 +14,10 @@ For basic deployments we recommend a minimum of 2GB of RAM and reasonable amount
 To create an instance, you have the following options:
 
 1. [AWS EC2 AMI](#aws)
-2. [Google Compute Engine Image](#gce)
-3. [Other](#other)
-4. [Docker](#docker)
+2. [DigitalOcean](#do)
+3. [Google Compute Engine Image](#gce)
+4. [Other](#other)
+5. [Docker](#docker)
 
 ### <a name="aws"></a> AWS
 
@@ -47,6 +48,10 @@ When launching the instance make sure to use a Security Group, that only allows 
 
 Now proceed to “[Setup](#setup-redash-instance-setup)”.
 
+### <a name="do"></a> DigitalOcean
+
+To get started on DigitalOcean, you can use the image from DigitalOcean's Marketplace ([Redash on the Marketplace](https://marketplace.digitalocean.com/apps/redash)). Once started the Droplet, proceed to "[Setup](#setup-redash-instance-setup)".
+
 ### <a name="gce"></a> Google Compute Engine
 
 To get started on GCE, run the following commands in your [Cloud Shell](https://console.cloud.google.com/compute/instances?cloudshell=true).
@@ -65,14 +70,15 @@ $ gcloud compute instances create redash --image redash-8-0-0
 
 Now proceed to “[Setup](#setup-redash-instance-setup)”.
 
+
 ### <a name="other"></a> Other
 
-The AWS and Google Compute Engine images are created using our [Setup Script](https://github.com/getredash/redash/tree/master/setup), which is designed to run on Ubuntu 18.04 server. You can either use the script as is (if you intend to run it on Ubuntu) or use it as a blueprint to create your own setup.
+The AWS, DigitalOcean and Google Compute Engine images are created using our [Setup Script](https://github.com/getredash/setup), which is designed to run on Ubuntu 18.04 server. You can either use the script as is (if you intend to run it on Ubuntu) or use it as a blueprint to create your own setup.
 
 What the script does is:
 
 1. Install Docker and Docker Compose.
-2. Download our recommended [Docker Compose configuration](https://github.com/getredash/redash/blob/master/setup/docker-compose.yml) and create initial configuration.
+2. Download our recommended [Docker Compose configuration](https://github.com/getredash/setup/blob/master/data/docker-compose.yml) and create initial configuration.
 3. Start everything.
 
 Note that the script assumes you are running it on a "clean" machine. If you’re running this script on a machine that is used for other purposes, you might want to tweak it to your needs.
@@ -83,7 +89,7 @@ For development environment setup, please refer to the [developer guide]({% link
 
 For every Redash release we also create updated [Docker image](https://hub.docker.com/r/redash/redash). Our image follows best practices and can be used in any container orchestation platforms like Kubernetes, ECS or just simply with Docker Compose (which we use in our images).
 
-To run Redash you need several instances of Redash (API server and background workers to run queries) along with Redis and PostgreSQL. If you don't want or can't use our images or [Setup Script](https://github.com/getredash/redash/tree/master/setup), you can refer to the [Docker Compose configuration](https://github.com/getredash/redash/blob/master/setup/docker-compose.yml) to understand what services you need to define.
+To run Redash you need several instances of Redash (API server and background workers to run queries) along with Redis and PostgreSQL. If you don't want or can't use our images or [Setup Script](https://github.com/getredash/setup), you can refer to the [Docker Compose configuration](https://github.com/getredash/setup/blob/master/data/docker-compose.yml) to understand what services you need to define.
 
 ## <a name="setup-redash-instance-setup"></a> Setup
 
