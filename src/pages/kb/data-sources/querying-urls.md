@@ -34,7 +34,7 @@ This will return the result of the above API call as is.
 ### Return a single object
 
 ```yaml
-url: https://api.github.com/repos/getredash/redash
+url: https://api.github.com/repos/getredash/redash/issues/3495
 ```
 
 The above API call returns a single object, and this object is being converted to a row.
@@ -54,7 +54,7 @@ fields: [number, title]
 
 ### Return an inner object
 
-Many JSON API's can return nested objects. You can access a nested object with the `path` key.
+Many JSON API's return arrays of nested objects. You can access an object in an array with the `path` key.
 
 ```yaml
 url: https://api.github.com/repos/getredash/redash/issues/3495
