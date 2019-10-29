@@ -4,6 +4,7 @@ parent_category: user-guide
 helpscout_url: 
 title: Alert Destinations
 slug: creating-new-alert-destination
+order: 3
 ---
 
 Redash supports a vast amount of Alert Destinations.
