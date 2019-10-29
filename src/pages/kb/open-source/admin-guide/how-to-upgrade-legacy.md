@@ -10,6 +10,10 @@ slug: how-to-upgrade-legacy
 This instructions are for those who use our older instace that did not use Docker. If you use our new Docker based instance, check the [updated guide]({% link _kb/open-source/admin-guide/how-to-upgrade.md %}).
 {% endcallout %}
 
+{% callout important %}
+**Starting from the Redash V8 release we're no longer building the tarball version of a release – only Docker images.** This of course doesn’t prevent you from deploying Redash anyway you want, but the `bin/upgrade` script won't work with the new releases.
+{% endcallout %}
+
 It's recommended to upgrade your Redash instance once there are new releases, to benefit from new features and bug fixes. The upgrade process is relatively simple, and assuming you used one of the base images we provide, you can simply run the upgrade script. **If you have a custom deployment, you can use the upgrade script as reference to create your own process**.
 
 {% callout danger %}
