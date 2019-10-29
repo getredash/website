@@ -51,7 +51,7 @@ Prior to Redash version 7, the parameter settings pane in the Query Editor inclu
 
 {% callout danger %}
 
-Query Parameters only work within Redash and are not supported in embeds or shared dashboards. Also, a Redash user must have [Full Access]({% link _kb/user-guide/users/permissions-groups.md %}) permission to the data source to use Query Parameters.
+A Redash user must have [Full Access]({% link _kb/user-guide/users/permissions-groups.md %}) permission to the data source to use Query Parameters.
 
 {% endcallout %}
 
