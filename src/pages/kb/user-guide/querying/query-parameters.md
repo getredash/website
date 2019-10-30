@@ -39,7 +39,7 @@ You can discover the key shortcut on your operating system by hovering your curs
 
 You can open a parameter's settings pane by clicking the cog icon on the left:
 
-<img src="/assets/images/docs/gitbook/query-parameter-modalv6.png" width="100%">
+<img src="/assets/images/docs/gitbook/query-parameter-modalv6.png" >
 
 - **Title** : by default the parameter title will be the same as the keyword in the query text. If you want to give it a friendlier name, you can change it here.
 - **Type** : each parameter starts as a Text type. Supported types are Text, Number, Date, Date and Time, Date and Time (with Seconds), and Dropdown List.
@@ -94,9 +94,23 @@ returned this data:
 
 Redash's dropdown list widget would look like this:
 
-<img src="/assets/images/docs/gitbook/dropdown-list-name-value.png" width="100%" alt="The widget shows John Smith, Jane Doe and Bobby Tables">
+<img src="/assets/images/docs/gitbook/dropdown-list-name-value.png"  alt="The widget shows John Smith, Jane Doe and Bobby Tables">
 
 But when Redash executes the query, the value passed to the database would be 1001, 1002 or 1003.
+
+#### Serialized Multi-Select
+
+Dropdown lists can also be serialized to allow for multi-select. Just toggle the **Allow multiple values** option and choose whether or not to wrap the parameters with single quotes or double-quotes.
+
+<img src="/assets/images/docs/gitbook/multi-select-dropdown.png">
+
+In your query, change your `WHERE` clause to use the `IN` keyword.
+
+```
+SELECT ...
+FROM   ...
+WHERE field IN ( {{ Multi Select Parameter }} )
+```
 
 ### FAQ
 
@@ -139,12 +153,6 @@ Prior to Version 8 of Redash, parameters were not allowed in embedded visualizat
 {% endcallout %}
 
 ## Parameter Mapping on Dashboards
-
-{% callout %}
-
-This is currently available on [Hosted Redash](https://app.redash.io/) and is part of the next Open Source release (v7.0).
-
-{% endcallout %}
 
 Query Parameters can also be powerfully controlled within dashboards. You can link together parameters on different widgets, set static parameter values, or choose values individually for each widget.
 
