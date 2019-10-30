@@ -67,6 +67,12 @@ For queries that must select data between two dates, Redash provides three level
 
 Date Range parameters behave exactly like Date parameters but are meant to save you time.
 
+#### Quick Date and Date-Range Options
+
+When you add a Date or Date Range parameter to your query, the selection widget shows a blue lightning bolt glyph. Click it to see dynamic values like "last month", "yesterday", or "last year". These values updated dynamically every day.
+
+![](/assets/images/docs/gitbook/quick-date-range.png)
+
 ### Dropdown Lists
 
 If you want to restrict the scope of possible parameter values when running a query, you can use Redash's `Dropdown List` parameter type. When selected from the parameter settings panel, a text box appears where you can enter your allowed values, each one separated by a new line. Dropdown lists are `Text` parameters under the hood, so if you want to use dates/datetimes in your dropdown, you should enter them in the format your data source requires.
@@ -111,6 +117,10 @@ SELECT ...
 FROM   ...
 WHERE field IN ( {{ Multi Select Parameter }} )
 ```
+
+The parameter multi-selection widget let you pass extra values to the database.
+
+<img src="/assets/images/docs/gitbook/multi-select.png" >
 
 ### FAQ
 
