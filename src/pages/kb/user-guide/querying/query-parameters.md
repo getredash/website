@@ -51,7 +51,7 @@ Prior to Redash version 7, the parameter settings pane in the Query Editor inclu
 
 {% callout danger %}
 
-A Redash user must have [Full Access]({% link _kb/user-guide/users/permissions-groups.md %}) permission to the data source to use Query Parameters.
+For security reasons, a Redash user must have [Full Access]({% link _kb/user-guide/users/permissions-groups.md %}) permission to the data source to use Text-type Query Parameters. Other types such as Date, Date Range, Number or Dropdown list are available to all users.
 
 {% endcallout %}
 
