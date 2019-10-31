@@ -16,7 +16,7 @@ Whenever an Alert triggers, it sends a blob of related data (called the Alert Te
 
 {% callout warning %}
 
-Because custom Alert Destinations are able to send sensitive information to services outside of Redash, only Admins can add new alert destinations. Destinations are available to all users once configured.
+Only Admins can add new alert destinations. Destinations are available to all users once configured.
 
 {% endcallout %}
 
