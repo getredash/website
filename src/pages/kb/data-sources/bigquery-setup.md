@@ -14,7 +14,7 @@ On the BigQuery Data Source setup screen, the **Project ID** and **JSON Key File
 
 + If your database schema exceeds \~2500 tokens, untick the **Load Schema** box to stop Redash from loading it to the Query Editor screen. Many browsers will slow down or crash if the schema is too big.
 
-+ Since BigQuery 2.0, BigQuery supports SQL syntax (now called Legacy SQL) or [Standard SQL Syntax](https://cloud.google.com/bigquery/docs/reference/standard-sql/migrating-from-legacy-sql). Redash supports both, but Standard SQL is the default.  This preference applies at the Data Source-level by toggling the **Use Standard SQL** box. Your selection here is passed to BigQuery along with your query text. If some of your queries use Legacy SQL and others use Standard SQL, you can create two data sources.
++ Since BigQuery 2.0, BigQuery supports its Legacy SQL syntax or [Standard SQL Syntax](https://cloud.google.com/bigquery/docs/reference/standard-sql/migrating-from-legacy-sql). Redash supports both, but Standard SQL is the default.  This preference applies at the Data Source-level by toggling the **Use Standard SQL** box. Your selection here is passed to BigQuery along with your query text. If some of your queries use Legacy SQL and others use Standard SQL, you can create two data sources.
 
 + You can read more about **Processing Location** [here](https://cloud.google.com/bigquery/docs/locations). If you receive a job not found error that looks like this: `Not found: Job <project_id>:<job_id>`, check that your Processing Location is correct.
 
