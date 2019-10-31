@@ -79,7 +79,7 @@ and fill out the details using the information from the previous step:
 
 {% callout info %}
 
-If you have trouble refreshing the Athena data source schema, toggle **Use Glue Data Catalog** under the Additional Settings menu.
+If you have trouble refreshing the Athena data source schema, check whether you're using [AWS Glue](https://docs.aws.amazon.com/athena/latest/ug/glue-athena.html). If so you should toggle **Use Glue Data Catalog** under the Additional Settings menu.
 
 {% endcallout %}
 
