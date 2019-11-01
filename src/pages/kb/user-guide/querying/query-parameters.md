@@ -39,7 +39,7 @@ You can discover the key shortcut on your operating system by hovering your curs
 
 You can open a parameter's settings pane by clicking the cog icon on the left:
 
-<img src="/assets/images/docs/gitbook/query-parameter-modalv6.png" width="100%">
+<img src="/assets/images/docs/gitbook/query-parameter-modalv6.png" >
 
 - **Title** : by default the parameter title will be the same as the keyword in the query text. If you want to give it a friendlier name, you can change it here.
 - **Type** : each parameter starts as a Text type. Supported types are Text, Number, Date, Date and Time, Date and Time (with Seconds), and Dropdown List.
@@ -51,7 +51,7 @@ Prior to Redash version 7, the parameter settings pane in the Query Editor inclu
 
 {% callout danger %}
 
-Query Parameters only work within Redash and are not supported in embeds or shared dashboards. Also, a Redash user must have [Full Access]({% link _kb/user-guide/users/permissions-groups.md %}) permission to the data source to use Query Parameters.
+For security reasons, a Redash user must have [Full Access]({% link _kb/user-guide/users/permissions-groups.md %}) permission to the data source to use Text-type Query Parameters. Other types such as Date, Date Range, Number or Dropdown list are available to all users.
 
 {% endcallout %}
 
@@ -66,6 +66,12 @@ If you are using Query Parameters of type `Date`, you can set the parameter's de
 For queries that must select data between two dates, Redash provides three levels of Date / Time Range parameters. When chosen from the parameters settings screen, Redash places two complete parameters into your query: one for the start date and one for the end date. You will typically need to separate them in your query (into different `WHERE` clauses, e.g.). However, the parameter selection interface below the query window displays a unified widget to easily chose a date range without unnecessary clicking.
 
 Date Range parameters behave exactly like Date parameters but are meant to save you time.
+
+#### Quick Date and Date-Range Options
+
+When you add a Date or Date Range parameter to your query, the selection widget shows a blue lightning bolt glyph. Click it to see dynamic values like "last month", "yesterday", or "last year". These values updated dynamically every day.
+
+![](/assets/images/docs/gitbook/quick-date-range.png)
 
 ### Dropdown Lists
 
@@ -94,9 +100,27 @@ returned this data:
 
 Redash's dropdown list widget would look like this:
 
-<img src="/assets/images/docs/gitbook/dropdown-list-name-value.png" width="100%" alt="The widget shows John Smith, Jane Doe and Bobby Tables">
+<img src="/assets/images/docs/gitbook/dropdown-list-name-value.png"  alt="The widget shows John Smith, Jane Doe and Bobby Tables">
 
 But when Redash executes the query, the value passed to the database would be 1001, 1002 or 1003.
+
+#### Serialized Multi-Select
+
+Dropdown lists can also be serialized to allow for multi-select. Just toggle the **Allow multiple values** option and choose whether or not to wrap the parameters with single quotes or double-quotes.
+
+<img src="/assets/images/docs/gitbook/multi-select-dropdown.png">
+
+In your query, change your `WHERE` clause to use the `IN` keyword.
+
+```
+SELECT ...
+FROM   ...
+WHERE field IN ( {{ Multi Select Parameter }} )
+```
+
+The parameter multi-selection widget let you pass extra values to the database.
+
+<img src="/assets/images/docs/gitbook/multi-select.png" >
 
 ### FAQ
 
@@ -139,12 +163,6 @@ Prior to Version 8 of Redash, parameters were not allowed in embedded visualizat
 {% endcallout %}
 
 ## Parameter Mapping on Dashboards
-
-{% callout %}
-
-This is currently available on [Hosted Redash](https://app.redash.io/) and is part of the next Open Source release (v7.0).
-
-{% endcallout %}
 
 Query Parameters can also be powerfully controlled within dashboards. You can link together parameters on different widgets, set static parameter values, or choose values individually for each widget.
 

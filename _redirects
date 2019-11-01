@@ -65,3 +65,6 @@
 /help/data-sources/querying-urls /help/data-sources/querying/urls
 /help/data-sources/querying-jira /help/data-sources/querying/jira
 /help/data-sources/supported-data-sources /help/data-sources/setup/supported-data-sources
+
+/help/user-guide/alerts/slack-alert-destination /help/user-guide/alerts/creating-new-alert-destination
+/help/user-guide/alerts/pagerduty-alert-destination /help/user-guide/alerts/creating-new-alert-destination

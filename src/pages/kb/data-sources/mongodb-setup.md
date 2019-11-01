@@ -24,7 +24,14 @@ You might notice that there is a separate field for the DB Name in the data
 source configuration and we also include it in the connection string. This is
 usually required on shared hosts like MLab.
 
-### Troubleshooting
+## MongoDB Atlas
+
+We've had issues with users connecting to MongoDB Atlas free tier accounts because they are on a shared environment. For best results, use a connection string of the format:
+
+`mongodb+srv://<user>:<password>@<subdomain>.mongodb.net/<database>?retryWrites=true`
+
+
+## Troubleshooting
 
 **Error: "SSL handshake failed: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed"**
 
