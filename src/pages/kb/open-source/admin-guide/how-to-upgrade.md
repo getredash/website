@@ -7,10 +7,29 @@ slug: how-to-upgrade
 ---
 
 {% callout important %}
-This instructions are for those who use our new Docker based instance. If you use our older instances (or used the old bootstrap script), check the [legacy guide]({% link _kb/open-source/admin-guide/how-to-upgrade-legacy.md %}).
+
+These instructions are for users of our new Docker-based instance. If you run our older instances (or the old bootstrap script) check the [legacy guide]({% link _kb/open-source/admin-guide/how-to-upgrade-legacy.md %}).
+
 {% endcallout %}
 
-It's recommended to upgrade your Redash instance, once there is a new release, to benefit from new features and bug fixes. These instructions assume you used our images to setup Redash, but even if you haven't they provide enough information to apply it to your setup.
+We recommended you upgrade your Redash instance to the latest release so you can benefit from new features and bug fixes. This document assumes you used our images to set up your instance of Redash.
+
+For best results you should upgrade Redash by one semantic version at a time. To move from V4 to V7, for example, you should upgrade V4 to V5 to V6 to V7. Below is a table of recent docker release images for your reference:
+
+| released_at  | version | docker_image               | 
+|--------------|---------|----------------------------| 
+| 2019-10-27   | 8.0.0   | redash/redash:8.0.0.b32245 | 
+| 2019-03-17   | 7.0.0   | redash/redash:7.0.0.b18042 | 
+| 2018-12-17   | 6.0.0   | redash/redash:6.0.0.b8537  | 
+| 2018-10-18   | 5.0.2   | redash/redash:5.0.2.b5486  | 
+| 2018-09-27   | 5.0.1   | redash/redash:5.0.1.b4850  | 
+
+{% callout warning %}
+
+If you are currently running an instance of Redash prior to V7, **do not upgrade directly to V8**. Upgrade semantically to V7 _first_. Read more about this on our forum [here](https://discuss.redash.io/t/database-migration-using-incorrect-key-for-encryption/4833). 
+
+{% endcallout %}
+
 
 ## Upgrade Process
 
