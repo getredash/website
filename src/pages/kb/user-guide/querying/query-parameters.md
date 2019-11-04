@@ -63,7 +63,7 @@ If you are using Query Parameters of type `Date`, you can set the parameter's de
 
 #### Date Range Parameters
 
-Try Date Range parameters if you need to query data between two points in time. There are three types to pick from: Date, Date Time, and Date Time with seconds.
+Try Date Range parameters if you need to query data between two points in time. There are three types to pick from: Date, Date and Time, and Date and Time with seconds.
 
 When you pick a date range type from the parameter creation dialgoue, Redash adds two parameter markers to your query called `.start` and `.end`. You can separate them in your query however the syntax requires (generally into different `WHERE` clauses).
 
@@ -163,7 +163,21 @@ We use two parameters: `{{org_id}}` and `{{start_date}}`.
 
 **Can I use parameters in embedded visualizations?**
 
-Yes, with one exception. If a query uses a Text type parameter, it cannot be embedded because Text parameters are not safe from SQL injection. All other types of query parameters can be safely embedded in visualizations.
+Yes, with one exception. If a query uses a Text type parameter it cannot be embedded because Text parameters are not safe from SQL injection. All other types of query parameters can be safely embedded in visualizations.
+
+| Parameter Type                | Safe for Embedding? | 
+|-------------------------------|---------------------| 
+| Text                          | No                  | 
+| Number                        | Yes                 | 
+| Dropdown List                 | Yes                 | 
+| Query Based Dropdown List     | Yes                 | 
+| Date                          | Yes                 | 
+| Date and Time                 | Yes                 | 
+| Date and Time w/Seconds       | Yes                 | 
+| Date Range                    | Yes                 | 
+| Date and Time Range           | Yes                 | 
+| Date and Time Range w/Seconds | Yes                 | 
+
 
 **Can I use parameters in shared dashboards?**
 
