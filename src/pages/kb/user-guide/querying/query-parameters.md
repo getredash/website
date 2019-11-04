@@ -63,9 +63,22 @@ If you are using Query Parameters of type `Date`, you can set the parameter's de
 
 #### Date Range Parameters
 
-For queries that must select data between two dates, Redash provides three levels of Date / Time Range parameters. When chosen from the parameters settings screen, Redash places two complete parameters into your query: one for the start date and one for the end date. You will typically need to separate them in your query (into different `WHERE` clauses, e.g.). However, the parameter selection interface below the query window displays a unified widget to easily chose a date range without unnecessary clicking.
+Try Date Range parameters if you need to query data between two points in time. There are three types to pick from: Date, Date Time, and Date Time with seconds.
 
-Date Range parameters behave exactly like Date parameters but are meant to save you time.
+When you pick a date range type from the parameter creation dialgoue, Redash adds two parameter markers to your query called `.start` and `.end`. You can separate them in your query however the syntax requires (generally into different `WHERE` clauses).
+
+```
+SELECT a, b c
+FROM table1
+WHERE
+	relevant_date >= '{{ myDate.start }}'
+	AND table1.relevant_date <= '{{ myDate.end }}'
+```
+
+Conveniently, the parameter value picker below the query window displays a unified widget. Date Range parameters behave exactly like Date parameters but are meant to save you time.
+
+![](/assets/images/docs/gitbook/date-range-picker.png)
+
 
 #### Quick Date and Date-Range Options
 
