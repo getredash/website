@@ -11,19 +11,24 @@ slug: query-parameters
 toc: true
 ---
 
-Unless specific to a one-time project, most queries can be reused by changing a `WHERE` clause (or filter block in NoSQL) to suit the present need. Yet it can be a hassle to `Edit Source` every time you make a minor change. Query Parameters let you insert values at run time without editing your base query. The syntax is straightforward: Redash recognizes any string between double curly braces <code> {{ }} </code> as a Query Parameter.
+With parameters you can substitute values into your query at runtime without having to **Edit Source**. Any string between double curly braces `{{ }}` will be treated like a parameter. A widget will appear above the results pane so you change the parameter value. 
+<!--
+```
+SELECT
+	users.name,
+	users.account_id,
+	users.details
+FROM
+	users
+WHERE
+	users.email_address ILIKE '%{{ search_term }}%'
+```
+-->
+<img src="/assets/images/docs/gitbook/parameter-example.png">
 
-{% raw %}
-SELECT count(0)
-FROM events
-WHERE action = '{{ keyword }}'
-{% endraw %}
+In editing mode, you can click the gear icon for each parameter widget to adjust its settings. The gear icons disappear when you click **Show Data Only** so that users who don't own the query can't change the parameter behavior.
 
-In the above example <code>{{ keyword }}</code> is the Query Parameter. To change the value of the parameter, Redash places an input box above the results pane. The contents of this input box are passed to the database instead of the double curly braces whenever you execute the query.
-
-<img src="/assets/images/docs/gitbook/query-parameter.png" width="100%">
-
-<br> 
+<img src="/assets/images/docs/gitbook/query-parameter-widgets.png">
 
 ## Add A Parameter From The UI
 
@@ -37,12 +42,13 @@ You can discover the key shortcut on your operating system by hovering your curs
 
 ### Parameter Settings
 
-You can open a parameter's settings pane by clicking the cog icon on the left:
-
-<img src="/assets/images/docs/gitbook/query-parameter-modalv6.png" >
+Click the gear icon beside each parameter widget to edit its settings:
 
 - **Title** : by default the parameter title will be the same as the keyword in the query text. If you want to give it a friendlier name, you can change it here.
 - **Type** : each parameter starts as a Text type. Supported types are Text, Number, Date, Date and Time, Date and Time (with Seconds), and Dropdown List.
+
+<img src="/assets/images/docs/gitbook/parameter-modal-v9.png" >
+
 
 {% callout info %}
 Prior to Redash version 7, the parameter settings pane in the Query Editor included a `Global` tickbox, which notified Redash that you intended to use this parameter across multiple widgets in a dashboard. The `Global` tickbox has been replaced since version 6 with the new *Parameter Mapping on Dashboards* functionality described below.
