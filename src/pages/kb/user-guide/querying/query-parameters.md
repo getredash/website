@@ -167,9 +167,9 @@ WHERE org_id = {{org_id}} AND created_at > '{{start_date}}'
 
 We use two parameters: `{{org_id}}` and `{{start_date}}`.
 
-**Can I use parameters in embedded visualizations?**
+**Can I use parameters in embedded visualizations and shared dashboards?**
 
-Yes, with one exception. If a query uses a Text type parameter it cannot be embedded because Text parameters are not safe from SQL injection. All other types of query parameters can be safely embedded in visualizations.
+Yes, with one exception. If a query uses a Text type parameter it cannot be embedded because Text parameters are not safe from SQL injection. All other types of query parameters can be used safely in embedded visualizations and dashboards.
 
 | Parameter Type                | Safe for Embedding? | 
 |-------------------------------|---------------------| 
@@ -183,11 +183,6 @@ Yes, with one exception. If a query uses a Text type parameter it cannot be embe
 | Date Range                    | Yes                 | 
 | Date and Time Range           | Yes                 | 
 | Date and Time Range w/Seconds | Yes                 | 
-
-
-**Can I use parameters in shared dashboards?**
-
-No. Dashboards that use query parameters can only be viewed by logged-in Redash users.
 
 {% callout info %}
 
