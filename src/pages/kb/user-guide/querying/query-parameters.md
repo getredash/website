@@ -204,14 +204,14 @@ You select your desired parameter mapping when adding dashboard widgets that dep
 <img src="/assets/images/docs/gitbook/dashboard_parameter_mapping.png" width="100%">
 
 {% callout info %}
-You can also access the parameter mapping interface by clicking the three dots on the top right of a dashboard widget, then clicking `Edit Parameters`.
+You can also access the parameter mapping interface by clicking the vertical ellipsis (`⋮`) on the top right of a dashboard widget then clicking **Edit Parameters**.
 {% endcallout %}
 
 + **Title** is the display name for your parameter and will appear beside the value selector on your dashboard. It defaults to the parameter keyword (see next bullet). Edit it by clicking the pencil glyph. Note that a titles are not displayed for static dashboard parameters because the value selector is hidden. If you select `Static value` as your Value Source then the Title field will be grayed out.
 
 + **Keyword** is the string literal for this parameter in the underlying query. This is useful for debugging if your dashboard does not return expected results.
 
-+ **Default Value** is what Redash will use if no other value is specified.
++ **Default Value** is what Redash will use if no other value is specified. To change this from the query screen, execute the query with your desired parameter value and click the **Save** button.
 
 + **Value Source** is where you choose your preferred mapping. Click the pencil glyph to open the mapper settings.
 
