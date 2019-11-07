@@ -88,7 +88,7 @@ Conveniently, the parameter value picker below the query window displays a unifi
 
 #### Quick Date and Date-Range Options
 
-When you add a Date or Date Range parameter to your query, the selection widget shows a blue lightning bolt glyph. Click it to see dynamic values like "last month", "yesterday", or "last year". These values updated dynamically every day.
+When you add a Date or Date Range parameter to your query, the selection widget shows a blue lightning bolt glyph. Click it to see dynamic values like "last month", "yesterday", or "last year". These values update dynamically every day.
 
 ![](/assets/images/docs/gitbook/quick-date-range.png)
 
