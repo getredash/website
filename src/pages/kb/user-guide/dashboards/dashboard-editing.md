@@ -69,7 +69,7 @@ Even large dashboards should load quickly because they fetch their data from a c
 
 To force a refresh, click the Refresh button on the upper-right of the dashboard editor. This runs all the dashboard queries and updates its visualizations.
 
-If you want this to happen periodically you can activate Automatic Dashboard Refresh from the UI by clicking the dropdown pictured below. Or you can pass a `refresh` query string variable with your dashboard URL. The allowed refresh intervals are expressed in seconds: 60,300,600,1800,3600,43200, 86400.
+If you want this to happen periodically you can activate Automatic Dashboard Refresh from the UI by clicking the dropdown pictured below. Or you can pass a `refresh` query string variable with your dashboard URL. The allowed refresh intervals are expressed in seconds: 60, 300, 600, 1800, 3600, 43200, and 86400.
 
 ![](/assets/images/docs/gitbook/dashboard-refresh.png)
 
@@ -79,4 +79,6 @@ Automatic Dashboard Refresh occurs as part of the Redash frontend application. Y
 
 {% endcallout %}
 
-Importantly for users accessing a public dashboard, the Refresh button will **not** execute the underlying queries. It just checks the cache and updates the dashboard if it finds newer results. The only way that visitors to a public dashboard will see refreshed data is if a logged-in Redash user executes the underlying queries or if a query schedule is in effect.
+On public dashboards there is no Refresh button. You can add `refresh` to the query string. And for dashboards with parameters you can trigger a refresh by changing a parameter value and clicking **Apply Changes**. 
+
+![](/assets/images/docs/gitbook/public-dashboard-refresh.png)
