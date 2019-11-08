@@ -37,7 +37,7 @@ to load the second. That's the whole query. Leave out any SQL at this point.
 {% callout info %}
 **What is the Spreadsheet ID?**
 
-You can find your Spreadsheet ID in its URL. So for example, if the spreadsheet URL is:
+You can find your Spreadsheet ID in its URL. So if the spreadsheet URL is:
 
 
 	https://docs.google.com/spreadsheets/d/
@@ -56,10 +56,13 @@ This procedure might fail if your organization has restrictions on sharing sprea
 
 {% endcallout %}
 
-### Filtering The Data
+## Filtering The Data
 
 When you connect a Google Sheet with Redash, we load it in full. You can generate visualizations from the data and add it to your dashboards. If you want to filter some data or aggregate it beyond what a pivot table can accomplish, you can use one of the following methods:
 
-  * Use the ["Query Results" data source]({% link _kb/user-guide/querying/query-results-data-source.md %}), which allows you to run queries on top of existing queries.
+  * Use the [Query Results Data Source]({% link _kb/user-guide/querying/query-results-data-source.md %}) which allows you to query results from other queries.
   * Use [Google BigQuery's integration with Google Drive](https://cloud.google.com/blog/big-data/2016/05/bigquery-integrates-with-google-drive) to create a Google BigQuery external table based on the Google Spreadsheet.
 
+## A Note About Dates
+
+Redash uses [Python-datutil](https://dateutil.readthedocs.io/en/stable/) to parse dates from Google Spreadsheets. If you experience issues where Redash parses the date incorrectly, try adjusting the date formatting in your sheet to ISO8601 or one of the formats shown [here](https://dateutil.readthedocs.io/en/stable/examples.html#parse-examples).

@@ -55,12 +55,16 @@ Auto Complete looks for schema tokens, query syntax identifiers (like `SELECT` o
 
 ## Published vs Unpublished Queries
 
-By default each query starts as an unpublished draft, which means that:
+By default each query starts as an unpublished draft named **New Query**. It can't be included on dashboards or used with alerts.
 
-- Only the user who created this query can see it in the "All Queries" list or in search results.
-- You can't add visualizations from an unpublished query to dashboards or use it in alerts.
+To publish a query, change its name or click the `Publish` button. You can toggle the published status by clicking the `Unpublish` button. Unpublishing a query will not remove it from dashboards or alerts. But it will prevent you from adding it to any others.
 
-To publish a query, give it a name or click the `Publish` button. It's also possible to unpublish a published query by clicking on the `Unpublish` button in the query menu.
+{% callout info %}
+
+Publishing or un-publishing a query does not affect its visibility. 
+All queries in your organization are visible to all logged-in users. 
+
+{% endcallout %}
 
 
 ## Archiving a Query

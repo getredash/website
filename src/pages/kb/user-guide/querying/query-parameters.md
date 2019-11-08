@@ -11,19 +11,24 @@ slug: query-parameters
 toc: true
 ---
 
-Unless specific to a one-time project, most queries can be reused by changing a `WHERE` clause (or filter block in NoSQL) to suit the present need. Yet it can be a hassle to `Edit Source` every time you make a minor change. Query Parameters let you insert values at run time without editing your base query. The syntax is straightforward: Redash recognizes any string between double curly braces <code> {{ }} </code> as a Query Parameter.
+With parameters you can substitute values into your query at runtime without having to **Edit Source**. Any string between double curly braces `{{ }}` will be treated like a parameter. A widget will appear above the results pane so you change the parameter value. 
+<!--
+```
+SELECT
+	users.name,
+	users.account_id,
+	users.details
+FROM
+	users
+WHERE
+	users.email_address ILIKE '%{{ search_term }}%'
+```
+-->
+<img src="/assets/images/docs/gitbook/parameter-example.png">
 
-{% raw %}
-SELECT count(0)
-FROM events
-WHERE action = '{{ keyword }}'
-{% endraw %}
+In editing mode, you can click the gear icon for each parameter widget to adjust its settings. The gear icons disappear when you click **Show Data Only** so that users who don't own the query can't change the parameter behavior.
 
-In the above example <code>{{ keyword }}</code> is the Query Parameter. To change the value of the parameter, Redash places an input box above the results pane. The contents of this input box are passed to the database instead of the double curly braces whenever you execute the query.
-
-<img src="/assets/images/docs/gitbook/query-parameter.png" width="100%">
-
-<br> 
+<img src="/assets/images/docs/gitbook/query-parameter-widgets.png">
 
 ## Add A Parameter From The UI
 
@@ -37,12 +42,13 @@ You can discover the key shortcut on your operating system by hovering your curs
 
 ### Parameter Settings
 
-You can open a parameter's settings pane by clicking the cog icon on the left:
-
-<img src="/assets/images/docs/gitbook/query-parameter-modalv6.png" >
+Click the gear icon beside each parameter widget to edit its settings:
 
 - **Title** : by default the parameter title will be the same as the keyword in the query text. If you want to give it a friendlier name, you can change it here.
 - **Type** : each parameter starts as a Text type. Supported types are Text, Number, Date, Date and Time, Date and Time (with Seconds), and Dropdown List.
+
+<img src="/assets/images/docs/gitbook/parameter-modal-v9.png" >
+
 
 {% callout info %}
 Prior to Redash version 7, the parameter settings pane in the Query Editor included a `Global` tickbox, which notified Redash that you intended to use this parameter across multiple widgets in a dashboard. The `Global` tickbox has been replaced since version 6 with the new *Parameter Mapping on Dashboards* functionality described below.
@@ -63,13 +69,26 @@ If you are using Query Parameters of type `Date`, you can set the parameter's de
 
 #### Date Range Parameters
 
-For queries that must select data between two dates, Redash provides three levels of Date / Time Range parameters. When chosen from the parameters settings screen, Redash places two complete parameters into your query: one for the start date and one for the end date. You will typically need to separate them in your query (into different `WHERE` clauses, e.g.). However, the parameter selection interface below the query window displays a unified widget to easily chose a date range without unnecessary clicking.
+Try Date Range parameters if you need to query data between two points in time. There are three types to pick from: Date, Date and Time, and Date and Time with seconds.
 
-Date Range parameters behave exactly like Date parameters but are meant to save you time.
+When you pick a date range type from the parameter creation dialgoue, Redash adds two parameter markers to your query called `.start` and `.end`. You can separate them in your query however the syntax requires (generally into different `WHERE` clauses).
+
+```
+SELECT a, b c
+FROM table1
+WHERE
+	relevant_date >= '{{ myDate.start }}'
+	AND table1.relevant_date <= '{{ myDate.end }}'
+```
+
+Conveniently, the parameter value picker below the query window displays a unified widget. Date Range parameters behave exactly like Date parameters but are meant to save you time.
+
+![](/assets/images/docs/gitbook/date-range-picker.png)
+
 
 #### Quick Date and Date-Range Options
 
-When you add a Date or Date Range parameter to your query, the selection widget shows a blue lightning bolt glyph. Click it to see dynamic values like "last month", "yesterday", or "last year". These values updated dynamically every day.
+When you add a Date or Date Range parameter to your query, the selection widget shows a blue lightning bolt glyph. Click it to see dynamic values like "last month", "yesterday", or "last year". These values update dynamically every day.
 
 ![](/assets/images/docs/gitbook/quick-date-range.png)
 
@@ -148,13 +167,22 @@ WHERE org_id = {{org_id}} AND created_at > '{{start_date}}'
 
 We use two parameters: `{{org_id}}` and `{{start_date}}`.
 
-**Can I use parameters in embedded visualizations?**
+**Can I use parameters in embedded visualizations and shared dashboards?**
 
-Yes, with one exception. If a query uses a Text type parameter, it cannot be embedded because Text parameters are not safe from SQL injection. All other types of query parameters can be safely embedded in visualizations.
+Yes, with one exception. If a query uses a Text type parameter it cannot be embedded because Text parameters are not safe from SQL injection. All other types of query parameters can be used safely in embedded visualizations and dashboards.
 
-**Can I use parameters in shared dashboards?**
-
-No. Dashboards that use query parameters can only be viewed by logged-in Redash users.
+| Parameter Type                | Safe for Embedding? | 
+|-------------------------------|---------------------| 
+| Text                          | No                  | 
+| Number                        | Yes                 | 
+| Dropdown List                 | Yes                 | 
+| Query Based Dropdown List     | Yes                 | 
+| Date                          | Yes                 | 
+| Date and Time                 | Yes                 | 
+| Date and Time w/Seconds       | Yes                 | 
+| Date Range                    | Yes                 | 
+| Date and Time Range           | Yes                 | 
+| Date and Time Range w/Seconds | Yes                 | 
 
 {% callout info %}
 
@@ -171,14 +199,14 @@ You select your desired parameter mapping when adding dashboard widgets that dep
 <img src="/assets/images/docs/gitbook/dashboard_parameter_mapping.png" width="100%">
 
 {% callout info %}
-You can also access the parameter mapping interface by clicking the three dots on the top right of a dashboard widget, then clicking `Edit Parameters`.
+You can also access the parameter mapping interface by clicking the vertical ellipsis (`⋮`) on the top right of a dashboard widget then clicking **Edit Parameters**.
 {% endcallout %}
 
 + **Title** is the display name for your parameter and will appear beside the value selector on your dashboard. It defaults to the parameter keyword (see next bullet). Edit it by clicking the pencil glyph. Note that a titles are not displayed for static dashboard parameters because the value selector is hidden. If you select `Static value` as your Value Source then the Title field will be grayed out.
 
 + **Keyword** is the string literal for this parameter in the underlying query. This is useful for debugging if your dashboard does not return expected results.
 
-+ **Default Value** is what Redash will use if no other value is specified.
++ **Default Value** is what Redash will use if no other value is specified. To change this from the query screen, execute the query with your desired parameter value and click the **Save** button.
 
 + **Value Source** is where you choose your preferred mapping. Click the pencil glyph to open the mapper settings.
 
