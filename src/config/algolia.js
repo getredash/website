@@ -14,7 +14,7 @@ const query = `{
         headings {
           value
         }
-        text: excerpt
+        text: rawMarkdownBody
       }
     }
   }
@@ -37,7 +37,7 @@ function transformer({ data }) {
       title: edge.node.frontmatter.title,
       parent_category: edge.node.frontmatter.parent_category,
       category: edge.node.frontmatter.category,
-      text: edge.node.frontmatter.description || edge.node.text,
+      text: edge.node.text,
       headings: edge.node.headings.map(heading => heading.value),
       objectID: aritclePath(edge.node.frontmatter),
     }
