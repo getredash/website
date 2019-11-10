@@ -18,7 +18,7 @@ const SearchResults = ({ hits }) => (
                 />
                 <p
                   dangerouslySetInnerHTML={{
-                    __html: result._highlightResult.text.value,
+                    __html: result._snippetResult.text.value,
                   }}
                 />
               </a>
