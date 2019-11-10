@@ -14,7 +14,7 @@ const query = `{
         headings {
           value
         }
-        text: excerpt
+        text: rawMarkdownBody
       }
     }
   }
