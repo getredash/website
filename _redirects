@@ -68,3 +68,5 @@
 
 /help/user-guide/alerts/slack-alert-destination /help/user-guide/alerts/creating-new-alert-destination
 /help/user-guide/alerts/pagerduty-alert-destination /help/user-guide/alerts/creating-new-alert-destination
+
+/help-onpremise/setup/saml-authentication-and-authorization /help/user-guide/users/authentication-options
