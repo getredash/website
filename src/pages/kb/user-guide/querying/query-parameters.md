@@ -61,17 +61,9 @@ For security reasons, a Redash user must have [Full Access]({% link _kb/user-gui
 
 {% endcallout %}
 
-### Date Parameters
+### Date and Date-Range Parameters
 
-With many databases, you can use a string value to represent a date/time which is equivalent to a Text parameter in Redash. Redash's Date parameters are preferable because they have a special calendar interface to make choosing a date easy. If you know in advance, however, that your date parameters will always come from a short list, you can instead use the `Dropdown List` or `Query Based Dropdown List` type.
-
-If you are using Query Parameters of type `Date`, you can set the parameter's default value to the current date and time when the query is run. While most databases include functions for querying with the current date/time (`GETDATE()` in TSQL or `CURRENT_DATE` in MySQL e.g.), this feature in Redash lets you run the **same query** either up-to-the-minute or further in the past.
-
-#### Date Range Parameters
-
-Try Date Range parameters if you need to query data between two points in time. There are three types to pick from: Date, Date and Time, and Date and Time with seconds.
-
-When you pick a date range type from the parameter creation dialgoue, Redash adds two parameter markers to your query called `.start` and `.end`. You can separate them in your query however the syntax requires (generally into different `WHERE` clauses).
+Date Parameters use a familiar calendar date picking interface and can default to the current date/time. There are three types to pick from: Date, Date and Time, and Date and Time with seconds. Date Range Parameters insert two markers called `.start` and `.end` which signify the beginning and end of your chosen date range. 
 
 ```
 SELECT a, b c
@@ -81,10 +73,15 @@ WHERE
 	AND table1.relevant_date <= '{{ myDate.end }}'
 ```
 
-Conveniently, the parameter value picker below the query window displays a unified widget. Date Range parameters behave exactly like Date parameters but are meant to save you time.
+{% callout info %}
+
+Date parameters are Text parameters under the hood. So you should wrap them in single quotes (`'`) or whatever your database uses to declare strings. Although they behave like Text parameters, Dates are still safe for us in embeds and share dashboards.
+
+{% endcallout %}
+
+Conveniently, the parameter value picker below the query window displays a unified widget.
 
 ![](/assets/images/docs/gitbook/date-range-picker.png)
-
 
 #### Quick Date and Date-Range Options
 
