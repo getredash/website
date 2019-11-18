@@ -75,7 +75,7 @@ WHERE
 
 {% callout info %}
 
-Date parameters are Text parameters under the hood. So you should wrap them in single quotes (`'`) or whatever your database uses to declare strings. Although they behave like Text parameters, Dates are still safe for us in embeds and share dashboards.
+Date parameters are Text parameters under the hood. So you should wrap them in single quotes (`'`) or whatever your database uses to declare strings. Although they behave like Text parameters, Dates are still safe for use in embeds and share dashboards.
 
 {% endcallout %}
 
