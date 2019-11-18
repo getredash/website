@@ -63,19 +63,21 @@ For security reasons, a Redash user must have [Full Access]({% link _kb/user-gui
 
 ### Date and Date-Range Parameters
 
-Date Parameters use a familiar calendar date picking interface and can default to the current date/time. There are three types to pick from: Date, Date and Time, and Date and Time with seconds. Date Range Parameters insert two markers called `.start` and `.end` which signify the beginning and end of your chosen date range. 
+Date Parameters use a familiar calendar picking interface and can default to the current date and time. You can chose from three levels of precision: Date, Date and Time, and Date and Time with seconds.
+
+Date Range Parameters insert two markers called `.start` and `.end` which signify the beginning and end of your chosen date range. 
 
 ```
 SELECT a, b c
 FROM table1
 WHERE
-	relevant_date >= '{{ myDate.start }}'
-	AND table1.relevant_date <= '{{ myDate.end }}'
+  relevant_date >= '{{ myDate.start }}'
+  AND table1.relevant_date <= '{{ myDate.end }}'
 ```
 
 {% callout info %}
 
-Date parameters are Text parameters under the hood. So you should wrap them in single quotes (`'`) or whatever your database uses to declare strings. Although they behave like Text parameters, Dates are still safe for use in embeds and share dashboards.
+Date parameters are passed as strings to your database. So you should wrap them in single quotes (`'`) or whatever your database uses to declare strings. Although they behave like Text parameters, Dates are still safe for use in embeds and share dashboards.
 
 {% endcallout %}
 
