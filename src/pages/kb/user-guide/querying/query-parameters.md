@@ -77,11 +77,11 @@ WHERE
 
 {% callout info %}
 
-Date parameters are passed as strings to your database. So you should wrap them in single quotes (`'`) or whatever your database uses to declare strings. Although they behave like Text parameters, Dates are still safe for use in embeds and share dashboards.
+Date parameters are passed as strings to your database. So you should wrap them in single quotes (`'`) or whatever your database uses to declare strings. Although they behave like Text parameters Dates are still safe for use in embeds and share dashboards.
 
 {% endcallout %}
 
-Conveniently, the parameter value picker below the query window displays a unified widget.
+Date Range parameters use a combined widget to simplify range selection.
 
 ![](/assets/images/docs/gitbook/date-range-picker.png)
 
