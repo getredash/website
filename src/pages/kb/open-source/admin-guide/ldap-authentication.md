@@ -28,6 +28,12 @@ Add the following to your environment variables (`.env` file or Docker configura
 
 If using LDAP in a docker setup, then you will have to create a custom image (https://github.com/getredash/redash/pull/1836#issuecomment-321331014):
 
+{% callout warning %}
+
+If you are running an instance of Redash V8 or later, you should use `RUN pip install --user ldap3` instead.
+
+{% endcallout %}
+
 ```
 FROM redash/redash:latest
 
