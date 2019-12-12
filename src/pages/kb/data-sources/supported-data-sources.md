@@ -33,7 +33,7 @@ InfluxDB  |  ✅  |  ✅
 JIRA  |  ✅  |  ✅  
 JSON ([instructions]({% link _kb/data-sources/querying-urls.md %})) |  ✅  |  ✅  
 Apache Kylin |  ✅  |  ✅  
-OmniSciDB  |    |  ✅  
+OmniSciDB(Formerly MapD)  |    |  ✅  
 MemSQL  |  ✅  |  ✅  
 Microsoft SQL Server ([instructions]({% link _kb/data-sources/azure-sql-database-setup.md %})) |  ✅  |  ✅  
 MongoDB ([instructions]({% link _kb/data-sources/mongodb-setup.md %})) |  ✅  |  ✅  
