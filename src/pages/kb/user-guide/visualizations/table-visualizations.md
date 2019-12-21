@@ -6,28 +6,30 @@ slug: table-visualizations
 toc: true
 ---
 
-# Using Tables
-
-For data sources that support a native query syntax (SQL or NOSQL), you can choose your data return format, which columns to return, and in what order by modifying your query. But sources like CSV files or Google Sheets don't support a query syntax. So Redash allows you to manually reorder, hide, and format data in your table visualizations.
+Tables are a natural way to show database results. So Redash builds one automatically for every query you run. It's more than a lowly HTML table, though. This one includes pagination, order, visibility, search, and format settings for each column. You can modify this default table with the **Edit Visualization** button or make a new one by clicking **New Visualization** and type `Table`.
 
 {% callout info %}
-If you absolutely depend on a feature of SQL, you can use the [Query Results Data Source]({% link _kb/user-guide/querying/query-results-data-source.md %}) to post-process your data.
+
+The default table visualization cannot be deleted.
+
 {% endcallout %}
 
-## Visualization Settings
 
-To get started, click the `Edit Visualization` button under the table view. A settings panel appears that looks like this:
+# Order, Visibility, and Pagination
 
-![](/assets/images/docs/gitbook/table-viz-options.png)
+To reorder columns from the visualization editor use the drag handle left of each column alias. Toggle the eye glyph to hide a column. Pagination settings are under the **Grid** tab. Click the `>` glyph to expand the full column settings.
 
-You can: 
-- **Reorder Columns** by dragging them to the left or right as shown in the yellow highlight.
-- **Hide Columns** by toggling the check mark highlighted in green
-- **Format Columns** using the format settings highlighted red. Read more about column formatting below.
+![](/assets/images/docs/gitbook/table-column-settings.png)
 
 # Formatting Columns
 
 Redash is sensitive to the data types that are common to most databases: text, numbers, dates and booleans. But it also has special support for non-standard column types like JSON documents, images, and links.
+
+{% callout info %}
+
+The default table automatically guesses column data types for query results. Sometimes this is an educated guess if the database returns typed results like dates, boleans, or numbers. Redash can coerce other common formats like ISO8601 dates, integers and decimals. If Redash can't guess a column type it falls back to Text.
+
+{% endcallout %}
 
 ## **Common Data Types**
 
