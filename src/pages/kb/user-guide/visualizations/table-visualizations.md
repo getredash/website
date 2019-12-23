@@ -6,7 +6,7 @@ slug: table-visualizations
 toc: true
 ---
 
-Tables are a natural way to show database results. So Redash builds one automatically for every query you run. It's more than a lowly HTML table, though. This one includes pagination, order, visibility, search, and format settings for each column. You can modify this default table with the **Edit Visualization** button or make a new one by clicking **New Visualization** and type `Table`.
+Because tables are a natural way to present database results, Redash builds one automatically for every query you run. It's more than a lowly HTML table, though. This one includes pagination, order, visibility, search, and format settings for each column. You can modify this default table with the **Edit Visualization** button or make a new one by clicking **New Visualization** and type `Table`.
 
 {% callout info %}
 
@@ -17,19 +17,33 @@ The default table visualization cannot be deleted.
 
 # Order, Visibility, and Pagination
 
-To reorder columns from the visualization editor use the drag handle left of each column alias. Toggle the eye glyph to hide a column. Pagination settings are under the **Grid** tab. Click the `>` glyph to expand the full column settings.
+From the visualization editor:
+
+- Use the drag handle left of each column alias to **reorder columns**.
+- Toggle the eye glyph to **hide a column**.
+- Switch to the "Grid" tab to change **pagination settings**.
+- Click the angle bracket `>` glyph to expand the full column settings.
 
 ![](/assets/images/docs/gitbook/table-column-settings.png)
 
+# Search
+
+// Need a screenshot here of the table search widget
+
+
 # Formatting Columns
 
-Redash is sensitive to the data types that are common to most databases: text, numbers, dates and booleans. But it also has special support for non-standard column types like JSON documents, images, and links.
+Redash knows the data types that are common to most DBs: text, numbers, dates, and booleans. And it also supports a few non-standard column types: JSON documents, images, and links.
 
 {% callout info %}
 
-The default table automatically guesses column data types for query results. Sometimes this is an educated guess if the database returns typed results like dates, boleans, or numbers. Redash can coerce other common formats like ISO8601 dates, integers and decimals. If Redash can't guess a column type it falls back to Text.
+Table visualizations try to guess field data types in your query results. This is sometimes an educated guess if the database cursor includes type information. Redash will also coerce other formats that the DB returns as text, like numbers or ISO8601 dates. When Redash can't determine a column data type it falls back to the text returned from the database.
 
 {% endcallout %}
+
+You can override the default data type format from the visualization editor.
+
+// Need a screenshot here showing the different settings panels for field data types.
 
 ## **Common Data Types**
 
