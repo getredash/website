@@ -7,16 +7,9 @@ slug: chart-visualizations
 # IMG BASE URL /assets/images/docs/gitbook/
 ---
 
-Eight common chart types are bundled into Redash's default visualization called **Chart**, detailed below. You can configure their colors, groupings, labels, and axes. Chart visualizations need at least two columns of data. Columns are ignored until you explicitly include them in your chart.
+Eight common visualization types are bundled into Redash's default visualization called **Chart**. You can configure their colors, groupings, labels, and axes. Chart visualizations need at least two columns of data. Columns are ignored until you explicitly include them in your chart.
 
 ![](/assets/images/docs/gifs/visualization/basic_chart_ex.gif)
-
-These simple charts come from just two rows of data.
-
-|   x      |   y      |
-|----------|----------|
-|   A      |   10     |
-|   B      |   8      |
 
 {% callout info %}
 
@@ -26,43 +19,50 @@ It can be useful to include many columns when writing queries in Redash. Once yo
 
 # Chart Types
 
-To get started configuring a chart visualization you can pick from eight different chart types. You can change this later.
+To get started configuring a chart visualization you can pick from eight different chart types. Switching between types is seamless. So if you're not sure which to use then go ahead and experiment! Try them all to see which one best conveys your meaning.
 
 ![](/assets/images/docs/gitbook/chart-viz-types.png)
 
-Switching between types is seamless due to their similarity. So if you're not sure which to use then go ahead and experiment! See which one best conveys your meaning. The animation above shows how the same data can power multiple visualizations.
+{% callout info %}
+
+The animation at the top of this page shows the same data in five different chart types.
+
+{% endcallout %}
 
 All chart visualizations need an **X Column** of distinct values and at least one **Y Column** of values. These values are displayed along the horizontal and vertical axes, respectively. A [Group By] column is also supported for all eight types. [Stacking] and [Errors] are available for [Line], [Bar], and [Area] charts. 
 
-* **Group By**: Is built to generate multiple traces along the same X and Y axis.
-* **Stacking**: 
-* **Errors Column** Displays a margin of error for each record. This is a numeric value that will be charted around a given Y coordinate. 
+<!-- Here put a picture of the X and Y column selectors!!! -->
 
-If you want to show more than one line on the same X + Y axis combination, then you need to group your data.
-
-You _can_ use Error bars on a bar chart, but they are generally reserved for Line Charts.
 ## Line
 
-The simples query result you can use to make a line chart looks like this:
-
-| stage | value |
-| ----- | ----- |
-| a     | 2     |
-| b     | 1     |
-| c     | 3     |
-
-
-
-
+Line charts are almost exclusively used to present change in one or more metrics over time.
 
 ## Bar
-## Area
-## Pie
-## Scatter
-## Bubble
-## Heatmap
-## Box Plot
 
+Bar charts can be used to present change in metrics over time or to show proportionality, like a pie chart.
+
+Bar charts can be combined with [Stacking] with great effect.
+
+## Area
+
+Area charts are often used to show sales funnel changes over time. They are frequently combined with [Stacking] to grant a better picture of several metrics over time.
+
+## Pie
+
+Pie charts are designed to show proportionality between metrics. They are _not_ meant for conveying time series data.
+
+## Scatter
+
+
+One reason to use scatter plots is for data with many groups of data points. Under the covers, Scatter plots are just like [Line] plots, but without the connecting lines. This is useful for presenting grouped data where some groups appear just once. Use of a line chart for these groups would conceal the singleton values because the line chart can only show data where two or more points are present. A scatter graph is more precise but less useful for time series data.
+
+## Bubble
+
+A Bubble chart is a [Scatter] graph where the size of the point marker reflects a relevant metric.
+
+## Heatmap
+
+## Box Plot
 
 # Tabs
 
@@ -110,11 +110,37 @@ For these errors, lets assume we sales data broken out by `Day`, `Category`, and
 
 ## Multiple Records per X-axis value
 
-You commonly want to see sales data with another metric reflected, like sales category. If your SQL returns multiple records for the same X-axis value, the chart will try to draw all the data points. You can resolve this by filtering out the doubled entries on the X-axis. Or revise your query to include a field that can be used for the [Group-By] Setting.
+You commonly want to see sales data with another metric reflected, like sales category. If your SQL returns multiple records for the same X-axis value, the chart will try to draw all the data points. You can resolve this by filtering out the doubled entries on the X-axis. Or revise your query to include a field that can be used for the [Group By] Setting.
 
 ![](error_double_x_entries.png)
 
-[Group-By]: #group-by
-[Error]: #error
+
+<!-- Scratch stuff -->
+* **Group By**: Is built to generate multiple traces along the same X and Y axis.
+* **Stacking**: 
+* **Errors Column** Displays a margin of error for each record. This is a numeric value that will be charted around a given Y coordinate. 
+
+If you want to show more than one line on the same X + Y axis combination, then you need to group your data.
+
+You _can_ use Error bars on a bar chart, but they are generally reserved for Line Charts.
+## Line
+
+The simples query result you can use to make a line chart looks like this:
+
+| stage | value |
+| ----- | ----- |
+| a     | 2     |
+| b     | 1     |
+| c     | 3     |
+
+
+
+[Group By]: #group-by
+[Errors]: #error
+[Stacking]: #stacking
+
+[Line]: #line
+[Bar]: #bar
+[Area]: #area
 
 [Stacked Bar Charts]: https://en.wikipedia.org/wiki/Bar_chart#Grouped_and_stacked
