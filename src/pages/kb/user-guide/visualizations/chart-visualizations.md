@@ -11,12 +11,44 @@ Redash bundles together charts that use X & Y axes into the **Chart** visualizat
 
 `video: /assets/images/docs/gifs/visualization/chart-examples.mp4`
 
+# Setup
+
+Every visualization in Redash starts with a database query result. To make a **Chart** visualization your query must return at least two columns: an **X Column** of distinct values and at least one **Y Column** of values. A [Group By] column is also supported for all eight forms. [Stacking] and [Errors] are available for [Line], [Bar], and [Area] charts. Bubble charts also accept a column that controls the size of each bubble.
+
+The charts in the above animation were all produced from the following tabular result:
+
+![](/assets/images/docs/gitbook/animation-table-data.png)
+
+## Group By
+
+Group by lets you generate multiple traces against the same X and Y axes. To use it, your query result must return at least three columns: an x value, y value, and a group value. As shown in the below example, the grouping column is used to sort `(x,y)` pairs together.
+
+Group By is a shortcut for making charts that share the same X axis and multiple Y coordinates. The following two data sets are identical.
 
 {% callout info %}
 
-This animation shows all eight chart types powered by the same underlying query result. The Chart visualization makes it easy to try different looks. Go ahead and experiment to see which one best conveys your meaning.
+Use the **Group By** column for melted data sets. Use multiple Y-columns for pivoted data sets
 
 {% endcallout %}
+
+## Stacking
+
+This setting determines whether or not to aggregate all the Y-axis values for a given X-axis value. The name name is borrowed from [Stacked Bar Charts], but it can be useful with area charts as well. Stacking is only available for Line, Bar, and Area charts. It is almost exclusively used in Bar or Area charts, however.
+
+{% callout info %}
+
+Stacking and [Group-By] are related. You won't stack data unless you have also grouped it.
+
+{% endcallout %}
+
+{% callout info %}
+
+The [Error] column does not aggregate when you stack records. An error bar will be shown for each trace.
+
+{% endcallout %}
+
+
+
 
 {% callout info %}
 
@@ -29,8 +61,6 @@ It can be useful to include many columns when writing queries in Redash. Once yo
 To get started configuring a chart visualization you can pick from eight different chart types. Switching between types is seamless. So if you're not sure which to use then go ahead and experiment! Try them all to see which one best conveys your meaning.
 
 ![](/assets/images/docs/gitbook/chart-viz-types.png)
-
-
 
 All chart visualizations need an **X Column** of distinct values and at least one **Y Column** of values. These values are displayed along the horizontal and vertical axes, respectively. A [Group By] column is also supported for all eight types. [Stacking] and [Errors] are available for [Line], [Bar], and [Area] charts. 
 
@@ -67,42 +97,6 @@ A Bubble chart is a [Scatter] graph where the size of the point marker reflects 
 
 ## Box Plot
 
-# Tabs
-
-## General
-## X Axis
-## Y Axis
-## Series
-## Colors
-## Data Labels 
-
-# Group By
-
-Group by lets you generate multiple traces against the same X and Y axes. To use it, your query result must return at least three columns: an x value, y value, and a group value. As shown in the below example, the grouping column is used to sort `(x,y)` pairs together.
-
-Group By is a shortcut for making charts that share the same X axis and multiple Y coordinates. The following two data sets are identical.
-
-{% callout info %}
-
-Use the **Group By** column for melted data sets. Use multiple Y-columns for pivoted data sets
-
-{% endcallout %}
-
-# Stacking
-
-This setting determines whether or not to aggregate all the Y-axis values for a given X-axis value. The name name is borrowed from [Stacked Bar Charts], but it can be useful with area charts as well. Stacking is only available for Line, Bar, and Area charts. It is almost exclusively used in Bar or Area charts, however.
-
-{% callout info %}
-
-Stacking and [Group-By] are related. You won't stack data unless you have also grouped it.
-
-{% endcallout %}
-
-{% callout info %}
-
-The [Error] column does not aggregate when you stack records. An error bar will be shown for each trace.
-
-{% endcallout %}
 
 
 # Common Errors
