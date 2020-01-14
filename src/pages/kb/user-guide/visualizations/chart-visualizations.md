@@ -7,9 +7,16 @@ slug: chart-visualizations
 # IMG BASE URL /assets/images/docs/gitbook/
 ---
 
-Eight common visualization types are bundled into Redash's default visualization called **Chart**. You can configure their colors, groupings, labels, and axes. Chart visualizations need at least two columns of data. Columns are ignored until you explicitly include them in your chart.
+Eight common visualization types are bundled into Redash's default visualization called **Chart**. You can seamlessly switch between different types because they share the same visualization engine. If you're not sure which to use at first then go ahead and experiment! Change their grouping, axes, stacking, and colors to see which combination best conveys your meaning. 
 
-![](/assets/images/docs/gifs/visualization/basic_chart_ex.gif)
+`video: /assets/images/docs/gifs/visualization/chart-examples.mp4`
+
+
+{% callout info %}
+
+This animation shows all eight chart types powered by the same underlying query result. The Chart visualization makes it easy to try different looks. Go ahead and experiment to see which one best conveys your meaning.
+
+{% endcallout %}
 
 {% callout info %}
 
@@ -23,11 +30,7 @@ To get started configuring a chart visualization you can pick from eight differe
 
 ![](/assets/images/docs/gitbook/chart-viz-types.png)
 
-{% callout info %}
 
-The animation at the top of this page shows the same data in five different chart types.
-
-{% endcallout %}
 
 All chart visualizations need an **X Column** of distinct values and at least one **Y Column** of values. These values are displayed along the horizontal and vertical axes, respectively. A [Group By] column is also supported for all eight types. [Stacking] and [Errors] are available for [Line], [Bar], and [Area] charts. 
 
