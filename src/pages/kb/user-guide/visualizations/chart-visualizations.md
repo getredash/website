@@ -7,7 +7,7 @@ slug: chart-visualizations
 # IMG BASE URL /assets/images/docs/gitbook/
 ---
 
-Eight common visualization types are bundled into Redash's default visualization called **Chart**. You can seamlessly switch between different types because they share the same visualization engine. If you're not sure which to use at first then go ahead and experiment! Change their grouping, axes, stacking, and colors to see which combination best conveys your meaning. 
+Redash bundles together charts that use X & Y axes into the **Chart** visualization type, which can take eight different forms. Because the forms are similar, you can often switch seamlessly between them to find the one that best conveys your meaning. In the animation below, all eight charts were built from the same SQL query result:
 
 `video: /assets/images/docs/gifs/visualization/chart-examples.mp4`
 
