@@ -19,6 +19,18 @@ The charts in the above animation were all produced from the following tabular r
 
 ![](/assets/images/docs/gitbook/animation-table-data.png)
 
+It's easy to configure a visualization when your query returns the right columns. Start by setting your X and Y axis values. The visualization preview updates instantly. You don't need to save the visualization to see how a change affects its appearance. Tabs along the top of the Visualization Settings screen give you fine-grained control over the chart.
+
+Use the **X Axis** and **Y Axis** tabs to modify the axis ranges and labels.
+
+The **Series** tab is powerful. It lets you change your data aliases, z-index behavior, assign traces between the left- and right- Y axes. It also lets you combine different trace forms on one chart like in the chart below.
+
+![](/assets/images/docs/gitbook/multi-form-chart.png)
+
+**Colors** gives you a color picker for changing the appearance of the traces on your charts.
+
+**Data Labels** controls what appears when you hover your mouse over a chart. 
+
 ## Group By
 
 Group by lets you generate multiple traces against the same X and Y axes. To use it, your query result must return at least three columns: an x value, y value, and a group value. As shown in the below example, the grouping column is used to sort `(x,y)` pairs together.
