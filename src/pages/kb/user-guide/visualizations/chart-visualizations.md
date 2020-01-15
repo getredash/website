@@ -31,11 +31,17 @@ The **Series** tab is powerful. It lets you change your data aliases, z-index be
 
 **Data Labels** controls what appears when you hover your mouse over a chart. 
 
-## Group By
+# Grouping
 
-Group by lets you generate multiple traces against the same X and Y axes. To use it, your query result must return at least three columns: an x value, y value, and a group value. As shown in the below example, the grouping column is used to sort `(x,y)` pairs together.
+The **Group By** setting can generate multiple traces against the same X and Y axes. Almost every time you see multiple colors of line or bar in a Redash chart, it's because the query results included a grouping column.
 
-Group By is a shortcut for making charts that share the same X axis and multiple Y coordinates. The following two data sets are identical.
+As shown in the below example, the grouping column is used to sort `(x,y)` pairs together.
+
+![](/assets/images/docs/gitbook/group-by-ex.png)
+
+Use of **Group By** is often easier than writing queries which return multiple Y columns for an X value. The following two data sets are identical.
+
+![](/assets/images/docs/gitbook/grouped-vs-pivot.png)
 
 {% callout info %}
 
@@ -43,7 +49,7 @@ Use the **Group By** column for melted data sets. Use multiple Y-columns for piv
 
 {% endcallout %}
 
-## Stacking
+# Stacking
 
 This setting determines whether or not to aggregate all the Y-axis values for a given X-axis value. The name name is borrowed from [Stacked Bar Charts], but it can be useful with area charts as well. Stacking is only available for Line, Bar, and Area charts. It is almost exclusively used in Bar or Area charts, however.
 
