@@ -51,28 +51,21 @@ Use the **Group By** column for melted data sets. Use multiple Y-columns for piv
 
 # Stacking
 
-This setting determines whether or not to aggregate all the Y-axis values for a given X-axis value. The name name is borrowed from [Stacked Bar Charts], but it can be useful with area charts as well. Stacking is only available for Line, Bar, and Area charts. It is almost exclusively used in Bar or Area charts, however.
+Redash can "stack" your Y axis values on top of one another. The name name is borrowed from [Stacked Bar Charts], but it can be useful with area charts as well. The below image shows the exact same lines unstacked on the left and stacked on the right.
+
+![](/assets/images/docs/gitbook/stacked_vs_not_stacked.png)
 
 {% callout info %}
 
-Stacking and [Group-By] are related. You won't stack data unless you have also grouped it.
+Stacking and Grouping are related. You won't stack data unless you have also grouped it.
 
 {% endcallout %}
 
-{% callout info %}
+You can use the **Series** tab of the Visualization Editor to control the order in which traces are stacked. Stacking is only available for Line, Bar, and Area charts.
 
-The [Error] column does not aggregate when you stack records. An error bar will be shown for each trace.
+Keep in mind that the the [Error] column does not aggregate when you stack records. An error bar will be shown for each trace. You can work around this by only providing non-zero error values for those records where the error should be displayed prominently. See in the below example that a flat error bar is shown at every trace point. But only the `Paid` trace error bars have any length.
 
-{% endcallout %}
-
-
-
-
-{% callout info %}
-
-It can be useful to include many columns when writing queries in Redash. Once you have the query configured to make the right chart, you can safely remove columns not used by the visualization. This can improve Redash's performance for larger queries since less information is sent to the browser.
-
-{% endcallout %}
+![](/assets/images/docs/gitbook/area_grouped_stacked_errors.png)
 
 # Chart Types
 
