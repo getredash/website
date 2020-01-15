@@ -55,6 +55,8 @@ Redash can "stack" your Y axis values on top of one another. The name name is bo
 
 ![](/assets/images/docs/gitbook/stacked_vs_not_stacked.png)
 
+Notice how each Y axis value is displayed as the sum of itself and the Y values "beneath" it.
+
 {% callout info %}
 
 Stacking and Grouping are related. You won't stack data unless you have also grouped it.
@@ -75,6 +77,25 @@ For certain chart forms, Redash can draw error bars around your data points usin
 ![](/assets/images/docs/gitbook/area_grouped_stacked_errors.png)
 
 Also keep in mind that errors are not aggregated when you stack records. An error bar will be shown for each trace. You can work around this by only providing non-zero error values for those records where the error should be displayed prominently. See in the above example that a flat error bar is shown at every trace point. But only the `Paid` trace error bars have any length.
+
+# Using Chart Forms
+Each chart form is useful for certain kinds of presentation. You can mix and match multiple forms on the same chart as needed.
+
+* **Line** charts are almost exclusively used to present change in one or more metrics over _time_.
+* **Bar** charts can be used to present change in metrics over time or to show proportionality, like a pie chart. Bar charts can be combined with [Stacking] with great effect.
+* **Area** charts are often used to show sales funnel changes through time. They are frequently combined with [Stacking] to grant a broader picture.
+* **Pie** charts are designed to show proportionality between metrics. They are _not_ meant for conveying time series data.
+* **Scatter** charts excel at showing many groups of data points. Under the covers, Scatter plots are just like line plots, but without the connecting lines. A scatter graph is more precise but less useful for time series data.
+
+{% callout info %}
+
+Scatter plots are necessary for visualizations where some groups appear just once. The line chart does not display singleton values  because it can only show data where two or more points are present. One option is to force singletons into scatter form on the **Series** tab of the Visualization Editor while keeping other traces in line form.
+
+{% endcallout %}
+
+* **Bubble** charts are scatter graphs where the size of each point marker reflects a relevant metric.
+* **Heatmap** visualizations blend features of bar charts, stacking, and bubble charts. There are several built-in color schemes to pick from. Heatmaps cannot be grouped since the entire chart is technically one trace.
+* **Box** plots can automatically show the distribution of data points across grouped categories.
 
 # Common Mistakes
 
@@ -100,75 +121,12 @@ If you see shapes you don't expect you can check whether your X axis has been so
 
 These two charts come from the same base data. The only difference is whether or not Redash sorted the X axis values.
 
-# Chart Types
-
-To get started configuring a chart visualization you can pick from eight different chart types. Switching between types is seamless. So if you're not sure which to use then go ahead and experiment! Try them all to see which one best conveys your meaning.
-
-![](/assets/images/docs/gitbook/chart-viz-types.png)
-
-All chart visualizations need an **X Column** of distinct values and at least one **Y Column** of values. These values are displayed along the horizontal and vertical axes, respectively. A [Group By] column is also supported for all eight types. [Stacking] and [Errors] are available for [Line], [Bar], and [Area] charts. 
-
-
-## Line
-
-Line charts are almost exclusively used to present change in one or more metrics over time.
-
-## Bar
-
-Bar charts can be used to present change in metrics over time or to show proportionality, like a pie chart.
-
-Bar charts can be combined with [Stacking] with great effect.
-
-## Area
-
-Area charts are often used to show sales funnel changes over time. They are frequently combined with [Stacking] to grant a better picture of several metrics over time.
-
-## Pie
-
-Pie charts are designed to show proportionality between metrics. They are _not_ meant for conveying time series data.
-
-## Scatter
-
-
-One reason to use scatter plots is for data with many groups of data points. Under the covers, Scatter plots are just like [Line] plots, but without the connecting lines. This is useful for presenting grouped data where some groups appear just once. Use of a line chart for these groups would conceal the singleton values because the line chart can only show data where two or more points are present. A scatter graph is more precise but less useful for time series data.
-
-## Bubble
-
-A Bubble chart is a [Scatter] graph where the size of the point marker reflects a relevant metric.
-
-## Heatmap
-
-## Box Plot
-
-
-
-
-
-<!-- Scratch stuff -->
-* **Group By**: Is built to generate multiple traces along the same X and Y axis.
-* **Stacking**: 
-* **Errors Column** Displays a margin of error for each record. This is a numeric value that will be charted around a given Y coordinate. 
-
-If you want to show more than one line on the same X + Y axis combination, then you need to group your data.
-
-You _can_ use Error bars on a bar chart, but they are generally reserved for Line Charts.
-## Line
-
-The simples query result you can use to make a line chart looks like this:
-
-| stage | value |
-| ----- | ----- |
-| a     | 2     |
-| b     | 1     |
-| c     | 3     |
-
-
 
 [Group By]: #Grouping
 [grouping]: #Grouping
 [Errors]: #error
 [error bars]: #error
-[Stacking]: #stacking
+[Stacking]: #Stacking
 
 [Line]: #line
 [Bar]: #bar
