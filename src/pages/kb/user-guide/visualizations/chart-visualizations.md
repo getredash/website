@@ -13,7 +13,7 @@ Redash bundles together charts that use X & Y axes into the **Chart** visualizat
 
 # Setup
 
-Every visualization in Redash starts with a database query result. To make a **Chart** visualization your query must return at least two columns: an **X Column** of distinct values and at least one **Y Column** of values. A [Group By] column is also supported for all eight forms. [Stacking] and [Errors] are available for [Line], [Bar], and [Area] charts. Bubble charts also accept a column that controls the size of each bubble.
+Your query should return at least two columns before you make a **Chart** visualization: one column of values for the **X axis** and  one column of values for the **Y Axis**. Your query can also return values for trace [grouping], displaying [error bars], and bubble sizes.
 
 The charts in the above animation were all produced from the following tabular result:
 
@@ -133,7 +133,9 @@ The simples query result you can use to make a line chart looks like this:
 
 
 [Group By]: #group-by
+[grouping]: #group-by
 [Errors]: #error
+[error bars]: #error
 [Stacking]: #stacking
 
 [Line]: #line
