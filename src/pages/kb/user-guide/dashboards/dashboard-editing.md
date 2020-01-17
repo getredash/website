@@ -69,7 +69,7 @@ Even large dashboards should load quickly because they fetch their data from a c
 
 To force a refresh, click the Refresh button on the upper-right of the dashboard editor. This runs all the dashboard queries and updates its visualizations.
 
-If you want this to happen periodically you can activate Automatic Dashboard Refresh from the UI by clicking the dropdown pictured below. Or you can pass a `refresh` query string variable with your dashboard URL. The allowed refresh intervals are expressed in seconds: 60, 300, 600, 1800, 3600, 43200, and 86400.
+If you want this to happen periodically you can activate Automatic Dashboard Refresh from the UI by clicking the dropdown pictured below. Or you can pass a `refresh` query string variable with your dashboard URL. **The allowed refresh intervals are expressed in seconds**: 60, 300, 600, 1800, 3600, 43200, and 86400.
 
 ![](/assets/images/docs/gitbook/dashboard-refresh.png)
 
