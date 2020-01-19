@@ -15,9 +15,11 @@ Add the following to your environment variables (`.env` file or Docker configura
 - `REDASH_LDAP_URL`: The URL of the LDAP/AD host. This includes port. Ex: `"127.0.0.1:389"` **[Required]**
 - `REDASH_LDAP_BIND_DN`: The DN to bind to. This is used to determine the identity of the user being authenticated. **[Required]** \* For AD this should be `"org\\user_dn"`. The two slashes are required.
 - `REDASH_LDAP_BIND_DN_PASSWORD`: The password to bind to the DN specified in `REDASH_LDAP_BIND_DN` **[Required]**
-- `REDASH_LDAP_DISPLAY_NAME_KEY`: The key with the full name of the user. \* Default is `displayName`
-- `REDASH_LDAP_EMAIL_KEY`: The key with the email of the user. \* Default is `mail`
-- `REDASH_LDAP_CUSTOM_USERNAME_PROMPT`: A custom prompt to be displayed above the username field. \* Default is `LDAP/AD/SSO username:`
+- `REDASH_LDAP_USE_SSL`: It's a boolean that determines SSL binding. Default is `false`
+- `REDASH_LDAP_AUTH_METHOD`: Determines LDAP authentication method(SIMPLE or ANONYMOUS). Default is `SIMPLE`
+- `REDASH_LDAP_DISPLAY_NAME_KEY`: The key with the full name of the user. Default is `displayName`
+- `REDASH_LDAP_EMAIL_KEY`: The key with the email of the user. Default is `mail`
+- `REDASH_LDAP_CUSTOM_USERNAME_PROMPT`: A custom prompt to be displayed above the username field. Default is `LDAP/AD/SSO username:`
 - `REDASH_LDAP_SEARCH_TEMPLATE`: The search template used by the DN to find the user.
   _ By default this is `"(cn=%(username)s)"`, but for AD it should be `"(sAMAccountName=%(username)s)"`
   _ `%(username)s` is the username entered in the ldap login page
