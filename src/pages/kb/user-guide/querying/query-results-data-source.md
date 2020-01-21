@@ -25,7 +25,7 @@ This is the name that will appear in the source dropdown on the left of the quer
 
 {% callout info %}
 
-Most organizations only require a **one** Query Results data source.
+Most organizations only require **one** Query Results data source.
 {% endcallout %}
 
 
