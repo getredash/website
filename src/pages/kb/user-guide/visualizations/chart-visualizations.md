@@ -63,7 +63,7 @@ Stacking and Grouping are related. You won't stack data unless you have also gro
 
 {% endcallout %}
 
-You can use the **Series** tab of the Visualization Editor to control the order in which traces are stacked. Stacking is only available for Line, Bar, and Area charts.
+You can use the **Series** tab of the Visualization Editor to control the order in which traces are stacked. You can also control it by adding an `ORDER BY` statement to your query. The stack follows the order in which your group names first appear in your query result. Stacking is only available for Line, Bar, and Area charts.
 
 # Error Bars
 
