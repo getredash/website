@@ -15,7 +15,19 @@ The QRDS doesn't work with results from queries that use [parameters](/help/user
 {% endcallout %}
 
 ### Setup
-You can enable **Query Results** under the `Data Source` tab of the settings menu. Setup is easy: just provide a name for the source. This is the name that will appear in the source dropdown of the query editor.
+You can enable **Query Results** under the `Data Source` tab of the settings menu. Setup is easy: just provide a name for the source. 
+
+![](/assets/images/docs/gitbook/query-results-setup.png)
+
+This is the name that will appear in the source dropdown on the left of the query editor. The data source is called **Query Results** in the below screenshot.
+
+![](/assets/images/docs/gitbook/query-results-example.png)
+
+{% callout info %}
+
+Most organizations only require **one** Query Results data source.
+{% endcallout %}
+
 
 ### Querying
 The QRDS accepts [SQLite query syntax](https://sqlite.org/lang.html):
