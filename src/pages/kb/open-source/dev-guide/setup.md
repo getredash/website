@@ -43,7 +43,9 @@ npm run build
 ## Configuration
 
 In most cases the default configuration is enough for development. But if you need
-to adjust the database configuration, mail, or [other settings](../admin-guide/env-vars-settings.md) you do so with environment variables.
+to adjust the database configuration, mail, or [other settings]({% link _kb/open-source/admin-guide/env-vars-settings.md %}) you do so with environment variables.
+
+
 
 ## Creating Database Tables
 
