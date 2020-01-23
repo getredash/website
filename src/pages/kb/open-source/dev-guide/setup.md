@@ -9,14 +9,18 @@ slug: setup
 
 ### PostgreSQL & Redis
 
-Refer to the documentation of Python (2.7), PostgreSQL (9.3 or newer), Redis (2.8.3 or newer) and Node.js (v6 or newer) on how to install them in your environment. On macOS, you can use `brew` to install them. On Linux you can use your package manager, although need to make sure it installs recent enough versions.
+Refer to the documentation of Python (3), PostgreSQL (9.5 or newer), Redis
+(2.8.3 or newer) and Node.js (v12 or newer) on how to install them in your
+environment. On MacOS, you can use Homebrew to install them. On Linux you can
+use your package manager, although you need to make sure it installs recent
+enough versions.
 
 ### Python Packages
 
 For development the minimum required packages to install are described in:
 
-- requirements.txt
-- requirements_dev.txt
+- `requirements.txt`
+- `requirements_dev.txt`
 
 You install them with pip:
 
@@ -24,7 +28,8 @@ You install them with pip:
 pip install -r requirements.txt -r requirements_dev.txt
 ```
 
-(We recommend installing them in a virtualenv. For using some data source types, you need to install additional dependencies from requirements_all_ds.txt.)
+(We recommend installing them in a virtualenv. For certain data source types you
+need to install additional dependencies from `requirements_all_ds.txt`.)
 
 ### Node.js Packages
 
@@ -42,23 +47,15 @@ npm run build
 
 ## Configuration
 
-For development, in most cases the default configuration is enough. But if you need
-to adjust the database configuration, mail settings or any [other setting](../admin-guide/env-vars-settings.md),
-you do so with environment variables.
-
-To avoid having to export those variables manually, you can use a `.env` file and
-the `bin/run` helper script. By invoking any command with `bin/run` prefix, it will
-load your environment variables from the `.env` file and then run your command. For
-example:
-
-```bash
-bin/run ./manage.py check_settings
-```
+In most cases the default configuration is enough for development. But if you
+need to adjust the database configuration, mail, or [other
+settings]({% link _kb/open-source/admin-guide/env-vars-settings.md %}) you do so
+with environment variables.
 
 ## Creating Database Tables
 
 ```bash
-bin/run ./manage.py database create_tables
+./manage.py database create_tables
 ```
 
 ## Processes
@@ -66,26 +63,29 @@ bin/run ./manage.py database create_tables
 The main Redash processes you have to run:
 
 - Web server
-- Celery worker(s) & scheduler
+- RQ worker(s) & scheduler
 
 In development you will also run Webpack's dev server or watch utility.
 
 Our recommendation:
 
-- Web server: `bin/run ./manage.py runserver --debugger --reload`
-- Celery: `./bin/run celery worker --app=redash.worker --beat -Qscheduled_queries,queries,celery -c2`
-- Webpack dev server: `npm run start`
+- Web server: `./manage.py runserver --debugger --reload`
+- RQ: `./manage.py rq worker`
+- RQ Scheduler: `./manage.py rq scheduler`
+- Frontend watch process to rebuild changes: `npm run watch`
 
-This will result in a Flask web server listening on port `5000`, Webpack dev server
-on port `8080` and 2 Celery workers ready to run queries.
-
-To open the app in your web browser, use Webpack's dev server -- `localhost:8080`,
-which will auto reload and refresh whenever you make changes to the frontend code.
+This will result in a Flask web server listening on port `5000`, Webpack
+rebuilding changes to the frontend, RQ worker ready to run queries and RQ
+scheduler to enqueue periodic tasks.
 
 ## Running Tests
 
-Currently we currently have tests only for the backend code. To run them invoke:
+Backend tests:
 
 ```bash
 pytest tests/
 ```
+
+Frontend tests using Cypress:
+
+TBD.
