@@ -34,4 +34,4 @@ FROM redash/redash:latest
 RUN pip install ldap3
 ```
 
-If you're using Docker Compose to run Redash, you can replace replace `image: redash/redash:latest` with `build: .` assuming the custom Dockerfile is in the same directory.
+If you're using Docker Compose to run Redash, you can replace `image: redash/redash:latest` with `build: .` assuming the custom Dockerfile is in the same directory.
