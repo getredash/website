@@ -72,20 +72,20 @@ You need to follow the following steps within Auth0 to get the application worki
  
  * In the SAML2 config use the following settings JSON:
 
-`{`<br/>
-` "mappings": {`<br/>
-`   "given_name": "FirstName",`</br>
-`   "family_name": "LastName"`</br>
-` },`</br>
-`  "passthroughClaimsWithNoMapping": false,`</br>
-`  "includeAttributeNameFormat": false`</br>
-`}`</br>
+  `{`<br/>
+  ` "mappings": {`<br/>
+  `   "given_name": "FirstName",`</br>
+  `   "family_name": "LastName"`</br>
+  ` },`</br>
+  `  "passthroughClaimsWithNoMapping": false,`</br>
+  `  "includeAttributeNameFormat": false`</br>
+  `}`</br>
 
 
   Within Redash, use the following config:
   
-  SAML Metadata URL: https://[YOUR_TENANT_HOSTNAME]/samlp/metadata/[CONNECTION_ID]
-  SAML Entity ID: urn:auth0:[YOUR_TENANT_NAME]:[CONNECTION_NAME]
-  SAML NameID Format: EmailAddress
+  SAML Metadata URL: https://[YOUR_TENANT_HOSTNAME]/samlp/metadata/[CONNECTION_ID]</br>
+  SAML Entity ID: urn:auth0:[YOUR_TENANT_NAME]:[CONNECTION_NAME]</br>
+  SAML NameID Format: EmailAddress</br>
 
 Courtesy: [Auth0 Integration post](https://discuss.redash.io/t/auth0-integration/586/5)
