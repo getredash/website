@@ -72,14 +72,14 @@ You need to follow the following steps within Auth0 to get the application worki
  
  * In the SAML2 config use the following settings JSON:
 
-`{` <br/>
- ` "mappings": { `<br/>
- `   "given_name": "FirstName",` </br>
- `   "family_name": "LastName"` </br>
- ` },`</br>
-  "passthroughClaimsWithNoMapping": false,
-  "includeAttributeNameFormat": false
-}`
+`{`<br/>
+` "mappings": {`<br/>
+`   "given_name": "FirstName",`</br>
+`   "family_name": "LastName"`</br>
+` },`</br>
+`  "passthroughClaimsWithNoMapping": false,`</br>
+`  "includeAttributeNameFormat": false`</br>
+`}`</br>
 
 
   Within Redash, use the following config:
