@@ -60,3 +60,32 @@ Lastly, look for the "IDP metadata" on the setup instructions page in Okta. The 
 Your changes on this screen will save automatically. Now you can login to Redash using your Okta credentials.
 
 You can now log in to Redash using Okta SSO.
+
+### How to Configure Auth0
+
+You need to follow the following steps within Auth0 to get the application working: 
+ * Create a traditional webapp
+ * Under add-ons, enable SAML2
+ * In the SAML2 config use the following call back url:
+ 
+    https://[YOUR_REDASH_HOSTNAME]/saml/callback?org_slug=default
+ 
+ * In the SAML2 config use the following settings JSON:
+
+{
+  "mappings": {
+    "given_name": "FirstName",
+    "family_name": "LastName"
+  },
+  "passthroughClaimsWithNoMapping": false,
+  "includeAttributeNameFormat": false
+}
+
+
+  Within Redash, use the following config:
+  
+  SAML Metadata URL: https://[YOUR_TENANT_HOSTNAME]/samlp/metadata/[CONNECTION_ID]
+  SAML Entity ID: urn:auth0:[YOUR_TENANT_NAME]:[CONNECTION_NAME]
+  SAML NameID Format: EmailAddress
+
+Courtesy: [Auth0 Integration post](https://discuss.redash.io/t/auth0-integration/586/5)
