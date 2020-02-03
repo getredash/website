@@ -68,18 +68,18 @@ You need to follow the following steps within Auth0 to get the application worki
  * Under add-ons, enable SAML2
  * In the SAML2 config use the following call back url:
  
-    https://[YOUR_REDASH_HOSTNAME]/saml/callback?org_slug=default
+    `https://[YOUR_REDASH_HOSTNAME]/saml/callback?org_slug=default`
  
  * In the SAML2 config use the following settings JSON:
 
-{
+`{
   "mappings": {
     "given_name": "FirstName",
     "family_name": "LastName"
   },
   "passthroughClaimsWithNoMapping": false,
   "includeAttributeNameFormat": false
-}
+}`
 
 
   Within Redash, use the following config:
