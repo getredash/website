@@ -2,26 +2,32 @@
 category: querying
 parent_category: user-guide
 helpscout_url: https://help.redash.io/article/43-download-query-results
-title: Download or Export Query Results
+title: How To Download / Export Query Results
 slug: download-query-results
 ---
 
-You can download data from the query screen by clicking the vertical ellipsis (`⋮`) button beneath the results pane. Then select the type of file you'd like to download:
+# How to download a query result
+
+Visit any query page and click the vertical ellipsis (`⋮`) button beneath the results pane. Then choose to download a CSV, TSV, or Excel file. This action downloads the current query result.
 
 <img src="/assets/images/docs/gitbook/download-dataset.png">
 
-### Export URLs and API Key
+# How to get latest results via the API
+
+Visit any query page and click the horizontal ellipsis (`…`) above the query editor. Then choose **Show API Key**. The links in the modal that appears always point to the latest query result. You can choose between CSV and JSON formats to be returned by the API call.
+
+{% callout info %}
+
+It's not shown in the interface, but you can also get the Excel format by changing the file type suffix from `json`/`csv` to `xlsx`.
+
+{% endcallout %}
 
 <img src="/assets/images/docs/gitbook/show-api-key.png">
 
-The download dataset buttons point to the current query result you see on screen. To get a URL which always points at the latest query results, click on the "Show API Key" button in the query menu.
-
-<img src="/assets/images/docs/gitbook/show-api-key-modal.png">
-
-{% callout info %}
+{% callout warning %}
 
 The latest results API is not supported for queries that use parameters.
 
 {% endcallout %}
 
-In the dialog that will open you will find the Query API key and links to the latest results URL in CSV and JSON format. You can also get the Excel format by changing the file type suffix from `json`/`csv` to `xlsx`.
+
