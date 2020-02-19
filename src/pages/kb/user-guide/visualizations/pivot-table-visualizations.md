@@ -13,7 +13,7 @@ Redash's pivot table visualization can aggregates records from a query result in
 
 # Step 1: Write a query
 
-It should return at least three rows. The source query for a pivot table is usually non-aggregated or "melted". In the below example, I pull indicative data from a school grading system. This is mock data.
+It should return at least three columns. The source query for a pivot table is usually non-aggregated or "melted". In the below example, I pull indicative data from a school grading system. This is mock data.
 
 ![Example Query for Pivot Table]({% link /assets/images/docs/gitbook/pivot-table-query.png %})
 
