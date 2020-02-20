@@ -9,7 +9,7 @@ slug: pivot-table-visualizations
 
 
 # Intro 
-Redash's pivot table visualization can aggregates records from a query result into a new tabular display. It's similar to `PIVOT` or `GROUP BY` statements in SQL. But the visualization is configured with drag-and-drop fields instead of SQL code.
+Redash's pivot table visualization can aggregate records from a query result into a new tabular display. It's similar to `PIVOT` or `GROUP BY` statements in SQL. But the visualization is configured with drag-and-drop fields instead of SQL code.
 
 # Step 1: Write a query
 

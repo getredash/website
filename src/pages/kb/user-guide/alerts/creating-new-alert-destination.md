@@ -33,6 +33,12 @@ There are a few types of destinations to choose from:
 * ChatWork
 * Generic WebHook
 
+{% callout info %}
+
+The default destination for any alert is the email address for the user who created it. If you made an alert and need to be notified by email then you don't need to setup a new Alert Destination. Instead, toggle the switch beside your email address on the alert setup screen.
+
+{% endcallout %}
+
 To configure one, select it from **Create a New Alert Destination** dialogue and follow its prompts.
 
 ![](/assets/images/docs/gitbook/pick-a-destination.png)
