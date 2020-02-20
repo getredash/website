@@ -4,6 +4,7 @@ parent_category: user-guide
 helpscout_url: https://help.redash.io/article/41-scheduling-a-query
 title: Scheduling A Query
 slug: scheduling-a-query
+order: 4
 ---
 
 By default, your query won't have any scheduling but it's super easy to

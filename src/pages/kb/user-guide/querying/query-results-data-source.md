@@ -4,6 +4,7 @@ parent_category: user-guide
 helpscout_url: https://help.redash.io/article/152-query-results-data-source
 title: Querying Existing Query Results
 slug: query-results-data-source
+order: 2
 ---
 
 The **Query Results Data Source** (QRDS) lets you run queries against results from your other Data Sources. Use it to join data from multiple databases or perform post-processing. Redash uses an in-memory SQLite database to make this possible. As a result, queries against large result sets may fail if Redash runs out of memory. 

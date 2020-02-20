@@ -9,6 +9,7 @@ keywords:
 title: Query Parameters
 slug: query-parameters
 toc: true
+order: 3
 ---
 
 With parameters you can substitute values into your query at runtime without having to **Edit Source**. Any string between double curly braces `{{ }}` will be treated like a parameter. A widget will appear above the results pane so you change the parameter value. 
