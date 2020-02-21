@@ -21,7 +21,7 @@ You need two data sources to get started.
 
 {% callout info %} Only admins can add data sources. {% endcallout %}
 
-From **Settings** visit the **Data Sources** tab. For each data source click **New Data Source**. Search for the data source type and name it.
+From **Settings** visit the **Data Sources** tab. For each data source click **New Data Source**. Search for the data source type, click it, and name it.
 
 It is easy to configure both data sources. Just name them (`CSV` and `QR` are most common) and click **Create**.
 
@@ -71,7 +71,7 @@ The complete URL is: `https://onedrive.live.com/download?cid=61905AC1E9907973&re
 
 ## Github
 
-Right click the **Raw** button and **Copy Link Location**.
+Right-click the **Raw** button and **Copy Link Location**.
 
 ## iCloud Drive
 
@@ -119,7 +119,7 @@ SELECT * FROM cached_query_xxxx
 
 Just replace `cached_query_xxxx` with the ID of your query from step 3 and click **Execute**. All the data from your CSV will appear in the results panel.
 
-> It makes sense to used `cached_query` instead of `query` because the CSV file is unlikely to change. QRDS queries are also faster when a cached result is used.
+{% callout info %} It makes sense to used `cached_query` instead of `query` because the CSV file is unlikely to change. QRDS queries are also faster when a cached result is used. {% endcallout %}
 
 Now you can use QRDS to filter, aggregate, and combine the CSV using SQLite syntax.
 
