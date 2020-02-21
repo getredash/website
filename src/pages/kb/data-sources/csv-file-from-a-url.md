@@ -12,36 +12,36 @@ You can't upload files to Redash directly. Instead, you have to pull them from s
 
 # Step 1: Configure your data sources
 
-> If you did this already, go to step 2.
+{% callout danger %}If you did this already, go to step 2.{% endcallout %}
 
 You need two data sources to get started. 
 
 1. CSV
 2. Query Results
 
-> Only admins can add data sources.
+{% callout info %} Only admins can add data sources. {% endcallout %}
 
 From **Settings** visit the **Data Sources** tab. For each data source click **New Data Source**. Search for the data source type and name it.
 
 It is easy to configure both data sources. Just name them (`CSV` and `QR` are most common) and click **Create**.
 
-> If you aren't certain, leave the `HTTP Basic Authentication` options blank on the CSV screen. You will know if these are required to access your file.
+{% callout warning %} If you aren't certain, leave the `HTTP Basic Authentication` options blank on the CSV screen. You will know if these are required to access your file. {% endcallout %}
 
 # Step 2: Host your CSV at a public URL
 
 Any host will work if it exposes a raw CSV file through a URL. Most of the popular file sharing platforms — including Dropbox, Google Sheets, OneDrive, and Github — show a file preview by default instead of the raw file.
 
-![Picture of github CSV preview]()
+![Screenshot of GitHub CSV preview](/assets/images/docs/gitbook/csv-preview.png)
 
 So you might need to dig a little for the right link.
 
-![Picture of RAW CSV file in browser]()
+![Screenshot of raw CSV file in browser](/assets/images/docs/gitbook/raw-csv.png)
 
 Shortcuts for a few common providers appear below.
 
 ## Dropbox
 
-![Example of Dropbox Permissions]()
+![Example of Dropbox Permissions](/assets/images/docs/gitbook/dropbox-share-settings.png)
 
 Generate a share link with permissions set so *Anyone With Link* can access the file. The link will look like this: `https://www.dropbox.com/s/fc5e038d38a570/filename.csv?dl=0`
 
@@ -51,7 +51,7 @@ The complete URL is: `https://dl.dropbox.com/s/fc5e038d38a570/filename.csv?dl=0`
 
 ## Google Drive
 
-![Example of Google Permissions]()
+![Example of Dropbox Permissions](/assets/images/docs/gitbook/google-share-settings.png)
 
 Generate a share link with permissions set so *Anyone with link can view* the file. The link will look like this: `https://drive.google.com/file/d/fc5e038d38a570/view?usp=sharing`
 
@@ -61,7 +61,7 @@ The complete URL is: `https://drive.google.com/uc?id=fc5e038d38a570`
 
 ## OneDrive
 
-![Example of OneDrive Embed Settings]()
+![Example of OneDrive Embed Settings](/assets/images/docs/gitbook/onedrive-embed-settings.png)
 
 Generate an HTML embed snippet for your file. Then copy its `src` attribute. The attribute looks like this: `https://onedrive.live.com/embed?cid=61905AC1E9907973&resid=61905AC1E9907973%21506&authkey=AFxkxqQH2wePxM8`
 
@@ -71,17 +71,19 @@ The complete URL is: `https://onedrive.live.com/download?cid=61905AC1E9907973&re
 
 ## Github
 
-![Example of Github Raw Button]()
-
 Right click the **Raw** button and **Copy Link Location**.
 
 ## iCloud Drive
 
-![Example of iCloud Share Settings]()
+![Example of iCloud Share Settings](/assets/images/docs/gitbook/icloud-share-settings.png)
 
 Generate a share link and copy it to your clipboard. Open a new browser tab and enable its network inspector. Paste the URL and hit `Enter`.
 
+![Screenshot of network inspector](/assets/images/docs/gitbook/icloud-inspector.png)
+
 The network inspector will show a HTTP `POST` to a URL like this: `https://ckdatabasews.icloud.com/database/1/com.apple.cloudkit/production/public/records/resolve?`
+
+{% callout info %} The exact subdomain varies but is always prefixed with `ck` (for CloudKit) {% endcallout %}
 
 Inspect the JSON response to that request. The raw CSV URL is found at `results[0].rootRecord.fields.fileContent.value.downloadURL` and looks like this:
 
@@ -91,20 +93,20 @@ https://cvws.icloud-content.com/B/AYifvNUNnayDN0SZAlizP8ZfYUPMAfZEgQW_YFfb6FUKTW
 
 # Step 3: Pull the data into Redash
 
-![Screenshot of query screen with URL pasted]()
+![Screenshot of query screen with URL pasted](/assets/images/docs/gitbook/query-example.png)
 
 1. From the top menu click **Create** then **New Query**.
 2. Set the data source to CSV data source from step 1.
 3. Paste the URL from step 2 into the query editor. 
 4. Click **Execute**.
 
-> Redash expects a CSV file with a header as the first row.
+{% callout info %} Redash expects a CSV file with a header as the first row.{% endcallout %}
 
 The CSV data is now available to Redash. If everything looks correct click **Save**. Then copy the query ID from the URL bar.
 
 # Step 4: Query the data with QRDS
 
-![Screenshot of QRDS query]()
+![Screenshot of QRDS query](/assets/images/docs/gitbook/qrds-query-example.png)
 
 1. From the top menu click **Create** and **New Query**.
 2. Set the data source to the Query Results data source from step 1.
