@@ -123,7 +123,7 @@ Just replace `cached_query_xxxx` with the ID of your query from step 3 and click
 
 Now you can use QRDS to filter, aggregate, and combine the CSV using SQLite syntax.
 
-# Troubleshooting
+<!-- # Troubleshooting
 
 It's rare to see errors once the data is successfully added to Redash in step 3. Most errors occur in step 2.
 
@@ -137,5 +137,5 @@ Your CSV file is not formatted correctly. Common causes are CSV files with unesc
 
 ![Example of HTML data]()
 
-Your URL from step 2 returns an HTML file instead of a CSV. Follow the instructions for common hosting providers in step 2. Otherwise, find the URL that lets you directly download the CSV file.
+Your URL from step 2 returns an HTML file instead of a CSV. Follow the instructions for common hosting providers in step 2. Otherwise, find the URL that lets you directly download the CSV file. -->
 
