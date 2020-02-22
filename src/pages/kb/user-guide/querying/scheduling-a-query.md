@@ -2,7 +2,7 @@
 category: querying
 parent_category: user-guide
 helpscout_url: https://help.redash.io/article/41-scheduling-a-query
-title: Scheduling A Query
+title: How to schedule a query
 slug: scheduling-a-query
 order: 4
 ---
@@ -12,13 +12,13 @@ adjust!
 
 In the bottom left corner, you'll see the schedule area:
 
-<img src="/assets/images/docs/gitbook/query-details.png" width="100%">
+<img src="/assets/images/docs/gitbook/refresh-settings.png">
 
-Clicking ' Never ' will open a picker for "every x" or at a specific time of
+Clicking **Never** will open a picker for "every x" or at a specific time of
 day. Note: The time you set the scheduling of queries is based on the timezone
 of the computer you're using to set it (then it's translated to UTC).
 
-<img src="/assets/images/docs/gitbook/schedule-modal.png" width="80%">
+<img src="/assets/images/docs/gitbook/schedule-modal.png">
 
 Once a schedule is set, your query will run automatically as instructed to
 run.
