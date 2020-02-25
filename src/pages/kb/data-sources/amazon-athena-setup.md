@@ -87,3 +87,25 @@ If you have trouble refreshing the Athena data source schema, check whether you'
 ## Troubleshooting
 
 If you're getting an error message saying: **"Insufficient permissions to execute the query."**, then make sure that you gave permissions to the IAM user to access the S3 bucket where the data is stored.
+
+### AWSQuicksightAthenaAccess
+
+When using Athena you need the following S3 permissions:
+
+* Read permissions for the buckets you query from.
+* Write permissions for the Query Results bucket.
+
+The later is supposed to be covered by the AWSQuicksightAthenaAccess policy, but it defines this only for the following buckets: `arn:aws:s3:::aws-athena-query-results-*` .
+
+If you use a different bucket location, you need to specify it in your custom policy. The required permissions for the query results bucket are:
+
+                "s3:GetBucketLocation",
+                "s3:GetObject",
+                "s3:ListBucket",
+                "s3:ListBucketMultipartUploads",
+                "s3:ListMultipartUploadParts",
+                "s3:AbortMultipartUpload",
+                "s3:CreateBucket",
+                "s3:PutObject"
+
+For the data buckets the permissions we have on our help page should be enough.
