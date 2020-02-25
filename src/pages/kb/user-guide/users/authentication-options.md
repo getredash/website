@@ -7,7 +7,7 @@ slug: authentication-options
 
 Authentication settings are available in the `Settings`>`Settings` tab.
 
-![](/assets/images/docs/gitbook/settings-saml.png)
+![](/assets/images/docs/gitbook/authentication-options.png)
 
 {% callout %}
 Only admins can view and change authentication settings.
