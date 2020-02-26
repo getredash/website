@@ -69,7 +69,7 @@ All queries in your organization are visible to all logged-in users.
 
 ## Archiving a Query
 
-Once a query is no longer useful, you can archive it. Archiving is almost the same as deleting, except that **direct links to the query will still work.** To archive a query, open the little menu at the top-right area of the query editor, next to the Save button and click Archive.
+You can't delete queries in Redash. But you can archive them. Archiving is like deleting, except **direct links to the query still work.** To archive a query, open the vertical ellipsis menu at the top-right of the query editor and click Archive.
 
 ![](/assets/images/docs/gitbook/archive_query.png)
 
