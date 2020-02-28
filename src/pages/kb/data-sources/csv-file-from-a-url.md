@@ -10,6 +10,8 @@ toc: true
 
 You can't upload files to Redash directly. Instead, you have to pull them from somewhere. This guide shows how to load data from CSV files into Redash and query it with [QRDS]({% link _kb/user-guide/querying/query-results-data-source.md %}).
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qL7hZ-SQmRo?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 # Step 1: Configure your data sources
 
 {% callout danger %}If you did this already, go to step 2.{% endcallout %}
