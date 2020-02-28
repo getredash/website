@@ -30,3 +30,9 @@ You can read more about Redash's permissions model [here](/help/user-guide/users
 Some users embed their dashboards outside of Redash using iframes. Redash provides a `Full Screen` view to improve this experience. Full screen mode removes everything but the widget UI. Just click the full screen button to the right of the `Refresh` button. Then copy the URL from your browser into your iframe embed code.  Embedding a dashboard in this way will require users to be logged-in to Redash. To embed Redash for external users you can use the secret link method described above. Secret links to Redash dashboards are full screen by default.
 
 ![](/assets/images/docs/gitbook/full_screen_button.png)
+
+{% callout danger %}
+
+Beginning with Redash V8, an embedded dashboard may use parameters. But _any user_ can modify them, which makes Redash the wrong tool for embedded analytics. Only share dashboards with trusted stakeholders.
+
+{% endcallout %}
