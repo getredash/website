@@ -1,7 +1,7 @@
 ---
 category: users
 parent_category: user-guide
-title: Authentication Options (SSO, Google OAuth, SAML)
+title: Authentication Options (SSO, Google OAuth, Github OAuth, SAML)
 slug: authentication-options
 ---
 
@@ -17,6 +17,8 @@ There are 3 authentication related settings here:
 
 1. Enable/disable password based login.
 2. Google SSO: add Google Apps based domains to allow login from. Any user with a Google account from these domain(s) will be able to login. If they don't have an account yet, an account will be automatically created.
+   
+   Github SSO: add email domains to allow login from. Any user with a github account from these domain(s) will be able to login.
 3. Enable/disable SAML support.
 
 Once you enable SAML, additional settings will appear:

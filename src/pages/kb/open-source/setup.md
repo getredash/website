@@ -136,6 +136,17 @@ Once updated, restart the web server (`docker-compose up -d server`). Once enabl
 
 ![](/assets/images/docs/redash_google_oauth_domain.png)
 
+### Github OAuth Setup
+
+If you want to use Github OAuth to authenticate users, you need to create a Github application (see [instructions]({% link _kb/open-source/admin-guide/github-application-setup.md %}) and then add the needed configuration in the `/opt/redash/env` file:
+
+* `REDASH_GITHUB_CLIENT_ID` (Github OAuth Client ID)
+* `REDASH_GITHUB_CLIENT_SECRET` (Github OAuth Client Secret)
+
+Once updated, restart the web server (`docker-compose up -d server`). Once enabled, Redash will use Github OAuth to authenticate _existing_ user accounts. To enable automatic user creation who belong to a specific domain name, you can add this domain (or more) in the setting page:
+
+![](/assets/images/docs/redash_github_oauth_domain.png)
+
 ### Other Configuration Options
 
 Redash uses environment variables for configuration. For a full list of environment variables, see the [settings article]({% link _kb/open-source/admin-guide/env-vars-settings.md %}).
