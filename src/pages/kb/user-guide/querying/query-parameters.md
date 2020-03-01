@@ -12,19 +12,10 @@ toc: true
 order: 3
 ---
 
-With parameters you can substitute values into your query at runtime without having to **Edit Source**. Any string between double curly braces `{{ }}` will be treated like a parameter. A widget will appear above the results pane so you change the parameter value. 
-<!--
-```
-SELECT
-	users.name,
-	users.account_id,
-	users.details
-FROM
-	users
-WHERE
-	users.email_address ILIKE '%{{ search_term }}%'
-```
--->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CY3N8fT2To4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+With parameters you can substitute values into your query at runtime without having to **Edit Source**. Any string between double curly braces `{{ }}` will be treated like a parameter. A widget will appear above the results pane so you change the parameter value.
+
 <img src="/assets/images/docs/gitbook/parameter-example.png">
 
 In editing mode, you can click the gear icon for each parameter widget to adjust its settings. The gear icons disappear when you click **Show Data Only** so that users who don't own the query can't change the parameter behavior.
