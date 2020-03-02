@@ -15,6 +15,8 @@ keywords:
 title: Getting Started
 ---
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Yn3_QDk2qQM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## 1. Add A Data Source
 
 The first thing you'll want to do is connect a data source ([see supported data sources]({% link _kb/data-sources/setup/supported-data-sources.md %})). You can open the Data Sources management page by clicking the Settings icon:
