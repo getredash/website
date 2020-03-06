@@ -5,6 +5,9 @@ helpscout_url: https://help.redash.io/article/114-querying-a-google-spreadsheet
 title: Querying a Google Spreadsheet
 slug: google-spreadsheet
 ---
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eunlC7NFRus" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Setup
 
 To add a Google Sheets data source to Redash you first need to create a [Service Account](https://cloud.google.com/iam/docs/understanding-service-accounts) with Google. Service Accounts allow third-party applications like Redash to read data from your Google apps without needing to log-in each time. During Service Account setup you will be provided with a JSON key file. You need to upload this file to Redash when setting up the data source.
