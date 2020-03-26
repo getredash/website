@@ -25,11 +25,75 @@ We provide a light wrapper around the Redash API called `redash-toolbelt`. The s
 + [Export all your queries as files](https://github.com/getredash/redash-toolbelt/blob/master/redash_toolbelt/examples/query_export.py)
 
 
+## Common Endpoints
 
-### Poll for Fresh Query Results (including parameters)
+{% callout danger %}
+Below is an incomplete list of Redash's internal API endpoints as of V9. These may change in future versions of Redash.
+{% endcallout %}
 
-<https://gist.github.com/arikfr/e3e434d8cfd7f331d499ccf351abbff9>
+### Queries
 
-This example uses the refresh API to make Redash refresh a query to make sure
-you get fresh results and then poll the API until a result is ready. Can be
-used for queries with or without parameters.
+`api/queries`
++ GET: Returns a paginated array of query objects.
+	- Includes the most recent `query_result_id` for non-parameterized queries.
++ POST: Create a new query object
+
+`api/queries/<id>`
++ GET: Returns an individual query object
++ POST: Edit an existing query object.
++ DELETE: Archive this query. 
+
+{% callout info %}
+
+There are two endpoints that can refresh a query with parameters. `/refresh` and `/results`.
+
+`/refresh` accepts parameter values in its query string.
+`/results` accepts parameter values in the request JSON request body.
+
+```
+{ 
+    "parameters": {
+    	"number_param": 100,
+    	"date_param": "2020-01-01",
+    	"date_range_param": {
+    		"start": "2020-01-01",
+    		"end": "2020-12-31"
+    		}
+    	}
+    }
+```
+
+{% endcallout %}
+
+`api/queries/<id>/refresh`
++ POST: Refreshes a query and responds with a query task result (job)
+	- If passing parameters, they must be included in the query string preceded by `p_`.
+
+`api/queries/<id>/results`
++ POST: Refreshes a query and responds with a query task result (job).
+	- If passing parameters, they must be included in the JSON request body as a `parameters` object.
+
+`api/jobs/<job_id>`
++ GET: Returns a query task result (job)
+	+ Possible statuses:
+		- 1 == PENDING (waiting to be executed)
+		- 2 == STARTED (executing)
+		- 3 == SUCCESS
+		- 4 == FAILURE
+		- 5 == CANCELLED
+	+ When status is success, the job will include a `query_result_id`
+
+`api/query_results/<query_result_id>`
++ GET: Returns a query result
+	- Appending a filetype of `.csv` or `.json` to this request will return a downloadable file. If you append your `api_key` in the query string, this link will work for non-logged-in users.
+
+### Dashboards
+
+`api/dashboards`
++ GET: Returns a paginated array of dashboard objects.
++ POST: Create a new dashboard object
+
+`api/dashboards/<dashboard_id>`
++ GET: Returns an individual dashboard object.
++ POST: Edit an existing dashboard object.
++ DELETE: Archive this dashboard
