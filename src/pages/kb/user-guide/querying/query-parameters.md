@@ -186,6 +186,18 @@ Prior to Version 8 of Redash, parameters were not allowed in embedded visualizat
 
 {% endcallout %}
 
+**Can I change parameter values via the URL?**
+
+Yes. Each parameter appears in the URL query string preceded by `p_`. A query with id `1234` and the following query text:
+
+```
+SELECT * FROM table WHERE field = {{param}}
+```
+
+Would have link a like so: `https://app.redash.io/<slug>/queries/1234?p_param=100`
+
+This is useful for linking between queries and dashboards.
+
 ## Parameter Mapping on Dashboards
 
 Query Parameters can also be powerfully controlled within dashboards. You can link together parameters on different widgets, set static parameter values, or choose values individually for each widget.
