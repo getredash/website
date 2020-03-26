@@ -16,16 +16,15 @@ of API keys:
 
 Whenever possible we recommend using a Query API key.
 
-## API Usage Examples
+## Accessing with Python
 
-Below you can find a few example scripts that use our API for various tasks:
+We provide a light wrapper around the Redash API called `redash-toolbelt`. The source code is hosted on [Github](https://github.com/getredash/redash-toolbelt). The `examples` folder in that repo includes useful demos, such as:
 
-### Export All Your Queries as Files
++ [Poll for Fresh Query Results (including parameters)](https://github.com/getredash/redash-toolbelt/blob/master/redash_toolbelt/examples/refresh_query.py)
++ [Refresh an entire Dashboard](https://github.com/getredash/redash-toolbelt/blob/master/redash_toolbelt/examples/refresh_dashboard.py)
++ [Export all your queries as files](https://github.com/getredash/redash-toolbelt/blob/master/redash_toolbelt/examples/query_export.py)
 
-<https://gist.github.com/arikfr/598590356c4da18be976>
 
-Given an API key, it will export all the account queries as simple files on
-your file system. Can be useful for backups or to sync a git repository.
 
 ### Poll for Fresh Query Results (including parameters)
 
