@@ -1,5 +1,5 @@
 ---
-category: setup
+category: querying
 parent_category: data-sources
 title: Microsoft Azure SQL Database Setup
 slug: azure-sql-database

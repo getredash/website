@@ -1,5 +1,5 @@
 ---
-category: setup
+category: querying
 parent_category: data-sources
 title: Amazon Athena Setup
 slug: amazon-athena

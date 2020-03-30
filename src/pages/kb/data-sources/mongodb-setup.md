@@ -1,9 +1,13 @@
 ---
-category: setup
+category: querying
 parent_category: data-sources
-title: MongoDB Setup
+title: MongoDB & Redash
 slug: mongodb
+toc: true
 ---
+
+# Setup
+
 To setup a MongoDB connection, you need to at least provide a **Connection
 String**  and a **DB Name**.
 
