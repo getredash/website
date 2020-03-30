@@ -2,7 +2,7 @@
 category: querying
 parent_category: data-sources
 helpscout_url: https://help.redash.io/article/125-google-analytics-setup
-title: Google Analytics Setup
+title: Google Analytics
 slug: google-analytics
 ---
 

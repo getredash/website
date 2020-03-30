@@ -1,7 +1,7 @@
 ---
 category: querying
 parent_category: data-sources
-title: JSON & URL APIs
+title: JSON API's
 slug: json
 toc: true
 ---

@@ -1,7 +1,7 @@
 ---
 category: querying
 parent_category: data-sources
-title: Microsoft Azure SQL Database Setup
+title: Microsoft Azure SQL Database
 slug: azure-sql-database
 ---
 

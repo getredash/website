@@ -1,7 +1,7 @@
 ---
 category: querying
 parent_category: data-sources
-title: Amazon Athena Setup
+title: Amazon Athena
 slug: amazon-athena
 toc: true
 ---

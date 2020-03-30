@@ -1,7 +1,7 @@
 ---
 category: querying
 parent_category: data-sources
-title: BigQuery Setup
+title: BigQuery
 slug: bigquery
 toc: true
 ---

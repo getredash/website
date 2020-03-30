@@ -1,7 +1,7 @@
 ---
 category: querying
 parent_category: data-sources
-title: Querying Google Analytics
+title: Google Analytics
 slug: google-analytics
 ---
 
