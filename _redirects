@@ -70,3 +70,15 @@
 /help/user-guide/alerts/pagerduty-alert-destination /help/user-guide/alerts/creating-new-alert-destination
 
 /help-onpremise/setup/saml-authentication-and-authorization /help/user-guide/users/authentication-options
+
+/help/data-sources/setup/azure-sql-database /help/data-sources/querying/azure-sql-database
+/help/data-sources/setup/amazon-athena /help/data-sources/querying/amazon-athena
+/help/data-sources/setup/bigquery /help/data-sources/querying/bigquery
+/help/data-sources/setup/axibase-time-series-database /help/data-sources/querying/axibase-time-series-database
+/help/data-sources/setup/csv-file-from-a-url /help/data-sources/querying/csv-files
+/help/data-sources/setup/google-analytics /help/data-sources/querying/google-analytics
+/help/data-sources/setup/jira-setup /help/data-sources/querying/jira-ds
+/help/data-sources/setup/mongodb /help/data-sources/querying/mongodb
+/help/data-sources/setup/json /help/data-sources/querying/json-api
+/help/data-sources/setup/supported-data-sources /help/data-sources/querying/supported-data-sources
+/help/data-sources/setup /help/data-sources/querying/
