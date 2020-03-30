@@ -3,7 +3,7 @@ category: querying
 parent_category: data-sources
 helpscout_url: https://help.redash.io/article/114-querying-a-google-spreadsheet
 title: Google Sheets
-slug: google-spreadsheet
+slug: google-sheets
 ---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/eunlC7NFRus" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

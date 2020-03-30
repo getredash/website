@@ -2,7 +2,7 @@
 category: querying
 parent_category: data-sources
 title: CSV Files
-slug: csv-file-from-a-url
+slug: csv-files
 toc: true
 ---
 

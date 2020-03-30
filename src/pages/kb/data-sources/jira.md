@@ -2,7 +2,7 @@
 category: querying
 parent_category: data-sources
 title: JIRA
-slug: jira-setup
+slug: jira-ds
 ---
 
 # Setup
