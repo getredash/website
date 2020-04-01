@@ -18,7 +18,7 @@ Whenever possible we recommend using a Query API key.
 
 ## Accessing with Python
 
-We provide a light wrapper around the Redash API called `redash-toolbelt`. The source code is hosted on [Github](https://github.com/getredash/redash-toolbelt). The `examples` folder in that repo includes useful demos, such as:
+We provide a light wrapper around the Redash API called `redash-toolbelt`. It's a work-in-progress. The source code is hosted on [Github](https://github.com/getredash/redash-toolbelt). The `examples` folder in that repo includes useful demos, such as:
 
 + [Poll for Fresh Query Results (including parameters)](https://github.com/getredash/redash-toolbelt/blob/master/redash_toolbelt/examples/refresh_query.py)
 + [Refresh an entire Dashboard](https://github.com/getredash/redash-toolbelt/blob/master/redash_toolbelt/examples/refresh_dashboard.py)
