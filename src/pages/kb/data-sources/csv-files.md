@@ -1,8 +1,8 @@
 ---
-category: setup
+category: querying
 parent_category: data-sources
-title: How to query CSV files
-slug: csv-file-from-a-url
+title: CSV Files
+slug: csv-files
 toc: true
 ---
 

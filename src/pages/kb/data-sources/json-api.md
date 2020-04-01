@@ -1,8 +1,8 @@
 ---
-category: setup
+category: querying
 parent_category: data-sources
-title: JSON & URL APIs
-slug: json
+title: JSON API's
+slug: json-api
 toc: true
 ---
 

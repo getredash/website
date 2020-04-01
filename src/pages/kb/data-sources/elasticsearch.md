@@ -1,7 +1,7 @@
 ---
 category: querying
 parent_category: data-sources
-title: Querying Elasticsearch
+title: Elasticsearch
 slug: elasticsearch
 ---
 Redash supports two flavors of Elasticsearch queries, Lucene/string style

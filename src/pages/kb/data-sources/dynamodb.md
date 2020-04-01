@@ -1,7 +1,7 @@
 ---
 category: querying
 parent_category: data-sources
-title: Querying DynamoDB
+title: DynamoDB
 slug: dynamodb
 ---
 

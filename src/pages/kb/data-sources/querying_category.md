@@ -1,5 +1,5 @@
 ---
-title: Querying
+title: Setup & Querying
 permalink: /help/data-sources/querying
 parent_category: data-sources
 category: querying

@@ -1,8 +1,8 @@
 ---
-category: setup
+category: querying
 parent_category: data-sources
 helpscout_url: https://help.redash.io/article/125-google-analytics-setup
-title: Google Analytics Setup
+title: Google Analytics
 slug: google-analytics
 ---
 
@@ -30,6 +30,10 @@ Use this email address to [add a user](https://support.google.com/analytics/answ
 
 Create datasource of "Google Analytics" type with the JSON file generated in the "Create a Service Account" step.
 
+# Queries
+
+Google Analytics uses JSON document-style queries. You can get an idea of possible field types and dimensions using the [Query Explorer tool](https://ga-dev-tools.appspot.com/query-explorer/). Once you've imported data into Redash, you can use the [Query Results Data Source]({% link _kb/user-guide/querying/query-results-data-source.md %}) to examine the output with SQL syntax.
+
 ## Example Queries
 
 ```
@@ -55,4 +59,3 @@ Create datasource of "Google Analytics" type with the JSON file generated in the
 }
 ```
 
-You can get an idea of possible field types and dimensions using the [Query Explorer tool](https://ga-dev-tools.appspot.com/query-explorer/).
