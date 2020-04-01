@@ -18,7 +18,7 @@ Redash supports the following Data Sources:
 | Cassandra                    | ✓    | ✓    |
 | ClickHouse                   | ✓    | ✓    |
 | CockroachDB                  | ✓    | ✓    |
-| CSV                          |      | ✓    |
+| CSV                          | ✓    |      |
 | Databricks                   | ✓    | ✓    |
 | DB2 by IBM                   | ✓    | ✓    |
 | Druid                        | ✓    | ✓    |

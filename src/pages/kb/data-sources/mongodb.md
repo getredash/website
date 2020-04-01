@@ -57,6 +57,8 @@ Write your MongoDB query as a JSON object. During execution, Redash will convert
 
 The values you use for each key are passed unmodified as as parameters to MongoDB.
 
+# Querying
+
 ## Query Examples
 
 ### Simple Query Example

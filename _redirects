@@ -77,6 +77,7 @@
 /help/data-sources/setup/axibase-time-series-database /help/data-sources/querying/axibase-time-series-database
 /help/data-sources/setup/csv-file-from-a-url /help/data-sources/querying/csv-files
 /help/data-sources/setup/google-analytics /help/data-sources/querying/google-analytics
+/help/data-sources/querying/google-spreadsheet /help/data-sources/querying/google-sheets
 /help/data-sources/setup/jira-setup /help/data-sources/querying/jira-ds
 /help/data-sources/setup/mongodb /help/data-sources/querying/mongodb
 /help/data-sources/setup/json /help/data-sources/querying/json-api
