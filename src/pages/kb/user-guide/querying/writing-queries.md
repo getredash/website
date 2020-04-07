@@ -18,7 +18,7 @@ To make a new query, click `Create` in the navbar then select `Query`.
 
 In most cases we use the query language native to the data source. In some cases there are differences or additions, which are documented on the [Querying Data Sources]({% link _kb/data-sources/querying %}) page.
 
-## Keyboard Shorcuts
+## Keyboard Shortcuts
 
 - Execute query: `Ctrl`/`Cmd` + `Enter`
 - Save query: `Ctrl`/`Cmd` + `S`
