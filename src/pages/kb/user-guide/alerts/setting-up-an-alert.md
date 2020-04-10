@@ -31,6 +31,12 @@ A query schedule is not required but is _highly recommended_ for alerts. If you 
 
 {% endcallout %}
 
+{% callout warning %}
+
+Alerts don't work for queries with parameters. 
+
+{% endcallout %}
+
 To see a list of current Alerts click **Alerts** on the navbar. By default, they are sorted in reverse chronological order by the **Created At** column. You can reorder the list by clicking the column headings.
 
 * **Name** shows the string name of each alert. You can change this at any time.
@@ -45,7 +51,8 @@ Click the **Create** button in the navbar and then click **Alert**.
 
 ![](/assets/images/docs/gitbook/create-alert.png)
 
-Search for a target query. If you don't see it the one you want, make sure it is published and does not use parameters. Alerts don't work for queries with parameters. 
+Search for a target query. If you don't see it the one you want, make sure it is published and does not use parameters. 
+
 
 ![](/assets/images/docs/gitbook/new-alert-query-search.png)
 
