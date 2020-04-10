@@ -26,12 +26,21 @@ It's easy to embed Redash visualizations. Just click the elipsis button beneath 
 This will pop up the `<iframe>` code you can drop into your HTML pages.
 
 {% callout warning %}
-Queries with parameters do not support embeds at the moment.
+Queries with text-type parameters do not support embeds.
 {% endcallout %}
 
-For SaaS customers, there is also a hardlink to a PNG of your visualization hosted through `snap.redash.io`. The PNG embed is especially useful in contexts where iframes won't work (like GitHub issues). 
+For SaaS customers, there is also a hardlink to a PNG of your visualization hosted through `snap.redash.io`. The PNG embed is especially useful in contexts where iframes won't work (like GitHub issues).
 
-If you need the visualization PNG to include a `Cache-Control: no-cache` header, just tack the Query String variable `?no-cache` to the end of your PNG embed link.
+### Query String Variables
+
+You can append query string variables to your embed URLs:
+
+* `?no-cache` will add a `Cache-Control: no-cache` header to an embedded PNG.
+* `?hide_parameters` hides any parameter selection widgets
+* `?hide_header` hides the branded Redash header and query title
+* `?hide_link` hides the link back to Redash
+* `?hide_timestamp` hides the timestamp
+
 
 ### Downloading A Visualization as an Image File
 
