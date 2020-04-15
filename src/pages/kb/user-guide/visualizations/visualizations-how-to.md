@@ -35,6 +35,8 @@ This will pop up the `<iframe>` code you can drop into your HTML pages.
 {% callout warning %} Queries with text-type parameters do not support embeds.
 {% endcallout %}
 
+### PNG image Embeds
+
 For SaaS customers, there is also a hardlink to a PNG of your visualization
 hosted through `snap.redash.io`. The PNG embed is especially useful in contexts
 where iframes won't work (like GitHub issues). If you need the visualization PNG
