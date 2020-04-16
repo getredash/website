@@ -19,16 +19,16 @@ slug: amazon-redshift
 
 ![image](/assets/images/docs/gitbook/redshift-inbound-tab.png)
 
-5. Here you can add a rule that allows traffic into your cluster. You can
-   configure this to accept inbound connections from your Redash host. Click
-   **Edit** and then
+5.  Here you can add a rule that allows traffic into your cluster. You can
+    configure this to accept inbound connections from your Redash host. Click
+    **Edit** and then
 
-	- For **Type** choose `Custom TCP Rule`
-	- For **Protocol** choose `TCP`
-	- For **Port Range** type the same port number that you used when you
-	launched the cluster. The default port for Amazon Redshift is `5439`. 
-	Yours may be different.
-	- For **Source** pick `Custom IP` and enter your Redash instance's IP 
-	address. If you use hosted Redash enter `52.71.84.157/32`. This is our 
-	public IP address.
-	- Click **Save**
+        	- For **Type** choose `Custom TCP Rule`
+        	- For **Protocol** choose `TCP`
+        	- For **Port Range** type the same port number that you used when you
+        	launched the cluster. The default port for Amazon Redshift is `5439`.
+        	Yours may be different.
+        	- For **Source** pick `Custom IP` and enter your Redash instance's IP
+        	address. If you use hosted Redash enter `52.71.84.157/32`. This is our
+        	public IP address.
+        	- Click **Save**
