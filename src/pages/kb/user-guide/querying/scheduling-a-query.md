@@ -7,18 +7,27 @@ slug: scheduling-a-query
 order: 4
 ---
 
-By default, your query won't have any scheduling. You can check if your query
-has a schedule in the bottom left corner of the query screen.
+You can use scheduled query executions to keep your dashboards updated or to power routine Alerts. By default, your queries will not have a schedule. But this is easy to adjust. In the bottom left corner of the query editor you'll see the schedule area:
 
 <img src="/assets/images/docs/gitbook/refresh-settings.png">
 
-Clicking **Never** will open a picker for "every x" or at a specific time of
-day. Note: The time you set the scheduling of queries is based on the timezone
-of the computer you're using to set it (then it's translated to UTC).
+Clicking **Never** will open a picker with allowed schedule intervals.
 
 <img src="/assets/images/docs/gitbook/schedule-modal.png">
 
+
 Your query will run automatically once a schedule is set.
+
+{% callout info %}
+
+When you schedule queries to run
+at a certain time-of-day, Redash converts your selection to UTC using your computer's local timezone. 
+That means if you want a query to run at a certain time in UTC, you need to adjust the picker by your local offset.
+
+For example, if you want a query to execute at `00:00` UTC each day but your current timezone is CDT (UTC-5), you should enter `19:00` into the scheduler. The UTC value is displayed to the right of your selection to help
+confirm your math.
+
+{% endcallout %}
 
 {% callout warning %}
 
