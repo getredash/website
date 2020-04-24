@@ -7,10 +7,8 @@ slug: scheduling-a-query
 order: 4
 ---
 
-By default, your query won't have any scheduling but it's super easy to
-adjust!
-
-In the bottom left corner, you'll see the schedule area:
+By default, your query won't have any scheduling. You can check if your query
+has a schedule in the bottom left corner of the query screen.
 
 <img src="/assets/images/docs/gitbook/refresh-settings.png">
 
@@ -20,8 +18,7 @@ of the computer you're using to set it (then it's translated to UTC).
 
 <img src="/assets/images/docs/gitbook/schedule-modal.png">
 
-Once a schedule is set, your query will run automatically as instructed to
-run.
+Your query will run automatically once a schedule is set.
 
 {% callout warning %}
 
