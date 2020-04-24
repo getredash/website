@@ -15,7 +15,6 @@ Clicking **Never** will open a picker with allowed schedule intervals.
 
 <img src="/assets/images/docs/gitbook/schedule-modal.png">
 
-
 Your query will run automatically once a schedule is set.
 
 {% callout info %}
@@ -36,3 +35,9 @@ the [Redash API]({% link _kb/user-guide/integrations-and-api/api.md %}) and a
 scheduling system like CRON instead.
 
 {% endcallout %}
+
+## Scheduled Query Failure Reports
+
+Redash V8 added the ability to email query owners once per hour if one or more queries failed. These emails continue until there are no more failures. Failure report emails run on an independent process from the actual query schedules. It may take up to an hour after a failed query execution before Redash sends the failure report.
+
+You can toggle failure reports from your organizations settings. Under **Feature Flags** check **Email query owners when scheduled queries fail**. 
