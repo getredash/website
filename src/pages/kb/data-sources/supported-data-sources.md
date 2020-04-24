@@ -23,8 +23,8 @@ Redash supports the following Data Sources:
 | DB2 by IBM                   | ✓    | ✓    |
 | Druid                        | ✓    | ✓    |
 | Elasticsearch                | ✓    | ✓    |
-| Google Analytics)            | ✓    | ✓    |
-| Google BigQuery)             | ✓    | ✓    |
+| Google Analytics             | ✓    | ✓    |
+| Google BigQuery              | ✓    | ✓    |
 | Google Spreadsheets          | ✓    | ✓    |
 | Graphite                     | ✓    | ✓    |
 | Greenplum                    |      | ✓    |
