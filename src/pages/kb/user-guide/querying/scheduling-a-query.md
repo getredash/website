@@ -23,7 +23,10 @@ of the computer you're using to set it (then it's translated to UTC).
 Once a schedule is set, your query will run automatically as instructed to
 run.
 
-#### Scheduled Queries with Parameters
+{% callout warning %}
 
-When running queries with parameters on a schedule the scheduler will use the
-default parameter values for the query execution.
+Scheduling queries that use parameters is not currently supported. You can use
+the [Redash API]({% link _kb/user-guide/integrations-and-api/api.md %}) and a 
+scheduling system like CRON instead.
+
+{% endcallout %}
