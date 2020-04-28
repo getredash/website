@@ -5,7 +5,12 @@ title: Microsoft Azure SQL Database & Synapse
 slug: azure-sql-database
 ---
 
-Redash has two SQL Server connectors which use different python libraries: **Microsoft SQL Server** (`pymssql`) and **Microsoft SQL Server (ODBC)** (`pyodbc`). Either connector will work with Azure SQL Database. The ODBC connector is required to connect with Synapse.
+{% callout warning %}
+
+Redash V9 introduced an ODBC connector for SQL Server that improves Azure compatibility. Going forward, use the **Microsoft SQL Server (ODBC)** type. The old connector will be removed in a future release.
+
+{% endcallout %}
+
 
 ![](/assets/images/docs/gitbook/mssql-ds-choice.png)
 
