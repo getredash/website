@@ -7,23 +7,39 @@ slug: scheduling-a-query
 order: 4
 ---
 
-By default, your query won't have any scheduling but it's super easy to
-adjust!
-
-In the bottom left corner, you'll see the schedule area:
+You can use scheduled query executions to keep your dashboards updated or to power routine Alerts. By default, your queries will not have a schedule. But this is easy to adjust. In the bottom left corner of the query editor you'll see the schedule area:
 
 <img src="/assets/images/docs/gitbook/refresh-settings.png">
 
-Clicking **Never** will open a picker for "every x" or at a specific time of
-day. Note: The time you set the scheduling of queries is based on the timezone
-of the computer you're using to set it (then it's translated to UTC).
+Clicking **Never** will open a picker with allowed schedule intervals.
 
 <img src="/assets/images/docs/gitbook/schedule-modal.png">
 
-Once a schedule is set, your query will run automatically as instructed to
-run.
+Your query will run automatically once a schedule is set.
 
-#### Scheduled Queries with Parameters
+{% callout info %}
 
-When running queries with parameters on a schedule the scheduler will use the
-default parameter values for the query execution.
+When you schedule queries to run
+at a certain time-of-day, Redash converts your selection to UTC using your computer's local timezone. 
+That means if you want a query to run at a certain time in UTC, you need to adjust the picker by your local offset.
+
+For example, if you want a query to execute at `00:00` UTC each day but your current timezone is CDT (UTC-5), you should enter `19:00` into the scheduler. The UTC value is displayed to the right of your selection to help
+confirm your math.
+
+{% endcallout %}
+
+{% callout warning %}
+
+Scheduling queries that use parameters is not currently supported. You can use
+the [Redash API]({% link _kb/user-guide/integrations-and-api/api.md %}) and a 
+scheduling system like CRON instead.
+
+{% endcallout %}
+
+## Scheduled Query Failure Reports
+
+Redash V8 added the ability to email query owners once per hour if one or more queries failed. These emails continue until there are no more failures. Failure report emails run on an independent process from the actual query schedules. It may take up to an hour after a failed query execution before Redash sends the failure report.
+
+You can toggle failure reports from your organizations settings. Under **Feature Flags** check **Email query owners when scheduled queries fail**. 
+
+<img src="/assets/images/docs/gitbook/failure-report.png">
