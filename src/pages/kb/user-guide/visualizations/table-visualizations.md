@@ -31,7 +31,7 @@ Redash is sensitive to the data types that are common to most databases: text, n
 
 {% callout info %}
 
-Redash doesn't escape HTML markup in query results by default. So you may see odd effects if a query returns string fields that include HTML (e.g. from a web scraper). Toggle the **Allow HTML content** setting in the visualization editor to escape HTML characters.
+Redash sanitizes HTML in query results. But if any HTML tags remain they are not escaped by default. Thus you may see odd effects if a query result includes string fields that include HTML (e.g. from a web scraper). Toggle the **Allow HTML content** setting in the visualization editor to escape HTML characters.
 
 {% endcallout %}
 
