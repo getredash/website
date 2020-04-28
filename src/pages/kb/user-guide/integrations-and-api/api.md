@@ -33,8 +33,8 @@ Below is an incomplete list of Redash's API endpoints as of V9. These may change
 
 Each endpoint is appended to your Redash base URL. For example:
 
-- `app.redash.io/<slug>/api`
-- `redash.example.com/api`
+- `https://app.redash.io/<slug>`
+- `https://redash.example.com`
 
 ### Queries
 
