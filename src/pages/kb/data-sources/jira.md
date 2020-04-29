@@ -7,7 +7,8 @@ slug: jira-ds
 
 # Setup
 
-You need a **Username** and **[API Token](https://confluence.atlassian.com/cloud/api-tokens-938839638.html)** to connect to Jira. The token behaves like a password. 
+You need a **Username** (the email address you use to login) and **[API Token](https://confluence.atlassian.com/cloud/api-tokens-938839638.html)** to connect to Jira. The token behaves like a password. 
+
 
 {% callout warning %}
 
