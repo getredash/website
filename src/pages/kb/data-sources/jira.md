@@ -9,7 +9,6 @@ slug: jira-ds
 
 You need a **Username** (the email address you use to login) and **[API Token](https://confluence.atlassian.com/cloud/api-tokens-938839638.html)** to connect to Jira. The token behaves like a password. 
 
-Your username is the email address you use to login.
 
 {% callout warning %}
 
