@@ -14,7 +14,7 @@ needed in production, for development you will need a recent version of Node.js
 (latest LTS version is recommended).
 
 On the backend we use Flask, Celery and SQLALchemy (along with many other packages) and on
-the frontend we use ES6, Angular (1.5) and Webpack for bundling.
+the frontend we use ES6, React and Webpack for bundling.
 
 {% callout %}
 Windows users: while it should be possible to run Redash on a Windows machine, we don't know anyone who did this and lived to tell. We recommend using some sort of a virtual machine or Docker in such case.
