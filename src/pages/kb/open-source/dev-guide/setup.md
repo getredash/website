@@ -9,8 +9,8 @@ slug: setup
 
 ### PostgreSQL & Redis
 
-Refer to the documentation of Python (3), PostgreSQL (9.5 or newer), Redis
-(2.8.3 or newer) and Node.js (v12 or newer) on how to install them in your
+Refer to the documentation of Python (3), PostgreSQL (9.6 or newer), Redis
+(3 or newer) and Node.js (latest LTS version is recommended) on how to install them in your
 environment. On MacOS, you can use Homebrew to install them. On Linux you can
 use your package manager, although you need to make sure it installs recent
 enough versions.
@@ -28,7 +28,7 @@ You install them with pip:
 pip install -r requirements.txt -r requirements_dev.txt
 ```
 
-(We recommend installing them in a virtualenv. For certain data source types you
+(We recommend installing them in a [virtual environment](https://docs.python.org/3.7/tutorial/venv.html). For certain data source types you
 need to install additional dependencies from `requirements_all_ds.txt`.)
 
 ### Node.js Packages
