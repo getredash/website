@@ -50,6 +50,10 @@ On first run, it will build the Docker image we're using. Once the npm modules w
 docker-compose up -d
 ```
 
-This will run `gatsby develop` in the Docker container in the background, listening on [`http://localhost:8000`](http://localhost:8000).
+This will run `gatsby develop` in the Docker container in the background, listening on [`http://localhost:8000`](http://localhost:8000). The first time you run this command it might take a few moments for Gatsby to compile the website. You can check progress by tailing the logs:
+
+```
+docker-compose logs -f
+```
 
 You can edit the project locally and the changes will be reflected inside the Docker container.
