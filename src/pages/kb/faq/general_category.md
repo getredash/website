@@ -9,26 +9,17 @@ order: 1
 
 ##  What's Redash?
 
-Redash is an open source tool built for teams to query, visualize and
-collaborate. Redash is quick to setup and works with any data source you might
-need so you can query from anywhere in no time.
-
-You can share your results and dashboards with other team members and empower
-your entire organization to be data driven with no-code filters and parameters
-that instantly adjust. Get alerts for pre-defined triggers to your email,
-Slack, or Hipchat (you can setup a custom webhook as well).
-
-Redash is our take on freeing the data within our company in a way that will
-better fit our culture and usage patterns. We tried to use traditional BI
-suites and discovered a set of bloated, technically challenged and slow
-tools/flows. What we were looking for was a more hacker’ish way to look at
-data, so we built one.
-
-Redash was built to allow fast and easy access to billions of records, that we
-process and collect using Amazon Redshift (“petabyte scale data warehouse”
-that “speaks” PostgreSQL). Today Redash has support for querying multiple
-databases, including: Redshift, Google BigQuery, Google Spreadsheets,
-PostgreSQL, MySQL, Graphite, Axibase Time Series Database and custom scripts.
+Redash is designed to enable anyone, regardless of the level of technical sophistication, to harness the power of data big and small. SQL users leverage Redash to explore, query, visualize, and share data from any data sources. Their work in turn enables anybody in their organization to use the data. Every day, millions of users at thousands of organizations around the world use Redash to develop insights and make data-driven decisions.
+Redash features:
+1. **Browser-based**: Everything in your browser, with a shareable URL.
+2. **Ease-of-use**: Become immediately productive with data without the need to master complex software.
+3. **Query editor**: Quickly compose SQL and NoSQL queries with a schema browser and auto-complete.
+4. **Visualization and dashboards**: Create [beautiful visualizations](https://redash.io/help/user-guide/visualizations/visualization-types) with drag and drop, and combine them into a single dashboard.
+5. **Sharing**: Collaborate easily by sharing visualizations and their associated queries, enabling peer review of reports and queries.
+6. **Schedule refreshes**: Automatically update your charts and dashboards at regular intervals you define.
+7. **Alerts**: Define conditions and be alerted instantly when your data changes.
+8. **REST API**: Everything that can be done in the UI is also available through REST API.
+9. **Broad support for data sources**: Extensible data source API with native support for a long list of common databases and platforms.
 
 ## Is Redash compatible with Windows?
 
