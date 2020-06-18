@@ -4,6 +4,6 @@ services:
     build: .
     command: develop --host=0.0.0.0
     ports:
-      - "8000:8000"
+      - '8000:8000'
     volumes:
-      - ".:/app"
+      - '.:/app'
