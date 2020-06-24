@@ -31,6 +31,21 @@ class Homepage extends React.Component {
         description="Use Redash to connect to any data source (PostgreSQL, MySQL, Redshift, BigQuery, MongoDB and many others), query, visualize and share your data to make your company data driven."
         location={this.props.location}
       >
+        <section className="section section__databricks">
+          <div className="container">
+            <img src="/assets/images/databricks-redash.png"/>
+            <h1>Redash has joined Databricks</h1>
+            <Link
+              data-track
+              data-track-location="databricks"
+              track-event="Clicked Learn More about Databricks"
+              to="https://blog.redash.io/redash-joins-databricks/"
+              className="btn btn-primary btn-lg"
+            >
+              Learn More
+            </Link>
+          </div>
+        </section>
         <section className="section section--hero">
           <div className="container">
             <div className="row">
@@ -42,7 +57,7 @@ class Homepage extends React.Component {
                   Connect and query your data sources, build dashboards to
                   visualize data and share them with your company.
                 </h3>
-                <Link
+                {/* <Link
                   data-track
                   data-track-location="hero"
                   track-event="Clicked Get Started"
@@ -50,7 +65,7 @@ class Homepage extends React.Component {
                   className="btn btn-primary btn-lg"
                 >
                   Get Started
-                </Link>
+                </Link> */}
               </div>
               <div className="col-md-7 hidden-xs hidden-sm">
                 <div className="browser-container hidden-xs">
