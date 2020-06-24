@@ -33,7 +33,7 @@ class Homepage extends React.Component {
       >
         <section className="section section__databricks">
           <div className="container">
-            <img src="/assets/images/databricks-redash.png"/>
+            <img src="/assets/images/databricks-redash.png" />
             <h1>Redash has joined Databricks</h1>
             <Link
               data-track
