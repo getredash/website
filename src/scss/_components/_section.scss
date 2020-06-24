@@ -165,10 +165,22 @@
 }
 
 .section__databricks {
-  text-align: center;
-  margin-top: 25px;
+  text-align: left;
+  padding-top: 50px;
+  background-color: #F8FAFA;
+  @media (min-width: 768px) {
+    text-align: center;
+  }
   h1 {
     margin: 50px 0 25px 0;
+  }
+  img {
+    width: 290px;
+  }
+  @media (min-width: 768px) {
+    img {
+      width: 419px;
+    }  
   }
 }
 

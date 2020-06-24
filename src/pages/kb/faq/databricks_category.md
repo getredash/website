@@ -4,11 +4,11 @@ permalink: /help/faq/databricks
 parent_category: faq
 category: databricks
 layout: kb-category
-order: 1
+order: 4
 ---
 
 ## What is happening?
-Databricks has acquired Redash, and has announced a new integrated Redash offering with Databricks, which will be available later this year. Read the Databricks blog.
+Databricks has acquired Redash, and has announced a new integrated Redash offering with Databricks, which is now in private preview. Read the [Databricks blog](https://databricks.com/blog/2020/06/24/welcoming-redash-to-databricks).
 
 ## What is happening to my paid Redash Account?
 Your service and support continues as before, and we will be following up by email in the coming months on the new features and capabilities that we will be rolling out.

@@ -39,7 +39,7 @@ class Homepage extends React.Component {
               data-track
               data-track-location="databricks"
               track-event="Clicked Learn More about Databricks"
-              to="/help/faq/databricks"
+              to="https://blog.redash.io/redash-joins-databricks/"
               className="btn btn-primary btn-lg"
             >
               Learn More
@@ -57,7 +57,7 @@ class Homepage extends React.Component {
                   Connect and query your data sources, build dashboards to
                   visualize data and share them with your company.
                 </h3>
-                <Link
+                {/* <Link
                   data-track
                   data-track-location="hero"
                   track-event="Clicked Get Started"
@@ -65,7 +65,7 @@ class Homepage extends React.Component {
                   className="btn btn-primary btn-lg"
                 >
                   Get Started
-                </Link>
+                </Link> */}
               </div>
               <div className="col-md-7 hidden-xs hidden-sm">
                 <div className="browser-container hidden-xs">
