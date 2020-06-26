@@ -29,6 +29,12 @@ You can:
 
 Redash is sensitive to the data types that are common to most databases: text, numbers, dates and booleans. But it also has special support for non-standard column types like JSON documents, images, and links.
 
+{% callout info %}
+
+Redash sanitizes HTML in query results. But if any HTML tags remain they are not escaped by default. Thus you may see odd effects if a query result includes string fields that include HTML (e.g. from a web scraper). Toggle the **Allow HTML content** setting in the visualization editor to escape HTML characters.
+
+{% endcallout %}
+
 ## **Common Data Types**
 
 Redash will render a column as text if your underlying data source does not provide type information. But you can force it to use arbitrary types using the table visualization editor. This is especially useful for sources like SQLite, Google Sheets, or CSV files where type data is not available. You can, for example:
