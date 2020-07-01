@@ -44,6 +44,8 @@ You will use the same value in all of these fields. For SaaS customers, the URL 
 Make sure you replace `org-slug` in this URL with the unique slug for your organization.
 {% endcallout %}
 
+If you are using a self-hosted version of Redash, you will need to use the URL `https://<Your Self-Hosted Domain>/saml/callback?org_slug=default`
+
 After you fill in these URLs, set the Name Id format to `EmailAddress`. The Application username is `Email`. You also need to add two attribute statements and then save your changes:
 
 |    Name |     Value    |
