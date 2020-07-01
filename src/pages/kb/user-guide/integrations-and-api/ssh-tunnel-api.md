@@ -13,6 +13,13 @@ SaaS Redash traffic always arrives from our public IP address:
 your firewall. Alternatively, you can set up an SSH tunnel using the API
 described below.
 
+{% callout info %}
+
+If the below instructions don't work for you, contact Redash support
+using the in-app chat box.
+
+{% endcallout %}
+
 Overview
 ========
 
