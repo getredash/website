@@ -49,9 +49,9 @@ execution._
 You will need:
 
 (a) The address, port, and system user that Redash will use to connect with your
-bastion  
-(b) The URL for the data source to be tunneled  
-(c) The organization slug for your hosted account  
+bastion
+(b) The URL for the data source to be tunneled
+(c) The organization slug for your hosted account
 (d) The API key of an admin user within your organization (available from the
 Profile screen)
 
