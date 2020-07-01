@@ -2,6 +2,7 @@
 category: users
 parent_category: user-guide
 title: Authentication Options (SSO, Google OAuth, SAML)
+toc: true
 slug: authentication-options
 ---
 
@@ -63,29 +64,28 @@ You can now log in to Redash using Okta SSO.
 
 ### How to Configure Auth0
 
-You need to follow the following steps within Auth0 to get the application working: 
- * Create a traditional webapp
- * Under add-ons, enable SAML2
- * In the SAML2 config use the following call back url:
- 
-    `https://[YOUR_REDASH_HOSTNAME]/saml/callback?org_slug=default`
- 
- * In the SAML2 config use the following settings JSON:
+1. Create a traditional webapp
+2. Under add-ons, enable SAML2
+3. In the SAML2 config set up the callback URL:
+   - For SaaS customers, the URL is: `https://app.redash.io/org-slug/saml/callback`
+   - For Open Source users, the URL is: `https://[YOUR_REDASH_HOSTNAME]/saml/callback?org_slug=default`
+4. In the SAML2 config use the following settings JSON:
 
-  `{`<br/>
-  ` "mappings": {`<br/>
-  `   "given_name": "FirstName",`</br>
-  `   "family_name": "LastName"`</br>
-  ` },`</br>
-  `  "passthroughClaimsWithNoMapping": false,`</br>
-  `  "includeAttributeNameFormat": false`</br>
-  `}`</br>
+```
+{
+  "mappings": {
+    "given_name": "FirstName",
+    "family_name": "LastName"
+  },
+  "passthroughClaimsWithNoMapping": false,
+  "includeAttributeNameFormat": false
+}
+```
 
-
-  Within Redash, use the following config:
+Within Redash, use the following config:
   
-  SAML Metadata URL: `https://[YOUR_TENANT_HOSTNAME]/samlp/metadata/[CONNECTION_ID]`</br>
-  SAML Entity ID: `urn:auth0:[YOUR_TENANT_NAME]:[CONNECTION_NAME]`</br>
-  SAML NameID Format: `EmailAddress`</br>
+- SAML Metadata URL: `https://[YOUR_TENANT_HOSTNAME]/samlp/metadata/[CONNECTION_ID]`
+- SAML Entity ID: `urn:auth0:[YOUR_TENANT_NAME]:[CONNECTION_NAME]`
+- SAML NameID Format: `EmailAddress`
 
-Courtesy: [Auth0 Integration post](https://discuss.redash.io/t/auth0-integration/586/5)
+These changes were drawn from our [user forum](https://discuss.redash.io/t/auth0-integration/586/5).
