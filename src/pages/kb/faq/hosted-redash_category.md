@@ -36,4 +36,7 @@ help.
 
 ## Can I Connect Redash To My Database Through An SSH Tunnel?
 
-Yes. SSH Tunnels are supported but require a Pro Subscription. Please contact support for details on how to set this up.
+Yes. Hosted Redash includes an [API] for establishing tunneled connections to a
+bastion within your
+
+[API]: /help/user-guide/integrations-and-api/ssh-tunnel-api
