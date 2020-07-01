@@ -95,7 +95,7 @@ When using Athena you need the following S3 permissions:
 * Read permissions for the buckets you query from.
 * Write permissions for the Query Results bucket.
 
-The later is supposed to be covered by the AWSQuicksightAthenaAccess policy, but it defines this only for the following buckets: `arn:aws:s3:::aws-athena-query-results-*` .
+The latter is supposed to be covered by the _AWSQuicksightAthenaAccess_ policy, but it defines this only for the following buckets: `arn:aws:s3:::aws-athena-query-results-*` .
 
 If you use a different bucket location, you need to specify it in your custom policy. The required permissions for the query results bucket are:
 
@@ -107,5 +107,3 @@ If you use a different bucket location, you need to specify it in your custom po
                 "s3:AbortMultipartUpload",
                 "s3:CreateBucket",
                 "s3:PutObject"
-
-For the data buckets the permissions we have on our help page should be enough.
