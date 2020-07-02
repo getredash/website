@@ -47,9 +47,9 @@ Shortcuts for a few common providers appear below.
 
 Generate a share link with permissions set so *Anyone With Link* can access the file. The link will look like this: `https://www.dropbox.com/s/fc5e038d38a570/filename.csv?dl=0`
 
-Change the subdomain from `www` to `dl`.
+Change the subdomain from `www` to `dl`. Then change the domain from `dropbox.com` to `dropboxusercontent.com`
 
-The complete URL is: `https://dl.dropbox.com/s/fc5e038d38a570/filename.csv?dl=0`
+The complete URL is: `https://dl.dropboxusercontent.com/s/fc5e038d38a570/filename.csv?dl=0`
 
 ## Google Drive
 
