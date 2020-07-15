@@ -12,6 +12,8 @@ Redash supports the following Data Sources:
 |  Data Source                                |  Hosted Redash  |  Self-Hosted Redash  |
 |  ------------------------------------------ |  -------------  |  ------------------  |
 |   Amazon Athena                             |   ✓             |   ✓                  |
+|   Amazon CloudWatch						  |   ✓				|   ✓				   |
+|   Amazon CloudWatch Logs Insights			  |   ✓				|   ✓				   |
 |   Amazon DynamoDB                           |   ✓             |   ✓                  |
 |   Amazon Redshift                           |   ✓             |   ✓                  |
 |   Axibase Time Series Database              |   ✓             |   ✓                  |
