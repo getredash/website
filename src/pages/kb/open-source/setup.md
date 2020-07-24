@@ -15,6 +15,7 @@ To create an instance, you have the following options:
 
 1. [AWS EC2 AMI](#aws)
 2. [DigitalOcean](#do)
+2. [Render](#render)
 3. [Google Compute Engine Image](#gce)
 4. [Other](#other)
 5. [Docker](#docker)
@@ -51,6 +52,22 @@ Now proceed to “[Setup](#setup-redash-instance-setup)”.
 ### <a name="do"></a> DigitalOcean
 
 To get started on DigitalOcean, you can use the image from DigitalOcean's Marketplace ([Redash on the Marketplace](https://marketplace.digitalocean.com/apps/redash)). Once started the Droplet, proceed to "[Setup](#setup-redash-instance-setup)".
+
+### <a name="render"></a> Render
+
+To get started on [Render](https://render.com/), click "Deploy to Render" below and follow the prompts to create your services.
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/render-examples/redash)
+
+`Note: Because Redash requires more than 3 services, you will be required to provide payment information. You will not be charged for services until your free trial expires.`
+
+Once your services have finished deploying, go to the shell of your Redash web service and run the following to setup your database:
+
+```
+$ render-redash create_db
+```
+
+Now proceed to “[Setup](#setup-redash-instance-setup)”.
 
 ### <a name="gce"></a> Google Compute Engine
 
