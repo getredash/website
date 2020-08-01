@@ -16,7 +16,7 @@
     "gatsby-plugin-netlify": "2.0.6",
     "gatsby-plugin-nprogress": "2.0.7",
     "gatsby-plugin-preact": "2.0.8",
-    "gatsby-plugin-react-helmet": "3.0.5",
+    "gatsby-plugin-react-helmet": "3.3.10",
     "gatsby-plugin-react-next": "2.0.1-13",
     "gatsby-plugin-remove-serviceworker": "^1.0.0",
     "gatsby-plugin-sass": "^2.0.0-rc.2",
