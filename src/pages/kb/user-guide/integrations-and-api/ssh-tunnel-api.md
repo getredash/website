@@ -44,8 +44,8 @@ Redash sends the **database access details** to your database.
 For this to work, your bastion host must be exposed over the internet.
 And you should add [our public
 key](https://arikfr.keybase.pub/redash_ssh_key.pub) to
-`.ssh/allowed_keys` within the home folder of the system user that
-Redash will use to authenticate. We recommend creating a dedicated user
+`.ssh/authorized_keys` within the home folder of the system user that
+Redash will use to authenticate (on some systems the path is `.ssh/allowed_keys`). We recommend creating a dedicated user
 for this purpose.
 
 *Note: SSH Connections are ad-hoc. A new connection is tried on each
