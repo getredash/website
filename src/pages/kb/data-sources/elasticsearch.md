@@ -4,6 +4,12 @@ parent_category: data-sources
 title: Elasticsearch
 slug: elasticsearch
 ---
+{% callout danger %}
+
+The Redash ES connector was a community contribution from several years ago. There are many bugs and it needs to be rewritten. Work on this is currently underway (see [here](https://github.com/getredash/redash/pull/4391)) but its release date is TBD.
+
+{% endcallout %}
+
 Redash supports two flavors of Elasticsearch queries, Lucene/string style
 queries (like Kibana) and the more elaborate JSON based queries. For the first
 one create a data source of type  `Kibana` and for the later create data
