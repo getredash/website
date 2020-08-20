@@ -275,7 +275,8 @@ const PricingPage = ({ location }) => (
               </h3>
               <p>
                 Yes. If you are a legally recognized educational or non-profit
-                organization, we can offer a discount. Please <Link to="/contact">contact us</Link> after starting your trial.
+                organization, we can offer a discount. Please{' '}
+                <Link to="/contact">contact us</Link> after starting your trial.
               </p>
             </div>
 
