@@ -22,11 +22,12 @@ source of type `Elasticsearch`.
 {
   "index": "twitter",
   "query": "user:kimchy",
-  "fields": ["@timestamp", "tweet", "user"],
-  "limit": 15,
-  "sort": "@timestamp:asc"
+  "_source": ["@timestamp", "tweet", "user"],
+  "size": 15,
+  "sort": {"@timestamp:asc"}
 }
 ```
+  - In Elasticsearch of 6.x or lower, "_source" parameter should be "field" and "size" be "limit".
     
 
 ## Simple query on a logstash Elasticsearch instance:
@@ -42,9 +43,9 @@ source of type `Elasticsearch`.
 {
   "index": "logstash-2015.04.*",
   "query": "type:events AND eventName:UserUpgrade AND channel:selfserve",
-  "fields": ["@timestamp", "userId", "channel", "utm_source", "utm_medium", "utm_campaign", "utm_content"],
-  "limit": 250,
-  "sort": "@timestamp:asc"
+  "_source": ["@timestamp", "userId", "channel", "utm_source", "utm_medium", "utm_campaign", "utm_content"],
+  "size": 250,
+  "sort": {"@timestamp:asc"}
 }
 ```
 
@@ -64,9 +65,9 @@ source of type `Elasticsearch`.
       "user": "kimchy"
     }
   },
-  "fields": ["@timestamp", "tweet", "user"],
-  "limit": 15,
-  "sort": "@timestamp:asc"
+  "_source": ["@timestamp", "tweet", "user"],
+  "size": 15,
+  "sort": {"@timestamp:asc"}
 }
 ```
     
