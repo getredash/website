@@ -27,7 +27,7 @@ source of type `Elasticsearch`.
   "sort": {"@timestamp:asc"}
 }
 ```
-  - In Elasticsearch of 6.x or lower, "_source" parameter should be "field" and "size" be "limit".
+  - In Elasticsearch 6.x or lower, `_source` should be `field` and `size` should be `limit`.
     
 
 ## Simple query on a logstash Elasticsearch instance:
