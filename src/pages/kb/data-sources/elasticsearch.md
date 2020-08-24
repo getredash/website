@@ -4,19 +4,19 @@ parent_category: data-sources
 title: Elasticsearch
 slug: elasticsearch
 ---
+
 Redash supports two flavors of Elasticsearch queries, Lucene/string style
 queries (like Kibana) and the more elaborate JSON based queries. For the first
-one create a data source of type  `Kibana` and for the later create data
-source of type `Elasticsearch`.
+one create a data source of type `Kibana` and for the later create data source
+of type `Elasticsearch`.
 
 ## String query example:
 
-* Query the index named “twitter”
-* Filter by “user:kimchy”
-* Return the fields: “@timestamp”, “tweet” and “user”
-* Return up to 15 results
-* Sort by @timestamp ascending
-
+- Query the index named “twitter”
+- Filter by “user:kimchy”
+- Return the fields: “@timestamp”, “tweet” and “user”
+- Return up to 15 results
+- Sort by @timestamp ascending
 
 ```json
 {
@@ -27,19 +27,21 @@ source of type `Elasticsearch`.
   "sort": {"@timestamp:asc"}
 }
 ```
-  - In Elasticsearch 6.x or lower, `_source` should be `field` and `size` should be `limit`.
-    
+
+- In Elasticsearch 6.x or lower, `_source` should be `field` and `size` should
+  be `limit`.
 
 ## Simple query on a logstash Elasticsearch instance:
 
-  * Query the index named “logstash-2015.04.* (in this case its all of April 2015)
-  * Filter by type:events AND eventName:UserUpgrade AND channel:selfserve
-  * Return fields: “@timestamp”, “userId”, “channel”, “utm_source”, “utm_medium”, “utm_campaign”, “utm_content”
-  * Return up to 250 results
-  * Sort by @timestamp ascending
+- Query the index named “logstash-2015.04.\* (in this case its all of
+  April 2015)
+- Filter by type:events AND eventName:UserUpgrade AND channel:selfserve
+- Return fields: “@timestamp”, “userId”, “channel”, “utm_source”, “utm_medium”,
+  “utm_campaign”, “utm_content”
+- Return up to 250 results
+- Sort by @timestamp ascending
 
-    
-```json    
+```json
 {
   "index": "logstash-2015.04.*",
   "query": "type:events AND eventName:UserUpgrade AND channel:selfserve",
@@ -51,13 +53,13 @@ source of type `Elasticsearch`.
 
 ## JSON document query on a ElasticSearch instance:
 
-  * Query the index named “twitter”
-  * Filter by user equal “kimchy”
-  * Return the fields: “@timestamp”, “tweet” and “user”
-  * Return up to 15 results
-  * Sort by @timestamp ascending
-    
-```json    
+- Query the index named “twitter”
+- Filter by user equal “kimchy”
+- Return the fields: “@timestamp”, “tweet” and “user”
+- Return up to 15 results
+- Sort by @timestamp ascending
+
+```json
 {
   "index": "twitter",
   "query": {
@@ -70,7 +72,9 @@ source of type `Elasticsearch`.
   "sort": {"@timestamp:asc"}
 }
 ```
-    
+
 ## A note on authentication
 
-Redash has two data sources available for Elasticsearch. You need to use the Amazon Elasticsearch service source if you're using IAM based authentication. Otherwise, use the standard data source.
+Redash has two data sources available for Elasticsearch. You need to use the
+Amazon Elasticsearch service source if you're using IAM based authentication.
+Otherwise, use the standard data source.
