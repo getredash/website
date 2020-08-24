@@ -6,7 +6,7 @@ slug: elasticsearch
 ---
 {% callout danger %}
 
-The Redash ES connector was a community contribution from several years ago. There are many bugs and it needs to be rewritten. Work on this is currently underway (see [here](https://github.com/getredash/redash/pull/4391)) but its release date is TBD.
+The Redash ES connector was a community contribution from several years ago. There are many bugs and it needs to be rewritten. Work was started, but currently blocked as we don't have the resources to test the new implementation. We're happy for assistance if someone wants to help (see [here](https://github.com/getredash/redash/pull/4391)).
 
 {% endcallout %}
 
