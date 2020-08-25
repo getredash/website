@@ -96,7 +96,8 @@ Here's an example JSON object including different parameter types:
 
 `/api/dashboards/<dashboard_slug>`
 + GET: Returns an individual dashboard object.
++ DELETE: Archive this dashboard
 
 `/api/dashboards/<dashboard_id>`
 + POST: Edit an existing dashboard object.
-+ DELETE: Archive this dashboard
+
