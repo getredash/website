@@ -94,10 +94,8 @@ Here's an example JSON object including different parameter types:
 + GET: Returns a paginated array of dashboard objects.
 + POST: Create a new dashboard object
 
-`/api/dashboards/<dashboard_slug>`
-+ GET: Returns an individual dashboard object.
-+ DELETE: Archive this dashboard
-
 `/api/dashboards/<dashboard_id>`
++ GET: Returns an individual dashboard object.
 + POST: Edit an existing dashboard object.
++ DELETE: Archive this dashboard
 
