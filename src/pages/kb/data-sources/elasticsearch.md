@@ -82,4 +82,6 @@ of type `Elasticsearch`.
 
 ## A note on authentication
 
-Redash has two data sources available for Elasticsearch. You need to use the Amazon Elasticsearch service source if you're using IAM based authentication. Otherwise, use the standard data source.
+Redash has two data sources available for Elasticsearch. You need to use the
+Amazon Elasticsearch service source if you're using IAM based authentication.
+Otherwise, use the standard data source.
