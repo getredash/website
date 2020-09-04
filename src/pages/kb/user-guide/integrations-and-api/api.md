@@ -52,7 +52,7 @@ Each endpoint is appended to your Redash base URL. For example:
 
 `/api/queries/<id>/results`
 + POST: Initiates a new query execution or returns a cached result.
-	- Include a `max_age` key (integer value in seconds) to prefer a cached result within the specified interval. A cached result is returned if available. If `max_age` is omitted or `0` a new execution will begin and a query execution task (job) will be returned.. 
+	- The API prefers to return a cached result. If a cached result is not available then a new execution job begins and the job object is returned. To bypass a stale cache, include a `max_age` key which is an integer number of seconds. If the cached result is older than `max_age`, the cache is ignored and a new execution begins. If you set `max_age` to `0` this guarantees a new execution.
 	- If passing parameters, they must be included in the JSON request body as a `parameters` object.
 
 {% callout info %}
@@ -68,7 +68,8 @@ Here's an example JSON object including different parameter types:
     		"start": "2020-01-01",
     		"end": "2020-12-31"
     		}
-    	}
+    	},
+    "max_age": 1800
     }
 ```
 
