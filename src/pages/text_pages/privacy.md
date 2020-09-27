@@ -38,9 +38,10 @@ Redash uses selected third parties to provide you with the service, and shall sh
 - Google Analytics
 - Segment.com
 - Sentry
-- MailChimp
 - Intercom
 - Stripe
+- Mailjet
+- Postmark
 
 Moreover, Redash’s employees and agents, who are under the most strict confidentiality obligations, also have monitored access to some of your information. Redash’s employees undergo casual and routine monitoring. Lastly, your information will be shared with people you specifically ask to share.
 
