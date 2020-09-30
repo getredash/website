@@ -33,7 +33,7 @@ yarn run develop -H ip_address
 For example:
 
 ```
-yarn run develop -H 10.11.12.13
+yarn run develop -H 10.11.12.13.14.15
 ```
 
 Using a DNS name in place of an IP address will also work, assuming the DNS
