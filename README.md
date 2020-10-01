@@ -66,3 +66,4 @@ docker-compose logs -f
 
 You can edit the project locally and the changes will be reflected inside the
 Docker container.
+thanks
