@@ -1,4 +1,4 @@
-# Redash Website and Knowledge Base
+# Amazing redash Website and Knowledge Base
 
 We use Gatsby as our static site generator. The website is built and hosted with
 Netlify.
