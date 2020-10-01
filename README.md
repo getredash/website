@@ -9,7 +9,9 @@ Netlify.
 npm run fetch-contributors > website/_data/contributors.json
 ```
 
-## Website development
+## Web development
+
+## Installation Guidelines
 
 ### Gatsby Installed Locally
 
