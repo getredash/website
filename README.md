@@ -56,8 +56,8 @@ docker-compose up -d
 ```
 
 This will run `gatsby develop` in the Docker container in the background,
-listening on [`http://localhost:8000`](http://localhost:8000). The first time when
-you run this command it might take a few moments for Gatsby to compile the
+listening on [`http://localhost:8000`](http://localhost:8000). The first time
+when you run this command it might take a few moments for Gatsby to compile the
 website. You can check progress by tailing the logs:
 
 ```
