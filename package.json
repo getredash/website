@@ -78,6 +78,10 @@
     "*.md": [
       "npm run lint:textfix",
       "git add"
+    ],
+        "js/**/*.js": [
+      "eslint --format=codeframe --fix",
+      "git add"
     ]
   },
   "scripts": {
