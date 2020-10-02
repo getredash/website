@@ -79,7 +79,7 @@
       "npm run lint:textfix",
       "git add"
     ],
-        "js/**/*.js": [
+    "js/**/*.js": [
       "eslint --format=codeframe --fix",
       "git add"
     ]
