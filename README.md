@@ -49,14 +49,14 @@ docker-compose run --rm gatsby install
 ```
 
 On first run, it will build the Docker image we're using. Once the npm modules
-were installed, you can run the following to start the dev server:
+was installed, you can run the following to start the dev server:
 
 ```
 docker-compose up -d
 ```
 
 This will run `gatsby develop` in the Docker container in the background,
-listening on [`http://localhost:8000`](http://localhost:8000). The first time
+listening on [`http://localhost:8000`](http://localhost:8000). The first time when
 you run this command it might take a few moments for Gatsby to compile the
 website. You can check progress by tailing the logs:
 
