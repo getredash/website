@@ -16,11 +16,7 @@ Test specs are located in the folder `/client/cypress/integrations`.
 #### Prerequisites
 1. If you haven't already, install Redash's [Docker services]({% link _kb/open-source/dev-guide/docker.md %}) first.
 
-2. Install Cypress:
-    ```bash
-   npm run cypress:install
-   ```
-3. Stop your development environment, if currently running:
+2. Stop your development environment, if currently running:
    ```bash
    docker-compose stop
    ```
@@ -41,11 +37,7 @@ If you wish to change, observe and debug tests as they run, we recommend using t
    ```bash
    npm run cypress start
    ```
-2. Seed initial data:
-   ```bash
-   npm run cypress db-seed
-   ```
-3. Open the Cypress interface:
+2. Open the Cypress interface:
    ```bash
    npm run cypress open
    ```
@@ -56,11 +48,18 @@ If you make changes to Redash frontend code though, make sure to keep it in sync
    ```bash
    npm run watch
    ```
-4. When you're done, stop the server:
+3. When you're done, stop the server:
    ```bash
    npm run cypress stop
    ```
    This will also reset tests state.
+   
+In case it's needed to rebuild the docker images (e.g.: you pulled a new version with new packages or added some yourself), rebuild Cypress:
+ ```bash
+ npm run cypress build
+ ```
+ 
+ **Note:** Any Docker Compose command can be executed directly with the "cypress" project name (`docker-compose -p cypress`)
 
 <br /><br />
 
