@@ -5,7 +5,9 @@ title: Environment Variables Settings
 slug: env-vars-settings
 ---
 
-Many aspects of the functionality of Redash can be changes with settings. Settings are read by `redash.settings` from environment variables which (for most installs) can be set in `/opt/redash/current/.env`.
+Many aspects of the functionality of Redash can be changes with settings.
+Settings are read by `redash.settings` from environment variables which (for
+most installs) can be set in `/opt/redash/current/.env`.
 
 The follow is a list of settings and what they control:
 
@@ -97,4 +99,4 @@ The follow is a list of settings and what they control:
 | `REDASH_FEATURE_AUTO_PUBLISH_NAMED_QUERIES`     |                                                                    | true                                                                                                                                       |
 | `REDASH_BIGQUERY_HTTP_TIMEOUT`                  |                                                                    | 600                                                                                                                                        |
 | `REDASH_SCHEMA_RUN_TABLE_SIZE_CALCULATIONS`     |                                                                    | false                                                                                                                                      |
-| `REDASH_WEB_WORKERS`                            |   how many processes will gunicorn spawn to handle web requests                                                                 | 4                                                                                                                                      |
+| `REDASH_WEB_WORKERS`                            | how many processes will gunicorn spawn to handle web requests      | 4                                                                                                                                          |
