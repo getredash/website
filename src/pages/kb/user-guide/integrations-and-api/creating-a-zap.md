@@ -17,7 +17,10 @@ Here's a short example of connecting Redash to Zapier and creating a new Zap:
 3. Choose a trigger - for now, we have only "New Query Results" in there, this means the Zap will get triggered everytime a new line is added to the results set of your query. The free Zapier account supports checking for new results every 15 minutes so you should schedule the query to refresh according to the frequency in Zapier. 
 4. Connect your Redash account to Zapier: 
     1. Full domain of your Redash account (Something like:  `https://app.redash.io/myorg/` or `https://redash.myorg.com/` (note the slash at the end)) 
-    2. Your User ID - go to your account in Redash, the number in the URL just after /users/ is your User ID, i.e.  `https://app.redash.io/myorg/users/{user id}`
+    2. Your User ID - go to Redash settings and hover over your username on the **Users** tab. The number in the URL just after /users/ is your User ID, i.e.  `https://app.redash.io/myorg/users/{user id}`. 
+    {% callout warning %}
+    You must be a member of the admin group to see the users list.
+    {% endcallout %}
     3. API key - also in your user settings, select the API KEY tab and copy it from there ![](/assets/images/docs/gitbook/user_api_key.png)
     4. Test your connection! 
 5. Select the query you want to get the Zap for by entering the query ID (`https://app.redash.io/myorg/queries/{query id}`) 
