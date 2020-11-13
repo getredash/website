@@ -103,3 +103,10 @@ or make a `POST` api call to
 
 The JSON response will indicate whether Redash successfully reached your
 database through the tunnel.
+
+{% callout info %}
+
+Depending on your firewall settings you might need to whitelist Redash's
+public IP address `52.71.84.157`.
+
+{% endcallout %}
