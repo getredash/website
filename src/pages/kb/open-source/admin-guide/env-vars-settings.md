@@ -5,7 +5,9 @@ title: Environment Variables Settings
 slug: env-vars-settings
 ---
 
-Many aspects of the functionality of Redash can be changes with settings. Settings are read by `redash.settings` from environment variables which (for most installs) can be set in `/opt/redash/current/.env`.
+Many aspects of the functionality of Redash can be changes with settings.
+Settings are read by `redash.settings` from environment variables which (for
+most installs) can be set in `/opt/redash/current/.env`.
 
 The follow is a list of settings and what they control:
 
@@ -67,7 +69,8 @@ The follow is a list of settings and what they control:
 | `REDASH_ENABLED_QUERY_RUNNERS`                  |                                                                    | ”,”.join(default_query_runners)                                                                                                            |
 | `REDASH_ADDITIONAL_QUERY_RUNNERS`               |                                                                    |                                                                                                                                            |
 | `REDASH_DISABLED_QUERY_RUNNERS`                 |                                                                    |                                                                                                                                            |
-| `REDASH_ADHOC_QUERY_TIME_LIMIT`                 |                                                                    | None                                                                                                                                       |
+| `REDASH_SCHEDULED_QUERY_TIME_LIMIT`             | time limit for scheduled queries (in seconds)                      | None                                                                                                                                       |
+| `REDASH_ADHOC_QUERY_TIME_LIMIT`                 | time limit for adhoc queries (in seconds)                          | None                                                                                                                                       |
 | `REDASH_ENABLED_DESTINATIONS`                   |                                                                    | ”,”.join(default_destinations)                                                                                                             |
 | `REDASH_ADDITIONAL_DESTINATIONS`                |                                                                    |                                                                                                                                            |
 | `REDASH_EVENT_REPORTING_WEBHOOKS`               |                                                                    |                                                                                                                                            |
@@ -96,4 +99,4 @@ The follow is a list of settings and what they control:
 | `REDASH_FEATURE_AUTO_PUBLISH_NAMED_QUERIES`     |                                                                    | true                                                                                                                                       |
 | `REDASH_BIGQUERY_HTTP_TIMEOUT`                  |                                                                    | 600                                                                                                                                        |
 | `REDASH_SCHEMA_RUN_TABLE_SIZE_CALCULATIONS`     |                                                                    | false                                                                                                                                      |
-| `REDASH_WEB_WORKERS`                            |   how many processes will gunicorn spawn to handle web requests                                                                 | 4                                                                                                                                      |
+| `REDASH_WEB_WORKERS`                            | how many processes will gunicorn spawn to handle web requests      | 4                                                                                                                                          |
