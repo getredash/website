@@ -30,6 +30,12 @@ from the **Settings** > **Data Sources** tab. For tunneled connections, the
 VPC/intranet. Attempts to connect with this data source will fail unless your
 firewall allows traffic from our IP or you configure an SSH tunnel.
 
+{% callout warning %}
+
+When you set up the data source in Redash, you **must** enter the port that the database listens on. Even if your database uses the default (5432 on Postgres e.g.) you must explicitly enter it on the setup screen. Otherwise you will receive an error that says: "SSH tunneling is not implemented for this query runner yet."
+
+{% endcallout %}
+
 **SSH access details** are supplied using Redash's REST API because this feature
 has not yet been added to our front-end user interface. The tunnel API uses
 [public key authentication](https://tools.ietf.org/html/rfc4716) to connect with
