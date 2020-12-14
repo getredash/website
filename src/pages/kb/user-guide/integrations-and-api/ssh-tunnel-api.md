@@ -30,6 +30,16 @@ from the **Settings** > **Data Sources** tab. For tunneled connections, the
 VPC/intranet. Attempts to connect with this data source will fail unless your
 firewall allows traffic from our IP or you configure an SSH tunnel.
 
+{% callout warning %}
+
+When you set up the data source in Redash, you **must** enter the port that the
+database listens on. Even if your database uses the default (5432 on Postgres
+e.g.) you must explicitly enter it on the setup screen. Otherwise you will
+receive an error that says: "SSH tunneling is not implemented for this query
+runner yet."
+
+{% endcallout %}
+
 **SSH access details** are supplied using Redash's REST API because this feature
 has not yet been added to our front-end user interface. The tunnel API uses
 [public key authentication](https://tools.ietf.org/html/rfc4716) to connect with
@@ -50,11 +60,9 @@ execution._
 You will need:
 
 (a) The address, port, and system user that Redash will use to connect with your
-bastion
-(b) The URL for the data source to be tunneled
-(c) The organization slug for your hosted account
-(d) The API key of an admin user within your organization (available from the
-Profile screen)
+bastion (b) The URL for the data source to be tunneled (c) The organization slug
+for your hosted account (d) The API key of an admin user within your
+organization (available from the Profile screen)
 
 ## Step 1: `GET` the data source details
 
@@ -106,7 +114,7 @@ database through the tunnel.
 
 {% callout info %}
 
-Depending on your firewall settings you might need to whitelist Redash's
-public IP address `52.71.84.157`.
+Depending on your firewall settings you might need to whitelist Redash's public
+IP address `52.71.84.157`.
 
 {% endcallout %}
