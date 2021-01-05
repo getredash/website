@@ -51,9 +51,23 @@ Each endpoint is appended to your Redash base URL. For example:
 
 
 `/api/queries/<id>/results`
+
+
++ GET: Get a cached result for this query ID.
+    - Only works for non parameterized queries. If you attempt to GET results
+for a parameterized query you'll receive the error: `no cached result found
+for this query`. See POST instructions for this endpoint to get results for
+parameterized queries.
+
 + POST: Initiates a new query execution or returns a cached result.
-	- The API prefers to return a cached result. If a cached result is not available then a new execution job begins and the job object is returned. To bypass a stale cache, include a `max_age` key which is an integer number of seconds. If the cached result is older than `max_age`, the cache is ignored and a new execution begins. If you set `max_age` to `0` this guarantees a new execution.
-	- If passing parameters, they must be included in the JSON request body as a `parameters` object.
+    - The API prefers to return a cached result. If a cached result is not
+available then a new execution job begins and the job object is returned. To
+bypass a stale cache, include a `max_age` key which is an integer number of
+seconds. If the cached result is older than `max_age`, the cache is ignored
+and a new execution begins. If you set `max_age` to `0` this guarantees a new
+execution.
+    - If passing parameters, they must be included in the JSON request body as
+a `parameters` object.
 
 {% callout info %}
 
