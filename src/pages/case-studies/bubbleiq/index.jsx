@@ -47,9 +47,9 @@ const BubbleIQPage = ({ location }) => (
                 </tr>
                 <tr>
                   <td>
-                    <Link to="https://www.bubbleiq.com/" target="_blank">
+
                       BubbleIQ
-                    </Link>
+
                   </td>
                   <td>
                     <img
@@ -86,9 +86,9 @@ const BubbleIQPage = ({ location }) => (
           <div className="col-md-8 col-md-push-2">
             <h2>About BubbleIQ</h2>
             <p>
-              <Link to="https://www.bubbleiq.com/" target="_blank">
+
                 BubbleIQ
-              </Link>{' '}
+{' '}
               helps companies streamline their support workflow by connecting
               helpdesk systems (Zendesk, Salesforce) to real-time chat tools
               (Slack, Drift). This allows companies to provide better support
