@@ -196,7 +196,6 @@ const PricingPage = ({ location }) => (
                   </p>
                   <p>Audit logging</p>
                   <p>Group permissions</p>
-                  <p>SAML SSO</p>
                 </div>
               </div>
               <div className="pricing-notes">

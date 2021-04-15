@@ -20,6 +20,10 @@ There are 3 authentication related settings here:
 2. Google SSO: add Google Apps based domains to allow login from. Any user with a Google account from these domain(s) will be able to login. If they don't have an account yet, an account will be automatically created.
 3. Enable/disable SAML support.
 
+{% callout warning %}
+Please note that SAML authentication is no longer available for Hosted Redash customers. Existing configurations are not affected.
+{% endcallout %}
+
 Once you enable SAML, additional settings will appear:
 
 ![](/assets/images/docs/gitbook/saml-details.png)
