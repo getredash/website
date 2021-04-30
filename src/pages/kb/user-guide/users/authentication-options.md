@@ -34,6 +34,11 @@ Once you enable SAML, additional settings will appear:
 
 By default any user created with SAML/SSO will join the default group. It's possible to configure the SAML provider to pass what groups the user should join by setting the `RedashGroups` parameter. If you use OneLogin's predefined Redash application, it will always pass this parameter, meaning that even for existing users, it will override their current groups memberships. Hence you need to make sure it's up to date.
 
+### How to Configure self-hosted SAML
+1. SAML Metadata URL has to look as following: `http://your-site.com/auth/realms/somerelm/protocol/saml/descriptor`
+2. SAML Entity ID has to be: `redash`
+3. SAML NameID Format has to be: `urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress`
+
 ### How to Configure Okta
 
 It takes just a couple of minutes to setup Redash with Okta over the SAML 2.0 protocol. Start in your Okta control panel by clicking the button to add a new application. Choose `Web` as the platform. The sign-on method is `SAML 2.0`. On the next screen Okta has fields for a few URLs:
