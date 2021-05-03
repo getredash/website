@@ -47,7 +47,7 @@ sure it's up to date.
 
 ### How to Configure self-hosted SAML
 
-1. SAML Metadata URL has to look as following:
+1. SAML Metadata URL should point to an XML file on your server, such as:
    `http://your-site.com/auth/realms/somerelm/protocol/saml/descriptor`
 2. SAML Entity ID has to be: `redash`
 3. SAML NameID Format has to be:
