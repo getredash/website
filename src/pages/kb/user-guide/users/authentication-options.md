@@ -49,7 +49,7 @@ sure it's up to date.
 
 1. SAML Metadata URL should point to an XML file on your server, such as:
    `http://your-site.com/auth/realms/somerelm/protocol/saml/descriptor`
-2. SAML Entity ID has to be: `redash`
+2. SAML Entity ID should be: `redash`
 3. SAML NameID Format has to be:
    `urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress`
 
