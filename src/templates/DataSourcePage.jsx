@@ -128,7 +128,7 @@ export default function DataSourcePageTemplate({
             <div className="col-md-6">
               <ul className="highlight-ul m-t-50">
                 <li>
-                  <b>Share insights from {frontmatter.name}</b> via link or
+                  <b>Share insights from {frontmatter.name}</b> via link
                  or embed them wherever you need to make your
                   organization truly data driven.
                 </li>
