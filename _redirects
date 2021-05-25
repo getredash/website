@@ -83,3 +83,6 @@
 /help/data-sources/setup/json /help/data-sources/querying/json-api 301!
 /help/data-sources/setup/supported-data-sources /help/data-sources/querying/supported-data-sources 301!
 /help/data-sources/setup /help/data-sources/querying/ 301!
+/slack /help/user-guide/integrations-and-api/slack-bot-posting-visualizations-to-slack 301!
+/slack_failure /help/user-guide/integrations-and-api/slack-bot-posting-visualizations-to-slack 301!
+/slack_success /help/user-guide/integrations-and-api/slack-bot-posting-visualizations-to-slack 301!

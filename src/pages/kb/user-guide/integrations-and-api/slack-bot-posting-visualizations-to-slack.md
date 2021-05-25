@@ -6,6 +6,9 @@ title: Slack Bot (posting visualizations to Slack)
 slug: slack-bot-posting-visualizations-to-slack
 ---
 
+{% callout danger %}
+The Redash Slackbot is now deprecated.
+{% endcallout %}
 ## What Can you do with The Slack Bot
 
 **Search for Queries (Use the `/redash` slash command to search for Redash queries to add to the conversation.**

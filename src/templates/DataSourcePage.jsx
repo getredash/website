@@ -129,7 +129,7 @@ export default function DataSourcePageTemplate({
               <ul className="highlight-ul m-t-50">
                 <li>
                   <b>Share insights from {frontmatter.name}</b> via link or
-                  Slack or embed them wherever you need to make your
+                 or embed them wherever you need to make your
                   organization truly data driven.
                 </li>
                 <li>
