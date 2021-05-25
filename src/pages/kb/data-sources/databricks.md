@@ -15,4 +15,4 @@ This page documents the new Databricks connector introduced in Redash V9. It's c
 * `Name`: name for this connection.
 * `Host` and `HTTP Path`: can be found in the JDBC/ODBC tab of your cluster configuration tab (under Advanced Options).
 * `Access Token`: your personal access token. Can be generated from your User Settings page.
-* `Schemas to Load Metadata For`: which schemas you want to load metadata for (table and column names). You can specify multiple schemas seperated by a comma.
+* `Schemas to Load Metadata For`: which schemas you want to load metadata for (table and column names). You can specify multiple schemas separated by a comma.
