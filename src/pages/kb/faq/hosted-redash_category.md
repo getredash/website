@@ -7,10 +7,6 @@ layout: kb-category
 order: 3
 ---
 
-{% callout danger %}
-Hosted Redash is no longer accepting new account sign-ups
-{% endcallout %}
-
 ## Does Redash Store My Data?
 
 Each time you run a query we cache the query results.  This means there's
