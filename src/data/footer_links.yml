@@ -10,8 +10,6 @@
       url: /customers/
     - name: Case Studies
       url: /case-studies/
-    - name: Pricing
-      url: /pricing/
 - name: Company
   links:
     - name: About
