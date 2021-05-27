@@ -6,6 +6,4 @@ title: Slack Bot (posting visualizations to Slack)
 slug: slack-bot-posting-visualizations-to-slack
 ---
 
-{% callout danger %}
-The Redash Slackbot is now deprecated.
-{% endcallout %}
+{% callout danger %} The Redash Slackbot is now deprecated. {% endcallout %}
