@@ -4,8 +4,6 @@
       url: /product/
     - name: Integrations
       url: /integrations/
-    - name: Slack Bot
-      url: /slack
     - name: Customers
       url: /customers/
     - name: Case Studies

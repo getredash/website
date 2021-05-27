@@ -164,31 +164,10 @@ const ProductPage = ({ location }) => (
         <div className="row">
           <div className="col-sm-6">
             <div className="card card--yellow">
-              <img src="/assets/images/elements/slack.png" width="64px" />
-              <h4>Bring data to your Slack channel</h4>
-              <p>
-                Easily share your queries and visualizations where the
-                conversations happen.
-              </p>
-              <Link
-                data-track
-                data-track-location="democratize-data"
-                track-event="Clicked Check Slack integration"
-                to="/slack"
-                className="btn btn-secondary"
-              >
-                Slack integration →
-              </Link>
-            </div>
-          </div>
-
-          <div className="col-sm-6">
-            <div className="card card--yellow">
               <img
                 src="/assets/images/elements/icon-dashboard.png"
                 width="64px"
               />
-
               <h4>Share Dashboards</h4>
               <p>
                 Share Dashboard with a single click on a secret URL with your
