@@ -9,7 +9,7 @@ order: 3
 
 ## What is happening?
 
-We are shutting down Redash.io, effective November 30, 2021. No new customer sign ups are allowed.
+We are shutting down the hosted Redash service at app.redash.io, effective November 30, 2021. No new customer sign ups are allowed.
 
 Existing customers can continue to use the service free of charge until November 30, 2021.
 
@@ -23,7 +23,7 @@ We will provide a migration script prior to the service end of life. In order to
 
 ## What will happen to my data?
 
-All customer data in Redash.io will be deleted within thirty days after access to the service ends on November 30, 2021. Please migrate prior to that date, as you will not be able to migrate after it ends.
+All customer data in app.redash.io will be deleted within thirty days after access to the service ends on November 30, 2021. Please migrate prior to that date, as you will not be able to migrate after it ends.
 
 ## Who can I contact for help?
 
