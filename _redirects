@@ -86,3 +86,6 @@
 /slack /help/user-guide/integrations-and-api/slack-bot-posting-visualizations-to-slack 301!
 /slack_failure /help/user-guide/integrations-and-api/slack-bot-posting-visualizations-to-slack 301!
 /slack_success /help/user-guide/integrations-and-api/slack-bot-posting-visualizations-to-slack 301!
+
+/pricing / 301!
+/pricing/ / 301!
