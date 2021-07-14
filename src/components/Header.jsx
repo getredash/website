@@ -80,11 +80,6 @@ class Header extends React.Component {
                   Community
                 </Link>
               </li>
-              <li>
-                <Link data-track data-track-location="header" to="/pricing/">
-                  Pricing
-                </Link>
-              </li>
               <li
                 className={`dropdown ${this.state.dropdownOpen ? 'open' : ''}`}
               >
@@ -127,7 +122,7 @@ class Header extends React.Component {
                   data-track
                   data-track-location="header"
                   track-event="Clicked Get Started"
-                  to="https://app.redash.io/signup"
+                  to="https://redash.io/help-onpremise/setup/setting-up-redash-instance.html"
                   className="btn btn-primary navbar-btn"
                 >
                   Get Started
