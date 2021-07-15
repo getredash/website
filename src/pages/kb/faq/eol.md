@@ -19,7 +19,7 @@ In order to focus our efforts on establishing best in class experiences for SQL 
 
 ## How will I migrate my data (queries, dashboards, alerts, etc)?
 
-We will provide a migration script prior to the service end of life. In order to be informed when that is available, please either subscribe to this pull request <link> or this forum post <link>.
+We will provide a migration script prior to the service end of life. In order to be informed when that is available, please follow updates on [this forum thread](https://discuss.redash.io/t/updated-migration-script/8755).
 
 ## What will happen to my data?
 
