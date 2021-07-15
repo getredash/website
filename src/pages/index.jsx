@@ -33,13 +33,21 @@ class Homepage extends React.Component {
       >
         <section className="section section__databricks">
           <div className="container">
-            <img src="/assets/images/databricks-redash.png"/>
-            <h1>Redash has joined Databricks</h1>
+            <h1>Hosted Redash End of Life</h1>
+            <p>
+              We've decided to discontinue Hosted Redash (app.redash.io)
+              effective November 30, 2021.
+            </p>
+            <p>
+              Existing customers can continue to use the service free of charge
+              until then. We invite you to migrate to the open source version of
+              Redash, which you can host for yourself.
+            </p>
             <Link
               data-track
               data-track-location="databricks"
               track-event="Clicked Learn More about Databricks"
-              to="https://blog.redash.io/redash-joins-databricks/"
+              to="/help/faq/eol"
               className="btn btn-primary btn-lg"
             >
               Learn More
