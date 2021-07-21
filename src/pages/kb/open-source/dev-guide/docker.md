@@ -97,7 +97,7 @@ docker-compose run --rm server tests
 Before running tests for the first time, you need to create a database for tests:
 
 ```bash
-docker-compose run --rm postgres psql -h postgres -U postgres -c "create database tests;"
+docker-compose run --rm postgres psql -hpostgres -Upostgres -c "create database tests;"
 ```
 
 ### Debugging
