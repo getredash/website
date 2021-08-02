@@ -11,9 +11,10 @@ your API server and run locally only the webpack dev-server.
 
 The setup in this case is very simple:
 
-1. [Install Node.js](https://nodejs.org/en/download/) (latest LTS version is recommended, can be installed with Homebrew on OS/X)
-2. Git clone the repository.
-3. Change to the repository directory, and install npm packages: `npm install`.
-4. Start webpack dev-server: `REDASH_BACKEND="URL of your redash server" npm run start`.
+1. [Install Node.js](https://nodejs.org/en/download/) (14.16.1 or newer, can be installed with Homebrew on OS/X)
+2. Install Yarn (1.22.10 or newer): `npm install --global yarn@1.22.10`
+3. Git clone the repository.
+4. Change to the repository directory, and install Node packages: `yarn --frozen-lockfile`.
+5. Start webpack dev-server: `REDASH_BACKEND="URL of your redash server" yarn start`.
 
 The `REDASH_BACKEND=""` part of the command sets the URL of your remote Redash server.

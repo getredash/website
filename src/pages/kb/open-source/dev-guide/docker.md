@@ -11,7 +11,8 @@ We will use Docker to run all the services needed for Redash, except for Node.js
 which we will run locally.
 
 1. [Install Docker and Docker Compose](https://docs.docker.com/engine/installation/).
-2. [Install Node.js](https://nodejs.org/en/download/) (latest LTS or later is recommended, can be installed with Homebrew on OS/X)
+2. [Install Node.js](https://nodejs.org/en/download/) (14.16.1 or newer, can be installed with Homebrew on OS/X)
+3. Install Yarn (1.22.10 or newer): `npm install --global yarn@1.22.10`
 
 ## Setup
 
@@ -36,13 +37,13 @@ This will build the Docker images and fetch some prebuilt images and then start 
 (Redash web server, worker, PostgreSQL and Redis). You can refer to the `docker-compose.yml`
 file to see the full configuration. 
 
-If you hit an `errno 137` or `errno 134` particularly at `RUN npm run build`, make sure you give your Docker 
+If you hit an `errno 137` or `errno 134` particularly at `RUN yarn build`, make sure you give your Docker
 VM enough memory (4GB or more).
 
-### Install npm Packages
+### Install Node Packages
 
 ```bash
-npm install
+yarn --frozen-lockfile
 ```
 
 ### Create Database
@@ -65,13 +66,13 @@ Once all Docker services are running (can be started either by `docker-compose u
 While we will use webpack's dev server, we still need to build the frontend assets at least once, as some of them used for static pages (login page and such):
 
 ```bash
-npm run build
+yarn build
 ```
 
 To work on the frontend code, you need to use the webpack dev server, which you start with:
 
 ```bash
-npm run start
+yarn start
 ```
 
 Now the dev server is available at `http://localhost:8080`. It rebuilds the frontend

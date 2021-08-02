@@ -30,7 +30,7 @@ Test specs are located in the folder `/client/cypress/integrations`.
 Run the full test suite with a detailed report:
 
 ```bash
-npm run cypress
+yarn cypress
 ```
 
 <br />
@@ -42,12 +42,12 @@ the Cypress interface.
 
 1. Start the Cypress server:
    ```bash
-   npm run cypress start
+   yarn cypress start
    ```
 2. Open the Cypress interface:
 
    ```bash
-   npm run cypress open
+   yarn cypress open
    ```
 
    Now you can select and run individual test suites, set breakpoints and logs,
@@ -59,13 +59,13 @@ the Cypress interface.
    command in parallel:
 
    ```bash
-   npm run watch
+   yarn watch
    ```
 
 3. When you're done, stop the server:
 
    ```bash
-   npm run cypress stop
+   yarn cypress stop
    ```
 
    This will also reset tests state.
@@ -74,7 +74,7 @@ In case it's needed to rebuild the docker images (e.g.: you pulled a new version
 with new packages or added some yourself), rebuild Cypress:
 
 ```bash
-npm run cypress build
+yarn cypress build
 ```
 
 **Note:** Any Docker Compose command can be executed directly with the "cypress"

@@ -10,10 +10,9 @@ slug: setup
 ### PostgreSQL & Redis
 
 Refer to the documentation of Python (3), PostgreSQL (9.6 or newer), Redis
-(3 or newer) and Node.js (latest LTS version is recommended) on how to install them in your
-environment. On MacOS, you can use Homebrew to install them. On Linux you can
-use your package manager, although you need to make sure it installs recent
-enough versions.
+(3 or newer), Node.js (14.16.1 or newer) on how to install them in your environment.
+On MacOS, you can use Homebrew to install them. On Linux you can use your package manager,
+although you need to make sure it installs recent enough versions.
 
 ### Python Packages
 
@@ -33,16 +32,22 @@ need to install additional dependencies from `requirements_all_ds.txt`.)
 
 ### Node.js Packages
 
+Install Yarn (1.22.10 or newer):
+
+```bash
+npm install --global yarn@1.22.10
+```
+
 Install all packages with:
 
 ```bash
-npm install
+yarn --frozen-lockfile
 ```
 
 First time build assets:
 
 ```bash
-npm run build
+yarn build
 ```
 
 ## Configuration
@@ -72,7 +77,7 @@ Our recommendation:
 - Web server: `./manage.py runserver --debugger --reload`
 - RQ: `./manage.py rq worker`
 - RQ Scheduler: `./manage.py rq scheduler`
-- Frontend watch process to rebuild changes: `npm run watch`
+- Frontend watch process to rebuild changes: `yarn watch`
 
 This will result in a Flask web server listening on port `5000`, Webpack
 rebuilding changes to the frontend, RQ worker ready to run queries and RQ
