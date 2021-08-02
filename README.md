@@ -6,7 +6,7 @@ Netlify.
 ## Updating contributors data file
 
 ```
-npm run fetch-contributors > website/_data/contributors.json
+yarn fetch-contributors > website/_data/contributors.json
 ```
 
 ## Website development
@@ -48,7 +48,7 @@ First install dependencies:
 docker-compose run --rm gatsby install
 ```
 
-On first run, it will build the Docker image we're using. Once the npm modules
+On first run, it will build the Docker image we're using. Once the Node modules
 were installed, you can run the following to start the dev server:
 
 ```
