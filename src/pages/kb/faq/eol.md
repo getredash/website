@@ -22,9 +22,11 @@ analysts within Databricks as our paid offering.
 
 ## How will I migrate my data (queries, dashboards, alerts, etc)?
 
-We will provide a migration script prior to the service end of life. In order to
-be informed when that is available, please follow updates on
-[this forum thread](https://discuss.redash.io/t/updated-migration-script/8755).
+See the instructions for our [migration tool]. If you have questions please
+contact us through in-app chat or post on our [user forum]. 
+
+[migration tool]: "https://github.com/getredash/redash-toolbelt/tree/master/redash_toolbelt/docs/redash-migrate"
+[user forum]: "https://discuss.redash.io"
 
 ## What will happen to my data?
 
