@@ -25,8 +25,9 @@ analysts within Databricks as our paid offering.
 See the instructions for our [migration tool]. If you have questions please
 contact us through in-app chat or post on our [user forum]. 
 
-[migration tool]: "https://github.com/getredash/redash-toolbelt/tree/master/redash_toolbelt/docs/redash-migrate"
-[user forum]: "https://discuss.redash.io"
+
+[migration tool]: https://github.com/getredash/redash-toolbelt/tree/master/redash_toolbelt/docs/redash-migrate
+[user forum]: https://discuss.redash.io
 
 ## What will happen to my data?
 
