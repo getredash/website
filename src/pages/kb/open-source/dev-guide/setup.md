@@ -100,6 +100,5 @@ Frontend:
 yarn cypress
 ```
 
-Read more about [end to end tests]({% link _kb/open-source/dev-guide/end-to-end-tests.md %}).
-
-
+Read more about [end to end
+tests]({% link _kb/open-source/dev-guide/end-to-end-tests.md %}).
