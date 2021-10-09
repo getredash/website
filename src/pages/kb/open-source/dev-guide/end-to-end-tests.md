@@ -5,9 +5,9 @@ title: Frontend End-to-End Tests
 slug: end-to-end-tests
 ---
 
-Redash uses [Cypress](https://www.cypress.io/) for E2E
-tests, running as the CI build check "frontend-e2e-tests" on each pull request.
-Test specs are located in the folder `/client/cypress/integrations`.
+Redash uses [Cypress](https://www.cypress.io/) for E2E tests, running as the CI
+build check "frontend-e2e-tests" on each pull request. Test specs are located in
+the folder `/client/cypress/integrations`.
 
 ---
 
