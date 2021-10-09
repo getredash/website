@@ -29,8 +29,8 @@ pip install -r requirements.txt -r requirements_dev.txt
 ```
 
 (We recommend installing them in a
-[virtual environment](https://docs.python.org/3/tutorial/venv.html). For
-certain data source types you need to install additional dependencies from
+[virtual environment](https://docs.python.org/3/tutorial/venv.html). For certain
+data source types you need to install additional dependencies from
 `requirements_all_ds.txt`.)
 
 ### Node.js Packages
