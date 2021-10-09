@@ -88,12 +88,18 @@ scheduler to enqueue periodic tasks.
 
 ## Running Tests
 
-Backend tests:
+Backend:
 
 ```bash
 pytest tests/
 ```
 
-Frontend tests using Cypress:
+Frontend:
 
-TBD.
+```bash
+yarn cypress
+```
+
+Read more about [end to end tests]({% link _kb/open-source/dev-guide/end-to-end-tests.md %}).
+
+
