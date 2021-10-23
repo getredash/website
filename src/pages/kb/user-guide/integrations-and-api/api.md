@@ -90,6 +90,8 @@ Here's an example JSON object including different parameter types:
 
 {% endcallout %}
 
+### Jobs
+
 `/api/jobs/<job_id>`
 + GET: Returns a query task result (job)
 	+ Possible statuses:
@@ -99,6 +101,8 @@ Here's an example JSON object including different parameter types:
 		- 4 == FAILURE
 		- 5 == CANCELLED
 	+ When status is success, the job will include a `query_result_id`
+
+### Query Results
 
 `/api/query_results/<query_result_id>`
 + GET: Returns a query result
