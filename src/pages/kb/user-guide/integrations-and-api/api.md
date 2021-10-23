@@ -83,8 +83,9 @@ Here's an example JSON object including different parameter types:
     		"end": "2020-12-31"
     		}
     	},
-    "max_age": 1800
+      "max_age": 1800
     }
+}
 ```
 
 {% endcallout %}
