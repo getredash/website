@@ -44,9 +44,9 @@ Alerts don't work for queries with parameters.
 
 {% endcallout %}
 
-To see a list of current Alerts, click **Alerts** on the navbar. By default, they
-are sorted in reverse chronological order by the **Created At** column. You can
-reorder the list by clicking the column headings.
+To see a list of current Alerts, click **Alerts** on the navbar. By default,
+they are sorted in reverse chronological order by the **Created At** column. You
+can reorder the list by clicking the column headings.
 
 - **Name** shows the string name of each alert. You can change this at any time.
 - **Created By** shows the user that created this Alert.
@@ -70,8 +70,8 @@ Use the settings panel to configure your alert.
 - The **Value column** dropdown controls which field of your query result will
   be evaluated.
 - The **Condition** dropdown controls the logical operation to be applied.
-- The **Threshold** text input will be compared against the _Value column_
-  using the _Condition_ you specify.
+- The **Threshold** text input will be compared against the _Value column_ using
+  the _Condition_ you specify.
 
 ![](/assets/images/docs/gitbook/alert_settings_V9.png)
 
