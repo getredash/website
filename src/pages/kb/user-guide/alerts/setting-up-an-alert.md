@@ -19,7 +19,7 @@ order: 1
 Redash alerts notify you when a field returned by a [**Scheduled
 Query**]({% link _kb/user-guide/querying/scheduling-a-query.md %}) meets a
 threshhold. Use them to monitor your business. Or integrate them with tools like
-Zapier or IFTTT to kickoff workflows such as user onbarding or support tickets.
+Zapier or IFTTT to kickoff workflows such as user onboarding or support tickets.
 Alerts complement scheduled queries, but their criteria are checked after every
 execution.
 
@@ -44,7 +44,7 @@ Alerts don't work for queries with parameters.
 
 {% endcallout %}
 
-To see a list of current Alerts click **Alerts** on the navbar. By default, they
+To see a list of current Alerts, click **Alerts** on the navbar. By default, they
 are sorted in reverse chronological order by the **Created At** column. You can
 reorder the list by clicking the column headings.
 
@@ -56,21 +56,21 @@ reorder the list by clicking the column headings.
 
 # Usage
 
-Click the **Create** button in the navbar and then click **Alert**.
+Click the **Create** button in the navbar and then click **New Alert**.
 
 ![](/assets/images/docs/gitbook/create-alert.png)
 
-Search for a target query. If you don't see it the one you want, make sure it is
+Search for a target query. If you don't see the one you want, make sure it is
 published and does not use parameters.
 
 ![](/assets/images/docs/gitbook/new-alert-query-search.png)
 
 Use the settings panel to configure your alert.
 
-- The **Value Column** dropdown controls which field of your query result will
+- The **Value column** dropdown controls which field of your query result will
   be evaluated.
 - The **Condition** dropdown controls the logical operation to be applied.
-- The **Threshhold** text input will be compared against the _Value Column_
+- The **Threshold** text input will be compared against the _Value column_
   using the _Condition_ you specify.
 
 ![](/assets/images/docs/gitbook/alert_settings_V9.png)
