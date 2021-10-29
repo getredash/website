@@ -28,7 +28,7 @@ The official Redash cloud images found [here]({% link _kb/open-source/setup.md %
 
 ### Choosing a Secret Key
 
-Secret keys are like password. You should use strong secret keys. A secret key should be unique and hard to guess. Do not reuse secret keys across instances of Redash. If a hostile actor guesses your secret key they might compromise your Redash instance. 
+Secret keys are like passwords. A strong secret key will be unique and hard to guess. Do not reuse secret keys across instances of Redash or commit them to version control. If a hostile actor guesses your secret key they might compromise your Redash instance. 
 
 Our cloud images use the CLI tool `pwgen` to generate secret keys, but any [strong password generator](https://duckduckgo.com/?q=pwgen+32+strong) will work:
 
