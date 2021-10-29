@@ -6,37 +6,42 @@ slug: secrets
 toc: true
 ---
 
-# Usage
-To encrypt secret information, Redash reads two environment variables:
+## Background
+Redash encrypts secret information with two keys: the Cookie Secret and the Data Source Secret.
 
-- `REDASH_SECRET_KEY` is used to encrypt database passwords, API keys, connection strings, and other secret fields needed when querying external data sources. 
-- `REDASH_COOKIE_SECRET` is used for various cryptographic features of the web server, such as authenticating users, signing cookies, and storing user session information.
+### Cookie Secret 
 
-## Setup
+The cookie secret is taken from the `REDASH_COOKIE_SECRET` environment variable. It is used for various cryptographic features of the web server, such as authenticating users, signing cookies, and storing user session information. It is required to start the application.
 
-A value for `REDASH_COOKIE_SECRET` is required to start the application. The webserver will fail to initialise without one. If you attempt to start the webserver without specifying `REDASH_COOKIE_SECRET` you will see the following exception in your logs:
+If you attempt to start Redash without it, the webserver will not initialise and you will find the following message in your logs:
 
 ```bash
-Exception: You must set the REDASH_COOKIE_SECRET environment variable.
+Exception: You must set the REDASH_COOKIE_SECRET environment variable. Visit http://redash.io/help/open-source/admin-guide/secrets for more information.
 ```
 
-A value for `REDASH_SECRET_KEY` is required to start the application. However, if you do not set one explicitly, Redash will use the `REDASH_COOKIE_SECRET` instead. This is helpful for development. For maximum security, we recommend you set a unique value for both variables.
+To fix this message: create an environment variable called `REDASH_COOKIE_SECRET` and give it a value.
+### Data Source Secret
 
-{% callout info %}
-The official Redash cloud images found [here]({% link _kb/open-source/setup.md %}) generate unique secret keys automatically during deployment. If you deploy Redash manually with Docker Compose you can set these variables using the `environment` key in `docker-compose.yml`.
-{% endcallout %}
+The data source secret is taken from the `REDASH_SECRET_KEY` environment variable. It is used to encrypt database passwords, API keys, connection strings, and any other secret fields found on the Settings > Data Sources screen.
 
-### Choosing a Secret Key
+It is required to start the application. However, if you do not set one explicitly, Redash will use the cookie secret instead. This is helpful for development. But for maximum security, we recommend you set a unique value for both variables.
 
-Secret keys are like passwords. A strong secret key will be unique and hard to guess. Do not reuse secret keys across instances of Redash or commit them to version control. If a hostile actor guesses your secret key they might compromise your Redash instance. 
+
+## Choosing a Secret Key
+
+Treat these secret keys like passwords. A strong secret key will be unique and hard to guess. Do not reuse secret keys across instances of Redash or commit them to version control. If a hostile actor guesses your secret key they might compromise your Redash instance. 
 
 Our cloud images use the CLI tool `pwgen` to generate secret keys, but any [strong password generator](https://duckduckgo.com/?q=pwgen+32+strong) will work:
 
 ![Example pwgen usage](/assets/images/docs/gitbook/pwgen-example.png)
 
+{% callout info %}
+The official Redash cloud images found [here]({% link _kb/open-source/setup.md %}) generate unique secret keys automatically during deployment. If you deployed Redash manually with Docker Compose you can set these variables using the `environment` key in `docker-compose.yml`.
+{% endcallout %}
+
 ## Changing a Secret Keys
 
-Under normal circumstances, you set these environment variables when installing Redash for the first time and will not touch them again. However, if your secret keys are publicly exposed (by committing them to a version control system, for example) you should change your secret keys immediately.
+Under normal circumstances, you configure your secret keys while deploying Redash and will not touch them again. However, if a key is compromised (by committing it to a version control system, for example) you should change it immediately.
 
 ### Changing the Cookie Secret
 
@@ -48,7 +53,7 @@ If you did not already explicitly set `REDASH_SECRET_KEY`, then you should use t
 
 Because Redash encrypts secret fields at rest in its internal database, if you change the `REDASH_SECRET_KEY` you must also reencrypt these fields. Otherwise you will not be able to execute queries, modify your data sources, or even access the data source settings screen. The Redash CLI includes a command to reencrypt field by providing the old secret that was used to encrypt the data, and the new secret to be used.
 
-If you deployed Redash using docker-compose (from one of our cloud images, e.g.) you can reencrypt the secret fields by running the following command on your docker host.
+If you deployed Redash using docker-compose (from one of our cloud images, for instance) you can reencrypt the secret fields by running the following command on your docker host.
 
 ```bash
 $ docker-compose run --rm server manage database reencrypt ${old_secret} ${new_secret}
