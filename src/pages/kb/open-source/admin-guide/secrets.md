@@ -49,9 +49,12 @@ Assuming you have already explicitly set `REDASH_SECRET_KEY`, you can safely cha
 
 If you did not already explicitly set `REDASH_SECRET_KEY`, then you should use the instructions in the next section to reencrypt your data source fields before modifying `REDASH_COOKIE_SECRET`. Otherwise your existing data sources will become inaccessible.
 
-### Reencrypting Data Source Details
+### Changing the Data Source Secret
 
-Because Redash encrypts secret fields at rest in its internal database, if you change the `REDASH_SECRET_KEY` you must also reencrypt these fields. Otherwise you will not be able to execute queries, modify your data sources, or even access the data source settings screen. The Redash CLI includes a command to reencrypt field by providing the old secret that was used to encrypt the data, and the new secret to be used.
+Because Redash encrypts secret fields at rest in its internal database, if you change the `REDASH_SECRET_KEY` you must also reencrypt these fields. Otherwise you will not be able to execute queries, modify your data sources, or even access the data source settings screen.
+
+#### Re-encrypting Data Source Definitions
+The Redash CLI includes a command to reencrypt field by providing the old secret that was used to encrypt the data, and the new secret to be used.
 
 If you deployed Redash using docker-compose (from one of our cloud images, for instance) you can reencrypt the secret fields by running the following command on your docker host.
 
