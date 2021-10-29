@@ -47,16 +47,16 @@ Under normal circumstances, you configure your secret keys while deploying Redas
 
 Assuming you have already explicitly set `REDASH_SECRET_KEY`, you can safely change `REDASH_COOKIE_SECRET` at any time. This will immediately reset all active user sessions, but is otherwise free of side-effects.
 
-If you did not already explicitly set `REDASH_SECRET_KEY`, then you should use the instructions in the next section to reencrypt your data source fields before modifying `REDASH_COOKIE_SECRET`. Otherwise your existing data sources will become inaccessible.
+If you did not already explicitly set `REDASH_SECRET_KEY`, then you should use the instructions in the next section to reencrypt your data source fields before modifying `REDASH_COOKIE_SECRET`. Otherwise your existing data sources will be inaccessible to Redash.
 
 ### Changing the Data Source Secret
 
-Because Redash encrypts secret fields at rest in its internal database, if you change the `REDASH_SECRET_KEY` you must also reencrypt these fields. Otherwise you will not be able to execute queries, modify your data sources, or even access the data source settings screen.
+Because Redash encrypts secret fields at rest in its internal database, if you change `REDASH_SECRET_KEY` you must also reencrypt these fields. Otherwise you will not be able to execute queries, modify your data sources, or even access the data source settings screen.
 
 #### Re-encrypting Data Source Definitions
-The Redash CLI includes a command to reencrypt field by providing the old secret that was used to encrypt the data, and the new secret to be used.
+The Redash CLI includes the `database reencrypt` command to conveniently re-encrypt your data source definitions. It accepts two positional arguments: the old secret and the new secret. When you run the command, the data source secret fields in Redash's internal database are decrypted using the old secret and encrypted again with the new secret.
 
-If you deployed Redash using docker-compose (from one of our cloud images, for instance) you can reencrypt the secret fields by running the following command on your docker host.
+If you deployed Redash using docker-compose (from one of our cloud images, for instance) you can invoke this CLI on your docker host with this command:
 
 ```bash
 $ docker-compose run --rm server manage database reencrypt ${old_secret} ${new_secret}
