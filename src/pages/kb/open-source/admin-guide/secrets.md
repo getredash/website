@@ -63,7 +63,7 @@ Under normal circumstances, you configure your secret keys while deploying Redas
 
 Assuming you have already explicitly set `REDASH_SECRET_KEY`, you can safely change `REDASH_COOKIE_SECRET` at any time. This will immediately reset all active user sessions, but is otherwise free of side-effects.
 
-If you did not already explicitly set `REDASH_SECRET_KEY`, then you should use the instructions in the next section to reencrypt your data source fields before modifying `REDASH_COOKIE_SECRET`. Otherwise your existing data sources will be inaccessible to Redash.
+If you did not already explicitly set `REDASH_SECRET_KEY`, then you should use the instructions in the next section to reencrypt your secret fields before modifying `REDASH_COOKIE_SECRET`. Otherwise your existing data sources will be inaccessible to Redash.
 
 ### Changing the Application Secret
 
