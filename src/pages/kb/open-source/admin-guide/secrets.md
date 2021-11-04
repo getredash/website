@@ -1,13 +1,13 @@
 ---
 category: admin-guide
 parent_category: open-source
-title: Secrets Keys in Redash
+title: Secret Keys in Redash
 slug: secrets
 toc: true
 ---
 
 ## Background
-Redash encrypts secret information with two keys: the Cookie Secret and the Data Source Secret.
+Redash encrypts secret information with two keys: the Cookie Secret and the Application Secret.
 
 ### Cookie Secret 
 
@@ -20,20 +20,36 @@ Exception: You must set the REDASH_COOKIE_SECRET environment variable. Visit htt
 ```
 
 To fix this message: create an environment variable called `REDASH_COOKIE_SECRET` and give it a value.
-### Data Source Secret
+### Application Secret
 
-The data source secret is taken from the `REDASH_SECRET_KEY` environment variable. It is used to encrypt database passwords, API keys, connection strings, and any other secret fields found on the Settings > Data Sources screen.
+The application secret is taken from the `REDASH_SECRET_KEY` environment variable. It is used to encrypt all settings on the Settings > Data Sources screen and Settings > Alert Destinations screen.
 
 It is required to start the application. However, if you do not set one explicitly, Redash will use the cookie secret instead. This is helpful for development. But for maximum security, we recommend you set a unique value for both variables.
 
 
 ## Choosing a Secret Key
 
-Treat these secret keys like passwords. A strong secret key will be unique and hard to guess. Do not reuse secret keys across instances of Redash or commit them to version control. If a hostile actor guesses your secret key they might compromise your Redash instance. 
+We recommend you follow the [official Flask guidance](https://flask.palletsprojects.com/en/2.0.x/tutorial/deploy/#configure-the-secret-key) for selecting a secret key. During development it's fine to use a simple secret key, but...
 
-Our cloud images use the CLI tool `pwgen` to generate secret keys, but any [strong password generator](https://duckduckgo.com/?q=pwgen+32+strong) will work:
+> This should be changed to some random bytes in production. Otherwise, attackers could use the public 'dev' key to modify the session cookie, or anything else that uses the secret key.
 
-![Example pwgen usage](/assets/images/docs/gitbook/pwgen-example.png)
+A strong secret key will be random and impossible to guess. Do not reuse secret keys across instances of Redash or commit them to version control.
+
+Flask recommends using the `secrets` built-in Python module:
+
+```python
+$ python -c 'import secrets; print(secrets.token_hex())'
+
+'192b9bdd22ab9ed4d12e236c78afcb9a393ec15f71bbf5dc987d54727823bcbf'
+```
+
+Our cloud images use the CLI tool `pwgen`:
+
+```bash
+$ pwgen -1s 64
+
+QinPGTd7Ulec03lar0vkI9ojqmXsuw4VOyirnC5NuvEdJSCwLwesmknNygXITunT
+```
 
 {% callout info %}
 The official Redash cloud images found [here]({% link _kb/open-source/setup.md %}) generate unique secret keys automatically during deployment. If you deployed Redash manually with Docker Compose you can set these variables using the `environment` key in `docker-compose.yml`.
@@ -49,12 +65,12 @@ Assuming you have already explicitly set `REDASH_SECRET_KEY`, you can safely cha
 
 If you did not already explicitly set `REDASH_SECRET_KEY`, then you should use the instructions in the next section to reencrypt your data source fields before modifying `REDASH_COOKIE_SECRET`. Otherwise your existing data sources will be inaccessible to Redash.
 
-### Changing the Data Source Secret
+### Changing the Application Secret
 
 Because Redash encrypts secret fields at rest in its internal database, if you change `REDASH_SECRET_KEY` you must also reencrypt these fields. Otherwise you will not be able to execute queries, modify your data sources, or even access the data source settings screen.
 
-#### Re-encrypting Data Source Definitions
-The Redash CLI includes the `database reencrypt` command to conveniently re-encrypt your data source definitions. It accepts two positional arguments: the old secret and the new secret. When you run the command, the data source secret fields in Redash's internal database are decrypted using the old secret and encrypted again with the new secret.
+#### Re-encrypting Secret Fields
+The Redash CLI includes the `database reencrypt` command to conveniently re-encrypt your secret fields stored by Redash. It accepts two positional arguments: the old secret and the new secret. When you run the command, the secret fields in Redash's internal database are decrypted using the old secret and encrypted again with the new secret. This includes data source definitions and alert destinations.
 
 If you deployed Redash using docker-compose (from one of our cloud images, for instance) you can invoke this CLI on your docker host with this command:
 
