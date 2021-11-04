@@ -26,6 +26,10 @@ git clone https://github.com/getredash/redash.git
 cd redash/
 ```
 
+### Update docker-compose.yml
+
+Under the `x-redash-environment` key, uncomment the line containing `REDASH_COOKIE_SECRET` and specify a value.
+
 ### Create Docker Services
 
 Once you have the above setup, you need to create the Docker services:
