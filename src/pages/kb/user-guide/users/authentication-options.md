@@ -137,7 +137,7 @@ These changes were drawn from our
 
 ### How to Configure Google Workspace on Self Hosted Redash
 
-***This was tested on Redash version 10.0.0 (9c928bd1)
+***This was tested on Redash version 10.0.0 (9c928bd1)***
 
 1. In the Google workspace admin console go to `Apps` > `Web and mobile apps`
 2. Add a Custom SAML app.
@@ -148,16 +148,17 @@ These changes were drawn from our
 7. In the `Entity Id` enter `https://<Your Self-Hosted Domain>/saml/callback?org_slug=default`
 8. Change the `Name ID format` to be `Email` and the `Name ID` to be `Basic Information > Primary email` and click on the continue
 9. Add Mapping Attribute:
+
 | Google Directory attributes    | App attributes |
 | -------------------------------| -------------- |
 | Baisc Information > First Name | FirstName      |
 | Baisc Information > Last Name  | LastName       |
 
-11. Click on Finish.
-12. Under the application `User access` enable the app for the users / group you would like to have access to your Redash.
-13. In Redash go to the `Settings` and click on the `General` tab.
-14. Under in the `SAML Enabled` radio button select `Enabled (Static)`
-15. In the `SAML Single Sign-on URL` textbox enter the `SSO URL` you copied from Google
-16. In the `SAML Entity ID` textbox enter the `Entity ID` you copied from Google
-17. In the `SAML x509 cert` textbox enter the `Certificate` you copied from Google (***Make sure you enter only the certificate content without the `-----BEGIN CERTIFICATE-----` and the ` -----END CERTIFICATE-----` sections***)
-18. Click on the Save button.
+10. Click on Finish.
+11. Under the application `User access` enable the app for the users / group you would like to have access to your Redash.
+12. In Redash go to the `Settings` and click on the `General` tab.
+13. Under in the `SAML Enabled` radio button select `Enabled (Static)`
+14. In the `SAML Single Sign-on URL` textbox enter the `SSO URL` you copied from Google
+15. In the `SAML Entity ID` textbox enter the `Entity ID` you copied from Google
+16. In the `SAML x509 cert` textbox enter the `Certificate` you copied from Google (***Make sure you enter only the certificate content without the `-----BEGIN CERTIFICATE-----` and the ` -----END CERTIFICATE-----` sections***)
+17. Click on the Save button.
