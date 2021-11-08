@@ -137,12 +137,12 @@ These changes were drawn from our
 
 ### How to Configure Google Workspace on Self Hosted Redash
 
-***This was tested on Redash version 10.0.0 (9c928bd1)***
+**_This was tested on Redash version 10.0.0 (9c928bd1)_**
 
 1. In the Google workspace admin console go to `Apps` > `Web and mobile apps`
 2. Add a Custom SAML app.
 3. Add an App Name and, an icon and click on the Continue.
-4. Copy the `SSO URL` the `Entity ID` and the `Certificate` (***Make sure you copy only the certificate content without the `-----BEGIN CERTIFICATE-----` and the ` -----END CERTIFICATE-----` sections***)
+4. Copy the `SSO URL` the `Entity ID` and the `Certificate` (**_Make sure you copy only the certificate content without the `-----BEGIN CERTIFICATE-----` and the ` -----END CERTIFICATE-----` sections_**)
 5. Click continue.
 6. In the `ACS URL` enter `https://<Your Self-Hosted Domain>/saml/callback?org_slug=default`
 7. In the `Entity Id` enter `https://<Your Self-Hosted Domain>/saml/callback?org_slug=default`
@@ -150,7 +150,7 @@ These changes were drawn from our
 9. Add Mapping Attribute:
 
 | Google Directory attributes    | App attributes |
-| -------------------------------| -------------- |
+| ------------------------------ | -------------- |
 | Baisc Information > First Name | FirstName      |
 | Baisc Information > Last Name  | LastName       |
 
@@ -160,5 +160,5 @@ These changes were drawn from our
 13. Under in the `SAML Enabled` radio button select `Enabled (Static)`
 14. In the `SAML Single Sign-on URL` textbox enter the `SSO URL` you copied from Google
 15. In the `SAML Entity ID` textbox enter the `Entity ID` you copied from Google
-16. In the `SAML x509 cert` textbox enter the `Certificate` you copied from Google (***Make sure you enter only the certificate content without the `-----BEGIN CERTIFICATE-----` and the ` -----END CERTIFICATE-----` sections***)
+16. In the `SAML x509 cert` textbox enter the `Certificate` you copied from Google (**_Make sure you enter only the certificate content without the `-----BEGIN CERTIFICATE-----` and the ` -----END CERTIFICATE-----` sections_**)
 17. Click on the Save button.
