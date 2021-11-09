@@ -21,6 +21,8 @@ default view.
 
 ![](/assets/images/docs/visualization_examples/chart_2.png)
 
+![](/assets/images/docs/visualization_examples/chart_3.png)
+
 ![](/assets/images/docs/visualization_examples/pie_chart.png)
 
 ### Cohort

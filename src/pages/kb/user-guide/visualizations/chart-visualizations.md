@@ -82,7 +82,7 @@ Also keep in mind that errors are not aggregated when you stack records. An erro
 Each chart form is useful for certain kinds of presentation. You can mix and match multiple forms on the same chart as needed.
 
 * **Line** charts are almost exclusively used to present change in one or more metrics over _time_.
-* **Bar** charts can be used to present change in metrics over time or to show proportionality, like a pie chart. Bar charts can be combined with [Stacking] with great effect.
+* **Bar** charts can be used to present change in metrics over time or to show proportionality, like a pie chart. Bar charts can be combined with [Stacking] with great effect. Horizontal bar charts are also supported.
 * **Area** charts are often used to show sales funnel changes through time. They are frequently combined with [Stacking] to grant a broader picture.
 * **Pie** charts are designed to show proportionality between metrics. They are _not_ meant for conveying time series data.
 * **Scatter** charts excel at showing many groups of data points. Under the covers, Scatter plots are just like line plots, but without the connecting lines. A scatter graph is more precise but less useful for time series data.
