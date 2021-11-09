@@ -8,12 +8,12 @@ order: 3
 hide_topics: true
 ---
 
-Redash is a Python (3) and Javascript app. To fully run Redash you will also need
+Redash is a Python (3) and Javascript / Typescript app. To fully run Redash you will also need
 PostgreSQL (version 9.6 or newer) and Redis (version 3 or newer). While it's not
 needed in production, for development you will need a recent version of Node.js
 (latest LTS version is recommended).
 
-On the backend we use Flask, Celery and SQLALchemy (along with many other packages) and on
+On the backend we use Flask, RQ and SQLALchemy (along with many other packages) and on
 the frontend we use ES6, React and Webpack for bundling.
 
 {% callout %}

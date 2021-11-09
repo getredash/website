@@ -53,6 +53,12 @@ First time build assets:
 yarn build
 ```
 
+{% callout info %}
+
+Versions of Redash prior to V10 used `npm` instead of `yarn`.
+
+{% endcallout %}
+
 ## Configuration
 
 In most cases the default configuration is enough for development. But if you
