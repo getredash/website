@@ -28,6 +28,15 @@ You might notice that there is a separate field for the DB Name in the data
 source configuration and we also include it in the connection string. This is
 usually required on shared hosts like MLab.
 
+![](/assets/images/docs/gitbook/mongo-setup.png)
+
+{% callout info %}
+
+Redash V10 adds the _Username_ and _Password_ fields. The intention is to allow users to keep MongoDB passwords secret in the data source configuration. Previously this was not possible as the password would have to be embedded into the _Connection String_, which was available in plaintext in the UI and REST API.
+
+As of Redash V10, if a user supplies the Username and/or Password config field(s), Redash will use them to override whatever is set in the connection string when creating the PyMongo client. This allows for existing, pre-patch MongoDB sources to still function, while allowing new/modified MongoDB sources to have secret credentials
+
+{% endcallout %}
 ## MongoDB Atlas
 
 We've had issues with users connecting to MongoDB Atlas free tier accounts because they are on a shared environment. For best results, use a connection string of the format:
