@@ -95,7 +95,7 @@ Scatter plots are necessary for visualizations where some groups appear just onc
 
 * **Bubble** charts are scatter graphs where the size of each point marker reflects a relevant metric.
 * **Heatmap** visualizations blend features of bar charts, stacking, and bubble charts. There are several built-in color schemes to pick from. Heatmaps cannot be grouped since the entire chart is technically one trace.
-* **Box** plots can automatically show the distribution of data points across grouped categories.
+* **Box** plots can automatically show the distribution of data points across grouped categories. Horizontal box plots are also supported.
 
 # Common Mistakes
 
