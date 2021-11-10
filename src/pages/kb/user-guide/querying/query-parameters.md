@@ -79,14 +79,27 @@ Date Range parameters use a combined widget to simplify range selection.
 
 #### Quick Date and Date-Range Options
 
-When you add a Date or Date Range parameter to your query the selection widget shows a blue lightning bolt glyph. Click it to see dynamic values like "last month", "yesterday", or "last year". These values update dynamically every day.
+When you add a Date or Date Range parameter to your query, the selection widget shows a blue lightning bolt glyph. Click the glyph to see dynamic values like "Today" or "Yesterday".
+
+There are dynamic date range options too. The complete list of dynamic date-ranges is:
+
+- This week
+- This month
+- This year
+- Last week
+- Last month
+- Last year
+- Last 7 days
+- Last 14 days
+- Last 30 days
+- Last 60 days
+- Last 90 days
+- Last 12 months
+
 
 {% callout warning %}
 Because dynamic dates and date ranges are calculated in the front-end, they aren't compatible with Scheduled Queries.
 {% endcallout %}
-
-![](/assets/images/docs/gitbook/quick-date-range.png)
-
 
 ### Dropdown Lists
 
