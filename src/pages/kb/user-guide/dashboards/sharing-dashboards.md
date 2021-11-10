@@ -14,6 +14,12 @@ You can revoke access to a dashboard for external users by toggling `Allow publi
 
 {% endcallout %}
 
+{% callout warning %}
+
+Admins can globally disable all public URLs by setting the environment variable `REDASH_DISABLE_PUBLIC_URLS` to `"true"`.
+
+{% endcallout %}
+
 ![](/assets/images/docs/gitbook/turn-on-url-sharing.gif)
 
 ## Dashboard Permissions
