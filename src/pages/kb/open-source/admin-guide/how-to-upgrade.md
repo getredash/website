@@ -14,7 +14,11 @@ These instructions are for users of our new Docker-based instance. If you run ou
 
 We recommended you upgrade your Redash instance to the latest release so you can benefit from new features and bug fixes. This document assumes you used our images to set up your instance of Redash.
 
-For best results you should upgrade Redash by one semantic version at a time. To move from V4 to V7, for example, you should upgrade V4 to V5 to V6 to V7. Below is a table of recent docker release images for your reference:
+For best results you should upgrade Redash by one semantic version at a time. To move from V4 to V7, for example, you should upgrade V4 to V5 to V6 to V7.
+
+During each migration, check the [releases page](https://github.com/getredash/redash/releases) for any special notices or breaking changes in the next version.
+
+Below is a table of recent docker release images for your reference:
 
 | released_at  | version | docker_image               | 
 |--------------|---------|----------------------------| 
