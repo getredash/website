@@ -9,7 +9,7 @@ order: 1
 
 ## Create an Instance
 
-For basic deployments we recommend a minimum of 2GB of RAM and reasonable amount of CPU allocation. As usage grows you might need additional RAM and CPU power to support increased number of background workers and API processes.
+For basic deployments we recommend a minimum of 4GB of RAM and reasonable amount of CPU allocation. As usage grows you might need additional RAM and CPU power to support increased number of background workers and API processes.
 
 To create an instance, you have the following options:
 
