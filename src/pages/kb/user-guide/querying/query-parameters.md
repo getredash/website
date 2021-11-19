@@ -41,9 +41,8 @@ Click the gear icon beside each parameter widget to edit its settings:
 
 <img src="/assets/images/docs/gitbook/parameter-modal-v9.png" >
 
-
 {% callout info %}
-Prior to Redash version 7, the parameter settings pane in the Query Editor included a `Global` tickbox, which notified Redash that you intended to use this parameter across multiple widgets in a dashboard. The `Global` tickbox has been replaced since version 6 with the new *Parameter Mapping on Dashboards* functionality described below.
+Prior to Redash version 7, the parameter settings pane in the Query Editor included a `Global` tickbox, which notified Redash that you intended to use this parameter across multiple widgets in a dashboard. The `Global` tickbox has been replaced since version 6 with the new _Parameter Mapping on Dashboards_ functionality described below.
 
 {% endcallout %}
 
@@ -57,7 +56,7 @@ For security reasons, a Redash user must have [Full Access]({% link _kb/user-gui
 
 Date Parameters use a familiar calendar picking interface and can default to the current date and time. You can chose from three levels of precision: Date, Date and Time, and Date and Time with seconds.
 
-Date Range Parameters insert two markers called `.start` and `.end` which signify the beginning and end of your chosen date range. 
+Date Range Parameters insert two markers called `.start` and `.end` which signify the beginning and end of your chosen date range.
 
 ```
 SELECT a, b c
@@ -79,14 +78,26 @@ Date Range parameters use a combined widget to simplify range selection.
 
 #### Quick Date and Date-Range Options
 
-When you add a Date or Date Range parameter to your query the selection widget shows a blue lightning bolt glyph. Click it to see dynamic values like "last month", "yesterday", or "last year". These values update dynamically every day.
+When you add a Date or Date Range parameter to your query, the selection widget shows a blue lightning bolt glyph. Click the glyph to see dynamic values like "Today" or "Yesterday".
+
+There are dynamic date range options too. The complete list of dynamic date-ranges is:
+
+- This week
+- This month
+- This year
+- Last week
+- Last month
+- Last year
+- Last 7 days
+- Last 14 days
+- Last 30 days
+- Last 60 days
+- Last 90 days
+- Last 12 months
 
 {% callout warning %}
 Because dynamic dates and date ranges are calculated in the front-end, they aren't compatible with Scheduled Queries.
 {% endcallout %}
-
-![](/assets/images/docs/gitbook/quick-date-range.png)
-
 
 ### Dropdown Lists
 
@@ -167,18 +178,18 @@ We use two parameters: `{{org_id}}` and `{{start_date}}`.
 
 Yes, with one exception. If a query uses a Text type parameter it cannot be embedded because Text parameters are not safe from SQL injection. All other types of query parameters can be used safely in embedded visualizations and dashboards.
 
-| Parameter Type                | Safe for Embedding? | 
-|-------------------------------|---------------------| 
-| Text                          | No                  | 
-| Number                        | Yes                 | 
-| Dropdown List                 | Yes                 | 
-| Query Based Dropdown List     | Yes                 | 
-| Date                          | Yes                 | 
-| Date and Time                 | Yes                 | 
-| Date and Time w/Seconds       | Yes                 | 
-| Date Range                    | Yes                 | 
-| Date and Time Range           | Yes                 | 
-| Date and Time Range w/Seconds | Yes                 | 
+| Parameter Type                | Safe for Embedding? |
+| ----------------------------- | ------------------- |
+| Text                          | No                  |
+| Number                        | Yes                 |
+| Dropdown List                 | Yes                 |
+| Query Based Dropdown List     | Yes                 |
+| Date                          | Yes                 |
+| Date and Time                 | Yes                 |
+| Date and Time w/Seconds       | Yes                 |
+| Date Range                    | Yes                 |
+| Date and Time Range           | Yes                 |
+| Date and Time Range w/Seconds | Yes                 |
 
 {% callout info %}
 
@@ -210,20 +221,20 @@ You select your desired parameter mapping when adding dashboard widgets that dep
 You can also access the parameter mapping interface by clicking the vertical ellipsis (`⋮`) on the top right of a dashboard widget then clicking **Edit Parameters**.
 {% endcallout %}
 
-+ **Title** is the display name for your parameter and will appear beside the value selector on your dashboard. It defaults to the parameter keyword (see next bullet). Edit it by clicking the pencil glyph. Note that a titles are not displayed for static dashboard parameters because the value selector is hidden. If you select `Static value` as your Value Source then the Title field will be grayed out.
+- **Title** is the display name for your parameter and will appear beside the value selector on your dashboard. It defaults to the parameter keyword (see next bullet). Edit it by clicking the pencil glyph. Note that a titles are not displayed for static dashboard parameters because the value selector is hidden. If you select `Static value` as your Value Source then the Title field will be grayed out.
 
-+ **Keyword** is the string literal for this parameter in the underlying query. This is useful for debugging if your dashboard does not return expected results.
+- **Keyword** is the string literal for this parameter in the underlying query. This is useful for debugging if your dashboard does not return expected results.
 
-+ **Default Value** is what Redash will use if no other value is specified. To change this from the query screen, execute the query with your desired parameter value and click the **Save** button.
+- **Default Value** is what Redash will use if no other value is specified. To change this from the query screen, execute the query with your desired parameter value and click the **Save** button.
 
-+ **Value Source** is where you choose your preferred mapping. Click the pencil glyph to open the mapper settings.
+- **Value Source** is where you choose your preferred mapping. Click the pencil glyph to open the mapper settings.
 
 ### Value Source Options
 
-+ **New dashboard parameter:** Dashboard parameters allow you to set a parameter value in one place on your dashboard and map it to multiple visualizations. Use this option to create a new dashboard-level parameter.
+- **New dashboard parameter:** Dashboard parameters allow you to set a parameter value in one place on your dashboard and map it to multiple visualizations. Use this option to create a new dashboard-level parameter.
 
-+ **Existing dashboard parameter:** If you have already set up a dashboard-level parameter, use this option to map it to a specific query parameter. You will need to specify which pre-existing dashboard parameter will be mapped.
+- **Existing dashboard parameter:** If you have already set up a dashboard-level parameter, use this option to map it to a specific query parameter. You will need to specify which pre-existing dashboard parameter will be mapped.
 
-+ **Widget parameter:** This option will display a value selector inside your dashboard widget. This is useful for one-off parameters that are not shared between widgets.
+- **Widget parameter:** This option will display a value selector inside your dashboard widget. This is useful for one-off parameters that are not shared between widgets.
 
-+ **Static value:** Selecting this option will let you choose a static value for this widget, regardless of the values used on other widgets. Statically mapped parameter values do not display a value selector anywhere on the dashboard which is more compact. This lets you take advantage of the flexibility of Query Parameters without cluttering the user interface on a dashboard when certain parameters are not expected to change frequently.
+- **Static value:** Selecting this option will let you choose a static value for this widget, regardless of the values used on other widgets. Statically mapped parameter values do not display a value selector anywhere on the dashboard which is more compact. This lets you take advantage of the flexibility of Query Parameters without cluttering the user interface on a dashboard when certain parameters are not expected to change frequently.

@@ -1,10 +1,16 @@
 ---
 category: querying
 parent_category: data-sources
-title: CSV Files
-slug: csv-files
+title: CSV Files (Deprecated)
+slug: csv-files-deprecated
 toc: true
 ---
+
+{% callout warning %}
+
+The CSV data source used in this tutorial has been replaced. You can find instructions for the new one [here]({% link _kb/data-sources/querying/csv-excel-files %}). You can still use the deprecated source by manually adding it to your installation. The source code is available under the same license as Redash at [this link](https://gist.github.com/susodapop/d367ff6c02f19ef4b9964e1042ca1d92).
+
+{% endcallout %}
 
 # Intro
 
