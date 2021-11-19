@@ -34,7 +34,7 @@ You can configure Redash to allow any user with a Google account from the domain
 
 Follow these steps to change the environment variables and UI settings to enable Google Login:
 
-1. Register your instance of Redash with your Google org by visiting the [cloud console](https://console.cloud.google.com/apis/credentials). Follow the **Create Credentials** flow.
+1. Register your instance of Redash with your Google org by visiting the [cloud console](https://console.cloud.google.com/apis/credentials). You must [create a developers project]({% link _kb/open-source/admin-guide/google-developer-account-setup.md %}) if you have not already. Then follow the **Create Credentials** flow.
 2. Set the __Authorized Redirect URL(s)__ to  `http(s)://${REDASH_BASEURL}/oauth/google_callback`.
 3. During setup you will obtain a client id and a client secret. Use these to set the `REDASH_GOOGLE_CLIENT_ID` and `REDASH_GOOGLE_CLIENT_SECRET` environment variables.
 4. Restart your Redash instance.
