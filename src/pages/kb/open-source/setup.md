@@ -19,6 +19,16 @@ To create an instance, you have the following options:
 4. [Other](#other)
 5. [Docker](#docker)
 
+{% callout info %}
+
+We have not updated our official images for V10 yet. However, you can deploy a V8 instance and upgrade it following [these instructions](https://github.com/getredash/redash/releases/tag/v10.0.0). 
+
+There is a video demonstration of this process below
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PoOAra588dA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+{% endcallout %}
+
 ### <a name="aws"></a> AWS
 
 Launch the instance with the pre-baked AMI we create (for small deployments t2.small should be enough):
