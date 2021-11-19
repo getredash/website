@@ -5,6 +5,7 @@ title: Authentication Options (SSO, Google OAuth, SAML)
 toc: true
 slug: authentication-options
 ---
+
 # Authentication Settings
 
 Authentication options are configured through a mix of UI and Environment variables. To make changes in the UI visit the **Settings > General** tab.
@@ -12,14 +13,13 @@ Authentication options are configured through a mix of UI and Environment variab
 {% callout %} Only admins can view and change authentication settings. Some authentication options will not appear in the UI until the corresponding environment variables have been set.
 {% endcallout %}
 
-
 # Password Login
 
 By default, Redash authenticates users with an email address and password. This is called _Password Login_ on the **Settings > General** tab. After you enable an alternative authentication method you can disable password login.
 
 {% callout info %}
 
-Redash stores hashes of user passwords that were created through its default password configuration. If you create users through SAML or Google Login, a user is created but no password hash is stored.  These users can _only_ log-in through the third-party authentication service. 
+Redash stores hashes of user passwords that were created through its default password configuration. If you create users through SAML or Google Login, a user is created but no password hash is stored. These users can _only_ log-in through the third-party authentication service.
 
 If you use Password Login and subsequently enable Google OAuth or SAML 2.0, it's possible that a user with one email address has two passwords to log-in to Redash:
 their Google or SAML password, and their original Redash password.
@@ -30,12 +30,12 @@ We recommend disabling Password Login if all users are expected to authenticate 
 
 # Google Login (OAuth)
 
-You can configure Redash to allow any user with a Google account from the domain(s) you designate to login to Redash. If they don't have an account yet, one will be automatically created. 
+You can configure Redash to allow any user with a Google account from the domain(s) you designate to login to Redash. If they don't have an account yet, one will be automatically created.
 
 Follow these steps to change the environment variables and UI settings to enable Google Login:
 
 1. Register your instance of Redash with your Google org by visiting the [cloud console](https://console.cloud.google.com/apis/credentials). You must [create a developers project]({% link _kb/open-source/admin-guide/google-developer-account-setup.md %}) if you have not already. Then follow the **Create Credentials** flow.
-2. Set the __Authorized Redirect URL(s)__ to  `http(s)://${REDASH_BASEURL}/oauth/google_callback`.
+2. Set the **Authorized Redirect URL(s)** to `http(s)://${REDASH_BASEURL}/oauth/google_callback`.
 3. During setup you will obtain a client id and a client secret. Use these to set the `REDASH_GOOGLE_CLIENT_ID` and `REDASH_GOOGLE_CLIENT_SECRET` environment variables.
 4. Restart your Redash instance.
 5. Visit **Settings > General**. Complete the _Allowed Google Apps Domains_ box with the domains that should be able to log-in to your Redash instance.
@@ -43,7 +43,6 @@ Follow these steps to change the environment variables and UI settings to enable
 # SAML 2.0
 
 Redash can authenticate users with any IDP that supports the SAML 2.0 protocol thanks to the `pysaml` library.
-
 
 ## Configuring Your IDP
 
@@ -69,6 +68,7 @@ On the **Settings > General** tab you can specify whether SAML is enabled and if
 Some IDPs provide metadata URLs for configuring the SAML parameters. Okta refers to this scheme as "dynamic" configuration. We have borrowed their terminology here.
 
 However, other IDP's do not provide this metadata URL, and the alternative is to "statically" specify an SSO URL, Entity ID, and x509 certificate on the client-side.
+
 ### Dynamic SAML
 
 Specific instructions for Okta, Auth0, and self-hosted SAML appear below.
