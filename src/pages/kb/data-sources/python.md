@@ -5,11 +5,12 @@ title: Python
 slug: python
 toc: true
 ---
+
 # Setup
 
 The Python query runner lets you run arbitrary Python 3 scripts and visualize the contents of a `result` variable declared in the script. For security, is disabled by default. To enable it add this to your environment:
-  
-```bash 
+
+```bash
 REDASH_ADDITIONAL_QUERY_RUNNERS: "redash.query_runner.python"
 ```
 
@@ -75,10 +76,10 @@ result = {
 
 ```
 
-If you execute the above snippet in Redash it will return this table: 
+If you execute the above snippet in Redash it will return this table:
 
-|date|day_number|value|total|
-|----|----------|-----|-----|
-|2014-01-30|0|40832|53141|
-|2014-01-30|1|27296|53141|
-|2014-01-30|2|22982|53141|
+| date       | day_number | value | total |
+| ---------- | ---------- | ----- | ----- |
+| 2014-01-30 | 0          | 40832 | 53141 |
+| 2014-01-30 | 1          | 27296 | 53141 |
+| 2014-01-30 | 2          | 22982 | 53141 |

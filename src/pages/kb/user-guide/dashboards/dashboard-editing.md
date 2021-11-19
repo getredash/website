@@ -35,12 +35,12 @@ If you change the dashboard name to "Account Over (Old)", the URL will update to
 
 `https://redash.app/dashboards/251-account-overview-old-`
 
-The dashboard can also be reached using the `/dashboard`  endpoint (notice this is singular), which accepts _either_ an ID or a slug:
+The dashboard can also be reached using the `/dashboard` endpoint (notice this is singular), which accepts _either_ an ID or a slug:
 
 - `https://redash.app/dashboard/251`
 - `https://redash.app/dashboard/account-overview`
 
-Dashboard ids are guaranteed to be unique. But multiple dashboards may use the same name (and therefore `slug`).  If a user visits `/dashboard/account-overview` and more than one dashboard exists with that slug, they will be redirected to the earliest created dashboard with that slug.
+Dashboard ids are guaranteed to be unique. But multiple dashboards may use the same name (and therefore `slug`). If a user visits `/dashboard/account-overview` and more than one dashboard exists with that slug, they will be redirected to the earliest created dashboard with that slug.
 
 # Picking Visualizations
 
@@ -96,6 +96,6 @@ Automatic Dashboard Refresh occurs as part of the Redash frontend application. Y
 
 {% endcallout %}
 
-On public dashboards there is no Refresh button. You can add `refresh` to the query string. And for dashboards with parameters you can trigger a refresh by changing a parameter value and clicking **Apply Changes**. 
+On public dashboards there is no Refresh button. You can add `refresh` to the query string. And for dashboards with parameters you can trigger a refresh by changing a parameter value and clicking **Apply Changes**.
 
 ![](/assets/images/docs/gitbook/public-dashboard-refresh.png)

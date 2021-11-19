@@ -3,7 +3,7 @@ category: querying
 parent_category: data-sources
 title: Databricks
 slug: databricks
-toc: false 
+toc: false
 ---
 
 # Setup
@@ -22,7 +22,7 @@ Unlike other query runners, the Databricks schema browser fetches table and colu
 
 But if you explore the schema across multiple databases you may experience delays as each database is fetched separately.
 
-Schemas are cached for one hour. You may wish to schedule a hourly job to warm those caches. 
+Schemas are cached for one hour. You may wish to schedule a hourly job to warm those caches.
 
 You can do this with any REST API tool as follows:
 
@@ -34,12 +34,11 @@ curl --request GET \
 
 ## Auto Limit
 
-The Databricks query runner also includes a checkbox beneath the query editor which will append a `LIMIT 1000` statement to your query automatically by default.  This helps in case you accidentally run `SELECT * FROM` some large table with enough results to crash the front-end.
-
+The Databricks query runner also includes a checkbox beneath the query editor which will append a `LIMIT 1000` statement to your query automatically by default. This helps in case you accidentally run `SELECT * FROM` some large table with enough results to crash the front-end.
 
 ## Multiple Statement Support
 
-The Databricks query runner allows you to execute multiple statements terminated with a semicolon `;` in one query window. 
+The Databricks query runner allows you to execute multiple statements terminated with a semicolon `;` in one query window.
 
 {% callout info %}
 Only one table of query results can be displayed from a query.
@@ -48,7 +47,7 @@ Only one table of query results can be displayed from a query.
 This is useful for setting session / cluster configuration variables prior to executing the query on your cluster.
 
 ```sql
-set use_cached_result = False; 
+set use_cached_result = False;
 
 SELECT count(*) FROM some_db.some_table
 ```
