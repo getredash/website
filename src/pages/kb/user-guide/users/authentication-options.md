@@ -6,46 +6,88 @@ toc: true
 slug: authentication-options
 ---
 
-Authentication settings are available in the `Settings`>`Settings` tab.
+# Authentication Settings
 
-![](/assets/images/docs/gitbook/authentication-options.png)
+Authentication options are configured through a mix of UI and Environment variables. To make changes in the UI visit the **Settings > General** tab.
 
-{% callout %} Only admins can view and change authentication settings.
+{% callout %} Only admins can view and change authentication settings. Some authentication options will not appear in the UI until the corresponding environment variables have been set.
 {% endcallout %}
 
-There are 3 authentication related settings here:
+# Password Login
 
-1. Enable/disable password based login.
-2. Google SSO: add Google Apps based domains to allow login from. Any user with
-   a Google account from these domain(s) will be able to login. If they don't
-   have an account yet, an account will be automatically created.
-3. Enable/disable SAML support.
+By default, Redash authenticates users with an email address and password. This is called _Password Login_ on the **Settings > General** tab. After you enable an alternative authentication method you can disable password login.
 
-{% callout warning %} Please note that SAML authentication is no longer
-available for Hosted Redash customers. Existing configurations are not affected.
+{% callout info %}
+
+Redash stores hashes of user passwords that were created through its default password configuration. If you create users through SAML or Google Login, a user is created but no password hash is stored. These users can _only_ log-in through the third-party authentication service.
+
+If you use Password Login and subsequently enable Google OAuth or SAML 2.0, it's possible that a user with one email address has two passwords to log-in to Redash:
+their Google or SAML password, and their original Redash password.
+
+We recommend disabling Password Login if all users are expected to authenticate through Google OAuth or SAML as it will reduce confusion.
+
 {% endcallout %}
 
-Once you enable SAML, additional settings will appear:
+# Google Login (OAuth)
 
-![](/assets/images/docs/gitbook/saml-details.png)
+You can configure Redash to allow any user with a Google account from the domain(s) you designate to login to Redash. If they don't have an account yet, one will be automatically created.
 
-1. SAML Metadata URL is required to make SAML authentication work. You can get
-   this URL from your SAML provider like
-   [OneLogin](https://www.onelogin.com/connector/redash).
-2. Set up Redash callback URL in your SAML provider:
-   `https://app.redash.io/saml/callback?org_slug=<organization name>`. If you
-   have single organization name, set `default` as value for org_slug.
-3. Within SAML provider, map user fields FirstName and LastName to matching
-   values as those two fields are mandatory for user creation.
+Follow these steps to change the environment variables and UI settings to enable Google Login:
 
+1. Register your instance of Redash with your Google org by visiting the [cloud console](https://console.cloud.google.com/apis/credentials). You must [create a developers project]({% link _kb/open-source/admin-guide/google-developer-account-setup.md %}) if you have not already. Then follow the **Create Credentials** flow.
+2. Set the **Authorized Redirect URL(s)** to `http(s)://${REDASH_BASEURL}/oauth/google_callback`.
+3. During setup you will obtain a client id and a client secret. Use these to set the `REDASH_GOOGLE_CLIENT_ID` and `REDASH_GOOGLE_CLIENT_SECRET` environment variables.
+4. Restart your Redash instance.
+5. Visit **Settings > General**. Complete the _Allowed Google Apps Domains_ box with the domains that should be able to log-in to your Redash instance.
+
+# SAML 2.0
+
+Redash can authenticate users with any IDP that supports the SAML 2.0 protocol thanks to the `pysaml` library.
+
+## Configuring Your IDP
+
+Your IDP will require a callback URL where users will be redirected after they authenticate. This URL will be at `/saml/callback?org_slug=<org_name>`. The organization name is `default` unless you changed it while setting up your Redash instance.
+
+Also, you should map user fields `FirstName`, `LastName`, and `RedashGroups` (optional).
+
+Redash uses emailAddress as its NameIDFormat.
+
+{% callout info %}
 By default any user created with SAML/SSO will join the default group. It's
 possible to configure the SAML provider to pass what groups the user should join
 by setting the `RedashGroups` parameter. If you use OneLogin's predefined Redash
 application, it will always pass this parameter, meaning that even for existing
 users, it will override their current groups memberships. Hence you need to make
 sure it's up to date.
+{% endcallout %}
 
-### How to Configure self-hosted SAML
+## Configuring Redash
+
+On the **Settings > General** tab you can specify whether SAML is enabled and if so whether it's _Static_ or _Dynamic_. What's the difference?
+
+Some IDPs provide metadata URLs for configuring the SAML parameters. Okta refers to this scheme as "dynamic" configuration. We have borrowed their terminology here.
+
+However, other IDP's do not provide this metadata URL, and the alternative is to "statically" specify an SSO URL, Entity ID, and x509 certificate on the client-side.
+
+### Dynamic SAML
+
+Specific instructions for Okta, Auth0, and self-hosted SAML appear below.
+
+Redash asks for three configuration fields:
+
+- **SAML Metadata URL** is a URL to an XML file that contains metadata `pysaml` needs to negotiate a connection.
+- **SAML Entity ID** should be the URL to your Redash instance.
+- **SAML NameID Format** is the NameID Format provided by your IDP. You can usually find it in the metadata .xml file
+
+### Static SAML
+
+Static configuration requires these fields:
+
+- **SAML Single Sign-on URL** is the URL at your IDP where users will be redirected when they click the _SAML Login_ button in Redash.
+- **SAML Entity ID** should be the URL to your Redash instance.
+- **SAML x509 cert** will be provided by your IDP.
+
+## Self-Hosted SAML
 
 1. SAML Metadata URL should point to an XML file on your server, such as:
    `http://your-site.com/auth/realms/somerelm/protocol/saml/descriptor`
@@ -53,7 +95,7 @@ sure it's up to date.
 3. SAML NameID Format should be:
    `urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress`
 
-### How to Configure Okta
+## Okta
 
 It takes just a couple of minutes to setup Redash with Okta over the SAML 2.0
 protocol. Start in your Okta control panel by clicking the button to add a new
@@ -103,7 +145,7 @@ using your Okta credentials.
 
 You can now log in to Redash using Okta SSO.
 
-### How to Configure Auth0
+## Auth0
 
 1. Create a traditional webapp
 2. Under add-ons, enable SAML2
@@ -134,3 +176,9 @@ Within Redash, use the following config:
 
 These changes were drawn from our
 [user forum](https://discuss.redash.io/t/auth0-integration/586/5).
+
+{% callout warning %}
+
+Don't see your IDP here? Please consider contributing to this document by opening a Pull Request on [Github](https://github.com/getredash/website).
+
+{% endcallout %}

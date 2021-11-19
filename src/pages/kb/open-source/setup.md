@@ -9,7 +9,7 @@ order: 1
 
 ## Create an Instance
 
-For basic deployments we recommend a minimum of 2GB of RAM and reasonable amount of CPU allocation. As usage grows you might need additional RAM and CPU power to support increased number of background workers and API processes.
+For basic deployments we recommend a minimum of 4GB of RAM and reasonable amount of CPU allocation. As usage grows you might need additional RAM and CPU power to support increased number of background workers and API processes.
 
 To create an instance, you have the following options:
 
@@ -19,28 +19,38 @@ To create an instance, you have the following options:
 4. [Other](#other)
 5. [Docker](#docker)
 
+{% callout info %}
+
+We have not updated our official images for V10 yet. However, you can deploy a V8 instance and upgrade it following [these instructions](https://github.com/getredash/redash/releases/tag/v10.0.0).
+
+There is a video demonstration of this process below
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PoOAra588dA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+{% endcallout %}
+
 ### <a name="aws"></a> AWS
 
 Launch the instance with the pre-baked AMI we create (for small deployments t2.small should be enough):
 
-| Region | AMI |
-| ------------- | -------------|
-| us-east-1 | [ami-0d915a031cabac0e0](https://console.aws.amazon.com/ec2/home?region=us-east-1#LaunchInstanceWizard:ami=ami-0d915a031cabac0e0) |
-| us-east-2 | [ami-0b97435028ca44fcc](https://console.aws.amazon.com/ec2/home?region=us-east-2#LaunchInstanceWizard:ami=ami-0b97435028ca44fcc) |
-| us-west-1 | [ami-068d0753a46192935](https://console.aws.amazon.com/ec2/home?region=us-west-1#LaunchInstanceWizard:ami=ami-068d0753a46192935) |
-| us-west-2 | [ami-0c457f229774da543](https://console.aws.amazon.com/ec2/home?region=us-west-2#LaunchInstanceWizard:ami=ami-0c457f229774da543) |
-| eu-west-1 | [ami-046c6a0123bf94619](https://console.aws.amazon.com/ec2/home?region=eu-west-1#LaunchInstanceWizard:ami=ami-046c6a0123bf94619) |
-| eu-west-2 | [ami-0dbe8ba0cd21ea12b](https://console.aws.amazon.com/ec2/home?region=eu-west-2#LaunchInstanceWizard:ami=ami-0dbe8ba0cd21ea12b) |
-| eu-west-3 | [ami-041bf9180061ce7ea](https://console.aws.amazon.com/ec2/home?region=eu-west-3#LaunchInstanceWizard:ami=ami-041bf9180061ce7ea) |
-| eu-central-1 | [ami-0f8184e6f30cc0c33](https://console.aws.amazon.com/ec2/home?region=eu-central-1#LaunchInstanceWizard:ami=ami-0f8184e6f30cc0c33) |
-| eu-north-1 | [ami-08dd1b893371bcaac](https://console.aws.amazon.com/ec2/home?region=eu-north-1#LaunchInstanceWizard:ami=ami-08dd1b893371bcaac) |
-| ap-south-1 | [ami-0ff23052091536db2](https://console.aws.amazon.com/ec2/home?region=ap-south-1#LaunchInstanceWizard:ami=ami-0ff23052091536db2) |
+| Region         | AMI                                                                                                                                   |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| us-east-1      | [ami-0d915a031cabac0e0](https://console.aws.amazon.com/ec2/home?region=us-east-1#LaunchInstanceWizard:ami=ami-0d915a031cabac0e0)      |
+| us-east-2      | [ami-0b97435028ca44fcc](https://console.aws.amazon.com/ec2/home?region=us-east-2#LaunchInstanceWizard:ami=ami-0b97435028ca44fcc)      |
+| us-west-1      | [ami-068d0753a46192935](https://console.aws.amazon.com/ec2/home?region=us-west-1#LaunchInstanceWizard:ami=ami-068d0753a46192935)      |
+| us-west-2      | [ami-0c457f229774da543](https://console.aws.amazon.com/ec2/home?region=us-west-2#LaunchInstanceWizard:ami=ami-0c457f229774da543)      |
+| eu-west-1      | [ami-046c6a0123bf94619](https://console.aws.amazon.com/ec2/home?region=eu-west-1#LaunchInstanceWizard:ami=ami-046c6a0123bf94619)      |
+| eu-west-2      | [ami-0dbe8ba0cd21ea12b](https://console.aws.amazon.com/ec2/home?region=eu-west-2#LaunchInstanceWizard:ami=ami-0dbe8ba0cd21ea12b)      |
+| eu-west-3      | [ami-041bf9180061ce7ea](https://console.aws.amazon.com/ec2/home?region=eu-west-3#LaunchInstanceWizard:ami=ami-041bf9180061ce7ea)      |
+| eu-central-1   | [ami-0f8184e6f30cc0c33](https://console.aws.amazon.com/ec2/home?region=eu-central-1#LaunchInstanceWizard:ami=ami-0f8184e6f30cc0c33)   |
+| eu-north-1     | [ami-08dd1b893371bcaac](https://console.aws.amazon.com/ec2/home?region=eu-north-1#LaunchInstanceWizard:ami=ami-08dd1b893371bcaac)     |
+| ap-south-1     | [ami-0ff23052091536db2](https://console.aws.amazon.com/ec2/home?region=ap-south-1#LaunchInstanceWizard:ami=ami-0ff23052091536db2)     |
 | ap-southeast-1 | [ami-0527e82bae7c51958](https://console.aws.amazon.com/ec2/home?region=ap-southeast-1#LaunchInstanceWizard:ami=ami-0527e82bae7c51958) |
 | ap-southeast-2 | [ami-0bae8773e653a32ec](https://console.aws.amazon.com/ec2/home?region=ap-southeast-2#LaunchInstanceWizard:ami=ami-0bae8773e653a32ec) |
 | ap-northeast-1 | [ami-060741a96307668be](https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#LaunchInstanceWizard:ami=ami-060741a96307668be) |
 | ap-northeast-2 | [ami-0d991ac4f545a6b34](https://console.aws.amazon.com/ec2/home?region=ap-northeast-2#LaunchInstanceWizard:ami=ami-0d991ac4f545a6b34) |
-| sa-east-1 | [ami-076f350d5a5ec448d](https://console.aws.amazon.com/ec2/home?region=sa-east-1#LaunchInstanceWizard:ami=ami-076f350d5a5ec448d) |
-| ca-central-1 | [ami-0071deaa12b66d1bf](https://console.aws.amazon.com/ec2/home?region=ca-central-1#LaunchInstanceWizard:ami=ami-0071deaa12b66d1bf) |
+| sa-east-1      | [ami-076f350d5a5ec448d](https://console.aws.amazon.com/ec2/home?region=sa-east-1#LaunchInstanceWizard:ami=ami-076f350d5a5ec448d)      |
+| ca-central-1   | [ami-0071deaa12b66d1bf](https://console.aws.amazon.com/ec2/home?region=ca-central-1#LaunchInstanceWizard:ami=ami-0071deaa12b66d1bf)   |
 
 (the above AMIs are of version: 8.0.0)
 
@@ -70,7 +80,6 @@ $ gcloud compute instances create redash --image redash-8-0-0
 
 Now proceed to “[Setup](#setup-redash-instance-setup)”.
 
-
 ### <a name="other"></a> Other
 
 The AWS, DigitalOcean and Google Compute Engine images are created using our [Setup Script](https://github.com/getredash/setup), which is designed to run on Ubuntu 18.04 server. You can either use the script as is (if you intend to run it on Ubuntu) or use it as a blueprint to create your own setup.
@@ -93,9 +102,9 @@ To run Redash you need several instances of Redash (API server and background wo
 
 ## <a name="setup-redash-instance-setup"></a> Setup
 
-Once you created the instance with either the image or the script, you should have a running Redash instance with everything you need to get started. Redash should be available using the server IP or DNS name you assigned to it. You can point your browser to this address. 
+Once you created the instance with either the image or the script, you should have a running Redash instance with everything you need to get started. Redash should be available using the server IP or DNS name you assigned to it. You can point your browser to this address.
 
-Before you can continue, it will ask you to create your admin account. Once this is done, you can start using Redash. 
+Before you can continue, it will ask you to create your admin account. Once this is done, you can start using Redash.
 
 ![Initial Setup Screen](/assets/images/docs/redash_initial_setup.png)
 
@@ -111,13 +120,13 @@ For the system to be able to send emails (user invites, password resets, when al
 
 The relevant configuration variables are (note that not all of them are required):
 
-* `REDASH_MAIL_SERVER` (default: localhost)
-* `REDASH_MAIL_PORT` (default: 25)
-* `REDASH_MAIL_USE_TLS` (default: false)
-* `REDASH_MAIL_USE_SSL` (default: false)
-* `REDASH_MAIL_USERNAME` (default: None)
-* `REDASH_MAIL_PASSWORD` (default: None)
-* `REDASH_MAIL_DEFAULT_SENDER` (Email address to send from)
+- `REDASH_MAIL_SERVER` (default: localhost)
+- `REDASH_MAIL_PORT` (default: 25)
+- `REDASH_MAIL_USE_TLS` (default: false)
+- `REDASH_MAIL_USE_SSL` (default: false)
+- `REDASH_MAIL_USERNAME` (default: None)
+- `REDASH_MAIL_PASSWORD` (default: None)
+- `REDASH_MAIL_DEFAULT_SENDER` (Email address to send from)
 
 Also you need to set the value of `REDASH_HOST`, which is the base address of your Redash instance (the DNS name or IP) with the protocol, so for example: `https://demo.redash.io`.
 
@@ -129,8 +138,8 @@ It’s recommended to use some mail service, like [Amazon SES](https://aws.amazo
 
 If you want to use Google OAuth to authenticate users, you need to create a Google Developers project (see [instructions]({% link _kb/open-source/admin-guide/google-developer-account-setup.md %}) and then add the needed configuration in the `/opt/redash/env` file:
 
-* `REDASH_GOOGLE_CLIENT_ID` (Google OAuth Client ID)
-* `REDASH_GOOGLE_CLIENT_SECRET` (Google OAuth Client Secret)
+- `REDASH_GOOGLE_CLIENT_ID` (Google OAuth Client ID)
+- `REDASH_GOOGLE_CLIENT_SECRET` (Google OAuth Client Secret)
 
 Once updated, restart the web server (`docker-compose up -d server`). Once enabled, Redash will use Google OAuth to authenticate _existing_ user accounts. To enable automatic user creation who belong to a specific domain name, you can add this domain (or more) in the setting page:
 
@@ -139,7 +148,6 @@ Once updated, restart the web server (`docker-compose up -d server`). Once enabl
 ### Other Configuration Options
 
 Redash uses environment variables for configuration. For a full list of environment variables, see the [settings article]({% link _kb/open-source/admin-guide/env-vars-settings.md %}).
-
 
 ### HTTPS
 

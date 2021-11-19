@@ -113,6 +113,12 @@ If you skip this step you will not be notified when the alert is triggered.
 
 ![](/assets/images/docs/gitbook/alert_destination.png)
 
+## Muting Alerts
+
+You can temporarily mute an alert's notifications without deleting the alert entirely. Just click the vertical ellipsis (`⋮`) menu and choose _Mute Notifications_.
+
+To resume notifications again, click the vertical ellipsis menu and choose _Unmute Notifications_.
+
 # Alert Statuses
 
 - `TRIGGERED` means that on the most recent execution, the _Value Column_ in

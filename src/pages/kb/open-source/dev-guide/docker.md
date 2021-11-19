@@ -115,7 +115,3 @@ docker-compose run --rm postgres psql -h postgres -U postgres -c "create databas
 
 See [Debugging a Redash Server on Docker Using Visual Studio
 Code]({% link _kb/open-source/dev-guide/debugging.md %})
-
-## Configuration
-
-TBD.
