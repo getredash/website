@@ -7,9 +7,10 @@ toc: true
 ---
 
 ## Background
+
 Redash encrypts secret information with two keys: the Cookie Secret and the Application Secret.
 
-### Cookie Secret 
+### Cookie Secret
 
 The cookie secret is taken from the `REDASH_COOKIE_SECRET` environment variable. It is used for various cryptographic features of the web server, such as authenticating users, signing cookies, and storing user session information. It is required to start the application.
 
@@ -20,12 +21,12 @@ Exception: You must set the REDASH_COOKIE_SECRET environment variable. Visit htt
 ```
 
 To fix this message: create an environment variable called `REDASH_COOKIE_SECRET` and give it a value.
+
 ### Application Secret
 
 The application secret is taken from the `REDASH_SECRET_KEY` environment variable. It is used to encrypt all settings on the Settings > Data Sources screen and Settings > Alert Destinations screen.
 
 It is required to start the application. However, if you do not set one explicitly, Redash will use the cookie secret instead. This is helpful for development. But for maximum security, we recommend you set a unique value for both variables.
-
 
 ## Choosing a Secret Key
 
@@ -73,7 +74,9 @@ Because Redash encrypts secret fields at rest in its internal database, if you c
 Do not delete your `REDASH_SECRET_KEY` until you have finished re-encrypting secret fields. Without it your data sources may become unusable.
 
 {% endcallout %}
+
 #### Re-encrypting Secret Fields
+
 The Redash CLI includes the `database reencrypt` command to conveniently re-encrypt your secret fields stored by Redash. It accepts two positional arguments: the old secret and the new secret. When you run the command, the secret fields in Redash's internal database are decrypted using the old secret and encrypted again with the new secret. This includes data source definitions and alert destinations.
 
 If you deployed Redash using docker-compose (from one of our cloud images, for instance) you can invoke this CLI on your docker host with this command:
