@@ -52,7 +52,7 @@ QinPGTd7Ulec03lar0vkI9ojqmXsuw4VOyirnC5NuvEdJSCwLwesmknNygXITunT
 ```
 
 {% callout info %}
-The official Redash cloud images found [here]({% link _kb/open-source/setup.md %}) generate unique secret keys automatically during deployment. If you deployed Redash manually with Docker Compose you can set these variables using the `environment` key in `docker-compose.yml`.
+The official Redash cloud images found [here]({% link _kb/open-source/setup.md %}) generate unique secret keys automatically during deployment. If you deployed Redash manually with Docker Compose you can create a `.env` file adjacent to `docker-compose.yml` and set your environment variables there.
 {% endcallout %}
 
 ## Changing a Secret Keys
@@ -69,6 +69,10 @@ If you did not already explicitly set `REDASH_SECRET_KEY`, then you should use t
 
 Because Redash encrypts secret fields at rest in its internal database, if you change `REDASH_SECRET_KEY` you must also reencrypt these fields. Otherwise you will not be able to execute queries, modify your data sources, or even access the data source settings screen.
 
+{% callout danger %}
+Do not delete your `REDASH_SECRET_KEY` until you have finished re-encrypting secret fields. Without it your data sources may become unusable.
+
+{% endcallout %}
 #### Re-encrypting Secret Fields
 The Redash CLI includes the `database reencrypt` command to conveniently re-encrypt your secret fields stored by Redash. It accepts two positional arguments: the old secret and the new secret. When you run the command, the secret fields in Redash's internal database are decrypted using the old secret and encrypted again with the new secret. This includes data source definitions and alert destinations.
 
