@@ -71,7 +71,7 @@ If you did not already explicitly set `REDASH_SECRET_KEY`, then you should use t
 Because Redash encrypts secret fields at rest in its internal database, if you change `REDASH_SECRET_KEY` you must also reencrypt these fields. Otherwise you will not be able to execute queries, modify your data sources, or even access the data source settings screen.
 
 {% callout danger %}
-Do not delete your `REDASH_SECRET_KEY` until you have finished re-encrypting secret fields. Without it your data sources may become unusable.
+Do not delete your `REDASH_SECRET_KEY` until you have finished re-encrypting secret fields. Without it your data sources will become unusable.
 
 {% endcallout %}
 
