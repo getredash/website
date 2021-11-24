@@ -96,6 +96,23 @@ Note that the script assumes you are running it on a "clean" machine. If you’r
 
 For every Redash release we also create updated [Docker image](https://hub.docker.com/r/redash/redash). Our image follows best practices and can be used in any container orchestation platforms like Kubernetes, ECS or just simply with Docker Compose (which we use in our images).
 
+{% callout warning %}
+
+If you do not use one of our cloud images, you must manually set up Redash's [secret keys]({% link _kb/open-source/admin-guide/secrets.md %}):
+
+1. Create a `.env` in the same folder as your `docker-compose.yml` file.
+2. Write any sensitive environment variables in bash syntax:
+
+```bash
+REDASH_SECRET_KEY=...
+REDASH_COOKIE_SECRET=...
+GOOGLE_CLIENT_ID=...
+```
+
+Do not commit this file to version control.
+
+{% endcallout %}
+
 For development environment setup, please refer to the [developer guide]({% link _kb/open-source/dev-guide.md %}) (which includes Docker specific instructions as well).
 
 To run Redash you need several instances of Redash (API server and background workers to run queries) along with Redis and PostgreSQL. If you don't want or can't use our images or [Setup Script](https://github.com/getredash/setup), you can refer to the [Docker Compose configuration](https://github.com/getredash/setup/blob/master/data/docker-compose.yml) to understand what services you need to define.
