@@ -92,6 +92,12 @@ This will result in a Flask web server listening on port `5000`, Webpack
 rebuilding changes to the frontend, RQ worker ready to run queries and RQ
 scheduler to enqueue periodic tasks.
 
+## Health Check for Installation
+
+{% callout warning %}
+After your installation is complete, you can do the healthcheck by calling **/ping** API endpoint.
+{% endcallout %}
+
 ## Running Tests
 
 Backend tests:
