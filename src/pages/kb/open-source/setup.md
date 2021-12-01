@@ -178,6 +178,17 @@ If this is a production setup, you should enforce HTTPS and make sure you set th
 After your installation is complete, you can do the healthcheck by calling `/ping` API endpoint.
 {% endcallout %}
 
+### Health Check for Installation
+
+{% callout warning %}
+After your installation is complete, you can do the healthcheck by calling **/ping** API endpoint.
+{% endcallout %}
+
+```
+RESPONSE
+PONG.
+```
+
 ## How to upgrade?
 
 It’s recommended to upgrade when new releases are available to benefit from bug fixes and new features. See [_here_]({% link _kb/open-source/admin-guide/how-to-upgrade.md %}) for full upgrade instructions.
