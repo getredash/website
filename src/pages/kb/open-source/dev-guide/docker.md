@@ -72,7 +72,7 @@ RESPONSE
 
 PONG.
 ```
-  
+
 ## Usage
 
 ### Run webpack Dev Server
