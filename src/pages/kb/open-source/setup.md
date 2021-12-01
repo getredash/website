@@ -181,7 +181,7 @@ After your installation is complete, you can do the healthcheck by calling `/pin
 ### Health Check for Installation
 
 {% callout warning %}
-After your installation is complete, you can do the healthcheck by calling **/ping** API endpoint.
+After your installation is complete, you can do the healthcheck by calling `/ping` API endpoint.
 {% endcallout %}
 
 ```
