@@ -26,9 +26,21 @@ git clone https://github.com/getredash/redash.git
 cd redash/
 ```
 
-### Update docker-compose.yml
+### Set up environment variables
 
-Under the `x-redash-environment` key, uncomment the line containing `REDASH_COOKIE_SECRET` and specify a value.
+Create a `.env` file at the root and set any environment variables you need. 
+
+```
+$ touch .env
+```
+
+{% callout info %}
+
+An environment variable named `REDASH_COOKIE_SECRET` is required to run Redash. Read more why Redash uses secret keys [here]({% link _kb/open-source/admin-guide/secrets.md %})
+{% endcallout %}
+
+
+You should include any relevant [environment variables]({% link _kb/open-source/admin-guide/env-vars-settings.md %}) in this file. 
 
 ### Create Docker Services
 
