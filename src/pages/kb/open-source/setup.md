@@ -175,7 +175,7 @@ If this is a production setup, you should enforce HTTPS and make sure you set th
 ## Health Check for Installation
 
 {% callout warning %}
-After your installation is complete, you can do the healthcheck by calling **/ping** API endpoint.
+After your installation is complete, you can do the healthcheck by calling `/ping` API endpoint.
 {% endcallout %}
 
 ## How to upgrade?
