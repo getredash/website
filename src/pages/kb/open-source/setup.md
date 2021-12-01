@@ -172,12 +172,6 @@ Redash uses environment variables for configuration. For a full list of environm
 If this is a production setup, you should enforce HTTPS and make sure you set the cookie secret (see [instructions]({% link _kb/open-source/admin-guide/https-ssl-setup.md %})).
 {% endcallout %}
 
-## Health Check for Installation
-
-{% callout warning %}
-After your installation is complete, you can do the healthcheck by calling `/ping` API endpoint.
-{% endcallout %}
-
 ### Health Check for Installation
 
 {% callout warning %}
