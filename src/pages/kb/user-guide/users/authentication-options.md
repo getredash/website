@@ -43,7 +43,7 @@ Follow these steps to change the environment variables and UI settings to enable
 
 Step 5 below is optional. As of step 4, only visitors with an existing Redash account can sign-in using the Google Login flow. As with Password Login, visitors without an account cannot log-in unless they receive an invitation from an admin.
 
-By following step 5, you may configure Redash to allow any user from  a specified domain to log-in. An account will automatically be created for them if one does not already exist. 
+By following step 5, you may configure Redash to allow any user from a specified domain to log-in. An account will automatically be created for them if one does not already exist.
 
 {% endcallout %}
 
