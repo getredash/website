@@ -67,6 +67,13 @@ docker-compose run --rm postgres psql -h postgres -U postgres -c "create databas
 After your installation is complete, you can do the healthcheck by calling **/ping** API endpoint.
 {% endcallout %}
 
+```
+RESPONSE
+
+PONG.
+```
+  
+
 ## Usage
 
 ### Run webpack Dev Server
