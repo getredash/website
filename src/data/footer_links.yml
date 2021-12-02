@@ -4,18 +4,16 @@
       url: /product/
     - name: Integrations
       url: /integrations/
-    - name: Customers
+    - name: Users
       url: /customers/
     - name: Case Studies
       url: /case-studies/
-- name: Company
+- name: Community
   links:
     - name: About
-      url: /about/
+      url: /community/
     - name: Blog
       url: https://blog.redash.io/
-    - name: Community
-      url: /community/
     - name: Contact
       url: /contact/
 - name: Help

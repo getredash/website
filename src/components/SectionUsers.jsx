@@ -39,7 +39,7 @@ const SectionUsers = () => (
             to="/customers/"
             className="btn btn-secondary"
           >
-            Read what our customers say →
+            Read what our users say →
           </Link>
         </div>
       </div>
