@@ -11,11 +11,11 @@ const CommunityPage = ({
     allContributorsJson: { totalCount, edges },
   },
 }) => {
-  const contributorsAmount = totalCount - (totalCount % 10)
+  const contributorsAmount = 350 // totalCount - (totalCount % 10)
   return (
     <Layout
       title="Redash is built by the open source community"
-      description="More than 200 contributors and years of constant development..."
+      description="More than 300 contributors and years of constant development..."
       location={location}
     >
       <Helmet>
@@ -56,27 +56,6 @@ const CommunityPage = ({
               >
                 Follow @getredash
               </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section p-t-25 section__os--content">
-        <div className="container">
-          <div className="row text-center">
-            <div className="col-sm-4">
-              <h1>{contributorsAmount}+</h1>
-              <p>Total contributors</p>
-            </div>
-
-            <div className="col-sm-4">
-              <h1>2100+</h1>
-              <p>Forks</p>
-            </div>
-
-            <div className="col-sm-4">
-              <h1>1500</h1>
-              <p>Days of constant building and shipping</p>
             </div>
           </div>
         </div>
