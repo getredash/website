@@ -61,6 +61,18 @@ docker-compose run --rm server create_db
 docker-compose run --rm postgres psql -h postgres -U postgres -c "create database tests"
 ```
 
+### Health Check for Installation
+
+{% callout warning %}
+After your installation is complete, you can do the healthcheck by calling `/ping` API endpoint.
+{% endcallout %}
+
+```
+RESPONSE
+
+PONG.
+```
+
 ## Usage
 
 ### Run webpack Dev Server
