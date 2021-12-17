@@ -19,10 +19,9 @@ By default, Redash authenticates users with an email address and password. This 
 
 {% callout info %}
 
-Redash stores hashes of user passwords that were created through its default password configuration. If you create users through SAML or Google Login, a user is created but no password hash is stored. These users can _only_ log-in through the third-party authentication service.
+Redash stores hashes of user passwords that were created through its default password configuration. The first time a user authenticates through SAML or Google Login, a user record is created but no password hash is stored. This is called Just-in-Time (JIT) provisioning. These users can _only_ log-in through the third-party authentication service.
 
-If you use Password Login and subsequently enable Google OAuth or SAML 2.0, it's possible that a user with one email address has two passwords to log-in to Redash:
-their Google or SAML password, and their original Redash password.
+If you use Password Login and subsequently enable Google OAuth or SAML 2.0, it's possible that a user with one email address has two passwords to log-in to Redash: their Google or SAML password, and their original Redash password.
 
 We recommend disabling Password Login if all users are expected to authenticate through Google OAuth or SAML as it will reduce confusion.
 
