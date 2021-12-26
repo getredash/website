@@ -144,17 +144,17 @@ using your Okta credentials.
 
 You can now log in to Redash using Okta SSO.
 
-### Managing Redash Groups with OKTA attribute statements 
+### Managing Redash Groups with OKTA attribute statements
 
 Ops teams often find a need to manage group memberships via OKTA. Follow the below steps inoder to configure okta so that it passes RedashGroups attribute:
 
 1. Goto your OKTA application inside control panel and add **RedashGroups** in SAML settings where you have previously added FirstName and LastName and then save your changes:
 
-| Name          | Value                 |
-| ------------- | --------------------- |
-| FirstName     | user.firstName        |
-| LastName      | user.lastName         |
-| RedashGroups  | appuser.RedashGroups  |
+| Name         | Value                |
+| ------------ | -------------------- |
+| FirstName    | user.firstName       |
+| LastName     | user.lastName        |
+| RedashGroups | appuser.RedashGroups |
 
 {% callout info %}
 Name format should be left as **Basic**
@@ -164,16 +164,16 @@ Name format should be left as **Basic**
 
 3. In the Attributes screen that opens, click Add Attribute. Add a new attribute with below configuration:
 
-| Name           | Value                 |
-| -------------- | --------------------- |
-| Data type      | string array          |
-| Variable name  | RedashGroups          |
-| Scope          | User personal         |
+| Name          | Value         |
+| ------------- | ------------- |
+| Data type     | string array  |
+| Variable name | RedashGroups  |
+| Scope         | User personal |
 
 4. On the **Applications** page, click the **Assigments** tab. Now you can edit User Assigments and add required RedashGroups for the user.
 
 {% callout info %}
-You can also control attributes on OKTA Group level by removing the Scope from User personal. 
+You can also control attributes on OKTA Group level by removing the Scope from User personal.
 {% endcallout %}
 
 ## Auth0
