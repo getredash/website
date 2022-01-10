@@ -83,11 +83,14 @@ Here's an example JSON object including different parameter types:
     		"end": "2020-12-31"
     		}
     	},
-    "max_age": 1800
+      "max_age": 1800
     }
+}
 ```
 
 {% endcallout %}
+
+### Jobs
 
 `/api/jobs/<job_id>`
 + GET: Returns a query task result (job)
@@ -98,6 +101,8 @@ Here's an example JSON object including different parameter types:
 		- 4 == FAILURE
 		- 5 == CANCELLED
 	+ When status is success, the job will include a `query_result_id`
+
+### Query Results
 
 `/api/query_results/<query_result_id>`
 + GET: Returns a query result
