@@ -69,7 +69,7 @@ with environment variables.
 ## Creating Database Tables
 
 ```bash
-./manage.py database create_tables
+./manage.py database create-tables
 ```
 
 ## Processes
