@@ -26,9 +26,13 @@ git clone https://github.com/getredash/redash.git
 cd redash/
 ```
 
-### Update docker-compose.yml
+### Create .env
 
-Under the `x-redash-environment` key, uncomment the line containing `REDASH_COOKIE_SECRET` and specify a value.
+Create an `.env` file under the project root, and specify a value for `REDASH_COOKIE_SECRET` environment variable.
+
+```
+REDASH_COOKIE_SECRET=mysecret
+```
 
 ### Create Docker Services
 
