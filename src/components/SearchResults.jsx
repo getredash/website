@@ -36,10 +36,6 @@ const SearchResults = ({ hits }) => (
           </Link>
           .
         </p>
-        <p>
-          If you're a hosted Redash user or have a support contract, you can
-          also contact support.
-        </p>
       </div>
     )}
   </div>
