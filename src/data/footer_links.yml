@@ -14,8 +14,6 @@
       url: /community/
     - name: Blog
       url: https://blog.redash.io/
-    - name: Contact
-      url: /contact/
 - name: Help
   links:
     - name: Knowledge Base
