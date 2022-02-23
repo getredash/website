@@ -7,8 +7,7 @@ slug: newrelic-ds
 
 # Setup
 
-You need an **[Account ID](https://docs.newrelic.com/docs/accounts/accounts-billing/account-structure/account-id/)** provided by NewRelic, **[User API Token](https://docs.newrelic.com/docs/apis/intro-apis/new-relic-api-keys/)** and **[NewRelic GraphQL API URL](https://docs.newrelic.com/docs/apis/nerdgraph/get-started/introduction-new-relic-nerdgraph/)** to connect to NewRelic GraphQL API. The token behaves like a password. 
-
+You need an **[Account ID](https://docs.newrelic.com/docs/accounts/accounts-billing/account-structure/account-id/)** provided by NewRelic, **[User API Token](https://docs.newrelic.com/docs/apis/intro-apis/new-relic-api-keys/)** and **[NewRelic GraphQL API URL](https://docs.newrelic.com/docs/apis/nerdgraph/get-started/introduction-new-relic-nerdgraph/)** to connect to NewRelic GraphQL API. The token behaves like a password.
 
 {% callout warning %}
 
@@ -21,7 +20,7 @@ This query runner only support **count** and **comparison** queries
 # Querying
 
 For a simple count query, one that returns single result:
-    
+
 ```
 {
 	"queryType": "count",
