@@ -3,18 +3,18 @@ category: dev-guide
 parent_category: open-source
 title: Writing a New Query Runner 
 slug: write-a-query-runner
+toc: true
 ---
 
 ## Intro 
-Redash can already query many databases and REST APIs. To support new data source type in Redash, you need to implement a Query Runner for it. A Query Runner is a Python class. This document describes the process of adding a new data source type. It uses the Snowflake query runner as an example.
+Redash already connects to many databases and REST APIs. To add support for a new data source type in Redash, you need to implement a Query Runner for it. A Query Runner is a Python class. This doc page shows the process of writing a new Query Runner. It uses the Firebolt Query Runner as an example.
 
-Start by creating a new `.py` file in the `/redash/query_runner` directory and  implement the BaseQueryRunner class:
+Start by creating a new `firebolt.py` file in the `/redash/query_runner` directory and implement the `BaseQueryRunner` class:
 
 ```python
-from redash.query_runner import BaseQueryRunner
+from redash.query_runner import BaseQueryRunner, register
 
-
-class Snowflake(BaseQueryRunner):
+class Firebolt(BaseQueryRunner):
     def run_query(self, query, user):
         pass
 ```
@@ -31,28 +31,19 @@ def configuration_schema(cls):
     return {
         "type": "object",
         "properties": {
-            "account": {
-                "type": "string"
-            },
-            "user": {
-                "type": "string"
-            },
-            "password": {
-                "type": "string"
-            },
-            "warehouse": {
-                "type": "string"
-            },
-            "database": {
-                "type": "string"
-            }
+            "api_endpoint": {"type": "string", "default": DEFAULT_API_URL},
+            "engine_name": {"type": "string"},
+            "DB": {"type": "string"},
+            "user": {"type": "string"},
+            "password": {"type": "string"},
         },
-        "required": ["user", "password", "account", "database", "warehouse"],
-        "secret": ["password"]
+        "order": ["user", "password", "api_endpoint", "engine_name", "DB"],
+        "required": ["user", "password", "engine_name", "DB"],
+        "secret": ["password"],
     }
 ```
 
-This method returns a JSON schema object. The supported types for the properties are string, number and boolean. Also note the required field which defines the required properties (all of them in this case) and secret, which defines the secret fields (which won’t be sent back to the UI).
+This method returns a JSON schema object. The supported types for the properties are string, number and boolean. Also note the required field which defines the required properties (all of them except `api_endpoint` in this case) and secret, which defines the secret fields (which won’t be sent back to the UI).
 
 Values for these settings are accessible as a dictionary on the `self.configuration` field of the Query Runner object.
 
@@ -62,28 +53,29 @@ Now that we defined the configuration we can implement the `run_query` method:
 
 ```python
 def run_query(self, query, user):
-    connection = snowflake.connector.connect(
-        user=self.configuration['user'],
-        password=self.configuration['password'],
-        account=self.configuration['account'],
+    connection = connect(
+        api_endpoint=(self.configuration.get("api_endpoint") or DEFAULT_API_URL),
+        engine_name=(self.configuration.get("engine_name") or None),
+        username=(self.configuration.get("user") or None),
+        password=(self.configuration.get("password") or None),
+        database=(self.configuration.get("DB") or None),
     )
 
     cursor = connection.cursor()
 
     try:
-        cursor.execute("USE WAREHOUSE {}".format(self.configuration['warehouse']))
-        cursor.execute("USE {}".format(self.configuration['database']))
-
         cursor.execute(query)
+        columns = self.fetch_columns(
+            [(i[0], TYPES_MAP.get(i[1], None)) for i in cursor.description]
+        )
+        rows = [
+            dict(zip((column["name"] for column in columns), row)) for row in cursor
+        ]
 
-        columns = self.fetch_columns([(i[0], TYPES_MAP.get(i[1], None)) for i in cursor.description])
-        rows = [dict(zip((c['name'] for c in columns), row)) for row in cursor]
-
-        data = {'columns': columns, 'rows': rows}
+        data = {"columns": columns, "rows": rows}
         error = None
         json_data = json_dumps(data)
     finally:
-        cursor.close()
         connection.close()
 
     return json_data, error
@@ -91,35 +83,37 @@ def run_query(self, query, user):
 
 This is the minimum required code. Here's what it does:
 
-1. Connect to the Snowflake cluster.
+1. Connect to the the configured Firebolt endpoint or use the `DEFAULT_API_URL` which is imported from the official Firebolt Python API client.
 2. Run the query.
 3. Transform the results into the format Redash expects.
 
 ## Mapping Column Types to Redash Types
 
-Note this line:
+Note these lines:
 
 ```python
-columns = self.fetch_columns([(i[0], TYPES_MAP.get(i[1], None)) for i in cursor.description])
+columns = self.fetch_columns(
+    [(i[0], TYPES_MAP.get(i[1], None)) for i in cursor.description]
+)
 ```
 
-We use a helper function (`fetch_columns`) to de-duplicate column names and assign the type (if known) to the column. If no type is assigned, the default is string. The `TYPES_MAP` dictionary is a custom one we define elsewhere in the file. It will be different from one Query Runner to the next.
+The `BaseQueryRunner` includes a helper function (`fetch_columns`) which de-duplicates column names and assigns a type (if known) to the column. If no type is assigned, the default is string. The `TYPES_MAP` dictionary is a custom one we define at the top of the file. It will be different from one Query Runner to the next.
  
 The return value of the `run_query` method is a tuple of the JSON encoded results and error string. The error string is used in case you want to return some kind of custom error message, otherwise you can let the exceptions propagate (this is useful when first developing your Query Runner).
 
 ## Fetching Database Schema
 
-Up to this point, we've shown the minimum required to run a query. If you want Redash to show the database schema and enable autocomplete, you need to implement the `get_schema` method:
+Up to this point, we've shown the minimum required to run a query. If you also want Redash to show the database schema and enable autocomplete, you need to implement the `get_schema` method:
 
 ```python
 def get_schema(self, get_stats=False):
     query = """
-    SELECT col.table_schema,
-            col.table_name,
-            col.column_name
-    FROM {database}.information_schema.columns col
-    WHERE col.table_schema <> 'INFORMATION_SCHEMA'
-    """.format(database=self.configuration['database'])
+    SELECT TABLE_SCHEMA,
+            TABLE_NAME,
+            COLUMN_NAME
+    FROM INFORMATION_SCHEMA.COLUMNS
+    WHERE TABLE_SCHEMA <> 'INFORMATION_SCHEMA'
+    """
 
     results, error = self.run_query(query, None)
 
@@ -127,31 +121,67 @@ def get_schema(self, get_stats=False):
         raise Exception("Failed getting schema.")
 
     schema = {}
-    results = json.loads(results)
+    results = json_loads(results)
 
-    for row in results['rows']:
-        table_name = '{}.{}'.format(row['TABLE_SCHEMA'], row['TABLE_NAME'])
+    for row in results["rows"]:
+        table_name = "{}.{}".format(row["table_schema"], row["table_name"])
 
         if table_name not in schema:
-            schema[table_name] = {'name': table_name, 'columns': []}
+            schema[table_name] = {"name": table_name, "columns": []}
 
-        schema[table_name]['columns'].append(row['COLUMN_NAME'])
+        schema[table_name]["columns"].append(row["column_name"])
 
-    return schema.values()
+    return list(schema.values())
 ```
 
-The implementation of `get_schema` is specific to the data source you’re adding support to but the return value needs to be an array of dictionaries, where each dictionary has a `name` key (table name) and `columns` key (array of column names).
+The implementation of `get_schema` is specific to the data source you’re adding support to but the return value needs to be an array of dictionaries, where each dictionary has a `name` key (table name) and `columns` key (array of column names as strings).
 
 ### Including Column Types in the Schema Browser
-...
+If you want the Redash schema browser to also show column types, you can adjust your `get_schema` method so that the `columns` key contains an array of dictionaries with the keys `name` and `type`. 
+
+Here is an example without column types:
+
+```json
+[
+    {
+        "name": "Table1",
+        "columns": ["field1", "field2", "field3"]
+    }
+]
+```
+
+Here is an example that includes column types:
+
+```json
+[
+    {
+        "name": "Table1",
+        "columns": [
+            {
+                "name": "field1",
+                "type": "VARCHAR"
+            },
+            {
+                "name": "field2",
+                "type": "BIGINT"
+            },
+            {
+                "name": "field3",
+                "type": "DATE"
+            },
+        ]
+    }
+]
+```
+
+Note that the column type string is meant only to assist query authors. If it is present in the output of `get_schema` Redash trusts it and does not compare it to the type information returned by `run_query`. It is possible, therefore, that the type shown in the schema browser is different from the column type at the database. We recommend testing manually against a known schema to ensure that the correct types appear in the schema browser.
 
 ## Adding Test Connection Support
 
 You can also implement the Test Connection button support. The Test Connection button appears on the data source setup and configuration screen. You can either supply a `noop_query` property on your Query Runner or implement the `test_connection` method yourself. In this example we opted for the first:
 
 ```python
-class Snowflake(BaseQueryRunner):
-    # ...
+class Firebolt(BaseQueryRunner):
     noop_query = "SELECT 1"
 ```
 
@@ -161,7 +191,8 @@ If the Query Runner needs some external Python packages, we wrap those imports w
 
 ```python
 try:
-    import snowflake.connector
+    from firebolt.db import connect
+    from firebolt.client import DEFAULT_API_URL
     enabled = True
 except ImportError:
     enabled = False
@@ -179,10 +210,34 @@ If it returns False the Query Runner won’t be enabled.
 
 ## Finishing up
 
+At the top of your file, import the `register` function and call it at the bottom of `firebolt.py`
+
+```python
+# top of file
+
+try:
+    from firebolt.db import connect
+    from firebolt.client import DEFAULT_API_URL
+    enabled = True
+except ImportError:
+    enabled = False
+
+from redash.query_runner import BaseQueryRunner, register
+from redash.query_runner import TYPE_STRING, TYPE_INTEGER, TYPE_BOOLEAN
+from redash.utils import json_dumps, json_loads
+
+TYPES_MAP = {1: TYPE_STRING, 2: TYPE_INTEGER, 3: TYPE_BOOLEAN}
+
+# ... implementation
+
+# bottom of file
+register(Firebolt)
+```
+
 Usually the connector will need to have some additional Python packages, we add those to the `requirements_all_ds.txt` file. If the required Python packages don’t have any special dependencies (like some system packages), we usually add the query runner to the `default_query_runners` in `redash/settings/__init__.py`.
 
-You can see the full pull request for the Snowflake query runner [here](https://github.com/getredash/redash/pull/1488).
+You can see the full pull request for the Firebolt query runner [here](https://github.com/getredash/redash/pull/5689).
 
 ## Summary
 
-A Redash Query runner is a Python class that, at minimum, implements a `run_query` that returns results in the format Redash expects. Configurable data source settings are defined by the `configuration_schema` class method which returns a JSON schema. You may optionally implement a connection test, schema fetching, and automatic limits. You can enable your data source by adding it to the `default_query_runners` list in settings, or by modifying setting the `ADDITIONAL_QUERY_RUNNERS` environment variable.
+A Redash Query runner is a Python class that, at minimum, implements a `run_query` method that returns results in the format Redash expects. Configurable data source settings are defined by the `configuration_schema` class method which returns a JSON schema. You may optionally implement a connection test, schema fetching, and automatic limits. You can enable your data source by adding it to the `default_query_runners` list in settings, or by modifying setting the `ADDITIONAL_QUERY_RUNNERS` environment variable.
