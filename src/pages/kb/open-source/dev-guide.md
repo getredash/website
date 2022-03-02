@@ -31,7 +31,7 @@ Windows users: while it should be possible to run Redash on a Windows machine, w
 ## Additional Resources
 
 - [How to create a new visualization](https://discuss.redash.io/t/how-to-create-new-visualization-types-in-redash/86)
-- [How to create a new query runner](https://discuss.redash.io/t/creating-a-new-query-runner-data-source-in-redash/347)
+- [How to create a new query runner]({% link _kb/open-source/dev-guide/write-a-query-runner.md %})
 
 ## Getting Help
 
