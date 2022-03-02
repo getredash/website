@@ -185,6 +185,31 @@ class Firebolt(BaseQueryRunner):
     noop_query = "SELECT 1"
 ```
 
+## Supporting Auto Limit for SQL Databases
+
+The Redash front-end includes a tick box to automatically limit query results. This helps avoid overloading the Redash web app with large result sets. For most SQL style databases, you can automatically add auto limit support by inheriting `BaseSQLQueryRunner` instead of `BaseQueryRunner`.
+
+```python
+from redash.query_runner import BaseSQLQueryRunner, register
+
+class Firebolt(BaseSQLQueryRunner):
+    def run_query(self, query, user):
+        pass
+```
+
+The `BaseSQLQueryRunner` uses `sqplarse` to intelligently append `LIMIT 1000` to a query prior to execution, as long as the tick box in the query editor is selected. For databases that use a different syntax (notably Microsoft SQL Server or any NoSQL database), you can continue to inherit `BaseQueryRunner` and implement the following:
+
+```python
+@property
+def supports_auto_limit(self):
+    return True
+
+def apply_auto_limit(self, query_text: str, should_apply_auto_limit: bool):
+    ...
+```    
+
+For the `BaseQueryRunner`, the `supports_auto_limit` property is false by default and `apply_auto_limit` returns the query text unmodified. 
+
 ## Checking for Required Dependencies
 
 If the Query Runner needs some external Python packages, we wrap those imports with a try/except block, to prevent crashing deployments where this package is not available:
@@ -240,4 +265,4 @@ You can see the full pull request for the Firebolt query runner [here](https://g
 
 ## Summary
 
-A Redash Query runner is a Python class that, at minimum, implements a `run_query` method that returns results in the format Redash expects. Configurable data source settings are defined by the `configuration_schema` class method which returns a JSON schema. You may optionally implement a connection test, schema fetching, and automatic limits. You can enable your data source by adding it to the `default_query_runners` list in settings, or by modifying setting the `ADDITIONAL_QUERY_RUNNERS` environment variable.
+A Redash Query runner is a Python class that, at minimum, implements a `run_query` method that returns results in the format Redash expects. Configurable data source settings are defined by the `configuration_schema` class method which returns a JSON schema. You may optionally implement a connection test, schema fetching, and automatic limits. You can enable your data source by adding it to the `default_query_runners` list in settings, or by setting the `ADDITIONAL_QUERY_RUNNERS` environment variable.
