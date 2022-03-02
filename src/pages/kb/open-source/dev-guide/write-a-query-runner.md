@@ -7,7 +7,7 @@ toc: true
 ---
 
 ## Intro 
-Redash already connects to many databases and REST APIs. To add support for a new data source type in Redash, you need to implement a Query Runner for it. A Query Runner is a Python class. This doc page shows the process of writing a new Query Runner. It uses the Firebolt Query Runner as an example.
+Redash already connects to [many]({% link _kb/data-sources/querying/supported-data-sources.md %}) databases and REST APIs. To add support for a new data source type in Redash, you need to implement a Query Runner for it. A Query Runner is a Python class. This doc page shows the process of writing a new Query Runner. It uses the Firebolt Query Runner as an example.
 
 Start by creating a new `firebolt.py` file in the `/redash/query_runner` directory and implement the `BaseQueryRunner` class:
 
@@ -85,7 +85,7 @@ This is the minimum required code. Here's what it does:
 
 1. Connect to the the configured Firebolt endpoint or use the `DEFAULT_API_URL` which is imported from the official Firebolt Python API client.
 2. Run the query.
-3. Transform the results into the format Redash expects.
+3. Transform the results into the format Redash [expects]({% link _kb/data-sources/querying/json-api %}#Required-Data-Structure).
 
 ## Mapping Column Types to Redash Types
 
