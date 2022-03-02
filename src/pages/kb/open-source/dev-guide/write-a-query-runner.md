@@ -1,12 +1,13 @@
 ---
 category: dev-guide
 parent_category: open-source
-title: Writing a New Query Runner 
+title: Writing a New Query Runner
 slug: write-a-query-runner
 toc: true
 ---
 
-## Intro 
+## Intro
+
 Redash already connects to [many]({% link _kb/data-sources/querying/supported-data-sources.md %}) databases and REST APIs. To add support for a new data source type in Redash, you need to implement a Query Runner for it. A Query Runner is a Python class. This doc page shows the process of writing a new Query Runner. It uses the Firebolt Query Runner as an example.
 
 Start by creating a new `firebolt.py` file in the `/redash/query_runner` directory and implement the `BaseQueryRunner` class:
@@ -98,7 +99,7 @@ columns = self.fetch_columns(
 ```
 
 The `BaseQueryRunner` includes a helper function (`fetch_columns`) which de-duplicates column names and assigns a type (if known) to the column. If no type is assigned, the default is string. The `TYPES_MAP` dictionary is a custom one we define at the top of the file. It will be different from one Query Runner to the next.
- 
+
 The return value of the `run_query` method is a tuple of the JSON encoded results and error string. The error string is used in case you want to return some kind of custom error message, otherwise you can let the exceptions propagate (this is useful when first developing your Query Runner).
 
 ## Fetching Database Schema
@@ -137,16 +138,17 @@ def get_schema(self, get_stats=False):
 The implementation of `get_schema` is specific to the data source you’re adding support to but the return value needs to be an array of dictionaries, where each dictionary has a `name` key (table name) and `columns` key (array of column names as strings).
 
 ### Including Column Types in the Schema Browser
-If you want the Redash schema browser to also show column types, you can adjust your `get_schema` method so that the `columns` key contains an array of dictionaries with the keys `name` and `type`. 
+
+If you want the Redash schema browser to also show column types, you can adjust your `get_schema` method so that the `columns` key contains an array of dictionaries with the keys `name` and `type`.
 
 Here is an example without column types:
 
 ```json
 [
-    {
-        "name": "Table1",
-        "columns": ["field1", "field2", "field3"]
-    }
+  {
+    "name": "Table1",
+    "columns": ["field1", "field2", "field3"]
+  }
 ]
 ```
 
@@ -154,23 +156,23 @@ Here is an example that includes column types:
 
 ```json
 [
-    {
-        "name": "Table1",
-        "columns": [
-            {
-                "name": "field1",
-                "type": "VARCHAR"
-            },
-            {
-                "name": "field2",
-                "type": "BIGINT"
-            },
-            {
-                "name": "field3",
-                "type": "DATE"
-            },
-        ]
-    }
+  {
+    "name": "Table1",
+    "columns": [
+      {
+        "name": "field1",
+        "type": "VARCHAR"
+      },
+      {
+        "name": "field2",
+        "type": "BIGINT"
+      },
+      {
+        "name": "field3",
+        "type": "DATE"
+      }
+    ]
+  }
 ]
 ```
 
@@ -206,9 +208,9 @@ def supports_auto_limit(self):
 
 def apply_auto_limit(self, query_text: str, should_apply_auto_limit: bool):
     ...
-```    
+```
 
-For the `BaseQueryRunner`, the `supports_auto_limit` property is false by default and `apply_auto_limit` returns the query text unmodified. 
+For the `BaseQueryRunner`, the `supports_auto_limit` property is false by default and `apply_auto_limit` returns the query text unmodified.
 
 ## Checking for Required Dependencies
 
@@ -221,7 +223,7 @@ try:
     enabled = True
 except ImportError:
     enabled = False
-```    
+```
 
 The enabled variable is later used in the Query Runner’s enabled class method:
 
