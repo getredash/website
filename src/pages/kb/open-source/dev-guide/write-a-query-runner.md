@@ -24,7 +24,7 @@ The only method that you must implement is the `run_query` method, which accepts
 
 ## Configuration
 
-Usually the Query Runner needs some configuration to be used, so for this we need to implement the `configuration_schema` class method.  The fields belong under the `properties` key:
+Usually the Query Runner needs some configuration to be used, so for this we need to implement the `configuration_schema` class method. The fields belong under the `properties` key:
 
 ```python
 @classmethod
@@ -44,7 +44,7 @@ def configuration_schema(cls):
     }
 ```
 
-This method returns a JSON schema object. 
+This method returns a JSON schema object.
 
 Each property must specify a `type`. The supported types for the properties are `string`, `number` and `boolean`. For file-like fields, see the next heading.
 
@@ -53,6 +53,7 @@ Optionally you may also specify a `default` value and `title` that will be displ
 Also note the `required` field which defines the required properties (all of them except `api_endpoint` in this case) and `secret`, which defines the secret fields (which won’t be sent back to the UI).
 
 Values for these settings are accessible as a dictionary on the `self.configuration` field of the Query Runner object.
+
 ### File uploads
 
 When a user creates an instance of your data source, Redash stores the configuration in its metadata database. Some data sources will require users to upload a file (for example an SSL certificate or key file). To handle this, define the property with a name ending in `File` of type `string`. For example:
@@ -64,6 +65,7 @@ When a user creates an instance of your data source, Redash stores the configura
 ```
 
 The Redash front-end renders any property of type `string` whose name ends with `File` as a file-upload picker component. When saved, the contents of the file will be encrypted and saved to the metadata database as bytes. In your Query Runner code, you can read the value of `self.configuration['someFile']` into one of Python's built-in `tempfile` library fixtures. From there you can handle these bytes as you would any file stored on disk. You can see an example of this in the PostgreSQL Query Runner code.
+
 ## Executing the query
 
 Now that we defined the configuration we can implement the `run_query` method:
