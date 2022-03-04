@@ -28,7 +28,7 @@ cd redash/
 
 ### Set up environment variables
 
-Create a `.env` file at the root and set any environment variables you need. 
+Create a `.env` file at the root and set any environment variables you need.
 
 ```
 $ touch .env
@@ -39,8 +39,7 @@ $ touch .env
 An environment variable named `REDASH_COOKIE_SECRET` is required to run Redash. Read more why Redash uses secret keys [here]({% link _kb/open-source/admin-guide/secrets.md %})
 {% endcallout %}
 
-
-You should include any relevant [environment variables]({% link _kb/open-source/admin-guide/env-vars-settings.md %}) in this file. 
+You should include any relevant [environment variables]({% link _kb/open-source/admin-guide/env-vars-settings.md %}) in this file.
 
 ### Create Docker Services
 
