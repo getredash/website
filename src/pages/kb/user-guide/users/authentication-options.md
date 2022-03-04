@@ -37,6 +37,15 @@ Follow these steps to change the environment variables and UI settings to enable
 2. Set the **Authorized Redirect URL(s)** to `http(s)://${REDASH_BASEURL}/oauth/google_callback`.
 3. During setup you will obtain a client id and a client secret. Use these to set the `REDASH_GOOGLE_CLIENT_ID` and `REDASH_GOOGLE_CLIENT_SECRET` environment variables.
 4. Restart your Redash instance.
+
+{% callout info %}
+
+Step 5 below is optional. As of step 4, only visitors with an existing Redash account can sign-in using the Google Login flow. As with Password Login, visitors without an account cannot log-in unless they receive an invitation from an admin.
+
+By following step 5, you may configure Redash to allow any user from a specified domain to log-in. An account will automatically be created for them if one does not already exist.
+
+{% endcallout %}
+
 5. Visit **Settings > General**. Complete the _Allowed Google Apps Domains_ box with the domains that should be able to log-in to your Redash instance.
 
 # SAML 2.0
