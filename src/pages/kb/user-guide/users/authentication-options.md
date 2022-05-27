@@ -144,7 +144,7 @@ using your Okta credentials.
 
 You can now log in to Redash using Okta SSO.
 
-### Managing Redash Groups with OKTA attribute statements
+### Managing Redash Groups with Okta attribute statements
 
 Follow the below steps in order to configure Okta so that it passes the `RedashGroups` attribute:
 
