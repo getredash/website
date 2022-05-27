@@ -146,7 +146,7 @@ You can now log in to Redash using Okta SSO.
 
 ### Managing Redash Groups with OKTA attribute statements
 
-Ops teams often find a need to manage group memberships via OKTA. Follow the below steps inoder to configure okta so that it passes RedashGroups attribute:
+Follow the below steps in order to configure Okta so that it passes the `RedashGroups` attribute:
 
 1. Goto your OKTA application inside control panel and add **RedashGroups** in SAML settings where you have previously added FirstName and LastName and then save your changes:
 
