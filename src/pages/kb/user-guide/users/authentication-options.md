@@ -173,7 +173,7 @@ Name format should be left as **Basic**
 4. On the **Applications** page, click the **Assigments** tab. Now you can edit User Assigments and add required RedashGroups for the user.
 
 {% callout info %}
-You can also control attributes on OKTA Group level by removing the Scope from User personal.
+You can also control attributes on the Okta Group level by removing the Scope from User personal.
 {% endcallout %}
 
 ## Auth0
