@@ -148,7 +148,7 @@ You can now log in to Redash using Okta SSO.
 
 Follow the below steps in order to configure Okta so that it passes the `RedashGroups` attribute:
 
-1. Goto your OKTA application inside control panel and add **RedashGroups** in SAML settings where you have previously added FirstName and LastName and then save your changes:
+1. To your Okta control panel, add **RedashGroups** in SAML settings where you have previously added FirstName and LastName and then save your changes:
 
 | Name         | Value                |
 | ------------ | -------------------- |
