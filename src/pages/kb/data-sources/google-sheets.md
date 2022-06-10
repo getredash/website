@@ -68,4 +68,4 @@ When you connect a Google Sheet with Redash, we load it in full. You can generat
 
 ## A Note About Dates
 
-Redash uses [Python-datutil](https://dateutil.readthedocs.io/en/stable/) to parse dates from Google Spreadsheets. If you experience issues where Redash parses the date incorrectly, try adjusting the date formatting in your sheet to ISO8601 or one of the formats shown [here](https://dateutil.readthedocs.io/en/stable/examples.html#parse-examples).
+Redash uses [Python-dateutil](https://dateutil.readthedocs.io/en/stable/) to parse dates from Google Spreadsheets. If you experience issues where Redash parses the date incorrectly, try adjusting the date formatting in your sheet to ISO8601 or one of the formats shown [here](https://dateutil.readthedocs.io/en/stable/examples.html#parse-examples).
