@@ -54,7 +54,7 @@ You can configure Redash to allow to users to login with a Microsoft work or sch
 
 Follow these steps to change the environment variables and UI settings to enable Azure AD Login:
 
-1. Register a [new Azure AD application](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app). 
+1. Register a [new Azure AD application](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app).
 2. Set the **Authorized Redirect URL(s)** to `http(s)://${REDASH_BASEURL}/oauth/azure_callback`.
 3. During application setup you will obtain a client id and a client secret. Use these to set the `REDASH_AZURE_CLIENT_ID` and `REDASH_AZURE_CLIENT_SECRET` environment variables. If your application is single tenant (i.e. you selected 'accounts in this organizational directory only' in application setup), also set the `REDASH_AZURE_TENANT` environment variable.
 4. Restart your Redash instance.
