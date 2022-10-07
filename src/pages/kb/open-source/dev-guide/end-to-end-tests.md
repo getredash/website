@@ -52,7 +52,7 @@ the Cypress interface.
 
    Now you can select and run individual test suites, set breakpoints and logs,
    utilize Chrome Developer Tools, etc. You can refer to
-   [their documentantion](https://docs.cypress.io/).
+   [Cypress' documentation](https://docs.cypress.io/).
 
    Any changes to a test will trigger its rerun. If you make changes to Redash
    frontend code though, make sure to keep it in sync by running the following
