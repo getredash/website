@@ -35,7 +35,9 @@ In case you are handling a problem, and you need to stop the currently running q
 2. Flush redis: `redis-cli flushall`.
 3. Start celery: `sudo supervisorctl start redash_celery`
 
-Using Docker based instances, you can flush redis by running `docker exec -it redash_redis_1 redis-cli flushall`. Restart container with `docker restart redash_redis_1`. 
+Using Docker based instances;
+1. you can flush redis by running `docker exec -it redash_redis_1 redis-cli flushall`. Restart container with `docker restart redash_redis_1`.
+2. check redis dump size: `docker exec -it redash_redis_1 la -la`. 
 
 ## Changing the Number of Workers
 
