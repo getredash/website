@@ -36,8 +36,9 @@ In case you are handling a problem, and you need to stop the currently running q
 3. Start celery: `sudo supervisorctl start redash_celery`
 
 Using Docker based instances;
+
 1. you can flush redis by running `docker exec -it redash_redis_1 redis-cli flushall`. Restart container with `docker restart redash_redis_1`.
-2. check redis dump size: `docker exec -it redash_redis_1 la -la`. 
+2. check redis dump size: `docker exec -it redash_redis_1 la -la`.
 
 ## Changing the Number of Workers
 
@@ -56,6 +57,8 @@ You can change number of workers, when using docker by changing `WORKERS_COUNT` 
 Uncompressed backup: `sudo -u redash pg_dump > backup_filename.sql`
 
 Compressed backup: `sudo -u redash pg_dump redash | gzip > backup_filename.gz`
+
+Access Redash DB (postgres) in docker using: `docker exec -it redash_postgres_1 psql -U postgres`
 
 ## Version
 
