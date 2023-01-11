@@ -32,7 +32,7 @@
     "gatsby-remark-video": "^1.2.5",
     "gatsby-source-filesystem": "2.0.12",
     "gatsby-transformer-json": "^2.1.6",
-    "gatsby-transformer-remark": "2.1.17",
+    "gatsby-transformer-remark": "5.25.1",
     "gatsby-transformer-sharp": "2.1.9",
     "gatsby-transformer-yaml": "^2.1.6",
     "package.json": "^2.0.1",
