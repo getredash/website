@@ -19,4 +19,4 @@
     - name: Knowledge Base
       url: /help/
     - name: Forum
-      url: https://discuss.redash.io/
+      url: https://github.com/getredash/redash/discussions
