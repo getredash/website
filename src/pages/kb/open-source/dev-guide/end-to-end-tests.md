@@ -83,4 +83,4 @@ project name (`docker-compose -p cypress`)
 <br /><br />
 
 For any question on installations, troubleshooting and best practices, please
-refer to our [forum](https://discuss.redash.io).
+refer to our [forum](https://github.com/getredash/redash/discussions).

@@ -35,4 +35,4 @@ Windows users: while it should be possible to run Redash on a Windows machine, w
 
 ## Getting Help
 
-- [Discussion Forum](https://discuss.redash.io/c/development)
+- [Discussion Forum](https://github.com/getredash/redash/discussions/categories/q-a)
