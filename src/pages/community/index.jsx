@@ -142,7 +142,7 @@ const CommunityPage = ({
                   data-track
                   data-track-location="open-source"
                   track-event="Clicked Go to Forum"
-                  to="https://discuss.redash.io/c/feature-requests"
+                  to="https://github.com/getredash/redash/discussions/categories/ideas"
                   className="btn btn-secondary"
                   target="_blank"
                 >
@@ -161,7 +161,7 @@ const CommunityPage = ({
                   data-track
                   data-track-location="open-source"
                   track-event="Clicked go to Forum"
-                  to="https://discuss.redash.io/c/support"
+                  to="https://github.com/getredash/redash/discussions/categories/q-a"
                   className="btn btn-secondary"
                   target="_blank"
                 >

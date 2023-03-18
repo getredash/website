@@ -121,7 +121,10 @@ const ContactPage = ({ location }) => (
               <p>
                 If you are using the open source version of Redash, and need
                 support, please use our{' '}
-                <Link to="https://discuss.redash.io/">Forum</Link>.
+                <Link to="https://github.com/getredash/redash/discussions">
+                  Forum
+                </Link>
+                .
               </p>
             </div>
           </div>

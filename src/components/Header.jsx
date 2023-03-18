@@ -99,7 +99,10 @@ class Header extends React.Component {
                     <Link to="/help/">Knowledge Base</Link>
                   </li>
                   <li>
-                    <Link to="https://discuss.redash.io/" target="_blank">
+                    <Link
+                      to="https://github.com/getredash/redash/discussions"
+                      target="_blank"
+                    >
                       Forum
                     </Link>
                   </li>
