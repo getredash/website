@@ -52,27 +52,6 @@ const Footer = ({
               </Link>
             </li>
           </ul>
-
-          <p>
-            <Link
-              data-track
-              data-track-location="footer"
-              to="/terms"
-              className="footer__list-link"
-            >
-              Terms
-            </Link>{' '}
-            ⚬
-            <Link
-              data-track
-              data-track-location="footer"
-              to="/privacy"
-              className="footer__list-link"
-            >
-              {' '}
-              Privacy Policy
-            </Link>
-          </p>
         </div>
       </div>
     </div>
