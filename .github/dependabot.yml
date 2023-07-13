@@ -1,0 +1,29 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: monthly
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: gatsby-transformer-yaml
+    versions:
+    - 2.10.0
+    - 2.8.0
+  - dependency-name: gatsby-image
+    versions:
+    - 2.10.0
+    - 2.8.0
+  - dependency-name: gatsby-plugin-react-helmet
+    versions:
+    - 3.7.0
+    - 3.9.0
+  - dependency-name: eslint-plugin-prettier
+    versions:
+    - 3.3.0
+  - dependency-name: lodash
+    versions:
+    - 4.17.20
+  - dependency-name: elliptic
+    versions:
+    - 6.5.3
