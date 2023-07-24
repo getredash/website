@@ -24,6 +24,7 @@ In most cases we use the query language native to the data source. In some cases
 - Save query: `Ctrl`/`Cmd` + `S`
 - Toggle Auto Complete: `Ctrl` + `Space`
 - Toggle Schema Browser `Alt`/`Option` + `D`
+- Indent/dedent selected line: `Ctrl` + `]` / `Ctrl` + `[`
 
 ## Schema Browser
 
