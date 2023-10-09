@@ -48,7 +48,7 @@ server {
   ssl_certificate_key /path-to/cert.key;
 
   # Specifies that we don't want to use SSLv2 (insecure) or SSLv3 (exploitable)
-  ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+  ssl_protocols TLSv1.2 TLSv1.3;
   # Uses the server's ciphers rather than the client's
   ssl_prefer_server_ciphers on;
   # Specifies which ciphers are okay and which are not okay. List taken from https://raymii.org/s/tutorials/Strong_SSL_Security_On_nginx.html
