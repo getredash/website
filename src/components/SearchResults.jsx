@@ -7,7 +7,7 @@ const SearchResults = ({ hits }) => (
     {hits.length > 0 && (
       <div className="hits">
         <ul className="topics__list list-unstyled">
-          {hits.map((result) => (
+          {hits.map(result => (
             <li className="topics__list__item" key={result.objectID}>
               <a href={result.url} className="topics__list__link">
                 <h4

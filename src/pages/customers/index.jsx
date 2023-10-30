@@ -166,8 +166,10 @@ const CustomersPage = ({
               </div>
 
               <div className="featured-customer">
-                <img src="/assets/images/elements/redash-charts.jpg" width="100%" />
-
+                <img
+                  src="/assets/images/elements/redash-charts.jpg"
+                  width="100%"
+                />
                 <div className="featured-customer--content">
                   <h2>
                     How Redash is helping Alooma sustain a data driven culture

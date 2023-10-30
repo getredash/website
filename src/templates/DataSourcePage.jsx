@@ -122,15 +122,14 @@ export default function DataSourcePageTemplate({
                 className="img-responsive center-block img-rounded img--has-shadow"
                 alt="Slack chat demo"
               />
-              >
             </div>
 
             <div className="col-md-6">
               <ul className="highlight-ul m-t-50">
                 <li>
-                  <b>Share insights from {frontmatter.name}</b> via link
-                 or embed them wherever you need to make your
-                  organization truly data driven.
+                  <b>Share insights from {frontmatter.name}</b> via link or
+                  embed them wherever you need to make your organization truly
+                  data driven.
                 </li>
                 <li>
                   <b>Integrate</b> Redash with external services and{' '}
@@ -172,7 +171,7 @@ export default function DataSourcePageTemplate({
                     width="48px"
                     className="profile-image"
                   />
-                  > by Dan Manges, CTO at{' '}
+                  by Dan Manges, CTO at{' '}
                   <Link to="https://www.joinroot.com/" target="_blank">
                     Root Insurance
                   </Link>

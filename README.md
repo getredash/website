@@ -18,7 +18,6 @@ yarn fetch-contributors > website/_data/contributors.json
 - Node.js v14.21.3 (or higher)
 - yarn 1.22.19
 
-
 To start Gatsby in development mode and serve the the website on
 `http://localhost:8000` use:
 
