@@ -17,7 +17,7 @@ const Footer = ({
           >
             <h3 className="footer__title">{node.name}</h3>
             <ul className="footer__list">
-              {node.links.map(link => (
+              {node.links.map((link) => (
                 <li className="footer__list-item" key={link.name}>
                   <Link
                     data-track
@@ -58,7 +58,7 @@ const Footer = ({
   </footer>
 )
 
-export default props => (
+export default (props) => (
   <StaticQuery
     query={graphql`
       {
@@ -75,6 +75,6 @@ export default props => (
         }
       }
     `}
-    render={data => <Footer data={data} {...props} />}
+    render={(data) => <Footer data={data} {...props} />}
   />
 )

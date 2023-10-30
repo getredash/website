@@ -213,7 +213,7 @@ export default function DataSourcePageTemplate({
 }
 
 export const pageQuery = graphql`
-  query($path: String!) {
+  query ($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
