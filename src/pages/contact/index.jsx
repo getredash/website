@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from 'components/Layout'
 import Link from 'components/Link'
-import { navigateTo } from 'gatsby-link'
+import { navigate } from 'gatsby-link'
 
 function encode(data) {
   return Object.keys(data)
@@ -30,7 +30,7 @@ class ContactForm extends React.Component {
         ...this.state,
       }),
     })
-      .then(() => navigateTo(form.getAttribute('action')))
+      .then(() => navigate(form.getAttribute('action')))
       .catch(error => alert(error))
   }
 
