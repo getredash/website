@@ -10,7 +10,7 @@ class Link extends React.Component {
   }
 
   handleClick(e) {
-    const { children, to, activeClassName, ...other } = this.props
+    const { ...other } = this.props
 
     if (!other['data-track'] || !window.analytics) {
       return
