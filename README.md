@@ -15,7 +15,7 @@ yarn fetch-contributors > website/_data/contributors.json
 
 #### Requirements
 
-- Node.js v14.21.3 (or higher)
+- Node.js v18.18.2 (or higher)
 - yarn 1.22.19
 
 To start Gatsby in development mode and serve the the website on
