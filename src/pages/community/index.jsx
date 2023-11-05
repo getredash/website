@@ -8,7 +8,7 @@ import SectionGetStarted from 'components/SectionGetStarted'
 const CommunityPage = ({
   location,
   data: {
-    allContributorsJson: { totalCount, edges },
+    allContributorsJson: { _totalCount, edges },
   },
 }) => {
   const contributorsAmount = 350 // totalCount - (totalCount % 10)

@@ -1,3 +1,4 @@
+/* eslint-disable */
 // Segment
 !(function() {
   var analytics = (window.analytics = window.analytics || [])

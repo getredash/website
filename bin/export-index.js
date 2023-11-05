@@ -8,7 +8,7 @@ const searchClient = algoliasearch(
 const index = searchClient.initIndex('docs')
 const fs = require('fs')
 const browser = index.browseAll()
-const hits = []
+let hits = []
 
 browser.on('result', function onResult(content) {
   hits = hits.concat(content.hits)

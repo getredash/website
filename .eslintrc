@@ -1,14 +1,13 @@
 {
   "extends": [
-    "prettier",
-    "prettier/react"
-  ],
-  "plugins": [
-    "react",
+    "eslint:recommended",
     "prettier"
   ],
+  "plugins": [
+    "react"
+  ],
   "parserOptions": {
-    "ecmaVersion": 2016,
+    "ecmaVersion": 2018,
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true,
@@ -20,13 +19,14 @@
     "node": true
   },
   "rules": {
-    "prettier/prettier": [
-      "warn",
-      {
-        "trailingComma": "es5",
-        "singleQuote": true,
-        "semi": false
-      }
-    ]
+    "no-unused-vars": [2, {"argsIgnorePattern": "^_"}],
+    "react/jsx-uses-vars": "error",
+    "react/jsx-uses-react": "error"
+  },
+  "globals": {
+    "window": true,
+    "document": true,
+    "alert": true,
+    "analytics": true
   }
 }

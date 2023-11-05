@@ -30,24 +30,25 @@ const config = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
-            {
-        resolve: 'gatsby-remark-video',
-  options: {
-    width: '100%',
-    height: 'auto',
-    preload: 'auto',
-    muted: true,
-    autoplay: true,
-    playsinline: true,
-    controls: false,
-    loop: true
-  }},
           {
-            resolve: "gatsby-remark-external-links",
+            resolve: 'gatsby-remark-video',
             options: {
-              target: "_blank",
-              rel: "nofollow noopener noreferrer"
-            }
+              width: '100%',
+              height: 'auto',
+              preload: 'auto',
+              muted: true,
+              autoplay: true,
+              playsinline: true,
+              controls: false,
+              loop: true,
+            },
+          },
+          {
+            resolve: 'gatsby-remark-external-links',
+            options: {
+              target: '_blank',
+              rel: 'nofollow noopener noreferrer',
+            },
           },
           {
             resolve: 'gatsby-remark-images',
@@ -73,15 +74,24 @@ const config = {
       resolve: 'gatsby-plugin-netlify',
       options: {
         mergeSecurityHeaders: false,
-        mergeLinkHeaders: true,
         mergeCachingHeaders: true,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        cssLoaderOptions: {
+          esModule: false,
+          modules: {
+            namedExport: false,
+          },
+        },
       },
     },
     'gatsby-transformer-yaml',
     'gatsby-transformer-json',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sass',
     'gatsby-plugin-sharp',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-twitter',

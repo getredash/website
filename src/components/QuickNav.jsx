@@ -27,7 +27,7 @@ class QuickNav extends React.Component {
       const title = heading.textContent
       const id =
         heading.id ||
-        heading.textContent.replace(/[\. ,:-]+/g, '-').replace(/-$/, '')
+        heading.textContent.replace(/[. ,:-]+/g, '-').replace(/-$/, '')
       const link = `#${id}`
       const li = `<li class="toc-entry toc-${heading.tagName.toLowerCase()}">`
 

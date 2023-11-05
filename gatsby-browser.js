@@ -1,6 +1,6 @@
 const { reportUrlChange, RESET_URL } = require('components/Layout')
 
-exports.onRouteUpdate = ({ location }) => {
+exports.onRouteUpdate = ({ _location }) => {
   window.analytics && window.analytics.page()
 }
 
