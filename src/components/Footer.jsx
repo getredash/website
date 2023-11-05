@@ -1,5 +1,5 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 import Link from 'components/Link'
 
 const Footer = ({
@@ -58,23 +58,21 @@ const Footer = ({
   </footer>
 )
 
-export default props => (
-  <StaticQuery
-    query={graphql`
-      {
-        allFooterLinksYaml {
-          edges {
-            node {
+export default props => {
+  const data = useStaticQuery(
+    graphql`{
+      allFooterLinksYaml {
+        edges {
+          node {
+            name
+            links {
               name
-              links {
-                name
-                url
-              }
+              url
             }
           }
         }
       }
-    `}
-    render={data => <Footer data={data} {...props} />}
-  />
-)
+    }`
+  )
+ return <Footer data={data} {...props} />
+}

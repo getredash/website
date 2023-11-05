@@ -96,53 +96,49 @@ const IntegrationsPage = ({
   </Layout>
 )
 
-export const cardsQuery = graphql`
-  {
-    Databases: allMarkdownRemark(
-      sort: { order: ASC, fields: [frontmatter___name] }
-      filter: { fileAbsolutePath: { regex: "/_databases/" } }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            name
-            logo
-            path
-          }
-        }
-      }
-    }
-
-    Integrations: allMarkdownRemark(
-      sort: { order: ASC, fields: [frontmatter___name] }
-      filter: { fileAbsolutePath: { regex: "/_integrations/" } }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            name
-            logo
-            path
-          }
-        }
-      }
-    }
-
-    Partners: allMarkdownRemark(
-      sort: { order: ASC, fields: [frontmatter___name] }
-      filter: { fileAbsolutePath: { regex: "/_partners/" } }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            name
-            logo
-            path
-          }
+export const cardsQuery = graphql`{
+  Databases: allMarkdownRemark(
+    sort: {frontmatter: {name: ASC}}
+    filter: {fileAbsolutePath: {regex: "/_databases/"}}
+  ) {
+    edges {
+      node {
+        frontmatter {
+          name
+          logo
+          path
         }
       }
     }
   }
-`
+  Integrations: allMarkdownRemark(
+    sort: {frontmatter: {name: ASC}}
+    filter: {fileAbsolutePath: {regex: "/_integrations/"}}
+  ) {
+    edges {
+      node {
+        frontmatter {
+          name
+          logo
+          path
+        }
+      }
+    }
+  }
+  Partners: allMarkdownRemark(
+    sort: {frontmatter: {name: ASC}}
+    filter: {fileAbsolutePath: {regex: "/_partners/"}}
+  ) {
+    edges {
+      node {
+        frontmatter {
+          name
+          logo
+          path
+        }
+      }
+    }
+  }
+}`
 
 export default IntegrationsPage
