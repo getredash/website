@@ -8,6 +8,16 @@ slug: formatting-numbers
 
 In several Redash visualizations you can control how the numbers are formatted. You control the format by supplying a format string. Below you can find examples for the various format options.
 
+## Literals
+
+<div class="table table-striped">
+
+| Number | Format | Output |
+| ------ | ------ | ------ |
+| 50     | '0{%}' | 50%    |
+
+</div>
+
 ## Numbers
 
 <div class="table table-striped">
@@ -72,10 +82,10 @@ In several Redash visualizations you can control how the numbers are formatted. 
 
 | Number     | Format      | Output   |
 | ---------- | ----------- | -------- |
-| 100        | '0%'        | 100%     |
-| 97.4878234 | '0.000%'    | 97.488%  |
-| -4.3       | '0 %'       | -4 %     |
-| 65.43      | '(0.000 %)' | 65.430 % |
+| 1          | '0%'        | 100%     |
+| 0.97487823 | '0.000%'    | 97.488%  |
+| -0.043     | '0.0 %'     | -4.3 %   |
+| 0.6543     | '(0.000 %)' | 65.430 % |
 
 </div>
 
