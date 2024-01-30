@@ -74,17 +74,16 @@ a `parameters` object.
 Here's an example JSON object including different parameter types:
 
 ```
-{ 
-    "parameters": {
-    	"number_param": 100,
-    	"date_param": "2020-01-01",
-    	"date_range_param": {
-    		"start": "2020-01-01",
-    		"end": "2020-12-31"
-    		}
-    	},
-      "max_age": 1800
+{
+  "parameters": {
+    "number_param": 100,
+    "date_param": "2020-01-01",
+    "date_range_param": {
+      "start": "2020-01-01",
+      "end": "2020-12-31"
     }
+  },
+  "max_age": 1800
 }
 ```
 
