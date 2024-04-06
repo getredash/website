@@ -12,8 +12,6 @@
   links:
     - name: About
       url: /community/
-    - name: Blog
-      url: https://blog.redash.io/
 - name: Help
   links:
     - name: Knowledge Base
