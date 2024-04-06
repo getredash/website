@@ -12,11 +12,9 @@
   links:
     - name: About
       url: /community/
-    - name: Blog
-      url: https://blog.redash.io/
 - name: Help
   links:
     - name: Knowledge Base
       url: /help/
     - name: Forum
-      url: https://discuss.redash.io/
+      url: https://github.com/getredash/redash/discussions
