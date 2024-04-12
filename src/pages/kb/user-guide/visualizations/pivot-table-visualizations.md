@@ -15,7 +15,7 @@ Redash's pivot table visualization can aggregate records from a query result int
 
 It should return at least three columns. The source query for a pivot table is usually non-aggregated or "melted". In the below example, I pull indicative data from a school grading system. This is mock data.
 
-![Example Query for Pivot Table]({% link /assets/images/docs/gitbook/pivot-table-query.png %})
+![Example Query for Pivot Table](/assets/images/docs/gitbook/pivot-table-query.png)
 
 The SQL query is "dumb". It doesn't group or sort the data. Because we'll use the pivot table to do this without SQL.
 
@@ -29,7 +29,7 @@ All the field aliases from your query result become available at the top of the 
 
 Here are some examples using the grade data above:
 
-![]({% link /assets/images/docs/gitbook/pivot-table-configuration-examples.png %})
+![](/assets/images/docs/gitbook/pivot-table-configuration-examples.png)
 
 {% callout warning %}
 
