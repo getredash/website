@@ -99,7 +99,7 @@ const IntegrationsPage = ({
 export const cardsQuery = graphql`
   {
     Databases: allMarkdownRemark(
-      sort: { order: ASC, fields: [frontmatter___name] }
+      sort: {frontmatter: {name: ASC}}
       filter: { fileAbsolutePath: { regex: "/_databases/" } }
     ) {
       edges {
@@ -114,7 +114,7 @@ export const cardsQuery = graphql`
     }
 
     Integrations: allMarkdownRemark(
-      sort: { order: ASC, fields: [frontmatter___name] }
+      sort: {frontmatter: {name: ASC}}
       filter: { fileAbsolutePath: { regex: "/_integrations/" } }
     ) {
       edges {
@@ -129,7 +129,7 @@ export const cardsQuery = graphql`
     }
 
     Partners: allMarkdownRemark(
-      sort: { order: ASC, fields: [frontmatter___name] }
+      sort: {frontmatter: {name: ASC}}
       filter: { fileAbsolutePath: { regex: "/_partners/" } }
     ) {
       edges {
