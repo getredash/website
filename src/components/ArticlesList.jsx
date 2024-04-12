@@ -43,10 +43,10 @@ export default props => {
   const data = useStaticQuery(graphql`
     query {
       allMarkdownRemark(
-        sort: {
-          order: ASC
-          fields: [frontmatter___order, frontmatter___title]
-        }
+        sort: [
+          {frontmatter: {order: ASC}},
+          {frontmatter: {title: ASC}}
+        ]
         filter: {
           fileAbsolutePath: { regex: "/pages/kb/" }
           frontmatter: { layout: { ne: "kb-category" } }
