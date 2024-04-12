@@ -5,7 +5,7 @@
   "main": "n/a",
   "dependencies": {
     "algoliasearch": "^4.23.3",
-    "bootstrap-sass": "^3.4.3",
+    "bootstrap-sass": "3.4.1",
     "gatsby": "5.13.4",
     "gatsby-image": "3.11.0",
     "gatsby-link": "5.13.1",
