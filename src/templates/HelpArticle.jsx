@@ -59,7 +59,7 @@ class HelpPageTemplate extends React.Component {
     }
     html = html.replace(calloutEndRE, '</div>')
     while ((matched = linkRE.exec(html)) !== null) {
-      const link = matched[3] && matched[3].trim()
+      let link = matched[3] && matched[3].trim()
       if (link) {
         link = link.replace('_kb', '/help').replace('.md', '')
         html = html.replace(matched[0], link)
