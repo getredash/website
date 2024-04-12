@@ -73,7 +73,6 @@ const config = {
       resolve: 'gatsby-plugin-netlify',
       options: {
         mergeSecurityHeaders: false,
-        mergeLinkHeaders: true,
         mergeCachingHeaders: true,
       },
     },
