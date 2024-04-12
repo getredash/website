@@ -15,12 +15,15 @@ browser.on('result', function onResult(content) {
 })
 
 browser.on('end', function onEnd() {
-  fs.writeFile('browse.json', JSON.stringify(hits, null, 2), 'utf-8', function(
-    err
-  ) {
-    if (err) throw err
-    console.log('Your index has been exported!')
-  })
+  fs.writeFile(
+    'browse.json',
+    JSON.stringify(hits, null, 2),
+    'utf-8',
+    function (err) {
+      if (err) throw err
+      console.log('Your index has been exported!')
+    }
+  )
 })
 
 browser.on('error', function onError(err) {
