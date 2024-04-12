@@ -31,14 +31,14 @@ function aritclePath(frontmatter) {
 
 function transformer({ data }) {
   // console.log(data)
-  return data.allMarkdownRemark.edges.map(edge => {
+  return data.allMarkdownRemark.edges.map((edge) => {
     return {
       url: aritclePath(edge.node.frontmatter),
       title: edge.node.frontmatter.title,
       parent_category: edge.node.frontmatter.parent_category,
       category: edge.node.frontmatter.category,
       text: edge.node.text,
-      headings: edge.node.headings.map(heading => heading.value),
+      headings: edge.node.headings.map((heading) => heading.value),
       objectID: aritclePath(edge.node.frontmatter),
     }
   })
