@@ -20,15 +20,15 @@ During each migration, check the [releases page](https://github.com/getredash/re
 
 Below is a table of recent docker release images for your reference:
 
-| released_at | version | docker_image               |
-| ----------- | ------- | -------------------------- |
-| 2021-12-24  | 10.1.0  | redash/redash:10.1.0.b50633|
-| 2021-10-02  | 10.0.0  | redash/redash:10.0.0.b50363|
-| 2019-10-27  | 8.0.0   | redash/redash:8.0.0.b32245 |
-| 2019-03-17  | 7.0.0   | redash/redash:7.0.0.b18042 |
-| 2018-12-17  | 6.0.0   | redash/redash:6.0.0.b8537  |
-| 2018-10-18  | 5.0.2   | redash/redash:5.0.2.b5486  |
-| 2018-09-27  | 5.0.1   | redash/redash:5.0.1.b4850  |
+| released_at | version | docker_image                |
+| ----------- | ------- | --------------------------- |
+| 2021-12-24  | 10.1.0  | redash/redash:10.1.0.b50633 |
+| 2021-10-02  | 10.0.0  | redash/redash:10.0.0.b50363 |
+| 2019-10-27  | 8.0.0   | redash/redash:8.0.0.b32245  |
+| 2019-03-17  | 7.0.0   | redash/redash:7.0.0.b18042  |
+| 2018-12-17  | 6.0.0   | redash/redash:6.0.0.b8537   |
+| 2018-10-18  | 5.0.2   | redash/redash:5.0.2.b5486   |
+| 2018-09-27  | 5.0.1   | redash/redash:5.0.1.b4850   |
 
 {% callout warning %}
 
