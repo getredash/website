@@ -77,7 +77,7 @@ Now proceed to “[Setup](#setup-redash-instance-setup)”.
 
 ### <a name="other"></a> Other
 
-The AWS and Google Compute Engine images are created using our [Setup Script](https://github.com/getredash/setup), which is designed to run on Ubuntu 18.04 server. You can either use the script as is (if you intend to run it on Ubuntu) or use it as a blueprint to create your own setup.
+The AWS and Google Compute Engine images are created using our [Setup Script](https://github.com/getredash/setup), which is designed to run on many modern Linux distributions. You can either use the script as is, or use it as a blueprint to create your own setup.
 
 What the script does is:
 
