@@ -53,7 +53,7 @@ QinPGTd7Ulec03lar0vkI9ojqmXsuw4VOyirnC5NuvEdJSCwLwesmknNygXITunT
 ```
 
 {% callout info %}
-The official Redash cloud images found [here]({% link _kb/open-source/setup.md %}) generate unique secret keys automatically during deployment. If you deployed Redash manually with Docker Compose you can create a `.env` file adjacent to `docker-compose.yml` and set your environment variables there.
+The official Redash cloud images found [here]({% link _kb/open-source/setup.md %}) generate unique secret keys automatically during deployment. If you deployed Redash manually with Docker Compose you can create a `.env` file adjacent to `compose.yaml` and set your environment variables there.
 {% endcallout %}
 
 ## Changing a Secret Keys
