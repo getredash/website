@@ -14,10 +14,9 @@ For basic deployments we recommend a minimum of 4GB of RAM and reasonable amount
 To create an instance, you have the following options:
 
 1. [AWS EC2 AMI](#aws)
-2. [DigitalOcean](#do)
-3. [Google Compute Engine Image](#gce)
-4. [Other](#other)
-5. [Docker](#docker)
+2. [Google Compute Engine Image](#gce)
+3. [Other](#other)
+4. [Docker](#docker)
 
 {% callout info %}
 
@@ -58,10 +57,6 @@ When launching the instance make sure to use a Security Group, that only allows 
 
 Now proceed to “[Setup](#setup-redash-instance-setup)”.
 
-### <a name="do"></a> DigitalOcean
-
-To get started on DigitalOcean, you can use the image from DigitalOcean's Marketplace ([Redash on the Marketplace](https://marketplace.digitalocean.com/apps/redash)). Once started the Droplet, proceed to "[Setup](#setup-redash-instance-setup)".
-
 ### <a name="gce"></a> Google Compute Engine
 
 To get started on GCE, run the following commands in your [Cloud Shell](https://console.cloud.google.com/compute/instances?cloudshell=true).
@@ -82,7 +77,7 @@ Now proceed to “[Setup](#setup-redash-instance-setup)”.
 
 ### <a name="other"></a> Other
 
-The AWS, DigitalOcean and Google Compute Engine images are created using our [Setup Script](https://github.com/getredash/setup), which is designed to run on Ubuntu 18.04 server. You can either use the script as is (if you intend to run it on Ubuntu) or use it as a blueprint to create your own setup.
+The AWS and Google Compute Engine images are created using our [Setup Script](https://github.com/getredash/setup), which is designed to run on Ubuntu 18.04 server. You can either use the script as is (if you intend to run it on Ubuntu) or use it as a blueprint to create your own setup.
 
 What the script does is:
 
