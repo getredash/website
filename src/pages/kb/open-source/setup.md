@@ -87,7 +87,7 @@ The AWS, DigitalOcean and Google Compute Engine images are created using our [Se
 What the script does is:
 
 1. Install Docker and Docker Compose.
-2. Download our recommended [Docker Compose configuration](https://github.com/getredash/setup/blob/master/data/docker-compose.yml) and create initial configuration.
+2. Download our recommended [Docker Compose configuration](https://github.com/getredash/setup/blob/master/data/compose.yaml) and create initial configuration.
 3. Start everything.
 
 Note that the script assumes you are running it on a "clean" machine. If you’re running this script on a machine that is used for other purposes, you might want to tweak it to your needs.
@@ -100,7 +100,7 @@ For every Redash release we also create updated [Docker image](https://hub.docke
 
 If you do not use one of our cloud images, you must manually set up Redash's [secret keys]({% link _kb/open-source/admin-guide/secrets.md %}):
 
-1. Create a `.env` in the same folder as your `docker-compose.yml` file.
+1. Create a `.env` in the same folder as your `compose.yaml` file.
 2. Write any sensitive environment variables in bash syntax:
 
 ```bash
@@ -115,7 +115,7 @@ Do not commit this file to version control.
 
 For development environment setup, please refer to the [developer guide]({% link _kb/open-source/dev-guide.md %}) (which includes Docker specific instructions as well).
 
-To run Redash you need several instances of Redash (API server and background workers to run queries) along with Redis and PostgreSQL. If you don't want or can't use our images or [Setup Script](https://github.com/getredash/setup), you can refer to the [Docker Compose configuration](https://github.com/getredash/setup/blob/master/data/docker-compose.yml) to understand what services you need to define.
+To run Redash you need several instances of Redash (API server and background workers to run queries) along with Redis and PostgreSQL. If you don't want or can't use our images or [Setup Script](https://github.com/getredash/setup), you can refer to the [Docker Compose configuration](https://github.com/getredash/setup/blob/master/data/compose.yaml) to understand what services you need to define.
 
 ## <a name="setup-redash-instance-setup"></a> Setup
 

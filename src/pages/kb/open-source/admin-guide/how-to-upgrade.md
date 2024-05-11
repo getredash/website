@@ -40,7 +40,7 @@ If you are currently running an instance of Redash prior to V7, **do not upgrade
 
 1. Make sure to backup your data. You need to backup Redash's PostgreSQL database (the database Redash stores metadata in, not the ones you might be querying) and your `.env` file (if it exists). The data in Redis is transient.
 2. Change directory to `/opt/redash`.
-3. Update `/opt/redash/docker-compose.yml` Redash image reference to the one you want to upgrade to.
+3. Update `/opt/redash/compose.yaml` Redash image reference to the one you want to upgrade to.
 4. Stop Redash services: `docker compose stop server scheduler scheduled_worker adhoc_worker` (you might need to list additional services if you updated your configuration)
 5. Apply migration (if necessary): `docker compose run --rm server manage db upgrade`
 6. Start services: `docker compose up -d`
