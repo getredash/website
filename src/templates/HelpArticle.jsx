@@ -48,7 +48,7 @@ class HelpPageTemplate extends React.Component {
     const calloutEndRE = /{% endcallout %}/g
     const rawStartRE = /{%( |)raw( |)%}/g
     const rawEndRE = /{%( |)endraw( |)%}/g
-    const linkRE = /({% |%7B%25%20)link( |%20)([a-zA-Z-_\/.]*)?( %}|%20%25%7D)/g
+    const linkRE = /\[([^\]]+)\]\({% link ([^\s]+) %}\)/g
     let matched
     while ((matched = calloutStartRE.exec(html)) !== null) {
       const type = (matched[1] && matched[1].trim()) || 'primary'
@@ -59,10 +59,11 @@ class HelpPageTemplate extends React.Component {
     }
     html = html.replace(calloutEndRE, '</div>')
     while ((matched = linkRE.exec(html)) !== null) {
-      const link = matched[3] && matched[3].trim()
+      let altText = matched[1] && matched[1].trim()
+      let link = matched[2] && matched[2].trim()
       if (link) {
         link = link.replace('_kb', '/help').replace('.md', '')
-        html = html.replace(matched[0], link)
+        html = html.replace(matched[0], `<a href="${link}">${altText}</a>`)
       }
     }
     html = html.replace(rawStartRE, '<pre>').replace(rawEndRE, '</pre>')

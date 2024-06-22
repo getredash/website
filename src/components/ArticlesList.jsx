@@ -1,5 +1,5 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import PropTypes from 'prop-types'
 import Link from 'components/Link'
 
@@ -39,34 +39,33 @@ ArticlesList.propTypes = {
   parent_category: PropTypes.string.isRequired,
 }
 
-export default props => (
-  <StaticQuery
-    query={graphql`
-      {
-        allMarkdownRemark(
-          sort: {
-            order: ASC
-            fields: [frontmatter___order, frontmatter___title]
-          }
-          filter: {
-            fileAbsolutePath: { regex: "/pages/kb/" }
-            frontmatter: { layout: { ne: "kb-category" } }
-          }
-        ) {
-          edges {
-            node {
-              frontmatter {
-                title
-                category
-                parent_category
-                slug
-                description
-              }
+export default props => {
+  const data = useStaticQuery(graphql`
+    query {
+      allMarkdownRemark(
+        sort: [
+          {frontmatter: {order: ASC}},
+          {frontmatter: {title: ASC}}
+        ]
+        filter: {
+          fileAbsolutePath: { regex: "/pages/kb/" }
+          frontmatter: { layout: { ne: "kb-category" } }
+        }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              title
+              category
+              parent_category
+              slug
+              description
             }
           }
         }
       }
-    `}
-    render={data => <ArticlesList data={data} {...props} />}
-  />
-)
+    }
+  `)
+
+  return <ArticlesList data={data} {...props} />
+}

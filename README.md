@@ -13,9 +13,6 @@ yarn fetch-contributors > website/_data/contributors.json
 
 ### Gatsby Installed Locally
 
-**This seems to depend on Node v10. Until the dependencies updated to support
-newer versions of Node, you can use the Docker setup.**
-
 To start Gatsby in development mode and serve the the website on
 `http://localhost:8000` use:
 

@@ -2,7 +2,7 @@
 title: Privacy Policy
 layout: page
 permalink: /privacy.html
-path: /privacy
+path: /privacy/
 ---
 
 # Privacy Policy
