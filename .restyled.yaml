@@ -54,7 +54,7 @@ restylers:
   - name: prettier
     image: 'restyled/restyler-prettier:v3.3.2-2'
     command:
-      - prettier-with-tailwindcss
+      - prettier
       - '--write'
     include:
       - src/**/*.js
@@ -63,7 +63,7 @@ restylers:
   - name: prettier-markdown
     image: 'restyled/restyler-prettier:v3.3.2-2'
     command:
-      - prettier-with-tailwindcss
+      - prettier
       - '--write'
     include:
       - pages/**/*.md
