@@ -91,6 +91,7 @@ You can pass additional keys to modify various HTTP options:
 * `params` - a dictionary of query string parameters to add to the URL
 * `data` - a dictionary of values to use as request body
 * `json` - same as `data` except that it's being converted to JSON
+* `verify` - whether or not to enforce SSL certificate verification (default: `true`)
 
 # URL Data Source Type
 
