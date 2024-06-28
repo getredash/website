@@ -5,6 +5,17 @@ const config = {
     siteUrl: 'https://redash.io/',
   },
   pathPrefix: '/',
+  headers: [
+    {
+      source: '*',
+      headers: [
+        {
+          key: 'Content-Security-Policy',
+          value: 'frame-ancestors *;',
+        },
+      ],
+    },
+  ],
   plugins: [
     {
       resolve: 'gatsby-source-filesystem',
