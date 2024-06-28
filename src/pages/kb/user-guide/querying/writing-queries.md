@@ -49,7 +49,7 @@ Live Auto Complete is enabled by default unless your database schema exceeds fiv
 
 {% endcallout %}
 
-Auto Complete looks for schema tokens, query syntax identifiers (like `SELECT` or `JOIN`) and the titles of [Query Snippets]({% link _kb/user-guide/querying/query-snippets %}) 
+Auto Complete looks for schema tokens, query syntax identifiers (like `SELECT` or `JOIN`) and the titles of [Query Snippets]({% link _kb/user-guide/querying/query-snippets %})
 
 # Query Settings
 
@@ -61,11 +61,10 @@ To publish a query, change its name or click the `Publish` button. You can toggl
 
 {% callout info %}
 
-Publishing or un-publishing a query does not affect its visibility. 
-All queries in your organization are visible to all logged-in users. 
+Publishing or un-publishing a query does not affect its visibility.
+All queries in your organization are visible to all logged-in users.
 
 {% endcallout %}
-
 
 ## Archiving a Query
 
@@ -90,4 +89,3 @@ Now the Query Editor options menu includes a `Manage Permissions` option. Clicki
 ![](/assets/images/docs/gitbook/experimental-permissions-button.png)
 
 Please note that currently the users you add won't receive a notification, so you will need to notify them manually.
-

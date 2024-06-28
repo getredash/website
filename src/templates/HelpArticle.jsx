@@ -75,7 +75,7 @@ class HelpPageTemplate extends React.Component {
     const headings = document
       .getElementById('pageContent')
       .querySelectorAll('h1, h2, h3, h4, h5, h6')
-    headings.forEach(heading => {
+    headings.forEach((heading) => {
       heading.id =
         heading.id ||
         heading.textContent.replace(/[\. ,:-]+/g, '-').replace(/-$/, '')
@@ -235,7 +235,7 @@ class HelpPageTemplate extends React.Component {
 }
 
 export const pageQuery = graphql`
-  query($category: String!, $parent_category: String, $slug: String) {
+  query ($category: String!, $parent_category: String, $slug: String) {
     Article: markdownRemark(
       frontmatter: {
         parent_category: { eq: $parent_category }

@@ -29,5 +29,3 @@ It's not shown in the interface, but you can also get the Excel format by changi
 The latest results API is not supported for queries that use parameters.
 
 {% endcallout %}
-
-

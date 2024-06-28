@@ -12,7 +12,7 @@ $card-hover-color: $hoki;
 }
 
 .card--blue {
-  background: rgba(233,242,255,.6);
+  background: rgba(233, 242, 255, 0.6);
 }
 
 .card--yellow {
@@ -35,7 +35,7 @@ $card-hover-color: $hoki;
 }
 
 .card--customer {
-  transition: all .25s ease;
+  transition: all 0.25s ease;
   margin-bottom: 30px;
   padding: 25px !important;
   transform: scale(0.95, 0.95);
@@ -54,7 +54,7 @@ $card-hover-color: $hoki;
   border-radius: $border-radius;
 
   &:hover {
-    box-shadow: 0 2px 20px rgba(0,0,0,.05125);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05125);
     transform: scale(0.96, 0.96);
   }
 }
@@ -80,7 +80,8 @@ $card-hover-color: $hoki;
     flex-basis: 50%;
     margin-bottom: 20px;
   }
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: inherit;
     .card__item-brand {
       border: 1px solid $primary;
@@ -96,7 +97,7 @@ $card-hover-color: $hoki;
 }
 .card__item-brand {
   @include transition(250ms);
-  box-shadow: 0 4px 9px rgba(0,0,0,.05125);
+  box-shadow: 0 4px 9px rgba(0, 0, 0, 0.05125);
   border: 1px solid #eaeaea;
   border-radius: $border-radius;
   padding: 30px;

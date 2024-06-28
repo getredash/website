@@ -11,8 +11,8 @@ helps us better direct future product efforts.
 
 The information we will be sending is:
 
-* Number of users, queries, dashboards, alerts, widgets and visualizations.
-* Types of data sources, alert destinations and visualizations.
+- Number of users, queries, dashboards, alerts, widgets and visualizations.
+- Types of data sources, alert destinations and visualizations.
 
 An example JSON payload that is being sent to us:
 
@@ -21,19 +21,19 @@ An example JSON payload that is being sent to us:
     "current_version": "8-beta.2",
     "usage": {
         "users_count": 1,
-        "queries_count": 4, 
-        "dashboards_count": 1, 
-        "widgets_count": 1, 
-        "textbox_count": 0, 
-        "alerts_count": 0, 
+        "queries_count": 4,
+        "dashboards_count": 1,
+        "widgets_count": 1,
+        "textbox_count": 0,
+        "alerts_count": 0,
         "data_sources": {
-            "pg": 1, 
+            "pg": 1,
             "redshift": 1
-        }, 
+        },
         "visualization_types": {
-            "TABLE": 4, 
+            "TABLE": 4,
             "COUNTER": 5
-        }, 
+        },
         "destination_types": {
             'slack': 1,
             'webhook': 2
