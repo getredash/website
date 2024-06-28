@@ -9,7 +9,8 @@
   &.btn-danger {
     background: $danger;
     border-color: $danger;
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       background-color: darken($danger, 7%);
       border-color: darken($danger, 10%);
     }
@@ -18,7 +19,8 @@
     background: $white;
     border-color: $danger;
     color: $danger;
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       background: $danger;
       border-color: $danger;
       color: $white;
@@ -28,9 +30,10 @@
     border-color: darken($bridesmaid, 30%);
     background: white;
     color: darken($bridesmaid, 30%);
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       border-color: darken($bridesmaid, 40%);
-      background: rgba($bridesmaid, .25);
+      background: rgba($bridesmaid, 0.25);
       color: darken($bridesmaid, 40%);
     }
   }
@@ -38,7 +41,8 @@
     background: transparent;
     border-color: $danger;
     color: $danger;
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       background-color: $danger;
       border-color: $danger;
       color: white;
@@ -47,7 +51,8 @@
   &.btn-primary {
     background: $primary;
     border-color: $primary;
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       background-color: lighten($primary, 10%);
       border-color: lighten($primary, 10%);
     }
@@ -65,7 +70,7 @@
     padding-top: 4px;
     padding-bottom: 4px;
   }
-  &+.btn {
+  & + .btn {
     margin-left: 10px;
   }
   &.btn-input-group {
@@ -79,20 +84,20 @@
 }
 
 .btn-secondary {
-  background: #FFFFFF;
-  border: 1px solid rgba(33,150,243,0.20);
-  box-shadow: 0 6px 13px -6px rgba(33,150,243,0.25);
+  background: #ffffff;
+  border: 1px solid rgba(33, 150, 243, 0.2);
+  box-shadow: 0 6px 13px -6px rgba(33, 150, 243, 0.25);
   border-radius: $border-radius;
   font-weight: 500;
   font-size: 13px;
-  color: #2196F3;
+  color: #2196f3;
   text-align: center;
   transition: all 0.3s ease;
 
   &:hover {
-    border: 1px solid rgba(33,150,243,0.40);
-    box-shadow: 0 6px 17px -3px rgba(33,150,243,0.20);
-    color: #2196F3;
+    border: 1px solid rgba(33, 150, 243, 0.4);
+    box-shadow: 0 6px 17px -3px rgba(33, 150, 243, 0.2);
+    color: #2196f3;
   }
 }
 

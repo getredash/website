@@ -6,7 +6,8 @@
     color: $scorpion;
     display: block;
     padding: 5px;
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       color: $primary;
       background: $wild-sand;
     }

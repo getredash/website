@@ -49,7 +49,7 @@ class HelpPage extends React.Component {
             <h1 className="text-center">Knowledge Base</h1>
             <div className="row">
               <div className="col-sm-8 col-sm-offset-2">
-                <form action="" onSubmit={e => e.preventDefault()}>
+                <form action="" onSubmit={(e) => e.preventDefault()}>
                   <div className="form-group form-group--search">
                     <input
                       className="form-control input-lg form-control--white search-box"
@@ -120,7 +120,7 @@ export const categoriesQuery = graphql`
     }
 
     Categories: allMarkdownRemark(
-      sort: [{frontmatter: {order: ASC}}, {frontmatter: {title: ASC}}]
+      sort: [{ frontmatter: { order: ASC } }, { frontmatter: { title: ASC } }]
       filter: {
         fileAbsolutePath: { regex: "/pages/kb/" }
         frontmatter: { layout: { eq: "kb-category" } }

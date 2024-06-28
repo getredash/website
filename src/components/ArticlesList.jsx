@@ -39,14 +39,11 @@ ArticlesList.propTypes = {
   parent_category: PropTypes.string.isRequired,
 }
 
-export default props => {
+export default (props) => {
   const data = useStaticQuery(graphql`
     query {
       allMarkdownRemark(
-        sort: [
-          {frontmatter: {order: ASC}},
-          {frontmatter: {title: ASC}}
-        ]
+        sort: [{ frontmatter: { order: ASC } }, { frontmatter: { title: ASC } }]
         filter: {
           fileAbsolutePath: { regex: "/pages/kb/" }
           frontmatter: { layout: { ne: "kb-category" } }
