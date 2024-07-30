@@ -36,11 +36,11 @@
     "gatsby-transformer-remark": "6.13.1",
     "gatsby-transformer-sharp": "5.13.1",
     "gatsby-transformer-yaml": "^5.13.1",
-    "got": "14.4.1",
+    "got": "14.4.2",
     "gry": "6.1.0",
     "natives": "1.1.6",
     "package.json": "^2.0.1",
-    "postcss": "8.4.39",
+    "postcss": "8.4.40",
     "react-bootstrap": "^2.10.4",
     "source-map": "^0.7.4",
     "webpack-dev-middleware": "7.3.0"
