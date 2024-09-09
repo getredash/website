@@ -4360,7 +4360,7 @@ cheerio-select@^2.1.0:
     domhandler "^5.0.3"
     domutils "^3.0.1"
 
-cheerio@1.0.0-rc.12, cheerio@^1.0.0-rc.10:
+cheerio@1.0.0-rc.12:
   version "1.0.0-rc.12"
   resolved "https://registry.yarnpkg.com/cheerio/-/cheerio-1.0.0-rc.12.tgz#788bf7466506b1c6bf5fae51d24a2c4d62e47683"
   integrity sha512-VqR8m68vM46BNnuZ5NtnGBKIE/DfN0cRIzg9n40EIq9NOv90ayxLBXA8fXC5gquFRGJSTRqBq25Jt2ECLR431Q==
@@ -7012,13 +7012,13 @@ gatsby-remark-prismjs@7.13.2:
     parse-numeric-range "^1.3.0"
     unist-util-visit "^2.0.3"
 
-gatsby-remark-responsive-iframe@6.13.1:
-  version "6.13.1"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-responsive-iframe/-/gatsby-remark-responsive-iframe-6.13.1.tgz#e6789088a5475953c833c26cd63fffcc382dc276"
-  integrity sha512-lNC1YQGTX9bngJT/YyBS79ZS5nRPkKD3jSqLb04mFXZTwmfDomYJEF5b+kZIVdKy9JZW6LDzFlEcL6CvqK1klA==
+gatsby-remark-responsive-iframe@6.13.2:
+  version "6.13.2"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-responsive-iframe/-/gatsby-remark-responsive-iframe-6.13.2.tgz#285a1c0942a9e4b16b3c97702d16a1b5916179e3"
+  integrity sha512-RoYGc+GMxjuE0rk/LhjnIivK9Jzo9YyS3hJ6jzKMtghpqvKkrx0pTVd7pXK5LLxbAc7c8UYjOK6etVSPN3htaA==
   dependencies:
     "@babel/runtime" "^7.20.13"
-    cheerio "^1.0.0-rc.10"
+    cheerio "1.0.0-rc.12"
     common-tags "^1.8.2"
     lodash "^4.17.21"
     unist-util-visit "^2.0.3"
