@@ -40,7 +40,7 @@
     "gry": "6.1.0",
     "natives": "1.1.6",
     "package.json": "^2.0.1",
-    "postcss": "8.4.45",
+    "postcss": "8.4.47",
     "react-bootstrap": "^2.10.4",
     "source-map": "^0.7.4",
     "webpack-dev-middleware": "7.4.2"
