@@ -103,7 +103,7 @@ class Header extends React.Component {
                       to="https://github.com/getredash/redash/discussions"
                       target="_blank"
                     >
-                      Forum
+                      GitHub Discussions
                     </Link>
                   </li>
                 </ul>

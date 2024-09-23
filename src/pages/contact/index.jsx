@@ -113,8 +113,7 @@ const ContactPage = ({ location }) => (
               <p>
                 Please notice this contact form is{' '}
                 <strong>
-                  only for general inquires and for customers with active
-                  subscription.
+                  only for general inquires.
                 </strong>
               </p>
 
@@ -122,7 +121,7 @@ const ContactPage = ({ location }) => (
                 If you are using the open source version of Redash, and need
                 support, please use our{' '}
                 <Link to="https://github.com/getredash/redash/discussions">
-                  Forum
+                  GitHub Discussions
                 </Link>
                 .
               </p>
