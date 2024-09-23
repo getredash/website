@@ -37,6 +37,15 @@ Follow these steps to change the environment variables and UI settings to enable
 2. Set the **Authorized Redirect URL(s)** to `http(s)://${REDASH_BASEURL}/oauth/google_callback`.
 3. During setup you will obtain a client id and a client secret. Use these to set the `REDASH_GOOGLE_CLIENT_ID` and `REDASH_GOOGLE_CLIENT_SECRET` environment variables.
 4. Restart your Redash instance.
+
+{% callout info %}
+
+Step 5 below is optional. As of step 4, only visitors with an existing Redash account can sign-in using the Google Login flow. As with Password Login, visitors without an account cannot log-in unless they receive an invitation from an admin.
+
+By following step 5, you may configure Redash to allow any user from a specified domain to log-in. An account will automatically be created for them if one does not already exist.
+
+{% endcallout %}
+
 5. Visit **Settings > General**. Complete the _Allowed Google Apps Domains_ box with the domains that should be able to log-in to your Redash instance.
 
 # SAML 2.0
@@ -143,6 +152,38 @@ Your changes on this screen will save automatically. Now you can login to Redash
 using your Okta credentials.
 
 You can now log in to Redash using Okta SSO.
+
+### Managing Redash Groups with Okta attribute statements
+
+Follow the below steps in order to configure Okta so that it passes the `RedashGroups` attribute:
+
+1. To your Okta control panel, add **RedashGroups** in SAML settings where you have previously added FirstName and LastName and then save your changes:
+
+| Name         | Value                |
+| ------------ | -------------------- |
+| FirstName    | user.firstName       |
+| LastName     | user.lastName        |
+| RedashGroups | appuser.RedashGroups |
+
+{% callout info %}
+Name format should be left as **Basic**
+{% endcallout %}
+
+2. In the Admin Console, go to **Directory > Profile Editor**, and find the user profile for redash application.
+
+3. In the Attributes screen that opens, click Add Attribute. Add a new attribute with below configuration:
+
+| Name          | Value         |
+| ------------- | ------------- |
+| Data type     | string array  |
+| Variable name | RedashGroups  |
+| Scope         | User personal |
+
+4. On the **Applications** page, click the **Assigments** tab. Now you can edit User Assigments and add required RedashGroups for the user.
+
+{% callout info %}
+You can also control attributes on the Okta Group level by removing the Scope from User personal.
+{% endcallout %}
 
 ## Auth0
 

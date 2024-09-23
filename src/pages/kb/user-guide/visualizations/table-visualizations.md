@@ -20,7 +20,8 @@ To get started, click the `Edit Visualization` button under the table view. A se
 
 ![](/assets/images/docs/gitbook/table-viz-options.png)
 
-You can: 
+You can:
+
 - **Reorder Columns** by dragging them to the left or right as shown in the yellow highlight.
 - **Hide Columns** by toggling the check mark highlighted in green
 - **Format Columns** using the format settings highlighted red. Read more about column formatting below.
@@ -52,16 +53,16 @@ Redash also supports data types outside the common database specifications.
 
 - **JSON Documents**
 
-    If you're underlying data returns JSON formatted text in a field, you can instruct Redash to display it as such. This lets you collapse and expand elements in a clean format. This is particularly useful when querying RESTful APIs with the [JSON Data Source]({% link _kb/data-sources/querying/urls %})
+  If you're underlying data returns JSON formatted text in a field, you can instruct Redash to display it as such. This lets you collapse and expand elements in a clean format. This is particularly useful when querying RESTful APIs with the [JSON Data Source]({% link _kb/data-sources/querying/urls %})
 
 - **Images**
 
-    If a field in your database contains links to an image, Redash can display that image inline with your table results. This is especially useful for dashboards.
+  If a field in your database contains links to an image, Redash can display that image inline with your table results. This is especially useful for dashboards.
 
-    ![](/assets/images/docs/gitbook/dashboard-with-images.png)
+  ![](/assets/images/docs/gitbook/dashboard-with-images.png)
 
-    In the above dashboard, the **Customer Image** field is a URL to a picture which Redash displays in-place.
+  In the above dashboard, the **Customer Image** field is a URL to a picture which Redash displays in-place.
 
 - **HTML Links**
 
-    Just like with images, HTML links from your DB can be made clickable in Redash. Just use the Link option in the column format selector.
+  Just like with images, HTML links from your DB can be made clickable in Redash. Just use the Link option in the column format selector.

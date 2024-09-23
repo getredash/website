@@ -23,11 +23,10 @@ analysts within Databricks as our paid offering.
 ## How will I migrate my data (queries, dashboards, alerts, etc)?
 
 See the instructions for our [migration tool]. If you have questions please
-contact us through in-app chat or post on our [user forum]. 
-
+contact us through in-app chat or post on our [user forum].
 
 [migration tool]: https://github.com/getredash/redash-toolbelt/tree/master/redash_toolbelt/docs/redash-migrate
-[user forum]: https://discuss.redash.io
+[user forum]: https://github.com/getredash/redash/discussions
 
 ## What will happen to my data?
 
@@ -38,7 +37,7 @@ date, as you will not be able to migrate after it ends.
 ## Who can I contact for help?
 
 If you encounter any difficulties or have questions, please visit the
-[forum](https://discuss.redash.io/).
+[forum](https://github.com/getredash/redash/discussions).
 
 ## Should I switch to Databricks SQL or to OSS Redash?
 

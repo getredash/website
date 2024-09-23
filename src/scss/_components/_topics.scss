@@ -31,7 +31,8 @@ $topic-color: $small-blue;
   @include respond-to(xs) {
     min-height: 120px;
   }
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     border-color: $topic-color;
     background: lighten($link-color, 38%);
     border-width: 2px;
@@ -59,7 +60,8 @@ $topic-color: $small-blue;
   @include respond-to(xs) {
     padding: 20px 0;
   }
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: darken($link-color, 10%);
   }
 }

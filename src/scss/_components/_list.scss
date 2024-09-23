@@ -2,8 +2,8 @@
 
 .list-bullet {
   @extend .list-unstyled;
-  >li {
-    position: relative;;
+  > li {
+    position: relative;
     padding-left: 15px;
     &:before {
       position: absolute;
