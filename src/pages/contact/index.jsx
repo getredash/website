@@ -112,9 +112,7 @@ const ContactPage = ({ location }) => (
             <div className="bs-callout bs-callout-primary">
               <p>
                 Please notice this contact form is{' '}
-                <strong>
-                  only for general inquires.
-                </strong>
+                <strong>only for general inquires.</strong>
               </p>
 
               <p>

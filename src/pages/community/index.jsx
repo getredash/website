@@ -133,9 +133,7 @@ const CommunityPage = ({
             <div className="col-sm-6">
               <div className="card card--blue">
                 <h3>Got a feature request?</h3>
-                <p>
-                  Propose the idea on our GitHub Discussions.
-                </p>
+                <p>Propose the idea on our GitHub Discussions.</p>
 
                 <Link
                   data-track
@@ -153,7 +151,8 @@ const CommunityPage = ({
               <div className="card card--red">
                 <h3>Need Support?</h3>
                 <p>
-                  Check out our GitHub Discussions and ask for help from our community.
+                  Check out our GitHub Discussions and ask for help from our
+                  community.
                 </p>
 
                 <Link
