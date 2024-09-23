@@ -35,7 +35,7 @@ const SearchResults = ({ hits }) => (
             to="https://github.com/getredash/redash/discussions"
             target="_blank"
           >
-            forum
+            GitHub Discussions
           </Link>
           .
         </p>
