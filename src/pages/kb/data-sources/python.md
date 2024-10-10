@@ -26,7 +26,27 @@ These are the default built-ins: `abs`, `all`, `any`, `bool`, `complex`, `dict`,
 
 Redash builds the result table by inspecting the final state of your script execution for a variable named `result`.
 
-`result` should follow this example format:
+`result` is a dictionary with two keys: `columns` and `rows`.
+
+- The `columns` key should expose a list of dictionaries describing the columns to be included in your data set. Each dictionary will include three keys:
+
+  - `name`
+  - `type`
+  - `friendly_name`
+
+- `rows` key should expose a list of dictionaries representing each row of data. The keys for each dictionary should match the `name` keys described in your `columns` dictionary.
+
+The following data types are supported for columns:
+
+- text
+- integer
+- float
+- boolean
+- string
+- datetime
+- date
+
+An example of returned data appears below:
 
 ```python
 result = {
@@ -83,3 +103,4 @@ If you execute the above snippet in Redash it will return this table:
 | 2014-01-30 | 0          | 40832 | 53141 |
 | 2014-01-30 | 1          | 27296 | 53141 |
 | 2014-01-30 | 2          | 22982 | 53141 |
+
