@@ -36,7 +36,7 @@
     "gatsby-transformer-remark": "6.13.1",
     "gatsby-transformer-sharp": "5.13.1",
     "gatsby-transformer-yaml": "^5.13.1",
-    "got": "14.4.2",
+    "got": "14.4.3",
     "gry": "6.1.0",
     "natives": "1.1.6",
     "package.json": "^2.0.1",
