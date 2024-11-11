@@ -11,7 +11,7 @@
     "gatsby-image": "3.11.0",
     "gatsby-link": "5.13.1",
     "gatsby-plugin-algolia": "^1.0.3",
-    "gatsby-plugin-catch-links": "5.13.1",
+    "gatsby-plugin-catch-links": "5.14.0",
     "gatsby-plugin-feed": "5.13.1",
     "gatsby-plugin-google-analytics": "5.13.1",
     "gatsby-plugin-netlify": "5.1.1",
