@@ -7,17 +7,15 @@ order: 3
 slug: maintenance
 ---
 
-{% callout %}
-**These instructions are not relevant for those who use our Docker based instances and should be updated.** We will appreciate your help with updating this guide.
-{% endcallout %}
-
 ## Configuration and Logs
 
 The supervisor config can be found in: `/etc/supervisor/conf.d/redash.conf` if you're using the new images that install Supervisor with a system packages. Otherwise, you can find it at `/opt/redash/supervisord/supervisord.conf`.
 
 There, you can see the names of Redash's processes (`redash_celery`, `redash_server` and `redash_celery_scheduled`), as well as the location of their logs. If no logs location is present, then the logs will be written to `/var/logs/supervisor`.
 
-For Docker based instances, run `docker ps` to see the running Redash processes.
+For Docker based instances, run `docker ps` to see the running processes.
+
+> Note: Docker Compose v2 syntax is used for the docker compose commands in this guide.
 
 ## Restart
 
@@ -25,7 +23,7 @@ For Docker based instances, run `docker ps` to see the running Redash processes.
 - Restart the Web server: `sudo supervisorctl restart redash_server`.
 - Restart Celery workers: `sudo supervisorctl restart redash_celery`.
 
-If you use Docker, navigate to `/opt/redash` and run `docker-compose up -d` to restart all containers. You can also restart single processes using the container id or name. For instance, `docker restart redash_server_1` will restart the redash server.
+If you use Docker, navigate to `/opt/redash` and run `docker compose up -d` to restart all containers. You can also restart single processes using the container id or name. For instance, `docker restart redash-server-1` or `docker compose restart server` will restart the redash server.
 
 ### Restarting Celery Workers & the Queries Queue
 
@@ -37,8 +35,8 @@ In case you are handling a problem, and you need to stop the currently running q
 
 Using Docker based instances;
 
-1. you can flush redis by running `docker exec -it redash_redis_1 redis-cli flushall`. Restart container with `docker restart redash_redis_1`.
-2. check redis dump size: `docker exec -it redash_redis_1 la -la`.
+1. check redis dump size: `docker exec -it redash-redis-1 la -la` or `docker compose exec redis ls -la`.
+2. you can flush redis by running `docker exec -it redash-redis-1 redis-cli flushall` or `docker compose exec redis redis-cli flushall`. Restart the process/container with `docker restart redash-redis-1` or `docker compose restart redis`.
 
 ## Changing the Number of Workers
 
@@ -48,7 +46,7 @@ By default, Celery will start a worker per CPU core. Because most of Redash’s 
 2. Edit the `[program:redash_celery]` section and add to the _command_ value, the param “-c” with the number of concurrent workers you need.
 3. Restart supervisord to apply new configuration: `sudo /etc/init.d/redash_supervisord restart`.
 
-You can change number of workers, when using docker by changing `WORKERS_COUNT` for the scheduler services in `docker-compose.yml` located at `/opt/redash/`.
+You can change number of workers, if using docker by changing `WORKERS_COUNT` for the scheduler services in `docker-compose.yml` located at `/opt/redash/`.
 
 ## DB
 
@@ -58,7 +56,7 @@ Uncompressed backup: `sudo -u redash pg_dump > backup_filename.sql`
 
 Compressed backup: `sudo -u redash pg_dump redash | gzip > backup_filename.gz`
 
-Access Redash DB (postgres) in docker using: `docker exec -it redash_postgres_1 psql -U postgres`
+Access Redash DB (postgres) in docker using: `docker exec -it redash-postgres-1 psql -U postgres` or `docker compose exec -u postgres postgres psql`
 
 ## Version
 
