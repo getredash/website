@@ -90,3 +90,17 @@ In several Redash visualizations you can control how the numbers are formatted. 
 | 0.000123987  | '0.000e+0' | 1.240e-4 |
 
 </div>
+
+## Percentages_color
+
+<div class="table table-striped">
+
+
+| Number     | Format      |                Output                       |
+| ---------- | ----------- | ------------------------------------------- |
+| 100        | '0%'        | <span style="color: green;">100%</span>     |
+| 97.4878234 | '0.000%'    | <span style="color: green;">97.488%</span>  |
+| -4.3       | '0 %'       | <span style="color: red;">-4 %</span>       |
+| 65.43      | '(0.000 %)' | <span style="color: green;">65.430%</span>  |
+
+</div>
