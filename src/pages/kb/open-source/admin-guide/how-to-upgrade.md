@@ -22,6 +22,7 @@ Below is a table of recent docker release images for your reference:
 
 | released_at | version | docker_image                |
 | ----------- | ------- | --------------------------- |
+| 2025-01-08  | 25.1.0  | redash/redash:25.1.0        |
 | 2021-12-24  | 10.1.0  | redash/redash:10.1.0.b50633 |
 | 2021-10-02  | 10.0.0  | redash/redash:10.0.0.b50363 |
 | 2019-10-27  | 8.0.0   | redash/redash:8.0.0.b32245  |
