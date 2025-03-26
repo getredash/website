@@ -5,8 +5,8 @@
   "main": "n/a",
   "dependencies": {
     "algoliasearch": "^4.24.0",
-    "axios": "1.7.7",
-    "bootstrap-sass": "3.4.1",
+    "axios": "1.8.2",
+    "bootstrap-sass": "3.4.3",
     "gatsby": "5.14.0",
     "gatsby-image": "3.11.0",
     "gatsby-link": "5.13.1",
@@ -40,7 +40,7 @@
     "gry": "6.1.1",
     "natives": "1.1.6",
     "package.json": "^2.0.1",
-    "postcss": "8.5.0",
+    "postcss": "8.5.1",
     "react-bootstrap": "^2.10.5",
     "source-map": "^0.7.4",
     "webpack-dev-middleware": "7.4.2"
@@ -65,7 +65,7 @@
     "modern-normalize": "3.0.1",
     "node-sass": "9.0.0",
     "prettier": "3.3.3",
-    "prismjs": "1.29.0",
+    "prismjs": "1.30.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-helmet": "6.1.0",
