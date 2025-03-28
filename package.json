@@ -59,7 +59,7 @@
     "eslint-plugin-react": "7.37.2",
     "font-awesome": "4.7.0",
     "gh-pages": "6.2.0",
-    "husky": "9.1.6",
+    "husky": "9.1.7",
     "lint-staged": "15.2.10",
     "lodash": "4.17.21",
     "modern-normalize": "3.0.1",
