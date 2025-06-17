@@ -9,12 +9,6 @@ order: 2
 
 The **Query Results Data Source** (QRDS) lets you run queries against results from your other Data Sources. Use it to join data from multiple databases or perform post-processing. Redash uses an in-memory SQLite database to make this possible. As a result, queries against large result sets may fail if Redash runs out of memory.
 
-{% callout warning %}
-
-The QRDS doesn't work with results from queries that use [parameters](/help/user-guide/querying/query-parameters). If you try it you'll see `Error running query: Failed loading results from query id xxxx`. Remove the parameters from `query_xxxx` to fix the error.
-
-{% endcallout %}
-
 ### Setup
 
 You can enable **Query Results** under the `Data Source` tab of the settings menu. Setup is easy: just provide a name for the source.
@@ -67,3 +61,24 @@ JOIN query_456 AS b
 Access to the **Query Results Data Source** is governed by the groups it's associated with [like any other Data Source](/help/user-guide/users/permissions-groups). But Redash will also check if a user has permission to execute queries on the Data Sources the original queries use.
 
 As an example, a user with access to the QRDS cannot execute `SELECT * FROM query_123` if query `123` uses a data source to which that user does not have access. They will see the most recently cached QRDS query result from the query screen in Redash. But they will not be able to execute the query again.
+
+### Using Query Parameters
+
+You can now use query parameters with the Query Results Data Source.  
+Use the following syntax to reference a parameterized query:  
+`param_query_<query_id>_{<URL ENCODED KEY=VALUE PARAMETER STRING>}`  
+
+For example, suppose the original query (ID: 123) is:  
+```
+SELECT
+	name
+FROM users
+WHERE id = {{id}}
+```  
+
+You can pass parameters in your Query Results query like this:  
+```
+SELECT
+	a.name
+FROM param_query_123_{id=1} AS a
+```
