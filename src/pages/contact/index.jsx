@@ -1,11 +1,11 @@
 import React from 'react'
 import Layout from 'components/Layout'
 import Link from 'components/Link'
-import { navigateTo } from 'gatsby-link'
+import { navigate } from 'gatsby-link'
 
 function encode(data) {
   return Object.keys(data)
-    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&')
 }
 
@@ -30,8 +30,8 @@ class ContactForm extends React.Component {
         ...this.state,
       }),
     })
-      .then(() => navigateTo(form.getAttribute('action')))
-      .catch(error => alert(error))
+      .then(() => navigate(form.getAttribute('action')))
+      .catch((error) => alert(error))
   }
 
   render() {
@@ -42,7 +42,7 @@ class ContactForm extends React.Component {
         action="/contact/thank-you/"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
-        onSubmit={e => this.handleSubmit(e)}
+        onSubmit={(e) => this.handleSubmit(e)}
       >
         {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
         <input type="hidden" name="form-name" value="contact" />
@@ -56,7 +56,7 @@ class ContactForm extends React.Component {
             id="name"
             placeholder="Your name"
             required
-            onChange={e => this.handleChange(e)}
+            onChange={(e) => this.handleChange(e)}
           />
         </div>
 
@@ -69,7 +69,7 @@ class ContactForm extends React.Component {
             id="email"
             placeholder="your@email.com"
             required
-            onChange={e => this.handleChange(e)}
+            onChange={(e) => this.handleChange(e)}
           />
         </div>
 
@@ -83,7 +83,7 @@ class ContactForm extends React.Component {
             rows="3"
             width="100%"
             required
-            onChange={e => this.handleChange(e)}
+            onChange={(e) => this.handleChange(e)}
           />
         </div>
 
@@ -112,16 +112,16 @@ const ContactPage = ({ location }) => (
             <div className="bs-callout bs-callout-primary">
               <p>
                 Please notice this contact form is{' '}
-                <strong>
-                  only for general inquires and for customers with active
-                  subscription.
-                </strong>
+                <strong>only for general inquires.</strong>
               </p>
 
               <p>
                 If you are using the open source version of Redash, and need
                 support, please use our{' '}
-                <Link to="https://discuss.redash.io/">Forum</Link>.
+                <Link to="https://github.com/getredash/redash/discussions">
+                  GitHub Discussions
+                </Link>
+                .
               </p>
             </div>
           </div>

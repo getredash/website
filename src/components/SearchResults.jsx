@@ -3,7 +3,7 @@ import Link from 'components/Link'
 import PropTypes from 'prop-types'
 
 const SearchResults = ({ hits }) => (
-  <div className="container search-results">
+  <div className="search-results container">
     {hits.length > 0 && (
       <div className="hits">
         <ul className="topics__list list-unstyled">
@@ -31,8 +31,11 @@ const SearchResults = ({ hits }) => (
       <div className="hits-rest">
         <p>
           Didn't find what you're looking for? Try checking our{' '}
-          <Link to="https://discuss.redash.io/" target="_blank">
-            forum
+          <Link
+            to="https://github.com/getredash/redash/discussions"
+            target="_blank"
+          >
+            GitHub Discussions
           </Link>
           .
         </p>

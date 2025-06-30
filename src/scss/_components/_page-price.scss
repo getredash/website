@@ -19,8 +19,10 @@
     margin: 0;
   }
 
-  &:hover, &:active, &.active {
-    box-shadow: 0 6px 18px -5px rgba(175,175,175,.5);
+  &:hover,
+  &:active,
+  &.active {
+    box-shadow: 0 6px 18px -5px rgba(175, 175, 175, 0.5);
   }
 }
 
@@ -104,17 +106,19 @@
       font-weight: 500;
       padding: 0.3em 2em;
       text-transform: uppercase;
-      background: #2196F3;
+      background: #2196f3;
       border-radius: $border-radius;
     }
   }
 
-  &:hover, &:active, &.active {
+  &:hover,
+  &:active,
+  &.active {
     .pricing-charge {
-      color: darken(#2196F3, 5%);
+      color: darken(#2196f3, 5%);
     }
 
-    box-shadow: 0 6px 18px -5px rgba(175,175,175,.5);
+    box-shadow: 0 6px 18px -5px rgba(175, 175, 175, 0.5);
   }
 }
 

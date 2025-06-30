@@ -1,8 +1,7 @@
 ---
 category: dev-guide
 parent_category: open-source
-title:
-  Using a Remote Server and Installing Locally only the Frontend Dependencies
+title: Using a Remote Server and Installing Locally only the Frontend Dependencies
 slug: remote-server
 ---
 

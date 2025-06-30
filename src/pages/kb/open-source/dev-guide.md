@@ -22,11 +22,10 @@ Windows users: while it should be possible to run Redash on a Windows machine, w
 
 ## Setup
 
-- [Docker Based Developer Installation Guide]({% link _kb/open-source/dev-guide/docker.md %}) (recommended for beginners)
+- [Developer Installation Guide](https://github.com/getredash/redash/wiki/Local-development-setup)
 - [Debugging a Redash Server on Docker Using Visual Studio Code]({% link _kb/open-source/dev-guide/debugging.md %})
-- [Developer Installation Guide]({% link _kb/open-source/dev-guide/setup.md %}) (recommended for experienced developers)
 - [Using a remote server and installing locally only the frontend dependencies]({% link _kb/open-source/dev-guide/remote-server.md %})
-- [Frontend End-to-End Tests]({% link _kb/open-source/dev-guide/end-to-end-tests.md %})
+- [Frontend End-to-End Tests](https://github.com/getredash/redash/wiki/Testing-your-changes#comprehensive-e2e-testing-cypress)
 
 ## Additional Resources
 
@@ -35,4 +34,4 @@ Windows users: while it should be possible to run Redash on a Windows machine, w
 
 ## Getting Help
 
-- [Discussion Forum](https://discuss.redash.io/c/development)
+- [GitHub Discussions](https://github.com/getredash/redash/discussions/categories/q-a)

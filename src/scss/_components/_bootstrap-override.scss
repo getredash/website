@@ -19,17 +19,17 @@
 
 .row {
   @include respond-to(xs) {
-    >[class^="col-sm"] {
+    > [class^='col-sm'] {
       &:not(:last-child) {
         margin-bottom: 20px;
       }
     }
-    >[class^="col-md"] {
+    > [class^='col-md'] {
       &:not(:last-child) {
         margin-bottom: 20px;
       }
     }
-    >[class^="col-lg"] {
+    > [class^='col-lg'] {
       &:not(:last-child) {
         margin-bottom: 20px;
       }
@@ -70,12 +70,13 @@
   @include respond-to(xs-min) {
     display: flex;
     flex-wrap: wrap;
-    &:before, &:after {
+    &:before,
+    &:after {
       content: none;
     }
   }
-  >[class^="col"] {
-    >[class^="col-sm"] {
+  > [class^='col'] {
+    > [class^='col-sm'] {
       float: none;
     }
   }
@@ -95,21 +96,23 @@ label {
 }
 
 .label-primary {
-  border: 1px solid #4080FE;
-  color: #4080FE;
-  background: rgba(255,255,255,0.75);
+  border: 1px solid #4080fe;
+  color: #4080fe;
+  background: rgba(255, 255, 255, 0.75);
 }
 
 // Navigation
 
 @media only screen and (min-width: 767px) {
-  .navbar-nav>li>a {
+  .navbar-nav > li > a {
     padding: 8px 15px;
     margin-top: 16px;
   }
 }
 
-.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+.nav .open > a,
+.nav .open > a:focus,
+.nav .open > a:hover {
   border-radius: $border-radius;
   background-color: #f8fafa;
 }
@@ -120,19 +123,20 @@ label {
   }
 }
 
-.navbar-nav>li>a:focus, .navbar-nav>li>a:hover {
+.navbar-nav > li > a:focus,
+.navbar-nav > li > a:hover {
   background: #f8fafa;
   border-radius: $border-radius;
 }
 
 .dropdown-menu {
-  box-shadow: 0 4px 9px rgba(0,0,0,.05125);
+  box-shadow: 0 4px 9px rgba(0, 0, 0, 0.05125);
   border: 1px solid #eaeaea;
 
-  >li>a {
+  > li > a {
     color: #111;
     padding: 5px 15px;
-    
+
     &:hover {
       background: #f8fafa !important;
     }

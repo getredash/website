@@ -133,20 +133,17 @@ const CommunityPage = ({
             <div className="col-sm-6">
               <div className="card card--blue">
                 <h3>Got a feature request?</h3>
-                <p>
-                  Check out our Forum for more and open a new topic. Looking
-                  forward to hear more!
-                </p>
+                <p>Propose the idea on our GitHub Discussions.</p>
 
                 <Link
                   data-track
                   data-track-location="open-source"
-                  track-event="Clicked Go to Forum"
-                  to="https://discuss.redash.io/c/feature-requests"
+                  track-event="Clicked Go to GitHub Discussions"
+                  to="https://github.com/getredash/redash/discussions/categories/ideas"
                   className="btn btn-secondary"
                   target="_blank"
                 >
-                  Go to Redash Forum →
+                  Go to GitHub Discussions "Ideas" Category →
                 </Link>
               </div>
             </div>
@@ -154,18 +151,19 @@ const CommunityPage = ({
               <div className="card card--red">
                 <h3>Need Support?</h3>
                 <p>
-                  Check out our support forum and ask help from our community.
+                  Check out our GitHub Discussions and ask for help from our
+                  community.
                 </p>
 
                 <Link
                   data-track
                   data-track-location="open-source"
-                  track-event="Clicked go to Forum"
-                  to="https://discuss.redash.io/c/support"
+                  track-event="Clicked go to GitHub Discussions"
+                  to="https://github.com/getredash/redash/discussions/categories/q-a"
                   className="btn btn-secondary"
                   target="_blank"
                 >
-                  Go to Support Forum →
+                  Go to GitHub Discussions "Q&A" Category →
                 </Link>
               </div>
             </div>
