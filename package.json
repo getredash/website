@@ -42,6 +42,7 @@
     "package.json": "^2.0.1",
     "postcss": "8.5.1",
     "react-bootstrap": "^2.10.5",
+    "sass": "^1.89.2",
     "source-map": "^0.7.4",
     "webpack-dev-middleware": "7.4.2"
   },
@@ -63,7 +64,6 @@
     "lint-staged": "15.2.10",
     "lodash": "4.17.21",
     "modern-normalize": "3.0.1",
-    "node-sass": "9.0.0",
     "prettier": "3.3.3",
     "prismjs": "1.30.0",
     "react": "18.3.1",
