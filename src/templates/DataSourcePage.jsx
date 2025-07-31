@@ -23,7 +23,7 @@ export default function DataSourcePageTemplate({
               />
               <p className="from-to-holder__title">{frontmatter.name}</p>
             </div>
-            <div className="from-to-plus"> + </div>
+            <div className="from-to-plus">&nbsp;+&nbsp;</div>
             <div className="from-to-holder__item">
               <img
                 src="/assets/images/redash-256.png"
@@ -94,6 +94,7 @@ export default function DataSourcePageTemplate({
                 </li>
                 <li>
                   <b>Supported visualizations</b>:
+                  <br />
                   <span className="label label-primary">
                     Charts: Line, Bar, Area, Pie, Scatter
                   </span>
@@ -122,7 +123,6 @@ export default function DataSourcePageTemplate({
                 className="img-responsive center-block img-rounded img--has-shadow"
                 alt="Slack chat demo"
               />
-              >
             </div>
 
             <div className="col-md-6">
