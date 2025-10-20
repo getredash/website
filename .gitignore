@@ -6,3 +6,4 @@ public
 .intermediate-representation/
 .cache/
 .vscode/
+.tool-versions

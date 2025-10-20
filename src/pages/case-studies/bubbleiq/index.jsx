@@ -46,11 +46,7 @@ const BubbleIQPage = ({ location }) => (
                   <th>Industry</th>
                 </tr>
                 <tr>
-                  <td>
-
-                      BubbleIQ
-
-                  </td>
+                  <td>BubbleIQ</td>
                   <td>
                     <img
                       src="/assets/images/customers/fletcher-richman.jpg"
@@ -86,13 +82,10 @@ const BubbleIQPage = ({ location }) => (
           <div className="col-md-8 col-md-push-2">
             <h2>About BubbleIQ</h2>
             <p>
-
-                BubbleIQ
-{' '}
-              helps companies streamline their support workflow by connecting
-              helpdesk systems (Zendesk, Salesforce) to real-time chat tools
-              (Slack, Drift). This allows companies to provide better support
-              and a high-touch relationship with their customers.
+              BubbleIQ helps companies streamline their support workflow by
+              connecting helpdesk systems (Zendesk, Salesforce) to real-time
+              chat tools (Slack, Drift). This allows companies to provide better
+              support and a high-touch relationship with their customers.
             </p>
             <p>
               Fletcher Richman serves as the CEO of BubbleIQ, which three

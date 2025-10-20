@@ -31,29 +31,6 @@ class Homepage extends React.Component {
         description="Use Redash to connect to any data source (PostgreSQL, MySQL, Redshift, BigQuery, MongoDB and many others), query, visualize and share your data to make your company data driven."
         location={this.props.location}
       >
-        <section className="section section__databricks">
-          <div className="container">
-            <h1>Hosted Redash End of Life</h1>
-            <p>
-              We've decided to discontinue Hosted Redash (app.redash.io)
-              effective November 30, 2021.
-            </p>
-            <p>
-              Existing customers can continue to use the service free of charge
-              until then. We invite you to migrate to the open source version of
-              Redash, which you can host for yourself.
-            </p>
-            <Link
-              data-track
-              data-track-location="databricks"
-              track-event="Clicked Learn More about Databricks"
-              to="/help/faq/eol"
-              className="btn btn-primary btn-lg"
-            >
-              Learn More
-            </Link>
-          </div>
-        </section>
         <section className="section section--hero">
           <div className="container">
             <div className="row">

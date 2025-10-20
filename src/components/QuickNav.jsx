@@ -19,10 +19,10 @@ class QuickNav extends React.Component {
       baseLevel
 
     let min_heading = 6
-    headings.forEach(heading => {
+    headings.forEach((heading) => {
       min_heading = Math.min(min_heading, parseInt(heading.tagName.substr(1)))
     })
-    headings.forEach(heading => {
+    headings.forEach((heading) => {
       let newLine
       const title = heading.textContent
       const id =

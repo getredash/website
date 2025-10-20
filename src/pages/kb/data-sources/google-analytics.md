@@ -58,4 +58,3 @@ Google Analytics uses JSON document-style queries. You can get an idea of possib
     "sort": "-ga:newUsers"
 }
 ```
-

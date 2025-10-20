@@ -5,9 +5,11 @@ helpscout_url: https://help.redash.io/article/72-creating-editing-groups
 title: Group Management
 slug: creating-editing-groups
 ---
+
 Users of Redash can be members of one or more groups. Each new user is added to the `Default` group automatically. Members of `Admin` can create new groups, add and remove members from groups, and disable users from accessing Redash entirely. Each group can be connected to specific data sources. Read more about group permissions [here]({% link _kb/user-guide/users/permissions-groups.md %}).
 
 ## Creating & Editing Groups
+
 Only members of `Admin` can edit or create groups. Go to `Settings > Groups` and hit **New Group**. Type a name for your new group and the continue.
 
 ![](/assets/images/docs/gitbook/group_settings.png)

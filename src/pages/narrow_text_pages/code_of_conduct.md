@@ -1,6 +1,6 @@
 ---
 title: Code of Conduct
-path: /community/code_of_conduct
+path: /community/code_of_conduct/
 ---
 
 # Contributor Covenant Code of Conduct

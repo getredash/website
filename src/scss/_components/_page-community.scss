@@ -1,5 +1,4 @@
 .section__os--hero {
-
   h1 {
     margin-top: 150px;
   }
@@ -33,13 +32,13 @@
 .contributor-pics {
   margin: 5px;
   img {
-    border-radius: 50%
+    border-radius: 50%;
   }
 }
 
 .contributor-card {
   text-align: center;
-  box-shadow: 0 4px 9px rgba(0,0,0,.05125);
+  box-shadow: 0 4px 9px rgba(0, 0, 0, 0.05125);
   border: 1px solid #eaeaea;
   border-radius: $border-radius;
   margin: 15px;

@@ -71,7 +71,7 @@
 
 .browser-image {
   margin-top: 25px;
-  box-shadow: 0 6px 18px -5px rgba(175,175,175,0.50);
+  box-shadow: 0 6px 18px -5px rgba(175, 175, 175, 0.5);
 }
 
 .section__open-source {
@@ -121,9 +121,9 @@
 
 .section__more-features {
   .feature-container {
-    background: rgba(255,255,255,0.20);
-    border: 1px solid rgba(102,136,153,0.18);
-    box-shadow: 0 5px 9px -1px #EBF2FF;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(102, 136, 153, 0.18);
+    box-shadow: 0 5px 9px -1px #ebf2ff;
     border-radius: $border-radius;
     width: 30%;
     float: left;
@@ -139,7 +139,6 @@
   }
 }
 
-
 .section__integrations {
   p {
     margin-bottom: 70px;
@@ -151,7 +150,7 @@
 
   .integrations-container {
     padding: 50px;
-    box-shadow: 0 8px 25px 0 rgba(155,155,155,0.15);
+    box-shadow: 0 8px 25px 0 rgba(155, 155, 155, 0.15);
     border-radius: $border-radius;
 
     h2 {
@@ -167,7 +166,7 @@
 .section__databricks {
   text-align: left;
   padding-top: 50px;
-  background-color: #F8FAFA;
+  background-color: #f8fafa;
   @media (min-width: 768px) {
     text-align: center;
   }
@@ -180,20 +179,15 @@
   @media (min-width: 768px) {
     img {
       width: 419px;
-    }  
+    }
   }
 }
-
-
-
-
-
 
 #customers-illustrated {
   width: 75%;
 }
 
-#open-source-illustrated  {
+#open-source-illustrated {
   width: 100%;
 }
 
@@ -201,7 +195,8 @@
   width: 256px;
 }
 
-#write-query-illustrated, #visualize-illustrated {
+#write-query-illustrated,
+#visualize-illustrated {
   width: 90%;
 }
 
@@ -210,11 +205,6 @@
     text-align: right;
   }
 }
-
-
-
-
-
 
 // Optimization
 
@@ -306,7 +296,8 @@
     }
   }
 
-  .highlight-p, .highlight-ul li {
+  .highlight-p,
+  .highlight-ul li {
     font-size: 16px;
     line-height: 1.5;
   }
@@ -396,15 +387,17 @@
     width: 100%;
   }
 
-  #visualize-illustrated, #write-query-illustrated {
+  #visualize-illustrated,
+  #write-query-illustrated {
     width: 75%;
   }
-  
+
   .section--users {
     text-align: center;
   }
 
-  .highlight-p, .highlight-ul li {
+  .highlight-p,
+  .highlight-ul li {
     font-size: 14px;
     line-height: 1.5;
   }
@@ -412,7 +405,7 @@
   .section__integrations p {
     margin-bottom: 25px;
   }
-  
+
   .footer__item--other {
     clear: both;
   }

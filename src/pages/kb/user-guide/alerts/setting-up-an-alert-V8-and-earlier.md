@@ -3,13 +3,13 @@ category: alerts
 parent_category: user-guide
 toc: True
 keywords:
-- Set up Alert
-- setup alert
-- setup an alert
-- queries with parameters
-- trigger alert
-- alert destinations
-- alert destination
+  - Set up Alert
+  - setup alert
+  - setup an alert
+  - queries with parameters
+  - trigger alert
+  - alert destinations
+  - alert destination
 title: Setting Up An Alert (V8 and Earlier)
 slug: setting-up-an-alert-v8
 order: 500
@@ -53,10 +53,10 @@ Use the settings panel to configure your alert:
 
 ![](/assets/images/docs/gitbook/alerts_settings.png)
 
-* **Value Column** is the column in your query result that you would like to watch.
-* **Op** is short for "Operator". You can choose greater than, less than, or equal to.
-* **Reference** is the absolute value that your _Value Column_ will be compared to. The most recent query result is shown as the **Value**
-* **Rearm seconds** effects how frequently you will receive notifications when your query meets the Alert criteria and does not change. See further discussion below.
+- **Value Column** is the column in your query result that you would like to watch.
+- **Op** is short for "Operator". You can choose greater than, less than, or equal to.
+- **Reference** is the absolute value that your _Value Column_ will be compared to. The most recent query result is shown as the **Value**
+- **Rearm seconds** effects how frequently you will receive notifications when your query meets the Alert criteria and does not change. See further discussion below.
 
 Save your alert. After you do this, you can add an [alert destination]({% link _kb/user-guide/alerts/creating-new-alert-destination.md %}). If you skip this step you will not be notified when the alert is triggered.
 
@@ -66,21 +66,21 @@ Save your alert. After you do this, you can add an [alert destination]({% link _
 
 The status of your Alert criteria is checked every time the query is executed. Alerts have three possible statuses:
 
-* `TRIGGERED` means that your query matched the criteria defined in your alert configuration. If you set your alert to trigger when the value of "cats" is greater than 1500 as long as it's above 1500 your alert is triggered.
-* `OK` means that the most recent query execution did not match the criteria defined in your alert. This doesn't mean that the Alert has not been triggered previously. If your "cats" value is now 1470 your alert will show as OK.
-* `UNKNOWN` means Redash does not have enough data to evaluate the alert criteria. You should see this status immediately after creating your Alert until the query has executed. The Alert will also show this status if there was no data in the query result or if the most recent query result doesn't have the configured _Value Column_.
+- `TRIGGERED` means that your query matched the criteria defined in your alert configuration. If you set your alert to trigger when the value of "cats" is greater than 1500 as long as it's above 1500 your alert is triggered.
+- `OK` means that the most recent query execution did not match the criteria defined in your alert. This doesn't mean that the Alert has not been triggered previously. If your "cats" value is now 1470 your alert will show as OK.
+- `UNKNOWN` means Redash does not have enough data to evaluate the alert criteria. You should see this status immediately after creating your Alert until the query has executed. The Alert will also show this status if there was no data in the query result or if the most recent query result doesn't have the configured _Value Column_.
 
 Redash sends notifications to your chosen Alert Destinations whenever it detects that the Alert status has changed from `OK` to `TRIGGERED` or vice versa. Consider this example where an Alert is configured on a query that is scheduled to run once daily. The daily status of the Alert appears in the table below. Prior to Monday the alert status was `OK`.
 
-| Day       | Alert Status | 
-|-----------|--------------| 
-| Monday    | OK           | 
-| Tuesday   | OK           | 
-| Wednesday | TRIGGERED    | 
-| Thursday  | TRIGGERED    | 
-| Friday    | TRIGGERED    | 
-| Saturday  | TRIGGERED    | 
-| Sunday    | OK           | 
+| Day       | Alert Status |
+| --------- | ------------ |
+| Monday    | OK           |
+| Tuesday   | OK           |
+| Wednesday | TRIGGERED    |
+| Thursday  | TRIGGERED    |
+| Friday    | TRIGGERED    |
+| Saturday  | TRIGGERED    |
+| Sunday    | OK           |
 
 By default, Redash would send a notification on Wednesday when the status changed from `OK` to `TRIGGERED` and again on Sunday when it switches back. It will not send alerts on Thursday, Friday, or Saturday unless you specifically configure it to do so because the Alert status did not change between executions on those days.
 
@@ -108,25 +108,25 @@ For a query that executes every 24 hours, any _Rearm seconds_ value between 1 an
 
 Imagine you set an Alert on a query that executes every fifteen minutes. You have configured _Rearm seconds_ equal to `3600` (one hour). This guarantees that you will receive a status notification once an hour if the status is `TRIGGERED`. But you will also receive a notification if the status changes. The one hour rearm prevents Redash from sending you a notification every fifteen minutes while the Alert is triggered. So in the below time-line:
 
-| Time     | Alert Status | 
-|----------|--------------| 
-| 8:00 AM  | OK           | 
-| 8:15 AM  | OK           | 
-| 8:30 AM  | TRIGGERED    | 
-| 8:45 AM  | TRIGGERED    | 
-| 9:00 AM  | TRIGGERED    | 
-| 9:15 AM  | TRIGGERED    | 
-| 9:30 AM  | TRIGGERED    | 
-| 9:45 AM  | OK           | 
-| 10:00 AM | TRIGGERED    | 
+| Time     | Alert Status |
+| -------- | ------------ |
+| 8:00 AM  | OK           |
+| 8:15 AM  | OK           |
+| 8:30 AM  | TRIGGERED    |
+| 8:45 AM  | TRIGGERED    |
+| 9:00 AM  | TRIGGERED    |
+| 9:15 AM  | TRIGGERED    |
+| 9:30 AM  | TRIGGERED    |
+| 9:45 AM  | OK           |
+| 10:00 AM | TRIGGERED    |
 
 You would receive the following notifications:
 
-| Alert Time | Alert Message       | Reason            | 
-|------------|---------------------|-------------------| 
-| 8:30 AM    | Status is TRIGGERED | Status changed    | 
-| 9:30 AM    | Status is TRIGGERED | Alert was rearmed | 
-| 9:45 AM    | Status is OK        | Status changed    | 
-| 10:00 AM   | Status is TRIGGERED | Status changed    | 
+| Alert Time | Alert Message       | Reason            |
+| ---------- | ------------------- | ----------------- |
+| 8:30 AM    | Status is TRIGGERED | Status changed    |
+| 9:30 AM    | Status is TRIGGERED | Alert was rearmed |
+| 9:45 AM    | Status is OK        | Status changed    |
+| 10:00 AM   | Status is TRIGGERED | Status changed    |
 
 Importantly, assuming the alert was not triggered at all during the nine o'clock hour, the next alert would not arrive until 9:55 AM, the next scheduled query execution after the _Rearm seconds_ was completed.

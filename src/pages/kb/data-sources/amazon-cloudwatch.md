@@ -6,7 +6,6 @@ slug: amazon-cloudwatch
 toc: true
 ---
 
-
 ## Setup
 
 Redash connects to CloudWatch using the `boto3` client. According to their [documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/quickstart.html) before you can query with Redash...
@@ -26,7 +25,7 @@ Your query text must written in [YAML syntax](https://yaml.org/start.html) (not 
 Here's an example that sends two `MetricDataQuery` objects.
 
 ```yaml
-MetricDataQueries: 
+MetricDataQueries:
   - Id: database_connections
     MetricStat:
       Metric:
@@ -41,13 +40,12 @@ MetricDataQueries:
         MetricName: SwapUsage
       Period: 60
       Stat: Maximum
-StartTime: "2020-01-01 00:00:00"
+StartTime: '2020-01-01 00:00:00'
 ```
 
 {% callout info %}
 To query your CloudWatch data with SQL, first pull data using the YAML syntax. Then use QRDS to filter and sort the results
 {% endcallout %}
-
 
 ### Helpful Links
 
@@ -62,23 +60,21 @@ To learn more about the CloudWatch ad-hoc query language you can study the follo
 
 These instructions assume you are familiar with the CloudWatch Logs Insights ad-hoc query language. To make exploring your data easier the schema browser will show which **Log Groups** and **@Fields** you can query. Your query text must be written in [YAML Syntax]() (not SQL). Your query can include the following keys:
 
-
-|Key | Type |
-|----|------|
-|`logGroupName`|string|
-|`logGroupNames`|array of strings|
-|`startTime`|integer or timestring|
-|`endTime`|integer or timestring|
-|`queryString`|string|
-|`limit`|integer|
-
+| Key             | Type                  |
+| --------------- | --------------------- |
+| `logGroupName`  | string                |
+| `logGroupNames` | array of strings      |
+| `startTime`     | integer or timestring |
+| `endTime`       | integer or timestring |
+| `queryString`   | string                |
+| `limit`         | integer               |
 
 Your query _must_ include either a `logGroupName` or `logGroupNames`. When you execute the query Redash converts this object into a `start_query()` call. Here is an example query:
 
 ```
 startTime: '2020-01-01 00:00'
 logGroupNames: ['/ecs/rq-adhoc', '/ecs/rq-scheduled', '/ecs/rq-workers-scheduled']
-queryString: 
+queryString:
   filter @message like 'Opened tunnel for <some org id>'
   | parse 'Opened tunnel for <some org id> (<data source id>) with port *' as port
   | fields @timestamp, @logStream
@@ -87,4 +83,4 @@ queryString:
 
 ### Helpful Links
 
-* [Query Syntax](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/logs.html#CloudWatchLogs.Client.start_query).
+- [Query Syntax](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/logs.html#CloudWatchLogs.Client.start_query).

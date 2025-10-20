@@ -11,7 +11,6 @@ Redash V9 introduced an ODBC connector for SQL Server that improves Azure compat
 
 {% endcallout %}
 
-
 ![](/assets/images/docs/gitbook/mssql-ds-choice.png)
 
 When entering the username you need to make sure it's of the form: `user@server-name`. Where `server-name` is your server address without the `.database-windows.net` suffix.

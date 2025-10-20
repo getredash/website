@@ -63,7 +63,7 @@ class Header extends React.Component {
               </li>
               <li>
                 <Link data-track data-track-location="header" to="/customers/">
-                  Customers
+                  Users
                 </Link>
               </li>
               <li>
@@ -99,8 +99,11 @@ class Header extends React.Component {
                     <Link to="/help/">Knowledge Base</Link>
                   </li>
                   <li>
-                    <Link to="https://discuss.redash.io/" target="_blank">
-                      Forum
+                    <Link
+                      to="https://github.com/getredash/redash/discussions"
+                      target="_blank"
+                    >
+                      GitHub Discussions
                     </Link>
                   </li>
                 </ul>
@@ -108,15 +111,6 @@ class Header extends React.Component {
             </ul>
 
             <ul className="nav navbar-nav navbar-right">
-              <li>
-                <Link
-                  data-track
-                  data-track-location="header"
-                  to="https://app.redash.io/"
-                >
-                  Login
-                </Link>
-              </li>
               <li>
                 <Link
                   data-track

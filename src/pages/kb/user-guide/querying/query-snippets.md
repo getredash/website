@@ -16,7 +16,7 @@ Here's an example for a simple snippet:
 
 ```
 JOIN organizations org ON org.id = ${1:table}.org_id
-```  
+```
 
 ## Insertion Points
 
@@ -26,21 +26,22 @@ JOIN organizations org ON org.id = ${1:table}.org_id
 You can use the placeholder text as a desirable default value for the user to override at runtime.
 {% endcallout %}
 
-You designate insertion points by wrapping an integer tab order with a single dollar sign and curly braces `${}`. A text placeholder preceded by a colon `:` is optional but useful for users unfamiliar with your snippet. 
+You designate insertion points by wrapping an integer tab order with a single dollar sign and curly braces `${}`. A text placeholder preceded by a colon `:` is optional but useful for users unfamiliar with your snippet.
 
 When Redash renders this snippet:
 
-	AND (invoices.complete IS NULL OR invoices.complete <> '${2}')
-	AND (invoices.canceled IS NULL OR invoices.canceled <> '${1}')
-	AND (invoices.modified IS NULL OR invoices.modified_date <> '${0: this_date}')
+    AND (invoices.complete IS NULL OR invoices.complete <> '${2}')
+    AND (invoices.canceled IS NULL OR invoices.canceled <> '${1}')
+    AND (invoices.modified IS NULL OR invoices.modified_date <> '${0: this_date}')
 
-The text insertion carat will jump to the second line between the quote marks `''`. When the user presses `Tab` the carat will jump *backwards* onto the first line. When the user presses `Tab` again, the carat will jump to the third line and `this_date` will be highlighted to prompt the user for the desired value.
+The text insertion carat will jump to the second line between the quote marks `''`. When the user presses `Tab` the carat will jump _backwards_ onto the first line. When the user presses `Tab` again, the carat will jump to the third line and `this_date` will be highlighted to prompt the user for the desired value.
 
 {% callout info %}
-An insertion point of zero `${0}` is always the *last* point in the tab order.
+An insertion point of zero `${0}` is always the _last_ point in the tab order.
 {% endcallout %}
 
 ## Insert A Query Snippet
+
 If you have Live Auto Complete enabled, you can invoke your snippet from the Query Editor by typing the trigger word you defined in the Query Snippet editor. Auto Complete will suggest it like any other keyword in your database.
 
 {% callout warning %}
@@ -49,6 +50,6 @@ If Live Auto Complete is disabled, you can still invoke Query Snippets by pressi
 
 Here are some other ideas for snippets:
 
-  * Frequent `JOIN` statements
-  * Complicated clauses like `WITH` or `CASE`.
-  * [Conditional Formatting](https://discuss.redash.io/t/conditional-formatting-general-text-formatting/1706/1)
+- Frequent `JOIN` statements
+- Complicated clauses like `WITH` or `CASE`.
+- [Conditional Formatting](https://discuss.redash.io/t/conditional-formatting-general-text-formatting/1706/1)

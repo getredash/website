@@ -21,14 +21,15 @@
     background: $mutted-soft;
   }
 
-  td, th {
+  td,
+  th {
     padding: 15px;
   }
 }
 
 .section-case-study {
   h4 {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
   }
 
   .profile-image {
@@ -43,12 +44,11 @@
     font-style: italic;
     background-color: $mutted-soft;
     border-radius: $border-radius;
-    font-family: "Courier";
+    font-family: 'Courier';
     transition: all 0.13s ease-in-out;
     border-left: 5px solid $small-blue;
 
     &:hover {
-
     }
   }
 }

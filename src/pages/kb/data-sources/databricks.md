@@ -3,28 +3,51 @@ category: querying
 parent_category: data-sources
 title: Databricks
 slug: databricks
-toc: false 
+toc: false
 ---
 
-{% callout %}
-This page documents the new Databricks connector introduced in Redash V9. It's currently available in the hosted version and in the upcoming beta release of V9.
-{% endcallout %}
+# Setup
 
-![Databricks Data Source Setup Screen](/assets/images/docs/databricks_setup_screen.png)
+Redash can connect to both Databricks clusters and SQL Endpoints. Consult the [Databricks Documentation](https://docs.databricks.com/integrations/bi/jdbc-odbc-bi.html#get-server-hostname-port-http-path-and-jdbc-url) for how to obtain the **Host**, **HTTP Path**, and an **Access Token** for your endpoint.
 
-* `Name`: name for this connection.
-* `Host` and `HTTP Path`: can be found in the JDBC/ODBC tab of your cluster configuration tab (under Advanced Options).
-* `Access Token`: your personal access token. Can be generated from your User Settings page.
-* `Schemas to Load Metadata For`: a comma-separated list of databases that Redash will display in the Schema Viewer on the Query Screen. 
+![Databricks Data Source Setup Screen](/assets/images/docs/databricks-setup-screen.png)
+
+## Schema Browser
+
+The Databricks query runner uses a custom built schema browser which allows you to switch between databases on the endpoint and see column types for each field.
+
+![Databricks Data Source Setup Screen](/assets/images/docs/databricks-schema-browser.png)
+
+Unlike other query runners, the Databricks schema browser fetches table and column names on-demand as you navigate from one database to another. If you mostly use one database this will be fine.
+
+But if you explore the schema across multiple databases you may experience delays as each database is fetched separately.
+
+Schemas are cached for one hour. You may wish to schedule a hourly job to warm those caches.
+
+You can do this with any REST API tool as follows:
+
+```bash
+curl --request GET \
+  --url http://<redash host>/api/databricks/databases/<data-source-id>/<database-name>/tables?refresh \
+  --header 'Authorization: Key <admin-api-key>' \
+```
+
+## Auto Limit
+
+The Databricks query runner also includes a checkbox beneath the query editor which will append a `LIMIT 1000` statement to your query automatically by default. This helps in case you accidentally run `SELECT * FROM` some large table with enough results to crash the front-end.
+
+## Multiple Statement Support
+
+The Databricks query runner allows you to execute multiple statements terminated with a semicolon `;` in one query window.
 
 {% callout info %}
-
-If you are not sure what to type into the `Schemas to Load Metadata For` field, you can run the following sql on the query screen to see what options are available:
-
-```
-SHOW DATABASES;
-```
-
-If you leave blank this field then no schema will be retrieved and the Schema Viewer will appear empty. Even if it looks empty, however, you can still query your Databricks instance.
-
+Only one table of query results can be displayed from a query.
 {% endcallout %}
+
+This is useful for setting session / cluster configuration variables prior to executing the query on your cluster.
+
+```sql
+set use_cached_result = False;
+
+SELECT count(*) FROM some_db.some_table
+```

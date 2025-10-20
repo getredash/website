@@ -37,7 +37,10 @@ const ProductPage = ({ location }) => (
             </Link>
           </div>
           <div className="col-sm-3 text-right hidden-xs">
-            <img src="/assets/images/elements/computing-on-a-chart.png" width="250px" />
+            <img
+              src="/assets/images/elements/computing-on-a-chart.png"
+              width="250px"
+            />
           </div>
         </div>
       </div>
@@ -76,13 +79,6 @@ const ProductPage = ({ location }) => (
                 photo="/assets/images/contributors/rauchy.jpg"
                 github="https://github.com/rauchy"
                 twitter="https://twitter.com/rauchy"
-              />
-
-              <ContributorCard
-                name="Ran Byron"
-                photo="/assets/images/contributors/ranbena.jpg"
-                github="https://github.com/ranbena"
-                twitter="https://twitter.com/ranbena"
               />
 
               <ContributorCard

@@ -13,7 +13,7 @@ Redash bundles together charts that use X & Y axes into the **Chart** visualizat
 
 # Setup
 
-Your query should return at least two columns: one column of values for the **X axis** and  one column of values for the **Y Axis**. It can also return values for trace [grouping], displaying [error bars], and bubble sizes.
+Your query should return at least two columns: one column of values for the **X axis** and one column of values for the **Y Axis**. It can also return values for trace [grouping], displaying [error bars], and bubble sizes.
 
 The charts in the above animation were all produced from the following tabular result:
 
@@ -29,7 +29,7 @@ The **Series** tab is powerful. It lets you change your data aliases, z-index be
 
 **Colors** gives you a color picker for changing the appearance of the traces on your charts.
 
-**Data Labels** controls what appears when you hover your mouse over a chart. 
+**Data Labels** controls what appears when you hover your mouse over a chart.
 
 # Grouping
 
@@ -79,29 +79,30 @@ For certain chart forms, Redash can draw error bars around your data points usin
 Also keep in mind that errors are not aggregated when you stack records. An error bar will be shown for each trace. You can work around this by only providing non-zero error values for those records where the error should be displayed prominently. See in the above example that a flat error bar is shown at every trace point. But only the `Paid` trace error bars have any length.
 
 # Using Chart Forms
+
 Each chart form is useful for certain kinds of presentation. You can mix and match multiple forms on the same chart as needed.
 
-* **Line** charts are almost exclusively used to present change in one or more metrics over _time_.
-* **Bar** charts can be used to present change in metrics over time or to show proportionality, like a pie chart. Bar charts can be combined with [Stacking] with great effect.
-* **Area** charts are often used to show sales funnel changes through time. They are frequently combined with [Stacking] to grant a broader picture.
-* **Pie** charts are designed to show proportionality between metrics. They are _not_ meant for conveying time series data.
-* **Scatter** charts excel at showing many groups of data points. Under the covers, Scatter plots are just like line plots, but without the connecting lines. A scatter graph is more precise but less useful for time series data.
+- **Line** charts are almost exclusively used to present change in one or more metrics over _time_.
+- **Bar** charts can be used to present change in metrics over time or to show proportionality, like a pie chart. Bar charts can be combined with [Stacking] with great effect. Horizontal bar charts are also supported.
+- **Area** charts are often used to show sales funnel changes through time. They are frequently combined with [Stacking] to grant a broader picture.
+- **Pie** charts are designed to show proportionality between metrics. They are _not_ meant for conveying time series data.
+- **Scatter** charts excel at showing many groups of data points. Under the covers, Scatter plots are just like line plots, but without the connecting lines. A scatter graph is more precise but less useful for time series data.
 
 {% callout info %}
 
-Scatter plots are necessary for visualizations where some groups appear just once. The line chart does not display singleton values  because it can only show data where two or more points are present. One option is to force singletons into scatter form on the **Series** tab of the Visualization Editor while keeping other traces in line form.
+Scatter plots are necessary for visualizations where some groups appear just once. The line chart does not display singleton values because it can only show data where two or more points are present. One option is to force singletons into scatter form on the **Series** tab of the Visualization Editor while keeping other traces in line form.
 
 {% endcallout %}
 
-* **Bubble** charts are scatter graphs where the size of each point marker reflects a relevant metric.
-* **Heatmap** visualizations blend features of bar charts, stacking, and bubble charts. There are several built-in color schemes to pick from. Heatmaps cannot be grouped since the entire chart is technically one trace.
-* **Box** plots can automatically show the distribution of data points across grouped categories.
+- **Bubble** charts are scatter graphs where the size of each point marker reflects a relevant metric.
+- **Heatmap** visualizations blend features of bar charts, stacking, and bubble charts. There are several built-in color schemes to pick from. Heatmaps cannot be grouped since the entire chart is technically one trace.
+- **Box** plots can automatically show the distribution of data points across grouped categories. Horizontal box plots are also supported.
 
 # Common Mistakes
 
 ## Multiple Records per X-axis value
 
-Redash can make some crazy shapes if your query returns two or more rows with the same  **X axis** value. This often happens in SQL if you unintentionally `JOIN` a table with a one-to-many relationship.
+Redash can make some crazy shapes if your query returns two or more rows with the same **X axis** value. This often happens in SQL if you unintentionally `JOIN` a table with a one-to-many relationship.
 
 ![](/assets/images/docs/gitbook/error_double_entries.png)
 
@@ -121,15 +122,12 @@ If you see shapes you don't expect you can check whether your X axis has been so
 
 These two charts come from the same base data. The only difference is whether or not Redash sorted the X axis values.
 
-
-[Group By]: #Grouping
+[group by]: #Grouping
 [grouping]: #Grouping
-[Errors]: #error
+[errors]: #error
 [error bars]: #error
-[Stacking]: #Stacking
-
-[Line]: #line
-[Bar]: #bar
-[Area]: #area
-
-[Stacked Bar Charts]: https://en.wikipedia.org/wiki/Bar_chart#Grouped_and_stacked
+[stacking]: #Stacking
+[line]: #line
+[bar]: #bar
+[area]: #area
+[stacked bar charts]: https://en.wikipedia.org/wiki/Bar_chart#Grouped_and_stacked

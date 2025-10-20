@@ -1,5 +1,5 @@
 // Segment
-!(function() {
+!(function () {
   var analytics = (window.analytics = window.analytics || [])
   if (!analytics.initialize)
     if (analytics.invoked)
@@ -25,8 +25,8 @@
         'off',
         'on',
       ]
-      analytics.factory = function(t) {
-        return function() {
+      analytics.factory = function (t) {
+        return function () {
           var e = Array.prototype.slice.call(arguments)
           e.unshift(t)
           analytics.push(e)
@@ -37,7 +37,7 @@
         var e = analytics.methods[t]
         analytics[e] = analytics.factory(e)
       }
-      analytics.load = function(t) {
+      analytics.load = function (t) {
         var e = document.createElement('script')
         e.type = 'text/javascript'
         e.async = !0
@@ -60,7 +60,7 @@ window.intercomSettings = {
   app_id: 'rwp8rrzy',
   hide_default_launcher: true,
 }
-;(function() {
+;(function () {
   var w = window
   var ic = w.Intercom
   if (typeof ic === 'function') {
@@ -68,11 +68,11 @@ window.intercomSettings = {
     ic('update', intercomSettings)
   } else {
     var d = document
-    var i = function() {
+    var i = function () {
       i.c(arguments)
     }
     i.q = []
-    i.c = function(args) {
+    i.c = function (args) {
       i.q.push(args)
     }
     w.Intercom = i

@@ -41,8 +41,11 @@
 /help-onpremise/maintenance/how-to-upgrade-redash.html /help/open-source/admin-guide/how-to-upgrade 301!
 /help-onpremise/maintenance/ongoing-maintenance-and-basic-operations.html /help/open-source/admin-guide/maintenance 301!
 /help-onpremise/dev/guide.html /help/open-source/dev-guide/ 301!
-/help-onpremise/dev/docker.html /help/open-source/dev-guide/docker 301!
-/help-onpremise/dev/setup.html /help/open-source/dev-guide/setup 301!
+/help-onpremise/dev/docker.html https://github.com/getredash/redash/wiki/Local-development-setup 301!
+/help-onpremise/dev/setup.html https://github.com/getredash/redash/wiki/Local-development-setup 301!
+/help/open-source/dev-guide/docker https://github.com/getredash/redash/wiki/Local-development-setup 301!
+/help/open-source/dev-guide/setup https://github.com/getredash/redash/wiki/Local-development-setup 301!
+/help/open-source/dev-guide/end-to-end-tests https://github.com/getredash/redash/wiki/Testing-your-changes#comprehensive-e2e-testing-cypress 301!
 /dev/remote-server.html /help/open-source/dev-guide/remote-server 301!
 /help-onpremise/* /help/ 301!
 /features /product 301 301!

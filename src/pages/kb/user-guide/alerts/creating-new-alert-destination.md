@@ -1,7 +1,7 @@
 ---
 category: alerts
 parent_category: user-guide
-helpscout_url: 
+helpscout_url:
 title: Adding New Alert Destinations
 slug: creating-new-alert-destination
 order: 3
@@ -10,9 +10,9 @@ toc: true
 
 # Intro
 
-Whenever an Alert triggers, it sends a blob of related data (called the Alert Template) to its designated **Alert Destinations**. Destinations can use this blob of data to fire off emails, Slack messages, or custom web hooks. You can set up new Alert Destinations from the settings screen. 
+Whenever an Alert triggers, it sends a blob of related data (called the Alert Template) to its designated **Alert Destinations**. Destinations can use this blob of data to fire off emails, Slack messages, or custom web hooks. You can set up new Alert Destinations from the settings screen.
 
-![](/assets/images/docs/gitbook/create-new-alert-destination.png) 
+![](/assets/images/docs/gitbook/create-new-alert-destination.png)
 
 {% callout warning %}
 
@@ -24,14 +24,14 @@ Only Admins can add new alert destinations. Destinations are available to all us
 
 There are a few types of destinations to choose from:
 
-* Email
-* Slack
-* PagerDuty
-* Mattermost
-* Google Hangouts Chat
-* HipChat
-* ChatWork
-* Generic WebHook
+- Email
+- Slack
+- PagerDuty
+- Mattermost
+- Google Hangouts Chat
+- HipChat
+- ChatWork
+- Generic WebHook
 
 {% callout info %}
 
@@ -47,7 +47,7 @@ To configure one, select it from **Create a New Alert Destination** dialogue and
 
 First you need to obtain the PagerDuty Integration Key from your PagerDuty console.
 
-Services > Service Details > Integrations  
+Services > Service Details > Integrations
 
 ![](/assets/images/docs/alerts/pagerduty-key-location.png)
 

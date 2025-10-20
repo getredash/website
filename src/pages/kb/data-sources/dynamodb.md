@@ -12,8 +12,7 @@ documentation on [SELECT queries](https://dql.readthedocs.io/en/latest/topics/qu
 ### Troubleshooting
 
 > **Error message**: "No index found for query. Please use a SCAN query, or set
-allow_select_scan=True opt allow_select_scan true" Error Message
+> allow_select_scan=True opt allow_select_scan true" Error Message
 
 In case you receive the above error message, you need to replace `SELECT` in
 your query with `SCAN`.
-

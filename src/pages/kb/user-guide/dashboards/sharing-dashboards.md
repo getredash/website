@@ -14,6 +14,12 @@ You can revoke access to a dashboard for external users by toggling `Allow publi
 
 {% endcallout %}
 
+{% callout warning %}
+
+Admins can globally disable all public URLs by setting the environment variable `REDASH_DISABLE_PUBLIC_URLS` to `"true"`.
+
+{% endcallout %}
+
 ![](/assets/images/docs/gitbook/turn-on-url-sharing.gif)
 
 ## Dashboard Permissions
@@ -23,11 +29,11 @@ A logged-in user will only see dashboard widgets derived from data sources to wh
 1. Give your restricted users access using the secret link method described above
 2. Create a custom data source for the restricted employees and configure permissions at the database level
 
-You can read more about Redash's permissions model [here](/help/user-guide/users/permissions-groups). 
+You can read more about Redash's permissions model [here](/help/user-guide/users/permissions-groups).
 
 ## Embedding Dashboards
 
-Some users embed their dashboards outside of Redash using iframes. Redash provides a `Full Screen` view to improve this experience. Full screen mode removes everything but the widget UI. Just click the full screen button to the right of the `Refresh` button. Then copy the URL from your browser into your iframe embed code.  Embedding a dashboard in this way will require users to be logged-in to Redash. To embed Redash for external users you can use the secret link method described above. Secret links to Redash dashboards are full screen by default.
+Some users embed their dashboards outside of Redash using iframes. Redash provides a `Full Screen` view to improve this experience. Full screen mode removes everything but the widget UI. Just click the full screen button to the right of the `Refresh` button. Then copy the URL from your browser into your iframe embed code. Embedding a dashboard in this way will require users to be logged-in to Redash. To embed Redash for external users you can use the secret link method described above. Secret links to Redash dashboards are full screen by default.
 
 ![](/assets/images/docs/gitbook/full_screen_button.png)
 

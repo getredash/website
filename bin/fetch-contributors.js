@@ -11,7 +11,7 @@ function getPage(page) {
   }
 
   return new Promise((resolve, reject) => {
-    request(url, { qs, headers }, function(error, response, body) {
+    request(url, { qs, headers }, function (error, response, body) {
       if (error) {
         reject(error)
       } else {

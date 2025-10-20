@@ -3,11 +3,11 @@
 .alert {
   &.alert-danger {
     border-color: $danger;
-    background: rgba($danger, .25);
+    background: rgba($danger, 0.25);
   }
   &.alert-brand {
     border-color: $bridesmaid;
-    background: rgba($bridesmaid, .25);
+    background: rgba($bridesmaid, 0.25);
     color: darken($bridesmaid, 30%);
   }
 }
