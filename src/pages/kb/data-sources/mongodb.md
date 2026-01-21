@@ -92,9 +92,9 @@ An equivalent query in Javascript would be written: `db.my_collection.find({"typ
 
     {
     	"collection": "my_collection",
+    	"query": {},
     	"count": true
-    }
-
+	}
 ### Aggregation
 
 Aggregation uses a syntax similar to the one used in PyMongo. However, to support the correct order of sorting, it uses a regular list for the “$sort” operation that converts into a SON (sorted dictionary) object before execution.
