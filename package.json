@@ -54,7 +54,7 @@
     "babel-eslint": "10.1.0",
     "emergence.js": "1.1.2",
     "eslint": "9.23.0",
-    "eslint-config-prettier": "9.1.0",
+    "eslint-config-prettier": "10.1.8",
     "eslint-plugin-prettier": "5.3.1",
     "eslint-plugin-react": "7.37.4",
     "font-awesome": "4.7.0",
