@@ -5,7 +5,7 @@
   "main": "n/a",
   "dependencies": {
     "algoliasearch": "^4.24.0",
-    "axios": "1.8.4",
+    "axios": "1.12.0",
     "bootstrap-sass": "3.4.1",
     "gatsby": "5.14.0",
     "gatsby-image": "3.11.0",
@@ -36,11 +36,11 @@
     "gatsby-transformer-remark": "6.13.1",
     "gatsby-transformer-sharp": "5.13.1",
     "gatsby-transformer-yaml": "^5.13.1",
-    "got": "14.4.6",
+    "got": "14.4.7",
     "gry": "6.1.1",
     "natives": "1.1.6",
     "package.json": "^2.0.1",
-    "postcss": "8.5.1",
+    "postcss": "8.5.2",
     "react-bootstrap": "^2.10.5",
     "source-map": "^0.7.4",
     "webpack-dev-middleware": "7.4.2"
