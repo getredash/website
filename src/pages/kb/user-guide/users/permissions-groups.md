@@ -40,3 +40,8 @@ The idea is to leverage your database’s security model and hence create a user
 with access to the tables/columns you want to give access to. Create a data
 source that's using this user and then associate it with a group of users who
 need this level of access.
+
+### How to manage permissions for queries and dashboards?
+
+The management of the query and dashboard permissions doesn't happen on group basis, but on per user basis.
+The relevant parts are documented in [Managing Query Permissions]({% link _kb/user-guide/querying/writing-queries#Managing-Query-Permissions %} respective [Managing Dashboard Permissions]({% link _kb/user-guide/dashboards/dashboard-editing#Managing-Dashboard-Permissions %}.
