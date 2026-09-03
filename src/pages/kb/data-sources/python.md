@@ -6,9 +6,15 @@ slug: python
 toc: true
 ---
 
+{% callout warning %}
+
+**Security warning:** The Python sandbox is not safe, and we do not consider it a security boundary. We do not recommend using the Python data source with untrusted users. This is why the Python data source is disabled by default.
+
+{% endcallout %}
+
 # Setup
 
-The Python query runner lets you run arbitrary Python 3 scripts and visualize the contents of a `result` variable declared in the script. For security, is disabled by default. To enable it add this to your environment:
+The Python query runner lets you run arbitrary Python 3 scripts and visualize the contents of a `result` variable declared in the script. To enable it add this to your environment:
 
 ```bash
 REDASH_ADDITIONAL_QUERY_RUNNERS: "redash.query_runner.python"
@@ -18,7 +24,7 @@ Now you can create a Python data source from **Settings > Data Sources**.
 
 - **Modules to import prior to running the script** lets you define which modules that were installed by `pip` on the host server may be import in Redash queries.
 - **AdditionalModulesPaths** is a comma-separated list of absolute paths _on the Redash server_ to Python modules that should be available when querying from Redash. This is useful for private modules that are not available from `pip`.
-- **AdditionalBuiltins** Redash automatically allows twenty-five of Python's built-in functions that are considered safe. You can specify others here.
+- **AdditionalBuiltins** Redash allows twenty-five of Python's built-in functions by default. You can specify additional built-ins here.
 
 These are the default built-ins: `abs`, `all`, `any`, `bool`, `complex`, `dict`, `divmod`, `enumerate`, `filter`, `float`, `int`, `len`, `list`, `map`, `max`, `min`, `next`, `reversed`, `round`, `set`, `slice`, `sorted`, `str`, `sum`, `tuple`
 
