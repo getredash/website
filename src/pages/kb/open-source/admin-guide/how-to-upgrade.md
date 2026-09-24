@@ -57,6 +57,6 @@ _Done!_
 Make sure the `ubuntu` user is part of the `docker` group:
 
 1. Run `sudo usermod -aG docker $USER` to add current user to the docker group.
-2. Logout and login again.
+2. `newgrp docker` Apply the group changes to the current shell session (or log out and back in to apply globally)
 
 {% endcallout %}
