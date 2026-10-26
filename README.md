@@ -25,7 +25,7 @@ yarn fetch-contributors > website/_data/contributors.json
 
 ### Website development
 
-### Gatsby Installed Locally
+#### Gatsby Installed Locally
 
 To start Gatsby in development mode and serve the the website on
 `http://localhost:8000` use:
@@ -51,7 +51,7 @@ Using a DNS name in place of an IP address will also work, assuming the DNS
 entry resolves to an IP address on the local machine. This can be achieved
 through editing your /etc/hosts.
 
-### Docker Setup
+#### Docker Setup
 
 First install dependencies:
 
