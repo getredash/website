@@ -1,17 +1,31 @@
 # Redash Website and Knowledge Base
 
+> [!IMPORTANT]
+> **This repository is deprecated.** The redash.io website and its docs are moving
+> into the main Redash repository, so the docs stay in sync with the code and are
+> easier to contribute to:
+>
+> - Marketing site: [`website/`](https://github.com/getredash/redash/tree/master/website)
+> - Docs (`/help/`): [`docs/`](https://github.com/getredash/redash/tree/master/docs)
+>
+> See [getredash/redash#7892](https://github.com/getredash/redash/pull/7892) for
+> details. Please open new changes there instead of here. This repository will be
+> archived once redash.io is served from the new site.
+
+## Legacy instructions
+
 We use Gatsby as our static site generator. The website is built and hosted with
 Netlify.
 
-## Updating contributors data file
+### Updating contributors data file
 
 ```
 yarn fetch-contributors > website/_data/contributors.json
 ```
 
-## Website development
+### Website development
 
-### Gatsby Installed Locally
+#### Gatsby Installed Locally
 
 To start Gatsby in development mode and serve the the website on
 `http://localhost:8000` use:
@@ -37,7 +51,7 @@ Using a DNS name in place of an IP address will also work, assuming the DNS
 entry resolves to an IP address on the local machine. This can be achieved
 through editing your /etc/hosts.
 
-### Docker Setup
+#### Docker Setup
 
 First install dependencies:
 
