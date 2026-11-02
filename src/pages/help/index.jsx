@@ -74,28 +74,26 @@ class HelpPage extends React.Component {
           {this.state.searchQuery.length === 0 && (
             <div className="container content">
               {Sections.edges.map(({ node }) => (
-                <div key={node.id}>
+                <div className="topics topics--mb-xl" key={node.id}>
                   <h3>{node.name}</h3>
-                  <div className="topics topics--mb-xl">
-                    <div className="row row--flex">
-                      {Categories.edges
-                        .filter(
-                          ({ node: { frontmatter } }) =>
-                            frontmatter.parent_category === node.slug
-                        )
-                        .map(({ node: { frontmatter } }) => (
-                          <div className="col-sm-4" key={frontmatter.title}>
-                            <Link
-                              to={`/help/${frontmatter.parent_category}/${
-                                frontmatter.category
-                              }`}
-                              className="topics__item"
-                            >
-                              {frontmatter.title}
-                            </Link>
-                          </div>
-                        ))}
-                    </div>
+                  <div className="row row--flex">
+                    {Categories.edges
+                      .filter(
+                        ({ node: { frontmatter } }) =>
+                          frontmatter.parent_category === node.slug
+                      )
+                      .map(({ node: { frontmatter } }) => (
+                        <div className="col-sm-4" key={frontmatter.title}>
+                          <Link
+                            to={`/help/${frontmatter.parent_category}/${
+                              frontmatter.category
+                            }`}
+                            className="topics__item"
+                          >
+                            {frontmatter.title}
+                          </Link>
+                        </div>
+                      ))}
                   </div>
                 </div>
               ))}
