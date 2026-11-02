@@ -14,7 +14,7 @@ frequently so the notification you get is in real-time.
 Here's a short example of connecting Redash to Zapier and creating a new Zap:
 
 1. Use
-   [this invitation](https://zapier.com/developer/invite/32785/4910e4da7931a8f3a2124ebd85cc352b/)
+   [this invitation](https://zapier.com/apps/redash/integrations)
    link for the beta Redash trigger app (create an account if needed) and click
    "Make a Zap" right next to your account area at the top of the page.
 2. Choose a trigger app - in this case, Redash (it won't be available to you
