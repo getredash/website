@@ -39,6 +39,7 @@ const Footer = ({
               <Link
                 to="https://github.com/getredash"
                 className="footer__list-link"
+                aria-label="GitHub"
               >
                 <i className="fa fa-github-square" aria-hidden="true" />
               </Link>
@@ -47,6 +48,7 @@ const Footer = ({
               <Link
                 to="https://twitter.com/getredash"
                 className="footer__list-link"
+                aria-label="Twitter"
               >
                 <i className="fa fa-twitter-square" aria-hidden="true" />
               </Link>
