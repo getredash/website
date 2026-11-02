@@ -107,6 +107,12 @@ If you want to restrict the scope of possible parameter values when running a qu
 
 Dropdown lists can also be tied to the results of an existing query. Just click `Query Based Dropdown List` under **Type** in the settings panel. Search for your target query in the **Query to load dropdown values from** bar. Performance will degrade if your target query returns a large number of records.
 
+{% callout info %}
+
+Dropdown values are loaded from the **last cached result** of the source query — Redash does not re-execute the source query when the parent query runs. This means a newly created source query will produce an empty dropdown until it has been executed at least once. To keep dropdown options up to date, configure a schedule on the source query (or execute it manually after the underlying data changes). The same cached values are also used to validate the submitted parameter value when executing a query via the API.
+
+{% endcallout %}
+
 If your target query returns more than one column, Redash uses the _first_ one. If your target query returns `name` and `value` columns, Redash populates the parameter selection widget with the `name` column but executes the query with the associated `value`.
 
 For example, suppose this query:
